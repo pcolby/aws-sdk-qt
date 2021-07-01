@@ -74,7 +74,8 @@ DescribeTableReplicaAutoScalingResponse::DescribeTableReplicaAutoScalingResponse
  */
 const DescribeTableReplicaAutoScalingRequest * DescribeTableReplicaAutoScalingResponse::request() const
 {
-    return static_cast<const DescribeTableReplicaAutoScalingRequest *>(DynamoDBResponse::request());
+    Q_D(const DescribeTableReplicaAutoScalingResponse);
+    return static_cast<const DescribeTableReplicaAutoScalingRequest *>(d->request);
 }
 
 /*!

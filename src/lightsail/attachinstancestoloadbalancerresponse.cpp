@@ -74,7 +74,8 @@ AttachInstancesToLoadBalancerResponse::AttachInstancesToLoadBalancerResponse(
  */
 const AttachInstancesToLoadBalancerRequest * AttachInstancesToLoadBalancerResponse::request() const
 {
-    return static_cast<const AttachInstancesToLoadBalancerRequest *>(LightsailResponse::request());
+    Q_D(const AttachInstancesToLoadBalancerResponse);
+    return static_cast<const AttachInstancesToLoadBalancerRequest *>(d->request);
 }
 
 /*!

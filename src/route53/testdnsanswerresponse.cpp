@@ -56,7 +56,8 @@ TestDNSAnswerResponse::TestDNSAnswerResponse(
  */
 const TestDNSAnswerRequest * TestDNSAnswerResponse::request() const
 {
-    return static_cast<const TestDNSAnswerRequest *>(Route53Response::request());
+    Q_D(const TestDNSAnswerResponse);
+    return static_cast<const TestDNSAnswerRequest *>(d->request);
 }
 
 /*!

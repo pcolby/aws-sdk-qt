@@ -81,8 +81,7 @@ public:
 
 protected:
     /// @cond internal
-    ManagedBlockchainRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ManagedBlockchainRequest(ManagedBlockchainRequestPrivate * const d);
+    ManagedBlockchainRequest(ManagedBlockchainRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

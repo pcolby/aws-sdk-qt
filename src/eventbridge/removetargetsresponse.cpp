@@ -78,7 +78,8 @@ RemoveTargetsResponse::RemoveTargetsResponse(
  */
 const RemoveTargetsRequest * RemoveTargetsResponse::request() const
 {
-    return static_cast<const RemoveTargetsRequest *>(EventBridgeResponse::request());
+    Q_D(const RemoveTargetsResponse);
+    return static_cast<const RemoveTargetsRequest *>(d->request);
 }
 
 /*!

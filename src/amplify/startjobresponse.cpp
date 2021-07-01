@@ -60,7 +60,8 @@ StartJobResponse::StartJobResponse(
  */
 const StartJobRequest * StartJobResponse::request() const
 {
-    return static_cast<const StartJobRequest *>(AmplifyResponse::request());
+    Q_D(const StartJobResponse);
+    return static_cast<const StartJobRequest *>(d->request);
 }
 
 /*!

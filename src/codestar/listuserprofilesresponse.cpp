@@ -143,7 +143,8 @@ ListUserProfilesResponse::ListUserProfilesResponse(
  */
 const ListUserProfilesRequest * ListUserProfilesResponse::request() const
 {
-    return static_cast<const ListUserProfilesRequest *>(CodeStarResponse::request());
+    Q_D(const ListUserProfilesResponse);
+    return static_cast<const ListUserProfilesRequest *>(d->request);
 }
 
 /*!

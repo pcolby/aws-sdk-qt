@@ -56,7 +56,8 @@ ListWorkspacesResponse::ListWorkspacesResponse(
  */
 const ListWorkspacesRequest * ListWorkspacesResponse::request() const
 {
-    return static_cast<const ListWorkspacesRequest *>(PrometheusServiceResponse::request());
+    Q_D(const ListWorkspacesResponse);
+    return static_cast<const ListWorkspacesRequest *>(d->request);
 }
 
 /*!

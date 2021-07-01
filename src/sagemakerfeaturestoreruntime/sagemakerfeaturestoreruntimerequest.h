@@ -62,8 +62,7 @@ public:
 
 protected:
     /// @cond internal
-    SageMakerFeatureStoreRuntimeRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SageMakerFeatureStoreRuntimeRequest(SageMakerFeatureStoreRuntimeRequestPrivate * const d);
+    SageMakerFeatureStoreRuntimeRequest(SageMakerFeatureStoreRuntimeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

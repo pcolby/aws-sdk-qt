@@ -439,7 +439,8 @@ GetPullRequestResponse::GetPullRequestResponse(
  */
 const GetPullRequestRequest * GetPullRequestResponse::request() const
 {
-    return static_cast<const GetPullRequestRequest *>(CodeCommitResponse::request());
+    Q_D(const GetPullRequestResponse);
+    return static_cast<const GetPullRequestRequest *>(d->request);
 }
 
 /*!

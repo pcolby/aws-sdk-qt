@@ -20,20 +20,19 @@
 #ifndef QTAWS_WORKSPACESCLIENT_P_H
 #define QTAWS_WORKSPACESCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace WorkSpaces {
 
 class WorkSpacesClient;
 
-class WorkSpacesClientPrivate {
+class WorkSpacesClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit WorkSpacesClientPrivate(WorkSpacesClient * const q);
-
-protected:
-    WorkSpacesClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WorkSpacesClient)

@@ -165,12 +165,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    LexModelBuildingServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit LexModelBuildingServiceClient(LexModelBuildingServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(LexModelBuildingServiceClient)
     Q_DISABLE_COPY(LexModelBuildingServiceClient)

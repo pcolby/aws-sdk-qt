@@ -58,7 +58,8 @@ DetectKeyPhrasesResponse::DetectKeyPhrasesResponse(
  */
 const DetectKeyPhrasesRequest * DetectKeyPhrasesResponse::request() const
 {
-    return static_cast<const DetectKeyPhrasesRequest *>(ComprehendResponse::request());
+    Q_D(const DetectKeyPhrasesResponse);
+    return static_cast<const DetectKeyPhrasesRequest *>(d->request);
 }
 
 /*!

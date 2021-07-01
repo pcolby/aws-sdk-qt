@@ -55,7 +55,8 @@ CreateFlowResponse::CreateFlowResponse(
  */
 const CreateFlowRequest * CreateFlowResponse::request() const
 {
-    return static_cast<const CreateFlowRequest *>(MediaConnectResponse::request());
+    Q_D(const CreateFlowResponse);
+    return static_cast<const CreateFlowRequest *>(d->request);
 }
 
 /*!

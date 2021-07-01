@@ -69,7 +69,8 @@ DeleteTrustResponse::DeleteTrustResponse(
  */
 const DeleteTrustRequest * DeleteTrustResponse::request() const
 {
-    return static_cast<const DeleteTrustRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DeleteTrustResponse);
+    return static_cast<const DeleteTrustRequest *>(d->request);
 }
 
 /*!

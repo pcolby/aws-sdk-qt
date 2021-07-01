@@ -66,7 +66,8 @@ AdminSetUserPasswordResponse::AdminSetUserPasswordResponse(
  */
 const AdminSetUserPasswordRequest * AdminSetUserPasswordResponse::request() const
 {
-    return static_cast<const AdminSetUserPasswordRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const AdminSetUserPasswordResponse);
+    return static_cast<const AdminSetUserPasswordRequest *>(d->request);
 }
 
 /*!

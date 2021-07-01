@@ -126,7 +126,8 @@ ListWebACLsResponse::ListWebACLsResponse(
  */
 const ListWebACLsRequest * ListWebACLsResponse::request() const
 {
-    return static_cast<const ListWebACLsRequest *>(Wafv2Response::request());
+    Q_D(const ListWebACLsResponse);
+    return static_cast<const ListWebACLsRequest *>(d->request);
 }
 
 /*!

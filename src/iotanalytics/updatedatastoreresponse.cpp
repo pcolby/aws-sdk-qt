@@ -75,7 +75,8 @@ UpdateDatastoreResponse::UpdateDatastoreResponse(
  */
 const UpdateDatastoreRequest * UpdateDatastoreResponse::request() const
 {
-    return static_cast<const UpdateDatastoreRequest *>(IoTAnalyticsResponse::request());
+    Q_D(const UpdateDatastoreResponse);
+    return static_cast<const UpdateDatastoreRequest *>(d->request);
 }
 
 /*!

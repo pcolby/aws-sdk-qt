@@ -103,7 +103,8 @@ DeleteMembersResponse::DeleteMembersResponse(
  */
 const DeleteMembersRequest * DeleteMembersResponse::request() const
 {
-    return static_cast<const DeleteMembersRequest *>(SecurityHubResponse::request());
+    Q_D(const DeleteMembersResponse);
+    return static_cast<const DeleteMembersRequest *>(d->request);
 }
 
 /*!

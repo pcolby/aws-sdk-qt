@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    MTurkResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MTurkResponse(MTurkResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

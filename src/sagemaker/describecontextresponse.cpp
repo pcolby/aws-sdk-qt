@@ -70,7 +70,8 @@ DescribeContextResponse::DescribeContextResponse(
  */
 const DescribeContextRequest * DescribeContextResponse::request() const
 {
-    return static_cast<const DescribeContextRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeContextResponse);
+    return static_cast<const DescribeContextRequest *>(d->request);
 }
 
 /*!

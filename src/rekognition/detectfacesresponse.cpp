@@ -56,7 +56,8 @@ DetectFacesResponse::DetectFacesResponse(
  */
 const DetectFacesRequest * DetectFacesResponse::request() const
 {
-    return static_cast<const DetectFacesRequest *>(RekognitionResponse::request());
+    Q_D(const DetectFacesResponse);
+    return static_cast<const DetectFacesRequest *>(d->request);
 }
 
 /*!

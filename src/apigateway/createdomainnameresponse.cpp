@@ -60,7 +60,8 @@ CreateDomainNameResponse::CreateDomainNameResponse(
  */
 const CreateDomainNameRequest * CreateDomainNameResponse::request() const
 {
-    return static_cast<const CreateDomainNameRequest *>(APIGatewayResponse::request());
+    Q_D(const CreateDomainNameResponse);
+    return static_cast<const CreateDomainNameRequest *>(d->request);
 }
 
 /*!

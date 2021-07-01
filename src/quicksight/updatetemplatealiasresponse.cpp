@@ -60,7 +60,8 @@ UpdateTemplateAliasResponse::UpdateTemplateAliasResponse(
  */
 const UpdateTemplateAliasRequest * UpdateTemplateAliasResponse::request() const
 {
-    return static_cast<const UpdateTemplateAliasRequest *>(QuickSightResponse::request());
+    Q_D(const UpdateTemplateAliasResponse);
+    return static_cast<const UpdateTemplateAliasRequest *>(d->request);
 }
 
 /*!

@@ -66,7 +66,8 @@ ListCodeSigningConfigsResponse::ListCodeSigningConfigsResponse(
  */
 const ListCodeSigningConfigsRequest * ListCodeSigningConfigsResponse::request() const
 {
-    return static_cast<const ListCodeSigningConfigsRequest *>(LambdaResponse::request());
+    Q_D(const ListCodeSigningConfigsResponse);
+    return static_cast<const ListCodeSigningConfigsRequest *>(d->request);
 }
 
 /*!

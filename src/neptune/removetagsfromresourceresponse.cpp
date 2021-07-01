@@ -72,7 +72,8 @@ RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
  */
 const RemoveTagsFromResourceRequest * RemoveTagsFromResourceResponse::request() const
 {
-    return static_cast<const RemoveTagsFromResourceRequest *>(NeptuneResponse::request());
+    Q_D(const RemoveTagsFromResourceResponse);
+    return static_cast<const RemoveTagsFromResourceRequest *>(d->request);
 }
 
 /*!

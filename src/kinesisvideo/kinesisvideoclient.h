@@ -105,12 +105,6 @@ public slots:
     UpdateSignalingChannelResponse * updateSignalingChannel(const UpdateSignalingChannelRequest &request);
     UpdateStreamResponse * updateStream(const UpdateStreamRequest &request);
 
-protected:
-    /// @cond internal
-    KinesisVideoClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit KinesisVideoClient(KinesisVideoClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(KinesisVideoClient)
     Q_DISABLE_COPY(KinesisVideoClient)

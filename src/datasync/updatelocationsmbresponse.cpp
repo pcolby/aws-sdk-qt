@@ -64,7 +64,8 @@ UpdateLocationSmbResponse::UpdateLocationSmbResponse(
  */
 const UpdateLocationSmbRequest * UpdateLocationSmbResponse::request() const
 {
-    return static_cast<const UpdateLocationSmbRequest *>(DataSyncResponse::request());
+    Q_D(const UpdateLocationSmbResponse);
+    return static_cast<const UpdateLocationSmbRequest *>(d->request);
 }
 
 /*!

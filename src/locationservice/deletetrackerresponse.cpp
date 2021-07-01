@@ -56,7 +56,8 @@ DeleteTrackerResponse::DeleteTrackerResponse(
  */
 const DeleteTrackerRequest * DeleteTrackerResponse::request() const
 {
-    return static_cast<const DeleteTrackerRequest *>(LocationServiceResponse::request());
+    Q_D(const DeleteTrackerResponse);
+    return static_cast<const DeleteTrackerRequest *>(d->request);
 }
 
 /*!

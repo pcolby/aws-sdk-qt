@@ -119,7 +119,8 @@ ModifyDBProxyResponse::ModifyDBProxyResponse(
  */
 const ModifyDBProxyRequest * ModifyDBProxyResponse::request() const
 {
-    return static_cast<const ModifyDBProxyRequest *>(RdsResponse::request());
+    Q_D(const ModifyDBProxyResponse);
+    return static_cast<const ModifyDBProxyRequest *>(d->request);
 }
 
 /*!

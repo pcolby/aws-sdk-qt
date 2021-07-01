@@ -81,7 +81,8 @@ DescribeSessionsResponse::DescribeSessionsResponse(
  */
 const DescribeSessionsRequest * DescribeSessionsResponse::request() const
 {
-    return static_cast<const DescribeSessionsRequest *>(AppStreamResponse::request());
+    Q_D(const DescribeSessionsResponse);
+    return static_cast<const DescribeSessionsRequest *>(d->request);
 }
 
 /*!

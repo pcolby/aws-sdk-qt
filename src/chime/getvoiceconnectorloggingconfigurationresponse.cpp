@@ -98,7 +98,8 @@ GetVoiceConnectorLoggingConfigurationResponse::GetVoiceConnectorLoggingConfigura
  */
 const GetVoiceConnectorLoggingConfigurationRequest * GetVoiceConnectorLoggingConfigurationResponse::request() const
 {
-    return static_cast<const GetVoiceConnectorLoggingConfigurationRequest *>(ChimeResponse::request());
+    Q_D(const GetVoiceConnectorLoggingConfigurationResponse);
+    return static_cast<const GetVoiceConnectorLoggingConfigurationRequest *>(d->request);
 }
 
 /*!

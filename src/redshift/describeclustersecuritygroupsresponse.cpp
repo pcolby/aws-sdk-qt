@@ -85,7 +85,8 @@ DescribeClusterSecurityGroupsResponse::DescribeClusterSecurityGroupsResponse(
  */
 const DescribeClusterSecurityGroupsRequest * DescribeClusterSecurityGroupsResponse::request() const
 {
-    return static_cast<const DescribeClusterSecurityGroupsRequest *>(RedshiftResponse::request());
+    Q_D(const DescribeClusterSecurityGroupsResponse);
+    return static_cast<const DescribeClusterSecurityGroupsRequest *>(d->request);
 }
 
 /*!

@@ -72,7 +72,8 @@ UpdatePackageResponse::UpdatePackageResponse(
  */
 const UpdatePackageRequest * UpdatePackageResponse::request() const
 {
-    return static_cast<const UpdatePackageRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const UpdatePackageResponse);
+    return static_cast<const UpdatePackageRequest *>(d->request);
 }
 
 /*!

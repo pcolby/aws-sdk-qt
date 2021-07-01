@@ -98,7 +98,8 @@ PutComplianceItemsResponse::PutComplianceItemsResponse(
  */
 const PutComplianceItemsRequest * PutComplianceItemsResponse::request() const
 {
-    return static_cast<const PutComplianceItemsRequest *>(SsmResponse::request());
+    Q_D(const PutComplianceItemsResponse);
+    return static_cast<const PutComplianceItemsRequest *>(d->request);
 }
 
 /*!

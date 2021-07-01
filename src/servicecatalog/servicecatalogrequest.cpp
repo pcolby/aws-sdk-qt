@@ -129,7 +129,7 @@ namespace ServiceCatalog {
  * Constructs a ServiceCatalogRequest object for ServiceCatalog \a action.
  */
 ServiceCatalogRequest::ServiceCatalogRequest(const Action action)
-    : d_ptr(new ServiceCatalogRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ServiceCatalogRequestPrivate(action, this))
 {
 
 }
@@ -138,8 +138,7 @@ ServiceCatalogRequest::ServiceCatalogRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ServiceCatalogRequest::ServiceCatalogRequest(const ServiceCatalogRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ServiceCatalogRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ServiceCatalogRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -162,7 +161,7 @@ ServiceCatalogRequest& ServiceCatalogRequest::operator=(const ServiceCatalogRequ
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ServiceCatalogRequestPrivate.
  */
-ServiceCatalogRequest::ServiceCatalogRequest(ServiceCatalogRequestPrivate * const d) : d_ptr(d)
+ServiceCatalogRequest::ServiceCatalogRequest(ServiceCatalogRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -331,7 +330,7 @@ QNetworkRequest ServiceCatalogRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 ServiceCatalogRequestPrivate::ServiceCatalogRequestPrivate(const ServiceCatalogRequest::Action action, ServiceCatalogRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -346,8 +345,8 @@ ServiceCatalogRequestPrivate::ServiceCatalogRequestPrivate(const ServiceCatalogR
  */
 ServiceCatalogRequestPrivate::ServiceCatalogRequestPrivate(const ServiceCatalogRequestPrivate &other,
                                      ServiceCatalogRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

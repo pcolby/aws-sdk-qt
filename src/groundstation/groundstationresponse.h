@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    GroundStationResponsePrivate * const d_ptr; ///< Internal d-pointer.
     GroundStationResponse(GroundStationResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

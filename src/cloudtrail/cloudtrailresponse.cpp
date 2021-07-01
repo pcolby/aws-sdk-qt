@@ -37,7 +37,7 @@ namespace CloudTrail {
  * Constructs a CloudTrailResponse object with parent \a parent.
  */
 CloudTrailResponse::CloudTrailResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CloudTrailResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CloudTrailResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CloudTrailResponse::CloudTrailResponse(QObject * const parent)
  * implementation that inherits from CloudTrailResponsePrivate.
  */
 CloudTrailResponse::CloudTrailResponse(CloudTrailResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CloudTrailResponse::parseFailure(QIODevice &response)
  * Constructs a CloudTrailResponsePrivate object with public implementation \a q.
  */
 CloudTrailResponsePrivate::CloudTrailResponsePrivate(
-    CloudTrailResponse * const q) : q_ptr(q)
+    CloudTrailResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

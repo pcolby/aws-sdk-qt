@@ -20,12 +20,14 @@
 #ifndef QTAWS_COMPREHENDMEDICALRESPONSE_P_H
 #define QTAWS_COMPREHENDMEDICALRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace ComprehendMedical {
 
 class ComprehendMedicalResponse;
 
-class ComprehendMedicalResponsePrivate {
+class ComprehendMedicalResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    ComprehendMedicalResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ComprehendMedicalResponse)

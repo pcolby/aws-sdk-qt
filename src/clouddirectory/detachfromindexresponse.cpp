@@ -63,7 +63,8 @@ DetachFromIndexResponse::DetachFromIndexResponse(
  */
 const DetachFromIndexRequest * DetachFromIndexResponse::request() const
 {
-    return static_cast<const DetachFromIndexRequest *>(CloudDirectoryResponse::request());
+    Q_D(const DetachFromIndexResponse);
+    return static_cast<const DetachFromIndexRequest *>(d->request);
 }
 
 /*!

@@ -72,7 +72,8 @@ ListMembersResponse::ListMembersResponse(
  */
 const ListMembersRequest * ListMembersResponse::request() const
 {
-    return static_cast<const ListMembersRequest *>(ManagedBlockchainResponse::request());
+    Q_D(const ListMembersResponse);
+    return static_cast<const ListMembersRequest *>(d->request);
 }
 
 /*!

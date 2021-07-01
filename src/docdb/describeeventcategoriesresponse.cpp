@@ -56,7 +56,8 @@ DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
  */
 const DescribeEventCategoriesRequest * DescribeEventCategoriesResponse::request() const
 {
-    return static_cast<const DescribeEventCategoriesRequest *>(DocDBResponse::request());
+    Q_D(const DescribeEventCategoriesResponse);
+    return static_cast<const DescribeEventCategoriesRequest *>(d->request);
 }
 
 /*!

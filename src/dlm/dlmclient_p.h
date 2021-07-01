@@ -20,20 +20,19 @@
 #ifndef QTAWS_DLMCLIENT_P_H
 #define QTAWS_DLMCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace DLM {
 
 class DlmClient;
 
-class DlmClientPrivate {
+class DlmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit DlmClientPrivate(DlmClient * const q);
-
-protected:
-    DlmClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DlmClient)

@@ -69,7 +69,8 @@ DeleteConditionalForwarderResponse::DeleteConditionalForwarderResponse(
  */
 const DeleteConditionalForwarderRequest * DeleteConditionalForwarderResponse::request() const
 {
-    return static_cast<const DeleteConditionalForwarderRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DeleteConditionalForwarderResponse);
+    return static_cast<const DeleteConditionalForwarderRequest *>(d->request);
 }
 
 /*!

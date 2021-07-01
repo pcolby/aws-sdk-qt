@@ -113,16 +113,16 @@ SSMContactsClient::SSMContactsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2021-05-03"),
-    QStringLiteral("ssm-contacts"),
-    QStringLiteral("AWS Systems Manager Incident Manager Contacts"),
-    QStringLiteral("ssm-contacts"),
-    parent), d_ptr(new SSMContactsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new SSMContactsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(SSMContactsClient);
+    d->apiVersion = QStringLiteral("2021-05-03");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("ssm-contacts");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Systems Manager Incident Manager Contacts");
+    d->serviceName = QStringLiteral("ssm-contacts");
 }
 
 /*!
@@ -141,16 +141,16 @@ SSMContactsClient::SSMContactsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2021-05-03"),
-    QStringLiteral("ssm-contacts"),
-    QStringLiteral("AWS Systems Manager Incident Manager Contacts"),
-    QStringLiteral("ssm-contacts"),
-    parent), d_ptr(new SSMContactsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new SSMContactsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(SSMContactsClient);
+    d->apiVersion = QStringLiteral("2021-05-03");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("ssm-contacts");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Systems Manager Incident Manager Contacts");
+    d->serviceName = QStringLiteral("ssm-contacts");
 }
 
 /*!
@@ -526,9 +526,10 @@ UpdateContactChannelResponse * SSMContactsClient::updateContactChannel(const Upd
 /*!
  * Constructs a SSMContactsClientPrivate object with public implementation \a q.
  */
-SSMContactsClientPrivate::SSMContactsClientPrivate(SSMContactsClient * const q) : q_ptr(q)
+SSMContactsClientPrivate::SSMContactsClientPrivate(SSMContactsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SSMContacts

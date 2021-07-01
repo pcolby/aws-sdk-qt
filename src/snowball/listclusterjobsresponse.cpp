@@ -61,7 +61,8 @@ ListClusterJobsResponse::ListClusterJobsResponse(
  */
 const ListClusterJobsRequest * ListClusterJobsResponse::request() const
 {
-    return static_cast<const ListClusterJobsRequest *>(SnowballResponse::request());
+    Q_D(const ListClusterJobsResponse);
+    return static_cast<const ListClusterJobsRequest *>(d->request);
 }
 
 /*!

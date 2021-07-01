@@ -55,7 +55,8 @@ UpdateNotificationSettingsResponse::UpdateNotificationSettingsResponse(
  */
 const UpdateNotificationSettingsRequest * UpdateNotificationSettingsResponse::request() const
 {
-    return static_cast<const UpdateNotificationSettingsRequest *>(MTurkResponse::request());
+    Q_D(const UpdateNotificationSettingsResponse);
+    return static_cast<const UpdateNotificationSettingsRequest *>(d->request);
 }
 
 /*!

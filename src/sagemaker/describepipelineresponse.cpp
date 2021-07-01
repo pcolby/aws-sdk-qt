@@ -70,7 +70,8 @@ DescribePipelineResponse::DescribePipelineResponse(
  */
 const DescribePipelineRequest * DescribePipelineResponse::request() const
 {
-    return static_cast<const DescribePipelineRequest *>(SageMakerResponse::request());
+    Q_D(const DescribePipelineResponse);
+    return static_cast<const DescribePipelineRequest *>(d->request);
 }
 
 /*!

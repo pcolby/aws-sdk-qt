@@ -60,7 +60,8 @@ CreateGroupMembershipResponse::CreateGroupMembershipResponse(
  */
 const CreateGroupMembershipRequest * CreateGroupMembershipResponse::request() const
 {
-    return static_cast<const CreateGroupMembershipRequest *>(QuickSightResponse::request());
+    Q_D(const CreateGroupMembershipResponse);
+    return static_cast<const CreateGroupMembershipRequest *>(d->request);
 }
 
 /*!

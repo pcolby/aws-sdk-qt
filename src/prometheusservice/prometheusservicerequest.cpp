@@ -47,7 +47,7 @@ namespace PrometheusService {
  * Constructs a PrometheusServiceRequest object for PrometheusService \a action.
  */
 PrometheusServiceRequest::PrometheusServiceRequest(const Action action)
-    : d_ptr(new PrometheusServiceRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new PrometheusServiceRequestPrivate(action, this))
 {
 
 }
@@ -56,8 +56,7 @@ PrometheusServiceRequest::PrometheusServiceRequest(const Action action)
  * Constructs a copy of \a other.
  */
 PrometheusServiceRequest::PrometheusServiceRequest(const PrometheusServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new PrometheusServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new PrometheusServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +79,7 @@ PrometheusServiceRequest& PrometheusServiceRequest::operator=(const PrometheusSe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PrometheusServiceRequestPrivate.
  */
-PrometheusServiceRequest::PrometheusServiceRequest(PrometheusServiceRequestPrivate * const d) : d_ptr(d)
+PrometheusServiceRequest::PrometheusServiceRequest(PrometheusServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -249,7 +248,7 @@ QNetworkRequest PrometheusServiceRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 PrometheusServiceRequestPrivate::PrometheusServiceRequestPrivate(const PrometheusServiceRequest::Action action, PrometheusServiceRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -264,8 +263,8 @@ PrometheusServiceRequestPrivate::PrometheusServiceRequestPrivate(const Prometheu
  */
 PrometheusServiceRequestPrivate::PrometheusServiceRequestPrivate(const PrometheusServiceRequestPrivate &other,
                                      PrometheusServiceRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

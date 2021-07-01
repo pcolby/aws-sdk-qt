@@ -56,7 +56,8 @@ SearchQuantumTasksResponse::SearchQuantumTasksResponse(
  */
 const SearchQuantumTasksRequest * SearchQuantumTasksResponse::request() const
 {
-    return static_cast<const SearchQuantumTasksRequest *>(BraketResponse::request());
+    Q_D(const SearchQuantumTasksResponse);
+    return static_cast<const SearchQuantumTasksRequest *>(d->request);
 }
 
 /*!

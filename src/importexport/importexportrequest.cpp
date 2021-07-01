@@ -48,7 +48,7 @@ namespace ImportExport {
  * Constructs a ImportExportRequest object for ImportExport \a action.
  */
 ImportExportRequest::ImportExportRequest(const Action action)
-    : d_ptr(new ImportExportRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ImportExportRequestPrivate(action, this))
 {
 
 }
@@ -57,8 +57,7 @@ ImportExportRequest::ImportExportRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ImportExportRequest::ImportExportRequest(const ImportExportRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ImportExportRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ImportExportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -81,7 +80,7 @@ ImportExportRequest& ImportExportRequest::operator=(const ImportExportRequest &o
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ImportExportRequestPrivate.
  */
-ImportExportRequest::ImportExportRequest(ImportExportRequestPrivate * const d) : d_ptr(d)
+ImportExportRequest::ImportExportRequest(ImportExportRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -250,7 +249,7 @@ QNetworkRequest ImportExportRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ImportExportRequestPrivate::ImportExportRequestPrivate(const ImportExportRequest::Action action, ImportExportRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -265,8 +264,8 @@ ImportExportRequestPrivate::ImportExportRequestPrivate(const ImportExportRequest
  */
 ImportExportRequestPrivate::ImportExportRequestPrivate(const ImportExportRequestPrivate &other,
                                      ImportExportRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -62,7 +62,8 @@ ListSkillsStoreSkillsByCategoryResponse::ListSkillsStoreSkillsByCategoryResponse
  */
 const ListSkillsStoreSkillsByCategoryRequest * ListSkillsStoreSkillsByCategoryResponse::request() const
 {
-    return static_cast<const ListSkillsStoreSkillsByCategoryRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const ListSkillsStoreSkillsByCategoryResponse);
+    return static_cast<const ListSkillsStoreSkillsByCategoryRequest *>(d->request);
 }
 
 /*!

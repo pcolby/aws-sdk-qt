@@ -62,7 +62,8 @@ ListServerCertificateTagsResponse::ListServerCertificateTagsResponse(
  */
 const ListServerCertificateTagsRequest * ListServerCertificateTagsResponse::request() const
 {
-    return static_cast<const ListServerCertificateTagsRequest *>(IamResponse::request());
+    Q_D(const ListServerCertificateTagsResponse);
+    return static_cast<const ListServerCertificateTagsRequest *>(d->request);
 }
 
 /*!

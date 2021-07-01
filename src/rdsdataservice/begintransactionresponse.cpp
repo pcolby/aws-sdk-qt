@@ -65,7 +65,8 @@ BeginTransactionResponse::BeginTransactionResponse(
  */
 const BeginTransactionRequest * BeginTransactionResponse::request() const
 {
-    return static_cast<const BeginTransactionRequest *>(RDSDataServiceResponse::request());
+    Q_D(const BeginTransactionResponse);
+    return static_cast<const BeginTransactionRequest *>(d->request);
 }
 
 /*!

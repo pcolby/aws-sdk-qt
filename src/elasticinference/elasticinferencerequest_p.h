@@ -20,12 +20,15 @@
 #ifndef QTAWS_ELASTICINFERENCEREQUEST_P_H
 #define QTAWS_ELASTICINFERENCEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "elasticinferencerequest.h"
+
 namespace QtAws {
 namespace ElasticInference {
 
 class ElasticInferenceRequest;
 
-class ElasticInferenceRequestPrivate {
+class ElasticInferenceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ElasticInferenceRequest::Action action; ///< ElasticInference action to be performed.
@@ -36,9 +39,6 @@ public:
     ElasticInferenceRequestPrivate(const ElasticInferenceRequestPrivate &other, ElasticInferenceRequest * const q);
 
     static QString toString(const ElasticInferenceRequest::Action &action);
-
-protected:
-    ElasticInferenceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticInferenceRequest)

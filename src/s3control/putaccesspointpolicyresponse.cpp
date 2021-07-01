@@ -56,7 +56,8 @@ PutAccessPointPolicyResponse::PutAccessPointPolicyResponse(
  */
 const PutAccessPointPolicyRequest * PutAccessPointPolicyResponse::request() const
 {
-    return static_cast<const PutAccessPointPolicyRequest *>(S3ControlResponse::request());
+    Q_D(const PutAccessPointPolicyResponse);
+    return static_cast<const PutAccessPointPolicyRequest *>(d->request);
 }
 
 /*!

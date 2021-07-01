@@ -71,7 +71,8 @@ RequestCancelWorkflowExecutionResponse::RequestCancelWorkflowExecutionResponse(
  */
 const RequestCancelWorkflowExecutionRequest * RequestCancelWorkflowExecutionResponse::request() const
 {
-    return static_cast<const RequestCancelWorkflowExecutionRequest *>(SwfResponse::request());
+    Q_D(const RequestCancelWorkflowExecutionResponse);
+    return static_cast<const RequestCancelWorkflowExecutionRequest *>(d->request);
 }
 
 /*!

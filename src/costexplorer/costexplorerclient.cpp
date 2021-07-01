@@ -139,16 +139,16 @@ CostExplorerClient::CostExplorerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-10-25"),
-    QStringLiteral("ce"),
-    QStringLiteral("AWS Cost Explorer Service"),
-    QStringLiteral("ce"),
-    parent), d_ptr(new CostExplorerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CostExplorerClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CostExplorerClient);
+    d->apiVersion = QStringLiteral("2017-10-25");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("ce");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Cost Explorer Service");
+    d->serviceName = QStringLiteral("ce");
 }
 
 /*!
@@ -167,16 +167,16 @@ CostExplorerClient::CostExplorerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-10-25"),
-    QStringLiteral("ce"),
-    QStringLiteral("AWS Cost Explorer Service"),
-    QStringLiteral("ce"),
-    parent), d_ptr(new CostExplorerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CostExplorerClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CostExplorerClient);
+    d->apiVersion = QStringLiteral("2017-10-25");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("ce");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Cost Explorer Service");
+    d->serviceName = QStringLiteral("ce");
 }
 
 /*!
@@ -723,9 +723,10 @@ UpdateCostCategoryDefinitionResponse * CostExplorerClient::updateCostCategoryDef
 /*!
  * Constructs a CostExplorerClientPrivate object with public implementation \a q.
  */
-CostExplorerClientPrivate::CostExplorerClientPrivate(CostExplorerClient * const q) : q_ptr(q)
+CostExplorerClientPrivate::CostExplorerClientPrivate(CostExplorerClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CostExplorer

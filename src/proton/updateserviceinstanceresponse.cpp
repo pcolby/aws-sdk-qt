@@ -177,7 +177,8 @@ UpdateServiceInstanceResponse::UpdateServiceInstanceResponse(
  */
 const UpdateServiceInstanceRequest * UpdateServiceInstanceResponse::request() const
 {
-    return static_cast<const UpdateServiceInstanceRequest *>(ProtonResponse::request());
+    Q_D(const UpdateServiceInstanceResponse);
+    return static_cast<const UpdateServiceInstanceRequest *>(d->request);
 }
 
 /*!

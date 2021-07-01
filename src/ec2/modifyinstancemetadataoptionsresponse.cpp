@@ -87,7 +87,8 @@ ModifyInstanceMetadataOptionsResponse::ModifyInstanceMetadataOptionsResponse(
  */
 const ModifyInstanceMetadataOptionsRequest * ModifyInstanceMetadataOptionsResponse::request() const
 {
-    return static_cast<const ModifyInstanceMetadataOptionsRequest *>(Ec2Response::request());
+    Q_D(const ModifyInstanceMetadataOptionsResponse);
+    return static_cast<const ModifyInstanceMetadataOptionsRequest *>(d->request);
 }
 
 /*!

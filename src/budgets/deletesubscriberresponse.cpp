@@ -116,7 +116,8 @@ DeleteSubscriberResponse::DeleteSubscriberResponse(
  */
 const DeleteSubscriberRequest * DeleteSubscriberResponse::request() const
 {
-    return static_cast<const DeleteSubscriberRequest *>(BudgetsResponse::request());
+    Q_D(const DeleteSubscriberResponse);
+    return static_cast<const DeleteSubscriberRequest *>(d->request);
 }
 
 /*!

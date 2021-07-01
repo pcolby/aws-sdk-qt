@@ -122,16 +122,16 @@ GreengrassV2Client::GreengrassV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-11-30"),
-    QStringLiteral("greengrass"),
-    QStringLiteral("AWS IoT Greengrass V2"),
-    QStringLiteral("greengrass"),
-    parent), d_ptr(new GreengrassV2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GreengrassV2ClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GreengrassV2Client);
+    d->apiVersion = QStringLiteral("2020-11-30");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("greengrass");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS IoT Greengrass V2");
+    d->serviceName = QStringLiteral("greengrass");
 }
 
 /*!
@@ -150,16 +150,16 @@ GreengrassV2Client::GreengrassV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-11-30"),
-    QStringLiteral("greengrass"),
-    QStringLiteral("AWS IoT Greengrass V2"),
-    QStringLiteral("greengrass"),
-    parent), d_ptr(new GreengrassV2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GreengrassV2ClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GreengrassV2Client);
+    d->apiVersion = QStringLiteral("2020-11-30");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("greengrass");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS IoT Greengrass V2");
+    d->serviceName = QStringLiteral("greengrass");
 }
 
 /*!
@@ -600,9 +600,10 @@ UntagResourceResponse * GreengrassV2Client::untagResource(const UntagResourceReq
 /*!
  * Constructs a GreengrassV2ClientPrivate object with public implementation \a q.
  */
-GreengrassV2ClientPrivate::GreengrassV2ClientPrivate(GreengrassV2Client * const q) : q_ptr(q)
+GreengrassV2ClientPrivate::GreengrassV2ClientPrivate(GreengrassV2Client * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace GreengrassV2

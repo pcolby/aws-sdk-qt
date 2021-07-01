@@ -73,7 +73,8 @@ ReportTaskProgressResponse::ReportTaskProgressResponse(
  */
 const ReportTaskProgressRequest * ReportTaskProgressResponse::request() const
 {
-    return static_cast<const ReportTaskProgressRequest *>(DataPipelineResponse::request());
+    Q_D(const ReportTaskProgressResponse);
+    return static_cast<const ReportTaskProgressRequest *>(d->request);
 }
 
 /*!

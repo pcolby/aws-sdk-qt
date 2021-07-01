@@ -20,12 +20,14 @@
 #ifndef QTAWS_ROUTE53RESOLVERRESPONSE_P_H
 #define QTAWS_ROUTE53RESOLVERRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace Route53Resolver {
 
 class Route53ResolverResponse;
 
-class Route53ResolverResponsePrivate {
+class Route53ResolverResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    Route53ResolverResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Route53ResolverResponse)

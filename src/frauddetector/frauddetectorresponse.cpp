@@ -37,7 +37,7 @@ namespace FraudDetector {
  * Constructs a FraudDetectorResponse object with parent \a parent.
  */
 FraudDetectorResponse::FraudDetectorResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new FraudDetectorResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new FraudDetectorResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ FraudDetectorResponse::FraudDetectorResponse(QObject * const parent)
  * implementation that inherits from FraudDetectorResponsePrivate.
  */
 FraudDetectorResponse::FraudDetectorResponse(FraudDetectorResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void FraudDetectorResponse::parseFailure(QIODevice &response)
  * Constructs a FraudDetectorResponsePrivate object with public implementation \a q.
  */
 FraudDetectorResponsePrivate::FraudDetectorResponsePrivate(
-    FraudDetectorResponse * const q) : q_ptr(q)
+    FraudDetectorResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

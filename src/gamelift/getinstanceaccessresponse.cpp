@@ -115,7 +115,8 @@ GetInstanceAccessResponse::GetInstanceAccessResponse(
  */
 const GetInstanceAccessRequest * GetInstanceAccessResponse::request() const
 {
-    return static_cast<const GetInstanceAccessRequest *>(GameLiftResponse::request());
+    Q_D(const GetInstanceAccessResponse);
+    return static_cast<const GetInstanceAccessRequest *>(d->request);
 }
 
 /*!

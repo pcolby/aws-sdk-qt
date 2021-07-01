@@ -37,7 +37,7 @@ namespace EventBridge {
  * Constructs a EventBridgeResponse object with parent \a parent.
  */
 EventBridgeResponse::EventBridgeResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new EventBridgeResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new EventBridgeResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ EventBridgeResponse::EventBridgeResponse(QObject * const parent)
  * implementation that inherits from EventBridgeResponsePrivate.
  */
 EventBridgeResponse::EventBridgeResponse(EventBridgeResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void EventBridgeResponse::parseFailure(QIODevice &response)
  * Constructs a EventBridgeResponsePrivate object with public implementation \a q.
  */
 EventBridgeResponsePrivate::EventBridgeResponsePrivate(
-    EventBridgeResponse * const q) : q_ptr(q)
+    EventBridgeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

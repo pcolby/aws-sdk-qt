@@ -87,7 +87,8 @@ AttachInternetGatewayResponse::AttachInternetGatewayResponse(
  */
 const AttachInternetGatewayRequest * AttachInternetGatewayResponse::request() const
 {
-    return static_cast<const AttachInternetGatewayRequest *>(Ec2Response::request());
+    Q_D(const AttachInternetGatewayResponse);
+    return static_cast<const AttachInternetGatewayRequest *>(d->request);
 }
 
 /*!

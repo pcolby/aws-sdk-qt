@@ -37,7 +37,7 @@ namespace PinpointEmail {
  * Constructs a PinpointEmailResponse object with parent \a parent.
  */
 PinpointEmailResponse::PinpointEmailResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new PinpointEmailResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new PinpointEmailResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ PinpointEmailResponse::PinpointEmailResponse(QObject * const parent)
  * implementation that inherits from PinpointEmailResponsePrivate.
  */
 PinpointEmailResponse::PinpointEmailResponse(PinpointEmailResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void PinpointEmailResponse::parseFailure(QIODevice &response)
  * Constructs a PinpointEmailResponsePrivate object with public implementation \a q.
  */
 PinpointEmailResponsePrivate::PinpointEmailResponsePrivate(
-    PinpointEmailResponse * const q) : q_ptr(q)
+    PinpointEmailResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

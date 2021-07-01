@@ -61,7 +61,8 @@ DescribeClusterResponse::DescribeClusterResponse(
  */
 const DescribeClusterRequest * DescribeClusterResponse::request() const
 {
-    return static_cast<const DescribeClusterRequest *>(SnowballResponse::request());
+    Q_D(const DescribeClusterResponse);
+    return static_cast<const DescribeClusterRequest *>(d->request);
 }
 
 /*!

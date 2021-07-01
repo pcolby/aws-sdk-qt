@@ -88,7 +88,8 @@ CreateConfigurationSetResponse::CreateConfigurationSetResponse(
  */
 const CreateConfigurationSetRequest * CreateConfigurationSetResponse::request() const
 {
-    return static_cast<const CreateConfigurationSetRequest *>(Sesv2Response::request());
+    Q_D(const CreateConfigurationSetResponse);
+    return static_cast<const CreateConfigurationSetRequest *>(d->request);
 }
 
 /*!

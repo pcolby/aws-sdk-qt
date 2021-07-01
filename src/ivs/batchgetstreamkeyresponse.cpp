@@ -385,7 +385,8 @@ BatchGetStreamKeyResponse::BatchGetStreamKeyResponse(
  */
 const BatchGetStreamKeyRequest * BatchGetStreamKeyResponse::request() const
 {
-    return static_cast<const BatchGetStreamKeyRequest *>(IvsResponse::request());
+    Q_D(const BatchGetStreamKeyResponse);
+    return static_cast<const BatchGetStreamKeyRequest *>(d->request);
 }
 
 /*!

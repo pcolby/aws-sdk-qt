@@ -143,7 +143,8 @@ UpdateProjectResponse::UpdateProjectResponse(
  */
 const UpdateProjectRequest * UpdateProjectResponse::request() const
 {
-    return static_cast<const UpdateProjectRequest *>(CodeStarResponse::request());
+    Q_D(const UpdateProjectResponse);
+    return static_cast<const UpdateProjectRequest *>(d->request);
 }
 
 /*!

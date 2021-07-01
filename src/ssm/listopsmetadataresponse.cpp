@@ -98,7 +98,8 @@ ListOpsMetadataResponse::ListOpsMetadataResponse(
  */
 const ListOpsMetadataRequest * ListOpsMetadataResponse::request() const
 {
-    return static_cast<const ListOpsMetadataRequest *>(SsmResponse::request());
+    Q_D(const ListOpsMetadataResponse);
+    return static_cast<const ListOpsMetadataRequest *>(d->request);
 }
 
 /*!

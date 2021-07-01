@@ -56,7 +56,8 @@ DeleteReusableDelegationSetResponse::DeleteReusableDelegationSetResponse(
  */
 const DeleteReusableDelegationSetRequest * DeleteReusableDelegationSetResponse::request() const
 {
-    return static_cast<const DeleteReusableDelegationSetRequest *>(Route53Response::request());
+    Q_D(const DeleteReusableDelegationSetResponse);
+    return static_cast<const DeleteReusableDelegationSetRequest *>(d->request);
 }
 
 /*!

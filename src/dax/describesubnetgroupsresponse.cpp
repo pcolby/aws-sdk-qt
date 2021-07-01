@@ -59,7 +59,8 @@ DescribeSubnetGroupsResponse::DescribeSubnetGroupsResponse(
  */
 const DescribeSubnetGroupsRequest * DescribeSubnetGroupsResponse::request() const
 {
-    return static_cast<const DescribeSubnetGroupsRequest *>(DaxResponse::request());
+    Q_D(const DescribeSubnetGroupsResponse);
+    return static_cast<const DescribeSubnetGroupsRequest *>(d->request);
 }
 
 /*!

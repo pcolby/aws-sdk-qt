@@ -66,12 +66,6 @@ public slots:
     StartDocumentAnalysisResponse * startDocumentAnalysis(const StartDocumentAnalysisRequest &request);
     StartDocumentTextDetectionResponse * startDocumentTextDetection(const StartDocumentTextDetectionRequest &request);
 
-protected:
-    /// @cond internal
-    TextractClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit TextractClient(TextractClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(TextractClient)
     Q_DISABLE_COPY(TextractClient)

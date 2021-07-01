@@ -65,7 +65,8 @@ UpdateIncidentRecordResponse::UpdateIncidentRecordResponse(
  */
 const UpdateIncidentRecordRequest * UpdateIncidentRecordResponse::request() const
 {
-    return static_cast<const UpdateIncidentRecordRequest *>(SSMIncidentsResponse::request());
+    Q_D(const UpdateIncidentRecordResponse);
+    return static_cast<const UpdateIncidentRecordRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,14 @@
 #ifndef QTAWS_EMRRESPONSE_P_H
 #define QTAWS_EMRRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace EMR {
 
 class EmrResponse;
 
-class EmrResponsePrivate {
+class EmrResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    EmrResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EmrResponse)

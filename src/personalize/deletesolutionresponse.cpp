@@ -56,7 +56,8 @@ DeleteSolutionResponse::DeleteSolutionResponse(
  */
 const DeleteSolutionRequest * DeleteSolutionResponse::request() const
 {
-    return static_cast<const DeleteSolutionRequest *>(PersonalizeResponse::request());
+    Q_D(const DeleteSolutionResponse);
+    return static_cast<const DeleteSolutionRequest *>(d->request);
 }
 
 /*!

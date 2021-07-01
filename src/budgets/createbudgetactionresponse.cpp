@@ -116,7 +116,8 @@ CreateBudgetActionResponse::CreateBudgetActionResponse(
  */
 const CreateBudgetActionRequest * CreateBudgetActionResponse::request() const
 {
-    return static_cast<const CreateBudgetActionRequest *>(BudgetsResponse::request());
+    Q_D(const CreateBudgetActionResponse);
+    return static_cast<const CreateBudgetActionRequest *>(d->request);
 }
 
 /*!

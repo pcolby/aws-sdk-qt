@@ -57,7 +57,8 @@ StartDataIngestionJobResponse::StartDataIngestionJobResponse(
  */
 const StartDataIngestionJobRequest * StartDataIngestionJobResponse::request() const
 {
-    return static_cast<const StartDataIngestionJobRequest *>(LookoutEquipmentResponse::request());
+    Q_D(const StartDataIngestionJobResponse);
+    return static_cast<const StartDataIngestionJobRequest *>(d->request);
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace LakeFormation {
  * Constructs a LakeFormationResponse object with parent \a parent.
  */
 LakeFormationResponse::LakeFormationResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LakeFormationResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new LakeFormationResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ LakeFormationResponse::LakeFormationResponse(QObject * const parent)
  * implementation that inherits from LakeFormationResponsePrivate.
  */
 LakeFormationResponse::LakeFormationResponse(LakeFormationResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void LakeFormationResponse::parseFailure(QIODevice &response)
  * Constructs a LakeFormationResponsePrivate object with public implementation \a q.
  */
 LakeFormationResponsePrivate::LakeFormationResponsePrivate(
-    LakeFormationResponse * const q) : q_ptr(q)
+    LakeFormationResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

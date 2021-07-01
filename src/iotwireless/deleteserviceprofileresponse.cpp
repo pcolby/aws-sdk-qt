@@ -56,7 +56,8 @@ DeleteServiceProfileResponse::DeleteServiceProfileResponse(
  */
 const DeleteServiceProfileRequest * DeleteServiceProfileResponse::request() const
 {
-    return static_cast<const DeleteServiceProfileRequest *>(IoTWirelessResponse::request());
+    Q_D(const DeleteServiceProfileResponse);
+    return static_cast<const DeleteServiceProfileRequest *>(d->request);
 }
 
 /*!

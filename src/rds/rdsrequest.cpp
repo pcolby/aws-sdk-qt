@@ -179,7 +179,7 @@ namespace RDS {
  * Constructs a RdsRequest object for RDS \a action.
  */
 RdsRequest::RdsRequest(const Action action)
-    : d_ptr(new RdsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new RdsRequestPrivate(action, this))
 {
 
 }
@@ -188,8 +188,7 @@ RdsRequest::RdsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 RdsRequest::RdsRequest(const RdsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new RdsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new RdsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -212,7 +211,7 @@ RdsRequest& RdsRequest::operator=(const RdsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RdsRequestPrivate.
  */
-RdsRequest::RdsRequest(RdsRequestPrivate * const d) : d_ptr(d)
+RdsRequest::RdsRequest(RdsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -381,7 +380,7 @@ QNetworkRequest RdsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 RdsRequestPrivate::RdsRequestPrivate(const RdsRequest::Action action, RdsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -396,8 +395,8 @@ RdsRequestPrivate::RdsRequestPrivate(const RdsRequest::Action action, RdsRequest
  */
 RdsRequestPrivate::RdsRequestPrivate(const RdsRequestPrivate &other,
                                      RdsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

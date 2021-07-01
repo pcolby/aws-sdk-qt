@@ -66,12 +66,6 @@ public slots:
     ListJobsResponse * listJobs(const ListJobsRequest &request);
     UpdateJobResponse * updateJob(const UpdateJobRequest &request);
 
-protected:
-    /// @cond internal
-    ImportExportClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ImportExportClient(ImportExportClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ImportExportClient)
     Q_DISABLE_COPY(ImportExportClient)

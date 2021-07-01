@@ -87,7 +87,8 @@ DescribeHostsResponse::DescribeHostsResponse(
  */
 const DescribeHostsRequest * DescribeHostsResponse::request() const
 {
-    return static_cast<const DescribeHostsRequest *>(Ec2Response::request());
+    Q_D(const DescribeHostsResponse);
+    return static_cast<const DescribeHostsRequest *>(d->request);
 }
 
 /*!

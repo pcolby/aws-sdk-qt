@@ -58,7 +58,8 @@ DisassociateConnectionAliasResponse::DisassociateConnectionAliasResponse(
  */
 const DisassociateConnectionAliasRequest * DisassociateConnectionAliasResponse::request() const
 {
-    return static_cast<const DisassociateConnectionAliasRequest *>(WorkSpacesResponse::request());
+    Q_D(const DisassociateConnectionAliasResponse);
+    return static_cast<const DisassociateConnectionAliasRequest *>(d->request);
 }
 
 /*!

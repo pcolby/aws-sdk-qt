@@ -66,7 +66,8 @@ InvokeResponse::InvokeResponse(
  */
 const InvokeRequest * InvokeResponse::request() const
 {
-    return static_cast<const InvokeRequest *>(LambdaResponse::request());
+    Q_D(const InvokeResponse);
+    return static_cast<const InvokeRequest *>(d->request);
 }
 
 /*!

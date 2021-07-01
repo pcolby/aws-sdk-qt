@@ -64,7 +64,8 @@ UpdateDatasetEntriesResponse::UpdateDatasetEntriesResponse(
  */
 const UpdateDatasetEntriesRequest * UpdateDatasetEntriesResponse::request() const
 {
-    return static_cast<const UpdateDatasetEntriesRequest *>(LookoutforVisionResponse::request());
+    Q_D(const UpdateDatasetEntriesResponse);
+    return static_cast<const UpdateDatasetEntriesRequest *>(d->request);
 }
 
 /*!

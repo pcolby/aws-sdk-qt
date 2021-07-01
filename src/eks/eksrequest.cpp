@@ -74,7 +74,7 @@ namespace EKS {
  * Constructs a EksRequest object for EKS \a action.
  */
 EksRequest::EksRequest(const Action action)
-    : d_ptr(new EksRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new EksRequestPrivate(action, this))
 {
 
 }
@@ -83,8 +83,7 @@ EksRequest::EksRequest(const Action action)
  * Constructs a copy of \a other.
  */
 EksRequest::EksRequest(const EksRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new EksRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new EksRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -107,7 +106,7 @@ EksRequest& EksRequest::operator=(const EksRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from EksRequestPrivate.
  */
-EksRequest::EksRequest(EksRequestPrivate * const d) : d_ptr(d)
+EksRequest::EksRequest(EksRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -276,7 +275,7 @@ QNetworkRequest EksRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 EksRequestPrivate::EksRequestPrivate(const EksRequest::Action action, EksRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -291,8 +290,8 @@ EksRequestPrivate::EksRequestPrivate(const EksRequest::Action action, EksRequest
  */
 EksRequestPrivate::EksRequestPrivate(const EksRequestPrivate &other,
                                      EksRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

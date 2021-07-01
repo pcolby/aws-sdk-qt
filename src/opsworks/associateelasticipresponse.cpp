@@ -161,7 +161,8 @@ AssociateElasticIpResponse::AssociateElasticIpResponse(
  */
 const AssociateElasticIpRequest * AssociateElasticIpResponse::request() const
 {
-    return static_cast<const AssociateElasticIpRequest *>(OpsWorksResponse::request());
+    Q_D(const AssociateElasticIpResponse);
+    return static_cast<const AssociateElasticIpRequest *>(d->request);
 }
 
 /*!

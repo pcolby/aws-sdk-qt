@@ -87,7 +87,8 @@ DescribeInstanceAttributeResponse::DescribeInstanceAttributeResponse(
  */
 const DescribeInstanceAttributeRequest * DescribeInstanceAttributeResponse::request() const
 {
-    return static_cast<const DescribeInstanceAttributeRequest *>(Ec2Response::request());
+    Q_D(const DescribeInstanceAttributeResponse);
+    return static_cast<const DescribeInstanceAttributeRequest *>(d->request);
 }
 
 /*!

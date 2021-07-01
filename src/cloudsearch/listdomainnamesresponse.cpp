@@ -66,7 +66,8 @@ ListDomainNamesResponse::ListDomainNamesResponse(
  */
 const ListDomainNamesRequest * ListDomainNamesResponse::request() const
 {
-    return static_cast<const ListDomainNamesRequest *>(CloudSearchResponse::request());
+    Q_D(const ListDomainNamesResponse);
+    return static_cast<const ListDomainNamesRequest *>(d->request);
 }
 
 /*!

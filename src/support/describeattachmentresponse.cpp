@@ -133,7 +133,8 @@ DescribeAttachmentResponse::DescribeAttachmentResponse(
  */
 const DescribeAttachmentRequest * DescribeAttachmentResponse::request() const
 {
-    return static_cast<const DescribeAttachmentRequest *>(SupportResponse::request());
+    Q_D(const DescribeAttachmentResponse);
+    return static_cast<const DescribeAttachmentRequest *>(d->request);
 }
 
 /*!

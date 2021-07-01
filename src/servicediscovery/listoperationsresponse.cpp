@@ -60,7 +60,8 @@ ListOperationsResponse::ListOperationsResponse(
  */
 const ListOperationsRequest * ListOperationsResponse::request() const
 {
-    return static_cast<const ListOperationsRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const ListOperationsResponse);
+    return static_cast<const ListOperationsRequest *>(d->request);
 }
 
 /*!

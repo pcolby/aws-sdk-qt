@@ -37,7 +37,7 @@ namespace Transfer {
  * Constructs a TransferResponse object with parent \a parent.
  */
 TransferResponse::TransferResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new TransferResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new TransferResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ TransferResponse::TransferResponse(QObject * const parent)
  * implementation that inherits from TransferResponsePrivate.
  */
 TransferResponse::TransferResponse(TransferResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void TransferResponse::parseFailure(QIODevice &response)
  * Constructs a TransferResponsePrivate object with public implementation \a q.
  */
 TransferResponsePrivate::TransferResponsePrivate(
-    TransferResponse * const q) : q_ptr(q)
+    TransferResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -56,7 +56,8 @@ AssociateWirelessGatewayWithThingResponse::AssociateWirelessGatewayWithThingResp
  */
 const AssociateWirelessGatewayWithThingRequest * AssociateWirelessGatewayWithThingResponse::request() const
 {
-    return static_cast<const AssociateWirelessGatewayWithThingRequest *>(IoTWirelessResponse::request());
+    Q_D(const AssociateWirelessGatewayWithThingResponse);
+    return static_cast<const AssociateWirelessGatewayWithThingRequest *>(d->request);
 }
 
 /*!

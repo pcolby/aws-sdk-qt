@@ -37,7 +37,7 @@ namespace TimestreamWrite {
  * Constructs a TimestreamWriteResponse object with parent \a parent.
  */
 TimestreamWriteResponse::TimestreamWriteResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new TimestreamWriteResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new TimestreamWriteResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ TimestreamWriteResponse::TimestreamWriteResponse(QObject * const parent)
  * implementation that inherits from TimestreamWriteResponsePrivate.
  */
 TimestreamWriteResponse::TimestreamWriteResponse(TimestreamWriteResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void TimestreamWriteResponse::parseFailure(QIODevice &response)
  * Constructs a TimestreamWriteResponsePrivate object with public implementation \a q.
  */
 TimestreamWriteResponsePrivate::TimestreamWriteResponsePrivate(
-    TimestreamWriteResponse * const q) : q_ptr(q)
+    TimestreamWriteResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

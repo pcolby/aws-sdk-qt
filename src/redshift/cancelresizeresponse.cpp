@@ -85,7 +85,8 @@ CancelResizeResponse::CancelResizeResponse(
  */
 const CancelResizeRequest * CancelResizeResponse::request() const
 {
-    return static_cast<const CancelResizeRequest *>(RedshiftResponse::request());
+    Q_D(const CancelResizeResponse);
+    return static_cast<const CancelResizeRequest *>(d->request);
 }
 
 /*!

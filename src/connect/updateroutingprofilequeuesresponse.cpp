@@ -79,7 +79,8 @@ UpdateRoutingProfileQueuesResponse::UpdateRoutingProfileQueuesResponse(
  */
 const UpdateRoutingProfileQueuesRequest * UpdateRoutingProfileQueuesResponse::request() const
 {
-    return static_cast<const UpdateRoutingProfileQueuesRequest *>(ConnectResponse::request());
+    Q_D(const UpdateRoutingProfileQueuesResponse);
+    return static_cast<const UpdateRoutingProfileQueuesRequest *>(d->request);
 }
 
 /*!

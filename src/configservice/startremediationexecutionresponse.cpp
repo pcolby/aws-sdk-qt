@@ -75,7 +75,8 @@ StartRemediationExecutionResponse::StartRemediationExecutionResponse(
  */
 const StartRemediationExecutionRequest * StartRemediationExecutionResponse::request() const
 {
-    return static_cast<const StartRemediationExecutionRequest *>(ConfigServiceResponse::request());
+    Q_D(const StartRemediationExecutionResponse);
+    return static_cast<const StartRemediationExecutionRequest *>(d->request);
 }
 
 /*!

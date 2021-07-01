@@ -122,8 +122,7 @@ public:
 
 protected:
     /// @cond internal
-    Route53RequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit Route53Request(Route53RequestPrivate * const d);
+    Route53Request(Route53RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

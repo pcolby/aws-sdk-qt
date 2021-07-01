@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    AugmentedAIRuntimeResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AugmentedAIRuntimeResponse(AugmentedAIRuntimeResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

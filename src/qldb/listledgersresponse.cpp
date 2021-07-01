@@ -56,7 +56,8 @@ ListLedgersResponse::ListLedgersResponse(
  */
 const ListLedgersRequest * ListLedgersResponse::request() const
 {
-    return static_cast<const ListLedgersRequest *>(QldbResponse::request());
+    Q_D(const ListLedgersResponse);
+    return static_cast<const ListLedgersRequest *>(d->request);
 }
 
 /*!

@@ -71,7 +71,8 @@ GetMatchesResponse::GetMatchesResponse(
  */
 const GetMatchesRequest * GetMatchesResponse::request() const
 {
-    return static_cast<const GetMatchesRequest *>(CustomerProfilesResponse::request());
+    Q_D(const GetMatchesResponse);
+    return static_cast<const GetMatchesRequest *>(d->request);
 }
 
 /*!

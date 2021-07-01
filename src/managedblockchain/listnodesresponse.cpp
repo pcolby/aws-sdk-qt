@@ -72,7 +72,8 @@ ListNodesResponse::ListNodesResponse(
  */
 const ListNodesRequest * ListNodesResponse::request() const
 {
-    return static_cast<const ListNodesRequest *>(ManagedBlockchainResponse::request());
+    Q_D(const ListNodesResponse);
+    return static_cast<const ListNodesRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ ListSamplesResponse::ListSamplesResponse(
  */
 const ListSamplesRequest * ListSamplesResponse::request() const
 {
-    return static_cast<const ListSamplesRequest *>(DeviceFarmResponse::request());
+    Q_D(const ListSamplesResponse);
+    return static_cast<const ListSamplesRequest *>(d->request);
 }
 
 /*!

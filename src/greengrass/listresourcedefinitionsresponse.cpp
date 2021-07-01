@@ -58,7 +58,8 @@ ListResourceDefinitionsResponse::ListResourceDefinitionsResponse(
  */
 const ListResourceDefinitionsRequest * ListResourceDefinitionsResponse::request() const
 {
-    return static_cast<const ListResourceDefinitionsRequest *>(GreengrassResponse::request());
+    Q_D(const ListResourceDefinitionsResponse);
+    return static_cast<const ListResourceDefinitionsRequest *>(d->request);
 }
 
 /*!

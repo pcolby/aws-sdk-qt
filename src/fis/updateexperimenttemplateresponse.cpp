@@ -58,7 +58,8 @@ UpdateExperimentTemplateResponse::UpdateExperimentTemplateResponse(
  */
 const UpdateExperimentTemplateRequest * UpdateExperimentTemplateResponse::request() const
 {
-    return static_cast<const UpdateExperimentTemplateRequest *>(FisResponse::request());
+    Q_D(const UpdateExperimentTemplateResponse);
+    return static_cast<const UpdateExperimentTemplateRequest *>(d->request);
 }
 
 /*!

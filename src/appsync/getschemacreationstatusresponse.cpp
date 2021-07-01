@@ -56,7 +56,8 @@ GetSchemaCreationStatusResponse::GetSchemaCreationStatusResponse(
  */
 const GetSchemaCreationStatusRequest * GetSchemaCreationStatusResponse::request() const
 {
-    return static_cast<const GetSchemaCreationStatusRequest *>(AppSyncResponse::request());
+    Q_D(const GetSchemaCreationStatusResponse);
+    return static_cast<const GetSchemaCreationStatusRequest *>(d->request);
 }
 
 /*!

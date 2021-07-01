@@ -122,16 +122,16 @@ SchemasClient::SchemasClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-12-02"),
-    QStringLiteral("schemas"),
-    QStringLiteral("Schemas"),
-    QStringLiteral("schemas"),
-    parent), d_ptr(new SchemasClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new SchemasClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(SchemasClient);
+    d->apiVersion = QStringLiteral("2019-12-02");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("schemas");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Schemas");
+    d->serviceName = QStringLiteral("schemas");
 }
 
 /*!
@@ -150,16 +150,16 @@ SchemasClient::SchemasClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-12-02"),
-    QStringLiteral("schemas"),
-    QStringLiteral("Schemas"),
-    QStringLiteral("schemas"),
-    parent), d_ptr(new SchemasClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new SchemasClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(SchemasClient);
+    d->apiVersion = QStringLiteral("2019-12-02");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("schemas");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Schemas");
+    d->serviceName = QStringLiteral("schemas");
 }
 
 /*!
@@ -576,9 +576,10 @@ UpdateSchemaResponse * SchemasClient::updateSchema(const UpdateSchemaRequest &re
 /*!
  * Constructs a SchemasClientPrivate object with public implementation \a q.
  */
-SchemasClientPrivate::SchemasClientPrivate(SchemasClient * const q) : q_ptr(q)
+SchemasClientPrivate::SchemasClientPrivate(SchemasClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Schemas

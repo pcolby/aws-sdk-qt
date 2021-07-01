@@ -103,16 +103,16 @@ ComprehendMedicalClient::ComprehendMedicalClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-10-30"),
-    QStringLiteral("comprehendmedical"),
-    QStringLiteral("AWS Comprehend Medical"),
-    QStringLiteral("comprehendmedical"),
-    parent), d_ptr(new ComprehendMedicalClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ComprehendMedicalClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ComprehendMedicalClient);
+    d->apiVersion = QStringLiteral("2018-10-30");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("comprehendmedical");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Comprehend Medical");
+    d->serviceName = QStringLiteral("comprehendmedical");
 }
 
 /*!
@@ -131,16 +131,16 @@ ComprehendMedicalClient::ComprehendMedicalClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-10-30"),
-    QStringLiteral("comprehendmedical"),
-    QStringLiteral("AWS Comprehend Medical"),
-    QStringLiteral("comprehendmedical"),
-    parent), d_ptr(new ComprehendMedicalClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ComprehendMedicalClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ComprehendMedicalClient);
+    d->apiVersion = QStringLiteral("2018-10-30");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("comprehendmedical");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Comprehend Medical");
+    d->serviceName = QStringLiteral("comprehendmedical");
 }
 
 /*!
@@ -457,9 +457,10 @@ StopRxNormInferenceJobResponse * ComprehendMedicalClient::stopRxNormInferenceJob
 /*!
  * Constructs a ComprehendMedicalClientPrivate object with public implementation \a q.
  */
-ComprehendMedicalClientPrivate::ComprehendMedicalClientPrivate(ComprehendMedicalClient * const q) : q_ptr(q)
+ComprehendMedicalClientPrivate::ComprehendMedicalClientPrivate(ComprehendMedicalClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ComprehendMedical

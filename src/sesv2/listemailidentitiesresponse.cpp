@@ -88,7 +88,8 @@ ListEmailIdentitiesResponse::ListEmailIdentitiesResponse(
  */
 const ListEmailIdentitiesRequest * ListEmailIdentitiesResponse::request() const
 {
-    return static_cast<const ListEmailIdentitiesRequest *>(Sesv2Response::request());
+    Q_D(const ListEmailIdentitiesResponse);
+    return static_cast<const ListEmailIdentitiesRequest *>(d->request);
 }
 
 /*!

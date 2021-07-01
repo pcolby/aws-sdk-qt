@@ -88,7 +88,8 @@ ListDomainDeliverabilityCampaignsResponse::ListDomainDeliverabilityCampaignsResp
  */
 const ListDomainDeliverabilityCampaignsRequest * ListDomainDeliverabilityCampaignsResponse::request() const
 {
-    return static_cast<const ListDomainDeliverabilityCampaignsRequest *>(Sesv2Response::request());
+    Q_D(const ListDomainDeliverabilityCampaignsResponse);
+    return static_cast<const ListDomainDeliverabilityCampaignsRequest *>(d->request);
 }
 
 /*!

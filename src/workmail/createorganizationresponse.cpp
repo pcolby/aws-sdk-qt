@@ -89,7 +89,8 @@ CreateOrganizationResponse::CreateOrganizationResponse(
  */
 const CreateOrganizationRequest * CreateOrganizationResponse::request() const
 {
-    return static_cast<const CreateOrganizationRequest *>(WorkMailResponse::request());
+    Q_D(const CreateOrganizationResponse);
+    return static_cast<const CreateOrganizationRequest *>(d->request);
 }
 
 /*!

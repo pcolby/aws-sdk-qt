@@ -79,7 +79,8 @@ AssociateInstanceStorageConfigResponse::AssociateInstanceStorageConfigResponse(
  */
 const AssociateInstanceStorageConfigRequest * AssociateInstanceStorageConfigResponse::request() const
 {
-    return static_cast<const AssociateInstanceStorageConfigRequest *>(ConnectResponse::request());
+    Q_D(const AssociateInstanceStorageConfigResponse);
+    return static_cast<const AssociateInstanceStorageConfigRequest *>(d->request);
 }
 
 /*!

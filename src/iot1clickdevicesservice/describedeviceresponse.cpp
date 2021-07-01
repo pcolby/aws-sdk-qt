@@ -57,7 +57,8 @@ DescribeDeviceResponse::DescribeDeviceResponse(
  */
 const DescribeDeviceRequest * DescribeDeviceResponse::request() const
 {
-    return static_cast<const DescribeDeviceRequest *>(IoT1ClickDevicesServiceResponse::request());
+    Q_D(const DescribeDeviceResponse);
+    return static_cast<const DescribeDeviceRequest *>(d->request);
 }
 
 /*!

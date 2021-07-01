@@ -69,7 +69,8 @@ DeleteApplicationInputProcessingConfigurationResponse::DeleteApplicationInputPro
  */
 const DeleteApplicationInputProcessingConfigurationRequest * DeleteApplicationInputProcessingConfigurationResponse::request() const
 {
-    return static_cast<const DeleteApplicationInputProcessingConfigurationRequest *>(KinesisAnalyticsResponse::request());
+    Q_D(const DeleteApplicationInputProcessingConfigurationResponse);
+    return static_cast<const DeleteApplicationInputProcessingConfigurationRequest *>(d->request);
 }
 
 /*!

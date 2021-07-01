@@ -119,7 +119,8 @@ DescribeGlobalClustersResponse::DescribeGlobalClustersResponse(
  */
 const DescribeGlobalClustersRequest * DescribeGlobalClustersResponse::request() const
 {
-    return static_cast<const DescribeGlobalClustersRequest *>(RdsResponse::request());
+    Q_D(const DescribeGlobalClustersResponse);
+    return static_cast<const DescribeGlobalClustersRequest *>(d->request);
 }
 
 /*!

@@ -77,8 +77,7 @@ public:
 
 protected:
     /// @cond internal
-    LookoutforVisionRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit LookoutforVisionRequest(LookoutforVisionRequestPrivate * const d);
+    LookoutforVisionRequest(LookoutforVisionRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -76,7 +76,8 @@ GetGeoMatchSetResponse::GetGeoMatchSetResponse(
  */
 const GetGeoMatchSetRequest * GetGeoMatchSetResponse::request() const
 {
-    return static_cast<const GetGeoMatchSetRequest *>(WafResponse::request());
+    Q_D(const GetGeoMatchSetResponse);
+    return static_cast<const GetGeoMatchSetRequest *>(d->request);
 }
 
 /*!

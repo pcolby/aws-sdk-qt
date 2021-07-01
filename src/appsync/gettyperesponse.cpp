@@ -56,7 +56,8 @@ GetTypeResponse::GetTypeResponse(
  */
 const GetTypeRequest * GetTypeResponse::request() const
 {
-    return static_cast<const GetTypeRequest *>(AppSyncResponse::request());
+    Q_D(const GetTypeResponse);
+    return static_cast<const GetTypeRequest *>(d->request);
 }
 
 /*!

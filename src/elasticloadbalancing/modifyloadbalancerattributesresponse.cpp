@@ -83,7 +83,8 @@ ModifyLoadBalancerAttributesResponse::ModifyLoadBalancerAttributesResponse(
  */
 const ModifyLoadBalancerAttributesRequest * ModifyLoadBalancerAttributesResponse::request() const
 {
-    return static_cast<const ModifyLoadBalancerAttributesRequest *>(ElasticLoadBalancingResponse::request());
+    Q_D(const ModifyLoadBalancerAttributesResponse);
+    return static_cast<const ModifyLoadBalancerAttributesRequest *>(d->request);
 }
 
 /*!

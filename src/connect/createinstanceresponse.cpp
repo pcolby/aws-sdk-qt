@@ -79,7 +79,8 @@ CreateInstanceResponse::CreateInstanceResponse(
  */
 const CreateInstanceRequest * CreateInstanceResponse::request() const
 {
-    return static_cast<const CreateInstanceRequest *>(ConnectResponse::request());
+    Q_D(const CreateInstanceResponse);
+    return static_cast<const CreateInstanceRequest *>(d->request);
 }
 
 /*!

@@ -57,7 +57,8 @@ InitiateDeviceClaimResponse::InitiateDeviceClaimResponse(
  */
 const InitiateDeviceClaimRequest * InitiateDeviceClaimResponse::request() const
 {
-    return static_cast<const InitiateDeviceClaimRequest *>(IoT1ClickDevicesServiceResponse::request());
+    Q_D(const InitiateDeviceClaimResponse);
+    return static_cast<const InitiateDeviceClaimRequest *>(d->request);
 }
 
 /*!

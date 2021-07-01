@@ -61,7 +61,8 @@ DecodeAuthorizationMessageResponse::DecodeAuthorizationMessageResponse(
  */
 const DecodeAuthorizationMessageRequest * DecodeAuthorizationMessageResponse::request() const
 {
-    return static_cast<const DecodeAuthorizationMessageRequest *>(StsResponse::request());
+    Q_D(const DecodeAuthorizationMessageResponse);
+    return static_cast<const DecodeAuthorizationMessageRequest *>(d->request);
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace ServiceCatalog {
  * Constructs a ServiceCatalogResponse object with parent \a parent.
  */
 ServiceCatalogResponse::ServiceCatalogResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ServiceCatalogResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ServiceCatalogResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ServiceCatalogResponse::ServiceCatalogResponse(QObject * const parent)
  * implementation that inherits from ServiceCatalogResponsePrivate.
  */
 ServiceCatalogResponse::ServiceCatalogResponse(ServiceCatalogResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ServiceCatalogResponse::parseFailure(QIODevice &response)
  * Constructs a ServiceCatalogResponsePrivate object with public implementation \a q.
  */
 ServiceCatalogResponsePrivate::ServiceCatalogResponsePrivate(
-    ServiceCatalogResponse * const q) : q_ptr(q)
+    ServiceCatalogResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

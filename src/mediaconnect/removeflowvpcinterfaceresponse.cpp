@@ -55,7 +55,8 @@ RemoveFlowVpcInterfaceResponse::RemoveFlowVpcInterfaceResponse(
  */
 const RemoveFlowVpcInterfaceRequest * RemoveFlowVpcInterfaceResponse::request() const
 {
-    return static_cast<const RemoveFlowVpcInterfaceRequest *>(MediaConnectResponse::request());
+    Q_D(const RemoveFlowVpcInterfaceResponse);
+    return static_cast<const RemoveFlowVpcInterfaceRequest *>(d->request);
 }
 
 /*!

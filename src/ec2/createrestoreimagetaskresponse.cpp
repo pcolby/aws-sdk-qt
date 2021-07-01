@@ -87,7 +87,8 @@ CreateRestoreImageTaskResponse::CreateRestoreImageTaskResponse(
  */
 const CreateRestoreImageTaskRequest * CreateRestoreImageTaskResponse::request() const
 {
-    return static_cast<const CreateRestoreImageTaskRequest *>(Ec2Response::request());
+    Q_D(const CreateRestoreImageTaskResponse);
+    return static_cast<const CreateRestoreImageTaskRequest *>(d->request);
 }
 
 /*!

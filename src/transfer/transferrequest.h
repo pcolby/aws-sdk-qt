@@ -83,8 +83,7 @@ public:
 
 protected:
     /// @cond internal
-    TransferRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit TransferRequest(TransferRequestPrivate * const d);
+    TransferRequest(TransferRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

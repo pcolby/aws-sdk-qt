@@ -56,7 +56,8 @@ ListHostedZonesByVPCResponse::ListHostedZonesByVPCResponse(
  */
 const ListHostedZonesByVPCRequest * ListHostedZonesByVPCResponse::request() const
 {
-    return static_cast<const ListHostedZonesByVPCRequest *>(Route53Response::request());
+    Q_D(const ListHostedZonesByVPCResponse);
+    return static_cast<const ListHostedZonesByVPCRequest *>(d->request);
 }
 
 /*!

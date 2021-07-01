@@ -20,20 +20,19 @@
 #ifndef QTAWS_RDSCLIENT_P_H
 #define QTAWS_RDSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace RDS {
 
 class RdsClient;
 
-class RdsClientPrivate {
+class RdsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit RdsClientPrivate(RdsClient * const q);
-
-protected:
-    RdsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RdsClient)

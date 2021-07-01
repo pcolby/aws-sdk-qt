@@ -55,7 +55,8 @@ CreateStreamResponse::CreateStreamResponse(
  */
 const CreateStreamRequest * CreateStreamResponse::request() const
 {
-    return static_cast<const CreateStreamRequest *>(KinesisVideoResponse::request());
+    Q_D(const CreateStreamResponse);
+    return static_cast<const CreateStreamRequest *>(d->request);
 }
 
 /*!

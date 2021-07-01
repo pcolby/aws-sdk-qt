@@ -119,7 +119,8 @@ CreateCustomAvailabilityZoneResponse::CreateCustomAvailabilityZoneResponse(
  */
 const CreateCustomAvailabilityZoneRequest * CreateCustomAvailabilityZoneResponse::request() const
 {
-    return static_cast<const CreateCustomAvailabilityZoneRequest *>(RdsResponse::request());
+    Q_D(const CreateCustomAvailabilityZoneResponse);
+    return static_cast<const CreateCustomAvailabilityZoneRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ DeleteRoomMembershipResponse::DeleteRoomMembershipResponse(
  */
 const DeleteRoomMembershipRequest * DeleteRoomMembershipResponse::request() const
 {
-    return static_cast<const DeleteRoomMembershipRequest *>(ChimeResponse::request());
+    Q_D(const DeleteRoomMembershipResponse);
+    return static_cast<const DeleteRoomMembershipRequest *>(d->request);
 }
 
 /*!

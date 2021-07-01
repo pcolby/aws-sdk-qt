@@ -85,7 +85,8 @@ DeleteScheduledActionResponse::DeleteScheduledActionResponse(
  */
 const DeleteScheduledActionRequest * DeleteScheduledActionResponse::request() const
 {
-    return static_cast<const DeleteScheduledActionRequest *>(RedshiftResponse::request());
+    Q_D(const DeleteScheduledActionResponse);
+    return static_cast<const DeleteScheduledActionRequest *>(d->request);
 }
 
 /*!

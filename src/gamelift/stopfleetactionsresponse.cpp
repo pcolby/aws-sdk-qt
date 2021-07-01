@@ -115,7 +115,8 @@ StopFleetActionsResponse::StopFleetActionsResponse(
  */
 const StopFleetActionsRequest * StopFleetActionsResponse::request() const
 {
-    return static_cast<const StopFleetActionsRequest *>(GameLiftResponse::request());
+    Q_D(const StopFleetActionsResponse);
+    return static_cast<const StopFleetActionsRequest *>(d->request);
 }
 
 /*!

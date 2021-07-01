@@ -56,7 +56,8 @@ ListDatasetGroupsResponse::ListDatasetGroupsResponse(
  */
 const ListDatasetGroupsRequest * ListDatasetGroupsResponse::request() const
 {
-    return static_cast<const ListDatasetGroupsRequest *>(PersonalizeResponse::request());
+    Q_D(const ListDatasetGroupsResponse);
+    return static_cast<const ListDatasetGroupsRequest *>(d->request);
 }
 
 /*!

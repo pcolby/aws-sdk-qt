@@ -70,7 +70,8 @@ UpdateImageResponse::UpdateImageResponse(
  */
 const UpdateImageRequest * UpdateImageResponse::request() const
 {
-    return static_cast<const UpdateImageRequest *>(SageMakerResponse::request());
+    Q_D(const UpdateImageResponse);
+    return static_cast<const UpdateImageRequest *>(d->request);
 }
 
 /*!

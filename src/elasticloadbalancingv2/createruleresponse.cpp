@@ -90,7 +90,8 @@ CreateRuleResponse::CreateRuleResponse(
  */
 const CreateRuleRequest * CreateRuleResponse::request() const
 {
-    return static_cast<const CreateRuleRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const CreateRuleResponse);
+    return static_cast<const CreateRuleRequest *>(d->request);
 }
 
 /*!

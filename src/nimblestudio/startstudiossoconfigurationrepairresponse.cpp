@@ -55,7 +55,8 @@ StartStudioSSOConfigurationRepairResponse::StartStudioSSOConfigurationRepairResp
  */
 const StartStudioSSOConfigurationRepairRequest * StartStudioSSOConfigurationRepairResponse::request() const
 {
-    return static_cast<const StartStudioSSOConfigurationRepairRequest *>(NimbleStudioResponse::request());
+    Q_D(const StartStudioSSOConfigurationRepairResponse);
+    return static_cast<const StartStudioSSOConfigurationRepairRequest *>(d->request);
 }
 
 /*!

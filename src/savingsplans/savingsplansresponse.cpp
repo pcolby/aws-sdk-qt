@@ -37,7 +37,7 @@ namespace SavingsPlans {
  * Constructs a SavingsPlansResponse object with parent \a parent.
  */
 SavingsPlansResponse::SavingsPlansResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SavingsPlansResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SavingsPlansResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SavingsPlansResponse::SavingsPlansResponse(QObject * const parent)
  * implementation that inherits from SavingsPlansResponsePrivate.
  */
 SavingsPlansResponse::SavingsPlansResponse(SavingsPlansResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SavingsPlansResponse::parseFailure(QIODevice &response)
  * Constructs a SavingsPlansResponsePrivate object with public implementation \a q.
  */
 SavingsPlansResponsePrivate::SavingsPlansResponsePrivate(
-    SavingsPlansResponse * const q) : q_ptr(q)
+    SavingsPlansResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

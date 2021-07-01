@@ -55,7 +55,8 @@ StopEngagementResponse::StopEngagementResponse(
  */
 const StopEngagementRequest * StopEngagementResponse::request() const
 {
-    return static_cast<const StopEngagementRequest *>(SSMContactsResponse::request());
+    Q_D(const StopEngagementResponse);
+    return static_cast<const StopEngagementRequest *>(d->request);
 }
 
 /*!

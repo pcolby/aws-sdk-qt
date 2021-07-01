@@ -103,7 +103,7 @@ namespace Comprehend {
  * Constructs a ComprehendRequest object for Comprehend \a action.
  */
 ComprehendRequest::ComprehendRequest(const Action action)
-    : d_ptr(new ComprehendRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ComprehendRequestPrivate(action, this))
 {
 
 }
@@ -112,8 +112,7 @@ ComprehendRequest::ComprehendRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ComprehendRequest::ComprehendRequest(const ComprehendRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ComprehendRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ComprehendRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -136,7 +135,7 @@ ComprehendRequest& ComprehendRequest::operator=(const ComprehendRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ComprehendRequestPrivate.
  */
-ComprehendRequest::ComprehendRequest(ComprehendRequestPrivate * const d) : d_ptr(d)
+ComprehendRequest::ComprehendRequest(ComprehendRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -305,7 +304,7 @@ QNetworkRequest ComprehendRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ComprehendRequestPrivate::ComprehendRequestPrivate(const ComprehendRequest::Action action, ComprehendRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -320,8 +319,8 @@ ComprehendRequestPrivate::ComprehendRequestPrivate(const ComprehendRequest::Acti
  */
 ComprehendRequestPrivate::ComprehendRequestPrivate(const ComprehendRequestPrivate &other,
                                      ComprehendRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

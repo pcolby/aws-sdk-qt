@@ -60,7 +60,8 @@ DeleteClientCertificateResponse::DeleteClientCertificateResponse(
  */
 const DeleteClientCertificateRequest * DeleteClientCertificateResponse::request() const
 {
-    return static_cast<const DeleteClientCertificateRequest *>(APIGatewayResponse::request());
+    Q_D(const DeleteClientCertificateResponse);
+    return static_cast<const DeleteClientCertificateRequest *>(d->request);
 }
 
 /*!

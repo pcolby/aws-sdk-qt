@@ -20,7 +20,6 @@ public:
 
 protected:
     /// @cond internal
-    {{ClassName}}Private * const d_ptr; ///< Internal d-pointer.
     {{ClassName}}({{ClassName}}Private * const d, QObject * const parent);
     /// @endcond
 

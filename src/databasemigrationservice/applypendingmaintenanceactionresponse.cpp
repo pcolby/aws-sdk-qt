@@ -66,7 +66,8 @@ ApplyPendingMaintenanceActionResponse::ApplyPendingMaintenanceActionResponse(
  */
 const ApplyPendingMaintenanceActionRequest * ApplyPendingMaintenanceActionResponse::request() const
 {
-    return static_cast<const ApplyPendingMaintenanceActionRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const ApplyPendingMaintenanceActionResponse);
+    return static_cast<const ApplyPendingMaintenanceActionRequest *>(d->request);
 }
 
 /*!

@@ -69,7 +69,8 @@ DeleteCacheSubnetGroupResponse::DeleteCacheSubnetGroupResponse(
  */
 const DeleteCacheSubnetGroupRequest * DeleteCacheSubnetGroupResponse::request() const
 {
-    return static_cast<const DeleteCacheSubnetGroupRequest *>(ElastiCacheResponse::request());
+    Q_D(const DeleteCacheSubnetGroupResponse);
+    return static_cast<const DeleteCacheSubnetGroupRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ CreateGeofenceCollectionResponse::CreateGeofenceCollectionResponse(
  */
 const CreateGeofenceCollectionRequest * CreateGeofenceCollectionResponse::request() const
 {
-    return static_cast<const CreateGeofenceCollectionRequest *>(LocationServiceResponse::request());
+    Q_D(const CreateGeofenceCollectionResponse);
+    return static_cast<const CreateGeofenceCollectionRequest *>(d->request);
 }
 
 /*!

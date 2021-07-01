@@ -61,7 +61,8 @@ UpdatePortfolioShareResponse::UpdatePortfolioShareResponse(
  */
 const UpdatePortfolioShareRequest * UpdatePortfolioShareResponse::request() const
 {
-    return static_cast<const UpdatePortfolioShareRequest *>(ServiceCatalogResponse::request());
+    Q_D(const UpdatePortfolioShareResponse);
+    return static_cast<const UpdatePortfolioShareRequest *>(d->request);
 }
 
 /*!

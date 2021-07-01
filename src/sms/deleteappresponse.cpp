@@ -68,7 +68,8 @@ DeleteAppResponse::DeleteAppResponse(
  */
 const DeleteAppRequest * DeleteAppResponse::request() const
 {
-    return static_cast<const DeleteAppRequest *>(SmsResponse::request());
+    Q_D(const DeleteAppResponse);
+    return static_cast<const DeleteAppRequest *>(d->request);
 }
 
 /*!

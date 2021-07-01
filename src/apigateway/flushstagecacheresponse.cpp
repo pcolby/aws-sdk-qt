@@ -60,7 +60,8 @@ FlushStageCacheResponse::FlushStageCacheResponse(
  */
 const FlushStageCacheRequest * FlushStageCacheResponse::request() const
 {
-    return static_cast<const FlushStageCacheRequest *>(APIGatewayResponse::request());
+    Q_D(const FlushStageCacheResponse);
+    return static_cast<const FlushStageCacheRequest *>(d->request);
 }
 
 /*!

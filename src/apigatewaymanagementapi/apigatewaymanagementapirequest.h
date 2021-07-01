@@ -61,8 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    ApiGatewayManagementApiRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ApiGatewayManagementApiRequest(ApiGatewayManagementApiRequestPrivate * const d);
+    ApiGatewayManagementApiRequest(ApiGatewayManagementApiRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -171,16 +171,16 @@ MediaLiveClient::MediaLiveClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-10-14"),
-    QStringLiteral("medialive"),
-    QStringLiteral("AWS Elemental MediaLive"),
-    QStringLiteral("medialive"),
-    parent), d_ptr(new MediaLiveClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MediaLiveClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MediaLiveClient);
+    d->apiVersion = QStringLiteral("2017-10-14");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("medialive");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaLive");
+    d->serviceName = QStringLiteral("medialive");
 }
 
 /*!
@@ -199,16 +199,16 @@ MediaLiveClient::MediaLiveClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-10-14"),
-    QStringLiteral("medialive"),
-    QStringLiteral("AWS Elemental MediaLive"),
-    QStringLiteral("medialive"),
-    parent), d_ptr(new MediaLiveClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MediaLiveClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MediaLiveClient);
+    d->apiVersion = QStringLiteral("2017-10-14");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("medialive");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaLive");
+    d->serviceName = QStringLiteral("medialive");
 }
 
 /*!
@@ -897,9 +897,10 @@ UpdateReservationResponse * MediaLiveClient::updateReservation(const UpdateReser
 /*!
  * Constructs a MediaLiveClientPrivate object with public implementation \a q.
  */
-MediaLiveClientPrivate::MediaLiveClientPrivate(MediaLiveClient * const q) : q_ptr(q)
+MediaLiveClientPrivate::MediaLiveClientPrivate(MediaLiveClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MediaLive

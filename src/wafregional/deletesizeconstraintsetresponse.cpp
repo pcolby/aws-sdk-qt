@@ -78,7 +78,8 @@ DeleteSizeConstraintSetResponse::DeleteSizeConstraintSetResponse(
  */
 const DeleteSizeConstraintSetRequest * DeleteSizeConstraintSetResponse::request() const
 {
-    return static_cast<const DeleteSizeConstraintSetRequest *>(WAFRegionalResponse::request());
+    Q_D(const DeleteSizeConstraintSetResponse);
+    return static_cast<const DeleteSizeConstraintSetRequest *>(d->request);
 }
 
 /*!

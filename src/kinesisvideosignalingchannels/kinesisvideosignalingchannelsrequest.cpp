@@ -44,7 +44,7 @@ namespace KinesisVideoSignalingChannels {
  * Constructs a KinesisVideoSignalingChannelsRequest object for KinesisVideoSignalingChannels \a action.
  */
 KinesisVideoSignalingChannelsRequest::KinesisVideoSignalingChannelsRequest(const Action action)
-    : d_ptr(new KinesisVideoSignalingChannelsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisVideoSignalingChannelsRequestPrivate(action, this))
 {
 
 }
@@ -53,8 +53,7 @@ KinesisVideoSignalingChannelsRequest::KinesisVideoSignalingChannelsRequest(const
  * Constructs a copy of \a other.
  */
 KinesisVideoSignalingChannelsRequest::KinesisVideoSignalingChannelsRequest(const KinesisVideoSignalingChannelsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new KinesisVideoSignalingChannelsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisVideoSignalingChannelsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -77,7 +76,7 @@ KinesisVideoSignalingChannelsRequest& KinesisVideoSignalingChannelsRequest::oper
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisVideoSignalingChannelsRequestPrivate.
  */
-KinesisVideoSignalingChannelsRequest::KinesisVideoSignalingChannelsRequest(KinesisVideoSignalingChannelsRequestPrivate * const d) : d_ptr(d)
+KinesisVideoSignalingChannelsRequest::KinesisVideoSignalingChannelsRequest(KinesisVideoSignalingChannelsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -246,7 +245,7 @@ QNetworkRequest KinesisVideoSignalingChannelsRequest::unsignedRequest(const QUrl
  * with public implementation \a q.
  */
 KinesisVideoSignalingChannelsRequestPrivate::KinesisVideoSignalingChannelsRequestPrivate(const KinesisVideoSignalingChannelsRequest::Action action, KinesisVideoSignalingChannelsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -261,8 +260,8 @@ KinesisVideoSignalingChannelsRequestPrivate::KinesisVideoSignalingChannelsReques
  */
 KinesisVideoSignalingChannelsRequestPrivate::KinesisVideoSignalingChannelsRequestPrivate(const KinesisVideoSignalingChannelsRequestPrivate &other,
                                      KinesisVideoSignalingChannelsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

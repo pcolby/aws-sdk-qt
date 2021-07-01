@@ -58,7 +58,8 @@ PutKMSEncryptionKeyResponse::PutKMSEncryptionKeyResponse(
  */
 const PutKMSEncryptionKeyRequest * PutKMSEncryptionKeyResponse::request() const
 {
-    return static_cast<const PutKMSEncryptionKeyRequest *>(FraudDetectorResponse::request());
+    Q_D(const PutKMSEncryptionKeyResponse);
+    return static_cast<const PutKMSEncryptionKeyRequest *>(d->request);
 }
 
 /*!

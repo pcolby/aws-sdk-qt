@@ -222,12 +222,6 @@ public slots:
     UpdatePortalResponse * updatePortal(const UpdatePortalRequest &request);
     UpdateProjectResponse * updateProject(const UpdateProjectRequest &request);
 
-protected:
-    /// @cond internal
-    IoTSiteWiseClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IoTSiteWiseClient(IoTSiteWiseClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(IoTSiteWiseClient)
     Q_DISABLE_COPY(IoTSiteWiseClient)

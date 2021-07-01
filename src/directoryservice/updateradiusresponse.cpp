@@ -69,7 +69,8 @@ UpdateRadiusResponse::UpdateRadiusResponse(
  */
 const UpdateRadiusRequest * UpdateRadiusResponse::request() const
 {
-    return static_cast<const UpdateRadiusRequest *>(DirectoryServiceResponse::request());
+    Q_D(const UpdateRadiusResponse);
+    return static_cast<const UpdateRadiusRequest *>(d->request);
 }
 
 /*!

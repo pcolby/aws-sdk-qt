@@ -37,7 +37,7 @@ namespace IoTDataPlane {
  * Constructs a IoTDataPlaneResponse object with parent \a parent.
  */
 IoTDataPlaneResponse::IoTDataPlaneResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTDataPlaneResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new IoTDataPlaneResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ IoTDataPlaneResponse::IoTDataPlaneResponse(QObject * const parent)
  * implementation that inherits from IoTDataPlaneResponsePrivate.
  */
 IoTDataPlaneResponse::IoTDataPlaneResponse(IoTDataPlaneResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTDataPlaneResponse::parseFailure(QIODevice &response)
  * Constructs a IoTDataPlaneResponsePrivate object with public implementation \a q.
  */
 IoTDataPlaneResponsePrivate::IoTDataPlaneResponsePrivate(
-    IoTDataPlaneResponse * const q) : q_ptr(q)
+    IoTDataPlaneResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

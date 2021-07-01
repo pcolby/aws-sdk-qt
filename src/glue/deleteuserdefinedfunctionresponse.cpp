@@ -58,7 +58,8 @@ DeleteUserDefinedFunctionResponse::DeleteUserDefinedFunctionResponse(
  */
 const DeleteUserDefinedFunctionRequest * DeleteUserDefinedFunctionResponse::request() const
 {
-    return static_cast<const DeleteUserDefinedFunctionRequest *>(GlueResponse::request());
+    Q_D(const DeleteUserDefinedFunctionResponse);
+    return static_cast<const DeleteUserDefinedFunctionRequest *>(d->request);
 }
 
 /*!

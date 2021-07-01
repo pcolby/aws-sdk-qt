@@ -62,7 +62,8 @@ DisassociateDeviceFromRoomResponse::DisassociateDeviceFromRoomResponse(
  */
 const DisassociateDeviceFromRoomRequest * DisassociateDeviceFromRoomResponse::request() const
 {
-    return static_cast<const DisassociateDeviceFromRoomRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const DisassociateDeviceFromRoomResponse);
+    return static_cast<const DisassociateDeviceFromRoomRequest *>(d->request);
 }
 
 /*!

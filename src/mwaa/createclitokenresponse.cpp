@@ -59,7 +59,8 @@ CreateCliTokenResponse::CreateCliTokenResponse(
  */
 const CreateCliTokenRequest * CreateCliTokenResponse::request() const
 {
-    return static_cast<const CreateCliTokenRequest *>(MwaaResponse::request());
+    Q_D(const CreateCliTokenResponse);
+    return static_cast<const CreateCliTokenRequest *>(d->request);
 }
 
 /*!

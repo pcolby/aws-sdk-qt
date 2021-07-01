@@ -58,7 +58,8 @@ PutLoggingOptionsResponse::PutLoggingOptionsResponse(
  */
 const PutLoggingOptionsRequest * PutLoggingOptionsResponse::request() const
 {
-    return static_cast<const PutLoggingOptionsRequest *>(IoTEventsResponse::request());
+    Q_D(const PutLoggingOptionsResponse);
+    return static_cast<const PutLoggingOptionsRequest *>(d->request);
 }
 
 /*!

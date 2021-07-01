@@ -55,7 +55,8 @@ TransferInputDeviceResponse::TransferInputDeviceResponse(
  */
 const TransferInputDeviceRequest * TransferInputDeviceResponse::request() const
 {
-    return static_cast<const TransferInputDeviceRequest *>(MediaLiveResponse::request());
+    Q_D(const TransferInputDeviceResponse);
+    return static_cast<const TransferInputDeviceRequest *>(d->request);
 }
 
 /*!

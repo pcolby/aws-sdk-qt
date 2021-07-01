@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ServiceCatalogResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ServiceCatalogResponse(ServiceCatalogResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

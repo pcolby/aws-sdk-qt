@@ -66,7 +66,8 @@ SetActiveReceiptRuleSetResponse::SetActiveReceiptRuleSetResponse(
  */
 const SetActiveReceiptRuleSetRequest * SetActiveReceiptRuleSetResponse::request() const
 {
-    return static_cast<const SetActiveReceiptRuleSetRequest *>(SesResponse::request());
+    Q_D(const SetActiveReceiptRuleSetResponse);
+    return static_cast<const SetActiveReceiptRuleSetRequest *>(d->request);
 }
 
 /*!

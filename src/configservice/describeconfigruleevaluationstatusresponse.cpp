@@ -75,7 +75,8 @@ DescribeConfigRuleEvaluationStatusResponse::DescribeConfigRuleEvaluationStatusRe
  */
 const DescribeConfigRuleEvaluationStatusRequest * DescribeConfigRuleEvaluationStatusResponse::request() const
 {
-    return static_cast<const DescribeConfigRuleEvaluationStatusRequest *>(ConfigServiceResponse::request());
+    Q_D(const DescribeConfigRuleEvaluationStatusResponse);
+    return static_cast<const DescribeConfigRuleEvaluationStatusRequest *>(d->request);
 }
 
 /*!

@@ -105,7 +105,8 @@ CreateDeploymentStrategyResponse::CreateDeploymentStrategyResponse(
  */
 const CreateDeploymentStrategyRequest * CreateDeploymentStrategyResponse::request() const
 {
-    return static_cast<const CreateDeploymentStrategyRequest *>(AppConfigResponse::request());
+    Q_D(const CreateDeploymentStrategyResponse);
+    return static_cast<const CreateDeploymentStrategyRequest *>(d->request);
 }
 
 /*!

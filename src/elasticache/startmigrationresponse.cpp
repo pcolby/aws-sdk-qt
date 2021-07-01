@@ -69,7 +69,8 @@ StartMigrationResponse::StartMigrationResponse(
  */
 const StartMigrationRequest * StartMigrationResponse::request() const
 {
-    return static_cast<const StartMigrationRequest *>(ElastiCacheResponse::request());
+    Q_D(const StartMigrationResponse);
+    return static_cast<const StartMigrationRequest *>(d->request);
 }
 
 /*!

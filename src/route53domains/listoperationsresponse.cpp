@@ -56,7 +56,8 @@ ListOperationsResponse::ListOperationsResponse(
  */
 const ListOperationsRequest * ListOperationsResponse::request() const
 {
-    return static_cast<const ListOperationsRequest *>(Route53DomainsResponse::request());
+    Q_D(const ListOperationsResponse);
+    return static_cast<const ListOperationsRequest *>(d->request);
 }
 
 /*!

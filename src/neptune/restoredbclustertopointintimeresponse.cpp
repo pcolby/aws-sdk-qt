@@ -72,7 +72,8 @@ RestoreDBClusterToPointInTimeResponse::RestoreDBClusterToPointInTimeResponse(
  */
 const RestoreDBClusterToPointInTimeRequest * RestoreDBClusterToPointInTimeResponse::request() const
 {
-    return static_cast<const RestoreDBClusterToPointInTimeRequest *>(NeptuneResponse::request());
+    Q_D(const RestoreDBClusterToPointInTimeResponse);
+    return static_cast<const RestoreDBClusterToPointInTimeRequest *>(d->request);
 }
 
 /*!

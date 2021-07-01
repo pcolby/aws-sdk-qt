@@ -20,12 +20,15 @@
 #ifndef QTAWS_MIGRATIONHUBCONFIGREQUEST_P_H
 #define QTAWS_MIGRATIONHUBCONFIGREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "migrationhubconfigrequest.h"
+
 namespace QtAws {
 namespace MigrationHubConfig {
 
 class MigrationHubConfigRequest;
 
-class MigrationHubConfigRequestPrivate {
+class MigrationHubConfigRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MigrationHubConfigRequest::Action action; ///< MigrationHubConfig action to be performed.
@@ -36,9 +39,6 @@ public:
     MigrationHubConfigRequestPrivate(const MigrationHubConfigRequestPrivate &other, MigrationHubConfigRequest * const q);
 
     static QString toString(const MigrationHubConfigRequest::Action &action);
-
-protected:
-    MigrationHubConfigRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MigrationHubConfigRequest)

@@ -85,7 +85,8 @@ DeleteUsageLimitResponse::DeleteUsageLimitResponse(
  */
 const DeleteUsageLimitRequest * DeleteUsageLimitResponse::request() const
 {
-    return static_cast<const DeleteUsageLimitRequest *>(RedshiftResponse::request());
+    Q_D(const DeleteUsageLimitResponse);
+    return static_cast<const DeleteUsageLimitRequest *>(d->request);
 }
 
 /*!

@@ -73,8 +73,7 @@ public:
 
 protected:
     /// @cond internal
-    AcmRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AcmRequest(AcmRequestPrivate * const d);
+    AcmRequest(AcmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

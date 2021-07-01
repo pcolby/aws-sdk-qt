@@ -58,7 +58,8 @@ ListCoreDefinitionsResponse::ListCoreDefinitionsResponse(
  */
 const ListCoreDefinitionsRequest * ListCoreDefinitionsResponse::request() const
 {
-    return static_cast<const ListCoreDefinitionsRequest *>(GreengrassResponse::request());
+    Q_D(const ListCoreDefinitionsResponse);
+    return static_cast<const ListCoreDefinitionsRequest *>(d->request);
 }
 
 /*!

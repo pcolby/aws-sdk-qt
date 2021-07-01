@@ -76,7 +76,8 @@ UnshareApplicationResponse::UnshareApplicationResponse(
  */
 const UnshareApplicationRequest * UnshareApplicationResponse::request() const
 {
-    return static_cast<const UnshareApplicationRequest *>(ServerlessApplicationRepositoryResponse::request());
+    Q_D(const UnshareApplicationResponse);
+    return static_cast<const UnshareApplicationRequest *>(d->request);
 }
 
 /*!

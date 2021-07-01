@@ -98,7 +98,8 @@ GetEvidenceResponse::GetEvidenceResponse(
  */
 const GetEvidenceRequest * GetEvidenceResponse::request() const
 {
-    return static_cast<const GetEvidenceRequest *>(AuditManagerResponse::request());
+    Q_D(const GetEvidenceResponse);
+    return static_cast<const GetEvidenceRequest *>(d->request);
 }
 
 /*!

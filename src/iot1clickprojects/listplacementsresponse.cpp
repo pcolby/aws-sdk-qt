@@ -56,7 +56,8 @@ ListPlacementsResponse::ListPlacementsResponse(
  */
 const ListPlacementsRequest * ListPlacementsResponse::request() const
 {
-    return static_cast<const ListPlacementsRequest *>(IoT1ClickProjectsResponse::request());
+    Q_D(const ListPlacementsResponse);
+    return static_cast<const ListPlacementsRequest *>(d->request);
 }
 
 /*!

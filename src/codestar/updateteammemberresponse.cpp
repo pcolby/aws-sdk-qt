@@ -143,7 +143,8 @@ UpdateTeamMemberResponse::UpdateTeamMemberResponse(
  */
 const UpdateTeamMemberRequest * UpdateTeamMemberResponse::request() const
 {
-    return static_cast<const UpdateTeamMemberRequest *>(CodeStarResponse::request());
+    Q_D(const UpdateTeamMemberResponse);
+    return static_cast<const UpdateTeamMemberRequest *>(d->request);
 }
 
 /*!

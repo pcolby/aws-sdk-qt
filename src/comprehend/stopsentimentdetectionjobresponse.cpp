@@ -58,7 +58,8 @@ StopSentimentDetectionJobResponse::StopSentimentDetectionJobResponse(
  */
 const StopSentimentDetectionJobRequest * StopSentimentDetectionJobResponse::request() const
 {
-    return static_cast<const StopSentimentDetectionJobRequest *>(ComprehendResponse::request());
+    Q_D(const StopSentimentDetectionJobResponse);
+    return static_cast<const StopSentimentDetectionJobRequest *>(d->request);
 }
 
 /*!

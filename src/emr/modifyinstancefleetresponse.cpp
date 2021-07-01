@@ -58,7 +58,8 @@ ModifyInstanceFleetResponse::ModifyInstanceFleetResponse(
  */
 const ModifyInstanceFleetRequest * ModifyInstanceFleetResponse::request() const
 {
-    return static_cast<const ModifyInstanceFleetRequest *>(EmrResponse::request());
+    Q_D(const ModifyInstanceFleetResponse);
+    return static_cast<const ModifyInstanceFleetRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ GetMaintenanceWindowExecutionResponse::GetMaintenanceWindowExecutionResponse(
  */
 const GetMaintenanceWindowExecutionRequest * GetMaintenanceWindowExecutionResponse::request() const
 {
-    return static_cast<const GetMaintenanceWindowExecutionRequest *>(SsmResponse::request());
+    Q_D(const GetMaintenanceWindowExecutionResponse);
+    return static_cast<const GetMaintenanceWindowExecutionRequest *>(d->request);
 }
 
 /*!

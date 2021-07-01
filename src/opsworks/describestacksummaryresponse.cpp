@@ -161,7 +161,8 @@ DescribeStackSummaryResponse::DescribeStackSummaryResponse(
  */
 const DescribeStackSummaryRequest * DescribeStackSummaryResponse::request() const
 {
-    return static_cast<const DescribeStackSummaryRequest *>(OpsWorksResponse::request());
+    Q_D(const DescribeStackSummaryResponse);
+    return static_cast<const DescribeStackSummaryRequest *>(d->request);
 }
 
 /*!

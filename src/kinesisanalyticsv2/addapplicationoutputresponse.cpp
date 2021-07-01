@@ -58,7 +58,8 @@ AddApplicationOutputResponse::AddApplicationOutputResponse(
  */
 const AddApplicationOutputRequest * AddApplicationOutputResponse::request() const
 {
-    return static_cast<const AddApplicationOutputRequest *>(KinesisAnalyticsV2Response::request());
+    Q_D(const AddApplicationOutputResponse);
+    return static_cast<const AddApplicationOutputRequest *>(d->request);
 }
 
 /*!

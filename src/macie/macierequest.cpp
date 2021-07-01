@@ -49,7 +49,7 @@ namespace Macie {
  * Constructs a MacieRequest object for Macie \a action.
  */
 MacieRequest::MacieRequest(const Action action)
-    : d_ptr(new MacieRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MacieRequestPrivate(action, this))
 {
 
 }
@@ -58,8 +58,7 @@ MacieRequest::MacieRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MacieRequest::MacieRequest(const MacieRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new MacieRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MacieRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -82,7 +81,7 @@ MacieRequest& MacieRequest::operator=(const MacieRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MacieRequestPrivate.
  */
-MacieRequest::MacieRequest(MacieRequestPrivate * const d) : d_ptr(d)
+MacieRequest::MacieRequest(MacieRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -251,7 +250,7 @@ QNetworkRequest MacieRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MacieRequestPrivate::MacieRequestPrivate(const MacieRequest::Action action, MacieRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -266,8 +265,8 @@ MacieRequestPrivate::MacieRequestPrivate(const MacieRequest::Action action, Maci
  */
 MacieRequestPrivate::MacieRequestPrivate(const MacieRequestPrivate &other,
                                      MacieRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

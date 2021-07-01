@@ -60,7 +60,8 @@ CreateCustomDataIdentifierResponse::CreateCustomDataIdentifierResponse(
  */
 const CreateCustomDataIdentifierRequest * CreateCustomDataIdentifierResponse::request() const
 {
-    return static_cast<const CreateCustomDataIdentifierRequest *>(Macie2Response::request());
+    Q_D(const CreateCustomDataIdentifierResponse);
+    return static_cast<const CreateCustomDataIdentifierRequest *>(d->request);
 }
 
 /*!

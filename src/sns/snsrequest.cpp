@@ -81,7 +81,7 @@ namespace SNS {
  * Constructs a SnsRequest object for SNS \a action.
  */
 SnsRequest::SnsRequest(const Action action)
-    : d_ptr(new SnsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SnsRequestPrivate(action, this))
 {
 
 }
@@ -90,8 +90,7 @@ SnsRequest::SnsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SnsRequest::SnsRequest(const SnsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new SnsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SnsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +113,7 @@ SnsRequest& SnsRequest::operator=(const SnsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SnsRequestPrivate.
  */
-SnsRequest::SnsRequest(SnsRequestPrivate * const d) : d_ptr(d)
+SnsRequest::SnsRequest(SnsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -283,7 +282,7 @@ QNetworkRequest SnsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SnsRequestPrivate::SnsRequestPrivate(const SnsRequest::Action action, SnsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -298,8 +297,8 @@ SnsRequestPrivate::SnsRequestPrivate(const SnsRequest::Action action, SnsRequest
  */
 SnsRequestPrivate::SnsRequestPrivate(const SnsRequestPrivate &other,
                                      SnsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

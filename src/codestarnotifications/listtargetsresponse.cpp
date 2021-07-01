@@ -129,7 +129,8 @@ ListTargetsResponse::ListTargetsResponse(
  */
 const ListTargetsRequest * ListTargetsResponse::request() const
 {
-    return static_cast<const ListTargetsRequest *>(CodeStarNotificationsResponse::request());
+    Q_D(const ListTargetsResponse);
+    return static_cast<const ListTargetsRequest *>(d->request);
 }
 
 /*!

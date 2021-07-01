@@ -55,7 +55,8 @@ PutBucketRequestPaymentResponse::PutBucketRequestPaymentResponse(
  */
 const PutBucketRequestPaymentRequest * PutBucketRequestPaymentResponse::request() const
 {
-    return static_cast<const PutBucketRequestPaymentRequest *>(S3Response::request());
+    Q_D(const PutBucketRequestPaymentResponse);
+    return static_cast<const PutBucketRequestPaymentRequest *>(d->request);
 }
 
 /*!

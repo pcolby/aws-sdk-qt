@@ -58,7 +58,8 @@ RevokePermissionsResponse::RevokePermissionsResponse(
  */
 const RevokePermissionsRequest * RevokePermissionsResponse::request() const
 {
-    return static_cast<const RevokePermissionsRequest *>(LakeFormationResponse::request());
+    Q_D(const RevokePermissionsResponse);
+    return static_cast<const RevokePermissionsRequest *>(d->request);
 }
 
 /*!

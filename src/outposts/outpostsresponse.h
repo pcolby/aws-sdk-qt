@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    OutpostsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     OutpostsResponse(OutpostsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

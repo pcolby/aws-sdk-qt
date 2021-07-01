@@ -66,7 +66,8 @@ UpdateFunctionConfigurationResponse::UpdateFunctionConfigurationResponse(
  */
 const UpdateFunctionConfigurationRequest * UpdateFunctionConfigurationResponse::request() const
 {
-    return static_cast<const UpdateFunctionConfigurationRequest *>(LambdaResponse::request());
+    Q_D(const UpdateFunctionConfigurationResponse);
+    return static_cast<const UpdateFunctionConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ GetEffectivePermissionsForPathResponse::GetEffectivePermissionsForPathResponse(
  */
 const GetEffectivePermissionsForPathRequest * GetEffectivePermissionsForPathResponse::request() const
 {
-    return static_cast<const GetEffectivePermissionsForPathRequest *>(LakeFormationResponse::request());
+    Q_D(const GetEffectivePermissionsForPathResponse);
+    return static_cast<const GetEffectivePermissionsForPathRequest *>(d->request);
 }
 
 /*!

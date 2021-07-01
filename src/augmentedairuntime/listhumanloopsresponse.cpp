@@ -93,7 +93,8 @@ ListHumanLoopsResponse::ListHumanLoopsResponse(
  */
 const ListHumanLoopsRequest * ListHumanLoopsResponse::request() const
 {
-    return static_cast<const ListHumanLoopsRequest *>(AugmentedAIRuntimeResponse::request());
+    Q_D(const ListHumanLoopsResponse);
+    return static_cast<const ListHumanLoopsRequest *>(d->request);
 }
 
 /*!

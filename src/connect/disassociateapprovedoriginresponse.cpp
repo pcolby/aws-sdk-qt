@@ -79,7 +79,8 @@ DisassociateApprovedOriginResponse::DisassociateApprovedOriginResponse(
  */
 const DisassociateApprovedOriginRequest * DisassociateApprovedOriginResponse::request() const
 {
-    return static_cast<const DisassociateApprovedOriginRequest *>(ConnectResponse::request());
+    Q_D(const DisassociateApprovedOriginResponse);
+    return static_cast<const DisassociateApprovedOriginRequest *>(d->request);
 }
 
 /*!

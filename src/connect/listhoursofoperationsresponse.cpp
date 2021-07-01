@@ -79,7 +79,8 @@ ListHoursOfOperationsResponse::ListHoursOfOperationsResponse(
  */
 const ListHoursOfOperationsRequest * ListHoursOfOperationsResponse::request() const
 {
-    return static_cast<const ListHoursOfOperationsRequest *>(ConnectResponse::request());
+    Q_D(const ListHoursOfOperationsResponse);
+    return static_cast<const ListHoursOfOperationsRequest *>(d->request);
 }
 
 /*!

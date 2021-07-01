@@ -55,7 +55,8 @@ GetBucketNotificationResponse::GetBucketNotificationResponse(
  */
 const GetBucketNotificationRequest * GetBucketNotificationResponse::request() const
 {
-    return static_cast<const GetBucketNotificationRequest *>(S3Response::request());
+    Q_D(const GetBucketNotificationResponse);
+    return static_cast<const GetBucketNotificationRequest *>(d->request);
 }
 
 /*!

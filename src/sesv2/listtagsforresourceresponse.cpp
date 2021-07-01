@@ -88,7 +88,8 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
  */
 const ListTagsForResourceRequest * ListTagsForResourceResponse::request() const
 {
-    return static_cast<const ListTagsForResourceRequest *>(Sesv2Response::request());
+    Q_D(const ListTagsForResourceResponse);
+    return static_cast<const ListTagsForResourceRequest *>(d->request);
 }
 
 /*!

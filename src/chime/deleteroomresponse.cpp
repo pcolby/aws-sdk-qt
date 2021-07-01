@@ -98,7 +98,8 @@ DeleteRoomResponse::DeleteRoomResponse(
  */
 const DeleteRoomRequest * DeleteRoomResponse::request() const
 {
-    return static_cast<const DeleteRoomRequest *>(ChimeResponse::request());
+    Q_D(const DeleteRoomResponse);
+    return static_cast<const DeleteRoomRequest *>(d->request);
 }
 
 /*!

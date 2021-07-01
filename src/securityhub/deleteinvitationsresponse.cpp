@@ -103,7 +103,8 @@ DeleteInvitationsResponse::DeleteInvitationsResponse(
  */
 const DeleteInvitationsRequest * DeleteInvitationsResponse::request() const
 {
-    return static_cast<const DeleteInvitationsRequest *>(SecurityHubResponse::request());
+    Q_D(const DeleteInvitationsResponse);
+    return static_cast<const DeleteInvitationsRequest *>(d->request);
 }
 
 /*!

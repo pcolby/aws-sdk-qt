@@ -66,7 +66,8 @@ ListLayersResponse::ListLayersResponse(
  */
 const ListLayersRequest * ListLayersResponse::request() const
 {
-    return static_cast<const ListLayersRequest *>(LambdaResponse::request());
+    Q_D(const ListLayersResponse);
+    return static_cast<const ListLayersRequest *>(d->request);
 }
 
 /*!

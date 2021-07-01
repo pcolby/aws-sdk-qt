@@ -55,7 +55,8 @@ DescribePermissionSetResponse::DescribePermissionSetResponse(
  */
 const DescribePermissionSetRequest * DescribePermissionSetResponse::request() const
 {
-    return static_cast<const DescribePermissionSetRequest *>(SSOAdminResponse::request());
+    Q_D(const DescribePermissionSetResponse);
+    return static_cast<const DescribePermissionSetRequest *>(d->request);
 }
 
 /*!

@@ -79,7 +79,8 @@ UpdateContactFlowNameResponse::UpdateContactFlowNameResponse(
  */
 const UpdateContactFlowNameRequest * UpdateContactFlowNameResponse::request() const
 {
-    return static_cast<const UpdateContactFlowNameRequest *>(ConnectResponse::request());
+    Q_D(const UpdateContactFlowNameResponse);
+    return static_cast<const UpdateContactFlowNameRequest *>(d->request);
 }
 
 /*!

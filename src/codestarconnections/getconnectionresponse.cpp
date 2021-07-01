@@ -140,7 +140,8 @@ GetConnectionResponse::GetConnectionResponse(
  */
 const GetConnectionRequest * GetConnectionResponse::request() const
 {
-    return static_cast<const GetConnectionRequest *>(CodeStarconnectionsResponse::request());
+    Q_D(const GetConnectionResponse);
+    return static_cast<const GetConnectionRequest *>(d->request);
 }
 
 /*!

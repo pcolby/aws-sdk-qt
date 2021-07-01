@@ -84,7 +84,8 @@ PutQueryDefinitionResponse::PutQueryDefinitionResponse(
  */
 const PutQueryDefinitionRequest * PutQueryDefinitionResponse::request() const
 {
-    return static_cast<const PutQueryDefinitionRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const PutQueryDefinitionResponse);
+    return static_cast<const PutQueryDefinitionRequest *>(d->request);
 }
 
 /*!

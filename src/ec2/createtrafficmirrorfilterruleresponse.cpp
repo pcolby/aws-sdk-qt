@@ -87,7 +87,8 @@ CreateTrafficMirrorFilterRuleResponse::CreateTrafficMirrorFilterRuleResponse(
  */
 const CreateTrafficMirrorFilterRuleRequest * CreateTrafficMirrorFilterRuleResponse::request() const
 {
-    return static_cast<const CreateTrafficMirrorFilterRuleRequest *>(Ec2Response::request());
+    Q_D(const CreateTrafficMirrorFilterRuleResponse);
+    return static_cast<const CreateTrafficMirrorFilterRuleRequest *>(d->request);
 }
 
 /*!

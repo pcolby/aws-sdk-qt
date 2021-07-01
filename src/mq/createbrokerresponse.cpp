@@ -57,7 +57,8 @@ CreateBrokerResponse::CreateBrokerResponse(
  */
 const CreateBrokerRequest * CreateBrokerResponse::request() const
 {
-    return static_cast<const CreateBrokerRequest *>(MqResponse::request());
+    Q_D(const CreateBrokerResponse);
+    return static_cast<const CreateBrokerRequest *>(d->request);
 }
 
 /*!

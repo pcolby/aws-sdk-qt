@@ -56,7 +56,8 @@ ListDiscoverersResponse::ListDiscoverersResponse(
  */
 const ListDiscoverersRequest * ListDiscoverersResponse::request() const
 {
-    return static_cast<const ListDiscoverersRequest *>(SchemasResponse::request());
+    Q_D(const ListDiscoverersResponse);
+    return static_cast<const ListDiscoverersRequest *>(d->request);
 }
 
 /*!

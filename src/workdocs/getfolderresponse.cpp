@@ -84,7 +84,8 @@ GetFolderResponse::GetFolderResponse(
  */
 const GetFolderRequest * GetFolderResponse::request() const
 {
-    return static_cast<const GetFolderRequest *>(WorkDocsResponse::request());
+    Q_D(const GetFolderResponse);
+    return static_cast<const GetFolderRequest *>(d->request);
 }
 
 /*!

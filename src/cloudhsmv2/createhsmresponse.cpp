@@ -57,7 +57,8 @@ CreateHsmResponse::CreateHsmResponse(
  */
 const CreateHsmRequest * CreateHsmResponse::request() const
 {
-    return static_cast<const CreateHsmRequest *>(CloudHSMV2Response::request());
+    Q_D(const CreateHsmResponse);
+    return static_cast<const CreateHsmRequest *>(d->request);
 }
 
 /*!

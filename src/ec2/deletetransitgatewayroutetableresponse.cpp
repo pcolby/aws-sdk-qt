@@ -87,7 +87,8 @@ DeleteTransitGatewayRouteTableResponse::DeleteTransitGatewayRouteTableResponse(
  */
 const DeleteTransitGatewayRouteTableRequest * DeleteTransitGatewayRouteTableResponse::request() const
 {
-    return static_cast<const DeleteTransitGatewayRouteTableRequest *>(Ec2Response::request());
+    Q_D(const DeleteTransitGatewayRouteTableResponse);
+    return static_cast<const DeleteTransitGatewayRouteTableRequest *>(d->request);
 }
 
 /*!

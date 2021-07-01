@@ -80,7 +80,8 @@ ListSigningPlatformsResponse::ListSigningPlatformsResponse(
  */
 const ListSigningPlatformsRequest * ListSigningPlatformsResponse::request() const
 {
-    return static_cast<const ListSigningPlatformsRequest *>(signerResponse::request());
+    Q_D(const ListSigningPlatformsResponse);
+    return static_cast<const ListSigningPlatformsRequest *>(d->request);
 }
 
 /*!

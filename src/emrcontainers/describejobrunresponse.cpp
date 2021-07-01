@@ -83,7 +83,8 @@ DescribeJobRunResponse::DescribeJobRunResponse(
  */
 const DescribeJobRunRequest * DescribeJobRunResponse::request() const
 {
-    return static_cast<const DescribeJobRunRequest *>(EMRContainersResponse::request());
+    Q_D(const DescribeJobRunResponse);
+    return static_cast<const DescribeJobRunRequest *>(d->request);
 }
 
 /*!

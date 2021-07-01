@@ -115,7 +115,8 @@ DescribeMatchmakingConfigurationsResponse::DescribeMatchmakingConfigurationsResp
  */
 const DescribeMatchmakingConfigurationsRequest * DescribeMatchmakingConfigurationsResponse::request() const
 {
-    return static_cast<const DescribeMatchmakingConfigurationsRequest *>(GameLiftResponse::request());
+    Q_D(const DescribeMatchmakingConfigurationsResponse);
+    return static_cast<const DescribeMatchmakingConfigurationsRequest *>(d->request);
 }
 
 /*!

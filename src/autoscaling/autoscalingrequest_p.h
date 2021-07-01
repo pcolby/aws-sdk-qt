@@ -20,12 +20,15 @@
 #ifndef QTAWS_AUTOSCALINGREQUEST_P_H
 #define QTAWS_AUTOSCALINGREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "autoscalingrequest.h"
+
 namespace QtAws {
 namespace AutoScaling {
 
 class AutoScalingRequest;
 
-class AutoScalingRequestPrivate {
+class AutoScalingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AutoScalingRequest::Action action; ///< AutoScaling action to be performed.
@@ -36,9 +39,6 @@ public:
     AutoScalingRequestPrivate(const AutoScalingRequestPrivate &other, AutoScalingRequest * const q);
 
     static QString toString(const AutoScalingRequest::Action &action);
-
-protected:
-    AutoScalingRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AutoScalingRequest)

@@ -58,7 +58,8 @@ PutEntityTypeResponse::PutEntityTypeResponse(
  */
 const PutEntityTypeRequest * PutEntityTypeResponse::request() const
 {
-    return static_cast<const PutEntityTypeRequest *>(FraudDetectorResponse::request());
+    Q_D(const PutEntityTypeResponse);
+    return static_cast<const PutEntityTypeRequest *>(d->request);
 }
 
 /*!

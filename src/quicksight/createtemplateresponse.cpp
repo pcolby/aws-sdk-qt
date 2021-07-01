@@ -60,7 +60,8 @@ CreateTemplateResponse::CreateTemplateResponse(
  */
 const CreateTemplateRequest * CreateTemplateResponse::request() const
 {
-    return static_cast<const CreateTemplateRequest *>(QuickSightResponse::request());
+    Q_D(const CreateTemplateResponse);
+    return static_cast<const CreateTemplateRequest *>(d->request);
 }
 
 /*!

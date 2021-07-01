@@ -61,7 +61,8 @@ DeletePortfolioShareResponse::DeletePortfolioShareResponse(
  */
 const DeletePortfolioShareRequest * DeletePortfolioShareResponse::request() const
 {
-    return static_cast<const DeletePortfolioShareRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DeletePortfolioShareResponse);
+    return static_cast<const DeletePortfolioShareRequest *>(d->request);
 }
 
 /*!

@@ -71,7 +71,8 @@ GetCanaryRunsResponse::GetCanaryRunsResponse(
  */
 const GetCanaryRunsRequest * GetCanaryRunsResponse::request() const
 {
-    return static_cast<const GetCanaryRunsRequest *>(SyntheticsResponse::request());
+    Q_D(const GetCanaryRunsResponse);
+    return static_cast<const GetCanaryRunsRequest *>(d->request);
 }
 
 /*!

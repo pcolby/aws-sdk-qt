@@ -37,7 +37,7 @@ namespace ForecastService {
  * Constructs a ForecastServiceResponse object with parent \a parent.
  */
 ForecastServiceResponse::ForecastServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ForecastServiceResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ForecastServiceResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ForecastServiceResponse::ForecastServiceResponse(QObject * const parent)
  * implementation that inherits from ForecastServiceResponsePrivate.
  */
 ForecastServiceResponse::ForecastServiceResponse(ForecastServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ForecastServiceResponse::parseFailure(QIODevice &response)
  * Constructs a ForecastServiceResponsePrivate object with public implementation \a q.
  */
 ForecastServiceResponsePrivate::ForecastServiceResponsePrivate(
-    ForecastServiceResponse * const q) : q_ptr(q)
+    ForecastServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

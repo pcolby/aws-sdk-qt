@@ -66,7 +66,8 @@ DescribeReplicationInstanceTaskLogsResponse::DescribeReplicationInstanceTaskLogs
  */
 const DescribeReplicationInstanceTaskLogsRequest * DescribeReplicationInstanceTaskLogsResponse::request() const
 {
-    return static_cast<const DescribeReplicationInstanceTaskLogsRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const DescribeReplicationInstanceTaskLogsResponse);
+    return static_cast<const DescribeReplicationInstanceTaskLogsRequest *>(d->request);
 }
 
 /*!

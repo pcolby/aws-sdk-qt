@@ -98,7 +98,8 @@ DescribeEffectiveInstanceAssociationsResponse::DescribeEffectiveInstanceAssociat
  */
 const DescribeEffectiveInstanceAssociationsRequest * DescribeEffectiveInstanceAssociationsResponse::request() const
 {
-    return static_cast<const DescribeEffectiveInstanceAssociationsRequest *>(SsmResponse::request());
+    Q_D(const DescribeEffectiveInstanceAssociationsResponse);
+    return static_cast<const DescribeEffectiveInstanceAssociationsRequest *>(d->request);
 }
 
 /*!

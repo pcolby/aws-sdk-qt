@@ -59,8 +59,7 @@ public:
 
 protected:
     /// @cond internal
-    MarketplaceEntitlementServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MarketplaceEntitlementServiceRequest(MarketplaceEntitlementServiceRequestPrivate * const d);
+    MarketplaceEntitlementServiceRequest(MarketplaceEntitlementServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

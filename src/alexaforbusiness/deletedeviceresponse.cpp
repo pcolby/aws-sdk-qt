@@ -62,7 +62,8 @@ DeleteDeviceResponse::DeleteDeviceResponse(
  */
 const DeleteDeviceRequest * DeleteDeviceResponse::request() const
 {
-    return static_cast<const DeleteDeviceRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const DeleteDeviceResponse);
+    return static_cast<const DeleteDeviceRequest *>(d->request);
 }
 
 /*!

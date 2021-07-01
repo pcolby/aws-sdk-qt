@@ -55,7 +55,8 @@ DeleteBotVersionResponse::DeleteBotVersionResponse(
  */
 const DeleteBotVersionRequest * DeleteBotVersionResponse::request() const
 {
-    return static_cast<const DeleteBotVersionRequest *>(LexModelsV2Response::request());
+    Q_D(const DeleteBotVersionResponse);
+    return static_cast<const DeleteBotVersionRequest *>(d->request);
 }
 
 /*!

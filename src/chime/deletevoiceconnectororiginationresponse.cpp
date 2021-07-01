@@ -98,7 +98,8 @@ DeleteVoiceConnectorOriginationResponse::DeleteVoiceConnectorOriginationResponse
  */
 const DeleteVoiceConnectorOriginationRequest * DeleteVoiceConnectorOriginationResponse::request() const
 {
-    return static_cast<const DeleteVoiceConnectorOriginationRequest *>(ChimeResponse::request());
+    Q_D(const DeleteVoiceConnectorOriginationResponse);
+    return static_cast<const DeleteVoiceConnectorOriginationRequest *>(d->request);
 }
 
 /*!

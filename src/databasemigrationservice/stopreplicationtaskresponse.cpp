@@ -66,7 +66,8 @@ StopReplicationTaskResponse::StopReplicationTaskResponse(
  */
 const StopReplicationTaskRequest * StopReplicationTaskResponse::request() const
 {
-    return static_cast<const StopReplicationTaskRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const StopReplicationTaskResponse);
+    return static_cast<const StopReplicationTaskRequest *>(d->request);
 }
 
 /*!

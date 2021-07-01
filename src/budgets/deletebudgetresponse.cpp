@@ -116,7 +116,8 @@ DeleteBudgetResponse::DeleteBudgetResponse(
  */
 const DeleteBudgetRequest * DeleteBudgetResponse::request() const
 {
-    return static_cast<const DeleteBudgetRequest *>(BudgetsResponse::request());
+    Q_D(const DeleteBudgetResponse);
+    return static_cast<const DeleteBudgetRequest *>(d->request);
 }
 
 /*!

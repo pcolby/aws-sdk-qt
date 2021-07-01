@@ -65,7 +65,8 @@ SendEventResponse::SendEventResponse(
  */
 const SendEventRequest * SendEventResponse::request() const
 {
-    return static_cast<const SendEventRequest *>(ConnectParticipantResponse::request());
+    Q_D(const SendEventResponse);
+    return static_cast<const SendEventRequest *>(d->request);
 }
 
 /*!

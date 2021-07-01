@@ -103,7 +103,8 @@ InviteMembersResponse::InviteMembersResponse(
  */
 const InviteMembersRequest * InviteMembersResponse::request() const
 {
-    return static_cast<const InviteMembersRequest *>(SecurityHubResponse::request());
+    Q_D(const InviteMembersResponse);
+    return static_cast<const InviteMembersRequest *>(d->request);
 }
 
 /*!

@@ -59,7 +59,8 @@ CreateSavingsPlanResponse::CreateSavingsPlanResponse(
  */
 const CreateSavingsPlanRequest * CreateSavingsPlanResponse::request() const
 {
-    return static_cast<const CreateSavingsPlanRequest *>(SavingsPlansResponse::request());
+    Q_D(const CreateSavingsPlanResponse);
+    return static_cast<const CreateSavingsPlanRequest *>(d->request);
 }
 
 /*!

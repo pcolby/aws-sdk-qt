@@ -64,7 +64,8 @@ ListSharedProjectsResponse::ListSharedProjectsResponse(
  */
 const ListSharedProjectsRequest * ListSharedProjectsResponse::request() const
 {
-    return static_cast<const ListSharedProjectsRequest *>(CodeBuildResponse::request());
+    Q_D(const ListSharedProjectsResponse);
+    return static_cast<const ListSharedProjectsRequest *>(d->request);
 }
 
 /*!

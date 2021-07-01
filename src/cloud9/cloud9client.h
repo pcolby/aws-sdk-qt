@@ -87,12 +87,6 @@ public slots:
     UpdateEnvironmentResponse * updateEnvironment(const UpdateEnvironmentRequest &request);
     UpdateEnvironmentMembershipResponse * updateEnvironmentMembership(const UpdateEnvironmentMembershipRequest &request);
 
-protected:
-    /// @cond internal
-    Cloud9ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit Cloud9Client(Cloud9ClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(Cloud9Client)
     Q_DISABLE_COPY(Cloud9Client)

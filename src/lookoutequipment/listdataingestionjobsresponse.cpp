@@ -57,7 +57,8 @@ ListDataIngestionJobsResponse::ListDataIngestionJobsResponse(
  */
 const ListDataIngestionJobsRequest * ListDataIngestionJobsResponse::request() const
 {
-    return static_cast<const ListDataIngestionJobsRequest *>(LookoutEquipmentResponse::request());
+    Q_D(const ListDataIngestionJobsResponse);
+    return static_cast<const ListDataIngestionJobsRequest *>(d->request);
 }
 
 /*!

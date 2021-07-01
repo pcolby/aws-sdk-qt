@@ -69,7 +69,8 @@ CreatePermissionResponse::CreatePermissionResponse(
  */
 const CreatePermissionRequest * CreatePermissionResponse::request() const
 {
-    return static_cast<const CreatePermissionRequest *>(AcmpcaResponse::request());
+    Q_D(const CreatePermissionResponse);
+    return static_cast<const CreatePermissionRequest *>(d->request);
 }
 
 /*!

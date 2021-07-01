@@ -98,7 +98,8 @@ ListChannelMessagesResponse::ListChannelMessagesResponse(
  */
 const ListChannelMessagesRequest * ListChannelMessagesResponse::request() const
 {
-    return static_cast<const ListChannelMessagesRequest *>(ChimeResponse::request());
+    Q_D(const ListChannelMessagesResponse);
+    return static_cast<const ListChannelMessagesRequest *>(d->request);
 }
 
 /*!

@@ -184,16 +184,16 @@ ComprehendClient::ComprehendClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-11-27"),
-    QStringLiteral("comprehend"),
-    QStringLiteral("Amazon Comprehend"),
-    QStringLiteral("comprehend"),
-    parent), d_ptr(new ComprehendClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ComprehendClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ComprehendClient);
+    d->apiVersion = QStringLiteral("2017-11-27");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("comprehend");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Comprehend");
+    d->serviceName = QStringLiteral("comprehend");
 }
 
 /*!
@@ -212,16 +212,16 @@ ComprehendClient::ComprehendClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-11-27"),
-    QStringLiteral("comprehend"),
-    QStringLiteral("Amazon Comprehend"),
-    QStringLiteral("comprehend"),
-    parent), d_ptr(new ComprehendClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ComprehendClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ComprehendClient);
+    d->apiVersion = QStringLiteral("2017-11-27");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("comprehend");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Comprehend");
+    d->serviceName = QStringLiteral("comprehend");
 }
 
 /*!
@@ -1158,9 +1158,10 @@ UpdateEndpointResponse * ComprehendClient::updateEndpoint(const UpdateEndpointRe
 /*!
  * Constructs a ComprehendClientPrivate object with public implementation \a q.
  */
-ComprehendClientPrivate::ComprehendClientPrivate(ComprehendClient * const q) : q_ptr(q)
+ComprehendClientPrivate::ComprehendClientPrivate(ComprehendClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Comprehend

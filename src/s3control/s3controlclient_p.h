@@ -20,20 +20,19 @@
 #ifndef QTAWS_S3CONTROLCLIENT_P_H
 #define QTAWS_S3CONTROLCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace S3Control {
 
 class S3ControlClient;
 
-class S3ControlClientPrivate {
+class S3ControlClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit S3ControlClientPrivate(S3ControlClient * const q);
-
-protected:
-    S3ControlClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(S3ControlClient)

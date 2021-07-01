@@ -141,7 +141,8 @@ BatchGetApplicationsResponse::BatchGetApplicationsResponse(
  */
 const BatchGetApplicationsRequest * BatchGetApplicationsResponse::request() const
 {
-    return static_cast<const BatchGetApplicationsRequest *>(CodeDeployResponse::request());
+    Q_D(const BatchGetApplicationsResponse);
+    return static_cast<const BatchGetApplicationsRequest *>(d->request);
 }
 
 /*!

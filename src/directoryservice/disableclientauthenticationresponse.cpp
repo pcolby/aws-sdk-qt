@@ -69,7 +69,8 @@ DisableClientAuthenticationResponse::DisableClientAuthenticationResponse(
  */
 const DisableClientAuthenticationRequest * DisableClientAuthenticationResponse::request() const
 {
-    return static_cast<const DisableClientAuthenticationRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DisableClientAuthenticationResponse);
+    return static_cast<const DisableClientAuthenticationRequest *>(d->request);
 }
 
 /*!

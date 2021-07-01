@@ -58,7 +58,8 @@ DeleteSubscriptionDefinitionResponse::DeleteSubscriptionDefinitionResponse(
  */
 const DeleteSubscriptionDefinitionRequest * DeleteSubscriptionDefinitionResponse::request() const
 {
-    return static_cast<const DeleteSubscriptionDefinitionRequest *>(GreengrassResponse::request());
+    Q_D(const DeleteSubscriptionDefinitionResponse);
+    return static_cast<const DeleteSubscriptionDefinitionRequest *>(d->request);
 }
 
 /*!

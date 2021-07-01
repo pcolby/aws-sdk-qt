@@ -74,7 +74,8 @@ GetExecutionHistoryResponse::GetExecutionHistoryResponse(
  */
 const GetExecutionHistoryRequest * GetExecutionHistoryResponse::request() const
 {
-    return static_cast<const GetExecutionHistoryRequest *>(SfnResponse::request());
+    Q_D(const GetExecutionHistoryResponse);
+    return static_cast<const GetExecutionHistoryRequest *>(d->request);
 }
 
 /*!

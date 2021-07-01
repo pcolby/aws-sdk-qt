@@ -83,7 +83,8 @@ GetResourceMetricsResponse::GetResourceMetricsResponse(
  */
 const GetResourceMetricsRequest * GetResourceMetricsResponse::request() const
 {
-    return static_cast<const GetResourceMetricsRequest *>(PiResponse::request());
+    Q_D(const GetResourceMetricsResponse);
+    return static_cast<const GetResourceMetricsRequest *>(d->request);
 }
 
 /*!

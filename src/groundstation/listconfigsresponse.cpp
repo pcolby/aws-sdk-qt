@@ -58,7 +58,8 @@ ListConfigsResponse::ListConfigsResponse(
  */
 const ListConfigsRequest * ListConfigsResponse::request() const
 {
-    return static_cast<const ListConfigsRequest *>(GroundStationResponse::request());
+    Q_D(const ListConfigsResponse);
+    return static_cast<const ListConfigsRequest *>(d->request);
 }
 
 /*!

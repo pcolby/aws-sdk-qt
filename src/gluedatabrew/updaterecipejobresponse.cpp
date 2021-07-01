@@ -58,7 +58,8 @@ UpdateRecipeJobResponse::UpdateRecipeJobResponse(
  */
 const UpdateRecipeJobRequest * UpdateRecipeJobResponse::request() const
 {
-    return static_cast<const UpdateRecipeJobRequest *>(GlueDataBrewResponse::request());
+    Q_D(const UpdateRecipeJobResponse);
+    return static_cast<const UpdateRecipeJobRequest *>(d->request);
 }
 
 /*!

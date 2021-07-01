@@ -74,7 +74,8 @@ ExportSnapshotResponse::ExportSnapshotResponse(
  */
 const ExportSnapshotRequest * ExportSnapshotResponse::request() const
 {
-    return static_cast<const ExportSnapshotRequest *>(LightsailResponse::request());
+    Q_D(const ExportSnapshotResponse);
+    return static_cast<const ExportSnapshotRequest *>(d->request);
 }
 
 /*!

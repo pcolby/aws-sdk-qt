@@ -77,7 +77,8 @@ GetTemplateSummaryResponse::GetTemplateSummaryResponse(
  */
 const GetTemplateSummaryRequest * GetTemplateSummaryResponse::request() const
 {
-    return static_cast<const GetTemplateSummaryRequest *>(CloudFormationResponse::request());
+    Q_D(const GetTemplateSummaryResponse);
+    return static_cast<const GetTemplateSummaryRequest *>(d->request);
 }
 
 /*!

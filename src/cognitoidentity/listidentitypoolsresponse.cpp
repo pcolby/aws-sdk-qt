@@ -77,7 +77,8 @@ ListIdentityPoolsResponse::ListIdentityPoolsResponse(
  */
 const ListIdentityPoolsRequest * ListIdentityPoolsResponse::request() const
 {
-    return static_cast<const ListIdentityPoolsRequest *>(CognitoIdentityResponse::request());
+    Q_D(const ListIdentityPoolsResponse);
+    return static_cast<const ListIdentityPoolsRequest *>(d->request);
 }
 
 /*!

@@ -77,7 +77,8 @@ GetOpenIdTokenForDeveloperIdentityResponse::GetOpenIdTokenForDeveloperIdentityRe
  */
 const GetOpenIdTokenForDeveloperIdentityRequest * GetOpenIdTokenForDeveloperIdentityResponse::request() const
 {
-    return static_cast<const GetOpenIdTokenForDeveloperIdentityRequest *>(CognitoIdentityResponse::request());
+    Q_D(const GetOpenIdTokenForDeveloperIdentityResponse);
+    return static_cast<const GetOpenIdTokenForDeveloperIdentityRequest *>(d->request);
 }
 
 /*!

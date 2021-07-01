@@ -66,7 +66,8 @@ RespondToAuthChallengeResponse::RespondToAuthChallengeResponse(
  */
 const RespondToAuthChallengeRequest * RespondToAuthChallengeResponse::request() const
 {
-    return static_cast<const RespondToAuthChallengeRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const RespondToAuthChallengeResponse);
+    return static_cast<const RespondToAuthChallengeRequest *>(d->request);
 }
 
 /*!

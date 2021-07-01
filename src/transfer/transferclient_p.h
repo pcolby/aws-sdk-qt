@@ -20,20 +20,19 @@
 #ifndef QTAWS_TRANSFERCLIENT_P_H
 #define QTAWS_TRANSFERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Transfer {
 
 class TransferClient;
 
-class TransferClientPrivate {
+class TransferClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit TransferClientPrivate(TransferClient * const q);
-
-protected:
-    TransferClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TransferClient)

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    NimbleStudioResponsePrivate * const d_ptr; ///< Internal d-pointer.
     NimbleStudioResponse(NimbleStudioResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

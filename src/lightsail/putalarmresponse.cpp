@@ -74,7 +74,8 @@ PutAlarmResponse::PutAlarmResponse(
  */
 const PutAlarmRequest * PutAlarmResponse::request() const
 {
-    return static_cast<const PutAlarmRequest *>(LightsailResponse::request());
+    Q_D(const PutAlarmResponse);
+    return static_cast<const PutAlarmRequest *>(d->request);
 }
 
 /*!

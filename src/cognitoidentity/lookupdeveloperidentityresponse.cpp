@@ -77,7 +77,8 @@ LookupDeveloperIdentityResponse::LookupDeveloperIdentityResponse(
  */
 const LookupDeveloperIdentityRequest * LookupDeveloperIdentityResponse::request() const
 {
-    return static_cast<const LookupDeveloperIdentityRequest *>(CognitoIdentityResponse::request());
+    Q_D(const LookupDeveloperIdentityResponse);
+    return static_cast<const LookupDeveloperIdentityRequest *>(d->request);
 }
 
 /*!

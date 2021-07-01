@@ -60,7 +60,8 @@ GetWebhookResponse::GetWebhookResponse(
  */
 const GetWebhookRequest * GetWebhookResponse::request() const
 {
-    return static_cast<const GetWebhookRequest *>(AmplifyResponse::request());
+    Q_D(const GetWebhookResponse);
+    return static_cast<const GetWebhookRequest *>(d->request);
 }
 
 /*!

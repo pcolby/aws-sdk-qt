@@ -73,7 +73,8 @@ StopQueryExecutionResponse::StopQueryExecutionResponse(
  */
 const StopQueryExecutionRequest * StopQueryExecutionResponse::request() const
 {
-    return static_cast<const StopQueryExecutionRequest *>(AthenaResponse::request());
+    Q_D(const StopQueryExecutionResponse);
+    return static_cast<const StopQueryExecutionRequest *>(d->request);
 }
 
 /*!

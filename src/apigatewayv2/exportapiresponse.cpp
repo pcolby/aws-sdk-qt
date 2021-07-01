@@ -56,7 +56,8 @@ ExportApiResponse::ExportApiResponse(
  */
 const ExportApiRequest * ExportApiResponse::request() const
 {
-    return static_cast<const ExportApiRequest *>(ApiGatewayV2Response::request());
+    Q_D(const ExportApiResponse);
+    return static_cast<const ExportApiRequest *>(d->request);
 }
 
 /*!

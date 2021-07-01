@@ -98,7 +98,8 @@ CreateBotResponse::CreateBotResponse(
  */
 const CreateBotRequest * CreateBotResponse::request() const
 {
-    return static_cast<const CreateBotRequest *>(ChimeResponse::request());
+    Q_D(const CreateBotResponse);
+    return static_cast<const CreateBotRequest *>(d->request);
 }
 
 /*!

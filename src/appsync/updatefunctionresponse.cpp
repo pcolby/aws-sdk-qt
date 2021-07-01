@@ -56,7 +56,8 @@ UpdateFunctionResponse::UpdateFunctionResponse(
  */
 const UpdateFunctionRequest * UpdateFunctionResponse::request() const
 {
-    return static_cast<const UpdateFunctionRequest *>(AppSyncResponse::request());
+    Q_D(const UpdateFunctionResponse);
+    return static_cast<const UpdateFunctionRequest *>(d->request);
 }
 
 /*!

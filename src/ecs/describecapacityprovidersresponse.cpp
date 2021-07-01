@@ -72,7 +72,8 @@ DescribeCapacityProvidersResponse::DescribeCapacityProvidersResponse(
  */
 const DescribeCapacityProvidersRequest * DescribeCapacityProvidersResponse::request() const
 {
-    return static_cast<const DescribeCapacityProvidersRequest *>(EcsResponse::request());
+    Q_D(const DescribeCapacityProvidersResponse);
+    return static_cast<const DescribeCapacityProvidersRequest *>(d->request);
 }
 
 /*!

@@ -79,7 +79,8 @@ SubmitFeedbackResponse::SubmitFeedbackResponse(
  */
 const SubmitFeedbackRequest * SubmitFeedbackResponse::request() const
 {
-    return static_cast<const SubmitFeedbackRequest *>(CodeGuruProfilerResponse::request());
+    Q_D(const SubmitFeedbackResponse);
+    return static_cast<const SubmitFeedbackRequest *>(d->request);
 }
 
 /*!

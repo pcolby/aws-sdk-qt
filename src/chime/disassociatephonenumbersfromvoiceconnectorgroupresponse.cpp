@@ -98,7 +98,8 @@ DisassociatePhoneNumbersFromVoiceConnectorGroupResponse::DisassociatePhoneNumber
  */
 const DisassociatePhoneNumbersFromVoiceConnectorGroupRequest * DisassociatePhoneNumbersFromVoiceConnectorGroupResponse::request() const
 {
-    return static_cast<const DisassociatePhoneNumbersFromVoiceConnectorGroupRequest *>(ChimeResponse::request());
+    Q_D(const DisassociatePhoneNumbersFromVoiceConnectorGroupResponse);
+    return static_cast<const DisassociatePhoneNumbersFromVoiceConnectorGroupRequest *>(d->request);
 }
 
 /*!

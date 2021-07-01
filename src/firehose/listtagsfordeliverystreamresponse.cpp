@@ -59,7 +59,8 @@ ListTagsForDeliveryStreamResponse::ListTagsForDeliveryStreamResponse(
  */
 const ListTagsForDeliveryStreamRequest * ListTagsForDeliveryStreamResponse::request() const
 {
-    return static_cast<const ListTagsForDeliveryStreamRequest *>(FirehoseResponse::request());
+    Q_D(const ListTagsForDeliveryStreamResponse);
+    return static_cast<const ListTagsForDeliveryStreamRequest *>(d->request);
 }
 
 /*!

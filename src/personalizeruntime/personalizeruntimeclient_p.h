@@ -20,20 +20,19 @@
 #ifndef QTAWS_PERSONALIZERUNTIMECLIENT_P_H
 #define QTAWS_PERSONALIZERUNTIMECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace PersonalizeRuntime {
 
 class PersonalizeRuntimeClient;
 
-class PersonalizeRuntimeClientPrivate {
+class PersonalizeRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit PersonalizeRuntimeClientPrivate(PersonalizeRuntimeClient * const q);
-
-protected:
-    PersonalizeRuntimeClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PersonalizeRuntimeClient)

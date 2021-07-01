@@ -439,7 +439,8 @@ CreateCommitResponse::CreateCommitResponse(
  */
 const CreateCommitRequest * CreateCommitResponse::request() const
 {
-    return static_cast<const CreateCommitRequest *>(CodeCommitResponse::request());
+    Q_D(const CreateCommitResponse);
+    return static_cast<const CreateCommitRequest *>(d->request);
 }
 
 /*!

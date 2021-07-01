@@ -61,7 +61,8 @@ ImportAsProvisionedProductResponse::ImportAsProvisionedProductResponse(
  */
 const ImportAsProvisionedProductRequest * ImportAsProvisionedProductResponse::request() const
 {
-    return static_cast<const ImportAsProvisionedProductRequest *>(ServiceCatalogResponse::request());
+    Q_D(const ImportAsProvisionedProductResponse);
+    return static_cast<const ImportAsProvisionedProductRequest *>(d->request);
 }
 
 /*!

@@ -124,7 +124,8 @@ ActivateGatewayResponse::ActivateGatewayResponse(
  */
 const ActivateGatewayRequest * ActivateGatewayResponse::request() const
 {
-    return static_cast<const ActivateGatewayRequest *>(StorageGatewayResponse::request());
+    Q_D(const ActivateGatewayResponse);
+    return static_cast<const ActivateGatewayRequest *>(d->request);
 }
 
 /*!

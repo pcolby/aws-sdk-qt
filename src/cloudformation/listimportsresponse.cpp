@@ -77,7 +77,8 @@ ListImportsResponse::ListImportsResponse(
  */
 const ListImportsRequest * ListImportsResponse::request() const
 {
-    return static_cast<const ListImportsRequest *>(CloudFormationResponse::request());
+    Q_D(const ListImportsResponse);
+    return static_cast<const ListImportsRequest *>(d->request);
 }
 
 /*!

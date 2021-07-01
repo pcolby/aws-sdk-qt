@@ -37,7 +37,7 @@ namespace S3Control {
  * Constructs a S3ControlResponse object with parent \a parent.
  */
 S3ControlResponse::S3ControlResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new S3ControlResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new S3ControlResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ S3ControlResponse::S3ControlResponse(QObject * const parent)
  * implementation that inherits from S3ControlResponsePrivate.
  */
 S3ControlResponse::S3ControlResponse(S3ControlResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void S3ControlResponse::parseFailure(QIODevice &response)
  * Constructs a S3ControlResponsePrivate object with public implementation \a q.
  */
 S3ControlResponsePrivate::S3ControlResponsePrivate(
-    S3ControlResponse * const q) : q_ptr(q)
+    S3ControlResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

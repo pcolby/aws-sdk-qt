@@ -103,8 +103,7 @@ public:
 
 protected:
     /// @cond internal
-    LicenseManagerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit LicenseManagerRequest(LicenseManagerRequestPrivate * const d);
+    LicenseManagerRequest(LicenseManagerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

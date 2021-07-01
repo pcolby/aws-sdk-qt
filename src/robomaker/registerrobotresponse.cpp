@@ -56,7 +56,8 @@ RegisterRobotResponse::RegisterRobotResponse(
  */
 const RegisterRobotRequest * RegisterRobotResponse::request() const
 {
-    return static_cast<const RegisterRobotRequest *>(RoboMakerResponse::request());
+    Q_D(const RegisterRobotResponse);
+    return static_cast<const RegisterRobotRequest *>(d->request);
 }
 
 /*!

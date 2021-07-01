@@ -91,8 +91,7 @@ public:
 
 protected:
     /// @cond internal
-    ShieldRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ShieldRequest(ShieldRequestPrivate * const d);
+    ShieldRequest(ShieldRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

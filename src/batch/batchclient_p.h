@@ -20,20 +20,19 @@
 #ifndef QTAWS_BATCHCLIENT_P_H
 #define QTAWS_BATCHCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Batch {
 
 class BatchClient;
 
-class BatchClientPrivate {
+class BatchClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit BatchClientPrivate(BatchClient * const q);
-
-protected:
-    BatchClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BatchClient)

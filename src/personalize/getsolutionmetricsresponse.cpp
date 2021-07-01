@@ -56,7 +56,8 @@ GetSolutionMetricsResponse::GetSolutionMetricsResponse(
  */
 const GetSolutionMetricsRequest * GetSolutionMetricsResponse::request() const
 {
-    return static_cast<const GetSolutionMetricsRequest *>(PersonalizeResponse::request());
+    Q_D(const GetSolutionMetricsResponse);
+    return static_cast<const GetSolutionMetricsRequest *>(d->request);
 }
 
 /*!

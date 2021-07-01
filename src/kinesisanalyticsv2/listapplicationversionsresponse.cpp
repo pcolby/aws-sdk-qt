@@ -58,7 +58,8 @@ ListApplicationVersionsResponse::ListApplicationVersionsResponse(
  */
 const ListApplicationVersionsRequest * ListApplicationVersionsResponse::request() const
 {
-    return static_cast<const ListApplicationVersionsRequest *>(KinesisAnalyticsV2Response::request());
+    Q_D(const ListApplicationVersionsResponse);
+    return static_cast<const ListApplicationVersionsRequest *>(d->request);
 }
 
 /*!

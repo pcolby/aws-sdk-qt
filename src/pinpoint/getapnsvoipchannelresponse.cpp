@@ -56,7 +56,8 @@ GetApnsVoipChannelResponse::GetApnsVoipChannelResponse(
  */
 const GetApnsVoipChannelRequest * GetApnsVoipChannelResponse::request() const
 {
-    return static_cast<const GetApnsVoipChannelRequest *>(PinpointResponse::request());
+    Q_D(const GetApnsVoipChannelResponse);
+    return static_cast<const GetApnsVoipChannelRequest *>(d->request);
 }
 
 /*!

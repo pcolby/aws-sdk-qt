@@ -58,7 +58,8 @@ GetKMSEncryptionKeyResponse::GetKMSEncryptionKeyResponse(
  */
 const GetKMSEncryptionKeyRequest * GetKMSEncryptionKeyResponse::request() const
 {
-    return static_cast<const GetKMSEncryptionKeyRequest *>(FraudDetectorResponse::request());
+    Q_D(const GetKMSEncryptionKeyResponse);
+    return static_cast<const GetKMSEncryptionKeyRequest *>(d->request);
 }
 
 /*!

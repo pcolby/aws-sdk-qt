@@ -55,7 +55,8 @@ ListBotVersionsResponse::ListBotVersionsResponse(
  */
 const ListBotVersionsRequest * ListBotVersionsResponse::request() const
 {
-    return static_cast<const ListBotVersionsRequest *>(LexModelsV2Response::request());
+    Q_D(const ListBotVersionsResponse);
+    return static_cast<const ListBotVersionsRequest *>(d->request);
 }
 
 /*!

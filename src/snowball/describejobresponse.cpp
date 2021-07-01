@@ -61,7 +61,8 @@ DescribeJobResponse::DescribeJobResponse(
  */
 const DescribeJobRequest * DescribeJobResponse::request() const
 {
-    return static_cast<const DescribeJobRequest *>(SnowballResponse::request());
+    Q_D(const DescribeJobResponse);
+    return static_cast<const DescribeJobRequest *>(d->request);
 }
 
 /*!

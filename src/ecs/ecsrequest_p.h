@@ -20,12 +20,15 @@
 #ifndef QTAWS_ECSREQUEST_P_H
 #define QTAWS_ECSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "ecsrequest.h"
+
 namespace QtAws {
 namespace ECS {
 
 class EcsRequest;
 
-class EcsRequestPrivate {
+class EcsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EcsRequest::Action action; ///< ECS action to be performed.
@@ -36,9 +39,6 @@ public:
     EcsRequestPrivate(const EcsRequestPrivate &other, EcsRequest * const q);
 
     static QString toString(const EcsRequest::Action &action);
-
-protected:
-    EcsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EcsRequest)

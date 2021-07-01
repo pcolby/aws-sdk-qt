@@ -58,7 +58,8 @@ BatchUpdatePartitionResponse::BatchUpdatePartitionResponse(
  */
 const BatchUpdatePartitionRequest * BatchUpdatePartitionResponse::request() const
 {
-    return static_cast<const BatchUpdatePartitionRequest *>(GlueResponse::request());
+    Q_D(const BatchUpdatePartitionResponse);
+    return static_cast<const BatchUpdatePartitionRequest *>(d->request);
 }
 
 /*!

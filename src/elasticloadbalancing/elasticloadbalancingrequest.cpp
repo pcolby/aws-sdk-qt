@@ -71,7 +71,7 @@ namespace ElasticLoadBalancing {
  * Constructs a ElasticLoadBalancingRequest object for ElasticLoadBalancing \a action.
  */
 ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(const Action action)
-    : d_ptr(new ElasticLoadBalancingRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticLoadBalancingRequestPrivate(action, this))
 {
 
 }
@@ -80,8 +80,7 @@ ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(const ElasticLoadBalancingRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ElasticLoadBalancingRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticLoadBalancingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -104,7 +103,7 @@ ElasticLoadBalancingRequest& ElasticLoadBalancingRequest::operator=(const Elasti
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticLoadBalancingRequestPrivate.
  */
-ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(ElasticLoadBalancingRequestPrivate * const d) : d_ptr(d)
+ElasticLoadBalancingRequest::ElasticLoadBalancingRequest(ElasticLoadBalancingRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -273,7 +272,7 @@ QNetworkRequest ElasticLoadBalancingRequest::unsignedRequest(const QUrl &endpoin
  * with public implementation \a q.
  */
 ElasticLoadBalancingRequestPrivate::ElasticLoadBalancingRequestPrivate(const ElasticLoadBalancingRequest::Action action, ElasticLoadBalancingRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -288,8 +287,8 @@ ElasticLoadBalancingRequestPrivate::ElasticLoadBalancingRequestPrivate(const Ela
  */
 ElasticLoadBalancingRequestPrivate::ElasticLoadBalancingRequestPrivate(const ElasticLoadBalancingRequestPrivate &other,
                                      ElasticLoadBalancingRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

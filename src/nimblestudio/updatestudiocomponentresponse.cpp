@@ -55,7 +55,8 @@ UpdateStudioComponentResponse::UpdateStudioComponentResponse(
  */
 const UpdateStudioComponentRequest * UpdateStudioComponentResponse::request() const
 {
-    return static_cast<const UpdateStudioComponentRequest *>(NimbleStudioResponse::request());
+    Q_D(const UpdateStudioComponentResponse);
+    return static_cast<const UpdateStudioComponentRequest *>(d->request);
 }
 
 /*!

@@ -72,7 +72,8 @@ UpdateClusterResponse::UpdateClusterResponse(
  */
 const UpdateClusterRequest * UpdateClusterResponse::request() const
 {
-    return static_cast<const UpdateClusterRequest *>(EcsResponse::request());
+    Q_D(const UpdateClusterResponse);
+    return static_cast<const UpdateClusterRequest *>(d->request);
 }
 
 /*!

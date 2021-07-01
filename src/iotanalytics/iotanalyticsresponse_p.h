@@ -20,12 +20,14 @@
 #ifndef QTAWS_IOTANALYTICSRESPONSE_P_H
 #define QTAWS_IOTANALYTICSRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace IoTAnalytics {
 
 class IoTAnalyticsResponse;
 
-class IoTAnalyticsResponsePrivate {
+class IoTAnalyticsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    IoTAnalyticsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTAnalyticsResponse)

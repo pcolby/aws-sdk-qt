@@ -58,7 +58,8 @@ GetEventPredictionResponse::GetEventPredictionResponse(
  */
 const GetEventPredictionRequest * GetEventPredictionResponse::request() const
 {
-    return static_cast<const GetEventPredictionRequest *>(FraudDetectorResponse::request());
+    Q_D(const GetEventPredictionResponse);
+    return static_cast<const GetEventPredictionRequest *>(d->request);
 }
 
 /*!

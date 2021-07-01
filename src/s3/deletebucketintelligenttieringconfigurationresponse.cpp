@@ -55,7 +55,8 @@ DeleteBucketIntelligentTieringConfigurationResponse::DeleteBucketIntelligentTier
  */
 const DeleteBucketIntelligentTieringConfigurationRequest * DeleteBucketIntelligentTieringConfigurationResponse::request() const
 {
-    return static_cast<const DeleteBucketIntelligentTieringConfigurationRequest *>(S3Response::request());
+    Q_D(const DeleteBucketIntelligentTieringConfigurationResponse);
+    return static_cast<const DeleteBucketIntelligentTieringConfigurationRequest *>(d->request);
 }
 
 /*!

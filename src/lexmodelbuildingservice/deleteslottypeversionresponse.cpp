@@ -59,7 +59,8 @@ DeleteSlotTypeVersionResponse::DeleteSlotTypeVersionResponse(
  */
 const DeleteSlotTypeVersionRequest * DeleteSlotTypeVersionResponse::request() const
 {
-    return static_cast<const DeleteSlotTypeVersionRequest *>(LexModelBuildingServiceResponse::request());
+    Q_D(const DeleteSlotTypeVersionResponse);
+    return static_cast<const DeleteSlotTypeVersionRequest *>(d->request);
 }
 
 /*!

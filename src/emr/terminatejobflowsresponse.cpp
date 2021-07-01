@@ -58,7 +58,8 @@ TerminateJobFlowsResponse::TerminateJobFlowsResponse(
  */
 const TerminateJobFlowsRequest * TerminateJobFlowsResponse::request() const
 {
-    return static_cast<const TerminateJobFlowsRequest *>(EmrResponse::request());
+    Q_D(const TerminateJobFlowsResponse);
+    return static_cast<const TerminateJobFlowsRequest *>(d->request);
 }
 
 /*!

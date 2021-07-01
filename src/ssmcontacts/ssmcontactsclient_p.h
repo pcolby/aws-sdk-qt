@@ -20,20 +20,19 @@
 #ifndef QTAWS_SSMCONTACTSCLIENT_P_H
 #define QTAWS_SSMCONTACTSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SSMContacts {
 
 class SSMContactsClient;
 
-class SSMContactsClientPrivate {
+class SSMContactsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SSMContactsClientPrivate(SSMContactsClient * const q);
-
-protected:
-    SSMContactsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SSMContactsClient)

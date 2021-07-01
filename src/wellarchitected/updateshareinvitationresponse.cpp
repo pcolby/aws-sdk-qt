@@ -62,7 +62,8 @@ UpdateShareInvitationResponse::UpdateShareInvitationResponse(
  */
 const UpdateShareInvitationRequest * UpdateShareInvitationResponse::request() const
 {
-    return static_cast<const UpdateShareInvitationRequest *>(WellArchitectedResponse::request());
+    Q_D(const UpdateShareInvitationResponse);
+    return static_cast<const UpdateShareInvitationRequest *>(d->request);
 }
 
 /*!

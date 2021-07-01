@@ -99,7 +99,8 @@ UntagResponse::UntagResponse(
  */
 const UntagRequest * UntagResponse::request() const
 {
-    return static_cast<const UntagRequest *>(ResourceGroupsResponse::request());
+    Q_D(const UntagResponse);
+    return static_cast<const UntagRequest *>(d->request);
 }
 
 /*!

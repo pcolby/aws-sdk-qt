@@ -87,7 +87,8 @@ ModifyVpcEndpointConnectionNotificationResponse::ModifyVpcEndpointConnectionNoti
  */
 const ModifyVpcEndpointConnectionNotificationRequest * ModifyVpcEndpointConnectionNotificationResponse::request() const
 {
-    return static_cast<const ModifyVpcEndpointConnectionNotificationRequest *>(Ec2Response::request());
+    Q_D(const ModifyVpcEndpointConnectionNotificationResponse);
+    return static_cast<const ModifyVpcEndpointConnectionNotificationRequest *>(d->request);
 }
 
 /*!

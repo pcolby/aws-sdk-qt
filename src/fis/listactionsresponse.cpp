@@ -58,7 +58,8 @@ ListActionsResponse::ListActionsResponse(
  */
 const ListActionsRequest * ListActionsResponse::request() const
 {
-    return static_cast<const ListActionsRequest *>(FisResponse::request());
+    Q_D(const ListActionsResponse);
+    return static_cast<const ListActionsRequest *>(d->request);
 }
 
 /*!

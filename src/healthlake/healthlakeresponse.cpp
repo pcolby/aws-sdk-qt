@@ -37,7 +37,7 @@ namespace HealthLake {
  * Constructs a HealthLakeResponse object with parent \a parent.
  */
 HealthLakeResponse::HealthLakeResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new HealthLakeResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new HealthLakeResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ HealthLakeResponse::HealthLakeResponse(QObject * const parent)
  * implementation that inherits from HealthLakeResponsePrivate.
  */
 HealthLakeResponse::HealthLakeResponse(HealthLakeResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void HealthLakeResponse::parseFailure(QIODevice &response)
  * Constructs a HealthLakeResponsePrivate object with public implementation \a q.
  */
 HealthLakeResponsePrivate::HealthLakeResponsePrivate(
-    HealthLakeResponse * const q) : q_ptr(q)
+    HealthLakeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

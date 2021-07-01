@@ -61,7 +61,8 @@ GetAccessKeyInfoResponse::GetAccessKeyInfoResponse(
  */
 const GetAccessKeyInfoRequest * GetAccessKeyInfoResponse::request() const
 {
-    return static_cast<const GetAccessKeyInfoRequest *>(StsResponse::request());
+    Q_D(const GetAccessKeyInfoResponse);
+    return static_cast<const GetAccessKeyInfoRequest *>(d->request);
 }
 
 /*!

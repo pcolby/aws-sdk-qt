@@ -597,16 +597,16 @@ CodeCommitClient::CodeCommitClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-04-13"),
-    QStringLiteral("codecommit"),
-    QStringLiteral("AWS CodeCommit"),
-    QStringLiteral("codecommit"),
-    parent), d_ptr(new CodeCommitClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CodeCommitClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CodeCommitClient);
+    d->apiVersion = QStringLiteral("2015-04-13");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("codecommit");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CodeCommit");
+    d->serviceName = QStringLiteral("codecommit");
 }
 
 /*!
@@ -625,16 +625,16 @@ CodeCommitClient::CodeCommitClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-04-13"),
-    QStringLiteral("codecommit"),
-    QStringLiteral("AWS CodeCommit"),
-    QStringLiteral("codecommit"),
-    parent), d_ptr(new CodeCommitClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CodeCommitClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CodeCommitClient);
+    d->apiVersion = QStringLiteral("2015-04-13");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("codecommit");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CodeCommit");
+    d->serviceName = QStringLiteral("codecommit");
 }
 
 /*!
@@ -1750,9 +1750,10 @@ UpdateRepositoryNameResponse * CodeCommitClient::updateRepositoryName(const Upda
 /*!
  * Constructs a CodeCommitClientPrivate object with public implementation \a q.
  */
-CodeCommitClientPrivate::CodeCommitClientPrivate(CodeCommitClient * const q) : q_ptr(q)
+CodeCommitClientPrivate::CodeCommitClientPrivate(CodeCommitClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CodeCommit

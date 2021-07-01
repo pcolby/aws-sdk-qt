@@ -61,7 +61,8 @@ UpdateTagOptionResponse::UpdateTagOptionResponse(
  */
 const UpdateTagOptionRequest * UpdateTagOptionResponse::request() const
 {
-    return static_cast<const UpdateTagOptionRequest *>(ServiceCatalogResponse::request());
+    Q_D(const UpdateTagOptionResponse);
+    return static_cast<const UpdateTagOptionRequest *>(d->request);
 }
 
 /*!

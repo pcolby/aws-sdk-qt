@@ -79,7 +79,8 @@ UpdateQueueHoursOfOperationResponse::UpdateQueueHoursOfOperationResponse(
  */
 const UpdateQueueHoursOfOperationRequest * UpdateQueueHoursOfOperationResponse::request() const
 {
-    return static_cast<const UpdateQueueHoursOfOperationRequest *>(ConnectResponse::request());
+    Q_D(const UpdateQueueHoursOfOperationResponse);
+    return static_cast<const UpdateQueueHoursOfOperationRequest *>(d->request);
 }
 
 /*!

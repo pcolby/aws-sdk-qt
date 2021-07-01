@@ -57,7 +57,8 @@ DescribeBrokerEngineTypesResponse::DescribeBrokerEngineTypesResponse(
  */
 const DescribeBrokerEngineTypesRequest * DescribeBrokerEngineTypesResponse::request() const
 {
-    return static_cast<const DescribeBrokerEngineTypesRequest *>(MqResponse::request());
+    Q_D(const DescribeBrokerEngineTypesResponse);
+    return static_cast<const DescribeBrokerEngineTypesRequest *>(d->request);
 }
 
 /*!

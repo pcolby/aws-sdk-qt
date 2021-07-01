@@ -82,7 +82,8 @@ UpdateCACertificateResponse::UpdateCACertificateResponse(
  */
 const UpdateCACertificateRequest * UpdateCACertificateResponse::request() const
 {
-    return static_cast<const UpdateCACertificateRequest *>(IoTResponse::request());
+    Q_D(const UpdateCACertificateResponse);
+    return static_cast<const UpdateCACertificateRequest *>(d->request);
 }
 
 /*!

@@ -68,7 +68,8 @@ SubmitJobResponse::SubmitJobResponse(
  */
 const SubmitJobRequest * SubmitJobResponse::request() const
 {
-    return static_cast<const SubmitJobRequest *>(BatchResponse::request());
+    Q_D(const SubmitJobResponse);
+    return static_cast<const SubmitJobRequest *>(d->request);
 }
 
 /*!

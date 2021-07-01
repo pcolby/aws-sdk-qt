@@ -70,7 +70,8 @@ DeleteExperimentResponse::DeleteExperimentResponse(
  */
 const DeleteExperimentRequest * DeleteExperimentResponse::request() const
 {
-    return static_cast<const DeleteExperimentRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteExperimentResponse);
+    return static_cast<const DeleteExperimentRequest *>(d->request);
 }
 
 /*!

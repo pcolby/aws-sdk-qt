@@ -103,7 +103,8 @@ UpdateActionTargetResponse::UpdateActionTargetResponse(
  */
 const UpdateActionTargetRequest * UpdateActionTargetResponse::request() const
 {
-    return static_cast<const UpdateActionTargetRequest *>(SecurityHubResponse::request());
+    Q_D(const UpdateActionTargetResponse);
+    return static_cast<const UpdateActionTargetRequest *>(d->request);
 }
 
 /*!

@@ -138,7 +138,7 @@ namespace S3 {
  * Constructs a S3Request object for S3 \a action.
  */
 S3Request::S3Request(const Action action)
-    : d_ptr(new S3RequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new S3RequestPrivate(action, this))
 {
 
 }
@@ -147,8 +147,7 @@ S3Request::S3Request(const Action action)
  * Constructs a copy of \a other.
  */
 S3Request::S3Request(const S3Request &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new S3RequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new S3RequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -171,7 +170,7 @@ S3Request& S3Request::operator=(const S3Request &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from S3RequestPrivate.
  */
-S3Request::S3Request(S3RequestPrivate * const d) : d_ptr(d)
+S3Request::S3Request(S3RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -340,7 +339,7 @@ QNetworkRequest S3Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 S3RequestPrivate::S3RequestPrivate(const S3Request::Action action, S3Request * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -355,8 +354,8 @@ S3RequestPrivate::S3RequestPrivate(const S3Request::Action action, S3Request * c
  */
 S3RequestPrivate::S3RequestPrivate(const S3RequestPrivate &other,
                                      S3Request * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

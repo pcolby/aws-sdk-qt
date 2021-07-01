@@ -56,7 +56,8 @@ GetApplicationSettingsResponse::GetApplicationSettingsResponse(
  */
 const GetApplicationSettingsRequest * GetApplicationSettingsResponse::request() const
 {
-    return static_cast<const GetApplicationSettingsRequest *>(PinpointResponse::request());
+    Q_D(const GetApplicationSettingsResponse);
+    return static_cast<const GetApplicationSettingsRequest *>(d->request);
 }
 
 /*!

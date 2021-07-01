@@ -59,7 +59,8 @@ UpdateRecoveryPointLifecycleResponse::UpdateRecoveryPointLifecycleResponse(
  */
 const UpdateRecoveryPointLifecycleRequest * UpdateRecoveryPointLifecycleResponse::request() const
 {
-    return static_cast<const UpdateRecoveryPointLifecycleRequest *>(BackupResponse::request());
+    Q_D(const UpdateRecoveryPointLifecycleResponse);
+    return static_cast<const UpdateRecoveryPointLifecycleRequest *>(d->request);
 }
 
 /*!

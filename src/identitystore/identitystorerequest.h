@@ -62,8 +62,7 @@ public:
 
 protected:
     /// @cond internal
-    IdentityStoreRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IdentityStoreRequest(IdentityStoreRequestPrivate * const d);
+    IdentityStoreRequest(IdentityStoreRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

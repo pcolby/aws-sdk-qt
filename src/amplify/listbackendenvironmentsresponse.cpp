@@ -60,7 +60,8 @@ ListBackendEnvironmentsResponse::ListBackendEnvironmentsResponse(
  */
 const ListBackendEnvironmentsRequest * ListBackendEnvironmentsResponse::request() const
 {
-    return static_cast<const ListBackendEnvironmentsRequest *>(AmplifyResponse::request());
+    Q_D(const ListBackendEnvironmentsResponse);
+    return static_cast<const ListBackendEnvironmentsRequest *>(d->request);
 }
 
 /*!

@@ -83,8 +83,7 @@ public:
 
 protected:
     /// @cond internal
-    GroundStationRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit GroundStationRequest(GroundStationRequestPrivate * const d);
+    GroundStationRequest(GroundStationRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

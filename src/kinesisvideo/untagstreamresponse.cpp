@@ -55,7 +55,8 @@ UntagStreamResponse::UntagStreamResponse(
  */
 const UntagStreamRequest * UntagStreamResponse::request() const
 {
-    return static_cast<const UntagStreamRequest *>(KinesisVideoResponse::request());
+    Q_D(const UntagStreamResponse);
+    return static_cast<const UntagStreamRequest *>(d->request);
 }
 
 /*!

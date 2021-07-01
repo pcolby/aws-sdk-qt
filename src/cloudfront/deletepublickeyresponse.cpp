@@ -60,7 +60,8 @@ DeletePublicKeyResponse::DeletePublicKeyResponse(
  */
 const DeletePublicKeyRequest * DeletePublicKeyResponse::request() const
 {
-    return static_cast<const DeletePublicKeyRequest *>(CloudFrontResponse::request());
+    Q_D(const DeletePublicKeyResponse);
+    return static_cast<const DeletePublicKeyRequest *>(d->request);
 }
 
 /*!

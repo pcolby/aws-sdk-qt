@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ApplicationInsightsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ApplicationInsightsResponse(ApplicationInsightsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

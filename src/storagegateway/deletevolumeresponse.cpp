@@ -124,7 +124,8 @@ DeleteVolumeResponse::DeleteVolumeResponse(
  */
 const DeleteVolumeRequest * DeleteVolumeResponse::request() const
 {
-    return static_cast<const DeleteVolumeRequest *>(StorageGatewayResponse::request());
+    Q_D(const DeleteVolumeResponse);
+    return static_cast<const DeleteVolumeRequest *>(d->request);
 }
 
 /*!

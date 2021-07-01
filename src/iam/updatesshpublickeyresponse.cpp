@@ -62,7 +62,8 @@ UpdateSSHPublicKeyResponse::UpdateSSHPublicKeyResponse(
  */
 const UpdateSSHPublicKeyRequest * UpdateSSHPublicKeyResponse::request() const
 {
-    return static_cast<const UpdateSSHPublicKeyRequest *>(IamResponse::request());
+    Q_D(const UpdateSSHPublicKeyResponse);
+    return static_cast<const UpdateSSHPublicKeyRequest *>(d->request);
 }
 
 /*!

@@ -177,7 +177,8 @@ GetServiceInstanceResponse::GetServiceInstanceResponse(
  */
 const GetServiceInstanceRequest * GetServiceInstanceResponse::request() const
 {
-    return static_cast<const GetServiceInstanceRequest *>(ProtonResponse::request());
+    Q_D(const GetServiceInstanceResponse);
+    return static_cast<const GetServiceInstanceRequest *>(d->request);
 }
 
 /*!

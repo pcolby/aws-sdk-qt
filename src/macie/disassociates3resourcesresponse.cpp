@@ -62,7 +62,8 @@ DisassociateS3ResourcesResponse::DisassociateS3ResourcesResponse(
  */
 const DisassociateS3ResourcesRequest * DisassociateS3ResourcesResponse::request() const
 {
-    return static_cast<const DisassociateS3ResourcesRequest *>(MacieResponse::request());
+    Q_D(const DisassociateS3ResourcesResponse);
+    return static_cast<const DisassociateS3ResourcesRequest *>(d->request);
 }
 
 /*!

@@ -66,7 +66,8 @@ SearchEntitiesResponse::SearchEntitiesResponse(
  */
 const SearchEntitiesRequest * SearchEntitiesResponse::request() const
 {
-    return static_cast<const SearchEntitiesRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const SearchEntitiesResponse);
+    return static_cast<const SearchEntitiesRequest *>(d->request);
 }
 
 /*!

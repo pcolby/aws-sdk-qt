@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ConnectParticipantResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ConnectParticipantResponse(ConnectParticipantResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

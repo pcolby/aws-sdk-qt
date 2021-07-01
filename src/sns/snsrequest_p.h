@@ -20,12 +20,15 @@
 #ifndef QTAWS_SNSREQUEST_P_H
 #define QTAWS_SNSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "snsrequest.h"
+
 namespace QtAws {
 namespace SNS {
 
 class SnsRequest;
 
-class SnsRequestPrivate {
+class SnsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SnsRequest::Action action; ///< SNS action to be performed.
@@ -36,9 +39,6 @@ public:
     SnsRequestPrivate(const SnsRequestPrivate &other, SnsRequest * const q);
 
     static QString toString(const SnsRequest::Action &action);
-
-protected:
-    SnsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SnsRequest)

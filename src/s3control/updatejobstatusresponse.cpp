@@ -56,7 +56,8 @@ UpdateJobStatusResponse::UpdateJobStatusResponse(
  */
 const UpdateJobStatusRequest * UpdateJobStatusResponse::request() const
 {
-    return static_cast<const UpdateJobStatusRequest *>(S3ControlResponse::request());
+    Q_D(const UpdateJobStatusResponse);
+    return static_cast<const UpdateJobStatusRequest *>(d->request);
 }
 
 /*!

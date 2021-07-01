@@ -20,20 +20,19 @@
 #ifndef QTAWS_ECRCLIENT_P_H
 #define QTAWS_ECRCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ECR {
 
 class EcrClient;
 
-class EcrClientPrivate {
+class EcrClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit EcrClientPrivate(EcrClient * const q);
-
-protected:
-    EcrClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EcrClient)

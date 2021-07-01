@@ -58,7 +58,8 @@ DescribeWorkspaceImagesResponse::DescribeWorkspaceImagesResponse(
  */
 const DescribeWorkspaceImagesRequest * DescribeWorkspaceImagesResponse::request() const
 {
-    return static_cast<const DescribeWorkspaceImagesRequest *>(WorkSpacesResponse::request());
+    Q_D(const DescribeWorkspaceImagesResponse);
+    return static_cast<const DescribeWorkspaceImagesRequest *>(d->request);
 }
 
 /*!

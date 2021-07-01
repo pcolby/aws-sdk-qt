@@ -57,7 +57,8 @@ DescribeBackupsResponse::DescribeBackupsResponse(
  */
 const DescribeBackupsRequest * DescribeBackupsResponse::request() const
 {
-    return static_cast<const DescribeBackupsRequest *>(CloudHSMV2Response::request());
+    Q_D(const DescribeBackupsResponse);
+    return static_cast<const DescribeBackupsRequest *>(d->request);
 }
 
 /*!

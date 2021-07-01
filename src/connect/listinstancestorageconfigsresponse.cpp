@@ -79,7 +79,8 @@ ListInstanceStorageConfigsResponse::ListInstanceStorageConfigsResponse(
  */
 const ListInstanceStorageConfigsRequest * ListInstanceStorageConfigsResponse::request() const
 {
-    return static_cast<const ListInstanceStorageConfigsRequest *>(ConnectResponse::request());
+    Q_D(const ListInstanceStorageConfigsResponse);
+    return static_cast<const ListInstanceStorageConfigsRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ ListMilestonesResponse::ListMilestonesResponse(
  */
 const ListMilestonesRequest * ListMilestonesResponse::request() const
 {
-    return static_cast<const ListMilestonesRequest *>(WellArchitectedResponse::request());
+    Q_D(const ListMilestonesResponse);
+    return static_cast<const ListMilestonesRequest *>(d->request);
 }
 
 /*!

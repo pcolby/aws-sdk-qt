@@ -56,7 +56,8 @@ CreateDatasetResponse::CreateDatasetResponse(
  */
 const CreateDatasetRequest * CreateDatasetResponse::request() const
 {
-    return static_cast<const CreateDatasetRequest *>(PersonalizeResponse::request());
+    Q_D(const CreateDatasetResponse);
+    return static_cast<const CreateDatasetRequest *>(d->request);
 }
 
 /*!

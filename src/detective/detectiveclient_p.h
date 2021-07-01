@@ -20,20 +20,19 @@
 #ifndef QTAWS_DETECTIVECLIENT_P_H
 #define QTAWS_DETECTIVECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Detective {
 
 class DetectiveClient;
 
-class DetectiveClientPrivate {
+class DetectiveClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit DetectiveClientPrivate(DetectiveClient * const q);
-
-protected:
-    DetectiveClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DetectiveClient)

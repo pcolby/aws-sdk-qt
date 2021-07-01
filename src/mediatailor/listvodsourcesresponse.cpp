@@ -66,7 +66,8 @@ ListVodSourcesResponse::ListVodSourcesResponse(
  */
 const ListVodSourcesRequest * ListVodSourcesResponse::request() const
 {
-    return static_cast<const ListVodSourcesRequest *>(MediaTailorResponse::request());
+    Q_D(const ListVodSourcesResponse);
+    return static_cast<const ListVodSourcesRequest *>(d->request);
 }
 
 /*!

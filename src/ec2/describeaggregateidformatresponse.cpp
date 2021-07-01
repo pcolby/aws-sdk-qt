@@ -87,7 +87,8 @@ DescribeAggregateIdFormatResponse::DescribeAggregateIdFormatResponse(
  */
 const DescribeAggregateIdFormatRequest * DescribeAggregateIdFormatResponse::request() const
 {
-    return static_cast<const DescribeAggregateIdFormatRequest *>(Ec2Response::request());
+    Q_D(const DescribeAggregateIdFormatResponse);
+    return static_cast<const DescribeAggregateIdFormatRequest *>(d->request);
 }
 
 /*!

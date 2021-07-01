@@ -62,7 +62,8 @@ UpdateProfileResponse::UpdateProfileResponse(
  */
 const UpdateProfileRequest * UpdateProfileResponse::request() const
 {
-    return static_cast<const UpdateProfileRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const UpdateProfileResponse);
+    return static_cast<const UpdateProfileRequest *>(d->request);
 }
 
 /*!

@@ -124,7 +124,8 @@ UpdateSMBFileShareVisibilityResponse::UpdateSMBFileShareVisibilityResponse(
  */
 const UpdateSMBFileShareVisibilityRequest * UpdateSMBFileShareVisibilityResponse::request() const
 {
-    return static_cast<const UpdateSMBFileShareVisibilityRequest *>(StorageGatewayResponse::request());
+    Q_D(const UpdateSMBFileShareVisibilityResponse);
+    return static_cast<const UpdateSMBFileShareVisibilityRequest *>(d->request);
 }
 
 /*!

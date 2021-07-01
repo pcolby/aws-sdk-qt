@@ -161,7 +161,8 @@ DescribeDeploymentsResponse::DescribeDeploymentsResponse(
  */
 const DescribeDeploymentsRequest * DescribeDeploymentsResponse::request() const
 {
-    return static_cast<const DescribeDeploymentsRequest *>(OpsWorksResponse::request());
+    Q_D(const DescribeDeploymentsResponse);
+    return static_cast<const DescribeDeploymentsRequest *>(d->request);
 }
 
 /*!

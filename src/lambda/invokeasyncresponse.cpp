@@ -66,7 +66,8 @@ InvokeAsyncResponse::InvokeAsyncResponse(
  */
 const InvokeAsyncRequest * InvokeAsyncResponse::request() const
 {
-    return static_cast<const InvokeAsyncRequest *>(LambdaResponse::request());
+    Q_D(const InvokeAsyncResponse);
+    return static_cast<const InvokeAsyncRequest *>(d->request);
 }
 
 /*!

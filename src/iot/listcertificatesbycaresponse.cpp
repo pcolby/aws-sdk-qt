@@ -82,7 +82,8 @@ ListCertificatesByCAResponse::ListCertificatesByCAResponse(
  */
 const ListCertificatesByCARequest * ListCertificatesByCAResponse::request() const
 {
-    return static_cast<const ListCertificatesByCARequest *>(IoTResponse::request());
+    Q_D(const ListCertificatesByCAResponse);
+    return static_cast<const ListCertificatesByCARequest *>(d->request);
 }
 
 /*!

@@ -160,16 +160,16 @@ imagebuilderClient::imagebuilderClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-12-02"),
-    QStringLiteral("imagebuilder"),
-    QStringLiteral("EC2 Image Builder"),
-    QStringLiteral("imagebuilder"),
-    parent), d_ptr(new imagebuilderClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new imagebuilderClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(imagebuilderClient);
+    d->apiVersion = QStringLiteral("2019-12-02");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("imagebuilder");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("EC2 Image Builder");
+    d->serviceName = QStringLiteral("imagebuilder");
 }
 
 /*!
@@ -188,16 +188,16 @@ imagebuilderClient::imagebuilderClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-12-02"),
-    QStringLiteral("imagebuilder"),
-    QStringLiteral("EC2 Image Builder"),
-    QStringLiteral("imagebuilder"),
-    parent), d_ptr(new imagebuilderClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new imagebuilderClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(imagebuilderClient);
+    d->apiVersion = QStringLiteral("2019-12-02");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("imagebuilder");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("EC2 Image Builder");
+    d->serviceName = QStringLiteral("imagebuilder");
 }
 
 /*!
@@ -876,9 +876,10 @@ UpdateInfrastructureConfigurationResponse * imagebuilderClient::updateInfrastruc
 /*!
  * Constructs a imagebuilderClientPrivate object with public implementation \a q.
  */
-imagebuilderClientPrivate::imagebuilderClientPrivate(imagebuilderClient * const q) : q_ptr(q)
+imagebuilderClientPrivate::imagebuilderClientPrivate(imagebuilderClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace imagebuilder

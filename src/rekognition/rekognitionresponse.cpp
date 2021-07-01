@@ -37,7 +37,7 @@ namespace Rekognition {
  * Constructs a RekognitionResponse object with parent \a parent.
  */
 RekognitionResponse::RekognitionResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new RekognitionResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new RekognitionResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ RekognitionResponse::RekognitionResponse(QObject * const parent)
  * implementation that inherits from RekognitionResponsePrivate.
  */
 RekognitionResponse::RekognitionResponse(RekognitionResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void RekognitionResponse::parseFailure(QIODevice &response)
  * Constructs a RekognitionResponsePrivate object with public implementation \a q.
  */
 RekognitionResponsePrivate::RekognitionResponsePrivate(
-    RekognitionResponse * const q) : q_ptr(q)
+    RekognitionResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

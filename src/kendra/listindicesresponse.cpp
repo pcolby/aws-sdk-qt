@@ -56,7 +56,8 @@ ListIndicesResponse::ListIndicesResponse(
  */
 const ListIndicesRequest * ListIndicesResponse::request() const
 {
-    return static_cast<const ListIndicesRequest *>(kendraResponse::request());
+    Q_D(const ListIndicesResponse);
+    return static_cast<const ListIndicesRequest *>(d->request);
 }
 
 /*!

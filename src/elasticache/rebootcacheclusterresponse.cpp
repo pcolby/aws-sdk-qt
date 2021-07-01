@@ -69,7 +69,8 @@ RebootCacheClusterResponse::RebootCacheClusterResponse(
  */
 const RebootCacheClusterRequest * RebootCacheClusterResponse::request() const
 {
-    return static_cast<const RebootCacheClusterRequest *>(ElastiCacheResponse::request());
+    Q_D(const RebootCacheClusterResponse);
+    return static_cast<const RebootCacheClusterRequest *>(d->request);
 }
 
 /*!

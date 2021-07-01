@@ -70,7 +70,8 @@ GetSearchSuggestionsResponse::GetSearchSuggestionsResponse(
  */
 const GetSearchSuggestionsRequest * GetSearchSuggestionsResponse::request() const
 {
-    return static_cast<const GetSearchSuggestionsRequest *>(SageMakerResponse::request());
+    Q_D(const GetSearchSuggestionsResponse);
+    return static_cast<const GetSearchSuggestionsRequest *>(d->request);
 }
 
 /*!

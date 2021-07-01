@@ -58,7 +58,8 @@ CreateSecurityConfigurationResponse::CreateSecurityConfigurationResponse(
  */
 const CreateSecurityConfigurationRequest * CreateSecurityConfigurationResponse::request() const
 {
-    return static_cast<const CreateSecurityConfigurationRequest *>(EmrResponse::request());
+    Q_D(const CreateSecurityConfigurationResponse);
+    return static_cast<const CreateSecurityConfigurationRequest *>(d->request);
 }
 
 /*!

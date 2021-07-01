@@ -103,7 +103,8 @@ GetInvitationsCountResponse::GetInvitationsCountResponse(
  */
 const GetInvitationsCountRequest * GetInvitationsCountResponse::request() const
 {
-    return static_cast<const GetInvitationsCountRequest *>(SecurityHubResponse::request());
+    Q_D(const GetInvitationsCountResponse);
+    return static_cast<const GetInvitationsCountRequest *>(d->request);
 }
 
 /*!

@@ -115,7 +115,8 @@ CreateMatchmakingRuleSetResponse::CreateMatchmakingRuleSetResponse(
  */
 const CreateMatchmakingRuleSetRequest * CreateMatchmakingRuleSetResponse::request() const
 {
-    return static_cast<const CreateMatchmakingRuleSetRequest *>(GameLiftResponse::request());
+    Q_D(const CreateMatchmakingRuleSetResponse);
+    return static_cast<const CreateMatchmakingRuleSetRequest *>(d->request);
 }
 
 /*!

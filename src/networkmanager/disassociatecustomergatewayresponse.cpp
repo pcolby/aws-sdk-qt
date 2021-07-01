@@ -62,7 +62,8 @@ DisassociateCustomerGatewayResponse::DisassociateCustomerGatewayResponse(
  */
 const DisassociateCustomerGatewayRequest * DisassociateCustomerGatewayResponse::request() const
 {
-    return static_cast<const DisassociateCustomerGatewayRequest *>(NetworkManagerResponse::request());
+    Q_D(const DisassociateCustomerGatewayResponse);
+    return static_cast<const DisassociateCustomerGatewayRequest *>(d->request);
 }
 
 /*!

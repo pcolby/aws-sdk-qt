@@ -62,7 +62,8 @@ PutUserPermissionsBoundaryResponse::PutUserPermissionsBoundaryResponse(
  */
 const PutUserPermissionsBoundaryRequest * PutUserPermissionsBoundaryResponse::request() const
 {
-    return static_cast<const PutUserPermissionsBoundaryRequest *>(IamResponse::request());
+    Q_D(const PutUserPermissionsBoundaryResponse);
+    return static_cast<const PutUserPermissionsBoundaryRequest *>(d->request);
 }
 
 /*!

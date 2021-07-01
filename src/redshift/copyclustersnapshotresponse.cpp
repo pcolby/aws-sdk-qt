@@ -85,7 +85,8 @@ CopyClusterSnapshotResponse::CopyClusterSnapshotResponse(
  */
 const CopyClusterSnapshotRequest * CopyClusterSnapshotResponse::request() const
 {
-    return static_cast<const CopyClusterSnapshotRequest *>(RedshiftResponse::request());
+    Q_D(const CopyClusterSnapshotResponse);
+    return static_cast<const CopyClusterSnapshotRequest *>(d->request);
 }
 
 /*!

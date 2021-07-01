@@ -73,7 +73,8 @@ DeactivatePipelineResponse::DeactivatePipelineResponse(
  */
 const DeactivatePipelineRequest * DeactivatePipelineResponse::request() const
 {
-    return static_cast<const DeactivatePipelineRequest *>(DataPipelineResponse::request());
+    Q_D(const DeactivatePipelineResponse);
+    return static_cast<const DeactivatePipelineRequest *>(d->request);
 }
 
 /*!

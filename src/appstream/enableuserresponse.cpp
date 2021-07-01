@@ -81,7 +81,8 @@ EnableUserResponse::EnableUserResponse(
  */
 const EnableUserRequest * EnableUserResponse::request() const
 {
-    return static_cast<const EnableUserRequest *>(AppStreamResponse::request());
+    Q_D(const EnableUserResponse);
+    return static_cast<const EnableUserRequest *>(d->request);
 }
 
 /*!

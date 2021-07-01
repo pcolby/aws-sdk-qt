@@ -37,7 +37,7 @@ namespace WorkSpaces {
  * Constructs a WorkSpacesResponse object with parent \a parent.
  */
 WorkSpacesResponse::WorkSpacesResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new WorkSpacesResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new WorkSpacesResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ WorkSpacesResponse::WorkSpacesResponse(QObject * const parent)
  * implementation that inherits from WorkSpacesResponsePrivate.
  */
 WorkSpacesResponse::WorkSpacesResponse(WorkSpacesResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void WorkSpacesResponse::parseFailure(QIODevice &response)
  * Constructs a WorkSpacesResponsePrivate object with public implementation \a q.
  */
 WorkSpacesResponsePrivate::WorkSpacesResponsePrivate(
-    WorkSpacesResponse * const q) : q_ptr(q)
+    WorkSpacesResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

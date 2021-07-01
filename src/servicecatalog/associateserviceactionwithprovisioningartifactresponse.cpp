@@ -61,7 +61,8 @@ AssociateServiceActionWithProvisioningArtifactResponse::AssociateServiceActionWi
  */
 const AssociateServiceActionWithProvisioningArtifactRequest * AssociateServiceActionWithProvisioningArtifactResponse::request() const
 {
-    return static_cast<const AssociateServiceActionWithProvisioningArtifactRequest *>(ServiceCatalogResponse::request());
+    Q_D(const AssociateServiceActionWithProvisioningArtifactResponse);
+    return static_cast<const AssociateServiceActionWithProvisioningArtifactRequest *>(d->request);
 }
 
 /*!

@@ -68,7 +68,8 @@ DescribeWarmPoolResponse::DescribeWarmPoolResponse(
  */
 const DescribeWarmPoolRequest * DescribeWarmPoolResponse::request() const
 {
-    return static_cast<const DescribeWarmPoolRequest *>(AutoScalingResponse::request());
+    Q_D(const DescribeWarmPoolResponse);
+    return static_cast<const DescribeWarmPoolRequest *>(d->request);
 }
 
 /*!

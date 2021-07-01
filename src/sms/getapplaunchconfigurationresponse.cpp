@@ -68,7 +68,8 @@ GetAppLaunchConfigurationResponse::GetAppLaunchConfigurationResponse(
  */
 const GetAppLaunchConfigurationRequest * GetAppLaunchConfigurationResponse::request() const
 {
-    return static_cast<const GetAppLaunchConfigurationRequest *>(SmsResponse::request());
+    Q_D(const GetAppLaunchConfigurationResponse);
+    return static_cast<const GetAppLaunchConfigurationRequest *>(d->request);
 }
 
 /*!

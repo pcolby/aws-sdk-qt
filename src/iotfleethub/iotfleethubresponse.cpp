@@ -37,7 +37,7 @@ namespace IoTFleetHub {
  * Constructs a IoTFleetHubResponse object with parent \a parent.
  */
 IoTFleetHubResponse::IoTFleetHubResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTFleetHubResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new IoTFleetHubResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ IoTFleetHubResponse::IoTFleetHubResponse(QObject * const parent)
  * implementation that inherits from IoTFleetHubResponsePrivate.
  */
 IoTFleetHubResponse::IoTFleetHubResponse(IoTFleetHubResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTFleetHubResponse::parseFailure(QIODevice &response)
  * Constructs a IoTFleetHubResponsePrivate object with public implementation \a q.
  */
 IoTFleetHubResponsePrivate::IoTFleetHubResponsePrivate(
-    IoTFleetHubResponse * const q) : q_ptr(q)
+    IoTFleetHubResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

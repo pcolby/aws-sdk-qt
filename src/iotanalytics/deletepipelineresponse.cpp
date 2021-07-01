@@ -75,7 +75,8 @@ DeletePipelineResponse::DeletePipelineResponse(
  */
 const DeletePipelineRequest * DeletePipelineResponse::request() const
 {
-    return static_cast<const DeletePipelineRequest *>(IoTAnalyticsResponse::request());
+    Q_D(const DeletePipelineResponse);
+    return static_cast<const DeletePipelineRequest *>(d->request);
 }
 
 /*!

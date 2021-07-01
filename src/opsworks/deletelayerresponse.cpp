@@ -161,7 +161,8 @@ DeleteLayerResponse::DeleteLayerResponse(
  */
 const DeleteLayerRequest * DeleteLayerResponse::request() const
 {
-    return static_cast<const DeleteLayerRequest *>(OpsWorksResponse::request());
+    Q_D(const DeleteLayerResponse);
+    return static_cast<const DeleteLayerRequest *>(d->request);
 }
 
 /*!

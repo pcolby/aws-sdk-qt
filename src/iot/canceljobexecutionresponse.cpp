@@ -82,7 +82,8 @@ CancelJobExecutionResponse::CancelJobExecutionResponse(
  */
 const CancelJobExecutionRequest * CancelJobExecutionResponse::request() const
 {
-    return static_cast<const CancelJobExecutionRequest *>(IoTResponse::request());
+    Q_D(const CancelJobExecutionResponse);
+    return static_cast<const CancelJobExecutionRequest *>(d->request);
 }
 
 /*!

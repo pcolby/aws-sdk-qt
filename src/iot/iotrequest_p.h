@@ -20,12 +20,15 @@
 #ifndef QTAWS_IOTREQUEST_P_H
 #define QTAWS_IOTREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "iotrequest.h"
+
 namespace QtAws {
 namespace IoT {
 
 class IoTRequest;
 
-class IoTRequestPrivate {
+class IoTRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTRequest::Action action; ///< IoT action to be performed.
@@ -36,9 +39,6 @@ public:
     IoTRequestPrivate(const IoTRequestPrivate &other, IoTRequest * const q);
 
     static QString toString(const IoTRequest::Action &action);
-
-protected:
-    IoTRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTRequest)

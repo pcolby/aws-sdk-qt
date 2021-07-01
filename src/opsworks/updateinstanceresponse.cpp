@@ -161,7 +161,8 @@ UpdateInstanceResponse::UpdateInstanceResponse(
  */
 const UpdateInstanceRequest * UpdateInstanceResponse::request() const
 {
-    return static_cast<const UpdateInstanceRequest *>(OpsWorksResponse::request());
+    Q_D(const UpdateInstanceResponse);
+    return static_cast<const UpdateInstanceRequest *>(d->request);
 }
 
 /*!

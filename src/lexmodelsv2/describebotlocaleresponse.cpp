@@ -55,7 +55,8 @@ DescribeBotLocaleResponse::DescribeBotLocaleResponse(
  */
 const DescribeBotLocaleRequest * DescribeBotLocaleResponse::request() const
 {
-    return static_cast<const DescribeBotLocaleRequest *>(LexModelsV2Response::request());
+    Q_D(const DescribeBotLocaleResponse);
+    return static_cast<const DescribeBotLocaleRequest *>(d->request);
 }
 
 /*!

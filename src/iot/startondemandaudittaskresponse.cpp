@@ -82,7 +82,8 @@ StartOnDemandAuditTaskResponse::StartOnDemandAuditTaskResponse(
  */
 const StartOnDemandAuditTaskRequest * StartOnDemandAuditTaskResponse::request() const
 {
-    return static_cast<const StartOnDemandAuditTaskRequest *>(IoTResponse::request());
+    Q_D(const StartOnDemandAuditTaskResponse);
+    return static_cast<const StartOnDemandAuditTaskRequest *>(d->request);
 }
 
 /*!

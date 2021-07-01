@@ -89,7 +89,8 @@ ListResourceDelegatesResponse::ListResourceDelegatesResponse(
  */
 const ListResourceDelegatesRequest * ListResourceDelegatesResponse::request() const
 {
-    return static_cast<const ListResourceDelegatesRequest *>(WorkMailResponse::request());
+    Q_D(const ListResourceDelegatesResponse);
+    return static_cast<const ListResourceDelegatesRequest *>(d->request);
 }
 
 /*!

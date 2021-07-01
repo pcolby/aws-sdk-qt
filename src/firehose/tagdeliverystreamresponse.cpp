@@ -59,7 +59,8 @@ TagDeliveryStreamResponse::TagDeliveryStreamResponse(
  */
 const TagDeliveryStreamRequest * TagDeliveryStreamResponse::request() const
 {
-    return static_cast<const TagDeliveryStreamRequest *>(FirehoseResponse::request());
+    Q_D(const TagDeliveryStreamResponse);
+    return static_cast<const TagDeliveryStreamRequest *>(d->request);
 }
 
 /*!

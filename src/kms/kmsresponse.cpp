@@ -37,7 +37,7 @@ namespace KMS {
  * Constructs a KmsResponse object with parent \a parent.
  */
 KmsResponse::KmsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new KmsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new KmsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ KmsResponse::KmsResponse(QObject * const parent)
  * implementation that inherits from KmsResponsePrivate.
  */
 KmsResponse::KmsResponse(KmsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void KmsResponse::parseFailure(QIODevice &response)
  * Constructs a KmsResponsePrivate object with public implementation \a q.
  */
 KmsResponsePrivate::KmsResponsePrivate(
-    KmsResponse * const q) : q_ptr(q)
+    KmsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -87,7 +87,8 @@ ReplaceIamInstanceProfileAssociationResponse::ReplaceIamInstanceProfileAssociati
  */
 const ReplaceIamInstanceProfileAssociationRequest * ReplaceIamInstanceProfileAssociationResponse::request() const
 {
-    return static_cast<const ReplaceIamInstanceProfileAssociationRequest *>(Ec2Response::request());
+    Q_D(const ReplaceIamInstanceProfileAssociationResponse);
+    return static_cast<const ReplaceIamInstanceProfileAssociationRequest *>(d->request);
 }
 
 /*!

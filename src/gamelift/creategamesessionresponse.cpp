@@ -115,7 +115,8 @@ CreateGameSessionResponse::CreateGameSessionResponse(
  */
 const CreateGameSessionRequest * CreateGameSessionResponse::request() const
 {
-    return static_cast<const CreateGameSessionRequest *>(GameLiftResponse::request());
+    Q_D(const CreateGameSessionResponse);
+    return static_cast<const CreateGameSessionRequest *>(d->request);
 }
 
 /*!

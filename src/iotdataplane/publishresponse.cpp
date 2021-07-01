@@ -74,7 +74,8 @@ PublishResponse::PublishResponse(
  */
 const PublishRequest * PublishResponse::request() const
 {
-    return static_cast<const PublishRequest *>(IoTDataPlaneResponse::request());
+    Q_D(const PublishResponse);
+    return static_cast<const PublishRequest *>(d->request);
 }
 
 /*!

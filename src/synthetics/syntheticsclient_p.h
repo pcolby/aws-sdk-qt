@@ -20,20 +20,19 @@
 #ifndef QTAWS_SYNTHETICSCLIENT_P_H
 #define QTAWS_SYNTHETICSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Synthetics {
 
 class SyntheticsClient;
 
-class SyntheticsClientPrivate {
+class SyntheticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SyntheticsClientPrivate(SyntheticsClient * const q);
-
-protected:
-    SyntheticsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SyntheticsClient)

@@ -56,7 +56,8 @@ GetUserEndpointsResponse::GetUserEndpointsResponse(
  */
 const GetUserEndpointsRequest * GetUserEndpointsResponse::request() const
 {
-    return static_cast<const GetUserEndpointsRequest *>(PinpointResponse::request());
+    Q_D(const GetUserEndpointsResponse);
+    return static_cast<const GetUserEndpointsRequest *>(d->request);
 }
 
 /*!

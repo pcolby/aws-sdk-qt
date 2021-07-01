@@ -58,7 +58,8 @@ BatchCreateTableRowsResponse::BatchCreateTableRowsResponse(
  */
 const BatchCreateTableRowsRequest * BatchCreateTableRowsResponse::request() const
 {
-    return static_cast<const BatchCreateTableRowsRequest *>(HoneycodeResponse::request());
+    Q_D(const BatchCreateTableRowsResponse);
+    return static_cast<const BatchCreateTableRowsRequest *>(d->request);
 }
 
 /*!

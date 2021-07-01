@@ -70,7 +70,8 @@ ListActionsResponse::ListActionsResponse(
  */
 const ListActionsRequest * ListActionsResponse::request() const
 {
-    return static_cast<const ListActionsRequest *>(SageMakerResponse::request());
+    Q_D(const ListActionsResponse);
+    return static_cast<const ListActionsRequest *>(d->request);
 }
 
 /*!

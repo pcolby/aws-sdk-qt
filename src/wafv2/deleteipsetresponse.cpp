@@ -126,7 +126,8 @@ DeleteIPSetResponse::DeleteIPSetResponse(
  */
 const DeleteIPSetRequest * DeleteIPSetResponse::request() const
 {
-    return static_cast<const DeleteIPSetRequest *>(Wafv2Response::request());
+    Q_D(const DeleteIPSetResponse);
+    return static_cast<const DeleteIPSetRequest *>(d->request);
 }
 
 /*!

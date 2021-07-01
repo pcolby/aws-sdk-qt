@@ -84,8 +84,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudSearchRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CloudSearchRequest(CloudSearchRequestPrivate * const d);
+    CloudSearchRequest(CloudSearchRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

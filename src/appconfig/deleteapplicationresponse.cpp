@@ -105,7 +105,8 @@ DeleteApplicationResponse::DeleteApplicationResponse(
  */
 const DeleteApplicationRequest * DeleteApplicationResponse::request() const
 {
-    return static_cast<const DeleteApplicationRequest *>(AppConfigResponse::request());
+    Q_D(const DeleteApplicationResponse);
+    return static_cast<const DeleteApplicationRequest *>(d->request);
 }
 
 /*!

@@ -82,7 +82,8 @@ ListRoleAliasesResponse::ListRoleAliasesResponse(
  */
 const ListRoleAliasesRequest * ListRoleAliasesResponse::request() const
 {
-    return static_cast<const ListRoleAliasesRequest *>(IoTResponse::request());
+    Q_D(const ListRoleAliasesResponse);
+    return static_cast<const ListRoleAliasesRequest *>(d->request);
 }
 
 /*!

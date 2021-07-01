@@ -37,7 +37,7 @@ namespace FIS {
  * Constructs a FisResponse object with parent \a parent.
  */
 FisResponse::FisResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new FisResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new FisResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ FisResponse::FisResponse(QObject * const parent)
  * implementation that inherits from FisResponsePrivate.
  */
 FisResponse::FisResponse(FisResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void FisResponse::parseFailure(QIODevice &response)
  * Constructs a FisResponsePrivate object with public implementation \a q.
  */
 FisResponsePrivate::FisResponsePrivate(
-    FisResponse * const q) : q_ptr(q)
+    FisResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

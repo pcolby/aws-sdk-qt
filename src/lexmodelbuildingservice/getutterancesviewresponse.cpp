@@ -59,7 +59,8 @@ GetUtterancesViewResponse::GetUtterancesViewResponse(
  */
 const GetUtterancesViewRequest * GetUtterancesViewResponse::request() const
 {
-    return static_cast<const GetUtterancesViewRequest *>(LexModelBuildingServiceResponse::request());
+    Q_D(const GetUtterancesViewResponse);
+    return static_cast<const GetUtterancesViewRequest *>(d->request);
 }
 
 /*!

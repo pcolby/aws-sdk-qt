@@ -74,7 +74,8 @@ GetOperationsForResourceResponse::GetOperationsForResourceResponse(
  */
 const GetOperationsForResourceRequest * GetOperationsForResourceResponse::request() const
 {
-    return static_cast<const GetOperationsForResourceRequest *>(LightsailResponse::request());
+    Q_D(const GetOperationsForResourceResponse);
+    return static_cast<const GetOperationsForResourceRequest *>(d->request);
 }
 
 /*!

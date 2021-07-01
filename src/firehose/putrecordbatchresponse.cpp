@@ -59,7 +59,8 @@ PutRecordBatchResponse::PutRecordBatchResponse(
  */
 const PutRecordBatchRequest * PutRecordBatchResponse::request() const
 {
-    return static_cast<const PutRecordBatchRequest *>(FirehoseResponse::request());
+    Q_D(const PutRecordBatchResponse);
+    return static_cast<const PutRecordBatchRequest *>(d->request);
 }
 
 /*!

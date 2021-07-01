@@ -73,7 +73,8 @@ DescribeMeshResponse::DescribeMeshResponse(
  */
 const DescribeMeshRequest * DescribeMeshResponse::request() const
 {
-    return static_cast<const DescribeMeshRequest *>(AppMeshResponse::request());
+    Q_D(const DescribeMeshResponse);
+    return static_cast<const DescribeMeshRequest *>(d->request);
 }
 
 /*!

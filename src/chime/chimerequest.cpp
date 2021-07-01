@@ -225,7 +225,7 @@ namespace Chime {
  * Constructs a ChimeRequest object for Chime \a action.
  */
 ChimeRequest::ChimeRequest(const Action action)
-    : d_ptr(new ChimeRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ChimeRequestPrivate(action, this))
 {
 
 }
@@ -234,8 +234,7 @@ ChimeRequest::ChimeRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ChimeRequest::ChimeRequest(const ChimeRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ChimeRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ChimeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -258,7 +257,7 @@ ChimeRequest& ChimeRequest::operator=(const ChimeRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ChimeRequestPrivate.
  */
-ChimeRequest::ChimeRequest(ChimeRequestPrivate * const d) : d_ptr(d)
+ChimeRequest::ChimeRequest(ChimeRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -427,7 +426,7 @@ QNetworkRequest ChimeRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ChimeRequestPrivate::ChimeRequestPrivate(const ChimeRequest::Action action, ChimeRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -442,8 +441,8 @@ ChimeRequestPrivate::ChimeRequestPrivate(const ChimeRequest::Action action, Chim
  */
 ChimeRequestPrivate::ChimeRequestPrivate(const ChimeRequestPrivate &other,
                                      ChimeRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

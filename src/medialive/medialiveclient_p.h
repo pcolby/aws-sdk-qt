@@ -20,20 +20,19 @@
 #ifndef QTAWS_MEDIALIVECLIENT_P_H
 #define QTAWS_MEDIALIVECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MediaLive {
 
 class MediaLiveClient;
 
-class MediaLiveClientPrivate {
+class MediaLiveClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MediaLiveClientPrivate(MediaLiveClient * const q);
-
-protected:
-    MediaLiveClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaLiveClient)

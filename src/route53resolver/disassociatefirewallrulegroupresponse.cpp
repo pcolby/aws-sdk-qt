@@ -94,7 +94,8 @@ DisassociateFirewallRuleGroupResponse::DisassociateFirewallRuleGroupResponse(
  */
 const DisassociateFirewallRuleGroupRequest * DisassociateFirewallRuleGroupResponse::request() const
 {
-    return static_cast<const DisassociateFirewallRuleGroupRequest *>(Route53ResolverResponse::request());
+    Q_D(const DisassociateFirewallRuleGroupResponse);
+    return static_cast<const DisassociateFirewallRuleGroupRequest *>(d->request);
 }
 
 /*!

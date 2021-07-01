@@ -60,7 +60,8 @@ ResendValidationEmailResponse::ResendValidationEmailResponse(
  */
 const ResendValidationEmailRequest * ResendValidationEmailResponse::request() const
 {
-    return static_cast<const ResendValidationEmailRequest *>(AcmResponse::request());
+    Q_D(const ResendValidationEmailResponse);
+    return static_cast<const ResendValidationEmailRequest *>(d->request);
 }
 
 /*!

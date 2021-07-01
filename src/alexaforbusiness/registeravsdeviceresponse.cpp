@@ -62,7 +62,8 @@ RegisterAVSDeviceResponse::RegisterAVSDeviceResponse(
  */
 const RegisterAVSDeviceRequest * RegisterAVSDeviceResponse::request() const
 {
-    return static_cast<const RegisterAVSDeviceRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const RegisterAVSDeviceResponse);
+    return static_cast<const RegisterAVSDeviceRequest *>(d->request);
 }
 
 /*!

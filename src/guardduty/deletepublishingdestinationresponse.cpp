@@ -73,7 +73,8 @@ DeletePublishingDestinationResponse::DeletePublishingDestinationResponse(
  */
 const DeletePublishingDestinationRequest * DeletePublishingDestinationResponse::request() const
 {
-    return static_cast<const DeletePublishingDestinationRequest *>(GuardDutyResponse::request());
+    Q_D(const DeletePublishingDestinationResponse);
+    return static_cast<const DeletePublishingDestinationRequest *>(d->request);
 }
 
 /*!

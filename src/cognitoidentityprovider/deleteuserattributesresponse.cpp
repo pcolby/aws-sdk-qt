@@ -66,7 +66,8 @@ DeleteUserAttributesResponse::DeleteUserAttributesResponse(
  */
 const DeleteUserAttributesRequest * DeleteUserAttributesResponse::request() const
 {
-    return static_cast<const DeleteUserAttributesRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const DeleteUserAttributesResponse);
+    return static_cast<const DeleteUserAttributesRequest *>(d->request);
 }
 
 /*!

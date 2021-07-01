@@ -20,20 +20,19 @@
 #ifndef QTAWS_RESOURCEGROUPSCLIENT_P_H
 #define QTAWS_RESOURCEGROUPSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ResourceGroups {
 
 class ResourceGroupsClient;
 
-class ResourceGroupsClientPrivate {
+class ResourceGroupsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ResourceGroupsClientPrivate(ResourceGroupsClient * const q);
-
-protected:
-    ResourceGroupsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ResourceGroupsClient)

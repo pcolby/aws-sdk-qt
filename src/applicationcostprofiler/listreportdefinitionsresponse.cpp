@@ -67,7 +67,8 @@ ListReportDefinitionsResponse::ListReportDefinitionsResponse(
  */
 const ListReportDefinitionsRequest * ListReportDefinitionsResponse::request() const
 {
-    return static_cast<const ListReportDefinitionsRequest *>(ApplicationCostProfilerResponse::request());
+    Q_D(const ListReportDefinitionsResponse);
+    return static_cast<const ListReportDefinitionsRequest *>(d->request);
 }
 
 /*!

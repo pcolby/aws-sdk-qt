@@ -88,7 +88,8 @@ UpdateConfigurationSetEventDestinationResponse::UpdateConfigurationSetEventDesti
  */
 const UpdateConfigurationSetEventDestinationRequest * UpdateConfigurationSetEventDestinationResponse::request() const
 {
-    return static_cast<const UpdateConfigurationSetEventDestinationRequest *>(Sesv2Response::request());
+    Q_D(const UpdateConfigurationSetEventDestinationResponse);
+    return static_cast<const UpdateConfigurationSetEventDestinationRequest *>(d->request);
 }
 
 /*!

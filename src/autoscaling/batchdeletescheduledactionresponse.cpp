@@ -68,7 +68,8 @@ BatchDeleteScheduledActionResponse::BatchDeleteScheduledActionResponse(
  */
 const BatchDeleteScheduledActionRequest * BatchDeleteScheduledActionResponse::request() const
 {
-    return static_cast<const BatchDeleteScheduledActionRequest *>(AutoScalingResponse::request());
+    Q_D(const BatchDeleteScheduledActionResponse);
+    return static_cast<const BatchDeleteScheduledActionRequest *>(d->request);
 }
 
 /*!

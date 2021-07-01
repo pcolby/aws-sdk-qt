@@ -78,7 +78,8 @@ DescribePartnerEventSourceResponse::DescribePartnerEventSourceResponse(
  */
 const DescribePartnerEventSourceRequest * DescribePartnerEventSourceResponse::request() const
 {
-    return static_cast<const DescribePartnerEventSourceRequest *>(EventBridgeResponse::request());
+    Q_D(const DescribePartnerEventSourceResponse);
+    return static_cast<const DescribePartnerEventSourceRequest *>(d->request);
 }
 
 /*!

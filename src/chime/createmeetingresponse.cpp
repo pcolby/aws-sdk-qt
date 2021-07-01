@@ -98,7 +98,8 @@ CreateMeetingResponse::CreateMeetingResponse(
  */
 const CreateMeetingRequest * CreateMeetingResponse::request() const
 {
-    return static_cast<const CreateMeetingRequest *>(ChimeResponse::request());
+    Q_D(const CreateMeetingResponse);
+    return static_cast<const CreateMeetingRequest *>(d->request);
 }
 
 /*!

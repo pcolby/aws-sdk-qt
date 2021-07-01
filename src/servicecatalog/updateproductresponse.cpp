@@ -61,7 +61,8 @@ UpdateProductResponse::UpdateProductResponse(
  */
 const UpdateProductRequest * UpdateProductResponse::request() const
 {
-    return static_cast<const UpdateProductRequest *>(ServiceCatalogResponse::request());
+    Q_D(const UpdateProductResponse);
+    return static_cast<const UpdateProductRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ ListDashboardVersionsResponse::ListDashboardVersionsResponse(
  */
 const ListDashboardVersionsRequest * ListDashboardVersionsResponse::request() const
 {
-    return static_cast<const ListDashboardVersionsRequest *>(QuickSightResponse::request());
+    Q_D(const ListDashboardVersionsResponse);
+    return static_cast<const ListDashboardVersionsRequest *>(d->request);
 }
 
 /*!

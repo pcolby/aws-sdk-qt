@@ -78,7 +78,8 @@ GetSampledRequestsResponse::GetSampledRequestsResponse(
  */
 const GetSampledRequestsRequest * GetSampledRequestsResponse::request() const
 {
-    return static_cast<const GetSampledRequestsRequest *>(WAFRegionalResponse::request());
+    Q_D(const GetSampledRequestsResponse);
+    return static_cast<const GetSampledRequestsRequest *>(d->request);
 }
 
 /*!

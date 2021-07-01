@@ -56,7 +56,8 @@ ListGeoLocationsResponse::ListGeoLocationsResponse(
  */
 const ListGeoLocationsRequest * ListGeoLocationsResponse::request() const
 {
-    return static_cast<const ListGeoLocationsRequest *>(Route53Response::request());
+    Q_D(const ListGeoLocationsResponse);
+    return static_cast<const ListGeoLocationsRequest *>(d->request);
 }
 
 /*!

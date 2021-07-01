@@ -88,7 +88,8 @@ PutDedicatedIpInPoolResponse::PutDedicatedIpInPoolResponse(
  */
 const PutDedicatedIpInPoolRequest * PutDedicatedIpInPoolResponse::request() const
 {
-    return static_cast<const PutDedicatedIpInPoolRequest *>(Sesv2Response::request());
+    Q_D(const PutDedicatedIpInPoolResponse);
+    return static_cast<const PutDedicatedIpInPoolRequest *>(d->request);
 }
 
 /*!

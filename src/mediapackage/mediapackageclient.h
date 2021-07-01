@@ -105,12 +105,6 @@ public slots:
     UpdateChannelResponse * updateChannel(const UpdateChannelRequest &request);
     UpdateOriginEndpointResponse * updateOriginEndpoint(const UpdateOriginEndpointRequest &request);
 
-protected:
-    /// @cond internal
-    MediaPackageClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MediaPackageClient(MediaPackageClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MediaPackageClient)
     Q_DISABLE_COPY(MediaPackageClient)

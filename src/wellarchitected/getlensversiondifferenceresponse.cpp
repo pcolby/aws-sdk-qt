@@ -62,7 +62,8 @@ GetLensVersionDifferenceResponse::GetLensVersionDifferenceResponse(
  */
 const GetLensVersionDifferenceRequest * GetLensVersionDifferenceResponse::request() const
 {
-    return static_cast<const GetLensVersionDifferenceRequest *>(WellArchitectedResponse::request());
+    Q_D(const GetLensVersionDifferenceResponse);
+    return static_cast<const GetLensVersionDifferenceRequest *>(d->request);
 }
 
 /*!

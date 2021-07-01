@@ -98,7 +98,8 @@ DescribeParametersResponse::DescribeParametersResponse(
  */
 const DescribeParametersRequest * DescribeParametersResponse::request() const
 {
-    return static_cast<const DescribeParametersRequest *>(SsmResponse::request());
+    Q_D(const DescribeParametersResponse);
+    return static_cast<const DescribeParametersRequest *>(d->request);
 }
 
 /*!

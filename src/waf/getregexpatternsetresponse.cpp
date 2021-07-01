@@ -76,7 +76,8 @@ GetRegexPatternSetResponse::GetRegexPatternSetResponse(
  */
 const GetRegexPatternSetRequest * GetRegexPatternSetResponse::request() const
 {
-    return static_cast<const GetRegexPatternSetRequest *>(WafResponse::request());
+    Q_D(const GetRegexPatternSetResponse);
+    return static_cast<const GetRegexPatternSetRequest *>(d->request);
 }
 
 /*!

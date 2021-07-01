@@ -75,7 +75,8 @@ GetTagsResponse::GetTagsResponse(
  */
 const GetTagsRequest * GetTagsResponse::request() const
 {
-    return static_cast<const GetTagsRequest *>(CostExplorerResponse::request());
+    Q_D(const GetTagsResponse);
+    return static_cast<const GetTagsRequest *>(d->request);
 }
 
 /*!

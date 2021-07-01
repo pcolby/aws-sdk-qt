@@ -37,7 +37,7 @@ namespace QLDBSession {
  * Constructs a QLDBSessionResponse object with parent \a parent.
  */
 QLDBSessionResponse::QLDBSessionResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new QLDBSessionResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new QLDBSessionResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ QLDBSessionResponse::QLDBSessionResponse(QObject * const parent)
  * implementation that inherits from QLDBSessionResponsePrivate.
  */
 QLDBSessionResponse::QLDBSessionResponse(QLDBSessionResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void QLDBSessionResponse::parseFailure(QIODevice &response)
  * Constructs a QLDBSessionResponsePrivate object with public implementation \a q.
  */
 QLDBSessionResponsePrivate::QLDBSessionResponsePrivate(
-    QLDBSessionResponse * const q) : q_ptr(q)
+    QLDBSessionResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

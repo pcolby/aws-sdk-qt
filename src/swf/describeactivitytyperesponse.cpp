@@ -71,7 +71,8 @@ DescribeActivityTypeResponse::DescribeActivityTypeResponse(
  */
 const DescribeActivityTypeRequest * DescribeActivityTypeResponse::request() const
 {
-    return static_cast<const DescribeActivityTypeRequest *>(SwfResponse::request());
+    Q_D(const DescribeActivityTypeResponse);
+    return static_cast<const DescribeActivityTypeRequest *>(d->request);
 }
 
 /*!

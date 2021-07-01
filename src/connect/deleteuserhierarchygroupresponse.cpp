@@ -79,7 +79,8 @@ DeleteUserHierarchyGroupResponse::DeleteUserHierarchyGroupResponse(
  */
 const DeleteUserHierarchyGroupRequest * DeleteUserHierarchyGroupResponse::request() const
 {
-    return static_cast<const DeleteUserHierarchyGroupRequest *>(ConnectResponse::request());
+    Q_D(const DeleteUserHierarchyGroupResponse);
+    return static_cast<const DeleteUserHierarchyGroupRequest *>(d->request);
 }
 
 /*!

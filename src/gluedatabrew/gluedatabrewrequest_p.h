@@ -20,12 +20,15 @@
 #ifndef QTAWS_GLUEDATABREWREQUEST_P_H
 #define QTAWS_GLUEDATABREWREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "gluedatabrewrequest.h"
+
 namespace QtAws {
 namespace GlueDataBrew {
 
 class GlueDataBrewRequest;
 
-class GlueDataBrewRequestPrivate {
+class GlueDataBrewRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GlueDataBrewRequest::Action action; ///< GlueDataBrew action to be performed.
@@ -36,9 +39,6 @@ public:
     GlueDataBrewRequestPrivate(const GlueDataBrewRequestPrivate &other, GlueDataBrewRequest * const q);
 
     static QString toString(const GlueDataBrewRequest::Action &action);
-
-protected:
-    GlueDataBrewRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GlueDataBrewRequest)

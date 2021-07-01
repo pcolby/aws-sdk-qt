@@ -78,7 +78,8 @@ CancelReplayResponse::CancelReplayResponse(
  */
 const CancelReplayRequest * CancelReplayResponse::request() const
 {
-    return static_cast<const CancelReplayRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const CancelReplayResponse);
+    return static_cast<const CancelReplayRequest *>(d->request);
 }
 
 /*!

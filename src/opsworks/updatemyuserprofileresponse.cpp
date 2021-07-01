@@ -161,7 +161,8 @@ UpdateMyUserProfileResponse::UpdateMyUserProfileResponse(
  */
 const UpdateMyUserProfileRequest * UpdateMyUserProfileResponse::request() const
 {
-    return static_cast<const UpdateMyUserProfileRequest *>(OpsWorksResponse::request());
+    Q_D(const UpdateMyUserProfileResponse);
+    return static_cast<const UpdateMyUserProfileRequest *>(d->request);
 }
 
 /*!

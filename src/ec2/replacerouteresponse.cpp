@@ -87,7 +87,8 @@ ReplaceRouteResponse::ReplaceRouteResponse(
  */
 const ReplaceRouteRequest * ReplaceRouteResponse::request() const
 {
-    return static_cast<const ReplaceRouteRequest *>(Ec2Response::request());
+    Q_D(const ReplaceRouteResponse);
+    return static_cast<const ReplaceRouteRequest *>(d->request);
 }
 
 /*!

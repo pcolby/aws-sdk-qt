@@ -61,7 +61,8 @@ CreateAccessPolicyResponse::CreateAccessPolicyResponse(
  */
 const CreateAccessPolicyRequest * CreateAccessPolicyResponse::request() const
 {
-    return static_cast<const CreateAccessPolicyRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const CreateAccessPolicyResponse);
+    return static_cast<const CreateAccessPolicyRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_CLOUDSEARCHCLIENT_P_H
 #define QTAWS_CLOUDSEARCHCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CloudSearch {
 
 class CloudSearchClient;
 
-class CloudSearchClientPrivate {
+class CloudSearchClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CloudSearchClientPrivate(CloudSearchClient * const q);
-
-protected:
-    CloudSearchClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudSearchClient)

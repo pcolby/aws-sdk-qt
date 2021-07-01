@@ -70,7 +70,8 @@ DeleteArtifactResponse::DeleteArtifactResponse(
  */
 const DeleteArtifactRequest * DeleteArtifactResponse::request() const
 {
-    return static_cast<const DeleteArtifactRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteArtifactResponse);
+    return static_cast<const DeleteArtifactRequest *>(d->request);
 }
 
 /*!

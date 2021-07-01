@@ -60,7 +60,8 @@ CreateDataSetResponse::CreateDataSetResponse(
  */
 const CreateDataSetRequest * CreateDataSetResponse::request() const
 {
-    return static_cast<const CreateDataSetRequest *>(QuickSightResponse::request());
+    Q_D(const CreateDataSetResponse);
+    return static_cast<const CreateDataSetRequest *>(d->request);
 }
 
 /*!

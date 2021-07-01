@@ -69,7 +69,8 @@ EnableLDAPSResponse::EnableLDAPSResponse(
  */
 const EnableLDAPSRequest * EnableLDAPSResponse::request() const
 {
-    return static_cast<const EnableLDAPSRequest *>(DirectoryServiceResponse::request());
+    Q_D(const EnableLDAPSResponse);
+    return static_cast<const EnableLDAPSRequest *>(d->request);
 }
 
 /*!

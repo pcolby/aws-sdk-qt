@@ -73,7 +73,8 @@ CreateMeshResponse::CreateMeshResponse(
  */
 const CreateMeshRequest * CreateMeshResponse::request() const
 {
-    return static_cast<const CreateMeshRequest *>(AppMeshResponse::request());
+    Q_D(const CreateMeshResponse);
+    return static_cast<const CreateMeshRequest *>(d->request);
 }
 
 /*!

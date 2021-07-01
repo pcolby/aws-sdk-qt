@@ -66,7 +66,8 @@ DescribeUserPoolResponse::DescribeUserPoolResponse(
  */
 const DescribeUserPoolRequest * DescribeUserPoolResponse::request() const
 {
-    return static_cast<const DescribeUserPoolRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const DescribeUserPoolResponse);
+    return static_cast<const DescribeUserPoolRequest *>(d->request);
 }
 
 /*!

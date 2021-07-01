@@ -73,7 +73,8 @@ AcceptInvitationResponse::AcceptInvitationResponse(
  */
 const AcceptInvitationRequest * AcceptInvitationResponse::request() const
 {
-    return static_cast<const AcceptInvitationRequest *>(GuardDutyResponse::request());
+    Q_D(const AcceptInvitationResponse);
+    return static_cast<const AcceptInvitationRequest *>(d->request);
 }
 
 /*!

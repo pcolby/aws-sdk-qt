@@ -63,7 +63,8 @@ BatchReadResponse::BatchReadResponse(
  */
 const BatchReadRequest * BatchReadResponse::request() const
 {
-    return static_cast<const BatchReadRequest *>(CloudDirectoryResponse::request());
+    Q_D(const BatchReadResponse);
+    return static_cast<const BatchReadRequest *>(d->request);
 }
 
 /*!

@@ -88,7 +88,8 @@ PutEmailIdentityDkimAttributesResponse::PutEmailIdentityDkimAttributesResponse(
  */
 const PutEmailIdentityDkimAttributesRequest * PutEmailIdentityDkimAttributesResponse::request() const
 {
-    return static_cast<const PutEmailIdentityDkimAttributesRequest *>(Sesv2Response::request());
+    Q_D(const PutEmailIdentityDkimAttributesResponse);
+    return static_cast<const PutEmailIdentityDkimAttributesRequest *>(d->request);
 }
 
 /*!

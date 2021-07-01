@@ -183,12 +183,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    LocationServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit LocationServiceClient(LocationServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(LocationServiceClient)
     Q_DISABLE_COPY(LocationServiceClient)

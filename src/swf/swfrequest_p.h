@@ -20,12 +20,15 @@
 #ifndef QTAWS_SWFREQUEST_P_H
 #define QTAWS_SWFREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "swfrequest.h"
+
 namespace QtAws {
 namespace SWF {
 
 class SwfRequest;
 
-class SwfRequestPrivate {
+class SwfRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SwfRequest::Action action; ///< SWF action to be performed.
@@ -36,9 +39,6 @@ public:
     SwfRequestPrivate(const SwfRequestPrivate &other, SwfRequest * const q);
 
     static QString toString(const SwfRequest::Action &action);
-
-protected:
-    SwfRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SwfRequest)

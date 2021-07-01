@@ -73,7 +73,8 @@ ListVirtualRoutersResponse::ListVirtualRoutersResponse(
  */
 const ListVirtualRoutersRequest * ListVirtualRoutersResponse::request() const
 {
-    return static_cast<const ListVirtualRoutersRequest *>(AppMeshResponse::request());
+    Q_D(const ListVirtualRoutersResponse);
+    return static_cast<const ListVirtualRoutersRequest *>(d->request);
 }
 
 /*!

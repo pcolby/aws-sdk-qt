@@ -58,7 +58,8 @@ CreateDataflowEndpointGroupResponse::CreateDataflowEndpointGroupResponse(
  */
 const CreateDataflowEndpointGroupRequest * CreateDataflowEndpointGroupResponse::request() const
 {
-    return static_cast<const CreateDataflowEndpointGroupRequest *>(GroundStationResponse::request());
+    Q_D(const CreateDataflowEndpointGroupResponse);
+    return static_cast<const CreateDataflowEndpointGroupRequest *>(d->request);
 }
 
 /*!

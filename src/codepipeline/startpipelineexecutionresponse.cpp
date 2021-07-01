@@ -240,7 +240,8 @@ StartPipelineExecutionResponse::StartPipelineExecutionResponse(
  */
 const StartPipelineExecutionRequest * StartPipelineExecutionResponse::request() const
 {
-    return static_cast<const StartPipelineExecutionRequest *>(CodePipelineResponse::request());
+    Q_D(const StartPipelineExecutionResponse);
+    return static_cast<const StartPipelineExecutionRequest *>(d->request);
 }
 
 /*!

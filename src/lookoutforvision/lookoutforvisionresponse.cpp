@@ -37,7 +37,7 @@ namespace LookoutforVision {
  * Constructs a LookoutforVisionResponse object with parent \a parent.
  */
 LookoutforVisionResponse::LookoutforVisionResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LookoutforVisionResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new LookoutforVisionResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ LookoutforVisionResponse::LookoutforVisionResponse(QObject * const parent)
  * implementation that inherits from LookoutforVisionResponsePrivate.
  */
 LookoutforVisionResponse::LookoutforVisionResponse(LookoutforVisionResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void LookoutforVisionResponse::parseFailure(QIODevice &response)
  * Constructs a LookoutforVisionResponsePrivate object with public implementation \a q.
  */
 LookoutforVisionResponsePrivate::LookoutforVisionResponsePrivate(
-    LookoutforVisionResponse * const q) : q_ptr(q)
+    LookoutforVisionResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

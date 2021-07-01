@@ -75,7 +75,8 @@ CreatePlatformApplicationResponse::CreatePlatformApplicationResponse(
  */
 const CreatePlatformApplicationRequest * CreatePlatformApplicationResponse::request() const
 {
-    return static_cast<const CreatePlatformApplicationRequest *>(SnsResponse::request());
+    Q_D(const CreatePlatformApplicationResponse);
+    return static_cast<const CreatePlatformApplicationRequest *>(d->request);
 }
 
 /*!

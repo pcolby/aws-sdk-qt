@@ -75,7 +75,8 @@ GetUploadResponse::GetUploadResponse(
  */
 const GetUploadRequest * GetUploadResponse::request() const
 {
-    return static_cast<const GetUploadRequest *>(DeviceFarmResponse::request());
+    Q_D(const GetUploadResponse);
+    return static_cast<const GetUploadRequest *>(d->request);
 }
 
 /*!

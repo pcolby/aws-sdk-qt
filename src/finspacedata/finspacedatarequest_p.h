@@ -20,12 +20,15 @@
 #ifndef QTAWS_FINSPACEDATAREQUEST_P_H
 #define QTAWS_FINSPACEDATAREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "finspacedatarequest.h"
+
 namespace QtAws {
 namespace FinSpaceData {
 
 class FinSpaceDataRequest;
 
-class FinSpaceDataRequestPrivate {
+class FinSpaceDataRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     FinSpaceDataRequest::Action action; ///< FinSpaceData action to be performed.
@@ -36,9 +39,6 @@ public:
     FinSpaceDataRequestPrivate(const FinSpaceDataRequestPrivate &other, FinSpaceDataRequest * const q);
 
     static QString toString(const FinSpaceDataRequest::Action &action);
-
-protected:
-    FinSpaceDataRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FinSpaceDataRequest)

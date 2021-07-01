@@ -20,20 +20,19 @@
 #ifndef QTAWS_WORKMAILMESSAGEFLOWCLIENT_P_H
 #define QTAWS_WORKMAILMESSAGEFLOWCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace WorkMailMessageFlow {
 
 class WorkMailMessageFlowClient;
 
-class WorkMailMessageFlowClientPrivate {
+class WorkMailMessageFlowClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit WorkMailMessageFlowClientPrivate(WorkMailMessageFlowClient * const q);
-
-protected:
-    WorkMailMessageFlowClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WorkMailMessageFlowClient)

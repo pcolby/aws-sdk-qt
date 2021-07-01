@@ -56,7 +56,8 @@ CreateFilterResponse::CreateFilterResponse(
  */
 const CreateFilterRequest * CreateFilterResponse::request() const
 {
-    return static_cast<const CreateFilterRequest *>(PersonalizeResponse::request());
+    Q_D(const CreateFilterResponse);
+    return static_cast<const CreateFilterRequest *>(d->request);
 }
 
 /*!

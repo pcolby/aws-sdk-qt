@@ -74,7 +74,8 @@ GetRelationalDatabaseSnapshotResponse::GetRelationalDatabaseSnapshotResponse(
  */
 const GetRelationalDatabaseSnapshotRequest * GetRelationalDatabaseSnapshotResponse::request() const
 {
-    return static_cast<const GetRelationalDatabaseSnapshotRequest *>(LightsailResponse::request());
+    Q_D(const GetRelationalDatabaseSnapshotResponse);
+    return static_cast<const GetRelationalDatabaseSnapshotRequest *>(d->request);
 }
 
 /*!

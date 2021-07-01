@@ -56,7 +56,8 @@ CreateAccessPointResponse::CreateAccessPointResponse(
  */
 const CreateAccessPointRequest * CreateAccessPointResponse::request() const
 {
-    return static_cast<const CreateAccessPointRequest *>(S3ControlResponse::request());
+    Q_D(const CreateAccessPointResponse);
+    return static_cast<const CreateAccessPointRequest *>(d->request);
 }
 
 /*!

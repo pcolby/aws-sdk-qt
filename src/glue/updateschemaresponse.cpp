@@ -58,7 +58,8 @@ UpdateSchemaResponse::UpdateSchemaResponse(
  */
 const UpdateSchemaRequest * UpdateSchemaResponse::request() const
 {
-    return static_cast<const UpdateSchemaRequest *>(GlueResponse::request());
+    Q_D(const UpdateSchemaResponse);
+    return static_cast<const UpdateSchemaRequest *>(d->request);
 }
 
 /*!

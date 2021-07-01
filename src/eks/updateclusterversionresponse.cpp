@@ -65,7 +65,8 @@ UpdateClusterVersionResponse::UpdateClusterVersionResponse(
  */
 const UpdateClusterVersionRequest * UpdateClusterVersionResponse::request() const
 {
-    return static_cast<const UpdateClusterVersionRequest *>(EksResponse::request());
+    Q_D(const UpdateClusterVersionResponse);
+    return static_cast<const UpdateClusterVersionRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ UpdateEmailTemplateResponse::UpdateEmailTemplateResponse(
  */
 const UpdateEmailTemplateRequest * UpdateEmailTemplateResponse::request() const
 {
-    return static_cast<const UpdateEmailTemplateRequest *>(PinpointResponse::request());
+    Q_D(const UpdateEmailTemplateResponse);
+    return static_cast<const UpdateEmailTemplateRequest *>(d->request);
 }
 
 /*!

@@ -82,7 +82,8 @@ DescribeScheduledAuditResponse::DescribeScheduledAuditResponse(
  */
 const DescribeScheduledAuditRequest * DescribeScheduledAuditResponse::request() const
 {
-    return static_cast<const DescribeScheduledAuditRequest *>(IoTResponse::request());
+    Q_D(const DescribeScheduledAuditResponse);
+    return static_cast<const DescribeScheduledAuditRequest *>(d->request);
 }
 
 /*!

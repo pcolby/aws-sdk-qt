@@ -58,7 +58,8 @@ UpdateConfigResponse::UpdateConfigResponse(
  */
 const UpdateConfigRequest * UpdateConfigResponse::request() const
 {
-    return static_cast<const UpdateConfigRequest *>(GroundStationResponse::request());
+    Q_D(const UpdateConfigResponse);
+    return static_cast<const UpdateConfigRequest *>(d->request);
 }
 
 /*!

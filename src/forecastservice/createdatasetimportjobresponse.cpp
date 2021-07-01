@@ -56,7 +56,8 @@ CreateDatasetImportJobResponse::CreateDatasetImportJobResponse(
  */
 const CreateDatasetImportJobRequest * CreateDatasetImportJobResponse::request() const
 {
-    return static_cast<const CreateDatasetImportJobRequest *>(ForecastServiceResponse::request());
+    Q_D(const CreateDatasetImportJobResponse);
+    return static_cast<const CreateDatasetImportJobRequest *>(d->request);
 }
 
 /*!

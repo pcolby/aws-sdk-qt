@@ -58,7 +58,8 @@ UpdateGroupCertificateConfigurationResponse::UpdateGroupCertificateConfiguration
  */
 const UpdateGroupCertificateConfigurationRequest * UpdateGroupCertificateConfigurationResponse::request() const
 {
-    return static_cast<const UpdateGroupCertificateConfigurationRequest *>(GreengrassResponse::request());
+    Q_D(const UpdateGroupCertificateConfigurationResponse);
+    return static_cast<const UpdateGroupCertificateConfigurationRequest *>(d->request);
 }
 
 /*!

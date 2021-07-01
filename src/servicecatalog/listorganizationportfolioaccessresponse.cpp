@@ -61,7 +61,8 @@ ListOrganizationPortfolioAccessResponse::ListOrganizationPortfolioAccessResponse
  */
 const ListOrganizationPortfolioAccessRequest * ListOrganizationPortfolioAccessResponse::request() const
 {
-    return static_cast<const ListOrganizationPortfolioAccessRequest *>(ServiceCatalogResponse::request());
+    Q_D(const ListOrganizationPortfolioAccessResponse);
+    return static_cast<const ListOrganizationPortfolioAccessRequest *>(d->request);
 }
 
 /*!

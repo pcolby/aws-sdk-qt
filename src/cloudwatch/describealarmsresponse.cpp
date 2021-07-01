@@ -69,7 +69,8 @@ DescribeAlarmsResponse::DescribeAlarmsResponse(
  */
 const DescribeAlarmsRequest * DescribeAlarmsResponse::request() const
 {
-    return static_cast<const DescribeAlarmsRequest *>(CloudWatchResponse::request());
+    Q_D(const DescribeAlarmsResponse);
+    return static_cast<const DescribeAlarmsRequest *>(d->request);
 }
 
 /*!

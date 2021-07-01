@@ -87,7 +87,8 @@ DescribeSnapshotsResponse::DescribeSnapshotsResponse(
  */
 const DescribeSnapshotsRequest * DescribeSnapshotsResponse::request() const
 {
-    return static_cast<const DescribeSnapshotsRequest *>(Ec2Response::request());
+    Q_D(const DescribeSnapshotsResponse);
+    return static_cast<const DescribeSnapshotsRequest *>(d->request);
 }
 
 /*!

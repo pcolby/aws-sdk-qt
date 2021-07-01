@@ -61,7 +61,8 @@ CreateReturnShippingLabelResponse::CreateReturnShippingLabelResponse(
  */
 const CreateReturnShippingLabelRequest * CreateReturnShippingLabelResponse::request() const
 {
-    return static_cast<const CreateReturnShippingLabelRequest *>(SnowballResponse::request());
+    Q_D(const CreateReturnShippingLabelResponse);
+    return static_cast<const CreateReturnShippingLabelRequest *>(d->request);
 }
 
 /*!

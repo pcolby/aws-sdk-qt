@@ -385,7 +385,8 @@ ListPlaybackKeyPairsResponse::ListPlaybackKeyPairsResponse(
  */
 const ListPlaybackKeyPairsRequest * ListPlaybackKeyPairsResponse::request() const
 {
-    return static_cast<const ListPlaybackKeyPairsRequest *>(IvsResponse::request());
+    Q_D(const ListPlaybackKeyPairsResponse);
+    return static_cast<const ListPlaybackKeyPairsRequest *>(d->request);
 }
 
 /*!

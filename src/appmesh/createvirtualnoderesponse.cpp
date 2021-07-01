@@ -73,7 +73,8 @@ CreateVirtualNodeResponse::CreateVirtualNodeResponse(
  */
 const CreateVirtualNodeRequest * CreateVirtualNodeResponse::request() const
 {
-    return static_cast<const CreateVirtualNodeRequest *>(AppMeshResponse::request());
+    Q_D(const CreateVirtualNodeResponse);
+    return static_cast<const CreateVirtualNodeRequest *>(d->request);
 }
 
 /*!

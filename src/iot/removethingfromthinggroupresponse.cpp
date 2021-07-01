@@ -82,7 +82,8 @@ RemoveThingFromThingGroupResponse::RemoveThingFromThingGroupResponse(
  */
 const RemoveThingFromThingGroupRequest * RemoveThingFromThingGroupResponse::request() const
 {
-    return static_cast<const RemoveThingFromThingGroupRequest *>(IoTResponse::request());
+    Q_D(const RemoveThingFromThingGroupResponse);
+    return static_cast<const RemoveThingFromThingGroupRequest *>(d->request);
 }
 
 /*!

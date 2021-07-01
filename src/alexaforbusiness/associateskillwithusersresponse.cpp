@@ -62,7 +62,8 @@ AssociateSkillWithUsersResponse::AssociateSkillWithUsersResponse(
  */
 const AssociateSkillWithUsersRequest * AssociateSkillWithUsersResponse::request() const
 {
-    return static_cast<const AssociateSkillWithUsersRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const AssociateSkillWithUsersResponse);
+    return static_cast<const AssociateSkillWithUsersRequest *>(d->request);
 }
 
 /*!

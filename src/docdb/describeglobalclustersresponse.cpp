@@ -56,7 +56,8 @@ DescribeGlobalClustersResponse::DescribeGlobalClustersResponse(
  */
 const DescribeGlobalClustersRequest * DescribeGlobalClustersResponse::request() const
 {
-    return static_cast<const DescribeGlobalClustersRequest *>(DocDBResponse::request());
+    Q_D(const DescribeGlobalClustersResponse);
+    return static_cast<const DescribeGlobalClustersRequest *>(d->request);
 }
 
 /*!

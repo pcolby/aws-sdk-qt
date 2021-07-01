@@ -20,12 +20,15 @@
 #ifndef QTAWS_MGNREQUEST_P_H
 #define QTAWS_MGNREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "mgnrequest.h"
+
 namespace QtAws {
 namespace mgn {
 
 class mgnRequest;
 
-class mgnRequestPrivate {
+class mgnRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     mgnRequest::Action action; ///< mgn action to be performed.
@@ -36,9 +39,6 @@ public:
     mgnRequestPrivate(const mgnRequestPrivate &other, mgnRequest * const q);
 
     static QString toString(const mgnRequest::Action &action);
-
-protected:
-    mgnRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(mgnRequest)

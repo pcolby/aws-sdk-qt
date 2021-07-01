@@ -98,7 +98,8 @@ DescribeInventoryDeletionsResponse::DescribeInventoryDeletionsResponse(
  */
 const DescribeInventoryDeletionsRequest * DescribeInventoryDeletionsResponse::request() const
 {
-    return static_cast<const DescribeInventoryDeletionsRequest *>(SsmResponse::request());
+    Q_D(const DescribeInventoryDeletionsResponse);
+    return static_cast<const DescribeInventoryDeletionsRequest *>(d->request);
 }
 
 /*!

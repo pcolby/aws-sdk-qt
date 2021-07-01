@@ -126,7 +126,8 @@ GetWebACLForResourceResponse::GetWebACLForResourceResponse(
  */
 const GetWebACLForResourceRequest * GetWebACLForResourceResponse::request() const
 {
-    return static_cast<const GetWebACLForResourceRequest *>(Wafv2Response::request());
+    Q_D(const GetWebACLForResourceResponse);
+    return static_cast<const GetWebACLForResourceRequest *>(d->request);
 }
 
 /*!

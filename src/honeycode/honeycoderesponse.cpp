@@ -37,7 +37,7 @@ namespace Honeycode {
  * Constructs a HoneycodeResponse object with parent \a parent.
  */
 HoneycodeResponse::HoneycodeResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new HoneycodeResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new HoneycodeResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ HoneycodeResponse::HoneycodeResponse(QObject * const parent)
  * implementation that inherits from HoneycodeResponsePrivate.
  */
 HoneycodeResponse::HoneycodeResponse(HoneycodeResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void HoneycodeResponse::parseFailure(QIODevice &response)
  * Constructs a HoneycodeResponsePrivate object with public implementation \a q.
  */
 HoneycodeResponsePrivate::HoneycodeResponsePrivate(
-    HoneycodeResponse * const q) : q_ptr(q)
+    HoneycodeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -48,7 +48,7 @@ namespace ApplicationCostProfiler {
  * Constructs a ApplicationCostProfilerRequest object for ApplicationCostProfiler \a action.
  */
 ApplicationCostProfilerRequest::ApplicationCostProfilerRequest(const Action action)
-    : d_ptr(new ApplicationCostProfilerRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ApplicationCostProfilerRequestPrivate(action, this))
 {
 
 }
@@ -57,8 +57,7 @@ ApplicationCostProfilerRequest::ApplicationCostProfilerRequest(const Action acti
  * Constructs a copy of \a other.
  */
 ApplicationCostProfilerRequest::ApplicationCostProfilerRequest(const ApplicationCostProfilerRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ApplicationCostProfilerRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ApplicationCostProfilerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -81,7 +80,7 @@ ApplicationCostProfilerRequest& ApplicationCostProfilerRequest::operator=(const 
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ApplicationCostProfilerRequestPrivate.
  */
-ApplicationCostProfilerRequest::ApplicationCostProfilerRequest(ApplicationCostProfilerRequestPrivate * const d) : d_ptr(d)
+ApplicationCostProfilerRequest::ApplicationCostProfilerRequest(ApplicationCostProfilerRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -250,7 +249,7 @@ QNetworkRequest ApplicationCostProfilerRequest::unsignedRequest(const QUrl &endp
  * with public implementation \a q.
  */
 ApplicationCostProfilerRequestPrivate::ApplicationCostProfilerRequestPrivate(const ApplicationCostProfilerRequest::Action action, ApplicationCostProfilerRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -265,8 +264,8 @@ ApplicationCostProfilerRequestPrivate::ApplicationCostProfilerRequestPrivate(con
  */
 ApplicationCostProfilerRequestPrivate::ApplicationCostProfilerRequestPrivate(const ApplicationCostProfilerRequestPrivate &other,
                                      ApplicationCostProfilerRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

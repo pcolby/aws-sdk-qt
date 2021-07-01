@@ -61,8 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    FinSpaceDataRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit FinSpaceDataRequest(FinSpaceDataRequestPrivate * const d);
+    FinSpaceDataRequest(FinSpaceDataRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

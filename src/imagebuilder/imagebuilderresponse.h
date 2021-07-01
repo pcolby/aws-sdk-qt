@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    imagebuilderResponsePrivate * const d_ptr; ///< Internal d-pointer.
     imagebuilderResponse(imagebuilderResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

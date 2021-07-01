@@ -63,7 +63,8 @@ DeleteSchemaResponse::DeleteSchemaResponse(
  */
 const DeleteSchemaRequest * DeleteSchemaResponse::request() const
 {
-    return static_cast<const DeleteSchemaRequest *>(CloudDirectoryResponse::request());
+    Q_D(const DeleteSchemaResponse);
+    return static_cast<const DeleteSchemaRequest *>(d->request);
 }
 
 /*!

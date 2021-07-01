@@ -20,12 +20,14 @@
 #ifndef QTAWS_IOTFLEETHUBRESPONSE_P_H
 #define QTAWS_IOTFLEETHUBRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace IoTFleetHub {
 
 class IoTFleetHubResponse;
 
-class IoTFleetHubResponsePrivate {
+class IoTFleetHubResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    IoTFleetHubResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTFleetHubResponse)

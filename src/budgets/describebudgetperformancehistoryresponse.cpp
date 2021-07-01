@@ -116,7 +116,8 @@ DescribeBudgetPerformanceHistoryResponse::DescribeBudgetPerformanceHistoryRespon
  */
 const DescribeBudgetPerformanceHistoryRequest * DescribeBudgetPerformanceHistoryResponse::request() const
 {
-    return static_cast<const DescribeBudgetPerformanceHistoryRequest *>(BudgetsResponse::request());
+    Q_D(const DescribeBudgetPerformanceHistoryResponse);
+    return static_cast<const DescribeBudgetPerformanceHistoryRequest *>(d->request);
 }
 
 /*!

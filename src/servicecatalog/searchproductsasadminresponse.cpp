@@ -61,7 +61,8 @@ SearchProductsAsAdminResponse::SearchProductsAsAdminResponse(
  */
 const SearchProductsAsAdminRequest * SearchProductsAsAdminResponse::request() const
 {
-    return static_cast<const SearchProductsAsAdminRequest *>(ServiceCatalogResponse::request());
+    Q_D(const SearchProductsAsAdminResponse);
+    return static_cast<const SearchProductsAsAdminRequest *>(d->request);
 }
 
 /*!

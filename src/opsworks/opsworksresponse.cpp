@@ -37,7 +37,7 @@ namespace OpsWorks {
  * Constructs a OpsWorksResponse object with parent \a parent.
  */
 OpsWorksResponse::OpsWorksResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new OpsWorksResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new OpsWorksResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ OpsWorksResponse::OpsWorksResponse(QObject * const parent)
  * implementation that inherits from OpsWorksResponsePrivate.
  */
 OpsWorksResponse::OpsWorksResponse(OpsWorksResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void OpsWorksResponse::parseFailure(QIODevice &response)
  * Constructs a OpsWorksResponsePrivate object with public implementation \a q.
  */
 OpsWorksResponsePrivate::OpsWorksResponsePrivate(
-    OpsWorksResponse * const q) : q_ptr(q)
+    OpsWorksResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -103,7 +103,8 @@ GetFindingsResponse::GetFindingsResponse(
  */
 const GetFindingsRequest * GetFindingsResponse::request() const
 {
-    return static_cast<const GetFindingsRequest *>(SecurityHubResponse::request());
+    Q_D(const GetFindingsResponse);
+    return static_cast<const GetFindingsRequest *>(d->request);
 }
 
 /*!

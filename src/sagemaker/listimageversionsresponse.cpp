@@ -70,7 +70,8 @@ ListImageVersionsResponse::ListImageVersionsResponse(
  */
 const ListImageVersionsRequest * ListImageVersionsResponse::request() const
 {
-    return static_cast<const ListImageVersionsRequest *>(SageMakerResponse::request());
+    Q_D(const ListImageVersionsResponse);
+    return static_cast<const ListImageVersionsRequest *>(d->request);
 }
 
 /*!

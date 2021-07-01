@@ -98,7 +98,8 @@ ListAssessmentFrameworksResponse::ListAssessmentFrameworksResponse(
  */
 const ListAssessmentFrameworksRequest * ListAssessmentFrameworksResponse::request() const
 {
-    return static_cast<const ListAssessmentFrameworksRequest *>(AuditManagerResponse::request());
+    Q_D(const ListAssessmentFrameworksResponse);
+    return static_cast<const ListAssessmentFrameworksRequest *>(d->request);
 }
 
 /*!

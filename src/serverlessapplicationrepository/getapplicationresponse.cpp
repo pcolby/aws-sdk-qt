@@ -76,7 +76,8 @@ GetApplicationResponse::GetApplicationResponse(
  */
 const GetApplicationRequest * GetApplicationResponse::request() const
 {
-    return static_cast<const GetApplicationRequest *>(ServerlessApplicationRepositoryResponse::request());
+    Q_D(const GetApplicationResponse);
+    return static_cast<const GetApplicationRequest *>(d->request);
 }
 
 /*!

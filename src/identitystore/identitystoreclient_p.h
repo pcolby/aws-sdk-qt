@@ -20,20 +20,19 @@
 #ifndef QTAWS_IDENTITYSTORECLIENT_P_H
 #define QTAWS_IDENTITYSTORECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace IdentityStore {
 
 class IdentityStoreClient;
 
-class IdentityStoreClientPrivate {
+class IdentityStoreClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit IdentityStoreClientPrivate(IdentityStoreClient * const q);
-
-protected:
-    IdentityStoreClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IdentityStoreClient)

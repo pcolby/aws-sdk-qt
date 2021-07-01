@@ -79,7 +79,8 @@ DeleteProfilingGroupResponse::DeleteProfilingGroupResponse(
  */
 const DeleteProfilingGroupRequest * DeleteProfilingGroupResponse::request() const
 {
-    return static_cast<const DeleteProfilingGroupRequest *>(CodeGuruProfilerResponse::request());
+    Q_D(const DeleteProfilingGroupResponse);
+    return static_cast<const DeleteProfilingGroupRequest *>(d->request);
 }
 
 /*!

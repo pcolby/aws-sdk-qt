@@ -78,7 +78,8 @@ DescribeTrailsResponse::DescribeTrailsResponse(
  */
 const DescribeTrailsRequest * DescribeTrailsResponse::request() const
 {
-    return static_cast<const DescribeTrailsRequest *>(CloudTrailResponse::request());
+    Q_D(const DescribeTrailsResponse);
+    return static_cast<const DescribeTrailsRequest *>(d->request);
 }
 
 /*!

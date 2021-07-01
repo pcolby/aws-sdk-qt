@@ -37,7 +37,7 @@ namespace QuickSight {
  * Constructs a QuickSightResponse object with parent \a parent.
  */
 QuickSightResponse::QuickSightResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new QuickSightResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new QuickSightResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ QuickSightResponse::QuickSightResponse(QObject * const parent)
  * implementation that inherits from QuickSightResponsePrivate.
  */
 QuickSightResponse::QuickSightResponse(QuickSightResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void QuickSightResponse::parseFailure(QIODevice &response)
  * Constructs a QuickSightResponsePrivate object with public implementation \a q.
  */
 QuickSightResponsePrivate::QuickSightResponsePrivate(
-    QuickSightResponse * const q) : q_ptr(q)
+    QuickSightResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -60,7 +60,8 @@ UpdateAuthorizerResponse::UpdateAuthorizerResponse(
  */
 const UpdateAuthorizerRequest * UpdateAuthorizerResponse::request() const
 {
-    return static_cast<const UpdateAuthorizerRequest *>(APIGatewayResponse::request());
+    Q_D(const UpdateAuthorizerResponse);
+    return static_cast<const UpdateAuthorizerRequest *>(d->request);
 }
 
 /*!

@@ -159,7 +159,8 @@ DescribeTagsResponse::DescribeTagsResponse(
  */
 const DescribeTagsRequest * DescribeTagsResponse::request() const
 {
-    return static_cast<const DescribeTagsRequest *>(ApplicationDiscoveryServiceResponse::request());
+    Q_D(const DescribeTagsResponse);
+    return static_cast<const DescribeTagsRequest *>(d->request);
 }
 
 /*!

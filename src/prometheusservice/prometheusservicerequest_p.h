@@ -20,12 +20,15 @@
 #ifndef QTAWS_PROMETHEUSSERVICEREQUEST_P_H
 #define QTAWS_PROMETHEUSSERVICEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "prometheusservicerequest.h"
+
 namespace QtAws {
 namespace PrometheusService {
 
 class PrometheusServiceRequest;
 
-class PrometheusServiceRequestPrivate {
+class PrometheusServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PrometheusServiceRequest::Action action; ///< PrometheusService action to be performed.
@@ -36,9 +39,6 @@ public:
     PrometheusServiceRequestPrivate(const PrometheusServiceRequestPrivate &other, PrometheusServiceRequest * const q);
 
     static QString toString(const PrometheusServiceRequest::Action &action);
-
-protected:
-    PrometheusServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PrometheusServiceRequest)

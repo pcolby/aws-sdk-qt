@@ -85,7 +85,8 @@ CreateClusterSnapshotResponse::CreateClusterSnapshotResponse(
  */
 const CreateClusterSnapshotRequest * CreateClusterSnapshotResponse::request() const
 {
-    return static_cast<const CreateClusterSnapshotRequest *>(RedshiftResponse::request());
+    Q_D(const CreateClusterSnapshotResponse);
+    return static_cast<const CreateClusterSnapshotRequest *>(d->request);
 }
 
 /*!

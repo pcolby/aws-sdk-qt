@@ -70,7 +70,8 @@ ListWorkteamsResponse::ListWorkteamsResponse(
  */
 const ListWorkteamsRequest * ListWorkteamsResponse::request() const
 {
-    return static_cast<const ListWorkteamsRequest *>(SageMakerResponse::request());
+    Q_D(const ListWorkteamsResponse);
+    return static_cast<const ListWorkteamsRequest *>(d->request);
 }
 
 /*!

@@ -108,12 +108,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
 
-protected:
-    /// @cond internal
-    KinesisAnalyticsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit KinesisAnalyticsClient(KinesisAnalyticsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(KinesisAnalyticsClient)
     Q_DISABLE_COPY(KinesisAnalyticsClient)

@@ -117,12 +117,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateStateMachineResponse * updateStateMachine(const UpdateStateMachineRequest &request);
 
-protected:
-    /// @cond internal
-    SfnClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SfnClient(SfnClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SfnClient)
     Q_DISABLE_COPY(SfnClient)

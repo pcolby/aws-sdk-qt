@@ -58,7 +58,8 @@ DecreaseStreamRetentionPeriodResponse::DecreaseStreamRetentionPeriodResponse(
  */
 const DecreaseStreamRetentionPeriodRequest * DecreaseStreamRetentionPeriodResponse::request() const
 {
-    return static_cast<const DecreaseStreamRetentionPeriodRequest *>(KinesisResponse::request());
+    Q_D(const DecreaseStreamRetentionPeriodResponse);
+    return static_cast<const DecreaseStreamRetentionPeriodRequest *>(d->request);
 }
 
 /*!

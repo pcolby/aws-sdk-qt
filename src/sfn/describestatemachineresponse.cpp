@@ -74,7 +74,8 @@ DescribeStateMachineResponse::DescribeStateMachineResponse(
  */
 const DescribeStateMachineRequest * DescribeStateMachineResponse::request() const
 {
-    return static_cast<const DescribeStateMachineRequest *>(SfnResponse::request());
+    Q_D(const DescribeStateMachineResponse);
+    return static_cast<const DescribeStateMachineRequest *>(d->request);
 }
 
 /*!

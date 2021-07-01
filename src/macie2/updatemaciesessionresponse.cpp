@@ -60,7 +60,8 @@ UpdateMacieSessionResponse::UpdateMacieSessionResponse(
  */
 const UpdateMacieSessionRequest * UpdateMacieSessionResponse::request() const
 {
-    return static_cast<const UpdateMacieSessionRequest *>(Macie2Response::request());
+    Q_D(const UpdateMacieSessionResponse);
+    return static_cast<const UpdateMacieSessionRequest *>(d->request);
 }
 
 /*!

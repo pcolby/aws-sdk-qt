@@ -56,7 +56,8 @@ GetAccessPointResponse::GetAccessPointResponse(
  */
 const GetAccessPointRequest * GetAccessPointResponse::request() const
 {
-    return static_cast<const GetAccessPointRequest *>(S3ControlResponse::request());
+    Q_D(const GetAccessPointResponse);
+    return static_cast<const GetAccessPointRequest *>(d->request);
 }
 
 /*!

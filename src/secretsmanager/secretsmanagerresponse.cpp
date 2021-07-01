@@ -37,7 +37,7 @@ namespace SecretsManager {
  * Constructs a SecretsManagerResponse object with parent \a parent.
  */
 SecretsManagerResponse::SecretsManagerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SecretsManagerResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SecretsManagerResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SecretsManagerResponse::SecretsManagerResponse(QObject * const parent)
  * implementation that inherits from SecretsManagerResponsePrivate.
  */
 SecretsManagerResponse::SecretsManagerResponse(SecretsManagerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SecretsManagerResponse::parseFailure(QIODevice &response)
  * Constructs a SecretsManagerResponsePrivate object with public implementation \a q.
  */
 SecretsManagerResponsePrivate::SecretsManagerResponsePrivate(
-    SecretsManagerResponse * const q) : q_ptr(q)
+    SecretsManagerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

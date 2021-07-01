@@ -66,7 +66,8 @@ ListVerifiedEmailAddressesResponse::ListVerifiedEmailAddressesResponse(
  */
 const ListVerifiedEmailAddressesRequest * ListVerifiedEmailAddressesResponse::request() const
 {
-    return static_cast<const ListVerifiedEmailAddressesRequest *>(SesResponse::request());
+    Q_D(const ListVerifiedEmailAddressesResponse);
+    return static_cast<const ListVerifiedEmailAddressesRequest *>(d->request);
 }
 
 /*!

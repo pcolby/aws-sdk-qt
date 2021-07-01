@@ -439,7 +439,8 @@ DisassociateApprovalRuleTemplateFromRepositoryResponse::DisassociateApprovalRule
  */
 const DisassociateApprovalRuleTemplateFromRepositoryRequest * DisassociateApprovalRuleTemplateFromRepositoryResponse::request() const
 {
-    return static_cast<const DisassociateApprovalRuleTemplateFromRepositoryRequest *>(CodeCommitResponse::request());
+    Q_D(const DisassociateApprovalRuleTemplateFromRepositoryResponse);
+    return static_cast<const DisassociateApprovalRuleTemplateFromRepositoryRequest *>(d->request);
 }
 
 /*!

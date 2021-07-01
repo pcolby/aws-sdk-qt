@@ -58,7 +58,8 @@ CreateConnectionAliasResponse::CreateConnectionAliasResponse(
  */
 const CreateConnectionAliasRequest * CreateConnectionAliasResponse::request() const
 {
-    return static_cast<const CreateConnectionAliasRequest *>(WorkSpacesResponse::request());
+    Q_D(const CreateConnectionAliasResponse);
+    return static_cast<const CreateConnectionAliasRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ ListEntitiesDetectionJobsResponse::ListEntitiesDetectionJobsResponse(
  */
 const ListEntitiesDetectionJobsRequest * ListEntitiesDetectionJobsResponse::request() const
 {
-    return static_cast<const ListEntitiesDetectionJobsRequest *>(ComprehendResponse::request());
+    Q_D(const ListEntitiesDetectionJobsResponse);
+    return static_cast<const ListEntitiesDetectionJobsRequest *>(d->request);
 }
 
 /*!

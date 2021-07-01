@@ -293,7 +293,8 @@ AssociateExternalConnectionResponse::AssociateExternalConnectionResponse(
  */
 const AssociateExternalConnectionRequest * AssociateExternalConnectionResponse::request() const
 {
-    return static_cast<const AssociateExternalConnectionRequest *>(CodeArtifactResponse::request());
+    Q_D(const AssociateExternalConnectionResponse);
+    return static_cast<const AssociateExternalConnectionRequest *>(d->request);
 }
 
 /*!

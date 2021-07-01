@@ -130,16 +130,16 @@ ForecastServiceClient::ForecastServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-06-26"),
-    QStringLiteral("forecast"),
-    QStringLiteral("Amazon Forecast Service"),
-    QStringLiteral("forecast"),
-    parent), d_ptr(new ForecastServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ForecastServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ForecastServiceClient);
+    d->apiVersion = QStringLiteral("2018-06-26");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("forecast");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Forecast Service");
+    d->serviceName = QStringLiteral("forecast");
 }
 
 /*!
@@ -158,16 +158,16 @@ ForecastServiceClient::ForecastServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-06-26"),
-    QStringLiteral("forecast"),
-    QStringLiteral("Amazon Forecast Service"),
-    QStringLiteral("forecast"),
-    parent), d_ptr(new ForecastServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ForecastServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ForecastServiceClient);
+    d->apiVersion = QStringLiteral("2018-06-26");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("forecast");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Forecast Service");
+    d->serviceName = QStringLiteral("forecast");
 }
 
 /*!
@@ -1149,9 +1149,10 @@ UpdateDatasetGroupResponse * ForecastServiceClient::updateDatasetGroup(const Upd
 /*!
  * Constructs a ForecastServiceClientPrivate object with public implementation \a q.
  */
-ForecastServiceClientPrivate::ForecastServiceClientPrivate(ForecastServiceClient * const q) : q_ptr(q)
+ForecastServiceClientPrivate::ForecastServiceClientPrivate(ForecastServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ForecastService

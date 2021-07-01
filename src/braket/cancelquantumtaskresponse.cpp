@@ -56,7 +56,8 @@ CancelQuantumTaskResponse::CancelQuantumTaskResponse(
  */
 const CancelQuantumTaskRequest * CancelQuantumTaskResponse::request() const
 {
-    return static_cast<const CancelQuantumTaskRequest *>(BraketResponse::request());
+    Q_D(const CancelQuantumTaskResponse);
+    return static_cast<const CancelQuantumTaskRequest *>(d->request);
 }
 
 /*!

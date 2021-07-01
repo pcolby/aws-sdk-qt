@@ -37,7 +37,7 @@ namespace ComprehendMedical {
  * Constructs a ComprehendMedicalResponse object with parent \a parent.
  */
 ComprehendMedicalResponse::ComprehendMedicalResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ComprehendMedicalResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ComprehendMedicalResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ComprehendMedicalResponse::ComprehendMedicalResponse(QObject * const parent)
  * implementation that inherits from ComprehendMedicalResponsePrivate.
  */
 ComprehendMedicalResponse::ComprehendMedicalResponse(ComprehendMedicalResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ComprehendMedicalResponse::parseFailure(QIODevice &response)
  * Constructs a ComprehendMedicalResponsePrivate object with public implementation \a q.
  */
 ComprehendMedicalResponsePrivate::ComprehendMedicalResponsePrivate(
-    ComprehendMedicalResponse * const q) : q_ptr(q)
+    ComprehendMedicalResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

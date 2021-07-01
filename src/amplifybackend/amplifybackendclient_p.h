@@ -20,20 +20,19 @@
 #ifndef QTAWS_AMPLIFYBACKENDCLIENT_P_H
 #define QTAWS_AMPLIFYBACKENDCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace AmplifyBackend {
 
 class AmplifyBackendClient;
 
-class AmplifyBackendClientPrivate {
+class AmplifyBackendClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit AmplifyBackendClientPrivate(AmplifyBackendClient * const q);
-
-protected:
-    AmplifyBackendClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AmplifyBackendClient)

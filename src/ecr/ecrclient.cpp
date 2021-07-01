@@ -134,16 +134,16 @@ EcrClient::EcrClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-09-21"),
-    QStringLiteral("api.ecr"),
-    QStringLiteral("Amazon EC2 Container Registry"),
-    QStringLiteral("ecr"),
-    parent), d_ptr(new EcrClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new EcrClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(EcrClient);
+    d->apiVersion = QStringLiteral("2015-09-21");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("api.ecr");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon EC2 Container Registry");
+    d->serviceName = QStringLiteral("ecr");
 }
 
 /*!
@@ -162,16 +162,16 @@ EcrClient::EcrClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-09-21"),
-    QStringLiteral("api.ecr"),
-    QStringLiteral("Amazon EC2 Container Registry"),
-    QStringLiteral("ecr"),
-    parent), d_ptr(new EcrClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new EcrClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(EcrClient);
+    d->apiVersion = QStringLiteral("2015-09-21");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("api.ecr");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon EC2 Container Registry");
+    d->serviceName = QStringLiteral("ecr");
 }
 
 /*!
@@ -754,9 +754,10 @@ UploadLayerPartResponse * EcrClient::uploadLayerPart(const UploadLayerPartReques
 /*!
  * Constructs a EcrClientPrivate object with public implementation \a q.
  */
-EcrClientPrivate::EcrClientPrivate(EcrClient * const q) : q_ptr(q)
+EcrClientPrivate::EcrClientPrivate(EcrClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ECR

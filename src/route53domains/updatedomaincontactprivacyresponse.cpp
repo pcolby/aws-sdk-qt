@@ -56,7 +56,8 @@ UpdateDomainContactPrivacyResponse::UpdateDomainContactPrivacyResponse(
  */
 const UpdateDomainContactPrivacyRequest * UpdateDomainContactPrivacyResponse::request() const
 {
-    return static_cast<const UpdateDomainContactPrivacyRequest *>(Route53DomainsResponse::request());
+    Q_D(const UpdateDomainContactPrivacyResponse);
+    return static_cast<const UpdateDomainContactPrivacyRequest *>(d->request);
 }
 
 /*!

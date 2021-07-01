@@ -68,7 +68,8 @@ CreateComputeEnvironmentResponse::CreateComputeEnvironmentResponse(
  */
 const CreateComputeEnvironmentRequest * CreateComputeEnvironmentResponse::request() const
 {
-    return static_cast<const CreateComputeEnvironmentRequest *>(BatchResponse::request());
+    Q_D(const CreateComputeEnvironmentResponse);
+    return static_cast<const CreateComputeEnvironmentRequest *>(d->request);
 }
 
 /*!

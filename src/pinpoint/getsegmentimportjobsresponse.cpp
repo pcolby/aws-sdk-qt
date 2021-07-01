@@ -56,7 +56,8 @@ GetSegmentImportJobsResponse::GetSegmentImportJobsResponse(
  */
 const GetSegmentImportJobsRequest * GetSegmentImportJobsResponse::request() const
 {
-    return static_cast<const GetSegmentImportJobsRequest *>(PinpointResponse::request());
+    Q_D(const GetSegmentImportJobsResponse);
+    return static_cast<const GetSegmentImportJobsRequest *>(d->request);
 }
 
 /*!

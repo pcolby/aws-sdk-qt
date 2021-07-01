@@ -77,7 +77,8 @@ DescribeConfigurationOptionsResponse::DescribeConfigurationOptionsResponse(
  */
 const DescribeConfigurationOptionsRequest * DescribeConfigurationOptionsResponse::request() const
 {
-    return static_cast<const DescribeConfigurationOptionsRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const DescribeConfigurationOptionsResponse);
+    return static_cast<const DescribeConfigurationOptionsRequest *>(d->request);
 }
 
 /*!

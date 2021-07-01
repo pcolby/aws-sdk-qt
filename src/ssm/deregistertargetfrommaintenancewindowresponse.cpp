@@ -98,7 +98,8 @@ DeregisterTargetFromMaintenanceWindowResponse::DeregisterTargetFromMaintenanceWi
  */
 const DeregisterTargetFromMaintenanceWindowRequest * DeregisterTargetFromMaintenanceWindowResponse::request() const
 {
-    return static_cast<const DeregisterTargetFromMaintenanceWindowRequest *>(SsmResponse::request());
+    Q_D(const DeregisterTargetFromMaintenanceWindowResponse);
+    return static_cast<const DeregisterTargetFromMaintenanceWindowRequest *>(d->request);
 }
 
 /*!

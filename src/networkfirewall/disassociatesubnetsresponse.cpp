@@ -145,7 +145,8 @@ DisassociateSubnetsResponse::DisassociateSubnetsResponse(
  */
 const DisassociateSubnetsRequest * DisassociateSubnetsResponse::request() const
 {
-    return static_cast<const DisassociateSubnetsRequest *>(NetworkFirewallResponse::request());
+    Q_D(const DisassociateSubnetsResponse);
+    return static_cast<const DisassociateSubnetsRequest *>(d->request);
 }
 
 /*!

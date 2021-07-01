@@ -77,7 +77,8 @@ DescribeEnvironmentsResponse::DescribeEnvironmentsResponse(
  */
 const DescribeEnvironmentsRequest * DescribeEnvironmentsResponse::request() const
 {
-    return static_cast<const DescribeEnvironmentsRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const DescribeEnvironmentsResponse);
+    return static_cast<const DescribeEnvironmentsRequest *>(d->request);
 }
 
 /*!

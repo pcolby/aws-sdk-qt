@@ -61,7 +61,8 @@ UpdateGatewayResponse::UpdateGatewayResponse(
  */
 const UpdateGatewayRequest * UpdateGatewayResponse::request() const
 {
-    return static_cast<const UpdateGatewayRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const UpdateGatewayResponse);
+    return static_cast<const UpdateGatewayRequest *>(d->request);
 }
 
 /*!

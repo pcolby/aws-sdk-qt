@@ -69,7 +69,8 @@ DeletePolicyResponse::DeletePolicyResponse(
  */
 const DeletePolicyRequest * DeletePolicyResponse::request() const
 {
-    return static_cast<const DeletePolicyRequest *>(AcmpcaResponse::request());
+    Q_D(const DeletePolicyResponse);
+    return static_cast<const DeletePolicyRequest *>(d->request);
 }
 
 /*!

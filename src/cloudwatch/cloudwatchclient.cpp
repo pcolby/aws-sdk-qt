@@ -145,16 +145,16 @@ CloudWatchClient::CloudWatchClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2010-08-01"),
-    QStringLiteral("monitoring"),
-    QStringLiteral("Amazon CloudWatch"),
-    QStringLiteral("monitoring"),
-    parent), d_ptr(new CloudWatchClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudWatchClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudWatchClient);
+    d->apiVersion = QStringLiteral("2010-08-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("monitoring");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudWatch");
+    d->serviceName = QStringLiteral("monitoring");
 }
 
 /*!
@@ -173,16 +173,16 @@ CloudWatchClient::CloudWatchClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2010-08-01"),
-    QStringLiteral("monitoring"),
-    QStringLiteral("Amazon CloudWatch"),
-    QStringLiteral("monitoring"),
-    parent), d_ptr(new CloudWatchClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudWatchClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudWatchClient);
+    d->apiVersion = QStringLiteral("2010-08-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("monitoring");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudWatch");
+    d->serviceName = QStringLiteral("monitoring");
 }
 
 /*!
@@ -1164,9 +1164,10 @@ UntagResourceResponse * CloudWatchClient::untagResource(const UntagResourceReque
 /*!
  * Constructs a CloudWatchClientPrivate object with public implementation \a q.
  */
-CloudWatchClientPrivate::CloudWatchClientPrivate(CloudWatchClient * const q) : q_ptr(q)
+CloudWatchClientPrivate::CloudWatchClientPrivate(CloudWatchClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudWatch

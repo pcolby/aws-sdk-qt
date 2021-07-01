@@ -58,7 +58,8 @@ DeleteVariableResponse::DeleteVariableResponse(
  */
 const DeleteVariableRequest * DeleteVariableResponse::request() const
 {
-    return static_cast<const DeleteVariableRequest *>(FraudDetectorResponse::request());
+    Q_D(const DeleteVariableResponse);
+    return static_cast<const DeleteVariableRequest *>(d->request);
 }
 
 /*!

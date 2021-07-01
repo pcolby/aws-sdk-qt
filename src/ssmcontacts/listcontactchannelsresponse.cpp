@@ -55,7 +55,8 @@ ListContactChannelsResponse::ListContactChannelsResponse(
  */
 const ListContactChannelsRequest * ListContactChannelsResponse::request() const
 {
-    return static_cast<const ListContactChannelsRequest *>(SSMContactsResponse::request());
+    Q_D(const ListContactChannelsResponse);
+    return static_cast<const ListContactChannelsRequest *>(d->request);
 }
 
 /*!

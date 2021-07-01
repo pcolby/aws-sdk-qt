@@ -75,7 +75,8 @@ DeleteEvaluationResultsResponse::DeleteEvaluationResultsResponse(
  */
 const DeleteEvaluationResultsRequest * DeleteEvaluationResultsResponse::request() const
 {
-    return static_cast<const DeleteEvaluationResultsRequest *>(ConfigServiceResponse::request());
+    Q_D(const DeleteEvaluationResultsResponse);
+    return static_cast<const DeleteEvaluationResultsRequest *>(d->request);
 }
 
 /*!

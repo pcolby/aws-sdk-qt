@@ -77,7 +77,8 @@ ComposeEnvironmentsResponse::ComposeEnvironmentsResponse(
  */
 const ComposeEnvironmentsRequest * ComposeEnvironmentsResponse::request() const
 {
-    return static_cast<const ComposeEnvironmentsRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const ComposeEnvironmentsResponse);
+    return static_cast<const ComposeEnvironmentsRequest *>(d->request);
 }
 
 /*!

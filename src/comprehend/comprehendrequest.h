@@ -119,8 +119,7 @@ public:
 
 protected:
     /// @cond internal
-    ComprehendRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ComprehendRequest(ComprehendRequestPrivate * const d);
+    ComprehendRequest(ComprehendRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

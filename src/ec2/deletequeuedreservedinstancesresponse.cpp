@@ -87,7 +87,8 @@ DeleteQueuedReservedInstancesResponse::DeleteQueuedReservedInstancesResponse(
  */
 const DeleteQueuedReservedInstancesRequest * DeleteQueuedReservedInstancesResponse::request() const
 {
-    return static_cast<const DeleteQueuedReservedInstancesRequest *>(Ec2Response::request());
+    Q_D(const DeleteQueuedReservedInstancesResponse);
+    return static_cast<const DeleteQueuedReservedInstancesRequest *>(d->request);
 }
 
 /*!

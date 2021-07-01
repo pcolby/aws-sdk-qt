@@ -58,7 +58,8 @@ DescribeEntitiesDetectionJobResponse::DescribeEntitiesDetectionJobResponse(
  */
 const DescribeEntitiesDetectionJobRequest * DescribeEntitiesDetectionJobResponse::request() const
 {
-    return static_cast<const DescribeEntitiesDetectionJobRequest *>(ComprehendResponse::request());
+    Q_D(const DescribeEntitiesDetectionJobResponse);
+    return static_cast<const DescribeEntitiesDetectionJobRequest *>(d->request);
 }
 
 /*!

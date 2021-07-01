@@ -58,7 +58,8 @@ StopCrawlerScheduleResponse::StopCrawlerScheduleResponse(
  */
 const StopCrawlerScheduleRequest * StopCrawlerScheduleResponse::request() const
 {
-    return static_cast<const StopCrawlerScheduleRequest *>(GlueResponse::request());
+    Q_D(const StopCrawlerScheduleResponse);
+    return static_cast<const StopCrawlerScheduleRequest *>(d->request);
 }
 
 /*!

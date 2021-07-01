@@ -74,7 +74,8 @@ DescribeAnomalyResponse::DescribeAnomalyResponse(
  */
 const DescribeAnomalyRequest * DescribeAnomalyResponse::request() const
 {
-    return static_cast<const DescribeAnomalyRequest *>(DevOpsGuruResponse::request());
+    Q_D(const DescribeAnomalyResponse);
+    return static_cast<const DescribeAnomalyRequest *>(d->request);
 }
 
 /*!

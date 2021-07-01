@@ -37,7 +37,7 @@ namespace SimpleDB {
  * Constructs a SimpleDBResponse object with parent \a parent.
  */
 SimpleDBResponse::SimpleDBResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SimpleDBResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SimpleDBResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SimpleDBResponse::SimpleDBResponse(QObject * const parent)
  * implementation that inherits from SimpleDBResponsePrivate.
  */
 SimpleDBResponse::SimpleDBResponse(SimpleDBResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SimpleDBResponse::parseFailure(QIODevice &response)
  * Constructs a SimpleDBResponsePrivate object with public implementation \a q.
  */
 SimpleDBResponsePrivate::SimpleDBResponsePrivate(
-    SimpleDBResponse * const q) : q_ptr(q)
+    SimpleDBResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

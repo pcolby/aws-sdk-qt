@@ -103,7 +103,8 @@ DescribeHubResponse::DescribeHubResponse(
  */
 const DescribeHubRequest * DescribeHubResponse::request() const
 {
-    return static_cast<const DescribeHubRequest *>(SecurityHubResponse::request());
+    Q_D(const DescribeHubResponse);
+    return static_cast<const DescribeHubRequest *>(d->request);
 }
 
 /*!

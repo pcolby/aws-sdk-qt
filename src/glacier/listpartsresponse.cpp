@@ -91,7 +91,8 @@ ListPartsResponse::ListPartsResponse(
  */
 const ListPartsRequest * ListPartsResponse::request() const
 {
-    return static_cast<const ListPartsRequest *>(GlacierResponse::request());
+    Q_D(const ListPartsResponse);
+    return static_cast<const ListPartsRequest *>(d->request);
 }
 
 /*!

@@ -73,7 +73,8 @@ GetWorkGroupResponse::GetWorkGroupResponse(
  */
 const GetWorkGroupRequest * GetWorkGroupResponse::request() const
 {
-    return static_cast<const GetWorkGroupRequest *>(AthenaResponse::request());
+    Q_D(const GetWorkGroupResponse);
+    return static_cast<const GetWorkGroupRequest *>(d->request);
 }
 
 /*!

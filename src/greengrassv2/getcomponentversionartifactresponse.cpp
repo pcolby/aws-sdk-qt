@@ -72,7 +72,8 @@ GetComponentVersionArtifactResponse::GetComponentVersionArtifactResponse(
  */
 const GetComponentVersionArtifactRequest * GetComponentVersionArtifactResponse::request() const
 {
-    return static_cast<const GetComponentVersionArtifactRequest *>(GreengrassV2Response::request());
+    Q_D(const GetComponentVersionArtifactResponse);
+    return static_cast<const GetComponentVersionArtifactRequest *>(d->request);
 }
 
 /*!

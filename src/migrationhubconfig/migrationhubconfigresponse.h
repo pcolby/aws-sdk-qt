@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    MigrationHubConfigResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MigrationHubConfigResponse(MigrationHubConfigResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

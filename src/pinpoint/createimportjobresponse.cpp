@@ -56,7 +56,8 @@ CreateImportJobResponse::CreateImportJobResponse(
  */
 const CreateImportJobRequest * CreateImportJobResponse::request() const
 {
-    return static_cast<const CreateImportJobRequest *>(PinpointResponse::request());
+    Q_D(const CreateImportJobResponse);
+    return static_cast<const CreateImportJobRequest *>(d->request);
 }
 
 /*!

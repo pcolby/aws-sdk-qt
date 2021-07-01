@@ -96,8 +96,7 @@ public:
 
 protected:
     /// @cond internal
-    AppMeshRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AppMeshRequest(AppMeshRequestPrivate * const d);
+    AppMeshRequest(AppMeshRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

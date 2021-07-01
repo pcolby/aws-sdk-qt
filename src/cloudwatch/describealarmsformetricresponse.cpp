@@ -69,7 +69,8 @@ DescribeAlarmsForMetricResponse::DescribeAlarmsForMetricResponse(
  */
 const DescribeAlarmsForMetricRequest * DescribeAlarmsForMetricResponse::request() const
 {
-    return static_cast<const DescribeAlarmsForMetricRequest *>(CloudWatchResponse::request());
+    Q_D(const DescribeAlarmsForMetricResponse);
+    return static_cast<const DescribeAlarmsForMetricRequest *>(d->request);
 }
 
 /*!

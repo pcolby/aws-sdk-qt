@@ -55,7 +55,8 @@ PutObjectLegalHoldResponse::PutObjectLegalHoldResponse(
  */
 const PutObjectLegalHoldRequest * PutObjectLegalHoldResponse::request() const
 {
-    return static_cast<const PutObjectLegalHoldRequest *>(S3Response::request());
+    Q_D(const PutObjectLegalHoldResponse);
+    return static_cast<const PutObjectLegalHoldRequest *>(d->request);
 }
 
 /*!

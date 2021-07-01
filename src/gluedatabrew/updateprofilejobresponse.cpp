@@ -58,7 +58,8 @@ UpdateProfileJobResponse::UpdateProfileJobResponse(
  */
 const UpdateProfileJobRequest * UpdateProfileJobResponse::request() const
 {
-    return static_cast<const UpdateProfileJobRequest *>(GlueDataBrewResponse::request());
+    Q_D(const UpdateProfileJobResponse);
+    return static_cast<const UpdateProfileJobRequest *>(d->request);
 }
 
 /*!

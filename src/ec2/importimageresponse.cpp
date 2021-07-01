@@ -87,7 +87,8 @@ ImportImageResponse::ImportImageResponse(
  */
 const ImportImageRequest * ImportImageResponse::request() const
 {
-    return static_cast<const ImportImageRequest *>(Ec2Response::request());
+    Q_D(const ImportImageResponse);
+    return static_cast<const ImportImageRequest *>(d->request);
 }
 
 /*!

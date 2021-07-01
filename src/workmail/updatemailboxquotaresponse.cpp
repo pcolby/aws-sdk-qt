@@ -89,7 +89,8 @@ UpdateMailboxQuotaResponse::UpdateMailboxQuotaResponse(
  */
 const UpdateMailboxQuotaRequest * UpdateMailboxQuotaResponse::request() const
 {
-    return static_cast<const UpdateMailboxQuotaRequest *>(WorkMailResponse::request());
+    Q_D(const UpdateMailboxQuotaResponse);
+    return static_cast<const UpdateMailboxQuotaRequest *>(d->request);
 }
 
 /*!

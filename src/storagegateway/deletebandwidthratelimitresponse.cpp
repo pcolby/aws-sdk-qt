@@ -124,7 +124,8 @@ DeleteBandwidthRateLimitResponse::DeleteBandwidthRateLimitResponse(
  */
 const DeleteBandwidthRateLimitRequest * DeleteBandwidthRateLimitResponse::request() const
 {
-    return static_cast<const DeleteBandwidthRateLimitRequest *>(StorageGatewayResponse::request());
+    Q_D(const DeleteBandwidthRateLimitResponse);
+    return static_cast<const DeleteBandwidthRateLimitRequest *>(d->request);
 }
 
 /*!

@@ -95,8 +95,7 @@ public:
 
 protected:
     /// @cond internal
-    InspectorRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit InspectorRequest(InspectorRequestPrivate * const d);
+    InspectorRequest(InspectorRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

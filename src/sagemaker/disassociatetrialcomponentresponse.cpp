@@ -70,7 +70,8 @@ DisassociateTrialComponentResponse::DisassociateTrialComponentResponse(
  */
 const DisassociateTrialComponentRequest * DisassociateTrialComponentResponse::request() const
 {
-    return static_cast<const DisassociateTrialComponentRequest *>(SageMakerResponse::request());
+    Q_D(const DisassociateTrialComponentResponse);
+    return static_cast<const DisassociateTrialComponentRequest *>(d->request);
 }
 
 /*!

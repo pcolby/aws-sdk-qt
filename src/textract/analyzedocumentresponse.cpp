@@ -57,7 +57,8 @@ AnalyzeDocumentResponse::AnalyzeDocumentResponse(
  */
 const AnalyzeDocumentRequest * AnalyzeDocumentResponse::request() const
 {
-    return static_cast<const AnalyzeDocumentRequest *>(TextractResponse::request());
+    Q_D(const AnalyzeDocumentResponse);
+    return static_cast<const AnalyzeDocumentRequest *>(d->request);
 }
 
 /*!

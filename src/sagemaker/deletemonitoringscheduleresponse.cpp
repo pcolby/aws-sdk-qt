@@ -70,7 +70,8 @@ DeleteMonitoringScheduleResponse::DeleteMonitoringScheduleResponse(
  */
 const DeleteMonitoringScheduleRequest * DeleteMonitoringScheduleResponse::request() const
 {
-    return static_cast<const DeleteMonitoringScheduleRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteMonitoringScheduleResponse);
+    return static_cast<const DeleteMonitoringScheduleRequest *>(d->request);
 }
 
 /*!

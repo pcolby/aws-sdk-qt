@@ -61,7 +61,8 @@ UpdateLongTermPricingResponse::UpdateLongTermPricingResponse(
  */
 const UpdateLongTermPricingRequest * UpdateLongTermPricingResponse::request() const
 {
-    return static_cast<const UpdateLongTermPricingRequest *>(SnowballResponse::request());
+    Q_D(const UpdateLongTermPricingResponse);
+    return static_cast<const UpdateLongTermPricingRequest *>(d->request);
 }
 
 /*!

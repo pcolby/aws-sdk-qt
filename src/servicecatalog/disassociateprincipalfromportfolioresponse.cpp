@@ -61,7 +61,8 @@ DisassociatePrincipalFromPortfolioResponse::DisassociatePrincipalFromPortfolioRe
  */
 const DisassociatePrincipalFromPortfolioRequest * DisassociatePrincipalFromPortfolioResponse::request() const
 {
-    return static_cast<const DisassociatePrincipalFromPortfolioRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DisassociatePrincipalFromPortfolioResponse);
+    return static_cast<const DisassociatePrincipalFromPortfolioRequest *>(d->request);
 }
 
 /*!

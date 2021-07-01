@@ -66,7 +66,8 @@ UpdateVodSourceResponse::UpdateVodSourceResponse(
  */
 const UpdateVodSourceRequest * UpdateVodSourceResponse::request() const
 {
-    return static_cast<const UpdateVodSourceRequest *>(MediaTailorResponse::request());
+    Q_D(const UpdateVodSourceResponse);
+    return static_cast<const UpdateVodSourceRequest *>(d->request);
 }
 
 /*!

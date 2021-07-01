@@ -58,7 +58,8 @@ DescribeDocumentClassifierResponse::DescribeDocumentClassifierResponse(
  */
 const DescribeDocumentClassifierRequest * DescribeDocumentClassifierResponse::request() const
 {
-    return static_cast<const DescribeDocumentClassifierRequest *>(ComprehendResponse::request());
+    Q_D(const DescribeDocumentClassifierResponse);
+    return static_cast<const DescribeDocumentClassifierRequest *>(d->request);
 }
 
 /*!

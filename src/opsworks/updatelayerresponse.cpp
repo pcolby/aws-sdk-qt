@@ -161,7 +161,8 @@ UpdateLayerResponse::UpdateLayerResponse(
  */
 const UpdateLayerRequest * UpdateLayerResponse::request() const
 {
-    return static_cast<const UpdateLayerRequest *>(OpsWorksResponse::request());
+    Q_D(const UpdateLayerResponse);
+    return static_cast<const UpdateLayerRequest *>(d->request);
 }
 
 /*!

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    KinesisVideoArchivedMediaResponsePrivate * const d_ptr; ///< Internal d-pointer.
     KinesisVideoArchivedMediaResponse(KinesisVideoArchivedMediaResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

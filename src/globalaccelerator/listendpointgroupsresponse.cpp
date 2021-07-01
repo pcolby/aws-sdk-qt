@@ -218,7 +218,8 @@ ListEndpointGroupsResponse::ListEndpointGroupsResponse(
  */
 const ListEndpointGroupsRequest * ListEndpointGroupsResponse::request() const
 {
-    return static_cast<const ListEndpointGroupsRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const ListEndpointGroupsResponse);
+    return static_cast<const ListEndpointGroupsRequest *>(d->request);
 }
 
 /*!

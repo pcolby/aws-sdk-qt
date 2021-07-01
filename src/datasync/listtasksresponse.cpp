@@ -64,7 +64,8 @@ ListTasksResponse::ListTasksResponse(
  */
 const ListTasksRequest * ListTasksResponse::request() const
 {
-    return static_cast<const ListTasksRequest *>(DataSyncResponse::request());
+    Q_D(const ListTasksResponse);
+    return static_cast<const ListTasksRequest *>(d->request);
 }
 
 /*!

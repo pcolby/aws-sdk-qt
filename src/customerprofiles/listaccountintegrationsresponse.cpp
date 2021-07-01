@@ -71,7 +71,8 @@ ListAccountIntegrationsResponse::ListAccountIntegrationsResponse(
  */
 const ListAccountIntegrationsRequest * ListAccountIntegrationsResponse::request() const
 {
-    return static_cast<const ListAccountIntegrationsRequest *>(CustomerProfilesResponse::request());
+    Q_D(const ListAccountIntegrationsResponse);
+    return static_cast<const ListAccountIntegrationsRequest *>(d->request);
 }
 
 /*!

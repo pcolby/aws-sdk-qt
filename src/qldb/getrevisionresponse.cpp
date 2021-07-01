@@ -56,7 +56,8 @@ GetRevisionResponse::GetRevisionResponse(
  */
 const GetRevisionRequest * GetRevisionResponse::request() const
 {
-    return static_cast<const GetRevisionRequest *>(QldbResponse::request());
+    Q_D(const GetRevisionResponse);
+    return static_cast<const GetRevisionRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,15 @@
 #ifndef QTAWS_OUTPOSTSREQUEST_P_H
 #define QTAWS_OUTPOSTSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "outpostsrequest.h"
+
 namespace QtAws {
 namespace Outposts {
 
 class OutpostsRequest;
 
-class OutpostsRequestPrivate {
+class OutpostsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     OutpostsRequest::Action action; ///< Outposts action to be performed.
@@ -36,9 +39,6 @@ public:
     OutpostsRequestPrivate(const OutpostsRequestPrivate &other, OutpostsRequest * const q);
 
     static QString toString(const OutpostsRequest::Action &action);
-
-protected:
-    OutpostsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(OutpostsRequest)

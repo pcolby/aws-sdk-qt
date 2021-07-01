@@ -161,7 +161,8 @@ DescribeEcsClustersResponse::DescribeEcsClustersResponse(
  */
 const DescribeEcsClustersRequest * DescribeEcsClustersResponse::request() const
 {
-    return static_cast<const DescribeEcsClustersRequest *>(OpsWorksResponse::request());
+    Q_D(const DescribeEcsClustersResponse);
+    return static_cast<const DescribeEcsClustersRequest *>(d->request);
 }
 
 /*!

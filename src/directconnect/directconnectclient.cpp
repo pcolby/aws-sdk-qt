@@ -183,16 +183,16 @@ DirectConnectClient::DirectConnectClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2012-10-25"),
-    QStringLiteral("directconnect"),
-    QStringLiteral("AWS Direct Connect"),
-    QStringLiteral("directconnect"),
-    parent), d_ptr(new DirectConnectClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new DirectConnectClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(DirectConnectClient);
+    d->apiVersion = QStringLiteral("2012-10-25");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("directconnect");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Direct Connect");
+    d->serviceName = QStringLiteral("directconnect");
 }
 
 /*!
@@ -211,16 +211,16 @@ DirectConnectClient::DirectConnectClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2012-10-25"),
-    QStringLiteral("directconnect"),
-    QStringLiteral("AWS Direct Connect"),
-    QStringLiteral("directconnect"),
-    parent), d_ptr(new DirectConnectClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new DirectConnectClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(DirectConnectClient);
+    d->apiVersion = QStringLiteral("2012-10-25");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("directconnect");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Direct Connect");
+    d->serviceName = QStringLiteral("directconnect");
 }
 
 /*!
@@ -1480,9 +1480,10 @@ UpdateVirtualInterfaceAttributesResponse * DirectConnectClient::updateVirtualInt
 /*!
  * Constructs a DirectConnectClientPrivate object with public implementation \a q.
  */
-DirectConnectClientPrivate::DirectConnectClientPrivate(DirectConnectClient * const q) : q_ptr(q)
+DirectConnectClientPrivate::DirectConnectClientPrivate(DirectConnectClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DirectConnect

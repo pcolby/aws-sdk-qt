@@ -56,7 +56,8 @@ BatchGetDocumentStatusResponse::BatchGetDocumentStatusResponse(
  */
 const BatchGetDocumentStatusRequest * BatchGetDocumentStatusResponse::request() const
 {
-    return static_cast<const BatchGetDocumentStatusRequest *>(kendraResponse::request());
+    Q_D(const BatchGetDocumentStatusResponse);
+    return static_cast<const BatchGetDocumentStatusRequest *>(d->request);
 }
 
 /*!

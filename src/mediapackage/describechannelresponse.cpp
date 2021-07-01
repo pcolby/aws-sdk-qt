@@ -55,7 +55,8 @@ DescribeChannelResponse::DescribeChannelResponse(
  */
 const DescribeChannelRequest * DescribeChannelResponse::request() const
 {
-    return static_cast<const DescribeChannelRequest *>(MediaPackageResponse::request());
+    Q_D(const DescribeChannelResponse);
+    return static_cast<const DescribeChannelRequest *>(d->request);
 }
 
 /*!

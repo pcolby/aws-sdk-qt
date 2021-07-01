@@ -79,7 +79,8 @@ ListPhoneNumbersResponse::ListPhoneNumbersResponse(
  */
 const ListPhoneNumbersRequest * ListPhoneNumbersResponse::request() const
 {
-    return static_cast<const ListPhoneNumbersRequest *>(ConnectResponse::request());
+    Q_D(const ListPhoneNumbersResponse);
+    return static_cast<const ListPhoneNumbersRequest *>(d->request);
 }
 
 /*!

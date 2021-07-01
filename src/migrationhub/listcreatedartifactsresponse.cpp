@@ -62,7 +62,8 @@ ListCreatedArtifactsResponse::ListCreatedArtifactsResponse(
  */
 const ListCreatedArtifactsRequest * ListCreatedArtifactsResponse::request() const
 {
-    return static_cast<const ListCreatedArtifactsRequest *>(MigrationHubResponse::request());
+    Q_D(const ListCreatedArtifactsResponse);
+    return static_cast<const ListCreatedArtifactsRequest *>(d->request);
 }
 
 /*!

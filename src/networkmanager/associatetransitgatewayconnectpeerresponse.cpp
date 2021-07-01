@@ -62,7 +62,8 @@ AssociateTransitGatewayConnectPeerResponse::AssociateTransitGatewayConnectPeerRe
  */
 const AssociateTransitGatewayConnectPeerRequest * AssociateTransitGatewayConnectPeerResponse::request() const
 {
-    return static_cast<const AssociateTransitGatewayConnectPeerRequest *>(NetworkManagerResponse::request());
+    Q_D(const AssociateTransitGatewayConnectPeerResponse);
+    return static_cast<const AssociateTransitGatewayConnectPeerRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ DeleteSkillGroupResponse::DeleteSkillGroupResponse(
  */
 const DeleteSkillGroupRequest * DeleteSkillGroupResponse::request() const
 {
-    return static_cast<const DeleteSkillGroupRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const DeleteSkillGroupResponse);
+    return static_cast<const DeleteSkillGroupRequest *>(d->request);
 }
 
 /*!

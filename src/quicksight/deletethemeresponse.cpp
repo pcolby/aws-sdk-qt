@@ -60,7 +60,8 @@ DeleteThemeResponse::DeleteThemeResponse(
  */
 const DeleteThemeRequest * DeleteThemeResponse::request() const
 {
-    return static_cast<const DeleteThemeRequest *>(QuickSightResponse::request());
+    Q_D(const DeleteThemeResponse);
+    return static_cast<const DeleteThemeRequest *>(d->request);
 }
 
 /*!

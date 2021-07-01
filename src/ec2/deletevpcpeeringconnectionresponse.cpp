@@ -87,7 +87,8 @@ DeleteVpcPeeringConnectionResponse::DeleteVpcPeeringConnectionResponse(
  */
 const DeleteVpcPeeringConnectionRequest * DeleteVpcPeeringConnectionResponse::request() const
 {
-    return static_cast<const DeleteVpcPeeringConnectionRequest *>(Ec2Response::request());
+    Q_D(const DeleteVpcPeeringConnectionResponse);
+    return static_cast<const DeleteVpcPeeringConnectionRequest *>(d->request);
 }
 
 /*!

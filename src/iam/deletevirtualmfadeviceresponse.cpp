@@ -62,7 +62,8 @@ DeleteVirtualMFADeviceResponse::DeleteVirtualMFADeviceResponse(
  */
 const DeleteVirtualMFADeviceRequest * DeleteVirtualMFADeviceResponse::request() const
 {
-    return static_cast<const DeleteVirtualMFADeviceRequest *>(IamResponse::request());
+    Q_D(const DeleteVirtualMFADeviceResponse);
+    return static_cast<const DeleteVirtualMFADeviceRequest *>(d->request);
 }
 
 /*!

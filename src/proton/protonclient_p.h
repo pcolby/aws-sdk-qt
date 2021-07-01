@@ -20,20 +20,19 @@
 #ifndef QTAWS_PROTONCLIENT_P_H
 #define QTAWS_PROTONCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Proton {
 
 class ProtonClient;
 
-class ProtonClientPrivate {
+class ProtonClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ProtonClientPrivate(ProtonClient * const q);
-
-protected:
-    ProtonClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ProtonClient)

@@ -65,7 +65,7 @@ namespace ACMPCA {
  * Constructs a AcmpcaRequest object for ACMPCA \a action.
  */
 AcmpcaRequest::AcmpcaRequest(const Action action)
-    : d_ptr(new AcmpcaRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new AcmpcaRequestPrivate(action, this))
 {
 
 }
@@ -74,8 +74,7 @@ AcmpcaRequest::AcmpcaRequest(const Action action)
  * Constructs a copy of \a other.
  */
 AcmpcaRequest::AcmpcaRequest(const AcmpcaRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new AcmpcaRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new AcmpcaRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -98,7 +97,7 @@ AcmpcaRequest& AcmpcaRequest::operator=(const AcmpcaRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AcmpcaRequestPrivate.
  */
-AcmpcaRequest::AcmpcaRequest(AcmpcaRequestPrivate * const d) : d_ptr(d)
+AcmpcaRequest::AcmpcaRequest(AcmpcaRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -267,7 +266,7 @@ QNetworkRequest AcmpcaRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AcmpcaRequestPrivate::AcmpcaRequestPrivate(const AcmpcaRequest::Action action, AcmpcaRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -282,8 +281,8 @@ AcmpcaRequestPrivate::AcmpcaRequestPrivate(const AcmpcaRequest::Action action, A
  */
 AcmpcaRequestPrivate::AcmpcaRequestPrivate(const AcmpcaRequestPrivate &other,
                                      AcmpcaRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -60,7 +60,8 @@ CreateHttpNamespaceResponse::CreateHttpNamespaceResponse(
  */
 const CreateHttpNamespaceRequest * CreateHttpNamespaceResponse::request() const
 {
-    return static_cast<const CreateHttpNamespaceRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const CreateHttpNamespaceResponse);
+    return static_cast<const CreateHttpNamespaceRequest *>(d->request);
 }
 
 /*!

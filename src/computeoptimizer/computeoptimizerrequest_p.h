@@ -20,12 +20,15 @@
 #ifndef QTAWS_COMPUTEOPTIMIZERREQUEST_P_H
 #define QTAWS_COMPUTEOPTIMIZERREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "computeoptimizerrequest.h"
+
 namespace QtAws {
 namespace ComputeOptimizer {
 
 class ComputeOptimizerRequest;
 
-class ComputeOptimizerRequestPrivate {
+class ComputeOptimizerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ComputeOptimizerRequest::Action action; ///< ComputeOptimizer action to be performed.
@@ -36,9 +39,6 @@ public:
     ComputeOptimizerRequestPrivate(const ComputeOptimizerRequestPrivate &other, ComputeOptimizerRequest * const q);
 
     static QString toString(const ComputeOptimizerRequest::Action &action);
-
-protected:
-    ComputeOptimizerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ComputeOptimizerRequest)

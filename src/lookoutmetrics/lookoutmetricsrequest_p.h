@@ -20,12 +20,15 @@
 #ifndef QTAWS_LOOKOUTMETRICSREQUEST_P_H
 #define QTAWS_LOOKOUTMETRICSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "lookoutmetricsrequest.h"
+
 namespace QtAws {
 namespace LookoutMetrics {
 
 class LookoutMetricsRequest;
 
-class LookoutMetricsRequestPrivate {
+class LookoutMetricsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LookoutMetricsRequest::Action action; ///< LookoutMetrics action to be performed.
@@ -36,9 +39,6 @@ public:
     LookoutMetricsRequestPrivate(const LookoutMetricsRequestPrivate &other, LookoutMetricsRequest * const q);
 
     static QString toString(const LookoutMetricsRequest::Action &action);
-
-protected:
-    LookoutMetricsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LookoutMetricsRequest)

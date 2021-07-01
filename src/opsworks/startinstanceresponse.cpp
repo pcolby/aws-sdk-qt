@@ -161,7 +161,8 @@ StartInstanceResponse::StartInstanceResponse(
  */
 const StartInstanceRequest * StartInstanceResponse::request() const
 {
-    return static_cast<const StartInstanceRequest *>(OpsWorksResponse::request());
+    Q_D(const StartInstanceResponse);
+    return static_cast<const StartInstanceRequest *>(d->request);
 }
 
 /*!

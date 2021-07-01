@@ -75,7 +75,8 @@ DeleteDatasetContentResponse::DeleteDatasetContentResponse(
  */
 const DeleteDatasetContentRequest * DeleteDatasetContentResponse::request() const
 {
-    return static_cast<const DeleteDatasetContentRequest *>(IoTAnalyticsResponse::request());
+    Q_D(const DeleteDatasetContentResponse);
+    return static_cast<const DeleteDatasetContentRequest *>(d->request);
 }
 
 /*!

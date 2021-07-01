@@ -37,7 +37,7 @@ namespace SagemakerEdgeManager {
  * Constructs a SagemakerEdgeManagerResponse object with parent \a parent.
  */
 SagemakerEdgeManagerResponse::SagemakerEdgeManagerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SagemakerEdgeManagerResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SagemakerEdgeManagerResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SagemakerEdgeManagerResponse::SagemakerEdgeManagerResponse(QObject * const paren
  * implementation that inherits from SagemakerEdgeManagerResponsePrivate.
  */
 SagemakerEdgeManagerResponse::SagemakerEdgeManagerResponse(SagemakerEdgeManagerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SagemakerEdgeManagerResponse::parseFailure(QIODevice &response)
  * Constructs a SagemakerEdgeManagerResponsePrivate object with public implementation \a q.
  */
 SagemakerEdgeManagerResponsePrivate::SagemakerEdgeManagerResponsePrivate(
-    SagemakerEdgeManagerResponse * const q) : q_ptr(q)
+    SagemakerEdgeManagerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

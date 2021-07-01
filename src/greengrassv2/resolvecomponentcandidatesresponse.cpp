@@ -72,7 +72,8 @@ ResolveComponentCandidatesResponse::ResolveComponentCandidatesResponse(
  */
 const ResolveComponentCandidatesRequest * ResolveComponentCandidatesResponse::request() const
 {
-    return static_cast<const ResolveComponentCandidatesRequest *>(GreengrassV2Response::request());
+    Q_D(const ResolveComponentCandidatesResponse);
+    return static_cast<const ResolveComponentCandidatesRequest *>(d->request);
 }
 
 /*!

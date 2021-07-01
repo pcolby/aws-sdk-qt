@@ -62,7 +62,8 @@ GetDownloadUrlForLayerResponse::GetDownloadUrlForLayerResponse(
  */
 const GetDownloadUrlForLayerRequest * GetDownloadUrlForLayerResponse::request() const
 {
-    return static_cast<const GetDownloadUrlForLayerRequest *>(EcrResponse::request());
+    Q_D(const GetDownloadUrlForLayerResponse);
+    return static_cast<const GetDownloadUrlForLayerRequest *>(d->request);
 }
 
 /*!

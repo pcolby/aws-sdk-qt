@@ -59,7 +59,8 @@ DescribeProtectedResourceResponse::DescribeProtectedResourceResponse(
  */
 const DescribeProtectedResourceRequest * DescribeProtectedResourceResponse::request() const
 {
-    return static_cast<const DescribeProtectedResourceRequest *>(BackupResponse::request());
+    Q_D(const DescribeProtectedResourceResponse);
+    return static_cast<const DescribeProtectedResourceRequest *>(d->request);
 }
 
 /*!

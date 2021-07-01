@@ -20,20 +20,19 @@
 #ifndef QTAWS_EVENTBRIDGECLIENT_P_H
 #define QTAWS_EVENTBRIDGECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace EventBridge {
 
 class EventBridgeClient;
 
-class EventBridgeClientPrivate {
+class EventBridgeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit EventBridgeClientPrivate(EventBridgeClient * const q);
-
-protected:
-    EventBridgeClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EventBridgeClient)

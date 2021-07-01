@@ -20,12 +20,15 @@
 #ifndef QTAWS_WORKMAILREQUEST_P_H
 #define QTAWS_WORKMAILREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "workmailrequest.h"
+
 namespace QtAws {
 namespace WorkMail {
 
 class WorkMailRequest;
 
-class WorkMailRequestPrivate {
+class WorkMailRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     WorkMailRequest::Action action; ///< WorkMail action to be performed.
@@ -36,9 +39,6 @@ public:
     WorkMailRequestPrivate(const WorkMailRequestPrivate &other, WorkMailRequest * const q);
 
     static QString toString(const WorkMailRequest::Action &action);
-
-protected:
-    WorkMailRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WorkMailRequest)

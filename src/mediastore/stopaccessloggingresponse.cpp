@@ -57,7 +57,8 @@ StopAccessLoggingResponse::StopAccessLoggingResponse(
  */
 const StopAccessLoggingRequest * StopAccessLoggingResponse::request() const
 {
-    return static_cast<const StopAccessLoggingRequest *>(MediaStoreResponse::request());
+    Q_D(const StopAccessLoggingResponse);
+    return static_cast<const StopAccessLoggingRequest *>(d->request);
 }
 
 /*!

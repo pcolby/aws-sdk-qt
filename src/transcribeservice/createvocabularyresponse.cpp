@@ -56,7 +56,8 @@ CreateVocabularyResponse::CreateVocabularyResponse(
  */
 const CreateVocabularyRequest * CreateVocabularyResponse::request() const
 {
-    return static_cast<const CreateVocabularyRequest *>(TranscribeServiceResponse::request());
+    Q_D(const CreateVocabularyResponse);
+    return static_cast<const CreateVocabularyRequest *>(d->request);
 }
 
 /*!

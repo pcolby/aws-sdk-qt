@@ -103,7 +103,8 @@ UpdateFindingsResponse::UpdateFindingsResponse(
  */
 const UpdateFindingsRequest * UpdateFindingsResponse::request() const
 {
-    return static_cast<const UpdateFindingsRequest *>(SecurityHubResponse::request());
+    Q_D(const UpdateFindingsResponse);
+    return static_cast<const UpdateFindingsRequest *>(d->request);
 }
 
 /*!

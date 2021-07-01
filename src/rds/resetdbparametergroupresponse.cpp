@@ -119,7 +119,8 @@ ResetDBParameterGroupResponse::ResetDBParameterGroupResponse(
  */
 const ResetDBParameterGroupRequest * ResetDBParameterGroupResponse::request() const
 {
-    return static_cast<const ResetDBParameterGroupRequest *>(RdsResponse::request());
+    Q_D(const ResetDBParameterGroupResponse);
+    return static_cast<const ResetDBParameterGroupRequest *>(d->request);
 }
 
 /*!

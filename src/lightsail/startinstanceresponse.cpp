@@ -74,7 +74,8 @@ StartInstanceResponse::StartInstanceResponse(
  */
 const StartInstanceRequest * StartInstanceResponse::request() const
 {
-    return static_cast<const StartInstanceRequest *>(LightsailResponse::request());
+    Q_D(const StartInstanceResponse);
+    return static_cast<const StartInstanceRequest *>(d->request);
 }
 
 /*!

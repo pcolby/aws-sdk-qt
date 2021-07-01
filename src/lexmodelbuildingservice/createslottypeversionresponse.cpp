@@ -59,7 +59,8 @@ CreateSlotTypeVersionResponse::CreateSlotTypeVersionResponse(
  */
 const CreateSlotTypeVersionRequest * CreateSlotTypeVersionResponse::request() const
 {
-    return static_cast<const CreateSlotTypeVersionRequest *>(LexModelBuildingServiceResponse::request());
+    Q_D(const CreateSlotTypeVersionResponse);
+    return static_cast<const CreateSlotTypeVersionRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,7 @@ namespace MediaLive {
  * Constructs a MediaLiveRequest object for MediaLive \a action.
  */
 MediaLiveRequest::MediaLiveRequest(const Action action)
-    : d_ptr(new MediaLiveRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MediaLiveRequestPrivate(action, this))
 {
 
 }
@@ -107,8 +107,7 @@ MediaLiveRequest::MediaLiveRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MediaLiveRequest::MediaLiveRequest(const MediaLiveRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new MediaLiveRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MediaLiveRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -131,7 +130,7 @@ MediaLiveRequest& MediaLiveRequest::operator=(const MediaLiveRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaLiveRequestPrivate.
  */
-MediaLiveRequest::MediaLiveRequest(MediaLiveRequestPrivate * const d) : d_ptr(d)
+MediaLiveRequest::MediaLiveRequest(MediaLiveRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -300,7 +299,7 @@ QNetworkRequest MediaLiveRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MediaLiveRequestPrivate::MediaLiveRequestPrivate(const MediaLiveRequest::Action action, MediaLiveRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -315,8 +314,8 @@ MediaLiveRequestPrivate::MediaLiveRequestPrivate(const MediaLiveRequest::Action 
  */
 MediaLiveRequestPrivate::MediaLiveRequestPrivate(const MediaLiveRequestPrivate &other,
                                      MediaLiveRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

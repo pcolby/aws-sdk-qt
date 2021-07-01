@@ -184,16 +184,16 @@ EventBridgeClient::EventBridgeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-10-07"),
-    QStringLiteral("events"),
-    QStringLiteral("Amazon EventBridge"),
-    QStringLiteral("events"),
-    parent), d_ptr(new EventBridgeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new EventBridgeClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(EventBridgeClient);
+    d->apiVersion = QStringLiteral("2015-10-07");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("events");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon EventBridge");
+    d->serviceName = QStringLiteral("events");
 }
 
 /*!
@@ -212,16 +212,16 @@ EventBridgeClient::EventBridgeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-10-07"),
-    QStringLiteral("events"),
-    QStringLiteral("Amazon EventBridge"),
-    QStringLiteral("events"),
-    parent), d_ptr(new EventBridgeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new EventBridgeClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(EventBridgeClient);
+    d->apiVersion = QStringLiteral("2015-10-07");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("events");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon EventBridge");
+    d->serviceName = QStringLiteral("events");
 }
 
 /*!
@@ -1307,9 +1307,10 @@ UpdateConnectionResponse * EventBridgeClient::updateConnection(const UpdateConne
 /*!
  * Constructs a EventBridgeClientPrivate object with public implementation \a q.
  */
-EventBridgeClientPrivate::EventBridgeClientPrivate(EventBridgeClient * const q) : q_ptr(q)
+EventBridgeClientPrivate::EventBridgeClientPrivate(EventBridgeClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace EventBridge

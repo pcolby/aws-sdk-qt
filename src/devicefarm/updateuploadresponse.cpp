@@ -75,7 +75,8 @@ UpdateUploadResponse::UpdateUploadResponse(
  */
 const UpdateUploadRequest * UpdateUploadResponse::request() const
 {
-    return static_cast<const UpdateUploadRequest *>(DeviceFarmResponse::request());
+    Q_D(const UpdateUploadResponse);
+    return static_cast<const UpdateUploadRequest *>(d->request);
 }
 
 /*!

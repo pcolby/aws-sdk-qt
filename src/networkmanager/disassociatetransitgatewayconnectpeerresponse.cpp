@@ -62,7 +62,8 @@ DisassociateTransitGatewayConnectPeerResponse::DisassociateTransitGatewayConnect
  */
 const DisassociateTransitGatewayConnectPeerRequest * DisassociateTransitGatewayConnectPeerResponse::request() const
 {
-    return static_cast<const DisassociateTransitGatewayConnectPeerRequest *>(NetworkManagerResponse::request());
+    Q_D(const DisassociateTransitGatewayConnectPeerResponse);
+    return static_cast<const DisassociateTransitGatewayConnectPeerRequest *>(d->request);
 }
 
 /*!

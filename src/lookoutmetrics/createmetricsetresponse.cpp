@@ -58,7 +58,8 @@ CreateMetricSetResponse::CreateMetricSetResponse(
  */
 const CreateMetricSetRequest * CreateMetricSetResponse::request() const
 {
-    return static_cast<const CreateMetricSetRequest *>(LookoutMetricsResponse::request());
+    Q_D(const CreateMetricSetResponse);
+    return static_cast<const CreateMetricSetRequest *>(d->request);
 }
 
 /*!

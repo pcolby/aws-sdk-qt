@@ -62,7 +62,8 @@ UploadSSHPublicKeyResponse::UploadSSHPublicKeyResponse(
  */
 const UploadSSHPublicKeyRequest * UploadSSHPublicKeyResponse::request() const
 {
-    return static_cast<const UploadSSHPublicKeyRequest *>(IamResponse::request());
+    Q_D(const UploadSSHPublicKeyResponse);
+    return static_cast<const UploadSSHPublicKeyRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_APPSTREAMCLIENT_P_H
 #define QTAWS_APPSTREAMCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace AppStream {
 
 class AppStreamClient;
 
-class AppStreamClientPrivate {
+class AppStreamClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit AppStreamClientPrivate(AppStreamClient * const q);
-
-protected:
-    AppStreamClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppStreamClient)

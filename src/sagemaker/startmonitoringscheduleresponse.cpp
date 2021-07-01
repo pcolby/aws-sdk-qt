@@ -70,7 +70,8 @@ StartMonitoringScheduleResponse::StartMonitoringScheduleResponse(
  */
 const StartMonitoringScheduleRequest * StartMonitoringScheduleResponse::request() const
 {
-    return static_cast<const StartMonitoringScheduleRequest *>(SageMakerResponse::request());
+    Q_D(const StartMonitoringScheduleResponse);
+    return static_cast<const StartMonitoringScheduleRequest *>(d->request);
 }
 
 /*!

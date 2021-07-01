@@ -58,7 +58,8 @@ DeleteApplicationVpcConfigurationResponse::DeleteApplicationVpcConfigurationResp
  */
 const DeleteApplicationVpcConfigurationRequest * DeleteApplicationVpcConfigurationResponse::request() const
 {
-    return static_cast<const DeleteApplicationVpcConfigurationRequest *>(KinesisAnalyticsV2Response::request());
+    Q_D(const DeleteApplicationVpcConfigurationResponse);
+    return static_cast<const DeleteApplicationVpcConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ DisassociateCertificateResponse::DisassociateCertificateResponse(
  */
 const DisassociateCertificateRequest * DisassociateCertificateResponse::request() const
 {
-    return static_cast<const DisassociateCertificateRequest *>(MediaConvertResponse::request());
+    Q_D(const DisassociateCertificateResponse);
+    return static_cast<const DisassociateCertificateRequest *>(d->request);
 }
 
 /*!

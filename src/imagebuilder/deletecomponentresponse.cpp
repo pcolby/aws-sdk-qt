@@ -58,7 +58,8 @@ DeleteComponentResponse::DeleteComponentResponse(
  */
 const DeleteComponentRequest * DeleteComponentResponse::request() const
 {
-    return static_cast<const DeleteComponentRequest *>(imagebuilderResponse::request());
+    Q_D(const DeleteComponentResponse);
+    return static_cast<const DeleteComponentRequest *>(d->request);
 }
 
 /*!

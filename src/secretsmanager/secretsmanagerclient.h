@@ -114,12 +114,6 @@ public slots:
     UpdateSecretVersionStageResponse * updateSecretVersionStage(const UpdateSecretVersionStageRequest &request);
     ValidateResourcePolicyResponse * validateResourcePolicy(const ValidateResourcePolicyRequest &request);
 
-protected:
-    /// @cond internal
-    SecretsManagerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SecretsManagerClient(SecretsManagerClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SecretsManagerClient)
     Q_DISABLE_COPY(SecretsManagerClient)

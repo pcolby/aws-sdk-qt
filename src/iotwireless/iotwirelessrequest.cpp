@@ -99,7 +99,7 @@ namespace IoTWireless {
  * Constructs a IoTWirelessRequest object for IoTWireless \a action.
  */
 IoTWirelessRequest::IoTWirelessRequest(const Action action)
-    : d_ptr(new IoTWirelessRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new IoTWirelessRequestPrivate(action, this))
 {
 
 }
@@ -108,8 +108,7 @@ IoTWirelessRequest::IoTWirelessRequest(const Action action)
  * Constructs a copy of \a other.
  */
 IoTWirelessRequest::IoTWirelessRequest(const IoTWirelessRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new IoTWirelessRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new IoTWirelessRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -132,7 +131,7 @@ IoTWirelessRequest& IoTWirelessRequest::operator=(const IoTWirelessRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTWirelessRequestPrivate.
  */
-IoTWirelessRequest::IoTWirelessRequest(IoTWirelessRequestPrivate * const d) : d_ptr(d)
+IoTWirelessRequest::IoTWirelessRequest(IoTWirelessRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -301,7 +300,7 @@ QNetworkRequest IoTWirelessRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 IoTWirelessRequestPrivate::IoTWirelessRequestPrivate(const IoTWirelessRequest::Action action, IoTWirelessRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -316,8 +315,8 @@ IoTWirelessRequestPrivate::IoTWirelessRequestPrivate(const IoTWirelessRequest::A
  */
 IoTWirelessRequestPrivate::IoTWirelessRequestPrivate(const IoTWirelessRequestPrivate &other,
                                      IoTWirelessRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

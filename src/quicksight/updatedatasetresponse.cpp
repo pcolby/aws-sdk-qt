@@ -60,7 +60,8 @@ UpdateDataSetResponse::UpdateDataSetResponse(
  */
 const UpdateDataSetRequest * UpdateDataSetResponse::request() const
 {
-    return static_cast<const UpdateDataSetRequest *>(QuickSightResponse::request());
+    Q_D(const UpdateDataSetResponse);
+    return static_cast<const UpdateDataSetRequest *>(d->request);
 }
 
 /*!

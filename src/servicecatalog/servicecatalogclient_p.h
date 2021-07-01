@@ -20,20 +20,19 @@
 #ifndef QTAWS_SERVICECATALOGCLIENT_P_H
 #define QTAWS_SERVICECATALOGCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ServiceCatalog {
 
 class ServiceCatalogClient;
 
-class ServiceCatalogClientPrivate {
+class ServiceCatalogClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ServiceCatalogClientPrivate(ServiceCatalogClient * const q);
-
-protected:
-    ServiceCatalogClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ServiceCatalogClient)

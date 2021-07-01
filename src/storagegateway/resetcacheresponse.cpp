@@ -124,7 +124,8 @@ ResetCacheResponse::ResetCacheResponse(
  */
 const ResetCacheRequest * ResetCacheResponse::request() const
 {
-    return static_cast<const ResetCacheRequest *>(StorageGatewayResponse::request());
+    Q_D(const ResetCacheResponse);
+    return static_cast<const ResetCacheRequest *>(d->request);
 }
 
 /*!

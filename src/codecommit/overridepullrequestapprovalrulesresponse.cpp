@@ -439,7 +439,8 @@ OverridePullRequestApprovalRulesResponse::OverridePullRequestApprovalRulesRespon
  */
 const OverridePullRequestApprovalRulesRequest * OverridePullRequestApprovalRulesResponse::request() const
 {
-    return static_cast<const OverridePullRequestApprovalRulesRequest *>(CodeCommitResponse::request());
+    Q_D(const OverridePullRequestApprovalRulesResponse);
+    return static_cast<const OverridePullRequestApprovalRulesRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_DATASYNCCLIENT_P_H
 #define QTAWS_DATASYNCCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace DataSync {
 
 class DataSyncClient;
 
-class DataSyncClientPrivate {
+class DataSyncClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit DataSyncClientPrivate(DataSyncClient * const q);
-
-protected:
-    DataSyncClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DataSyncClient)

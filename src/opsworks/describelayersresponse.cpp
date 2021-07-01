@@ -161,7 +161,8 @@ DescribeLayersResponse::DescribeLayersResponse(
  */
 const DescribeLayersRequest * DescribeLayersResponse::request() const
 {
-    return static_cast<const DescribeLayersRequest *>(OpsWorksResponse::request());
+    Q_D(const DescribeLayersResponse);
+    return static_cast<const DescribeLayersRequest *>(d->request);
 }
 
 /*!

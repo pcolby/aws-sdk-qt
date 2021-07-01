@@ -60,7 +60,8 @@ DeleteStreamingDistributionResponse::DeleteStreamingDistributionResponse(
  */
 const DeleteStreamingDistributionRequest * DeleteStreamingDistributionResponse::request() const
 {
-    return static_cast<const DeleteStreamingDistributionRequest *>(CloudFrontResponse::request());
+    Q_D(const DeleteStreamingDistributionResponse);
+    return static_cast<const DeleteStreamingDistributionRequest *>(d->request);
 }
 
 /*!

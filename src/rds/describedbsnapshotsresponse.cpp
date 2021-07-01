@@ -119,7 +119,8 @@ DescribeDBSnapshotsResponse::DescribeDBSnapshotsResponse(
  */
 const DescribeDBSnapshotsRequest * DescribeDBSnapshotsResponse::request() const
 {
-    return static_cast<const DescribeDBSnapshotsRequest *>(RdsResponse::request());
+    Q_D(const DescribeDBSnapshotsResponse);
+    return static_cast<const DescribeDBSnapshotsRequest *>(d->request);
 }
 
 /*!

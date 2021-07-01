@@ -20,12 +20,15 @@
 #ifndef QTAWS_IOTSECURETUNNELINGREQUEST_P_H
 #define QTAWS_IOTSECURETUNNELINGREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "iotsecuretunnelingrequest.h"
+
 namespace QtAws {
 namespace IoTSecureTunneling {
 
 class IoTSecureTunnelingRequest;
 
-class IoTSecureTunnelingRequestPrivate {
+class IoTSecureTunnelingRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTSecureTunnelingRequest::Action action; ///< IoTSecureTunneling action to be performed.
@@ -36,9 +39,6 @@ public:
     IoTSecureTunnelingRequestPrivate(const IoTSecureTunnelingRequestPrivate &other, IoTSecureTunnelingRequest * const q);
 
     static QString toString(const IoTSecureTunnelingRequest::Action &action);
-
-protected:
-    IoTSecureTunnelingRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTSecureTunnelingRequest)

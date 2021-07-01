@@ -74,7 +74,8 @@ ListBackupsResponse::ListBackupsResponse(
  */
 const ListBackupsRequest * ListBackupsResponse::request() const
 {
-    return static_cast<const ListBackupsRequest *>(DynamoDBResponse::request());
+    Q_D(const ListBackupsResponse);
+    return static_cast<const ListBackupsRequest *>(d->request);
 }
 
 /*!

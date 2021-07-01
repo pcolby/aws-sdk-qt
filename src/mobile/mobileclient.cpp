@@ -80,16 +80,16 @@ MobileClient::MobileClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-01"),
-    QStringLiteral("mobile"),
-    QStringLiteral("AWS Mobile"),
-    QStringLiteral("AWSMobileHubService"),
-    parent), d_ptr(new MobileClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MobileClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MobileClient);
+    d->apiVersion = QStringLiteral("2017-07-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mobile");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Mobile");
+    d->serviceName = QStringLiteral("AWSMobileHubService");
 }
 
 /*!
@@ -108,16 +108,16 @@ MobileClient::MobileClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-01"),
-    QStringLiteral("mobile"),
-    QStringLiteral("AWS Mobile"),
-    QStringLiteral("AWSMobileHubService"),
-    parent), d_ptr(new MobileClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MobileClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MobileClient);
+    d->apiVersion = QStringLiteral("2017-07-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mobile");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Mobile");
+    d->serviceName = QStringLiteral("AWSMobileHubService");
 }
 
 /*!
@@ -251,9 +251,10 @@ UpdateProjectResponse * MobileClient::updateProject(const UpdateProjectRequest &
 /*!
  * Constructs a MobileClientPrivate object with public implementation \a q.
  */
-MobileClientPrivate::MobileClientPrivate(MobileClient * const q) : q_ptr(q)
+MobileClientPrivate::MobileClientPrivate(MobileClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Mobile

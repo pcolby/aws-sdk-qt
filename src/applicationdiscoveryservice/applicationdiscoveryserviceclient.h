@@ -124,12 +124,6 @@ public slots:
     StopDataCollectionByAgentIdsResponse * stopDataCollectionByAgentIds(const StopDataCollectionByAgentIdsRequest &request);
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
 
-protected:
-    /// @cond internal
-    ApplicationDiscoveryServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ApplicationDiscoveryServiceClient(ApplicationDiscoveryServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ApplicationDiscoveryServiceClient)
     Q_DISABLE_COPY(ApplicationDiscoveryServiceClient)

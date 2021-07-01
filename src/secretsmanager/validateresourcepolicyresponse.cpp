@@ -131,7 +131,8 @@ ValidateResourcePolicyResponse::ValidateResourcePolicyResponse(
  */
 const ValidateResourcePolicyRequest * ValidateResourcePolicyResponse::request() const
 {
-    return static_cast<const ValidateResourcePolicyRequest *>(SecretsManagerResponse::request());
+    Q_D(const ValidateResourcePolicyResponse);
+    return static_cast<const ValidateResourcePolicyRequest *>(d->request);
 }
 
 /*!

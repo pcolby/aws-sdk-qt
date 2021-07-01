@@ -161,7 +161,8 @@ DeregisterVolumeResponse::DeregisterVolumeResponse(
  */
 const DeregisterVolumeRequest * DeregisterVolumeResponse::request() const
 {
-    return static_cast<const DeregisterVolumeRequest *>(OpsWorksResponse::request());
+    Q_D(const DeregisterVolumeResponse);
+    return static_cast<const DeregisterVolumeRequest *>(d->request);
 }
 
 /*!

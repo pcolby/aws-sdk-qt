@@ -62,7 +62,8 @@ TagServerCertificateResponse::TagServerCertificateResponse(
  */
 const TagServerCertificateRequest * TagServerCertificateResponse::request() const
 {
-    return static_cast<const TagServerCertificateRequest *>(IamResponse::request());
+    Q_D(const TagServerCertificateResponse);
+    return static_cast<const TagServerCertificateRequest *>(d->request);
 }
 
 /*!

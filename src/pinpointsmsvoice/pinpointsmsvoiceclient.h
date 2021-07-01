@@ -72,12 +72,6 @@ public slots:
     SendVoiceMessageResponse * sendVoiceMessage(const SendVoiceMessageRequest &request);
     UpdateConfigurationSetEventDestinationResponse * updateConfigurationSetEventDestination(const UpdateConfigurationSetEventDestinationRequest &request);
 
-protected:
-    /// @cond internal
-    PinpointSMSVoiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit PinpointSMSVoiceClient(PinpointSMSVoiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(PinpointSMSVoiceClient)
     Q_DISABLE_COPY(PinpointSMSVoiceClient)

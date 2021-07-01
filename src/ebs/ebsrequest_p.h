@@ -20,12 +20,15 @@
 #ifndef QTAWS_EBSREQUEST_P_H
 #define QTAWS_EBSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "ebsrequest.h"
+
 namespace QtAws {
 namespace EBS {
 
 class EbsRequest;
 
-class EbsRequestPrivate {
+class EbsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EbsRequest::Action action; ///< EBS action to be performed.
@@ -36,9 +39,6 @@ public:
     EbsRequestPrivate(const EbsRequestPrivate &other, EbsRequest * const q);
 
     static QString toString(const EbsRequest::Action &action);
-
-protected:
-    EbsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EbsRequest)

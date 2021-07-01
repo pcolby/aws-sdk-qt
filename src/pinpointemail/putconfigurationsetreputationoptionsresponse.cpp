@@ -92,7 +92,8 @@ PutConfigurationSetReputationOptionsResponse::PutConfigurationSetReputationOptio
  */
 const PutConfigurationSetReputationOptionsRequest * PutConfigurationSetReputationOptionsResponse::request() const
 {
-    return static_cast<const PutConfigurationSetReputationOptionsRequest *>(PinpointEmailResponse::request());
+    Q_D(const PutConfigurationSetReputationOptionsResponse);
+    return static_cast<const PutConfigurationSetReputationOptionsRequest *>(d->request);
 }
 
 /*!

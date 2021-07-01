@@ -141,7 +141,8 @@ EnablePolicyTypeResponse::EnablePolicyTypeResponse(
  */
 const EnablePolicyTypeRequest * EnablePolicyTypeResponse::request() const
 {
-    return static_cast<const EnablePolicyTypeRequest *>(OrganizationsResponse::request());
+    Q_D(const EnablePolicyTypeResponse);
+    return static_cast<const EnablePolicyTypeRequest *>(d->request);
 }
 
 /*!

@@ -146,7 +146,7 @@ namespace Redshift {
  * Constructs a RedshiftRequest object for Redshift \a action.
  */
 RedshiftRequest::RedshiftRequest(const Action action)
-    : d_ptr(new RedshiftRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new RedshiftRequestPrivate(action, this))
 {
 
 }
@@ -155,8 +155,7 @@ RedshiftRequest::RedshiftRequest(const Action action)
  * Constructs a copy of \a other.
  */
 RedshiftRequest::RedshiftRequest(const RedshiftRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new RedshiftRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new RedshiftRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -179,7 +178,7 @@ RedshiftRequest& RedshiftRequest::operator=(const RedshiftRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RedshiftRequestPrivate.
  */
-RedshiftRequest::RedshiftRequest(RedshiftRequestPrivate * const d) : d_ptr(d)
+RedshiftRequest::RedshiftRequest(RedshiftRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -348,7 +347,7 @@ QNetworkRequest RedshiftRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequest::Action action, RedshiftRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -363,8 +362,8 @@ RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequest::Action act
  */
 RedshiftRequestPrivate::RedshiftRequestPrivate(const RedshiftRequestPrivate &other,
                                      RedshiftRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -60,7 +60,8 @@ GetDeploymentsResponse::GetDeploymentsResponse(
  */
 const GetDeploymentsRequest * GetDeploymentsResponse::request() const
 {
-    return static_cast<const GetDeploymentsRequest *>(APIGatewayResponse::request());
+    Q_D(const GetDeploymentsResponse);
+    return static_cast<const GetDeploymentsRequest *>(d->request);
 }
 
 /*!

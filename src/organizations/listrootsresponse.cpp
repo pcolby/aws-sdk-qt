@@ -141,7 +141,8 @@ ListRootsResponse::ListRootsResponse(
  */
 const ListRootsRequest * ListRootsResponse::request() const
 {
-    return static_cast<const ListRootsRequest *>(OrganizationsResponse::request());
+    Q_D(const ListRootsResponse);
+    return static_cast<const ListRootsRequest *>(d->request);
 }
 
 /*!

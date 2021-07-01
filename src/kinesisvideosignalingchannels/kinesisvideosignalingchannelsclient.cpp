@@ -65,16 +65,16 @@ KinesisVideoSignalingChannelsClient::KinesisVideoSignalingChannelsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-12-04"),
-    QStringLiteral("kinesisvideo"),
-    QStringLiteral("Amazon Kinesis Video Signaling Channels"),
-    QStringLiteral("kinesisvideo"),
-    parent), d_ptr(new KinesisVideoSignalingChannelsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new KinesisVideoSignalingChannelsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(KinesisVideoSignalingChannelsClient);
+    d->apiVersion = QStringLiteral("2019-12-04");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("kinesisvideo");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Video Signaling Channels");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
 
 /*!
@@ -93,16 +93,16 @@ KinesisVideoSignalingChannelsClient::KinesisVideoSignalingChannelsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-12-04"),
-    QStringLiteral("kinesisvideo"),
-    QStringLiteral("Amazon Kinesis Video Signaling Channels"),
-    QStringLiteral("kinesisvideo"),
-    parent), d_ptr(new KinesisVideoSignalingChannelsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new KinesisVideoSignalingChannelsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(KinesisVideoSignalingChannelsClient);
+    d->apiVersion = QStringLiteral("2019-12-04");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("kinesisvideo");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Video Signaling Channels");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
 
 /*!
@@ -161,9 +161,10 @@ SendAlexaOfferToMasterResponse * KinesisVideoSignalingChannelsClient::sendAlexaO
 /*!
  * Constructs a KinesisVideoSignalingChannelsClientPrivate object with public implementation \a q.
  */
-KinesisVideoSignalingChannelsClientPrivate::KinesisVideoSignalingChannelsClientPrivate(KinesisVideoSignalingChannelsClient * const q) : q_ptr(q)
+KinesisVideoSignalingChannelsClientPrivate::KinesisVideoSignalingChannelsClientPrivate(KinesisVideoSignalingChannelsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace KinesisVideoSignalingChannels

@@ -73,7 +73,8 @@ ValidatePipelineDefinitionResponse::ValidatePipelineDefinitionResponse(
  */
 const ValidatePipelineDefinitionRequest * ValidatePipelineDefinitionResponse::request() const
 {
-    return static_cast<const ValidatePipelineDefinitionRequest *>(DataPipelineResponse::request());
+    Q_D(const ValidatePipelineDefinitionResponse);
+    return static_cast<const ValidatePipelineDefinitionRequest *>(d->request);
 }
 
 /*!

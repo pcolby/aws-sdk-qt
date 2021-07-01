@@ -79,7 +79,8 @@ CreateIntegrationAssociationResponse::CreateIntegrationAssociationResponse(
  */
 const CreateIntegrationAssociationRequest * CreateIntegrationAssociationResponse::request() const
 {
-    return static_cast<const CreateIntegrationAssociationRequest *>(ConnectResponse::request());
+    Q_D(const CreateIntegrationAssociationResponse);
+    return static_cast<const CreateIntegrationAssociationRequest *>(d->request);
 }
 
 /*!

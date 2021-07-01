@@ -55,7 +55,8 @@ GetObjectAclResponse::GetObjectAclResponse(
  */
 const GetObjectAclRequest * GetObjectAclResponse::request() const
 {
-    return static_cast<const GetObjectAclRequest *>(S3Response::request());
+    Q_D(const GetObjectAclResponse);
+    return static_cast<const GetObjectAclRequest *>(d->request);
 }
 
 /*!

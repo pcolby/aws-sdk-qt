@@ -88,7 +88,8 @@ DeleteEmailTemplateResponse::DeleteEmailTemplateResponse(
  */
 const DeleteEmailTemplateRequest * DeleteEmailTemplateResponse::request() const
 {
-    return static_cast<const DeleteEmailTemplateRequest *>(Sesv2Response::request());
+    Q_D(const DeleteEmailTemplateResponse);
+    return static_cast<const DeleteEmailTemplateRequest *>(d->request);
 }
 
 /*!

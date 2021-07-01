@@ -56,7 +56,8 @@ DescribeMapResponse::DescribeMapResponse(
  */
 const DescribeMapRequest * DescribeMapResponse::request() const
 {
-    return static_cast<const DescribeMapRequest *>(LocationServiceResponse::request());
+    Q_D(const DescribeMapResponse);
+    return static_cast<const DescribeMapRequest *>(d->request);
 }
 
 /*!

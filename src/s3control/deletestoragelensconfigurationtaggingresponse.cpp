@@ -56,7 +56,8 @@ DeleteStorageLensConfigurationTaggingResponse::DeleteStorageLensConfigurationTag
  */
 const DeleteStorageLensConfigurationTaggingRequest * DeleteStorageLensConfigurationTaggingResponse::request() const
 {
-    return static_cast<const DeleteStorageLensConfigurationTaggingRequest *>(S3ControlResponse::request());
+    Q_D(const DeleteStorageLensConfigurationTaggingResponse);
+    return static_cast<const DeleteStorageLensConfigurationTaggingRequest *>(d->request);
 }
 
 /*!

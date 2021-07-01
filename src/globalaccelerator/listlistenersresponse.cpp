@@ -218,7 +218,8 @@ ListListenersResponse::ListListenersResponse(
  */
 const ListListenersRequest * ListListenersResponse::request() const
 {
-    return static_cast<const ListListenersRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const ListListenersResponse);
+    return static_cast<const ListListenersRequest *>(d->request);
 }
 
 /*!

@@ -77,7 +77,8 @@ DescribeStackDriftDetectionStatusResponse::DescribeStackDriftDetectionStatusResp
  */
 const DescribeStackDriftDetectionStatusRequest * DescribeStackDriftDetectionStatusResponse::request() const
 {
-    return static_cast<const DescribeStackDriftDetectionStatusRequest *>(CloudFormationResponse::request());
+    Q_D(const DescribeStackDriftDetectionStatusResponse);
+    return static_cast<const DescribeStackDriftDetectionStatusRequest *>(d->request);
 }
 
 /*!

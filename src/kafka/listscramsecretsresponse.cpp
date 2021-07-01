@@ -56,7 +56,8 @@ ListScramSecretsResponse::ListScramSecretsResponse(
  */
 const ListScramSecretsRequest * ListScramSecretsResponse::request() const
 {
-    return static_cast<const ListScramSecretsRequest *>(KafkaResponse::request());
+    Q_D(const ListScramSecretsResponse);
+    return static_cast<const ListScramSecretsRequest *>(d->request);
 }
 
 /*!

@@ -66,7 +66,8 @@ DeleteProvisionedConcurrencyConfigResponse::DeleteProvisionedConcurrencyConfigRe
  */
 const DeleteProvisionedConcurrencyConfigRequest * DeleteProvisionedConcurrencyConfigResponse::request() const
 {
-    return static_cast<const DeleteProvisionedConcurrencyConfigRequest *>(LambdaResponse::request());
+    Q_D(const DeleteProvisionedConcurrencyConfigResponse);
+    return static_cast<const DeleteProvisionedConcurrencyConfigRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ GetBasePathMappingsResponse::GetBasePathMappingsResponse(
  */
 const GetBasePathMappingsRequest * GetBasePathMappingsResponse::request() const
 {
-    return static_cast<const GetBasePathMappingsRequest *>(APIGatewayResponse::request());
+    Q_D(const GetBasePathMappingsResponse);
+    return static_cast<const GetBasePathMappingsRequest *>(d->request);
 }
 
 /*!

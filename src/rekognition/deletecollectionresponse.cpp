@@ -56,7 +56,8 @@ DeleteCollectionResponse::DeleteCollectionResponse(
  */
 const DeleteCollectionRequest * DeleteCollectionResponse::request() const
 {
-    return static_cast<const DeleteCollectionRequest *>(RekognitionResponse::request());
+    Q_D(const DeleteCollectionResponse);
+    return static_cast<const DeleteCollectionRequest *>(d->request);
 }
 
 /*!

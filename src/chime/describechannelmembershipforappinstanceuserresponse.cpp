@@ -98,7 +98,8 @@ DescribeChannelMembershipForAppInstanceUserResponse::DescribeChannelMembershipFo
  */
 const DescribeChannelMembershipForAppInstanceUserRequest * DescribeChannelMembershipForAppInstanceUserResponse::request() const
 {
-    return static_cast<const DescribeChannelMembershipForAppInstanceUserRequest *>(ChimeResponse::request());
+    Q_D(const DescribeChannelMembershipForAppInstanceUserResponse);
+    return static_cast<const DescribeChannelMembershipForAppInstanceUserRequest *>(d->request);
 }
 
 /*!

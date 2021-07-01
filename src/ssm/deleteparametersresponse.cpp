@@ -98,7 +98,8 @@ DeleteParametersResponse::DeleteParametersResponse(
  */
 const DeleteParametersRequest * DeleteParametersResponse::request() const
 {
-    return static_cast<const DeleteParametersRequest *>(SsmResponse::request());
+    Q_D(const DeleteParametersResponse);
+    return static_cast<const DeleteParametersRequest *>(d->request);
 }
 
 /*!

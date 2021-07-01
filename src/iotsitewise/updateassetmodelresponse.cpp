@@ -61,7 +61,8 @@ UpdateAssetModelResponse::UpdateAssetModelResponse(
  */
 const UpdateAssetModelRequest * UpdateAssetModelResponse::request() const
 {
-    return static_cast<const UpdateAssetModelRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const UpdateAssetModelResponse);
+    return static_cast<const UpdateAssetModelRequest *>(d->request);
 }
 
 /*!

@@ -57,7 +57,8 @@ DeleteContainerResponse::DeleteContainerResponse(
  */
 const DeleteContainerRequest * DeleteContainerResponse::request() const
 {
-    return static_cast<const DeleteContainerRequest *>(MediaStoreResponse::request());
+    Q_D(const DeleteContainerResponse);
+    return static_cast<const DeleteContainerRequest *>(d->request);
 }
 
 /*!

@@ -78,12 +78,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    OutpostsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit OutpostsClient(OutpostsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(OutpostsClient)
     Q_DISABLE_COPY(OutpostsClient)

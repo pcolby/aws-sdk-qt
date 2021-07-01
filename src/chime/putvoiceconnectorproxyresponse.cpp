@@ -98,7 +98,8 @@ PutVoiceConnectorProxyResponse::PutVoiceConnectorProxyResponse(
  */
 const PutVoiceConnectorProxyRequest * PutVoiceConnectorProxyResponse::request() const
 {
-    return static_cast<const PutVoiceConnectorProxyRequest *>(ChimeResponse::request());
+    Q_D(const PutVoiceConnectorProxyResponse);
+    return static_cast<const PutVoiceConnectorProxyRequest *>(d->request);
 }
 
 /*!

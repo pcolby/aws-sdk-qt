@@ -98,7 +98,8 @@ DeregisterPatchBaselineForPatchGroupResponse::DeregisterPatchBaselineForPatchGro
  */
 const DeregisterPatchBaselineForPatchGroupRequest * DeregisterPatchBaselineForPatchGroupResponse::request() const
 {
-    return static_cast<const DeregisterPatchBaselineForPatchGroupRequest *>(SsmResponse::request());
+    Q_D(const DeregisterPatchBaselineForPatchGroupResponse);
+    return static_cast<const DeregisterPatchBaselineForPatchGroupRequest *>(d->request);
 }
 
 /*!

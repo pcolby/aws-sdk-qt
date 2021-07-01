@@ -37,7 +37,7 @@ namespace SageMakerRuntime {
  * Constructs a SageMakerRuntimeResponse object with parent \a parent.
  */
 SageMakerRuntimeResponse::SageMakerRuntimeResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SageMakerRuntimeResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SageMakerRuntimeResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SageMakerRuntimeResponse::SageMakerRuntimeResponse(QObject * const parent)
  * implementation that inherits from SageMakerRuntimeResponsePrivate.
  */
 SageMakerRuntimeResponse::SageMakerRuntimeResponse(SageMakerRuntimeResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SageMakerRuntimeResponse::parseFailure(QIODevice &response)
  * Constructs a SageMakerRuntimeResponsePrivate object with public implementation \a q.
  */
 SageMakerRuntimeResponsePrivate::SageMakerRuntimeResponsePrivate(
-    SageMakerRuntimeResponse * const q) : q_ptr(q)
+    SageMakerRuntimeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

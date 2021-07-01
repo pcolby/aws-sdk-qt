@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    PrometheusServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     PrometheusServiceResponse(PrometheusServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -153,12 +153,6 @@ public slots:
     UpdateSystemTemplateResponse * updateSystemTemplate(const UpdateSystemTemplateRequest &request);
     UploadEntityDefinitionsResponse * uploadEntityDefinitions(const UploadEntityDefinitionsRequest &request);
 
-protected:
-    /// @cond internal
-    IoTThingsGraphClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IoTThingsGraphClient(IoTThingsGraphClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(IoTThingsGraphClient)
     Q_DISABLE_COPY(IoTThingsGraphClient)

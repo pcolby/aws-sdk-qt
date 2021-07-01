@@ -78,7 +78,8 @@ PutInsightSelectorsResponse::PutInsightSelectorsResponse(
  */
 const PutInsightSelectorsRequest * PutInsightSelectorsResponse::request() const
 {
-    return static_cast<const PutInsightSelectorsRequest *>(CloudTrailResponse::request());
+    Q_D(const PutInsightSelectorsResponse);
+    return static_cast<const PutInsightSelectorsRequest *>(d->request);
 }
 
 /*!

@@ -145,7 +145,8 @@ PutResourcePolicyResponse::PutResourcePolicyResponse(
  */
 const PutResourcePolicyRequest * PutResourcePolicyResponse::request() const
 {
-    return static_cast<const PutResourcePolicyRequest *>(NetworkFirewallResponse::request());
+    Q_D(const PutResourcePolicyResponse);
+    return static_cast<const PutResourcePolicyRequest *>(d->request);
 }
 
 /*!

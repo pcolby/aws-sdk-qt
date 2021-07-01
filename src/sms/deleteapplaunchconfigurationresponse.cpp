@@ -68,7 +68,8 @@ DeleteAppLaunchConfigurationResponse::DeleteAppLaunchConfigurationResponse(
  */
 const DeleteAppLaunchConfigurationRequest * DeleteAppLaunchConfigurationResponse::request() const
 {
-    return static_cast<const DeleteAppLaunchConfigurationRequest *>(SmsResponse::request());
+    Q_D(const DeleteAppLaunchConfigurationResponse);
+    return static_cast<const DeleteAppLaunchConfigurationRequest *>(d->request);
 }
 
 /*!

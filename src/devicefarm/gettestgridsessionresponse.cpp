@@ -75,7 +75,8 @@ GetTestGridSessionResponse::GetTestGridSessionResponse(
  */
 const GetTestGridSessionRequest * GetTestGridSessionResponse::request() const
 {
-    return static_cast<const GetTestGridSessionRequest *>(DeviceFarmResponse::request());
+    Q_D(const GetTestGridSessionResponse);
+    return static_cast<const GetTestGridSessionRequest *>(d->request);
 }
 
 /*!

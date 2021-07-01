@@ -20,20 +20,19 @@
 #ifndef QTAWS_ELASTICINFERENCECLIENT_P_H
 #define QTAWS_ELASTICINFERENCECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ElasticInference {
 
 class ElasticInferenceClient;
 
-class ElasticInferenceClientPrivate {
+class ElasticInferenceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ElasticInferenceClientPrivate(ElasticInferenceClient * const q);
-
-protected:
-    ElasticInferenceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticInferenceClient)

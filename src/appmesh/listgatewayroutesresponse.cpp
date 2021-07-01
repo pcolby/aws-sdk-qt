@@ -73,7 +73,8 @@ ListGatewayRoutesResponse::ListGatewayRoutesResponse(
  */
 const ListGatewayRoutesRequest * ListGatewayRoutesResponse::request() const
 {
-    return static_cast<const ListGatewayRoutesRequest *>(AppMeshResponse::request());
+    Q_D(const ListGatewayRoutesResponse);
+    return static_cast<const ListGatewayRoutesRequest *>(d->request);
 }
 
 /*!

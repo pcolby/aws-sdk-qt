@@ -161,7 +161,8 @@ DescribeRdsDbInstancesResponse::DescribeRdsDbInstancesResponse(
  */
 const DescribeRdsDbInstancesRequest * DescribeRdsDbInstancesResponse::request() const
 {
-    return static_cast<const DescribeRdsDbInstancesRequest *>(OpsWorksResponse::request());
+    Q_D(const DescribeRdsDbInstancesResponse);
+    return static_cast<const DescribeRdsDbInstancesRequest *>(d->request);
 }
 
 /*!

@@ -70,7 +70,8 @@ DescribeDataQualityJobDefinitionResponse::DescribeDataQualityJobDefinitionRespon
  */
 const DescribeDataQualityJobDefinitionRequest * DescribeDataQualityJobDefinitionResponse::request() const
 {
-    return static_cast<const DescribeDataQualityJobDefinitionRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeDataQualityJobDefinitionResponse);
+    return static_cast<const DescribeDataQualityJobDefinitionRequest *>(d->request);
 }
 
 /*!

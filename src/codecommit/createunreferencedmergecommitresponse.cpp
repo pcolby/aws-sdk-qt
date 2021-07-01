@@ -439,7 +439,8 @@ CreateUnreferencedMergeCommitResponse::CreateUnreferencedMergeCommitResponse(
  */
 const CreateUnreferencedMergeCommitRequest * CreateUnreferencedMergeCommitResponse::request() const
 {
-    return static_cast<const CreateUnreferencedMergeCommitRequest *>(CodeCommitResponse::request());
+    Q_D(const CreateUnreferencedMergeCommitResponse);
+    return static_cast<const CreateUnreferencedMergeCommitRequest *>(d->request);
 }
 
 /*!

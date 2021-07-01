@@ -93,7 +93,8 @@ StopHumanLoopResponse::StopHumanLoopResponse(
  */
 const StopHumanLoopRequest * StopHumanLoopResponse::request() const
 {
-    return static_cast<const StopHumanLoopRequest *>(AugmentedAIRuntimeResponse::request());
+    Q_D(const StopHumanLoopResponse);
+    return static_cast<const StopHumanLoopRequest *>(d->request);
 }
 
 /*!

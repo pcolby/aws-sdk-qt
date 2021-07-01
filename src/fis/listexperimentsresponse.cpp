@@ -58,7 +58,8 @@ ListExperimentsResponse::ListExperimentsResponse(
  */
 const ListExperimentsRequest * ListExperimentsResponse::request() const
 {
-    return static_cast<const ListExperimentsRequest *>(FisResponse::request());
+    Q_D(const ListExperimentsResponse);
+    return static_cast<const ListExperimentsRequest *>(d->request);
 }
 
 /*!

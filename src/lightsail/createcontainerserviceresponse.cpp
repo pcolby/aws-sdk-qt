@@ -74,7 +74,8 @@ CreateContainerServiceResponse::CreateContainerServiceResponse(
  */
 const CreateContainerServiceRequest * CreateContainerServiceResponse::request() const
 {
-    return static_cast<const CreateContainerServiceRequest *>(LightsailResponse::request());
+    Q_D(const CreateContainerServiceResponse);
+    return static_cast<const CreateContainerServiceRequest *>(d->request);
 }
 
 /*!

@@ -158,16 +158,16 @@ S3ControlClient::S3ControlClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-08-20"),
-    QStringLiteral("s3-control"),
-    QStringLiteral("AWS S3 Control"),
-    QStringLiteral("s3"),
-    parent), d_ptr(new S3ControlClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new S3ControlClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(S3ControlClient);
+    d->apiVersion = QStringLiteral("2018-08-20");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("s3-control");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS S3 Control");
+    d->serviceName = QStringLiteral("s3");
 }
 
 /*!
@@ -186,16 +186,16 @@ S3ControlClient::S3ControlClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-08-20"),
-    QStringLiteral("s3-control"),
-    QStringLiteral("AWS S3 Control"),
-    QStringLiteral("s3"),
-    parent), d_ptr(new S3ControlClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new S3ControlClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(S3ControlClient);
+    d->apiVersion = QStringLiteral("2018-08-20");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("s3-control");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS S3 Control");
+    d->serviceName = QStringLiteral("s3");
 }
 
 /*!
@@ -2109,9 +2109,10 @@ UpdateJobStatusResponse * S3ControlClient::updateJobStatus(const UpdateJobStatus
 /*!
  * Constructs a S3ControlClientPrivate object with public implementation \a q.
  */
-S3ControlClientPrivate::S3ControlClientPrivate(S3ControlClient * const q) : q_ptr(q)
+S3ControlClientPrivate::S3ControlClientPrivate(S3ControlClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace S3Control

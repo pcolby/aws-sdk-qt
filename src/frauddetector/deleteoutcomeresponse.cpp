@@ -58,7 +58,8 @@ DeleteOutcomeResponse::DeleteOutcomeResponse(
  */
 const DeleteOutcomeRequest * DeleteOutcomeResponse::request() const
 {
-    return static_cast<const DeleteOutcomeRequest *>(FraudDetectorResponse::request());
+    Q_D(const DeleteOutcomeResponse);
+    return static_cast<const DeleteOutcomeRequest *>(d->request);
 }
 
 /*!

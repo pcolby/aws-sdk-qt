@@ -58,7 +58,8 @@ RemoveManagedScalingPolicyResponse::RemoveManagedScalingPolicyResponse(
  */
 const RemoveManagedScalingPolicyRequest * RemoveManagedScalingPolicyResponse::request() const
 {
-    return static_cast<const RemoveManagedScalingPolicyRequest *>(EmrResponse::request());
+    Q_D(const RemoveManagedScalingPolicyResponse);
+    return static_cast<const RemoveManagedScalingPolicyRequest *>(d->request);
 }
 
 /*!

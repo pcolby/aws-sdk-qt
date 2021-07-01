@@ -58,7 +58,8 @@ RollbackApplicationResponse::RollbackApplicationResponse(
  */
 const RollbackApplicationRequest * RollbackApplicationResponse::request() const
 {
-    return static_cast<const RollbackApplicationRequest *>(KinesisAnalyticsV2Response::request());
+    Q_D(const RollbackApplicationResponse);
+    return static_cast<const RollbackApplicationRequest *>(d->request);
 }
 
 /*!

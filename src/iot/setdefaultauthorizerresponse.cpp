@@ -82,7 +82,8 @@ SetDefaultAuthorizerResponse::SetDefaultAuthorizerResponse(
  */
 const SetDefaultAuthorizerRequest * SetDefaultAuthorizerResponse::request() const
 {
-    return static_cast<const SetDefaultAuthorizerRequest *>(IoTResponse::request());
+    Q_D(const SetDefaultAuthorizerResponse);
+    return static_cast<const SetDefaultAuthorizerRequest *>(d->request);
 }
 
 /*!

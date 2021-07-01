@@ -82,7 +82,8 @@ DeleteJobResponse::DeleteJobResponse(
  */
 const DeleteJobRequest * DeleteJobResponse::request() const
 {
-    return static_cast<const DeleteJobRequest *>(IoTResponse::request());
+    Q_D(const DeleteJobResponse);
+    return static_cast<const DeleteJobRequest *>(d->request);
 }
 
 /*!

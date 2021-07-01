@@ -82,7 +82,8 @@ DescribeAuditTaskResponse::DescribeAuditTaskResponse(
  */
 const DescribeAuditTaskRequest * DescribeAuditTaskResponse::request() const
 {
-    return static_cast<const DescribeAuditTaskRequest *>(IoTResponse::request());
+    Q_D(const DescribeAuditTaskResponse);
+    return static_cast<const DescribeAuditTaskRequest *>(d->request);
 }
 
 /*!

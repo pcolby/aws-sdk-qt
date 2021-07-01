@@ -37,7 +37,7 @@ namespace CloudFront {
  * Constructs a CloudFrontResponse object with parent \a parent.
  */
 CloudFrontResponse::CloudFrontResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CloudFrontResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CloudFrontResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CloudFrontResponse::CloudFrontResponse(QObject * const parent)
  * implementation that inherits from CloudFrontResponsePrivate.
  */
 CloudFrontResponse::CloudFrontResponse(CloudFrontResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CloudFrontResponse::parseFailure(QIODevice &response)
  * Constructs a CloudFrontResponsePrivate object with public implementation \a q.
  */
 CloudFrontResponsePrivate::CloudFrontResponsePrivate(
-    CloudFrontResponse * const q) : q_ptr(q)
+    CloudFrontResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

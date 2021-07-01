@@ -105,12 +105,6 @@ public slots:
     UpdateServerResponse * updateServer(const UpdateServerRequest &request);
     UpdateServerEngineAttributesResponse * updateServerEngineAttributes(const UpdateServerEngineAttributesRequest &request);
 
-protected:
-    /// @cond internal
-    OpsWorksCMClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit OpsWorksCMClient(OpsWorksCMClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(OpsWorksCMClient)
     Q_DISABLE_COPY(OpsWorksCMClient)

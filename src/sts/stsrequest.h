@@ -66,8 +66,7 @@ public:
 
 protected:
     /// @cond internal
-    StsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit StsRequest(StsRequestPrivate * const d);
+    StsRequest(StsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -62,7 +62,8 @@ PutImageScanningConfigurationResponse::PutImageScanningConfigurationResponse(
  */
 const PutImageScanningConfigurationRequest * PutImageScanningConfigurationResponse::request() const
 {
-    return static_cast<const PutImageScanningConfigurationRequest *>(EcrResponse::request());
+    Q_D(const PutImageScanningConfigurationResponse);
+    return static_cast<const PutImageScanningConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -154,7 +154,8 @@ DescribeCustomKeyStoresResponse::DescribeCustomKeyStoresResponse(
  */
 const DescribeCustomKeyStoresRequest * DescribeCustomKeyStoresResponse::request() const
 {
-    return static_cast<const DescribeCustomKeyStoresRequest *>(KmsResponse::request());
+    Q_D(const DescribeCustomKeyStoresResponse);
+    return static_cast<const DescribeCustomKeyStoresRequest *>(d->request);
 }
 
 /*!

@@ -69,7 +69,8 @@ DescribeCacheParameterGroupsResponse::DescribeCacheParameterGroupsResponse(
  */
 const DescribeCacheParameterGroupsRequest * DescribeCacheParameterGroupsResponse::request() const
 {
-    return static_cast<const DescribeCacheParameterGroupsRequest *>(ElastiCacheResponse::request());
+    Q_D(const DescribeCacheParameterGroupsResponse);
+    return static_cast<const DescribeCacheParameterGroupsRequest *>(d->request);
 }
 
 /*!

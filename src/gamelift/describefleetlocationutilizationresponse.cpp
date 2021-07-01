@@ -115,7 +115,8 @@ DescribeFleetLocationUtilizationResponse::DescribeFleetLocationUtilizationRespon
  */
 const DescribeFleetLocationUtilizationRequest * DescribeFleetLocationUtilizationResponse::request() const
 {
-    return static_cast<const DescribeFleetLocationUtilizationRequest *>(GameLiftResponse::request());
+    Q_D(const DescribeFleetLocationUtilizationResponse);
+    return static_cast<const DescribeFleetLocationUtilizationRequest *>(d->request);
 }
 
 /*!

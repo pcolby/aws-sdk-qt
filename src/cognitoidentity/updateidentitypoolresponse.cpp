@@ -77,7 +77,8 @@ UpdateIdentityPoolResponse::UpdateIdentityPoolResponse(
  */
 const UpdateIdentityPoolRequest * UpdateIdentityPoolResponse::request() const
 {
-    return static_cast<const UpdateIdentityPoolRequest *>(CognitoIdentityResponse::request());
+    Q_D(const UpdateIdentityPoolResponse);
+    return static_cast<const UpdateIdentityPoolRequest *>(d->request);
 }
 
 /*!

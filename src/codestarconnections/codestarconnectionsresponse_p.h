@@ -20,12 +20,14 @@
 #ifndef QTAWS_CODESTARCONNECTIONSRESPONSE_P_H
 #define QTAWS_CODESTARCONNECTIONSRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace CodeStarconnections {
 
 class CodeStarconnectionsResponse;
 
-class CodeStarconnectionsResponsePrivate {
+class CodeStarconnectionsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    CodeStarconnectionsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeStarconnectionsResponse)

@@ -46,7 +46,7 @@ public:
     virtual QXmlStreamReader::Error xmlParseError() const;
     virtual QString xmlParseErrorString() const;
 
-    virtual const AwsAbstractRequest * request() const;
+    virtual const AwsAbstractRequest * request() const = 0;
 
     /// @todo Find a better home for "QVariantMap toVariant(QXmlStreamReader &xml, ...)"
     static QMultiMap<QString, QVariant> toVariant(QXmlStreamReader &xml,

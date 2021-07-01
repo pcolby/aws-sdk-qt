@@ -82,7 +82,8 @@ DeprecateThingTypeResponse::DeprecateThingTypeResponse(
  */
 const DeprecateThingTypeRequest * DeprecateThingTypeResponse::request() const
 {
-    return static_cast<const DeprecateThingTypeRequest *>(IoTResponse::request());
+    Q_D(const DeprecateThingTypeResponse);
+    return static_cast<const DeprecateThingTypeRequest *>(d->request);
 }
 
 /*!

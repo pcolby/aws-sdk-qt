@@ -63,8 +63,7 @@ public:
 
 protected:
     /// @cond internal
-    AugmentedAIRuntimeRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AugmentedAIRuntimeRequest(AugmentedAIRuntimeRequestPrivate * const d);
+    AugmentedAIRuntimeRequest(AugmentedAIRuntimeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

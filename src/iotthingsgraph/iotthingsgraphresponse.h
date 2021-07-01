@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    IoTThingsGraphResponsePrivate * const d_ptr; ///< Internal d-pointer.
     IoTThingsGraphResponse(IoTThingsGraphResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

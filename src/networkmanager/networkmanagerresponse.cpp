@@ -37,7 +37,7 @@ namespace NetworkManager {
  * Constructs a NetworkManagerResponse object with parent \a parent.
  */
 NetworkManagerResponse::NetworkManagerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new NetworkManagerResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new NetworkManagerResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ NetworkManagerResponse::NetworkManagerResponse(QObject * const parent)
  * implementation that inherits from NetworkManagerResponsePrivate.
  */
 NetworkManagerResponse::NetworkManagerResponse(NetworkManagerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void NetworkManagerResponse::parseFailure(QIODevice &response)
  * Constructs a NetworkManagerResponsePrivate object with public implementation \a q.
  */
 NetworkManagerResponsePrivate::NetworkManagerResponsePrivate(
-    NetworkManagerResponse * const q) : q_ptr(q)
+    NetworkManagerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

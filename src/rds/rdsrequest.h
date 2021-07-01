@@ -195,8 +195,7 @@ public:
 
 protected:
     /// @cond internal
-    RdsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit RdsRequest(RdsRequestPrivate * const d);
+    RdsRequest(RdsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

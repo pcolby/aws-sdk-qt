@@ -60,7 +60,8 @@ DeleteUsagePlanKeyResponse::DeleteUsagePlanKeyResponse(
  */
 const DeleteUsagePlanKeyRequest * DeleteUsagePlanKeyResponse::request() const
 {
-    return static_cast<const DeleteUsagePlanKeyRequest *>(APIGatewayResponse::request());
+    Q_D(const DeleteUsagePlanKeyResponse);
+    return static_cast<const DeleteUsagePlanKeyRequest *>(d->request);
 }
 
 /*!

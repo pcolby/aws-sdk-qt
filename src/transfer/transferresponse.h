@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    TransferResponsePrivate * const d_ptr; ///< Internal d-pointer.
     TransferResponse(TransferResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

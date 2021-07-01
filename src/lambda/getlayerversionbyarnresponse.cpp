@@ -66,7 +66,8 @@ GetLayerVersionByArnResponse::GetLayerVersionByArnResponse(
  */
 const GetLayerVersionByArnRequest * GetLayerVersionByArnResponse::request() const
 {
-    return static_cast<const GetLayerVersionByArnRequest *>(LambdaResponse::request());
+    Q_D(const GetLayerVersionByArnResponse);
+    return static_cast<const GetLayerVersionByArnRequest *>(d->request);
 }
 
 /*!

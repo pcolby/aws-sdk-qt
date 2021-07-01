@@ -75,7 +75,8 @@ DeleteRetentionConfigurationResponse::DeleteRetentionConfigurationResponse(
  */
 const DeleteRetentionConfigurationRequest * DeleteRetentionConfigurationResponse::request() const
 {
-    return static_cast<const DeleteRetentionConfigurationRequest *>(ConfigServiceResponse::request());
+    Q_D(const DeleteRetentionConfigurationResponse);
+    return static_cast<const DeleteRetentionConfigurationRequest *>(d->request);
 }
 
 /*!

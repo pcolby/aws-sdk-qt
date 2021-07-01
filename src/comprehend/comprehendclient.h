@@ -231,12 +231,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateEndpointResponse * updateEndpoint(const UpdateEndpointRequest &request);
 
-protected:
-    /// @cond internal
-    ComprehendClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ComprehendClient(ComprehendClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ComprehendClient)
     Q_DISABLE_COPY(ComprehendClient)

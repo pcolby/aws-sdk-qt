@@ -98,7 +98,8 @@ ResumeSessionResponse::ResumeSessionResponse(
  */
 const ResumeSessionRequest * ResumeSessionResponse::request() const
 {
-    return static_cast<const ResumeSessionRequest *>(SsmResponse::request());
+    Q_D(const ResumeSessionResponse);
+    return static_cast<const ResumeSessionRequest *>(d->request);
 }
 
 /*!

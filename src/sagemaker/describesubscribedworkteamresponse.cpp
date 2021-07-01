@@ -70,7 +70,8 @@ DescribeSubscribedWorkteamResponse::DescribeSubscribedWorkteamResponse(
  */
 const DescribeSubscribedWorkteamRequest * DescribeSubscribedWorkteamResponse::request() const
 {
-    return static_cast<const DescribeSubscribedWorkteamRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeSubscribedWorkteamResponse);
+    return static_cast<const DescribeSubscribedWorkteamRequest *>(d->request);
 }
 
 /*!

@@ -66,7 +66,8 @@ GetEventSourceMappingResponse::GetEventSourceMappingResponse(
  */
 const GetEventSourceMappingRequest * GetEventSourceMappingResponse::request() const
 {
-    return static_cast<const GetEventSourceMappingRequest *>(LambdaResponse::request());
+    Q_D(const GetEventSourceMappingResponse);
+    return static_cast<const GetEventSourceMappingRequest *>(d->request);
 }
 
 /*!

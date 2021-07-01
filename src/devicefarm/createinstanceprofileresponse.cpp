@@ -75,7 +75,8 @@ CreateInstanceProfileResponse::CreateInstanceProfileResponse(
  */
 const CreateInstanceProfileRequest * CreateInstanceProfileResponse::request() const
 {
-    return static_cast<const CreateInstanceProfileRequest *>(DeviceFarmResponse::request());
+    Q_D(const CreateInstanceProfileResponse);
+    return static_cast<const CreateInstanceProfileRequest *>(d->request);
 }
 
 /*!

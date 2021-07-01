@@ -57,7 +57,8 @@ StartInferenceSchedulerResponse::StartInferenceSchedulerResponse(
  */
 const StartInferenceSchedulerRequest * StartInferenceSchedulerResponse::request() const
 {
-    return static_cast<const StartInferenceSchedulerRequest *>(LookoutEquipmentResponse::request());
+    Q_D(const StartInferenceSchedulerResponse);
+    return static_cast<const StartInferenceSchedulerRequest *>(d->request);
 }
 
 /*!

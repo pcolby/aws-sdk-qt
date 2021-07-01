@@ -58,7 +58,8 @@ UpdateDetectorVersionStatusResponse::UpdateDetectorVersionStatusResponse(
  */
 const UpdateDetectorVersionStatusRequest * UpdateDetectorVersionStatusResponse::request() const
 {
-    return static_cast<const UpdateDetectorVersionStatusRequest *>(FraudDetectorResponse::request());
+    Q_D(const UpdateDetectorVersionStatusResponse);
+    return static_cast<const UpdateDetectorVersionStatusRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ ListUniqueProblemsResponse::ListUniqueProblemsResponse(
  */
 const ListUniqueProblemsRequest * ListUniqueProblemsResponse::request() const
 {
-    return static_cast<const ListUniqueProblemsRequest *>(DeviceFarmResponse::request());
+    Q_D(const ListUniqueProblemsResponse);
+    return static_cast<const ListUniqueProblemsRequest *>(d->request);
 }
 
 /*!

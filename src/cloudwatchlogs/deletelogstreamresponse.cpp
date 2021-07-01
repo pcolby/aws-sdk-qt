@@ -84,7 +84,8 @@ DeleteLogStreamResponse::DeleteLogStreamResponse(
  */
 const DeleteLogStreamRequest * DeleteLogStreamResponse::request() const
 {
-    return static_cast<const DeleteLogStreamRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const DeleteLogStreamResponse);
+    return static_cast<const DeleteLogStreamRequest *>(d->request);
 }
 
 /*!

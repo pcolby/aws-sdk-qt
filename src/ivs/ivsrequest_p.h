@@ -20,12 +20,15 @@
 #ifndef QTAWS_IVSREQUEST_P_H
 #define QTAWS_IVSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "ivsrequest.h"
+
 namespace QtAws {
 namespace IVS {
 
 class IvsRequest;
 
-class IvsRequestPrivate {
+class IvsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IvsRequest::Action action; ///< IVS action to be performed.
@@ -36,9 +39,6 @@ public:
     IvsRequestPrivate(const IvsRequestPrivate &other, IvsRequest * const q);
 
     static QString toString(const IvsRequest::Action &action);
-
-protected:
-    IvsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IvsRequest)

@@ -37,7 +37,7 @@ namespace ManagedBlockchain {
  * Constructs a ManagedBlockchainResponse object with parent \a parent.
  */
 ManagedBlockchainResponse::ManagedBlockchainResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ManagedBlockchainResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ManagedBlockchainResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ManagedBlockchainResponse::ManagedBlockchainResponse(QObject * const parent)
  * implementation that inherits from ManagedBlockchainResponsePrivate.
  */
 ManagedBlockchainResponse::ManagedBlockchainResponse(ManagedBlockchainResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ManagedBlockchainResponse::parseFailure(QIODevice &response)
  * Constructs a ManagedBlockchainResponsePrivate object with public implementation \a q.
  */
 ManagedBlockchainResponsePrivate::ManagedBlockchainResponsePrivate(
-    ManagedBlockchainResponse * const q) : q_ptr(q)
+    ManagedBlockchainResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

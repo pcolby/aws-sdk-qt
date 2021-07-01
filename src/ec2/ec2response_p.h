@@ -20,12 +20,14 @@
 #ifndef QTAWS_EC2RESPONSE_P_H
 #define QTAWS_EC2RESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace EC2 {
 
 class Ec2Response;
 
-class Ec2ResponsePrivate {
+class Ec2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    Ec2Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Ec2Response)

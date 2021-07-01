@@ -58,7 +58,8 @@ GetDeploymentStatusResponse::GetDeploymentStatusResponse(
  */
 const GetDeploymentStatusRequest * GetDeploymentStatusResponse::request() const
 {
-    return static_cast<const GetDeploymentStatusRequest *>(GreengrassResponse::request());
+    Q_D(const GetDeploymentStatusResponse);
+    return static_cast<const GetDeploymentStatusRequest *>(d->request);
 }
 
 /*!

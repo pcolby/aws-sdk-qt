@@ -69,7 +69,8 @@ UnshareDirectoryResponse::UnshareDirectoryResponse(
  */
 const UnshareDirectoryRequest * UnshareDirectoryResponse::request() const
 {
-    return static_cast<const UnshareDirectoryRequest *>(DirectoryServiceResponse::request());
+    Q_D(const UnshareDirectoryResponse);
+    return static_cast<const UnshareDirectoryRequest *>(d->request);
 }
 
 /*!

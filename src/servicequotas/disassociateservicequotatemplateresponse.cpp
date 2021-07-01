@@ -58,7 +58,8 @@ DisassociateServiceQuotaTemplateResponse::DisassociateServiceQuotaTemplateRespon
  */
 const DisassociateServiceQuotaTemplateRequest * DisassociateServiceQuotaTemplateResponse::request() const
 {
-    return static_cast<const DisassociateServiceQuotaTemplateRequest *>(ServiceQuotasResponse::request());
+    Q_D(const DisassociateServiceQuotaTemplateResponse);
+    return static_cast<const DisassociateServiceQuotaTemplateRequest *>(d->request);
 }
 
 /*!

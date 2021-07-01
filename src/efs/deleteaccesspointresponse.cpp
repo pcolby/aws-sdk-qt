@@ -62,7 +62,8 @@ DeleteAccessPointResponse::DeleteAccessPointResponse(
  */
 const DeleteAccessPointRequest * DeleteAccessPointResponse::request() const
 {
-    return static_cast<const DeleteAccessPointRequest *>(EfsResponse::request());
+    Q_D(const DeleteAccessPointResponse);
+    return static_cast<const DeleteAccessPointRequest *>(d->request);
 }
 
 /*!

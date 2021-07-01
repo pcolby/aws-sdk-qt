@@ -37,7 +37,7 @@ namespace SFN {
  * Constructs a SfnResponse object with parent \a parent.
  */
 SfnResponse::SfnResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SfnResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SfnResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SfnResponse::SfnResponse(QObject * const parent)
  * implementation that inherits from SfnResponsePrivate.
  */
 SfnResponse::SfnResponse(SfnResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SfnResponse::parseFailure(QIODevice &response)
  * Constructs a SfnResponsePrivate object with public implementation \a q.
  */
 SfnResponsePrivate::SfnResponsePrivate(
-    SfnResponse * const q) : q_ptr(q)
+    SfnResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

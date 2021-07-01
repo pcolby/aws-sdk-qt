@@ -58,7 +58,8 @@ GetDevEndpointResponse::GetDevEndpointResponse(
  */
 const GetDevEndpointRequest * GetDevEndpointResponse::request() const
 {
-    return static_cast<const GetDevEndpointRequest *>(GlueResponse::request());
+    Q_D(const GetDevEndpointResponse);
+    return static_cast<const GetDevEndpointRequest *>(d->request);
 }
 
 /*!

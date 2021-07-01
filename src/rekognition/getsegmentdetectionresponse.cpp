@@ -56,7 +56,8 @@ GetSegmentDetectionResponse::GetSegmentDetectionResponse(
  */
 const GetSegmentDetectionRequest * GetSegmentDetectionResponse::request() const
 {
-    return static_cast<const GetSegmentDetectionRequest *>(RekognitionResponse::request());
+    Q_D(const GetSegmentDetectionResponse);
+    return static_cast<const GetSegmentDetectionRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ ResolveRoomResponse::ResolveRoomResponse(
  */
 const ResolveRoomRequest * ResolveRoomResponse::request() const
 {
-    return static_cast<const ResolveRoomRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const ResolveRoomResponse);
+    return static_cast<const ResolveRoomRequest *>(d->request);
 }
 
 /*!

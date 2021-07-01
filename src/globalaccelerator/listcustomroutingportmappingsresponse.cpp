@@ -218,7 +218,8 @@ ListCustomRoutingPortMappingsResponse::ListCustomRoutingPortMappingsResponse(
  */
 const ListCustomRoutingPortMappingsRequest * ListCustomRoutingPortMappingsResponse::request() const
 {
-    return static_cast<const ListCustomRoutingPortMappingsRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const ListCustomRoutingPortMappingsResponse);
+    return static_cast<const ListCustomRoutingPortMappingsRequest *>(d->request);
 }
 
 /*!

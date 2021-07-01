@@ -161,7 +161,8 @@ UpdateRdsDbInstanceResponse::UpdateRdsDbInstanceResponse(
  */
 const UpdateRdsDbInstanceRequest * UpdateRdsDbInstanceResponse::request() const
 {
-    return static_cast<const UpdateRdsDbInstanceRequest *>(OpsWorksResponse::request());
+    Q_D(const UpdateRdsDbInstanceResponse);
+    return static_cast<const UpdateRdsDbInstanceRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ DeleteProjectVersionResponse::DeleteProjectVersionResponse(
  */
 const DeleteProjectVersionRequest * DeleteProjectVersionResponse::request() const
 {
-    return static_cast<const DeleteProjectVersionRequest *>(RekognitionResponse::request());
+    Q_D(const DeleteProjectVersionResponse);
+    return static_cast<const DeleteProjectVersionRequest *>(d->request);
 }
 
 /*!

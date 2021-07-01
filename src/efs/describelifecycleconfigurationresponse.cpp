@@ -62,7 +62,8 @@ DescribeLifecycleConfigurationResponse::DescribeLifecycleConfigurationResponse(
  */
 const DescribeLifecycleConfigurationRequest * DescribeLifecycleConfigurationResponse::request() const
 {
-    return static_cast<const DescribeLifecycleConfigurationRequest *>(EfsResponse::request());
+    Q_D(const DescribeLifecycleConfigurationResponse);
+    return static_cast<const DescribeLifecycleConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ StartConfigRulesEvaluationResponse::StartConfigRulesEvaluationResponse(
  */
 const StartConfigRulesEvaluationRequest * StartConfigRulesEvaluationResponse::request() const
 {
-    return static_cast<const StartConfigRulesEvaluationRequest *>(ConfigServiceResponse::request());
+    Q_D(const StartConfigRulesEvaluationResponse);
+    return static_cast<const StartConfigRulesEvaluationRequest *>(d->request);
 }
 
 /*!

@@ -64,7 +64,8 @@ DisassociateResourceSharePermissionResponse::DisassociateResourceSharePermission
  */
 const DisassociateResourceSharePermissionRequest * DisassociateResourceSharePermissionResponse::request() const
 {
-    return static_cast<const DisassociateResourceSharePermissionRequest *>(RamResponse::request());
+    Q_D(const DisassociateResourceSharePermissionResponse);
+    return static_cast<const DisassociateResourceSharePermissionRequest *>(d->request);
 }
 
 /*!

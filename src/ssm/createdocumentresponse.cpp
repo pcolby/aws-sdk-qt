@@ -98,7 +98,8 @@ CreateDocumentResponse::CreateDocumentResponse(
  */
 const CreateDocumentRequest * CreateDocumentResponse::request() const
 {
-    return static_cast<const CreateDocumentRequest *>(SsmResponse::request());
+    Q_D(const CreateDocumentResponse);
+    return static_cast<const CreateDocumentRequest *>(d->request);
 }
 
 /*!

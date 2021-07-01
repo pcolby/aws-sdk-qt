@@ -60,7 +60,8 @@ TestInvokeMethodResponse::TestInvokeMethodResponse(
  */
 const TestInvokeMethodRequest * TestInvokeMethodResponse::request() const
 {
-    return static_cast<const TestInvokeMethodRequest *>(APIGatewayResponse::request());
+    Q_D(const TestInvokeMethodResponse);
+    return static_cast<const TestInvokeMethodRequest *>(d->request);
 }
 
 /*!

@@ -61,7 +61,8 @@ CopyProductResponse::CopyProductResponse(
  */
 const CopyProductRequest * CopyProductResponse::request() const
 {
-    return static_cast<const CopyProductRequest *>(ServiceCatalogResponse::request());
+    Q_D(const CopyProductResponse);
+    return static_cast<const CopyProductRequest *>(d->request);
 }
 
 /*!

@@ -68,7 +68,8 @@ GetPredictiveScalingForecastResponse::GetPredictiveScalingForecastResponse(
  */
 const GetPredictiveScalingForecastRequest * GetPredictiveScalingForecastResponse::request() const
 {
-    return static_cast<const GetPredictiveScalingForecastRequest *>(AutoScalingResponse::request());
+    Q_D(const GetPredictiveScalingForecastResponse);
+    return static_cast<const GetPredictiveScalingForecastRequest *>(d->request);
 }
 
 /*!

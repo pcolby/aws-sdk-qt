@@ -67,7 +67,8 @@ UpdateReportDefinitionResponse::UpdateReportDefinitionResponse(
  */
 const UpdateReportDefinitionRequest * UpdateReportDefinitionResponse::request() const
 {
-    return static_cast<const UpdateReportDefinitionRequest *>(ApplicationCostProfilerResponse::request());
+    Q_D(const UpdateReportDefinitionResponse);
+    return static_cast<const UpdateReportDefinitionRequest *>(d->request);
 }
 
 /*!

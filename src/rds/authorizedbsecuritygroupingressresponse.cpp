@@ -119,7 +119,8 @@ AuthorizeDBSecurityGroupIngressResponse::AuthorizeDBSecurityGroupIngressResponse
  */
 const AuthorizeDBSecurityGroupIngressRequest * AuthorizeDBSecurityGroupIngressResponse::request() const
 {
-    return static_cast<const AuthorizeDBSecurityGroupIngressRequest *>(RdsResponse::request());
+    Q_D(const AuthorizeDBSecurityGroupIngressResponse);
+    return static_cast<const AuthorizeDBSecurityGroupIngressRequest *>(d->request);
 }
 
 /*!

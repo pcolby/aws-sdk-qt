@@ -87,7 +87,8 @@ DeleteVpcResponse::DeleteVpcResponse(
  */
 const DeleteVpcRequest * DeleteVpcResponse::request() const
 {
-    return static_cast<const DeleteVpcRequest *>(Ec2Response::request());
+    Q_D(const DeleteVpcResponse);
+    return static_cast<const DeleteVpcRequest *>(d->request);
 }
 
 /*!

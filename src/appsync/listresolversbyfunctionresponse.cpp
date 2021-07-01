@@ -56,7 +56,8 @@ ListResolversByFunctionResponse::ListResolversByFunctionResponse(
  */
 const ListResolversByFunctionRequest * ListResolversByFunctionResponse::request() const
 {
-    return static_cast<const ListResolversByFunctionRequest *>(AppSyncResponse::request());
+    Q_D(const ListResolversByFunctionResponse);
+    return static_cast<const ListResolversByFunctionRequest *>(d->request);
 }
 
 /*!

@@ -230,16 +230,16 @@ CloudFrontClient::CloudFrontClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-05-31"),
-    QStringLiteral("cloudfront"),
-    QStringLiteral("Amazon CloudFront"),
-    QStringLiteral("cloudfront"),
-    parent), d_ptr(new CloudFrontClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudFrontClient);
+    d->apiVersion = QStringLiteral("2020-05-31");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudfront");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudFront");
+    d->serviceName = QStringLiteral("cloudfront");
 }
 
 /*!
@@ -258,16 +258,16 @@ CloudFrontClient::CloudFrontClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-05-31"),
-    QStringLiteral("cloudfront"),
-    QStringLiteral("Amazon CloudFront"),
-    QStringLiteral("cloudfront"),
-    parent), d_ptr(new CloudFrontClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudFrontClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudFrontClient);
+    d->apiVersion = QStringLiteral("2020-05-31");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudfront");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudFront");
+    d->serviceName = QStringLiteral("cloudfront");
 }
 
 /*!
@@ -1941,9 +1941,10 @@ UpdateStreamingDistributionResponse * CloudFrontClient::updateStreamingDistribut
 /*!
  * Constructs a CloudFrontClientPrivate object with public implementation \a q.
  */
-CloudFrontClientPrivate::CloudFrontClientPrivate(CloudFrontClient * const q) : q_ptr(q)
+CloudFrontClientPrivate::CloudFrontClientPrivate(CloudFrontClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudFront

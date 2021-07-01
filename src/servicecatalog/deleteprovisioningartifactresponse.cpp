@@ -61,7 +61,8 @@ DeleteProvisioningArtifactResponse::DeleteProvisioningArtifactResponse(
  */
 const DeleteProvisioningArtifactRequest * DeleteProvisioningArtifactResponse::request() const
 {
-    return static_cast<const DeleteProvisioningArtifactRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DeleteProvisioningArtifactResponse);
+    return static_cast<const DeleteProvisioningArtifactRequest *>(d->request);
 }
 
 /*!

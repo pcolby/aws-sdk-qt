@@ -64,7 +64,8 @@ UpdateTaskExecutionResponse::UpdateTaskExecutionResponse(
  */
 const UpdateTaskExecutionRequest * UpdateTaskExecutionResponse::request() const
 {
-    return static_cast<const UpdateTaskExecutionRequest *>(DataSyncResponse::request());
+    Q_D(const UpdateTaskExecutionResponse);
+    return static_cast<const UpdateTaskExecutionRequest *>(d->request);
 }
 
 /*!

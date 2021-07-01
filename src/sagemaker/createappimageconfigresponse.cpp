@@ -70,7 +70,8 @@ CreateAppImageConfigResponse::CreateAppImageConfigResponse(
  */
 const CreateAppImageConfigRequest * CreateAppImageConfigResponse::request() const
 {
-    return static_cast<const CreateAppImageConfigRequest *>(SageMakerResponse::request());
+    Q_D(const CreateAppImageConfigResponse);
+    return static_cast<const CreateAppImageConfigRequest *>(d->request);
 }
 
 /*!

@@ -74,7 +74,8 @@ DescribeServiceIntegrationResponse::DescribeServiceIntegrationResponse(
  */
 const DescribeServiceIntegrationRequest * DescribeServiceIntegrationResponse::request() const
 {
-    return static_cast<const DescribeServiceIntegrationRequest *>(DevOpsGuruResponse::request());
+    Q_D(const DescribeServiceIntegrationResponse);
+    return static_cast<const DescribeServiceIntegrationRequest *>(d->request);
 }
 
 /*!

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    KinesisAnalyticsV2ResponsePrivate * const d_ptr; ///< Internal d-pointer.
     KinesisAnalyticsV2Response(KinesisAnalyticsV2ResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -75,7 +75,8 @@ DeleteDeliveryChannelResponse::DeleteDeliveryChannelResponse(
  */
 const DeleteDeliveryChannelRequest * DeleteDeliveryChannelResponse::request() const
 {
-    return static_cast<const DeleteDeliveryChannelRequest *>(ConfigServiceResponse::request());
+    Q_D(const DeleteDeliveryChannelResponse);
+    return static_cast<const DeleteDeliveryChannelRequest *>(d->request);
 }
 
 /*!

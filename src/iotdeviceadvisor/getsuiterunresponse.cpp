@@ -62,7 +62,8 @@ GetSuiteRunResponse::GetSuiteRunResponse(
  */
 const GetSuiteRunRequest * GetSuiteRunResponse::request() const
 {
-    return static_cast<const GetSuiteRunRequest *>(IoTDeviceAdvisorResponse::request());
+    Q_D(const GetSuiteRunResponse);
+    return static_cast<const GetSuiteRunRequest *>(d->request);
 }
 
 /*!

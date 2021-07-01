@@ -70,7 +70,8 @@ DescribeExperimentResponse::DescribeExperimentResponse(
  */
 const DescribeExperimentRequest * DescribeExperimentResponse::request() const
 {
-    return static_cast<const DescribeExperimentRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeExperimentResponse);
+    return static_cast<const DescribeExperimentRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ ListChannelBansResponse::ListChannelBansResponse(
  */
 const ListChannelBansRequest * ListChannelBansResponse::request() const
 {
-    return static_cast<const ListChannelBansRequest *>(ChimeResponse::request());
+    Q_D(const ListChannelBansResponse);
+    return static_cast<const ListChannelBansRequest *>(d->request);
 }
 
 /*!

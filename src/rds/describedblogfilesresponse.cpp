@@ -119,7 +119,8 @@ DescribeDBLogFilesResponse::DescribeDBLogFilesResponse(
  */
 const DescribeDBLogFilesRequest * DescribeDBLogFilesResponse::request() const
 {
-    return static_cast<const DescribeDBLogFilesRequest *>(RdsResponse::request());
+    Q_D(const DescribeDBLogFilesResponse);
+    return static_cast<const DescribeDBLogFilesRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,15 @@
 #ifndef QTAWS_DEVICEFARMREQUEST_P_H
 #define QTAWS_DEVICEFARMREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "devicefarmrequest.h"
+
 namespace QtAws {
 namespace DeviceFarm {
 
 class DeviceFarmRequest;
 
-class DeviceFarmRequestPrivate {
+class DeviceFarmRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DeviceFarmRequest::Action action; ///< DeviceFarm action to be performed.
@@ -36,9 +39,6 @@ public:
     DeviceFarmRequestPrivate(const DeviceFarmRequestPrivate &other, DeviceFarmRequest * const q);
 
     static QString toString(const DeviceFarmRequest::Action &action);
-
-protected:
-    DeviceFarmRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DeviceFarmRequest)

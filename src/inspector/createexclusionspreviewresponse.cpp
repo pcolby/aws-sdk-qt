@@ -60,7 +60,8 @@ CreateExclusionsPreviewResponse::CreateExclusionsPreviewResponse(
  */
 const CreateExclusionsPreviewRequest * CreateExclusionsPreviewResponse::request() const
 {
-    return static_cast<const CreateExclusionsPreviewRequest *>(InspectorResponse::request());
+    Q_D(const CreateExclusionsPreviewResponse);
+    return static_cast<const CreateExclusionsPreviewRequest *>(d->request);
 }
 
 /*!

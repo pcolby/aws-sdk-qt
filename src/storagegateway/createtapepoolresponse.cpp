@@ -124,7 +124,8 @@ CreateTapePoolResponse::CreateTapePoolResponse(
  */
 const CreateTapePoolRequest * CreateTapePoolResponse::request() const
 {
-    return static_cast<const CreateTapePoolRequest *>(StorageGatewayResponse::request());
+    Q_D(const CreateTapePoolResponse);
+    return static_cast<const CreateTapePoolRequest *>(d->request);
 }
 
 /*!

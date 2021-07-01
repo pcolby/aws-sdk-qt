@@ -78,7 +78,8 @@ ListConnectionsResponse::ListConnectionsResponse(
  */
 const ListConnectionsRequest * ListConnectionsResponse::request() const
 {
-    return static_cast<const ListConnectionsRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const ListConnectionsResponse);
+    return static_cast<const ListConnectionsRequest *>(d->request);
 }
 
 /*!

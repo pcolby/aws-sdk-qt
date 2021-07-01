@@ -56,7 +56,8 @@ GetReplicationConfigurationResponse::GetReplicationConfigurationResponse(
  */
 const GetReplicationConfigurationRequest * GetReplicationConfigurationResponse::request() const
 {
-    return static_cast<const GetReplicationConfigurationRequest *>(mgnResponse::request());
+    Q_D(const GetReplicationConfigurationResponse);
+    return static_cast<const GetReplicationConfigurationRequest *>(d->request);
 }
 
 /*!

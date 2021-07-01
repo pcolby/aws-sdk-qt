@@ -66,7 +66,8 @@ SetIdentityNotificationTopicResponse::SetIdentityNotificationTopicResponse(
  */
 const SetIdentityNotificationTopicRequest * SetIdentityNotificationTopicResponse::request() const
 {
-    return static_cast<const SetIdentityNotificationTopicRequest *>(SesResponse::request());
+    Q_D(const SetIdentityNotificationTopicResponse);
+    return static_cast<const SetIdentityNotificationTopicRequest *>(d->request);
 }
 
 /*!

@@ -218,7 +218,8 @@ DescribeListenerResponse::DescribeListenerResponse(
  */
 const DescribeListenerRequest * DescribeListenerResponse::request() const
 {
-    return static_cast<const DescribeListenerRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const DescribeListenerResponse);
+    return static_cast<const DescribeListenerRequest *>(d->request);
 }
 
 /*!

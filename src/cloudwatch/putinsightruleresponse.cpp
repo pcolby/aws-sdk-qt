@@ -69,7 +69,8 @@ PutInsightRuleResponse::PutInsightRuleResponse(
  */
 const PutInsightRuleRequest * PutInsightRuleResponse::request() const
 {
-    return static_cast<const PutInsightRuleRequest *>(CloudWatchResponse::request());
+    Q_D(const PutInsightRuleResponse);
+    return static_cast<const PutInsightRuleRequest *>(d->request);
 }
 
 /*!

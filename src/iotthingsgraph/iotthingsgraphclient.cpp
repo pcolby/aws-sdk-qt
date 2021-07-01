@@ -140,16 +140,16 @@ IoTThingsGraphClient::IoTThingsGraphClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-09-06"),
-    QStringLiteral("iotthingsgraph"),
-    QStringLiteral("AWS IoT Things Graph"),
-    QStringLiteral("iotthingsgraph"),
-    parent), d_ptr(new IoTThingsGraphClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoTThingsGraphClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoTThingsGraphClient);
+    d->apiVersion = QStringLiteral("2018-09-06");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("iotthingsgraph");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS IoT Things Graph");
+    d->serviceName = QStringLiteral("iotthingsgraph");
 }
 
 /*!
@@ -168,16 +168,16 @@ IoTThingsGraphClient::IoTThingsGraphClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-09-06"),
-    QStringLiteral("iotthingsgraph"),
-    QStringLiteral("AWS IoT Things Graph"),
-    QStringLiteral("iotthingsgraph"),
-    parent), d_ptr(new IoTThingsGraphClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoTThingsGraphClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoTThingsGraphClient);
+    d->apiVersion = QStringLiteral("2018-09-06");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("iotthingsgraph");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS IoT Things Graph");
+    d->serviceName = QStringLiteral("iotthingsgraph");
 }
 
 /*!
@@ -776,9 +776,10 @@ UploadEntityDefinitionsResponse * IoTThingsGraphClient::uploadEntityDefinitions(
 /*!
  * Constructs a IoTThingsGraphClientPrivate object with public implementation \a q.
  */
-IoTThingsGraphClientPrivate::IoTThingsGraphClientPrivate(IoTThingsGraphClient * const q) : q_ptr(q)
+IoTThingsGraphClientPrivate::IoTThingsGraphClientPrivate(IoTThingsGraphClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IoTThingsGraph

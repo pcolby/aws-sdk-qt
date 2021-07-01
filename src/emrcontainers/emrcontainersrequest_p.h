@@ -20,12 +20,15 @@
 #ifndef QTAWS_EMRCONTAINERSREQUEST_P_H
 #define QTAWS_EMRCONTAINERSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "emrcontainersrequest.h"
+
 namespace QtAws {
 namespace EMRContainers {
 
 class EMRContainersRequest;
 
-class EMRContainersRequestPrivate {
+class EMRContainersRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EMRContainersRequest::Action action; ///< EMRContainers action to be performed.
@@ -36,9 +39,6 @@ public:
     EMRContainersRequestPrivate(const EMRContainersRequestPrivate &other, EMRContainersRequest * const q);
 
     static QString toString(const EMRContainersRequest::Action &action);
-
-protected:
-    EMRContainersRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EMRContainersRequest)

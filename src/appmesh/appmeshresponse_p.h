@@ -20,12 +20,14 @@
 #ifndef QTAWS_APPMESHRESPONSE_P_H
 #define QTAWS_APPMESHRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace AppMesh {
 
 class AppMeshResponse;
 
-class AppMeshResponsePrivate {
+class AppMeshResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    AppMeshResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppMeshResponse)

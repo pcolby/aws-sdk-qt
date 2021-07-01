@@ -68,7 +68,8 @@ DeleteAttributesResponse::DeleteAttributesResponse(
  */
 const DeleteAttributesRequest * DeleteAttributesResponse::request() const
 {
-    return static_cast<const DeleteAttributesRequest *>(SimpleDBResponse::request());
+    Q_D(const DeleteAttributesResponse);
+    return static_cast<const DeleteAttributesRequest *>(d->request);
 }
 
 /*!

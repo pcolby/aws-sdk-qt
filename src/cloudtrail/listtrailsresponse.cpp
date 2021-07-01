@@ -78,7 +78,8 @@ ListTrailsResponse::ListTrailsResponse(
  */
 const ListTrailsRequest * ListTrailsResponse::request() const
 {
-    return static_cast<const ListTrailsRequest *>(CloudTrailResponse::request());
+    Q_D(const ListTrailsResponse);
+    return static_cast<const ListTrailsRequest *>(d->request);
 }
 
 /*!

@@ -83,7 +83,8 @@ SetLoadBalancerListenerSSLCertificateResponse::SetLoadBalancerListenerSSLCertifi
  */
 const SetLoadBalancerListenerSSLCertificateRequest * SetLoadBalancerListenerSSLCertificateResponse::request() const
 {
-    return static_cast<const SetLoadBalancerListenerSSLCertificateRequest *>(ElasticLoadBalancingResponse::request());
+    Q_D(const SetLoadBalancerListenerSSLCertificateResponse);
+    return static_cast<const SetLoadBalancerListenerSSLCertificateRequest *>(d->request);
 }
 
 /*!

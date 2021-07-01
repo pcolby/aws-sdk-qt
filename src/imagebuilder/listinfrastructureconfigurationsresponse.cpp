@@ -58,7 +58,8 @@ ListInfrastructureConfigurationsResponse::ListInfrastructureConfigurationsRespon
  */
 const ListInfrastructureConfigurationsRequest * ListInfrastructureConfigurationsResponse::request() const
 {
-    return static_cast<const ListInfrastructureConfigurationsRequest *>(imagebuilderResponse::request());
+    Q_D(const ListInfrastructureConfigurationsResponse);
+    return static_cast<const ListInfrastructureConfigurationsRequest *>(d->request);
 }
 
 /*!

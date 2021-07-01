@@ -69,7 +69,8 @@ IssueCertificateResponse::IssueCertificateResponse(
  */
 const IssueCertificateRequest * IssueCertificateResponse::request() const
 {
-    return static_cast<const IssueCertificateRequest *>(AcmpcaResponse::request());
+    Q_D(const IssueCertificateResponse);
+    return static_cast<const IssueCertificateRequest *>(d->request);
 }
 
 /*!

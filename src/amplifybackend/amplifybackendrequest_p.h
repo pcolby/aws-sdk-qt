@@ -20,12 +20,15 @@
 #ifndef QTAWS_AMPLIFYBACKENDREQUEST_P_H
 #define QTAWS_AMPLIFYBACKENDREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "amplifybackendrequest.h"
+
 namespace QtAws {
 namespace AmplifyBackend {
 
 class AmplifyBackendRequest;
 
-class AmplifyBackendRequestPrivate {
+class AmplifyBackendRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AmplifyBackendRequest::Action action; ///< AmplifyBackend action to be performed.
@@ -36,9 +39,6 @@ public:
     AmplifyBackendRequestPrivate(const AmplifyBackendRequestPrivate &other, AmplifyBackendRequest * const q);
 
     static QString toString(const AmplifyBackendRequest::Action &action);
-
-protected:
-    AmplifyBackendRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AmplifyBackendRequest)

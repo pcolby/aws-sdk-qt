@@ -20,12 +20,15 @@
 #ifndef QTAWS_APPLICATIONINSIGHTSREQUEST_P_H
 #define QTAWS_APPLICATIONINSIGHTSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "applicationinsightsrequest.h"
+
 namespace QtAws {
 namespace ApplicationInsights {
 
 class ApplicationInsightsRequest;
 
-class ApplicationInsightsRequestPrivate {
+class ApplicationInsightsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ApplicationInsightsRequest::Action action; ///< ApplicationInsights action to be performed.
@@ -36,9 +39,6 @@ public:
     ApplicationInsightsRequestPrivate(const ApplicationInsightsRequestPrivate &other, ApplicationInsightsRequest * const q);
 
     static QString toString(const ApplicationInsightsRequest::Action &action);
-
-protected:
-    ApplicationInsightsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApplicationInsightsRequest)

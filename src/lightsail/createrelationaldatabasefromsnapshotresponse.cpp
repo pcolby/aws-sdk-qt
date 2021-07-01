@@ -74,7 +74,8 @@ CreateRelationalDatabaseFromSnapshotResponse::CreateRelationalDatabaseFromSnapsh
  */
 const CreateRelationalDatabaseFromSnapshotRequest * CreateRelationalDatabaseFromSnapshotResponse::request() const
 {
-    return static_cast<const CreateRelationalDatabaseFromSnapshotRequest *>(LightsailResponse::request());
+    Q_D(const CreateRelationalDatabaseFromSnapshotResponse);
+    return static_cast<const CreateRelationalDatabaseFromSnapshotRequest *>(d->request);
 }
 
 /*!

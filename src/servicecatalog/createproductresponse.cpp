@@ -61,7 +61,8 @@ CreateProductResponse::CreateProductResponse(
  */
 const CreateProductRequest * CreateProductResponse::request() const
 {
-    return static_cast<const CreateProductRequest *>(ServiceCatalogResponse::request());
+    Q_D(const CreateProductResponse);
+    return static_cast<const CreateProductRequest *>(d->request);
 }
 
 /*!

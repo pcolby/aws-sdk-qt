@@ -62,7 +62,8 @@ TagPolicyResponse::TagPolicyResponse(
  */
 const TagPolicyRequest * TagPolicyResponse::request() const
 {
-    return static_cast<const TagPolicyRequest *>(IamResponse::request());
+    Q_D(const TagPolicyResponse);
+    return static_cast<const TagPolicyRequest *>(d->request);
 }
 
 /*!

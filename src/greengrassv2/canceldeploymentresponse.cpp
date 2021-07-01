@@ -72,7 +72,8 @@ CancelDeploymentResponse::CancelDeploymentResponse(
  */
 const CancelDeploymentRequest * CancelDeploymentResponse::request() const
 {
-    return static_cast<const CancelDeploymentRequest *>(GreengrassV2Response::request());
+    Q_D(const CancelDeploymentResponse);
+    return static_cast<const CancelDeploymentRequest *>(d->request);
 }
 
 /*!

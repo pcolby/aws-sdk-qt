@@ -99,7 +99,8 @@ TagResponse::TagResponse(
  */
 const TagRequest * TagResponse::request() const
 {
-    return static_cast<const TagRequest *>(ResourceGroupsResponse::request());
+    Q_D(const TagResponse);
+    return static_cast<const TagRequest *>(d->request);
 }
 
 /*!

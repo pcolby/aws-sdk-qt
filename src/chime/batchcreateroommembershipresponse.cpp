@@ -98,7 +98,8 @@ BatchCreateRoomMembershipResponse::BatchCreateRoomMembershipResponse(
  */
 const BatchCreateRoomMembershipRequest * BatchCreateRoomMembershipResponse::request() const
 {
-    return static_cast<const BatchCreateRoomMembershipRequest *>(ChimeResponse::request());
+    Q_D(const BatchCreateRoomMembershipResponse);
+    return static_cast<const BatchCreateRoomMembershipRequest *>(d->request);
 }
 
 /*!

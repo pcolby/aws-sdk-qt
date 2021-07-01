@@ -87,7 +87,8 @@ CreateClientVpnEndpointResponse::CreateClientVpnEndpointResponse(
  */
 const CreateClientVpnEndpointRequest * CreateClientVpnEndpointResponse::request() const
 {
-    return static_cast<const CreateClientVpnEndpointRequest *>(Ec2Response::request());
+    Q_D(const CreateClientVpnEndpointResponse);
+    return static_cast<const CreateClientVpnEndpointRequest *>(d->request);
 }
 
 /*!

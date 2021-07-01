@@ -58,7 +58,8 @@ ListImagePackagesResponse::ListImagePackagesResponse(
  */
 const ListImagePackagesRequest * ListImagePackagesResponse::request() const
 {
-    return static_cast<const ListImagePackagesRequest *>(imagebuilderResponse::request());
+    Q_D(const ListImagePackagesResponse);
+    return static_cast<const ListImagePackagesRequest *>(d->request);
 }
 
 /*!

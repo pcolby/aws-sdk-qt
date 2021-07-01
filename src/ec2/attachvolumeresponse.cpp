@@ -87,7 +87,8 @@ AttachVolumeResponse::AttachVolumeResponse(
  */
 const AttachVolumeRequest * AttachVolumeResponse::request() const
 {
-    return static_cast<const AttachVolumeRequest *>(Ec2Response::request());
+    Q_D(const AttachVolumeResponse);
+    return static_cast<const AttachVolumeRequest *>(d->request);
 }
 
 /*!

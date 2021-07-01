@@ -20,20 +20,19 @@
 #ifndef QTAWS_KINESISVIDEOMEDIACLIENT_P_H
 #define QTAWS_KINESISVIDEOMEDIACLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace KinesisVideoMedia {
 
 class KinesisVideoMediaClient;
 
-class KinesisVideoMediaClientPrivate {
+class KinesisVideoMediaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit KinesisVideoMediaClientPrivate(KinesisVideoMediaClient * const q);
-
-protected:
-    KinesisVideoMediaClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KinesisVideoMediaClient)

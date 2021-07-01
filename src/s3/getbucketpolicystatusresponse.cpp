@@ -55,7 +55,8 @@ GetBucketPolicyStatusResponse::GetBucketPolicyStatusResponse(
  */
 const GetBucketPolicyStatusRequest * GetBucketPolicyStatusResponse::request() const
 {
-    return static_cast<const GetBucketPolicyStatusRequest *>(S3Response::request());
+    Q_D(const GetBucketPolicyStatusResponse);
+    return static_cast<const GetBucketPolicyStatusRequest *>(d->request);
 }
 
 /*!

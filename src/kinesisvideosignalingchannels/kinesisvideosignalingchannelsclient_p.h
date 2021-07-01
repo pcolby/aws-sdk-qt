@@ -20,20 +20,19 @@
 #ifndef QTAWS_KINESISVIDEOSIGNALINGCHANNELSCLIENT_P_H
 #define QTAWS_KINESISVIDEOSIGNALINGCHANNELSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace KinesisVideoSignalingChannels {
 
 class KinesisVideoSignalingChannelsClient;
 
-class KinesisVideoSignalingChannelsClientPrivate {
+class KinesisVideoSignalingChannelsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit KinesisVideoSignalingChannelsClientPrivate(KinesisVideoSignalingChannelsClient * const q);
-
-protected:
-    KinesisVideoSignalingChannelsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KinesisVideoSignalingChannelsClient)

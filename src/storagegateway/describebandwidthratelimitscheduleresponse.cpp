@@ -124,7 +124,8 @@ DescribeBandwidthRateLimitScheduleResponse::DescribeBandwidthRateLimitScheduleRe
  */
 const DescribeBandwidthRateLimitScheduleRequest * DescribeBandwidthRateLimitScheduleResponse::request() const
 {
-    return static_cast<const DescribeBandwidthRateLimitScheduleRequest *>(StorageGatewayResponse::request());
+    Q_D(const DescribeBandwidthRateLimitScheduleResponse);
+    return static_cast<const DescribeBandwidthRateLimitScheduleRequest *>(d->request);
 }
 
 /*!

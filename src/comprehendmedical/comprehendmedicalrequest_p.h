@@ -20,12 +20,15 @@
 #ifndef QTAWS_COMPREHENDMEDICALREQUEST_P_H
 #define QTAWS_COMPREHENDMEDICALREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "comprehendmedicalrequest.h"
+
 namespace QtAws {
 namespace ComprehendMedical {
 
 class ComprehendMedicalRequest;
 
-class ComprehendMedicalRequestPrivate {
+class ComprehendMedicalRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ComprehendMedicalRequest::Action action; ///< ComprehendMedical action to be performed.
@@ -36,9 +39,6 @@ public:
     ComprehendMedicalRequestPrivate(const ComprehendMedicalRequestPrivate &other, ComprehendMedicalRequest * const q);
 
     static QString toString(const ComprehendMedicalRequest::Action &action);
-
-protected:
-    ComprehendMedicalRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ComprehendMedicalRequest)

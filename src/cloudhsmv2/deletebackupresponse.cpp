@@ -57,7 +57,8 @@ DeleteBackupResponse::DeleteBackupResponse(
  */
 const DeleteBackupRequest * DeleteBackupResponse::request() const
 {
-    return static_cast<const DeleteBackupRequest *>(CloudHSMV2Response::request());
+    Q_D(const DeleteBackupResponse);
+    return static_cast<const DeleteBackupRequest *>(d->request);
 }
 
 /*!

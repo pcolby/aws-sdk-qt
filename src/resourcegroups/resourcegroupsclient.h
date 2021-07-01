@@ -96,12 +96,6 @@ public slots:
     UpdateGroupResponse * updateGroup(const UpdateGroupRequest &request);
     UpdateGroupQueryResponse * updateGroupQuery(const UpdateGroupQueryRequest &request);
 
-protected:
-    /// @cond internal
-    ResourceGroupsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ResourceGroupsClient(ResourceGroupsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ResourceGroupsClient)
     Q_DISABLE_COPY(ResourceGroupsClient)

@@ -20,20 +20,19 @@
 #ifndef QTAWS_REKOGNITIONCLIENT_P_H
 #define QTAWS_REKOGNITIONCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Rekognition {
 
 class RekognitionClient;
 
-class RekognitionClientPrivate {
+class RekognitionClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit RekognitionClientPrivate(RekognitionClient * const q);
-
-protected:
-    RekognitionClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RekognitionClient)

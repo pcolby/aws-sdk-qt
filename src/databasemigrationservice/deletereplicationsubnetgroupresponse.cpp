@@ -66,7 +66,8 @@ DeleteReplicationSubnetGroupResponse::DeleteReplicationSubnetGroupResponse(
  */
 const DeleteReplicationSubnetGroupRequest * DeleteReplicationSubnetGroupResponse::request() const
 {
-    return static_cast<const DeleteReplicationSubnetGroupRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const DeleteReplicationSubnetGroupResponse);
+    return static_cast<const DeleteReplicationSubnetGroupRequest *>(d->request);
 }
 
 /*!

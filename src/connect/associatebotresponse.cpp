@@ -79,7 +79,8 @@ AssociateBotResponse::AssociateBotResponse(
  */
 const AssociateBotRequest * AssociateBotResponse::request() const
 {
-    return static_cast<const AssociateBotRequest *>(ConnectResponse::request());
+    Q_D(const AssociateBotResponse);
+    return static_cast<const AssociateBotRequest *>(d->request);
 }
 
 /*!

@@ -106,7 +106,8 @@ DescribeAffectedEntitiesResponse::DescribeAffectedEntitiesResponse(
  */
 const DescribeAffectedEntitiesRequest * DescribeAffectedEntitiesResponse::request() const
 {
-    return static_cast<const DescribeAffectedEntitiesRequest *>(HealthResponse::request());
+    Q_D(const DescribeAffectedEntitiesResponse);
+    return static_cast<const DescribeAffectedEntitiesRequest *>(d->request);
 }
 
 /*!

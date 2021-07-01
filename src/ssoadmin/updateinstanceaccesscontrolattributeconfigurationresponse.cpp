@@ -55,7 +55,8 @@ UpdateInstanceAccessControlAttributeConfigurationResponse::UpdateInstanceAccessC
  */
 const UpdateInstanceAccessControlAttributeConfigurationRequest * UpdateInstanceAccessControlAttributeConfigurationResponse::request() const
 {
-    return static_cast<const UpdateInstanceAccessControlAttributeConfigurationRequest *>(SSOAdminResponse::request());
+    Q_D(const UpdateInstanceAccessControlAttributeConfigurationResponse);
+    return static_cast<const UpdateInstanceAccessControlAttributeConfigurationRequest *>(d->request);
 }
 
 /*!

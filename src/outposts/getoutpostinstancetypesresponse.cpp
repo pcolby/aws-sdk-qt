@@ -59,7 +59,8 @@ GetOutpostInstanceTypesResponse::GetOutpostInstanceTypesResponse(
  */
 const GetOutpostInstanceTypesRequest * GetOutpostInstanceTypesResponse::request() const
 {
-    return static_cast<const GetOutpostInstanceTypesRequest *>(OutpostsResponse::request());
+    Q_D(const GetOutpostInstanceTypesResponse);
+    return static_cast<const GetOutpostInstanceTypesRequest *>(d->request);
 }
 
 /*!

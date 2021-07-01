@@ -81,8 +81,7 @@ public:
 
 protected:
     /// @cond internal
-    ServiceDiscoveryRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ServiceDiscoveryRequest(ServiceDiscoveryRequestPrivate * const d);
+    ServiceDiscoveryRequest(ServiceDiscoveryRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

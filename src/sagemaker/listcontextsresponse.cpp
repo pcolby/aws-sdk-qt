@@ -70,7 +70,8 @@ ListContextsResponse::ListContextsResponse(
  */
 const ListContextsRequest * ListContextsResponse::request() const
 {
-    return static_cast<const ListContextsRequest *>(SageMakerResponse::request());
+    Q_D(const ListContextsResponse);
+    return static_cast<const ListContextsRequest *>(d->request);
 }
 
 /*!

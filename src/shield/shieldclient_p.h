@@ -20,20 +20,19 @@
 #ifndef QTAWS_SHIELDCLIENT_P_H
 #define QTAWS_SHIELDCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Shield {
 
 class ShieldClient;
 
-class ShieldClientPrivate {
+class ShieldClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ShieldClientPrivate(ShieldClient * const q);
-
-protected:
-    ShieldClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ShieldClient)

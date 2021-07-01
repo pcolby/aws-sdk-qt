@@ -79,7 +79,8 @@ StartOutboundVoiceContactResponse::StartOutboundVoiceContactResponse(
  */
 const StartOutboundVoiceContactRequest * StartOutboundVoiceContactResponse::request() const
 {
-    return static_cast<const StartOutboundVoiceContactRequest *>(ConnectResponse::request());
+    Q_D(const StartOutboundVoiceContactResponse);
+    return static_cast<const StartOutboundVoiceContactRequest *>(d->request);
 }
 
 /*!

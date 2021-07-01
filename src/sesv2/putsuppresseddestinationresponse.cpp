@@ -88,7 +88,8 @@ PutSuppressedDestinationResponse::PutSuppressedDestinationResponse(
  */
 const PutSuppressedDestinationRequest * PutSuppressedDestinationResponse::request() const
 {
-    return static_cast<const PutSuppressedDestinationRequest *>(Sesv2Response::request());
+    Q_D(const PutSuppressedDestinationResponse);
+    return static_cast<const PutSuppressedDestinationRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_EC2INSTANCECONNECTCLIENT_P_H
 #define QTAWS_EC2INSTANCECONNECTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace EC2InstanceConnect {
 
 class EC2InstanceConnectClient;
 
-class EC2InstanceConnectClientPrivate {
+class EC2InstanceConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit EC2InstanceConnectClientPrivate(EC2InstanceConnectClient * const q);
-
-protected:
-    EC2InstanceConnectClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EC2InstanceConnectClient)

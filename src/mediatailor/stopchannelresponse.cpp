@@ -66,7 +66,8 @@ StopChannelResponse::StopChannelResponse(
  */
 const StopChannelRequest * StopChannelResponse::request() const
 {
-    return static_cast<const StopChannelRequest *>(MediaTailorResponse::request());
+    Q_D(const StopChannelResponse);
+    return static_cast<const StopChannelRequest *>(d->request);
 }
 
 /*!

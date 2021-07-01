@@ -67,7 +67,8 @@ DeleteAnalyzerResponse::DeleteAnalyzerResponse(
  */
 const DeleteAnalyzerRequest * DeleteAnalyzerResponse::request() const
 {
-    return static_cast<const DeleteAnalyzerRequest *>(AccessAnalyzerResponse::request());
+    Q_D(const DeleteAnalyzerResponse);
+    return static_cast<const DeleteAnalyzerRequest *>(d->request);
 }
 
 /*!

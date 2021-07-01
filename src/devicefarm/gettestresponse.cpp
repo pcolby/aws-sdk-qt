@@ -75,7 +75,8 @@ GetTestResponse::GetTestResponse(
  */
 const GetTestRequest * GetTestResponse::request() const
 {
-    return static_cast<const GetTestRequest *>(DeviceFarmResponse::request());
+    Q_D(const GetTestResponse);
+    return static_cast<const GetTestRequest *>(d->request);
 }
 
 /*!

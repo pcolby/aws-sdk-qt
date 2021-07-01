@@ -56,7 +56,8 @@ GetServiceProfileResponse::GetServiceProfileResponse(
  */
 const GetServiceProfileRequest * GetServiceProfileResponse::request() const
 {
-    return static_cast<const GetServiceProfileRequest *>(IoTWirelessResponse::request());
+    Q_D(const GetServiceProfileResponse);
+    return static_cast<const GetServiceProfileRequest *>(d->request);
 }
 
 /*!

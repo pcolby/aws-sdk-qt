@@ -56,7 +56,8 @@ TranslateTextResponse::TranslateTextResponse(
  */
 const TranslateTextRequest * TranslateTextResponse::request() const
 {
-    return static_cast<const TranslateTextRequest *>(TranslateResponse::request());
+    Q_D(const TranslateTextResponse);
+    return static_cast<const TranslateTextRequest *>(d->request);
 }
 
 /*!

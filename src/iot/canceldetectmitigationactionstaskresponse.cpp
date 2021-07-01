@@ -82,7 +82,8 @@ CancelDetectMitigationActionsTaskResponse::CancelDetectMitigationActionsTaskResp
  */
 const CancelDetectMitigationActionsTaskRequest * CancelDetectMitigationActionsTaskResponse::request() const
 {
-    return static_cast<const CancelDetectMitigationActionsTaskRequest *>(IoTResponse::request());
+    Q_D(const CancelDetectMitigationActionsTaskResponse);
+    return static_cast<const CancelDetectMitigationActionsTaskRequest *>(d->request);
 }
 
 /*!

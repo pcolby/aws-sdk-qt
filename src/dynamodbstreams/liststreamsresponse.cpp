@@ -61,7 +61,8 @@ ListStreamsResponse::ListStreamsResponse(
  */
 const ListStreamsRequest * ListStreamsResponse::request() const
 {
-    return static_cast<const ListStreamsRequest *>(DynamoDBStreamsResponse::request());
+    Q_D(const ListStreamsResponse);
+    return static_cast<const ListStreamsRequest *>(d->request);
 }
 
 /*!

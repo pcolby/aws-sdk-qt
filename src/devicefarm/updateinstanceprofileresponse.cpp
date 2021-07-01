@@ -75,7 +75,8 @@ UpdateInstanceProfileResponse::UpdateInstanceProfileResponse(
  */
 const UpdateInstanceProfileRequest * UpdateInstanceProfileResponse::request() const
 {
-    return static_cast<const UpdateInstanceProfileRequest *>(DeviceFarmResponse::request());
+    Q_D(const UpdateInstanceProfileResponse);
+    return static_cast<const UpdateInstanceProfileRequest *>(d->request);
 }
 
 /*!

@@ -61,7 +61,8 @@ DescribePortfolioResponse::DescribePortfolioResponse(
  */
 const DescribePortfolioRequest * DescribePortfolioResponse::request() const
 {
-    return static_cast<const DescribePortfolioRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DescribePortfolioResponse);
+    return static_cast<const DescribePortfolioRequest *>(d->request);
 }
 
 /*!

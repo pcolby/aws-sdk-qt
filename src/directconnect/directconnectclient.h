@@ -227,12 +227,6 @@ public slots:
     UpdateLagResponse * updateLag(const UpdateLagRequest &request);
     UpdateVirtualInterfaceAttributesResponse * updateVirtualInterfaceAttributes(const UpdateVirtualInterfaceAttributesRequest &request);
 
-protected:
-    /// @cond internal
-    DirectConnectClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DirectConnectClient(DirectConnectClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(DirectConnectClient)
     Q_DISABLE_COPY(DirectConnectClient)

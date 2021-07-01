@@ -37,7 +37,7 @@ namespace WorkLink {
  * Constructs a WorkLinkResponse object with parent \a parent.
  */
 WorkLinkResponse::WorkLinkResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new WorkLinkResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new WorkLinkResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ WorkLinkResponse::WorkLinkResponse(QObject * const parent)
  * implementation that inherits from WorkLinkResponsePrivate.
  */
 WorkLinkResponse::WorkLinkResponse(WorkLinkResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void WorkLinkResponse::parseFailure(QIODevice &response)
  * Constructs a WorkLinkResponsePrivate object with public implementation \a q.
  */
 WorkLinkResponsePrivate::WorkLinkResponsePrivate(
-    WorkLinkResponse * const q) : q_ptr(q)
+    WorkLinkResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

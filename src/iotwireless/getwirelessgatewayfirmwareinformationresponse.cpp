@@ -56,7 +56,8 @@ GetWirelessGatewayFirmwareInformationResponse::GetWirelessGatewayFirmwareInforma
  */
 const GetWirelessGatewayFirmwareInformationRequest * GetWirelessGatewayFirmwareInformationResponse::request() const
 {
-    return static_cast<const GetWirelessGatewayFirmwareInformationRequest *>(IoTWirelessResponse::request());
+    Q_D(const GetWirelessGatewayFirmwareInformationResponse);
+    return static_cast<const GetWirelessGatewayFirmwareInformationRequest *>(d->request);
 }
 
 /*!

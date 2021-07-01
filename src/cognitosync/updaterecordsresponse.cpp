@@ -75,7 +75,8 @@ UpdateRecordsResponse::UpdateRecordsResponse(
  */
 const UpdateRecordsRequest * UpdateRecordsResponse::request() const
 {
-    return static_cast<const UpdateRecordsRequest *>(CognitoSyncResponse::request());
+    Q_D(const UpdateRecordsResponse);
+    return static_cast<const UpdateRecordsRequest *>(d->request);
 }
 
 /*!

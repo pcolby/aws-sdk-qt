@@ -60,7 +60,8 @@ ListThemeVersionsResponse::ListThemeVersionsResponse(
  */
 const ListThemeVersionsRequest * ListThemeVersionsResponse::request() const
 {
-    return static_cast<const ListThemeVersionsRequest *>(QuickSightResponse::request());
+    Q_D(const ListThemeVersionsResponse);
+    return static_cast<const ListThemeVersionsRequest *>(d->request);
 }
 
 /*!

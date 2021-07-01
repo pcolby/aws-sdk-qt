@@ -98,7 +98,8 @@ GetOpsSummaryResponse::GetOpsSummaryResponse(
  */
 const GetOpsSummaryRequest * GetOpsSummaryResponse::request() const
 {
-    return static_cast<const GetOpsSummaryRequest *>(SsmResponse::request());
+    Q_D(const GetOpsSummaryResponse);
+    return static_cast<const GetOpsSummaryRequest *>(d->request);
 }
 
 /*!

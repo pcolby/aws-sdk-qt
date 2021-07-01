@@ -58,7 +58,8 @@ ListBundlesResponse::ListBundlesResponse(
  */
 const ListBundlesRequest * ListBundlesResponse::request() const
 {
-    return static_cast<const ListBundlesRequest *>(MobileResponse::request());
+    Q_D(const ListBundlesResponse);
+    return static_cast<const ListBundlesRequest *>(d->request);
 }
 
 /*!

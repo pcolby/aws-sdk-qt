@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ElasticTranscoderResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ElasticTranscoderResponse(ElasticTranscoderResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -58,7 +58,8 @@ CreateRegistryResponse::CreateRegistryResponse(
  */
 const CreateRegistryRequest * CreateRegistryResponse::request() const
 {
-    return static_cast<const CreateRegistryRequest *>(GlueResponse::request());
+    Q_D(const CreateRegistryResponse);
+    return static_cast<const CreateRegistryRequest *>(d->request);
 }
 
 /*!

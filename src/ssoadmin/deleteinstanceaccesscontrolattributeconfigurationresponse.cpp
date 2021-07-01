@@ -55,7 +55,8 @@ DeleteInstanceAccessControlAttributeConfigurationResponse::DeleteInstanceAccessC
  */
 const DeleteInstanceAccessControlAttributeConfigurationRequest * DeleteInstanceAccessControlAttributeConfigurationResponse::request() const
 {
-    return static_cast<const DeleteInstanceAccessControlAttributeConfigurationRequest *>(SSOAdminResponse::request());
+    Q_D(const DeleteInstanceAccessControlAttributeConfigurationResponse);
+    return static_cast<const DeleteInstanceAccessControlAttributeConfigurationRequest *>(d->request);
 }
 
 /*!

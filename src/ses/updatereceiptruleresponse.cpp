@@ -66,7 +66,8 @@ UpdateReceiptRuleResponse::UpdateReceiptRuleResponse(
  */
 const UpdateReceiptRuleRequest * UpdateReceiptRuleResponse::request() const
 {
-    return static_cast<const UpdateReceiptRuleRequest *>(SesResponse::request());
+    Q_D(const UpdateReceiptRuleResponse);
+    return static_cast<const UpdateReceiptRuleRequest *>(d->request);
 }
 
 /*!

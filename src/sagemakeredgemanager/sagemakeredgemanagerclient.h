@@ -54,12 +54,6 @@ public slots:
     GetDeviceRegistrationResponse * getDeviceRegistration(const GetDeviceRegistrationRequest &request);
     SendHeartbeatResponse * sendHeartbeat(const SendHeartbeatRequest &request);
 
-protected:
-    /// @cond internal
-    SagemakerEdgeManagerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SagemakerEdgeManagerClient(SagemakerEdgeManagerClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SagemakerEdgeManagerClient)
     Q_DISABLE_COPY(SagemakerEdgeManagerClient)

@@ -111,12 +111,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    MediaStoreClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MediaStoreClient(MediaStoreClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MediaStoreClient)
     Q_DISABLE_COPY(MediaStoreClient)

@@ -89,7 +89,8 @@ CreateResourceResponse::CreateResourceResponse(
  */
 const CreateResourceRequest * CreateResourceResponse::request() const
 {
-    return static_cast<const CreateResourceRequest *>(WorkMailResponse::request());
+    Q_D(const CreateResourceResponse);
+    return static_cast<const CreateResourceRequest *>(d->request);
 }
 
 /*!

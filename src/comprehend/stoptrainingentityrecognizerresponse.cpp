@@ -58,7 +58,8 @@ StopTrainingEntityRecognizerResponse::StopTrainingEntityRecognizerResponse(
  */
 const StopTrainingEntityRecognizerRequest * StopTrainingEntityRecognizerResponse::request() const
 {
-    return static_cast<const StopTrainingEntityRecognizerRequest *>(ComprehendResponse::request());
+    Q_D(const StopTrainingEntityRecognizerResponse);
+    return static_cast<const StopTrainingEntityRecognizerRequest *>(d->request);
 }
 
 /*!

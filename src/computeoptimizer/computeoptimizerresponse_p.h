@@ -20,12 +20,14 @@
 #ifndef QTAWS_COMPUTEOPTIMIZERRESPONSE_P_H
 #define QTAWS_COMPUTEOPTIMIZERRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace ComputeOptimizer {
 
 class ComputeOptimizerResponse;
 
-class ComputeOptimizerResponsePrivate {
+class ComputeOptimizerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    ComputeOptimizerResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ComputeOptimizerResponse)

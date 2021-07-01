@@ -115,7 +115,8 @@ SearchGameSessionsResponse::SearchGameSessionsResponse(
  */
 const SearchGameSessionsRequest * SearchGameSessionsResponse::request() const
 {
-    return static_cast<const SearchGameSessionsRequest *>(GameLiftResponse::request());
+    Q_D(const SearchGameSessionsResponse);
+    return static_cast<const SearchGameSessionsRequest *>(d->request);
 }
 
 /*!

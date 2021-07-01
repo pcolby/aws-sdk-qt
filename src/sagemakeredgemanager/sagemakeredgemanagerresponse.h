@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    SagemakerEdgeManagerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SagemakerEdgeManagerResponse(SagemakerEdgeManagerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

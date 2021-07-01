@@ -20,12 +20,15 @@
 #ifndef QTAWS_ELASTICTRANSCODERREQUEST_P_H
 #define QTAWS_ELASTICTRANSCODERREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "elastictranscoderrequest.h"
+
 namespace QtAws {
 namespace ElasticTranscoder {
 
 class ElasticTranscoderRequest;
 
-class ElasticTranscoderRequestPrivate {
+class ElasticTranscoderRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ElasticTranscoderRequest::Action action; ///< ElasticTranscoder action to be performed.
@@ -36,9 +39,6 @@ public:
     ElasticTranscoderRequestPrivate(const ElasticTranscoderRequestPrivate &other, ElasticTranscoderRequest * const q);
 
     static QString toString(const ElasticTranscoderRequest::Action &action);
-
-protected:
-    ElasticTranscoderRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticTranscoderRequest)

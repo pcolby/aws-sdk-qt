@@ -69,7 +69,8 @@ DeleteCacheClusterResponse::DeleteCacheClusterResponse(
  */
 const DeleteCacheClusterRequest * DeleteCacheClusterResponse::request() const
 {
-    return static_cast<const DeleteCacheClusterRequest *>(ElastiCacheResponse::request());
+    Q_D(const DeleteCacheClusterResponse);
+    return static_cast<const DeleteCacheClusterRequest *>(d->request);
 }
 
 /*!

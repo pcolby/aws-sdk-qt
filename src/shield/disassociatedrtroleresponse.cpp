@@ -61,7 +61,8 @@ DisassociateDRTRoleResponse::DisassociateDRTRoleResponse(
  */
 const DisassociateDRTRoleRequest * DisassociateDRTRoleResponse::request() const
 {
-    return static_cast<const DisassociateDRTRoleRequest *>(ShieldResponse::request());
+    Q_D(const DisassociateDRTRoleResponse);
+    return static_cast<const DisassociateDRTRoleRequest *>(d->request);
 }
 
 /*!

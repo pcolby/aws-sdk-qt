@@ -119,7 +119,8 @@ ModifyDBInstanceResponse::ModifyDBInstanceResponse(
  */
 const ModifyDBInstanceRequest * ModifyDBInstanceResponse::request() const
 {
-    return static_cast<const ModifyDBInstanceRequest *>(RdsResponse::request());
+    Q_D(const ModifyDBInstanceResponse);
+    return static_cast<const ModifyDBInstanceRequest *>(d->request);
 }
 
 /*!

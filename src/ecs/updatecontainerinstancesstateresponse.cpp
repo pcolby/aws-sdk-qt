@@ -72,7 +72,8 @@ UpdateContainerInstancesStateResponse::UpdateContainerInstancesStateResponse(
  */
 const UpdateContainerInstancesStateRequest * UpdateContainerInstancesStateResponse::request() const
 {
-    return static_cast<const UpdateContainerInstancesStateRequest *>(EcsResponse::request());
+    Q_D(const UpdateContainerInstancesStateResponse);
+    return static_cast<const UpdateContainerInstancesStateRequest *>(d->request);
 }
 
 /*!

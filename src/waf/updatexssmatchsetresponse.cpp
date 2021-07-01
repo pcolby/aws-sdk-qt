@@ -76,7 +76,8 @@ UpdateXssMatchSetResponse::UpdateXssMatchSetResponse(
  */
 const UpdateXssMatchSetRequest * UpdateXssMatchSetResponse::request() const
 {
-    return static_cast<const UpdateXssMatchSetRequest *>(WafResponse::request());
+    Q_D(const UpdateXssMatchSetResponse);
+    return static_cast<const UpdateXssMatchSetRequest *>(d->request);
 }
 
 /*!

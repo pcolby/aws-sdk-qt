@@ -56,7 +56,8 @@ RetryDataReplicationResponse::RetryDataReplicationResponse(
  */
 const RetryDataReplicationRequest * RetryDataReplicationResponse::request() const
 {
-    return static_cast<const RetryDataReplicationRequest *>(mgnResponse::request());
+    Q_D(const RetryDataReplicationResponse);
+    return static_cast<const RetryDataReplicationRequest *>(d->request);
 }
 
 /*!

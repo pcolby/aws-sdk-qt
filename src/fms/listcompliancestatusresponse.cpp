@@ -67,7 +67,8 @@ ListComplianceStatusResponse::ListComplianceStatusResponse(
  */
 const ListComplianceStatusRequest * ListComplianceStatusResponse::request() const
 {
-    return static_cast<const ListComplianceStatusRequest *>(FmsResponse::request());
+    Q_D(const ListComplianceStatusResponse);
+    return static_cast<const ListComplianceStatusRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,15 @@
 #ifndef QTAWS_MEDIASTOREREQUEST_P_H
 #define QTAWS_MEDIASTOREREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "mediastorerequest.h"
+
 namespace QtAws {
 namespace MediaStore {
 
 class MediaStoreRequest;
 
-class MediaStoreRequestPrivate {
+class MediaStoreRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MediaStoreRequest::Action action; ///< MediaStore action to be performed.
@@ -36,9 +39,6 @@ public:
     MediaStoreRequestPrivate(const MediaStoreRequestPrivate &other, MediaStoreRequest * const q);
 
     static QString toString(const MediaStoreRequest::Action &action);
-
-protected:
-    MediaStoreRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaStoreRequest)

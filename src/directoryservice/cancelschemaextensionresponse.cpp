@@ -69,7 +69,8 @@ CancelSchemaExtensionResponse::CancelSchemaExtensionResponse(
  */
 const CancelSchemaExtensionRequest * CancelSchemaExtensionResponse::request() const
 {
-    return static_cast<const CancelSchemaExtensionRequest *>(DirectoryServiceResponse::request());
+    Q_D(const CancelSchemaExtensionResponse);
+    return static_cast<const CancelSchemaExtensionRequest *>(d->request);
 }
 
 /*!

@@ -84,7 +84,8 @@ DeleteFolderContentsResponse::DeleteFolderContentsResponse(
  */
 const DeleteFolderContentsRequest * DeleteFolderContentsResponse::request() const
 {
-    return static_cast<const DeleteFolderContentsRequest *>(WorkDocsResponse::request());
+    Q_D(const DeleteFolderContentsResponse);
+    return static_cast<const DeleteFolderContentsRequest *>(d->request);
 }
 
 /*!

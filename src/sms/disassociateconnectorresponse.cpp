@@ -68,7 +68,8 @@ DisassociateConnectorResponse::DisassociateConnectorResponse(
  */
 const DisassociateConnectorRequest * DisassociateConnectorResponse::request() const
 {
-    return static_cast<const DisassociateConnectorRequest *>(SmsResponse::request());
+    Q_D(const DisassociateConnectorResponse);
+    return static_cast<const DisassociateConnectorRequest *>(d->request);
 }
 
 /*!

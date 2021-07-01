@@ -84,7 +84,8 @@ FilterLogEventsResponse::FilterLogEventsResponse(
  */
 const FilterLogEventsRequest * FilterLogEventsResponse::request() const
 {
-    return static_cast<const FilterLogEventsRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const FilterLogEventsResponse);
+    return static_cast<const FilterLogEventsRequest *>(d->request);
 }
 
 /*!

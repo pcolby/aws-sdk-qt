@@ -90,7 +90,8 @@ DeleteListenerResponse::DeleteListenerResponse(
  */
 const DeleteListenerRequest * DeleteListenerResponse::request() const
 {
-    return static_cast<const DeleteListenerRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const DeleteListenerResponse);
+    return static_cast<const DeleteListenerRequest *>(d->request);
 }
 
 /*!

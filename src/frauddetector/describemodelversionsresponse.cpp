@@ -58,7 +58,8 @@ DescribeModelVersionsResponse::DescribeModelVersionsResponse(
  */
 const DescribeModelVersionsRequest * DescribeModelVersionsResponse::request() const
 {
-    return static_cast<const DescribeModelVersionsRequest *>(FraudDetectorResponse::request());
+    Q_D(const DescribeModelVersionsResponse);
+    return static_cast<const DescribeModelVersionsRequest *>(d->request);
 }
 
 /*!

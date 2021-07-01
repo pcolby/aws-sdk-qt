@@ -63,7 +63,8 @@ GetDirectoryResponse::GetDirectoryResponse(
  */
 const GetDirectoryRequest * GetDirectoryResponse::request() const
 {
-    return static_cast<const GetDirectoryRequest *>(CloudDirectoryResponse::request());
+    Q_D(const GetDirectoryResponse);
+    return static_cast<const GetDirectoryRequest *>(d->request);
 }
 
 /*!

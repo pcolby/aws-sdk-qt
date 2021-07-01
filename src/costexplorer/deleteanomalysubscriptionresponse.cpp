@@ -75,7 +75,8 @@ DeleteAnomalySubscriptionResponse::DeleteAnomalySubscriptionResponse(
  */
 const DeleteAnomalySubscriptionRequest * DeleteAnomalySubscriptionResponse::request() const
 {
-    return static_cast<const DeleteAnomalySubscriptionRequest *>(CostExplorerResponse::request());
+    Q_D(const DeleteAnomalySubscriptionResponse);
+    return static_cast<const DeleteAnomalySubscriptionRequest *>(d->request);
 }
 
 /*!

@@ -66,12 +66,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    ElasticInferenceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ElasticInferenceClient(ElasticInferenceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ElasticInferenceClient)
     Q_DISABLE_COPY(ElasticInferenceClient)

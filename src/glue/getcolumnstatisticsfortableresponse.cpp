@@ -58,7 +58,8 @@ GetColumnStatisticsForTableResponse::GetColumnStatisticsForTableResponse(
  */
 const GetColumnStatisticsForTableRequest * GetColumnStatisticsForTableResponse::request() const
 {
-    return static_cast<const GetColumnStatisticsForTableRequest *>(GlueResponse::request());
+    Q_D(const GetColumnStatisticsForTableResponse);
+    return static_cast<const GetColumnStatisticsForTableRequest *>(d->request);
 }
 
 /*!

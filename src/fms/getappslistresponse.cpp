@@ -67,7 +67,8 @@ GetAppsListResponse::GetAppsListResponse(
  */
 const GetAppsListRequest * GetAppsListResponse::request() const
 {
-    return static_cast<const GetAppsListRequest *>(FmsResponse::request());
+    Q_D(const GetAppsListResponse);
+    return static_cast<const GetAppsListRequest *>(d->request);
 }
 
 /*!

@@ -72,7 +72,8 @@ UpdateMemberResponse::UpdateMemberResponse(
  */
 const UpdateMemberRequest * UpdateMemberResponse::request() const
 {
-    return static_cast<const UpdateMemberRequest *>(ManagedBlockchainResponse::request());
+    Q_D(const UpdateMemberResponse);
+    return static_cast<const UpdateMemberRequest *>(d->request);
 }
 
 /*!

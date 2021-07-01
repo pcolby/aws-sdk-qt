@@ -87,7 +87,8 @@ ResetSnapshotAttributeResponse::ResetSnapshotAttributeResponse(
  */
 const ResetSnapshotAttributeRequest * ResetSnapshotAttributeResponse::request() const
 {
-    return static_cast<const ResetSnapshotAttributeRequest *>(Ec2Response::request());
+    Q_D(const ResetSnapshotAttributeResponse);
+    return static_cast<const ResetSnapshotAttributeRequest *>(d->request);
 }
 
 /*!

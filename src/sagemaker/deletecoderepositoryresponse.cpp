@@ -70,7 +70,8 @@ DeleteCodeRepositoryResponse::DeleteCodeRepositoryResponse(
  */
 const DeleteCodeRepositoryRequest * DeleteCodeRepositoryResponse::request() const
 {
-    return static_cast<const DeleteCodeRepositoryRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteCodeRepositoryResponse);
+    return static_cast<const DeleteCodeRepositoryRequest *>(d->request);
 }
 
 /*!

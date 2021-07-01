@@ -62,7 +62,8 @@ ListSAMLProvidersResponse::ListSAMLProvidersResponse(
  */
 const ListSAMLProvidersRequest * ListSAMLProvidersResponse::request() const
 {
-    return static_cast<const ListSAMLProvidersRequest *>(IamResponse::request());
+    Q_D(const ListSAMLProvidersResponse);
+    return static_cast<const ListSAMLProvidersRequest *>(d->request);
 }
 
 /*!

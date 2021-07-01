@@ -69,7 +69,8 @@ DescribeCacheEngineVersionsResponse::DescribeCacheEngineVersionsResponse(
  */
 const DescribeCacheEngineVersionsRequest * DescribeCacheEngineVersionsResponse::request() const
 {
-    return static_cast<const DescribeCacheEngineVersionsRequest *>(ElastiCacheResponse::request());
+    Q_D(const DescribeCacheEngineVersionsResponse);
+    return static_cast<const DescribeCacheEngineVersionsRequest *>(d->request);
 }
 
 /*!

@@ -73,7 +73,8 @@ StartQueryExecutionResponse::StartQueryExecutionResponse(
  */
 const StartQueryExecutionRequest * StartQueryExecutionResponse::request() const
 {
-    return static_cast<const StartQueryExecutionRequest *>(AthenaResponse::request());
+    Q_D(const StartQueryExecutionResponse);
+    return static_cast<const StartQueryExecutionRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ ModifyDocumentPermissionResponse::ModifyDocumentPermissionResponse(
  */
 const ModifyDocumentPermissionRequest * ModifyDocumentPermissionResponse::request() const
 {
-    return static_cast<const ModifyDocumentPermissionRequest *>(SsmResponse::request());
+    Q_D(const ModifyDocumentPermissionResponse);
+    return static_cast<const ModifyDocumentPermissionRequest *>(d->request);
 }
 
 /*!

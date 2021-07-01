@@ -71,7 +71,8 @@ ListActivityTypesResponse::ListActivityTypesResponse(
  */
 const ListActivityTypesRequest * ListActivityTypesResponse::request() const
 {
-    return static_cast<const ListActivityTypesRequest *>(SwfResponse::request());
+    Q_D(const ListActivityTypesResponse);
+    return static_cast<const ListActivityTypesRequest *>(d->request);
 }
 
 /*!

@@ -71,7 +71,8 @@ TerminateWorkflowExecutionResponse::TerminateWorkflowExecutionResponse(
  */
 const TerminateWorkflowExecutionRequest * TerminateWorkflowExecutionResponse::request() const
 {
-    return static_cast<const TerminateWorkflowExecutionRequest *>(SwfResponse::request());
+    Q_D(const TerminateWorkflowExecutionResponse);
+    return static_cast<const TerminateWorkflowExecutionRequest *>(d->request);
 }
 
 /*!

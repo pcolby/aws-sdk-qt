@@ -56,7 +56,8 @@ ListEndpointsResponse::ListEndpointsResponse(
  */
 const ListEndpointsRequest * ListEndpointsResponse::request() const
 {
-    return static_cast<const ListEndpointsRequest *>(S3OutpostsResponse::request());
+    Q_D(const ListEndpointsResponse);
+    return static_cast<const ListEndpointsRequest *>(d->request);
 }
 
 /*!

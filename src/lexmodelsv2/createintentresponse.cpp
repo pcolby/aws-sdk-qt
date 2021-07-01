@@ -55,7 +55,8 @@ CreateIntentResponse::CreateIntentResponse(
  */
 const CreateIntentRequest * CreateIntentResponse::request() const
 {
-    return static_cast<const CreateIntentRequest *>(LexModelsV2Response::request());
+    Q_D(const CreateIntentResponse);
+    return static_cast<const CreateIntentRequest *>(d->request);
 }
 
 /*!

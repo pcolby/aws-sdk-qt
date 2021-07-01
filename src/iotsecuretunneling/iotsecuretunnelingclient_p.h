@@ -20,20 +20,19 @@
 #ifndef QTAWS_IOTSECURETUNNELINGCLIENT_P_H
 #define QTAWS_IOTSECURETUNNELINGCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace IoTSecureTunneling {
 
 class IoTSecureTunnelingClient;
 
-class IoTSecureTunnelingClientPrivate {
+class IoTSecureTunnelingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit IoTSecureTunnelingClientPrivate(IoTSecureTunnelingClient * const q);
-
-protected:
-    IoTSecureTunnelingClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTSecureTunnelingClient)

@@ -115,7 +115,8 @@ UpdateScriptResponse::UpdateScriptResponse(
  */
 const UpdateScriptRequest * UpdateScriptResponse::request() const
 {
-    return static_cast<const UpdateScriptRequest *>(GameLiftResponse::request());
+    Q_D(const UpdateScriptResponse);
+    return static_cast<const UpdateScriptRequest *>(d->request);
 }
 
 /*!

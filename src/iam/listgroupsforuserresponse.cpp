@@ -62,7 +62,8 @@ ListGroupsForUserResponse::ListGroupsForUserResponse(
  */
 const ListGroupsForUserRequest * ListGroupsForUserResponse::request() const
 {
-    return static_cast<const ListGroupsForUserRequest *>(IamResponse::request());
+    Q_D(const ListGroupsForUserResponse);
+    return static_cast<const ListGroupsForUserRequest *>(d->request);
 }
 
 /*!

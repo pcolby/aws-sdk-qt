@@ -58,7 +58,8 @@ DeleteRuleResponse::DeleteRuleResponse(
  */
 const DeleteRuleRequest * DeleteRuleResponse::request() const
 {
-    return static_cast<const DeleteRuleRequest *>(FraudDetectorResponse::request());
+    Q_D(const DeleteRuleResponse);
+    return static_cast<const DeleteRuleRequest *>(d->request);
 }
 
 /*!

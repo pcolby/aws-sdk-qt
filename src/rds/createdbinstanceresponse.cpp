@@ -119,7 +119,8 @@ CreateDBInstanceResponse::CreateDBInstanceResponse(
  */
 const CreateDBInstanceRequest * CreateDBInstanceResponse::request() const
 {
-    return static_cast<const CreateDBInstanceRequest *>(RdsResponse::request());
+    Q_D(const CreateDBInstanceResponse);
+    return static_cast<const CreateDBInstanceRequest *>(d->request);
 }
 
 /*!

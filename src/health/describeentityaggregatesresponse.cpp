@@ -106,7 +106,8 @@ DescribeEntityAggregatesResponse::DescribeEntityAggregatesResponse(
  */
 const DescribeEntityAggregatesRequest * DescribeEntityAggregatesResponse::request() const
 {
-    return static_cast<const DescribeEntityAggregatesRequest *>(HealthResponse::request());
+    Q_D(const DescribeEntityAggregatesResponse);
+    return static_cast<const DescribeEntityAggregatesRequest *>(d->request);
 }
 
 /*!

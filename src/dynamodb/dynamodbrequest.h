@@ -108,8 +108,7 @@ public:
 
 protected:
     /// @cond internal
-    DynamoDBRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DynamoDBRequest(DynamoDBRequestPrivate * const d);
+    DynamoDBRequest(DynamoDBRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

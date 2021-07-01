@@ -60,7 +60,8 @@ DeleteRequestValidatorResponse::DeleteRequestValidatorResponse(
  */
 const DeleteRequestValidatorRequest * DeleteRequestValidatorResponse::request() const
 {
-    return static_cast<const DeleteRequestValidatorRequest *>(APIGatewayResponse::request());
+    Q_D(const DeleteRequestValidatorResponse);
+    return static_cast<const DeleteRequestValidatorRequest *>(d->request);
 }
 
 /*!

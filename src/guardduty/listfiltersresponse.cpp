@@ -73,7 +73,8 @@ ListFiltersResponse::ListFiltersResponse(
  */
 const ListFiltersRequest * ListFiltersResponse::request() const
 {
-    return static_cast<const ListFiltersRequest *>(GuardDutyResponse::request());
+    Q_D(const ListFiltersResponse);
+    return static_cast<const ListFiltersRequest *>(d->request);
 }
 
 /*!

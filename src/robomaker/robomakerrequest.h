@@ -115,8 +115,7 @@ public:
 
 protected:
     /// @cond internal
-    RoboMakerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit RoboMakerRequest(RoboMakerRequestPrivate * const d);
+    RoboMakerRequest(RoboMakerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

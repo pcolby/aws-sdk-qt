@@ -78,7 +78,8 @@ UpdateRegexMatchSetResponse::UpdateRegexMatchSetResponse(
  */
 const UpdateRegexMatchSetRequest * UpdateRegexMatchSetResponse::request() const
 {
-    return static_cast<const UpdateRegexMatchSetRequest *>(WAFRegionalResponse::request());
+    Q_D(const UpdateRegexMatchSetResponse);
+    return static_cast<const UpdateRegexMatchSetRequest *>(d->request);
 }
 
 /*!

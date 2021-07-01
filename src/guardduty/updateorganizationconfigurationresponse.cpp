@@ -73,7 +73,8 @@ UpdateOrganizationConfigurationResponse::UpdateOrganizationConfigurationResponse
  */
 const UpdateOrganizationConfigurationRequest * UpdateOrganizationConfigurationResponse::request() const
 {
-    return static_cast<const UpdateOrganizationConfigurationRequest *>(GuardDutyResponse::request());
+    Q_D(const UpdateOrganizationConfigurationResponse);
+    return static_cast<const UpdateOrganizationConfigurationRequest *>(d->request);
 }
 
 /*!

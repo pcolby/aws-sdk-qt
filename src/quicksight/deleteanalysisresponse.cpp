@@ -60,7 +60,8 @@ DeleteAnalysisResponse::DeleteAnalysisResponse(
  */
 const DeleteAnalysisRequest * DeleteAnalysisResponse::request() const
 {
-    return static_cast<const DeleteAnalysisRequest *>(QuickSightResponse::request());
+    Q_D(const DeleteAnalysisResponse);
+    return static_cast<const DeleteAnalysisRequest *>(d->request);
 }
 
 /*!

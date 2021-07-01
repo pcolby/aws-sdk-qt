@@ -129,7 +129,8 @@ DescribeNotificationRuleResponse::DescribeNotificationRuleResponse(
  */
 const DescribeNotificationRuleRequest * DescribeNotificationRuleResponse::request() const
 {
-    return static_cast<const DescribeNotificationRuleRequest *>(CodeStarNotificationsResponse::request());
+    Q_D(const DescribeNotificationRuleResponse);
+    return static_cast<const DescribeNotificationRuleRequest *>(d->request);
 }
 
 /*!

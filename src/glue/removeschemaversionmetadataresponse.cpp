@@ -58,7 +58,8 @@ RemoveSchemaVersionMetadataResponse::RemoveSchemaVersionMetadataResponse(
  */
 const RemoveSchemaVersionMetadataRequest * RemoveSchemaVersionMetadataResponse::request() const
 {
-    return static_cast<const RemoveSchemaVersionMetadataRequest *>(GlueResponse::request());
+    Q_D(const RemoveSchemaVersionMetadataResponse);
+    return static_cast<const RemoveSchemaVersionMetadataRequest *>(d->request);
 }
 
 /*!

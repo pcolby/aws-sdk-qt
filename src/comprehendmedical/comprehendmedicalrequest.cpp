@@ -63,7 +63,7 @@ namespace ComprehendMedical {
  * Constructs a ComprehendMedicalRequest object for ComprehendMedical \a action.
  */
 ComprehendMedicalRequest::ComprehendMedicalRequest(const Action action)
-    : d_ptr(new ComprehendMedicalRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ComprehendMedicalRequestPrivate(action, this))
 {
 
 }
@@ -72,8 +72,7 @@ ComprehendMedicalRequest::ComprehendMedicalRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ComprehendMedicalRequest::ComprehendMedicalRequest(const ComprehendMedicalRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ComprehendMedicalRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ComprehendMedicalRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -96,7 +95,7 @@ ComprehendMedicalRequest& ComprehendMedicalRequest::operator=(const ComprehendMe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ComprehendMedicalRequestPrivate.
  */
-ComprehendMedicalRequest::ComprehendMedicalRequest(ComprehendMedicalRequestPrivate * const d) : d_ptr(d)
+ComprehendMedicalRequest::ComprehendMedicalRequest(ComprehendMedicalRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -265,7 +264,7 @@ QNetworkRequest ComprehendMedicalRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 ComprehendMedicalRequestPrivate::ComprehendMedicalRequestPrivate(const ComprehendMedicalRequest::Action action, ComprehendMedicalRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -280,8 +279,8 @@ ComprehendMedicalRequestPrivate::ComprehendMedicalRequestPrivate(const Comprehen
  */
 ComprehendMedicalRequestPrivate::ComprehendMedicalRequestPrivate(const ComprehendMedicalRequestPrivate &other,
                                      ComprehendMedicalRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    MarketplaceMeteringResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MarketplaceMeteringResponse(MarketplaceMeteringResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

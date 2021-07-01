@@ -75,7 +75,8 @@ StartPipelineReprocessingResponse::StartPipelineReprocessingResponse(
  */
 const StartPipelineReprocessingRequest * StartPipelineReprocessingResponse::request() const
 {
-    return static_cast<const StartPipelineReprocessingRequest *>(IoTAnalyticsResponse::request());
+    Q_D(const StartPipelineReprocessingResponse);
+    return static_cast<const StartPipelineReprocessingRequest *>(d->request);
 }
 
 /*!

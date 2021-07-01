@@ -76,7 +76,8 @@ PutApplicationPolicyResponse::PutApplicationPolicyResponse(
  */
 const PutApplicationPolicyRequest * PutApplicationPolicyResponse::request() const
 {
-    return static_cast<const PutApplicationPolicyRequest *>(ServerlessApplicationRepositoryResponse::request());
+    Q_D(const PutApplicationPolicyResponse);
+    return static_cast<const PutApplicationPolicyRequest *>(d->request);
 }
 
 /*!

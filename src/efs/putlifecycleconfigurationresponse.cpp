@@ -62,7 +62,8 @@ PutLifecycleConfigurationResponse::PutLifecycleConfigurationResponse(
  */
 const PutLifecycleConfigurationRequest * PutLifecycleConfigurationResponse::request() const
 {
-    return static_cast<const PutLifecycleConfigurationRequest *>(EfsResponse::request());
+    Q_D(const PutLifecycleConfigurationResponse);
+    return static_cast<const PutLifecycleConfigurationRequest *>(d->request);
 }
 
 /*!

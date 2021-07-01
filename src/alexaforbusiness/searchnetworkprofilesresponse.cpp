@@ -62,7 +62,8 @@ SearchNetworkProfilesResponse::SearchNetworkProfilesResponse(
  */
 const SearchNetworkProfilesRequest * SearchNetworkProfilesResponse::request() const
 {
-    return static_cast<const SearchNetworkProfilesRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const SearchNetworkProfilesResponse);
+    return static_cast<const SearchNetworkProfilesRequest *>(d->request);
 }
 
 /*!

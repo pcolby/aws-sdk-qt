@@ -66,7 +66,8 @@ AdminSetUserMFAPreferenceResponse::AdminSetUserMFAPreferenceResponse(
  */
 const AdminSetUserMFAPreferenceRequest * AdminSetUserMFAPreferenceResponse::request() const
 {
-    return static_cast<const AdminSetUserMFAPreferenceRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const AdminSetUserMFAPreferenceResponse);
+    return static_cast<const AdminSetUserMFAPreferenceRequest *>(d->request);
 }
 
 /*!

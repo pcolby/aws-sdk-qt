@@ -63,12 +63,6 @@ public slots:
     ListWorkspacesResponse * listWorkspaces(const ListWorkspacesRequest &request);
     UpdateWorkspaceAliasResponse * updateWorkspaceAlias(const UpdateWorkspaceAliasRequest &request);
 
-protected:
-    /// @cond internal
-    PrometheusServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit PrometheusServiceClient(PrometheusServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(PrometheusServiceClient)
     Q_DISABLE_COPY(PrometheusServiceClient)

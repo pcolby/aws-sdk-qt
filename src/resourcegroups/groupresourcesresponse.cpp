@@ -99,7 +99,8 @@ GroupResourcesResponse::GroupResourcesResponse(
  */
 const GroupResourcesRequest * GroupResourcesResponse::request() const
 {
-    return static_cast<const GroupResourcesRequest *>(ResourceGroupsResponse::request());
+    Q_D(const GroupResourcesResponse);
+    return static_cast<const GroupResourcesRequest *>(d->request);
 }
 
 /*!

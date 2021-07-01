@@ -37,7 +37,7 @@ namespace DynamoDB {
  * Constructs a DynamoDBResponse object with parent \a parent.
  */
 DynamoDBResponse::DynamoDBResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DynamoDBResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new DynamoDBResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ DynamoDBResponse::DynamoDBResponse(QObject * const parent)
  * implementation that inherits from DynamoDBResponsePrivate.
  */
 DynamoDBResponse::DynamoDBResponse(DynamoDBResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void DynamoDBResponse::parseFailure(QIODevice &response)
  * Constructs a DynamoDBResponsePrivate object with public implementation \a q.
  */
 DynamoDBResponsePrivate::DynamoDBResponsePrivate(
-    DynamoDBResponse * const q) : q_ptr(q)
+    DynamoDBResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

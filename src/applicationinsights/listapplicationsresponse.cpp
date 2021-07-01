@@ -68,7 +68,8 @@ ListApplicationsResponse::ListApplicationsResponse(
  */
 const ListApplicationsRequest * ListApplicationsResponse::request() const
 {
-    return static_cast<const ListApplicationsRequest *>(ApplicationInsightsResponse::request());
+    Q_D(const ListApplicationsResponse);
+    return static_cast<const ListApplicationsRequest *>(d->request);
 }
 
 /*!

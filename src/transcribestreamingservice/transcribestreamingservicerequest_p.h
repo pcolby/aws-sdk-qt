@@ -20,12 +20,15 @@
 #ifndef QTAWS_TRANSCRIBESTREAMINGSERVICEREQUEST_P_H
 #define QTAWS_TRANSCRIBESTREAMINGSERVICEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "transcribestreamingservicerequest.h"
+
 namespace QtAws {
 namespace TranscribeStreamingService {
 
 class TranscribeStreamingServiceRequest;
 
-class TranscribeStreamingServiceRequestPrivate {
+class TranscribeStreamingServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     TranscribeStreamingServiceRequest::Action action; ///< TranscribeStreamingService action to be performed.
@@ -36,9 +39,6 @@ public:
     TranscribeStreamingServiceRequestPrivate(const TranscribeStreamingServiceRequestPrivate &other, TranscribeStreamingServiceRequest * const q);
 
     static QString toString(const TranscribeStreamingServiceRequest::Action &action);
-
-protected:
-    TranscribeStreamingServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TranscribeStreamingServiceRequest)

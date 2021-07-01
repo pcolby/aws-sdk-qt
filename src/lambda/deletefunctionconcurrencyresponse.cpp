@@ -66,7 +66,8 @@ DeleteFunctionConcurrencyResponse::DeleteFunctionConcurrencyResponse(
  */
 const DeleteFunctionConcurrencyRequest * DeleteFunctionConcurrencyResponse::request() const
 {
-    return static_cast<const DeleteFunctionConcurrencyRequest *>(LambdaResponse::request());
+    Q_D(const DeleteFunctionConcurrencyResponse);
+    return static_cast<const DeleteFunctionConcurrencyRequest *>(d->request);
 }
 
 /*!

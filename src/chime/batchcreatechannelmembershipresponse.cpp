@@ -98,7 +98,8 @@ BatchCreateChannelMembershipResponse::BatchCreateChannelMembershipResponse(
  */
 const BatchCreateChannelMembershipRequest * BatchCreateChannelMembershipResponse::request() const
 {
-    return static_cast<const BatchCreateChannelMembershipRequest *>(ChimeResponse::request());
+    Q_D(const BatchCreateChannelMembershipResponse);
+    return static_cast<const BatchCreateChannelMembershipRequest *>(d->request);
 }
 
 /*!

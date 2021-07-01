@@ -69,7 +69,8 @@ PutMetricAlarmResponse::PutMetricAlarmResponse(
  */
 const PutMetricAlarmRequest * PutMetricAlarmResponse::request() const
 {
-    return static_cast<const PutMetricAlarmRequest *>(CloudWatchResponse::request());
+    Q_D(const PutMetricAlarmResponse);
+    return static_cast<const PutMetricAlarmRequest *>(d->request);
 }
 
 /*!

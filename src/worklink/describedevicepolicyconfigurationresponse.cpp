@@ -60,7 +60,8 @@ DescribeDevicePolicyConfigurationResponse::DescribeDevicePolicyConfigurationResp
  */
 const DescribeDevicePolicyConfigurationRequest * DescribeDevicePolicyConfigurationResponse::request() const
 {
-    return static_cast<const DescribeDevicePolicyConfigurationRequest *>(WorkLinkResponse::request());
+    Q_D(const DescribeDevicePolicyConfigurationResponse);
+    return static_cast<const DescribeDevicePolicyConfigurationRequest *>(d->request);
 }
 
 /*!

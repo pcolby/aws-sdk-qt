@@ -71,7 +71,8 @@ DescribeRuntimeVersionsResponse::DescribeRuntimeVersionsResponse(
  */
 const DescribeRuntimeVersionsRequest * DescribeRuntimeVersionsResponse::request() const
 {
-    return static_cast<const DescribeRuntimeVersionsRequest *>(SyntheticsResponse::request());
+    Q_D(const DescribeRuntimeVersionsResponse);
+    return static_cast<const DescribeRuntimeVersionsRequest *>(d->request);
 }
 
 /*!

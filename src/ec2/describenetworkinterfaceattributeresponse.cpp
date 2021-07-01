@@ -87,7 +87,8 @@ DescribeNetworkInterfaceAttributeResponse::DescribeNetworkInterfaceAttributeResp
  */
 const DescribeNetworkInterfaceAttributeRequest * DescribeNetworkInterfaceAttributeResponse::request() const
 {
-    return static_cast<const DescribeNetworkInterfaceAttributeRequest *>(Ec2Response::request());
+    Q_D(const DescribeNetworkInterfaceAttributeResponse);
+    return static_cast<const DescribeNetworkInterfaceAttributeRequest *>(d->request);
 }
 
 /*!

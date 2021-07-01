@@ -69,7 +69,8 @@ CreateTrustResponse::CreateTrustResponse(
  */
 const CreateTrustRequest * CreateTrustResponse::request() const
 {
-    return static_cast<const CreateTrustRequest *>(DirectoryServiceResponse::request());
+    Q_D(const CreateTrustResponse);
+    return static_cast<const CreateTrustRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,15 @@
 #ifndef QTAWS_CODEBUILDREQUEST_P_H
 #define QTAWS_CODEBUILDREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "codebuildrequest.h"
+
 namespace QtAws {
 namespace CodeBuild {
 
 class CodeBuildRequest;
 
-class CodeBuildRequestPrivate {
+class CodeBuildRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeBuildRequest::Action action; ///< CodeBuild action to be performed.
@@ -36,9 +39,6 @@ public:
     CodeBuildRequestPrivate(const CodeBuildRequestPrivate &other, CodeBuildRequest * const q);
 
     static QString toString(const CodeBuildRequest::Action &action);
-
-protected:
-    CodeBuildRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeBuildRequest)

@@ -93,8 +93,7 @@ public:
 
 protected:
     /// @cond internal
-    IoTThingsGraphRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IoTThingsGraphRequest(IoTThingsGraphRequestPrivate * const d);
+    IoTThingsGraphRequest(IoTThingsGraphRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

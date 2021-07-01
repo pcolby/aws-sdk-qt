@@ -58,7 +58,8 @@ ListTopicsDetectionJobsResponse::ListTopicsDetectionJobsResponse(
  */
 const ListTopicsDetectionJobsRequest * ListTopicsDetectionJobsResponse::request() const
 {
-    return static_cast<const ListTopicsDetectionJobsRequest *>(ComprehendResponse::request());
+    Q_D(const ListTopicsDetectionJobsResponse);
+    return static_cast<const ListTopicsDetectionJobsRequest *>(d->request);
 }
 
 /*!

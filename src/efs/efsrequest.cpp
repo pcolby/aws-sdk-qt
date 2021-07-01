@@ -69,7 +69,7 @@ namespace EFS {
  * Constructs a EfsRequest object for EFS \a action.
  */
 EfsRequest::EfsRequest(const Action action)
-    : d_ptr(new EfsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new EfsRequestPrivate(action, this))
 {
 
 }
@@ -78,8 +78,7 @@ EfsRequest::EfsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 EfsRequest::EfsRequest(const EfsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new EfsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new EfsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -102,7 +101,7 @@ EfsRequest& EfsRequest::operator=(const EfsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from EfsRequestPrivate.
  */
-EfsRequest::EfsRequest(EfsRequestPrivate * const d) : d_ptr(d)
+EfsRequest::EfsRequest(EfsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -271,7 +270,7 @@ QNetworkRequest EfsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 EfsRequestPrivate::EfsRequestPrivate(const EfsRequest::Action action, EfsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -286,8 +285,8 @@ EfsRequestPrivate::EfsRequestPrivate(const EfsRequest::Action action, EfsRequest
  */
 EfsRequestPrivate::EfsRequestPrivate(const EfsRequestPrivate &other,
                                      EfsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

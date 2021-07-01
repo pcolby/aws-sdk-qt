@@ -61,7 +61,8 @@ GetInterpolatedAssetPropertyValuesResponse::GetInterpolatedAssetPropertyValuesRe
  */
 const GetInterpolatedAssetPropertyValuesRequest * GetInterpolatedAssetPropertyValuesResponse::request() const
 {
-    return static_cast<const GetInterpolatedAssetPropertyValuesRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const GetInterpolatedAssetPropertyValuesResponse);
+    return static_cast<const GetInterpolatedAssetPropertyValuesRequest *>(d->request);
 }
 
 /*!

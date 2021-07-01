@@ -56,7 +56,8 @@ UpdateAdmChannelResponse::UpdateAdmChannelResponse(
  */
 const UpdateAdmChannelRequest * UpdateAdmChannelResponse::request() const
 {
-    return static_cast<const UpdateAdmChannelRequest *>(PinpointResponse::request());
+    Q_D(const UpdateAdmChannelResponse);
+    return static_cast<const UpdateAdmChannelRequest *>(d->request);
 }
 
 /*!

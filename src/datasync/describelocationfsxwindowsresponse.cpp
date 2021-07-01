@@ -64,7 +64,8 @@ DescribeLocationFsxWindowsResponse::DescribeLocationFsxWindowsResponse(
  */
 const DescribeLocationFsxWindowsRequest * DescribeLocationFsxWindowsResponse::request() const
 {
-    return static_cast<const DescribeLocationFsxWindowsRequest *>(DataSyncResponse::request());
+    Q_D(const DescribeLocationFsxWindowsResponse);
+    return static_cast<const DescribeLocationFsxWindowsRequest *>(d->request);
 }
 
 /*!

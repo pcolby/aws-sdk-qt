@@ -70,7 +70,8 @@ DeleteNotebookInstanceLifecycleConfigResponse::DeleteNotebookInstanceLifecycleCo
  */
 const DeleteNotebookInstanceLifecycleConfigRequest * DeleteNotebookInstanceLifecycleConfigResponse::request() const
 {
-    return static_cast<const DeleteNotebookInstanceLifecycleConfigRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteNotebookInstanceLifecycleConfigResponse);
+    return static_cast<const DeleteNotebookInstanceLifecycleConfigRequest *>(d->request);
 }
 
 /*!

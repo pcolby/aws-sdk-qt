@@ -72,12 +72,6 @@ public slots:
     SendMessageResponse * sendMessage(const SendMessageRequest &request);
     StartAttachmentUploadResponse * startAttachmentUpload(const StartAttachmentUploadRequest &request);
 
-protected:
-    /// @cond internal
-    ConnectParticipantClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ConnectParticipantClient(ConnectParticipantClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ConnectParticipantClient)
     Q_DISABLE_COPY(ConnectParticipantClient)

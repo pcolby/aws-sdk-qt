@@ -72,7 +72,8 @@ UpdateTaskSetResponse::UpdateTaskSetResponse(
  */
 const UpdateTaskSetRequest * UpdateTaskSetResponse::request() const
 {
-    return static_cast<const UpdateTaskSetRequest *>(EcsResponse::request());
+    Q_D(const UpdateTaskSetResponse);
+    return static_cast<const UpdateTaskSetRequest *>(d->request);
 }
 
 /*!

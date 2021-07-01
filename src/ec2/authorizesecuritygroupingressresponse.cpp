@@ -87,7 +87,8 @@ AuthorizeSecurityGroupIngressResponse::AuthorizeSecurityGroupIngressResponse(
  */
 const AuthorizeSecurityGroupIngressRequest * AuthorizeSecurityGroupIngressResponse::request() const
 {
-    return static_cast<const AuthorizeSecurityGroupIngressRequest *>(Ec2Response::request());
+    Q_D(const AuthorizeSecurityGroupIngressResponse);
+    return static_cast<const AuthorizeSecurityGroupIngressRequest *>(d->request);
 }
 
 /*!

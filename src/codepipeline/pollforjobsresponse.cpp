@@ -240,7 +240,8 @@ PollForJobsResponse::PollForJobsResponse(
  */
 const PollForJobsRequest * PollForJobsResponse::request() const
 {
-    return static_cast<const PollForJobsRequest *>(CodePipelineResponse::request());
+    Q_D(const PollForJobsResponse);
+    return static_cast<const PollForJobsRequest *>(d->request);
 }
 
 /*!

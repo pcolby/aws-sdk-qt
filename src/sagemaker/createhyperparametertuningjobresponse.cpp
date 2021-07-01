@@ -70,7 +70,8 @@ CreateHyperParameterTuningJobResponse::CreateHyperParameterTuningJobResponse(
  */
 const CreateHyperParameterTuningJobRequest * CreateHyperParameterTuningJobResponse::request() const
 {
-    return static_cast<const CreateHyperParameterTuningJobRequest *>(SageMakerResponse::request());
+    Q_D(const CreateHyperParameterTuningJobResponse);
+    return static_cast<const CreateHyperParameterTuningJobRequest *>(d->request);
 }
 
 /*!

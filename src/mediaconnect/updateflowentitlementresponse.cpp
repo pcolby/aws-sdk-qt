@@ -55,7 +55,8 @@ UpdateFlowEntitlementResponse::UpdateFlowEntitlementResponse(
  */
 const UpdateFlowEntitlementRequest * UpdateFlowEntitlementResponse::request() const
 {
-    return static_cast<const UpdateFlowEntitlementRequest *>(MediaConnectResponse::request());
+    Q_D(const UpdateFlowEntitlementResponse);
+    return static_cast<const UpdateFlowEntitlementRequest *>(d->request);
 }
 
 /*!

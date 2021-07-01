@@ -81,8 +81,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeGuruProfilerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CodeGuruProfilerRequest(CodeGuruProfilerRequestPrivate * const d);
+    CodeGuruProfilerRequest(CodeGuruProfilerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

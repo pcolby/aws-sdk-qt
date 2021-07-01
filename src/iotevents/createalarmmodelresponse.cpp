@@ -58,7 +58,8 @@ CreateAlarmModelResponse::CreateAlarmModelResponse(
  */
 const CreateAlarmModelRequest * CreateAlarmModelResponse::request() const
 {
-    return static_cast<const CreateAlarmModelRequest *>(IoTEventsResponse::request());
+    Q_D(const CreateAlarmModelResponse);
+    return static_cast<const CreateAlarmModelRequest *>(d->request);
 }
 
 /*!

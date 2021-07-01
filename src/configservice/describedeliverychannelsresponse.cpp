@@ -75,7 +75,8 @@ DescribeDeliveryChannelsResponse::DescribeDeliveryChannelsResponse(
  */
 const DescribeDeliveryChannelsRequest * DescribeDeliveryChannelsResponse::request() const
 {
-    return static_cast<const DescribeDeliveryChannelsRequest *>(ConfigServiceResponse::request());
+    Q_D(const DescribeDeliveryChannelsResponse);
+    return static_cast<const DescribeDeliveryChannelsRequest *>(d->request);
 }
 
 /*!

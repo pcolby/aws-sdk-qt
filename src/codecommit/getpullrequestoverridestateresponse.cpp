@@ -439,7 +439,8 @@ GetPullRequestOverrideStateResponse::GetPullRequestOverrideStateResponse(
  */
 const GetPullRequestOverrideStateRequest * GetPullRequestOverrideStateResponse::request() const
 {
-    return static_cast<const GetPullRequestOverrideStateRequest *>(CodeCommitResponse::request());
+    Q_D(const GetPullRequestOverrideStateResponse);
+    return static_cast<const GetPullRequestOverrideStateRequest *>(d->request);
 }
 
 /*!

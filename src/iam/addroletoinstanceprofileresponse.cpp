@@ -62,7 +62,8 @@ AddRoleToInstanceProfileResponse::AddRoleToInstanceProfileResponse(
  */
 const AddRoleToInstanceProfileRequest * AddRoleToInstanceProfileResponse::request() const
 {
-    return static_cast<const AddRoleToInstanceProfileRequest *>(IamResponse::request());
+    Q_D(const AddRoleToInstanceProfileResponse);
+    return static_cast<const AddRoleToInstanceProfileRequest *>(d->request);
 }
 
 /*!

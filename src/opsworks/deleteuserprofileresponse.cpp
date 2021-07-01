@@ -161,7 +161,8 @@ DeleteUserProfileResponse::DeleteUserProfileResponse(
  */
 const DeleteUserProfileRequest * DeleteUserProfileResponse::request() const
 {
-    return static_cast<const DeleteUserProfileRequest *>(OpsWorksResponse::request());
+    Q_D(const DeleteUserProfileResponse);
+    return static_cast<const DeleteUserProfileRequest *>(d->request);
 }
 
 /*!

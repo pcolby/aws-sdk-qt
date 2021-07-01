@@ -55,7 +55,8 @@ CreateInputSecurityGroupResponse::CreateInputSecurityGroupResponse(
  */
 const CreateInputSecurityGroupRequest * CreateInputSecurityGroupResponse::request() const
 {
-    return static_cast<const CreateInputSecurityGroupRequest *>(MediaLiveResponse::request());
+    Q_D(const CreateInputSecurityGroupResponse);
+    return static_cast<const CreateInputSecurityGroupRequest *>(d->request);
 }
 
 /*!

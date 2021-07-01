@@ -87,7 +87,8 @@ DescribeNetworkInterfacePermissionsResponse::DescribeNetworkInterfacePermissions
  */
 const DescribeNetworkInterfacePermissionsRequest * DescribeNetworkInterfacePermissionsResponse::request() const
 {
-    return static_cast<const DescribeNetworkInterfacePermissionsRequest *>(Ec2Response::request());
+    Q_D(const DescribeNetworkInterfacePermissionsResponse);
+    return static_cast<const DescribeNetworkInterfacePermissionsRequest *>(d->request);
 }
 
 /*!

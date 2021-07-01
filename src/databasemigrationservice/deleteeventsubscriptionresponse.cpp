@@ -66,7 +66,8 @@ DeleteEventSubscriptionResponse::DeleteEventSubscriptionResponse(
  */
 const DeleteEventSubscriptionRequest * DeleteEventSubscriptionResponse::request() const
 {
-    return static_cast<const DeleteEventSubscriptionRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const DeleteEventSubscriptionResponse);
+    return static_cast<const DeleteEventSubscriptionRequest *>(d->request);
 }
 
 /*!

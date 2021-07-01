@@ -62,7 +62,8 @@ UpgradeLensReviewResponse::UpgradeLensReviewResponse(
  */
 const UpgradeLensReviewRequest * UpgradeLensReviewResponse::request() const
 {
-    return static_cast<const UpgradeLensReviewRequest *>(WellArchitectedResponse::request());
+    Q_D(const UpgradeLensReviewResponse);
+    return static_cast<const UpgradeLensReviewRequest *>(d->request);
 }
 
 /*!

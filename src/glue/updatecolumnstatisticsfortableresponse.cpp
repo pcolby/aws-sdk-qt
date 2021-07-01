@@ -58,7 +58,8 @@ UpdateColumnStatisticsForTableResponse::UpdateColumnStatisticsForTableResponse(
  */
 const UpdateColumnStatisticsForTableRequest * UpdateColumnStatisticsForTableResponse::request() const
 {
-    return static_cast<const UpdateColumnStatisticsForTableRequest *>(GlueResponse::request());
+    Q_D(const UpdateColumnStatisticsForTableResponse);
+    return static_cast<const UpdateColumnStatisticsForTableRequest *>(d->request);
 }
 
 /*!

@@ -89,8 +89,7 @@ public:
 
 protected:
     /// @cond internal
-    MediaTailorRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MediaTailorRequest(MediaTailorRequestPrivate * const d);
+    MediaTailorRequest(MediaTailorRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

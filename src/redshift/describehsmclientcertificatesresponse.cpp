@@ -85,7 +85,8 @@ DescribeHsmClientCertificatesResponse::DescribeHsmClientCertificatesResponse(
  */
 const DescribeHsmClientCertificatesRequest * DescribeHsmClientCertificatesResponse::request() const
 {
-    return static_cast<const DescribeHsmClientCertificatesRequest *>(RedshiftResponse::request());
+    Q_D(const DescribeHsmClientCertificatesResponse);
+    return static_cast<const DescribeHsmClientCertificatesRequest *>(d->request);
 }
 
 /*!

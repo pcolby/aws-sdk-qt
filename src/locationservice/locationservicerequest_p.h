@@ -20,12 +20,15 @@
 #ifndef QTAWS_LOCATIONSERVICEREQUEST_P_H
 #define QTAWS_LOCATIONSERVICEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "locationservicerequest.h"
+
 namespace QtAws {
 namespace LocationService {
 
 class LocationServiceRequest;
 
-class LocationServiceRequestPrivate {
+class LocationServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LocationServiceRequest::Action action; ///< LocationService action to be performed.
@@ -36,9 +39,6 @@ public:
     LocationServiceRequestPrivate(const LocationServiceRequestPrivate &other, LocationServiceRequest * const q);
 
     static QString toString(const LocationServiceRequest::Action &action);
-
-protected:
-    LocationServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LocationServiceRequest)

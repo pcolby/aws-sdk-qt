@@ -87,7 +87,8 @@ ModifyReservedInstancesResponse::ModifyReservedInstancesResponse(
  */
 const ModifyReservedInstancesRequest * ModifyReservedInstancesResponse::request() const
 {
-    return static_cast<const ModifyReservedInstancesRequest *>(Ec2Response::request());
+    Q_D(const ModifyReservedInstancesResponse);
+    return static_cast<const ModifyReservedInstancesRequest *>(d->request);
 }
 
 /*!

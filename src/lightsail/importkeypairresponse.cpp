@@ -74,7 +74,8 @@ ImportKeyPairResponse::ImportKeyPairResponse(
  */
 const ImportKeyPairRequest * ImportKeyPairResponse::request() const
 {
-    return static_cast<const ImportKeyPairRequest *>(LightsailResponse::request());
+    Q_D(const ImportKeyPairResponse);
+    return static_cast<const ImportKeyPairRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ AddApplicationVpcConfigurationResponse::AddApplicationVpcConfigurationResponse(
  */
 const AddApplicationVpcConfigurationRequest * AddApplicationVpcConfigurationResponse::request() const
 {
-    return static_cast<const AddApplicationVpcConfigurationRequest *>(KinesisAnalyticsV2Response::request());
+    Q_D(const AddApplicationVpcConfigurationResponse);
+    return static_cast<const AddApplicationVpcConfigurationRequest *>(d->request);
 }
 
 /*!

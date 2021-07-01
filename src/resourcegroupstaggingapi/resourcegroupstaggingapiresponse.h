@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ResourceGroupsTaggingAPIResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ResourceGroupsTaggingAPIResponse(ResourceGroupsTaggingAPIResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

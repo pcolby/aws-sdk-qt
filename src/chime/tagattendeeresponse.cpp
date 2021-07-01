@@ -98,7 +98,8 @@ TagAttendeeResponse::TagAttendeeResponse(
  */
 const TagAttendeeRequest * TagAttendeeResponse::request() const
 {
-    return static_cast<const TagAttendeeRequest *>(ChimeResponse::request());
+    Q_D(const TagAttendeeResponse);
+    return static_cast<const TagAttendeeRequest *>(d->request);
 }
 
 /*!

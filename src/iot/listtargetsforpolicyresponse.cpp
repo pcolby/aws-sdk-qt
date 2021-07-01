@@ -82,7 +82,8 @@ ListTargetsForPolicyResponse::ListTargetsForPolicyResponse(
  */
 const ListTargetsForPolicyRequest * ListTargetsForPolicyResponse::request() const
 {
-    return static_cast<const ListTargetsForPolicyRequest *>(IoTResponse::request());
+    Q_D(const ListTargetsForPolicyResponse);
+    return static_cast<const ListTargetsForPolicyRequest *>(d->request);
 }
 
 /*!

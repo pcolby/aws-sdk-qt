@@ -69,7 +69,8 @@ DisableSsoResponse::DisableSsoResponse(
  */
 const DisableSsoRequest * DisableSsoResponse::request() const
 {
-    return static_cast<const DisableSsoRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DisableSsoResponse);
+    return static_cast<const DisableSsoRequest *>(d->request);
 }
 
 /*!

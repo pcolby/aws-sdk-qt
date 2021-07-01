@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    SageMakerFeatureStoreRuntimeResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SageMakerFeatureStoreRuntimeResponse(SageMakerFeatureStoreRuntimeResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

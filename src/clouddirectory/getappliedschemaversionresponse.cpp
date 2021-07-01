@@ -63,7 +63,8 @@ GetAppliedSchemaVersionResponse::GetAppliedSchemaVersionResponse(
  */
 const GetAppliedSchemaVersionRequest * GetAppliedSchemaVersionResponse::request() const
 {
-    return static_cast<const GetAppliedSchemaVersionRequest *>(CloudDirectoryResponse::request());
+    Q_D(const GetAppliedSchemaVersionResponse);
+    return static_cast<const GetAppliedSchemaVersionRequest *>(d->request);
 }
 
 /*!

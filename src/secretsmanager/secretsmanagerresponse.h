@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    SecretsManagerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SecretsManagerResponse(SecretsManagerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

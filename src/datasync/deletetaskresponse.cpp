@@ -64,7 +64,8 @@ DeleteTaskResponse::DeleteTaskResponse(
  */
 const DeleteTaskRequest * DeleteTaskResponse::request() const
 {
-    return static_cast<const DeleteTaskRequest *>(DataSyncResponse::request());
+    Q_D(const DeleteTaskResponse);
+    return static_cast<const DeleteTaskRequest *>(d->request);
 }
 
 /*!

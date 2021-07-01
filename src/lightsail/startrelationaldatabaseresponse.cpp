@@ -74,7 +74,8 @@ StartRelationalDatabaseResponse::StartRelationalDatabaseResponse(
  */
 const StartRelationalDatabaseRequest * StartRelationalDatabaseResponse::request() const
 {
-    return static_cast<const StartRelationalDatabaseRequest *>(LightsailResponse::request());
+    Q_D(const StartRelationalDatabaseResponse);
+    return static_cast<const StartRelationalDatabaseRequest *>(d->request);
 }
 
 /*!

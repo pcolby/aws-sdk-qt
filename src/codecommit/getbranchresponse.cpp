@@ -439,7 +439,8 @@ GetBranchResponse::GetBranchResponse(
  */
 const GetBranchRequest * GetBranchResponse::request() const
 {
-    return static_cast<const GetBranchRequest *>(CodeCommitResponse::request());
+    Q_D(const GetBranchResponse);
+    return static_cast<const GetBranchRequest *>(d->request);
 }
 
 /*!

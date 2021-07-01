@@ -82,7 +82,8 @@ TestInvokeAuthorizerResponse::TestInvokeAuthorizerResponse(
  */
 const TestInvokeAuthorizerRequest * TestInvokeAuthorizerResponse::request() const
 {
-    return static_cast<const TestInvokeAuthorizerRequest *>(IoTResponse::request());
+    Q_D(const TestInvokeAuthorizerResponse);
+    return static_cast<const TestInvokeAuthorizerRequest *>(d->request);
 }
 
 /*!

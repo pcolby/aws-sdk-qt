@@ -58,7 +58,8 @@ PutResourcePolicyResponse::PutResourcePolicyResponse(
  */
 const PutResourcePolicyRequest * PutResourcePolicyResponse::request() const
 {
-    return static_cast<const PutResourcePolicyRequest *>(GlueResponse::request());
+    Q_D(const PutResourcePolicyResponse);
+    return static_cast<const PutResourcePolicyRequest *>(d->request);
 }
 
 /*!

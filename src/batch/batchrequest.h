@@ -77,8 +77,7 @@ public:
 
 protected:
     /// @cond internal
-    BatchRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit BatchRequest(BatchRequestPrivate * const d);
+    BatchRequest(BatchRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

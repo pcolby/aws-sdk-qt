@@ -86,7 +86,8 @@ DescribeAutoScalingConfigurationResponse::DescribeAutoScalingConfigurationRespon
  */
 const DescribeAutoScalingConfigurationRequest * DescribeAutoScalingConfigurationResponse::request() const
 {
-    return static_cast<const DescribeAutoScalingConfigurationRequest *>(AppRunnerResponse::request());
+    Q_D(const DescribeAutoScalingConfigurationResponse);
+    return static_cast<const DescribeAutoScalingConfigurationRequest *>(d->request);
 }
 
 /*!

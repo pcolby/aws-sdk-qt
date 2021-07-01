@@ -138,12 +138,6 @@ public slots:
     UpdateFlowOutputResponse * updateFlowOutput(const UpdateFlowOutputRequest &request);
     UpdateFlowSourceResponse * updateFlowSource(const UpdateFlowSourceRequest &request);
 
-protected:
-    /// @cond internal
-    MediaConnectClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MediaConnectClient(MediaConnectClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MediaConnectClient)
     Q_DISABLE_COPY(MediaConnectClient)

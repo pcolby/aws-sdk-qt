@@ -55,7 +55,8 @@ BatchStartResponse::BatchStartResponse(
  */
 const BatchStartRequest * BatchStartResponse::request() const
 {
-    return static_cast<const BatchStartRequest *>(MediaLiveResponse::request());
+    Q_D(const BatchStartResponse);
+    return static_cast<const BatchStartRequest *>(d->request);
 }
 
 /*!

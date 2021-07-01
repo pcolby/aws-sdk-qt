@@ -75,12 +75,6 @@ public slots:
     StartSpeechSynthesisTaskResponse * startSpeechSynthesisTask(const StartSpeechSynthesisTaskRequest &request);
     SynthesizeSpeechResponse * synthesizeSpeech(const SynthesizeSpeechRequest &request);
 
-protected:
-    /// @cond internal
-    PollyClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit PollyClient(PollyClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(PollyClient)
     Q_DISABLE_COPY(PollyClient)

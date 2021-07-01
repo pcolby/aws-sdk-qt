@@ -72,7 +72,8 @@ CreateTaskSetResponse::CreateTaskSetResponse(
  */
 const CreateTaskSetRequest * CreateTaskSetResponse::request() const
 {
-    return static_cast<const CreateTaskSetRequest *>(EcsResponse::request());
+    Q_D(const CreateTaskSetResponse);
+    return static_cast<const CreateTaskSetRequest *>(d->request);
 }
 
 /*!

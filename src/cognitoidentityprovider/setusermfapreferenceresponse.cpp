@@ -66,7 +66,8 @@ SetUserMFAPreferenceResponse::SetUserMFAPreferenceResponse(
  */
 const SetUserMFAPreferenceRequest * SetUserMFAPreferenceResponse::request() const
 {
-    return static_cast<const SetUserMFAPreferenceRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const SetUserMFAPreferenceResponse);
+    return static_cast<const SetUserMFAPreferenceRequest *>(d->request);
 }
 
 /*!

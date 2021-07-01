@@ -55,7 +55,8 @@ StartEngagementResponse::StartEngagementResponse(
  */
 const StartEngagementRequest * StartEngagementResponse::request() const
 {
-    return static_cast<const StartEngagementRequest *>(SSMContactsResponse::request());
+    Q_D(const StartEngagementResponse);
+    return static_cast<const StartEngagementRequest *>(d->request);
 }
 
 /*!

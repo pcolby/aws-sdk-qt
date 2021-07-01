@@ -58,7 +58,8 @@ CreateImagePipelineResponse::CreateImagePipelineResponse(
  */
 const CreateImagePipelineRequest * CreateImagePipelineResponse::request() const
 {
-    return static_cast<const CreateImagePipelineRequest *>(imagebuilderResponse::request());
+    Q_D(const CreateImagePipelineResponse);
+    return static_cast<const CreateImagePipelineRequest *>(d->request);
 }
 
 /*!

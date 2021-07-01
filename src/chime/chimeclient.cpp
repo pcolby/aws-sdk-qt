@@ -468,16 +468,16 @@ ChimeClient::ChimeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-05-01"),
-    QStringLiteral("chime"),
-    QStringLiteral("Amazon Chime"),
-    QStringLiteral("chime"),
-    parent), d_ptr(new ChimeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ChimeClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ChimeClient);
+    d->apiVersion = QStringLiteral("2018-05-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("chime");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Chime");
+    d->serviceName = QStringLiteral("chime");
 }
 
 /*!
@@ -496,16 +496,16 @@ ChimeClient::ChimeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-05-01"),
-    QStringLiteral("chime"),
-    QStringLiteral("Amazon Chime"),
-    QStringLiteral("chime"),
-    parent), d_ptr(new ChimeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ChimeClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ChimeClient);
+    d->apiVersion = QStringLiteral("2018-05-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("chime");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Chime");
+    d->serviceName = QStringLiteral("chime");
 }
 
 /*!
@@ -3378,9 +3378,10 @@ UpdateVoiceConnectorGroupResponse * ChimeClient::updateVoiceConnectorGroup(const
 /*!
  * Constructs a ChimeClientPrivate object with public implementation \a q.
  */
-ChimeClientPrivate::ChimeClientPrivate(ChimeClient * const q) : q_ptr(q)
+ChimeClientPrivate::ChimeClientPrivate(ChimeClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Chime

@@ -234,12 +234,6 @@ public slots:
     UpdateTrustResponse * updateTrust(const UpdateTrustRequest &request);
     VerifyTrustResponse * verifyTrust(const VerifyTrustRequest &request);
 
-protected:
-    /// @cond internal
-    DirectoryServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DirectoryServiceClient(DirectoryServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(DirectoryServiceClient)
     Q_DISABLE_COPY(DirectoryServiceClient)

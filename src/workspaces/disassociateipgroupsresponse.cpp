@@ -58,7 +58,8 @@ DisassociateIpGroupsResponse::DisassociateIpGroupsResponse(
  */
 const DisassociateIpGroupsRequest * DisassociateIpGroupsResponse::request() const
 {
-    return static_cast<const DisassociateIpGroupsRequest *>(WorkSpacesResponse::request());
+    Q_D(const DisassociateIpGroupsResponse);
+    return static_cast<const DisassociateIpGroupsRequest *>(d->request);
 }
 
 /*!

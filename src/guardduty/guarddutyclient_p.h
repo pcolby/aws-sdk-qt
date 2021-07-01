@@ -20,20 +20,19 @@
 #ifndef QTAWS_GUARDDUTYCLIENT_P_H
 #define QTAWS_GUARDDUTYCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace GuardDuty {
 
 class GuardDutyClient;
 
-class GuardDutyClientPrivate {
+class GuardDutyClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit GuardDutyClientPrivate(GuardDutyClient * const q);
-
-protected:
-    GuardDutyClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GuardDutyClient)

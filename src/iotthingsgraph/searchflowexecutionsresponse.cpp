@@ -66,7 +66,8 @@ SearchFlowExecutionsResponse::SearchFlowExecutionsResponse(
  */
 const SearchFlowExecutionsRequest * SearchFlowExecutionsResponse::request() const
 {
-    return static_cast<const SearchFlowExecutionsRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const SearchFlowExecutionsResponse);
+    return static_cast<const SearchFlowExecutionsRequest *>(d->request);
 }
 
 /*!

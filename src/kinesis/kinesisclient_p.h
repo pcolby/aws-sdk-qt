@@ -20,20 +20,19 @@
 #ifndef QTAWS_KINESISCLIENT_P_H
 #define QTAWS_KINESISCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Kinesis {
 
 class KinesisClient;
 
-class KinesisClientPrivate {
+class KinesisClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit KinesisClientPrivate(KinesisClient * const q);
-
-protected:
-    KinesisClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KinesisClient)

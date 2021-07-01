@@ -70,7 +70,8 @@ CreateActionResponse::CreateActionResponse(
  */
 const CreateActionRequest * CreateActionResponse::request() const
 {
-    return static_cast<const CreateActionRequest *>(SageMakerResponse::request());
+    Q_D(const CreateActionResponse);
+    return static_cast<const CreateActionRequest *>(d->request);
 }
 
 /*!

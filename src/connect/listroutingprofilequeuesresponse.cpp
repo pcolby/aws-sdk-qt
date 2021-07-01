@@ -79,7 +79,8 @@ ListRoutingProfileQueuesResponse::ListRoutingProfileQueuesResponse(
  */
 const ListRoutingProfileQueuesRequest * ListRoutingProfileQueuesResponse::request() const
 {
-    return static_cast<const ListRoutingProfileQueuesRequest *>(ConnectResponse::request());
+    Q_D(const ListRoutingProfileQueuesResponse);
+    return static_cast<const ListRoutingProfileQueuesRequest *>(d->request);
 }
 
 /*!

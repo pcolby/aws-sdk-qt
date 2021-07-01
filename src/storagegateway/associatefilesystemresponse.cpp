@@ -124,7 +124,8 @@ AssociateFileSystemResponse::AssociateFileSystemResponse(
  */
 const AssociateFileSystemRequest * AssociateFileSystemResponse::request() const
 {
-    return static_cast<const AssociateFileSystemRequest *>(StorageGatewayResponse::request());
+    Q_D(const AssociateFileSystemResponse);
+    return static_cast<const AssociateFileSystemRequest *>(d->request);
 }
 
 /*!

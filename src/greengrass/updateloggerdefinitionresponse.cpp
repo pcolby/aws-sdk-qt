@@ -58,7 +58,8 @@ UpdateLoggerDefinitionResponse::UpdateLoggerDefinitionResponse(
  */
 const UpdateLoggerDefinitionRequest * UpdateLoggerDefinitionResponse::request() const
 {
-    return static_cast<const UpdateLoggerDefinitionRequest *>(GreengrassResponse::request());
+    Q_D(const UpdateLoggerDefinitionResponse);
+    return static_cast<const UpdateLoggerDefinitionRequest *>(d->request);
 }
 
 /*!

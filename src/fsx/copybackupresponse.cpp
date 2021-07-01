@@ -57,7 +57,8 @@ CopyBackupResponse::CopyBackupResponse(
  */
 const CopyBackupRequest * CopyBackupResponse::request() const
 {
-    return static_cast<const CopyBackupRequest *>(FSxResponse::request());
+    Q_D(const CopyBackupResponse);
+    return static_cast<const CopyBackupRequest *>(d->request);
 }
 
 /*!

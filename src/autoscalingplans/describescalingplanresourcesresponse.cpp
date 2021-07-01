@@ -97,7 +97,8 @@ DescribeScalingPlanResourcesResponse::DescribeScalingPlanResourcesResponse(
  */
 const DescribeScalingPlanResourcesRequest * DescribeScalingPlanResourcesResponse::request() const
 {
-    return static_cast<const DescribeScalingPlanResourcesRequest *>(AutoScalingPlansResponse::request());
+    Q_D(const DescribeScalingPlanResourcesResponse);
+    return static_cast<const DescribeScalingPlanResourcesRequest *>(d->request);
 }
 
 /*!

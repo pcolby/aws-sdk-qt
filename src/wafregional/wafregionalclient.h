@@ -291,12 +291,6 @@ public slots:
     UpdateWebACLResponse * updateWebACL(const UpdateWebACLRequest &request);
     UpdateXssMatchSetResponse * updateXssMatchSet(const UpdateXssMatchSetRequest &request);
 
-protected:
-    /// @cond internal
-    WAFRegionalClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit WAFRegionalClient(WAFRegionalClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(WAFRegionalClient)
     Q_DISABLE_COPY(WAFRegionalClient)

@@ -89,7 +89,8 @@ DisassociateDelegateFromResourceResponse::DisassociateDelegateFromResourceRespon
  */
 const DisassociateDelegateFromResourceRequest * DisassociateDelegateFromResourceResponse::request() const
 {
-    return static_cast<const DisassociateDelegateFromResourceRequest *>(WorkMailResponse::request());
+    Q_D(const DisassociateDelegateFromResourceResponse);
+    return static_cast<const DisassociateDelegateFromResourceRequest *>(d->request);
 }
 
 /*!

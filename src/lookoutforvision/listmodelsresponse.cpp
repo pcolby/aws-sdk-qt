@@ -64,7 +64,8 @@ ListModelsResponse::ListModelsResponse(
  */
 const ListModelsRequest * ListModelsResponse::request() const
 {
-    return static_cast<const ListModelsRequest *>(LookoutforVisionResponse::request());
+    Q_D(const ListModelsResponse);
+    return static_cast<const ListModelsRequest *>(d->request);
 }
 
 /*!

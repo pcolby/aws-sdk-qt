@@ -85,7 +85,8 @@ DeleteClusterSecurityGroupResponse::DeleteClusterSecurityGroupResponse(
  */
 const DeleteClusterSecurityGroupRequest * DeleteClusterSecurityGroupResponse::request() const
 {
-    return static_cast<const DeleteClusterSecurityGroupRequest *>(RedshiftResponse::request());
+    Q_D(const DeleteClusterSecurityGroupResponse);
+    return static_cast<const DeleteClusterSecurityGroupRequest *>(d->request);
 }
 
 /*!

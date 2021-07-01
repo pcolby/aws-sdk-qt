@@ -72,7 +72,8 @@ PutAccountSettingDefaultResponse::PutAccountSettingDefaultResponse(
  */
 const PutAccountSettingDefaultRequest * PutAccountSettingDefaultResponse::request() const
 {
-    return static_cast<const PutAccountSettingDefaultRequest *>(EcsResponse::request());
+    Q_D(const PutAccountSettingDefaultResponse);
+    return static_cast<const PutAccountSettingDefaultRequest *>(d->request);
 }
 
 /*!

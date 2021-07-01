@@ -58,7 +58,8 @@ ListEndpointsResponse::ListEndpointsResponse(
  */
 const ListEndpointsRequest * ListEndpointsResponse::request() const
 {
-    return static_cast<const ListEndpointsRequest *>(ComprehendResponse::request());
+    Q_D(const ListEndpointsResponse);
+    return static_cast<const ListEndpointsRequest *>(d->request);
 }
 
 /*!

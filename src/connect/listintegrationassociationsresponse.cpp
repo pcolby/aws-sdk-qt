@@ -79,7 +79,8 @@ ListIntegrationAssociationsResponse::ListIntegrationAssociationsResponse(
  */
 const ListIntegrationAssociationsRequest * ListIntegrationAssociationsResponse::request() const
 {
-    return static_cast<const ListIntegrationAssociationsRequest *>(ConnectResponse::request());
+    Q_D(const ListIntegrationAssociationsResponse);
+    return static_cast<const ListIntegrationAssociationsRequest *>(d->request);
 }
 
 /*!

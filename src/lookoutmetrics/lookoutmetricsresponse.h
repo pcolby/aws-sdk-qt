@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    LookoutMetricsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LookoutMetricsResponse(LookoutMetricsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

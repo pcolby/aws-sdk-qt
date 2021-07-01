@@ -56,7 +56,8 @@ ListClusterOperationsResponse::ListClusterOperationsResponse(
  */
 const ListClusterOperationsRequest * ListClusterOperationsResponse::request() const
 {
-    return static_cast<const ListClusterOperationsRequest *>(KafkaResponse::request());
+    Q_D(const ListClusterOperationsResponse);
+    return static_cast<const ListClusterOperationsRequest *>(d->request);
 }
 
 /*!

@@ -64,7 +64,8 @@ ListLocationsResponse::ListLocationsResponse(
  */
 const ListLocationsRequest * ListLocationsResponse::request() const
 {
-    return static_cast<const ListLocationsRequest *>(DataSyncResponse::request());
+    Q_D(const ListLocationsResponse);
+    return static_cast<const ListLocationsRequest *>(d->request);
 }
 
 /*!

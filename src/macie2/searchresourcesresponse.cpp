@@ -60,7 +60,8 @@ SearchResourcesResponse::SearchResourcesResponse(
  */
 const SearchResourcesRequest * SearchResourcesResponse::request() const
 {
-    return static_cast<const SearchResourcesRequest *>(Macie2Response::request());
+    Q_D(const SearchResourcesResponse);
+    return static_cast<const SearchResourcesRequest *>(d->request);
 }
 
 /*!

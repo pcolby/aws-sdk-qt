@@ -77,7 +77,8 @@ MergeDeveloperIdentitiesResponse::MergeDeveloperIdentitiesResponse(
  */
 const MergeDeveloperIdentitiesRequest * MergeDeveloperIdentitiesResponse::request() const
 {
-    return static_cast<const MergeDeveloperIdentitiesRequest *>(CognitoIdentityResponse::request());
+    Q_D(const MergeDeveloperIdentitiesResponse);
+    return static_cast<const MergeDeveloperIdentitiesRequest *>(d->request);
 }
 
 /*!

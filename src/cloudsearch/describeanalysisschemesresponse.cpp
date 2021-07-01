@@ -66,7 +66,8 @@ DescribeAnalysisSchemesResponse::DescribeAnalysisSchemesResponse(
  */
 const DescribeAnalysisSchemesRequest * DescribeAnalysisSchemesResponse::request() const
 {
-    return static_cast<const DescribeAnalysisSchemesRequest *>(CloudSearchResponse::request());
+    Q_D(const DescribeAnalysisSchemesResponse);
+    return static_cast<const DescribeAnalysisSchemesRequest *>(d->request);
 }
 
 /*!

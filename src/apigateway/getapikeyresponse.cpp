@@ -60,7 +60,8 @@ GetApiKeyResponse::GetApiKeyResponse(
  */
 const GetApiKeyRequest * GetApiKeyResponse::request() const
 {
-    return static_cast<const GetApiKeyRequest *>(APIGatewayResponse::request());
+    Q_D(const GetApiKeyResponse);
+    return static_cast<const GetApiKeyRequest *>(d->request);
 }
 
 /*!

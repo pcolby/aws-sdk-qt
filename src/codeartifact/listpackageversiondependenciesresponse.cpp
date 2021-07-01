@@ -293,7 +293,8 @@ ListPackageVersionDependenciesResponse::ListPackageVersionDependenciesResponse(
  */
 const ListPackageVersionDependenciesRequest * ListPackageVersionDependenciesResponse::request() const
 {
-    return static_cast<const ListPackageVersionDependenciesRequest *>(CodeArtifactResponse::request());
+    Q_D(const ListPackageVersionDependenciesResponse);
+    return static_cast<const ListPackageVersionDependenciesRequest *>(d->request);
 }
 
 /*!

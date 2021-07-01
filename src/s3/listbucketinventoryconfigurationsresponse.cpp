@@ -55,7 +55,8 @@ ListBucketInventoryConfigurationsResponse::ListBucketInventoryConfigurationsResp
  */
 const ListBucketInventoryConfigurationsRequest * ListBucketInventoryConfigurationsResponse::request() const
 {
-    return static_cast<const ListBucketInventoryConfigurationsRequest *>(S3Response::request());
+    Q_D(const ListBucketInventoryConfigurationsResponse);
+    return static_cast<const ListBucketInventoryConfigurationsRequest *>(d->request);
 }
 
 /*!

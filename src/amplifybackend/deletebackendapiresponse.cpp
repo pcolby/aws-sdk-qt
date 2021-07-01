@@ -56,7 +56,8 @@ DeleteBackendAPIResponse::DeleteBackendAPIResponse(
  */
 const DeleteBackendAPIRequest * DeleteBackendAPIResponse::request() const
 {
-    return static_cast<const DeleteBackendAPIRequest *>(AmplifyBackendResponse::request());
+    Q_D(const DeleteBackendAPIResponse);
+    return static_cast<const DeleteBackendAPIRequest *>(d->request);
 }
 
 /*!

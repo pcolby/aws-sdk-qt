@@ -61,7 +61,8 @@ DeleteInterconnectResponse::DeleteInterconnectResponse(
  */
 const DeleteInterconnectRequest * DeleteInterconnectResponse::request() const
 {
-    return static_cast<const DeleteInterconnectRequest *>(DirectConnectResponse::request());
+    Q_D(const DeleteInterconnectResponse);
+    return static_cast<const DeleteInterconnectRequest *>(d->request);
 }
 
 /*!

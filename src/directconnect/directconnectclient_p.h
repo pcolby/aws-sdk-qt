@@ -20,20 +20,19 @@
 #ifndef QTAWS_DIRECTCONNECTCLIENT_P_H
 #define QTAWS_DIRECTCONNECTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace DirectConnect {
 
 class DirectConnectClient;
 
-class DirectConnectClientPrivate {
+class DirectConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit DirectConnectClientPrivate(DirectConnectClient * const q);
-
-protected:
-    DirectConnectClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DirectConnectClient)

@@ -58,7 +58,8 @@ ListTagsForStreamResponse::ListTagsForStreamResponse(
  */
 const ListTagsForStreamRequest * ListTagsForStreamResponse::request() const
 {
-    return static_cast<const ListTagsForStreamRequest *>(KinesisResponse::request());
+    Q_D(const ListTagsForStreamResponse);
+    return static_cast<const ListTagsForStreamRequest *>(d->request);
 }
 
 /*!

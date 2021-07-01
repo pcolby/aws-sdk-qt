@@ -37,7 +37,7 @@ namespace WellArchitected {
  * Constructs a WellArchitectedResponse object with parent \a parent.
  */
 WellArchitectedResponse::WellArchitectedResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new WellArchitectedResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new WellArchitectedResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ WellArchitectedResponse::WellArchitectedResponse(QObject * const parent)
  * implementation that inherits from WellArchitectedResponsePrivate.
  */
 WellArchitectedResponse::WellArchitectedResponse(WellArchitectedResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void WellArchitectedResponse::parseFailure(QIODevice &response)
  * Constructs a WellArchitectedResponsePrivate object with public implementation \a q.
  */
 WellArchitectedResponsePrivate::WellArchitectedResponsePrivate(
-    WellArchitectedResponse * const q) : q_ptr(q)
+    WellArchitectedResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

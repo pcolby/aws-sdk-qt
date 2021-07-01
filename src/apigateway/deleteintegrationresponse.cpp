@@ -60,7 +60,8 @@ DeleteIntegrationResponse::DeleteIntegrationResponse(
  */
 const DeleteIntegrationRequest * DeleteIntegrationResponse::request() const
 {
-    return static_cast<const DeleteIntegrationRequest *>(APIGatewayResponse::request());
+    Q_D(const DeleteIntegrationResponse);
+    return static_cast<const DeleteIntegrationRequest *>(d->request);
 }
 
 /*!

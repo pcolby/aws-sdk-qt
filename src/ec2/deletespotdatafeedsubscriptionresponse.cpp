@@ -87,7 +87,8 @@ DeleteSpotDatafeedSubscriptionResponse::DeleteSpotDatafeedSubscriptionResponse(
  */
 const DeleteSpotDatafeedSubscriptionRequest * DeleteSpotDatafeedSubscriptionResponse::request() const
 {
-    return static_cast<const DeleteSpotDatafeedSubscriptionRequest *>(Ec2Response::request());
+    Q_D(const DeleteSpotDatafeedSubscriptionResponse);
+    return static_cast<const DeleteSpotDatafeedSubscriptionRequest *>(d->request);
 }
 
 /*!

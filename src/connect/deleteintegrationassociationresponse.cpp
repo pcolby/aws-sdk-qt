@@ -79,7 +79,8 @@ DeleteIntegrationAssociationResponse::DeleteIntegrationAssociationResponse(
  */
 const DeleteIntegrationAssociationRequest * DeleteIntegrationAssociationResponse::request() const
 {
-    return static_cast<const DeleteIntegrationAssociationRequest *>(ConnectResponse::request());
+    Q_D(const DeleteIntegrationAssociationResponse);
+    return static_cast<const DeleteIntegrationAssociationRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ EnableVolumeIOResponse::EnableVolumeIOResponse(
  */
 const EnableVolumeIORequest * EnableVolumeIOResponse::request() const
 {
-    return static_cast<const EnableVolumeIORequest *>(Ec2Response::request());
+    Q_D(const EnableVolumeIOResponse);
+    return static_cast<const EnableVolumeIORequest *>(d->request);
 }
 
 /*!

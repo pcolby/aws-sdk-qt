@@ -141,7 +141,8 @@ DeleteResourcesByExternalIdResponse::DeleteResourcesByExternalIdResponse(
  */
 const DeleteResourcesByExternalIdRequest * DeleteResourcesByExternalIdResponse::request() const
 {
-    return static_cast<const DeleteResourcesByExternalIdRequest *>(CodeDeployResponse::request());
+    Q_D(const DeleteResourcesByExternalIdResponse);
+    return static_cast<const DeleteResourcesByExternalIdRequest *>(d->request);
 }
 
 /*!

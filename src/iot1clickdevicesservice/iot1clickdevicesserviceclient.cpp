@@ -87,16 +87,16 @@ IoT1ClickDevicesServiceClient::IoT1ClickDevicesServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-05-14"),
-    QStringLiteral("devices.iot1click"),
-    QStringLiteral("AWS IoT 1-Click Devices Service"),
-    QStringLiteral("iot1click"),
-    parent), d_ptr(new IoT1ClickDevicesServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoT1ClickDevicesServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoT1ClickDevicesServiceClient);
+    d->apiVersion = QStringLiteral("2018-05-14");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("devices.iot1click");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS IoT 1-Click Devices Service");
+    d->serviceName = QStringLiteral("iot1click");
 }
 
 /*!
@@ -115,16 +115,16 @@ IoT1ClickDevicesServiceClient::IoT1ClickDevicesServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-05-14"),
-    QStringLiteral("devices.iot1click"),
-    QStringLiteral("AWS IoT 1-Click Devices Service"),
-    QStringLiteral("iot1click"),
-    parent), d_ptr(new IoT1ClickDevicesServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoT1ClickDevicesServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoT1ClickDevicesServiceClient);
+    d->apiVersion = QStringLiteral("2018-05-14");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("devices.iot1click");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS IoT 1-Click Devices Service");
+    d->serviceName = QStringLiteral("iot1click");
 }
 
 /*!
@@ -317,9 +317,10 @@ UpdateDeviceStateResponse * IoT1ClickDevicesServiceClient::updateDeviceState(con
 /*!
  * Constructs a IoT1ClickDevicesServiceClientPrivate object with public implementation \a q.
  */
-IoT1ClickDevicesServiceClientPrivate::IoT1ClickDevicesServiceClientPrivate(IoT1ClickDevicesServiceClient * const q) : q_ptr(q)
+IoT1ClickDevicesServiceClientPrivate::IoT1ClickDevicesServiceClientPrivate(IoT1ClickDevicesServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IoT1ClickDevicesService

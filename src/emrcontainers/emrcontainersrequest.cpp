@@ -57,7 +57,7 @@ namespace EMRContainers {
  * Constructs a EMRContainersRequest object for EMRContainers \a action.
  */
 EMRContainersRequest::EMRContainersRequest(const Action action)
-    : d_ptr(new EMRContainersRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new EMRContainersRequestPrivate(action, this))
 {
 
 }
@@ -66,8 +66,7 @@ EMRContainersRequest::EMRContainersRequest(const Action action)
  * Constructs a copy of \a other.
  */
 EMRContainersRequest::EMRContainersRequest(const EMRContainersRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new EMRContainersRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new EMRContainersRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -90,7 +89,7 @@ EMRContainersRequest& EMRContainersRequest::operator=(const EMRContainersRequest
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from EMRContainersRequestPrivate.
  */
-EMRContainersRequest::EMRContainersRequest(EMRContainersRequestPrivate * const d) : d_ptr(d)
+EMRContainersRequest::EMRContainersRequest(EMRContainersRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -259,7 +258,7 @@ QNetworkRequest EMRContainersRequest::unsignedRequest(const QUrl &endpoint) cons
  * with public implementation \a q.
  */
 EMRContainersRequestPrivate::EMRContainersRequestPrivate(const EMRContainersRequest::Action action, EMRContainersRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -274,8 +273,8 @@ EMRContainersRequestPrivate::EMRContainersRequestPrivate(const EMRContainersRequ
  */
 EMRContainersRequestPrivate::EMRContainersRequestPrivate(const EMRContainersRequestPrivate &other,
                                      EMRContainersRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

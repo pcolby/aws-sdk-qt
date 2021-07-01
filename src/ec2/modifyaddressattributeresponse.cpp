@@ -87,7 +87,8 @@ ModifyAddressAttributeResponse::ModifyAddressAttributeResponse(
  */
 const ModifyAddressAttributeRequest * ModifyAddressAttributeResponse::request() const
 {
-    return static_cast<const ModifyAddressAttributeRequest *>(Ec2Response::request());
+    Q_D(const ModifyAddressAttributeResponse);
+    return static_cast<const ModifyAddressAttributeRequest *>(d->request);
 }
 
 /*!

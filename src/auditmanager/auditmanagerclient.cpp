@@ -204,16 +204,16 @@ AuditManagerClient::AuditManagerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("auditmanager"),
-    QStringLiteral("AWS Audit Manager"),
-    QStringLiteral("auditmanager"),
-    parent), d_ptr(new AuditManagerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AuditManagerClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AuditManagerClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("auditmanager");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Audit Manager");
+    d->serviceName = QStringLiteral("auditmanager");
 }
 
 /*!
@@ -232,16 +232,16 @@ AuditManagerClient::AuditManagerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("auditmanager"),
-    QStringLiteral("AWS Audit Manager"),
-    QStringLiteral("auditmanager"),
-    parent), d_ptr(new AuditManagerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AuditManagerClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AuditManagerClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("auditmanager");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Audit Manager");
+    d->serviceName = QStringLiteral("auditmanager");
 }
 
 /*!
@@ -919,9 +919,10 @@ ValidateAssessmentReportIntegrityResponse * AuditManagerClient::validateAssessme
 /*!
  * Constructs a AuditManagerClientPrivate object with public implementation \a q.
  */
-AuditManagerClientPrivate::AuditManagerClientPrivate(AuditManagerClient * const q) : q_ptr(q)
+AuditManagerClientPrivate::AuditManagerClientPrivate(AuditManagerClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AuditManager

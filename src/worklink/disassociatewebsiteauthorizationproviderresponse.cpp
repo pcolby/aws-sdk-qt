@@ -60,7 +60,8 @@ DisassociateWebsiteAuthorizationProviderResponse::DisassociateWebsiteAuthorizati
  */
 const DisassociateWebsiteAuthorizationProviderRequest * DisassociateWebsiteAuthorizationProviderResponse::request() const
 {
-    return static_cast<const DisassociateWebsiteAuthorizationProviderRequest *>(WorkLinkResponse::request());
+    Q_D(const DisassociateWebsiteAuthorizationProviderResponse);
+    return static_cast<const DisassociateWebsiteAuthorizationProviderRequest *>(d->request);
 }
 
 /*!

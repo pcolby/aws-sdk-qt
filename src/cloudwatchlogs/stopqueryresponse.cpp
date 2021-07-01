@@ -84,7 +84,8 @@ StopQueryResponse::StopQueryResponse(
  */
 const StopQueryRequest * StopQueryResponse::request() const
 {
-    return static_cast<const StopQueryRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const StopQueryResponse);
+    return static_cast<const StopQueryRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetApplicationDateRangeKpiResponse::GetApplicationDateRangeKpiResponse(
  */
 const GetApplicationDateRangeKpiRequest * GetApplicationDateRangeKpiResponse::request() const
 {
-    return static_cast<const GetApplicationDateRangeKpiRequest *>(PinpointResponse::request());
+    Q_D(const GetApplicationDateRangeKpiResponse);
+    return static_cast<const GetApplicationDateRangeKpiRequest *>(d->request);
 }
 
 /*!

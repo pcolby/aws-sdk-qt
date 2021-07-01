@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    DynamoDBStreamsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DynamoDBStreamsResponse(DynamoDBStreamsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

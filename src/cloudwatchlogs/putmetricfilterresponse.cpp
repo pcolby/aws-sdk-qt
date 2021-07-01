@@ -84,7 +84,8 @@ PutMetricFilterResponse::PutMetricFilterResponse(
  */
 const PutMetricFilterRequest * PutMetricFilterResponse::request() const
 {
-    return static_cast<const PutMetricFilterRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const PutMetricFilterResponse);
+    return static_cast<const PutMetricFilterRequest *>(d->request);
 }
 
 /*!

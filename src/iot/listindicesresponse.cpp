@@ -82,7 +82,8 @@ ListIndicesResponse::ListIndicesResponse(
  */
 const ListIndicesRequest * ListIndicesResponse::request() const
 {
-    return static_cast<const ListIndicesRequest *>(IoTResponse::request());
+    Q_D(const ListIndicesResponse);
+    return static_cast<const ListIndicesRequest *>(d->request);
 }
 
 /*!

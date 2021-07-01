@@ -48,7 +48,7 @@ namespace EBS {
  * Constructs a EbsRequest object for EBS \a action.
  */
 EbsRequest::EbsRequest(const Action action)
-    : d_ptr(new EbsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new EbsRequestPrivate(action, this))
 {
 
 }
@@ -57,8 +57,7 @@ EbsRequest::EbsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 EbsRequest::EbsRequest(const EbsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new EbsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new EbsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -81,7 +80,7 @@ EbsRequest& EbsRequest::operator=(const EbsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from EbsRequestPrivate.
  */
-EbsRequest::EbsRequest(EbsRequestPrivate * const d) : d_ptr(d)
+EbsRequest::EbsRequest(EbsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -250,7 +249,7 @@ QNetworkRequest EbsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 EbsRequestPrivate::EbsRequestPrivate(const EbsRequest::Action action, EbsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -265,8 +264,8 @@ EbsRequestPrivate::EbsRequestPrivate(const EbsRequest::Action action, EbsRequest
  */
 EbsRequestPrivate::EbsRequestPrivate(const EbsRequestPrivate &other,
                                      EbsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

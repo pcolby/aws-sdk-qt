@@ -60,7 +60,8 @@ ListBranchesResponse::ListBranchesResponse(
  */
 const ListBranchesRequest * ListBranchesResponse::request() const
 {
-    return static_cast<const ListBranchesRequest *>(AmplifyResponse::request());
+    Q_D(const ListBranchesResponse);
+    return static_cast<const ListBranchesRequest *>(d->request);
 }
 
 /*!

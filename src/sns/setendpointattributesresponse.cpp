@@ -75,7 +75,8 @@ SetEndpointAttributesResponse::SetEndpointAttributesResponse(
  */
 const SetEndpointAttributesRequest * SetEndpointAttributesResponse::request() const
 {
-    return static_cast<const SetEndpointAttributesRequest *>(SnsResponse::request());
+    Q_D(const SetEndpointAttributesResponse);
+    return static_cast<const SetEndpointAttributesRequest *>(d->request);
 }
 
 /*!

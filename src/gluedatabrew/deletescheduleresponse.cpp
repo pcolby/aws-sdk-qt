@@ -58,7 +58,8 @@ DeleteScheduleResponse::DeleteScheduleResponse(
  */
 const DeleteScheduleRequest * DeleteScheduleResponse::request() const
 {
-    return static_cast<const DeleteScheduleRequest *>(GlueDataBrewResponse::request());
+    Q_D(const DeleteScheduleResponse);
+    return static_cast<const DeleteScheduleRequest *>(d->request);
 }
 
 /*!

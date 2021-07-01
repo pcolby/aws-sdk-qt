@@ -66,7 +66,8 @@ AssociateEntityToThingResponse::AssociateEntityToThingResponse(
  */
 const AssociateEntityToThingRequest * AssociateEntityToThingResponse::request() const
 {
-    return static_cast<const AssociateEntityToThingRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const AssociateEntityToThingResponse);
+    return static_cast<const AssociateEntityToThingRequest *>(d->request);
 }
 
 /*!

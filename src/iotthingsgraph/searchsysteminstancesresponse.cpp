@@ -66,7 +66,8 @@ SearchSystemInstancesResponse::SearchSystemInstancesResponse(
  */
 const SearchSystemInstancesRequest * SearchSystemInstancesResponse::request() const
 {
-    return static_cast<const SearchSystemInstancesRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const SearchSystemInstancesResponse);
+    return static_cast<const SearchSystemInstancesRequest *>(d->request);
 }
 
 /*!

@@ -66,7 +66,8 @@ GetSystemInstanceResponse::GetSystemInstanceResponse(
  */
 const GetSystemInstanceRequest * GetSystemInstanceResponse::request() const
 {
-    return static_cast<const GetSystemInstanceRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const GetSystemInstanceResponse);
+    return static_cast<const GetSystemInstanceRequest *>(d->request);
 }
 
 /*!

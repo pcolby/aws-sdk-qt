@@ -66,7 +66,8 @@ SetUserPoolMfaConfigResponse::SetUserPoolMfaConfigResponse(
  */
 const SetUserPoolMfaConfigRequest * SetUserPoolMfaConfigResponse::request() const
 {
-    return static_cast<const SetUserPoolMfaConfigRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const SetUserPoolMfaConfigResponse);
+    return static_cast<const SetUserPoolMfaConfigRequest *>(d->request);
 }
 
 /*!

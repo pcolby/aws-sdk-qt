@@ -493,7 +493,7 @@ namespace EC2 {
  * Constructs a Ec2Request object for EC2 \a action.
  */
 Ec2Request::Ec2Request(const Action action)
-    : d_ptr(new Ec2RequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new Ec2RequestPrivate(action, this))
 {
 
 }
@@ -502,8 +502,7 @@ Ec2Request::Ec2Request(const Action action)
  * Constructs a copy of \a other.
  */
 Ec2Request::Ec2Request(const Ec2Request &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new Ec2RequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new Ec2RequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -526,7 +525,7 @@ Ec2Request& Ec2Request::operator=(const Ec2Request &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from Ec2RequestPrivate.
  */
-Ec2Request::Ec2Request(Ec2RequestPrivate * const d) : d_ptr(d)
+Ec2Request::Ec2Request(Ec2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -695,7 +694,7 @@ QNetworkRequest Ec2Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 Ec2RequestPrivate::Ec2RequestPrivate(const Ec2Request::Action action, Ec2Request * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -710,8 +709,8 @@ Ec2RequestPrivate::Ec2RequestPrivate(const Ec2Request::Action action, Ec2Request
  */
 Ec2RequestPrivate::Ec2RequestPrivate(const Ec2RequestPrivate &other,
                                      Ec2Request * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

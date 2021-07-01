@@ -174,16 +174,16 @@ IoTWirelessClient::IoTWirelessClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-11-22"),
-    QStringLiteral("api.iotwireless"),
-    QStringLiteral("AWS IoT Wireless"),
-    QStringLiteral("iotwireless"),
-    parent), d_ptr(new IoTWirelessClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoTWirelessClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoTWirelessClient);
+    d->apiVersion = QStringLiteral("2020-11-22");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("api.iotwireless");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS IoT Wireless");
+    d->serviceName = QStringLiteral("iotwireless");
 }
 
 /*!
@@ -202,16 +202,16 @@ IoTWirelessClient::IoTWirelessClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-11-22"),
-    QStringLiteral("api.iotwireless"),
-    QStringLiteral("AWS IoT Wireless"),
-    QStringLiteral("iotwireless"),
-    parent), d_ptr(new IoTWirelessClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoTWirelessClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoTWirelessClient);
+    d->apiVersion = QStringLiteral("2020-11-22");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("api.iotwireless");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS IoT Wireless");
+    d->serviceName = QStringLiteral("iotwireless");
 }
 
 /*!
@@ -972,9 +972,10 @@ UpdateWirelessGatewayResponse * IoTWirelessClient::updateWirelessGateway(const U
 /*!
  * Constructs a IoTWirelessClientPrivate object with public implementation \a q.
  */
-IoTWirelessClientPrivate::IoTWirelessClientPrivate(IoTWirelessClient * const q) : q_ptr(q)
+IoTWirelessClientPrivate::IoTWirelessClientPrivate(IoTWirelessClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IoTWireless

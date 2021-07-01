@@ -77,7 +77,8 @@ DeleteApplicationVersionResponse::DeleteApplicationVersionResponse(
  */
 const DeleteApplicationVersionRequest * DeleteApplicationVersionResponse::request() const
 {
-    return static_cast<const DeleteApplicationVersionRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const DeleteApplicationVersionResponse);
+    return static_cast<const DeleteApplicationVersionRequest *>(d->request);
 }
 
 /*!

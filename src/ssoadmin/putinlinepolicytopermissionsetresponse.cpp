@@ -55,7 +55,8 @@ PutInlinePolicyToPermissionSetResponse::PutInlinePolicyToPermissionSetResponse(
  */
 const PutInlinePolicyToPermissionSetRequest * PutInlinePolicyToPermissionSetResponse::request() const
 {
-    return static_cast<const PutInlinePolicyToPermissionSetRequest *>(SSOAdminResponse::request());
+    Q_D(const PutInlinePolicyToPermissionSetResponse);
+    return static_cast<const PutInlinePolicyToPermissionSetRequest *>(d->request);
 }
 
 /*!

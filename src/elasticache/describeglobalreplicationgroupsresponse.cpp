@@ -69,7 +69,8 @@ DescribeGlobalReplicationGroupsResponse::DescribeGlobalReplicationGroupsResponse
  */
 const DescribeGlobalReplicationGroupsRequest * DescribeGlobalReplicationGroupsResponse::request() const
 {
-    return static_cast<const DescribeGlobalReplicationGroupsRequest *>(ElastiCacheResponse::request());
+    Q_D(const DescribeGlobalReplicationGroupsResponse);
+    return static_cast<const DescribeGlobalReplicationGroupsRequest *>(d->request);
 }
 
 /*!

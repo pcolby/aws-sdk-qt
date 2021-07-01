@@ -55,7 +55,8 @@ UpdateFlowMediaStreamResponse::UpdateFlowMediaStreamResponse(
  */
 const UpdateFlowMediaStreamRequest * UpdateFlowMediaStreamResponse::request() const
 {
-    return static_cast<const UpdateFlowMediaStreamRequest *>(MediaConnectResponse::request());
+    Q_D(const UpdateFlowMediaStreamResponse);
+    return static_cast<const UpdateFlowMediaStreamRequest *>(d->request);
 }
 
 /*!

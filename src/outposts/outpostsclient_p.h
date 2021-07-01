@@ -20,20 +20,19 @@
 #ifndef QTAWS_OUTPOSTSCLIENT_P_H
 #define QTAWS_OUTPOSTSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Outposts {
 
 class OutpostsClient;
 
-class OutpostsClientPrivate {
+class OutpostsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit OutpostsClientPrivate(OutpostsClient * const q);
-
-protected:
-    OutpostsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(OutpostsClient)

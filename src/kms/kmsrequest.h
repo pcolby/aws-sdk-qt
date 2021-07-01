@@ -104,8 +104,7 @@ public:
 
 protected:
     /// @cond internal
-    KmsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit KmsRequest(KmsRequestPrivate * const d);
+    KmsRequest(KmsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -74,7 +74,8 @@ GetContainerImagesResponse::GetContainerImagesResponse(
  */
 const GetContainerImagesRequest * GetContainerImagesResponse::request() const
 {
-    return static_cast<const GetContainerImagesRequest *>(LightsailResponse::request());
+    Q_D(const GetContainerImagesResponse);
+    return static_cast<const GetContainerImagesRequest *>(d->request);
 }
 
 /*!

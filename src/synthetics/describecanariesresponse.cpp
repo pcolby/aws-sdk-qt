@@ -71,7 +71,8 @@ DescribeCanariesResponse::DescribeCanariesResponse(
  */
 const DescribeCanariesRequest * DescribeCanariesResponse::request() const
 {
-    return static_cast<const DescribeCanariesRequest *>(SyntheticsResponse::request());
+    Q_D(const DescribeCanariesResponse);
+    return static_cast<const DescribeCanariesRequest *>(d->request);
 }
 
 /*!

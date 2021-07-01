@@ -66,7 +66,8 @@ ListVersionsByFunctionResponse::ListVersionsByFunctionResponse(
  */
 const ListVersionsByFunctionRequest * ListVersionsByFunctionResponse::request() const
 {
-    return static_cast<const ListVersionsByFunctionRequest *>(LambdaResponse::request());
+    Q_D(const ListVersionsByFunctionResponse);
+    return static_cast<const ListVersionsByFunctionRequest *>(d->request);
 }
 
 /*!

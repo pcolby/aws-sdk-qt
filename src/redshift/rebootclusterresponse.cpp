@@ -85,7 +85,8 @@ RebootClusterResponse::RebootClusterResponse(
  */
 const RebootClusterRequest * RebootClusterResponse::request() const
 {
-    return static_cast<const RebootClusterRequest *>(RedshiftResponse::request());
+    Q_D(const RebootClusterResponse);
+    return static_cast<const RebootClusterRequest *>(d->request);
 }
 
 /*!

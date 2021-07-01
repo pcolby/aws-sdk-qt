@@ -58,7 +58,8 @@ ListSecurityConfigurationsResponse::ListSecurityConfigurationsResponse(
  */
 const ListSecurityConfigurationsRequest * ListSecurityConfigurationsResponse::request() const
 {
-    return static_cast<const ListSecurityConfigurationsRequest *>(EmrResponse::request());
+    Q_D(const ListSecurityConfigurationsResponse);
+    return static_cast<const ListSecurityConfigurationsRequest *>(d->request);
 }
 
 /*!

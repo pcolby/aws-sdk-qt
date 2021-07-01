@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    FmsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     FmsResponse(FmsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

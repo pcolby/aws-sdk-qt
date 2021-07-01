@@ -54,12 +54,6 @@ public slots:
     GetRawMessageContentResponse * getRawMessageContent(const GetRawMessageContentRequest &request);
     PutRawMessageContentResponse * putRawMessageContent(const PutRawMessageContentRequest &request);
 
-protected:
-    /// @cond internal
-    WorkMailMessageFlowClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit WorkMailMessageFlowClient(WorkMailMessageFlowClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(WorkMailMessageFlowClient)
     Q_DISABLE_COPY(WorkMailMessageFlowClient)

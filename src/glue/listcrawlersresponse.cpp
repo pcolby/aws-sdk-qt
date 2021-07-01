@@ -58,7 +58,8 @@ ListCrawlersResponse::ListCrawlersResponse(
  */
 const ListCrawlersRequest * ListCrawlersResponse::request() const
 {
-    return static_cast<const ListCrawlersRequest *>(GlueResponse::request());
+    Q_D(const ListCrawlersResponse);
+    return static_cast<const ListCrawlersRequest *>(d->request);
 }
 
 /*!

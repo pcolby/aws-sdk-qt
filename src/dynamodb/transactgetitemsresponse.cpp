@@ -74,7 +74,8 @@ TransactGetItemsResponse::TransactGetItemsResponse(
  */
 const TransactGetItemsRequest * TransactGetItemsResponse::request() const
 {
-    return static_cast<const TransactGetItemsRequest *>(DynamoDBResponse::request());
+    Q_D(const TransactGetItemsResponse);
+    return static_cast<const TransactGetItemsRequest *>(d->request);
 }
 
 /*!

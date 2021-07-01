@@ -58,7 +58,8 @@ PutSchemaVersionMetadataResponse::PutSchemaVersionMetadataResponse(
  */
 const PutSchemaVersionMetadataRequest * PutSchemaVersionMetadataResponse::request() const
 {
-    return static_cast<const PutSchemaVersionMetadataRequest *>(GlueResponse::request());
+    Q_D(const PutSchemaVersionMetadataResponse);
+    return static_cast<const PutSchemaVersionMetadataRequest *>(d->request);
 }
 
 /*!

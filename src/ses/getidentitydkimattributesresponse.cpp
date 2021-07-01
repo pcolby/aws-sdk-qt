@@ -66,7 +66,8 @@ GetIdentityDkimAttributesResponse::GetIdentityDkimAttributesResponse(
  */
 const GetIdentityDkimAttributesRequest * GetIdentityDkimAttributesResponse::request() const
 {
-    return static_cast<const GetIdentityDkimAttributesRequest *>(SesResponse::request());
+    Q_D(const GetIdentityDkimAttributesResponse);
+    return static_cast<const GetIdentityDkimAttributesRequest *>(d->request);
 }
 
 /*!

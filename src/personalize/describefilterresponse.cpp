@@ -56,7 +56,8 @@ DescribeFilterResponse::DescribeFilterResponse(
  */
 const DescribeFilterRequest * DescribeFilterResponse::request() const
 {
-    return static_cast<const DescribeFilterRequest *>(PersonalizeResponse::request());
+    Q_D(const DescribeFilterResponse);
+    return static_cast<const DescribeFilterRequest *>(d->request);
 }
 
 /*!

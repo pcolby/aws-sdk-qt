@@ -56,7 +56,8 @@ CreateStreamProcessorResponse::CreateStreamProcessorResponse(
  */
 const CreateStreamProcessorRequest * CreateStreamProcessorResponse::request() const
 {
-    return static_cast<const CreateStreamProcessorRequest *>(RekognitionResponse::request());
+    Q_D(const CreateStreamProcessorResponse);
+    return static_cast<const CreateStreamProcessorRequest *>(d->request);
 }
 
 /*!

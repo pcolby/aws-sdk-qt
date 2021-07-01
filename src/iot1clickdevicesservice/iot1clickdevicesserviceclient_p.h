@@ -20,20 +20,19 @@
 #ifndef QTAWS_IOT1CLICKDEVICESSERVICECLIENT_P_H
 #define QTAWS_IOT1CLICKDEVICESSERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace IoT1ClickDevicesService {
 
 class IoT1ClickDevicesServiceClient;
 
-class IoT1ClickDevicesServiceClientPrivate {
+class IoT1ClickDevicesServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit IoT1ClickDevicesServiceClientPrivate(IoT1ClickDevicesServiceClient * const q);
-
-protected:
-    IoT1ClickDevicesServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoT1ClickDevicesServiceClient)

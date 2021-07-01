@@ -62,7 +62,8 @@ DeleteAccessResponse::DeleteAccessResponse(
  */
 const DeleteAccessRequest * DeleteAccessResponse::request() const
 {
-    return static_cast<const DeleteAccessRequest *>(TransferResponse::request());
+    Q_D(const DeleteAccessResponse);
+    return static_cast<const DeleteAccessRequest *>(d->request);
 }
 
 /*!

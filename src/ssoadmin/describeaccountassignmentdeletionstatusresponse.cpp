@@ -55,7 +55,8 @@ DescribeAccountAssignmentDeletionStatusResponse::DescribeAccountAssignmentDeleti
  */
 const DescribeAccountAssignmentDeletionStatusRequest * DescribeAccountAssignmentDeletionStatusResponse::request() const
 {
-    return static_cast<const DescribeAccountAssignmentDeletionStatusRequest *>(SSOAdminResponse::request());
+    Q_D(const DescribeAccountAssignmentDeletionStatusResponse);
+    return static_cast<const DescribeAccountAssignmentDeletionStatusRequest *>(d->request);
 }
 
 /*!

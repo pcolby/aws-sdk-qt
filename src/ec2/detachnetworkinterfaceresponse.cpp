@@ -87,7 +87,8 @@ DetachNetworkInterfaceResponse::DetachNetworkInterfaceResponse(
  */
 const DetachNetworkInterfaceRequest * DetachNetworkInterfaceResponse::request() const
 {
-    return static_cast<const DetachNetworkInterfaceRequest *>(Ec2Response::request());
+    Q_D(const DetachNetworkInterfaceResponse);
+    return static_cast<const DetachNetworkInterfaceRequest *>(d->request);
 }
 
 /*!

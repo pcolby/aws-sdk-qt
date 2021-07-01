@@ -61,7 +61,8 @@ DescribeInterconnectLoaResponse::DescribeInterconnectLoaResponse(
  */
 const DescribeInterconnectLoaRequest * DescribeInterconnectLoaResponse::request() const
 {
-    return static_cast<const DescribeInterconnectLoaRequest *>(DirectConnectResponse::request());
+    Q_D(const DescribeInterconnectLoaResponse);
+    return static_cast<const DescribeInterconnectLoaRequest *>(d->request);
 }
 
 /*!

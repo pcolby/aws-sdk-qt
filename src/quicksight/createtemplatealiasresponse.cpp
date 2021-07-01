@@ -60,7 +60,8 @@ CreateTemplateAliasResponse::CreateTemplateAliasResponse(
  */
 const CreateTemplateAliasRequest * CreateTemplateAliasResponse::request() const
 {
-    return static_cast<const CreateTemplateAliasRequest *>(QuickSightResponse::request());
+    Q_D(const CreateTemplateAliasResponse);
+    return static_cast<const CreateTemplateAliasRequest *>(d->request);
 }
 
 /*!

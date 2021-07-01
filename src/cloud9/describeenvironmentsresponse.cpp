@@ -121,7 +121,8 @@ DescribeEnvironmentsResponse::DescribeEnvironmentsResponse(
  */
 const DescribeEnvironmentsRequest * DescribeEnvironmentsResponse::request() const
 {
-    return static_cast<const DescribeEnvironmentsRequest *>(Cloud9Response::request());
+    Q_D(const DescribeEnvironmentsResponse);
+    return static_cast<const DescribeEnvironmentsRequest *>(d->request);
 }
 
 /*!

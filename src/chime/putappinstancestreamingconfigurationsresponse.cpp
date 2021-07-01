@@ -98,7 +98,8 @@ PutAppInstanceStreamingConfigurationsResponse::PutAppInstanceStreamingConfigurat
  */
 const PutAppInstanceStreamingConfigurationsRequest * PutAppInstanceStreamingConfigurationsResponse::request() const
 {
-    return static_cast<const PutAppInstanceStreamingConfigurationsRequest *>(ChimeResponse::request());
+    Q_D(const PutAppInstanceStreamingConfigurationsResponse);
+    return static_cast<const PutAppInstanceStreamingConfigurationsRequest *>(d->request);
 }
 
 /*!

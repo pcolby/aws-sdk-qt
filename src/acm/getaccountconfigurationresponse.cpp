@@ -60,7 +60,8 @@ GetAccountConfigurationResponse::GetAccountConfigurationResponse(
  */
 const GetAccountConfigurationRequest * GetAccountConfigurationResponse::request() const
 {
-    return static_cast<const GetAccountConfigurationRequest *>(AcmResponse::request());
+    Q_D(const GetAccountConfigurationResponse);
+    return static_cast<const GetAccountConfigurationRequest *>(d->request);
 }
 
 /*!

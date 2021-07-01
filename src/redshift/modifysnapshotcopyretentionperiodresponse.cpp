@@ -85,7 +85,8 @@ ModifySnapshotCopyRetentionPeriodResponse::ModifySnapshotCopyRetentionPeriodResp
  */
 const ModifySnapshotCopyRetentionPeriodRequest * ModifySnapshotCopyRetentionPeriodResponse::request() const
 {
-    return static_cast<const ModifySnapshotCopyRetentionPeriodRequest *>(RedshiftResponse::request());
+    Q_D(const ModifySnapshotCopyRetentionPeriodResponse);
+    return static_cast<const ModifySnapshotCopyRetentionPeriodRequest *>(d->request);
 }
 
 /*!

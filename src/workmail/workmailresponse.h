@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    WorkMailResponsePrivate * const d_ptr; ///< Internal d-pointer.
     WorkMailResponse(WorkMailResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

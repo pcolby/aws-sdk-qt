@@ -145,7 +145,8 @@ AssociateSubnetsResponse::AssociateSubnetsResponse(
  */
 const AssociateSubnetsRequest * AssociateSubnetsResponse::request() const
 {
-    return static_cast<const AssociateSubnetsRequest *>(NetworkFirewallResponse::request());
+    Q_D(const AssociateSubnetsResponse);
+    return static_cast<const AssociateSubnetsRequest *>(d->request);
 }
 
 /*!

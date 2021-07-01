@@ -75,7 +75,8 @@ GetJobResponse::GetJobResponse(
  */
 const GetJobRequest * GetJobResponse::request() const
 {
-    return static_cast<const GetJobRequest *>(DeviceFarmResponse::request());
+    Q_D(const GetJobResponse);
+    return static_cast<const GetJobRequest *>(d->request);
 }
 
 /*!

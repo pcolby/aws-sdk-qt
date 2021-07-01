@@ -60,7 +60,8 @@ GetDistributionConfigResponse::GetDistributionConfigResponse(
  */
 const GetDistributionConfigRequest * GetDistributionConfigResponse::request() const
 {
-    return static_cast<const GetDistributionConfigRequest *>(CloudFrontResponse::request());
+    Q_D(const GetDistributionConfigResponse);
+    return static_cast<const GetDistributionConfigRequest *>(d->request);
 }
 
 /*!

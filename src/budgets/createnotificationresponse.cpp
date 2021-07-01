@@ -116,7 +116,8 @@ CreateNotificationResponse::CreateNotificationResponse(
  */
 const CreateNotificationRequest * CreateNotificationResponse::request() const
 {
-    return static_cast<const CreateNotificationRequest *>(BudgetsResponse::request());
+    Q_D(const CreateNotificationResponse);
+    return static_cast<const CreateNotificationRequest *>(d->request);
 }
 
 /*!

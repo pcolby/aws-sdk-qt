@@ -20,20 +20,19 @@
 #ifndef QTAWS_SCHEMASCLIENT_P_H
 #define QTAWS_SCHEMASCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Schemas {
 
 class SchemasClient;
 
-class SchemasClientPrivate {
+class SchemasClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SchemasClientPrivate(SchemasClient * const q);
-
-protected:
-    SchemasClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SchemasClient)

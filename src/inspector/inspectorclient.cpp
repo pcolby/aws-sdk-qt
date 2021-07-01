@@ -138,16 +138,16 @@ InspectorClient::InspectorClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-02-16"),
-    QStringLiteral("inspector"),
-    QStringLiteral("Amazon Inspector"),
-    QStringLiteral("inspector"),
-    parent), d_ptr(new InspectorClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new InspectorClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(InspectorClient);
+    d->apiVersion = QStringLiteral("2016-02-16");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("inspector");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Inspector");
+    d->serviceName = QStringLiteral("inspector");
 }
 
 /*!
@@ -166,16 +166,16 @@ InspectorClient::InspectorClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-02-16"),
-    QStringLiteral("inspector"),
-    QStringLiteral("Amazon Inspector"),
-    QStringLiteral("inspector"),
-    parent), d_ptr(new InspectorClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new InspectorClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(InspectorClient);
+    d->apiVersion = QStringLiteral("2016-02-16");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("inspector");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Inspector");
+    d->serviceName = QStringLiteral("inspector");
 }
 
 /*!
@@ -710,9 +710,10 @@ UpdateAssessmentTargetResponse * InspectorClient::updateAssessmentTarget(const U
 /*!
  * Constructs a InspectorClientPrivate object with public implementation \a q.
  */
-InspectorClientPrivate::InspectorClientPrivate(InspectorClient * const q) : q_ptr(q)
+InspectorClientPrivate::InspectorClientPrivate(InspectorClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Inspector

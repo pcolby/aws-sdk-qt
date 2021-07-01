@@ -64,7 +64,8 @@ GetReportGroupTrendResponse::GetReportGroupTrendResponse(
  */
 const GetReportGroupTrendRequest * GetReportGroupTrendResponse::request() const
 {
-    return static_cast<const GetReportGroupTrendRequest *>(CodeBuildResponse::request());
+    Q_D(const GetReportGroupTrendResponse);
+    return static_cast<const GetReportGroupTrendRequest *>(d->request);
 }
 
 /*!

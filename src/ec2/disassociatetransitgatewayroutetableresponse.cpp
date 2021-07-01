@@ -87,7 +87,8 @@ DisassociateTransitGatewayRouteTableResponse::DisassociateTransitGatewayRouteTab
  */
 const DisassociateTransitGatewayRouteTableRequest * DisassociateTransitGatewayRouteTableResponse::request() const
 {
-    return static_cast<const DisassociateTransitGatewayRouteTableRequest *>(Ec2Response::request());
+    Q_D(const DisassociateTransitGatewayRouteTableResponse);
+    return static_cast<const DisassociateTransitGatewayRouteTableRequest *>(d->request);
 }
 
 /*!

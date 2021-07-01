@@ -87,7 +87,8 @@ ResetNetworkInterfaceAttributeResponse::ResetNetworkInterfaceAttributeResponse(
  */
 const ResetNetworkInterfaceAttributeRequest * ResetNetworkInterfaceAttributeResponse::request() const
 {
-    return static_cast<const ResetNetworkInterfaceAttributeRequest *>(Ec2Response::request());
+    Q_D(const ResetNetworkInterfaceAttributeResponse);
+    return static_cast<const ResetNetworkInterfaceAttributeRequest *>(d->request);
 }
 
 /*!

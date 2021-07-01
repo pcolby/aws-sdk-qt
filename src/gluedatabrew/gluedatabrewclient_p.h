@@ -20,20 +20,19 @@
 #ifndef QTAWS_GLUEDATABREWCLIENT_P_H
 #define QTAWS_GLUEDATABREWCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace GlueDataBrew {
 
 class GlueDataBrewClient;
 
-class GlueDataBrewClientPrivate {
+class GlueDataBrewClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit GlueDataBrewClientPrivate(GlueDataBrewClient * const q);
-
-protected:
-    GlueDataBrewClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GlueDataBrewClient)

@@ -124,7 +124,8 @@ DescribeFileSystemAssociationsResponse::DescribeFileSystemAssociationsResponse(
  */
 const DescribeFileSystemAssociationsRequest * DescribeFileSystemAssociationsResponse::request() const
 {
-    return static_cast<const DescribeFileSystemAssociationsRequest *>(StorageGatewayResponse::request());
+    Q_D(const DescribeFileSystemAssociationsResponse);
+    return static_cast<const DescribeFileSystemAssociationsRequest *>(d->request);
 }
 
 /*!

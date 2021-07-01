@@ -141,7 +141,8 @@ ListDeploymentInstancesResponse::ListDeploymentInstancesResponse(
  */
 const ListDeploymentInstancesRequest * ListDeploymentInstancesResponse::request() const
 {
-    return static_cast<const ListDeploymentInstancesRequest *>(CodeDeployResponse::request());
+    Q_D(const ListDeploymentInstancesResponse);
+    return static_cast<const ListDeploymentInstancesRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_CLOUDFORMATIONCLIENT_P_H
 #define QTAWS_CLOUDFORMATIONCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CloudFormation {
 
 class CloudFormationClient;
 
-class CloudFormationClientPrivate {
+class CloudFormationClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CloudFormationClientPrivate(CloudFormationClient * const q);
-
-protected:
-    CloudFormationClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudFormationClient)

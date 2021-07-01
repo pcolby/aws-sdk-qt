@@ -87,7 +87,8 @@ CreateInternetGatewayResponse::CreateInternetGatewayResponse(
  */
 const CreateInternetGatewayRequest * CreateInternetGatewayResponse::request() const
 {
-    return static_cast<const CreateInternetGatewayRequest *>(Ec2Response::request());
+    Q_D(const CreateInternetGatewayResponse);
+    return static_cast<const CreateInternetGatewayRequest *>(d->request);
 }
 
 /*!

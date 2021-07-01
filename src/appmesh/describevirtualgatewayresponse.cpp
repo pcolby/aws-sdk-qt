@@ -73,7 +73,8 @@ DescribeVirtualGatewayResponse::DescribeVirtualGatewayResponse(
  */
 const DescribeVirtualGatewayRequest * DescribeVirtualGatewayResponse::request() const
 {
-    return static_cast<const DescribeVirtualGatewayRequest *>(AppMeshResponse::request());
+    Q_D(const DescribeVirtualGatewayResponse);
+    return static_cast<const DescribeVirtualGatewayRequest *>(d->request);
 }
 
 /*!

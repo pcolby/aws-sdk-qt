@@ -244,16 +244,16 @@ WAFRegionalClient::WAFRegionalClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-11-28"),
-    QStringLiteral("waf-regional"),
-    QStringLiteral("AWS WAF Regional"),
-    QStringLiteral("waf-regional"),
-    parent), d_ptr(new WAFRegionalClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new WAFRegionalClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(WAFRegionalClient);
+    d->apiVersion = QStringLiteral("2016-11-28");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("waf-regional");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS WAF Regional");
+    d->serviceName = QStringLiteral("waf-regional");
 }
 
 /*!
@@ -272,16 +272,16 @@ WAFRegionalClient::WAFRegionalClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-11-28"),
-    QStringLiteral("waf-regional"),
-    QStringLiteral("AWS WAF Regional"),
-    QStringLiteral("waf-regional"),
-    parent), d_ptr(new WAFRegionalClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new WAFRegionalClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(WAFRegionalClient);
+    d->apiVersion = QStringLiteral("2016-11-28");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("waf-regional");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS WAF Regional");
+    d->serviceName = QStringLiteral("waf-regional");
 }
 
 /*!
@@ -3953,9 +3953,10 @@ UpdateXssMatchSetResponse * WAFRegionalClient::updateXssMatchSet(const UpdateXss
 /*!
  * Constructs a WAFRegionalClientPrivate object with public implementation \a q.
  */
-WAFRegionalClientPrivate::WAFRegionalClientPrivate(WAFRegionalClient * const q) : q_ptr(q)
+WAFRegionalClientPrivate::WAFRegionalClientPrivate(WAFRegionalClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace WAFRegional

@@ -55,7 +55,8 @@ AddFlowOutputsResponse::AddFlowOutputsResponse(
  */
 const AddFlowOutputsRequest * AddFlowOutputsResponse::request() const
 {
-    return static_cast<const AddFlowOutputsRequest *>(MediaConnectResponse::request());
+    Q_D(const AddFlowOutputsResponse);
+    return static_cast<const AddFlowOutputsRequest *>(d->request);
 }
 
 /*!

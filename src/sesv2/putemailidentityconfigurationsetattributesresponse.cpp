@@ -88,7 +88,8 @@ PutEmailIdentityConfigurationSetAttributesResponse::PutEmailIdentityConfiguratio
  */
 const PutEmailIdentityConfigurationSetAttributesRequest * PutEmailIdentityConfigurationSetAttributesResponse::request() const
 {
-    return static_cast<const PutEmailIdentityConfigurationSetAttributesRequest *>(Sesv2Response::request());
+    Q_D(const PutEmailIdentityConfigurationSetAttributesResponse);
+    return static_cast<const PutEmailIdentityConfigurationSetAttributesRequest *>(d->request);
 }
 
 /*!

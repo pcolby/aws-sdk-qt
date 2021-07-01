@@ -75,7 +75,8 @@ DeleteTestGridProjectResponse::DeleteTestGridProjectResponse(
  */
 const DeleteTestGridProjectRequest * DeleteTestGridProjectResponse::request() const
 {
-    return static_cast<const DeleteTestGridProjectRequest *>(DeviceFarmResponse::request());
+    Q_D(const DeleteTestGridProjectResponse);
+    return static_cast<const DeleteTestGridProjectRequest *>(d->request);
 }
 
 /*!

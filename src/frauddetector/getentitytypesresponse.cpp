@@ -58,7 +58,8 @@ GetEntityTypesResponse::GetEntityTypesResponse(
  */
 const GetEntityTypesRequest * GetEntityTypesResponse::request() const
 {
-    return static_cast<const GetEntityTypesRequest *>(FraudDetectorResponse::request());
+    Q_D(const GetEntityTypesResponse);
+    return static_cast<const GetEntityTypesRequest *>(d->request);
 }
 
 /*!

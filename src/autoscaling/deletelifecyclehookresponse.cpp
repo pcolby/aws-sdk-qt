@@ -68,7 +68,8 @@ DeleteLifecycleHookResponse::DeleteLifecycleHookResponse(
  */
 const DeleteLifecycleHookRequest * DeleteLifecycleHookResponse::request() const
 {
-    return static_cast<const DeleteLifecycleHookRequest *>(AutoScalingResponse::request());
+    Q_D(const DeleteLifecycleHookResponse);
+    return static_cast<const DeleteLifecycleHookRequest *>(d->request);
 }
 
 /*!

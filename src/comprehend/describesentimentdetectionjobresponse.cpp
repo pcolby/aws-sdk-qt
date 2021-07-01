@@ -58,7 +58,8 @@ DescribeSentimentDetectionJobResponse::DescribeSentimentDetectionJobResponse(
  */
 const DescribeSentimentDetectionJobRequest * DescribeSentimentDetectionJobResponse::request() const
 {
-    return static_cast<const DescribeSentimentDetectionJobRequest *>(ComprehendResponse::request());
+    Q_D(const DescribeSentimentDetectionJobResponse);
+    return static_cast<const DescribeSentimentDetectionJobRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ AssociateAddressResponse::AssociateAddressResponse(
  */
 const AssociateAddressRequest * AssociateAddressResponse::request() const
 {
-    return static_cast<const AssociateAddressRequest *>(Ec2Response::request());
+    Q_D(const AssociateAddressResponse);
+    return static_cast<const AssociateAddressRequest *>(d->request);
 }
 
 /*!

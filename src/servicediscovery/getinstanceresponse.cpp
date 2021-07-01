@@ -60,7 +60,8 @@ GetInstanceResponse::GetInstanceResponse(
  */
 const GetInstanceRequest * GetInstanceResponse::request() const
 {
-    return static_cast<const GetInstanceRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const GetInstanceResponse);
+    return static_cast<const GetInstanceRequest *>(d->request);
 }
 
 /*!

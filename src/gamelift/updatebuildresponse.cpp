@@ -115,7 +115,8 @@ UpdateBuildResponse::UpdateBuildResponse(
  */
 const UpdateBuildRequest * UpdateBuildResponse::request() const
 {
-    return static_cast<const UpdateBuildRequest *>(GameLiftResponse::request());
+    Q_D(const UpdateBuildResponse);
+    return static_cast<const UpdateBuildRequest *>(d->request);
 }
 
 /*!

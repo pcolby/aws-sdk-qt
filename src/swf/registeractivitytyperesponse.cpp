@@ -71,7 +71,8 @@ RegisterActivityTypeResponse::RegisterActivityTypeResponse(
  */
 const RegisterActivityTypeRequest * RegisterActivityTypeResponse::request() const
 {
-    return static_cast<const RegisterActivityTypeRequest *>(SwfResponse::request());
+    Q_D(const RegisterActivityTypeResponse);
+    return static_cast<const RegisterActivityTypeRequest *>(d->request);
 }
 
 /*!

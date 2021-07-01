@@ -218,7 +218,8 @@ DeleteCustomRoutingEndpointGroupResponse::DeleteCustomRoutingEndpointGroupRespon
  */
 const DeleteCustomRoutingEndpointGroupRequest * DeleteCustomRoutingEndpointGroupResponse::request() const
 {
-    return static_cast<const DeleteCustomRoutingEndpointGroupRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const DeleteCustomRoutingEndpointGroupResponse);
+    return static_cast<const DeleteCustomRoutingEndpointGroupRequest *>(d->request);
 }
 
 /*!

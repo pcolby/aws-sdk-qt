@@ -62,7 +62,8 @@ RevokeInvitationResponse::RevokeInvitationResponse(
  */
 const RevokeInvitationRequest * RevokeInvitationResponse::request() const
 {
-    return static_cast<const RevokeInvitationRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const RevokeInvitationResponse);
+    return static_cast<const RevokeInvitationRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ PutEvaluationsResponse::PutEvaluationsResponse(
  */
 const PutEvaluationsRequest * PutEvaluationsResponse::request() const
 {
-    return static_cast<const PutEvaluationsRequest *>(ConfigServiceResponse::request());
+    Q_D(const PutEvaluationsResponse);
+    return static_cast<const PutEvaluationsRequest *>(d->request);
 }
 
 /*!

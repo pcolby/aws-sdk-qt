@@ -58,7 +58,8 @@ BackTestAnomalyDetectorResponse::BackTestAnomalyDetectorResponse(
  */
 const BackTestAnomalyDetectorRequest * BackTestAnomalyDetectorResponse::request() const
 {
-    return static_cast<const BackTestAnomalyDetectorRequest *>(LookoutMetricsResponse::request());
+    Q_D(const BackTestAnomalyDetectorResponse);
+    return static_cast<const BackTestAnomalyDetectorRequest *>(d->request);
 }
 
 /*!

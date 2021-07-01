@@ -216,12 +216,6 @@ public slots:
     UpdateMultiplexProgramResponse * updateMultiplexProgram(const UpdateMultiplexProgramRequest &request);
     UpdateReservationResponse * updateReservation(const UpdateReservationRequest &request);
 
-protected:
-    /// @cond internal
-    MediaLiveClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MediaLiveClient(MediaLiveClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MediaLiveClient)
     Q_DISABLE_COPY(MediaLiveClient)

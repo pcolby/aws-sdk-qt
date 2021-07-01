@@ -56,7 +56,8 @@ GetWirelessDeviceResponse::GetWirelessDeviceResponse(
  */
 const GetWirelessDeviceRequest * GetWirelessDeviceResponse::request() const
 {
-    return static_cast<const GetWirelessDeviceRequest *>(IoTWirelessResponse::request());
+    Q_D(const GetWirelessDeviceResponse);
+    return static_cast<const GetWirelessDeviceRequest *>(d->request);
 }
 
 /*!

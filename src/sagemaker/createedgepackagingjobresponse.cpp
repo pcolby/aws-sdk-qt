@@ -70,7 +70,8 @@ CreateEdgePackagingJobResponse::CreateEdgePackagingJobResponse(
  */
 const CreateEdgePackagingJobRequest * CreateEdgePackagingJobResponse::request() const
 {
-    return static_cast<const CreateEdgePackagingJobRequest *>(SageMakerResponse::request());
+    Q_D(const CreateEdgePackagingJobResponse);
+    return static_cast<const CreateEdgePackagingJobRequest *>(d->request);
 }
 
 /*!

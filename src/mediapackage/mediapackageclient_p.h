@@ -20,20 +20,19 @@
 #ifndef QTAWS_MEDIAPACKAGECLIENT_P_H
 #define QTAWS_MEDIAPACKAGECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MediaPackage {
 
 class MediaPackageClient;
 
-class MediaPackageClientPrivate {
+class MediaPackageClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MediaPackageClientPrivate(MediaPackageClient * const q);
-
-protected:
-    MediaPackageClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaPackageClient)

@@ -69,7 +69,7 @@ namespace SSMContacts {
  * Constructs a SSMContactsRequest object for SSMContacts \a action.
  */
 SSMContactsRequest::SSMContactsRequest(const Action action)
-    : d_ptr(new SSMContactsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SSMContactsRequestPrivate(action, this))
 {
 
 }
@@ -78,8 +78,7 @@ SSMContactsRequest::SSMContactsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SSMContactsRequest::SSMContactsRequest(const SSMContactsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new SSMContactsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SSMContactsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -102,7 +101,7 @@ SSMContactsRequest& SSMContactsRequest::operator=(const SSMContactsRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SSMContactsRequestPrivate.
  */
-SSMContactsRequest::SSMContactsRequest(SSMContactsRequestPrivate * const d) : d_ptr(d)
+SSMContactsRequest::SSMContactsRequest(SSMContactsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -271,7 +270,7 @@ QNetworkRequest SSMContactsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SSMContactsRequestPrivate::SSMContactsRequestPrivate(const SSMContactsRequest::Action action, SSMContactsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -286,8 +285,8 @@ SSMContactsRequestPrivate::SSMContactsRequestPrivate(const SSMContactsRequest::A
  */
 SSMContactsRequestPrivate::SSMContactsRequestPrivate(const SSMContactsRequestPrivate &other,
                                      SSMContactsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

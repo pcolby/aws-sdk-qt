@@ -58,7 +58,8 @@ DeleteGroupResponse::DeleteGroupResponse(
  */
 const DeleteGroupRequest * DeleteGroupResponse::request() const
 {
-    return static_cast<const DeleteGroupRequest *>(GreengrassResponse::request());
+    Q_D(const DeleteGroupResponse);
+    return static_cast<const DeleteGroupRequest *>(d->request);
 }
 
 /*!

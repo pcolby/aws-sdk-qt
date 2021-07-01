@@ -20,12 +20,15 @@
 #ifndef QTAWS_DATASYNCREQUEST_P_H
 #define QTAWS_DATASYNCREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "datasyncrequest.h"
+
 namespace QtAws {
 namespace DataSync {
 
 class DataSyncRequest;
 
-class DataSyncRequestPrivate {
+class DataSyncRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DataSyncRequest::Action action; ///< DataSync action to be performed.
@@ -36,9 +39,6 @@ public:
     DataSyncRequestPrivate(const DataSyncRequestPrivate &other, DataSyncRequest * const q);
 
     static QString toString(const DataSyncRequest::Action &action);
-
-protected:
-    DataSyncRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DataSyncRequest)

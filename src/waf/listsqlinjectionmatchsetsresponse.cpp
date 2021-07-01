@@ -76,7 +76,8 @@ ListSqlInjectionMatchSetsResponse::ListSqlInjectionMatchSetsResponse(
  */
 const ListSqlInjectionMatchSetsRequest * ListSqlInjectionMatchSetsResponse::request() const
 {
-    return static_cast<const ListSqlInjectionMatchSetsRequest *>(WafResponse::request());
+    Q_D(const ListSqlInjectionMatchSetsResponse);
+    return static_cast<const ListSqlInjectionMatchSetsRequest *>(d->request);
 }
 
 /*!

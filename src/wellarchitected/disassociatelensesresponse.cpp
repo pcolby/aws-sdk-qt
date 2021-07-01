@@ -62,7 +62,8 @@ DisassociateLensesResponse::DisassociateLensesResponse(
  */
 const DisassociateLensesRequest * DisassociateLensesResponse::request() const
 {
-    return static_cast<const DisassociateLensesRequest *>(WellArchitectedResponse::request());
+    Q_D(const DisassociateLensesResponse);
+    return static_cast<const DisassociateLensesRequest *>(d->request);
 }
 
 /*!

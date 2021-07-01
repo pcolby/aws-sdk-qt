@@ -181,16 +181,16 @@ AppStreamClient::AppStreamClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-12-01"),
-    QStringLiteral("appstream2"),
-    QStringLiteral("Amazon AppStream"),
-    QStringLiteral("appstream"),
-    parent), d_ptr(new AppStreamClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AppStreamClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AppStreamClient);
+    d->apiVersion = QStringLiteral("2016-12-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("appstream2");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon AppStream");
+    d->serviceName = QStringLiteral("appstream");
 }
 
 /*!
@@ -209,16 +209,16 @@ AppStreamClient::AppStreamClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-12-01"),
-    QStringLiteral("appstream2"),
-    QStringLiteral("Amazon AppStream"),
-    QStringLiteral("appstream"),
-    parent), d_ptr(new AppStreamClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AppStreamClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AppStreamClient);
+    d->apiVersion = QStringLiteral("2016-12-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("appstream2");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon AppStream");
+    d->serviceName = QStringLiteral("appstream");
 }
 
 /*!
@@ -941,9 +941,10 @@ UpdateStackResponse * AppStreamClient::updateStack(const UpdateStackRequest &req
 /*!
  * Constructs a AppStreamClientPrivate object with public implementation \a q.
  */
-AppStreamClientPrivate::AppStreamClientPrivate(AppStreamClient * const q) : q_ptr(q)
+AppStreamClientPrivate::AppStreamClientPrivate(AppStreamClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AppStream

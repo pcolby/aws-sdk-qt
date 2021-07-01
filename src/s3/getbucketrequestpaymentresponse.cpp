@@ -55,7 +55,8 @@ GetBucketRequestPaymentResponse::GetBucketRequestPaymentResponse(
  */
 const GetBucketRequestPaymentRequest * GetBucketRequestPaymentResponse::request() const
 {
-    return static_cast<const GetBucketRequestPaymentRequest *>(S3Response::request());
+    Q_D(const GetBucketRequestPaymentResponse);
+    return static_cast<const GetBucketRequestPaymentRequest *>(d->request);
 }
 
 /*!

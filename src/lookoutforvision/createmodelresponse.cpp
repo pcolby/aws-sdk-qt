@@ -64,7 +64,8 @@ CreateModelResponse::CreateModelResponse(
  */
 const CreateModelRequest * CreateModelResponse::request() const
 {
-    return static_cast<const CreateModelRequest *>(LookoutforVisionResponse::request());
+    Q_D(const CreateModelResponse);
+    return static_cast<const CreateModelRequest *>(d->request);
 }
 
 /*!

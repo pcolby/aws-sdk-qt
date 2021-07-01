@@ -59,7 +59,8 @@ ListCopyJobsResponse::ListCopyJobsResponse(
  */
 const ListCopyJobsRequest * ListCopyJobsResponse::request() const
 {
-    return static_cast<const ListCopyJobsRequest *>(BackupResponse::request());
+    Q_D(const ListCopyJobsResponse);
+    return static_cast<const ListCopyJobsRequest *>(d->request);
 }
 
 /*!

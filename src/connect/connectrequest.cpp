@@ -144,7 +144,7 @@ namespace Connect {
  * Constructs a ConnectRequest object for Connect \a action.
  */
 ConnectRequest::ConnectRequest(const Action action)
-    : d_ptr(new ConnectRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ConnectRequestPrivate(action, this))
 {
 
 }
@@ -153,8 +153,7 @@ ConnectRequest::ConnectRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ConnectRequest::ConnectRequest(const ConnectRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ConnectRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ConnectRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -177,7 +176,7 @@ ConnectRequest& ConnectRequest::operator=(const ConnectRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ConnectRequestPrivate.
  */
-ConnectRequest::ConnectRequest(ConnectRequestPrivate * const d) : d_ptr(d)
+ConnectRequest::ConnectRequest(ConnectRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -346,7 +345,7 @@ QNetworkRequest ConnectRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ConnectRequestPrivate::ConnectRequestPrivate(const ConnectRequest::Action action, ConnectRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -361,8 +360,8 @@ ConnectRequestPrivate::ConnectRequestPrivate(const ConnectRequest::Action action
  */
 ConnectRequestPrivate::ConnectRequestPrivate(const ConnectRequestPrivate &other,
                                      ConnectRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

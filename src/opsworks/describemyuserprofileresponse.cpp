@@ -161,7 +161,8 @@ DescribeMyUserProfileResponse::DescribeMyUserProfileResponse(
  */
 const DescribeMyUserProfileRequest * DescribeMyUserProfileResponse::request() const
 {
-    return static_cast<const DescribeMyUserProfileRequest *>(OpsWorksResponse::request());
+    Q_D(const DescribeMyUserProfileResponse);
+    return static_cast<const DescribeMyUserProfileRequest *>(d->request);
 }
 
 /*!

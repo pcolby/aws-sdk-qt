@@ -92,7 +92,8 @@ DeleteConfigurationSetResponse::DeleteConfigurationSetResponse(
  */
 const DeleteConfigurationSetRequest * DeleteConfigurationSetResponse::request() const
 {
-    return static_cast<const DeleteConfigurationSetRequest *>(PinpointEmailResponse::request());
+    Q_D(const DeleteConfigurationSetResponse);
+    return static_cast<const DeleteConfigurationSetRequest *>(d->request);
 }
 
 /*!

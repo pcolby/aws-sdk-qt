@@ -84,12 +84,6 @@ public slots:
     QueryTableRowsResponse * queryTableRows(const QueryTableRowsRequest &request);
     StartTableDataImportJobResponse * startTableDataImportJob(const StartTableDataImportJobRequest &request);
 
-protected:
-    /// @cond internal
-    HoneycodeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit HoneycodeClient(HoneycodeClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(HoneycodeClient)
     Q_DISABLE_COPY(HoneycodeClient)

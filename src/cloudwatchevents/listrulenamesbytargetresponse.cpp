@@ -78,7 +78,8 @@ ListRuleNamesByTargetResponse::ListRuleNamesByTargetResponse(
  */
 const ListRuleNamesByTargetRequest * ListRuleNamesByTargetResponse::request() const
 {
-    return static_cast<const ListRuleNamesByTargetRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const ListRuleNamesByTargetResponse);
+    return static_cast<const ListRuleNamesByTargetRequest *>(d->request);
 }
 
 /*!

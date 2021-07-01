@@ -87,7 +87,8 @@ GetConsoleOutputResponse::GetConsoleOutputResponse(
  */
 const GetConsoleOutputRequest * GetConsoleOutputResponse::request() const
 {
-    return static_cast<const GetConsoleOutputRequest *>(Ec2Response::request());
+    Q_D(const GetConsoleOutputResponse);
+    return static_cast<const GetConsoleOutputRequest *>(d->request);
 }
 
 /*!

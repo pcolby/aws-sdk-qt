@@ -55,7 +55,8 @@ ApproveAssignmentResponse::ApproveAssignmentResponse(
  */
 const ApproveAssignmentRequest * ApproveAssignmentResponse::request() const
 {
-    return static_cast<const ApproveAssignmentRequest *>(MTurkResponse::request());
+    Q_D(const ApproveAssignmentResponse);
+    return static_cast<const ApproveAssignmentRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ GetOrganizationAdminAccountResponse::GetOrganizationAdminAccountResponse(
  */
 const GetOrganizationAdminAccountRequest * GetOrganizationAdminAccountResponse::request() const
 {
-    return static_cast<const GetOrganizationAdminAccountRequest *>(AuditManagerResponse::request());
+    Q_D(const GetOrganizationAdminAccountResponse);
+    return static_cast<const GetOrganizationAdminAccountRequest *>(d->request);
 }
 
 /*!

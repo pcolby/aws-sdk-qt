@@ -66,7 +66,8 @@ GetIdentityPoliciesResponse::GetIdentityPoliciesResponse(
  */
 const GetIdentityPoliciesRequest * GetIdentityPoliciesResponse::request() const
 {
-    return static_cast<const GetIdentityPoliciesRequest *>(SesResponse::request());
+    Q_D(const GetIdentityPoliciesResponse);
+    return static_cast<const GetIdentityPoliciesRequest *>(d->request);
 }
 
 /*!

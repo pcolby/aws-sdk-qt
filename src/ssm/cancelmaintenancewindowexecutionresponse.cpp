@@ -98,7 +98,8 @@ CancelMaintenanceWindowExecutionResponse::CancelMaintenanceWindowExecutionRespon
  */
 const CancelMaintenanceWindowExecutionRequest * CancelMaintenanceWindowExecutionResponse::request() const
 {
-    return static_cast<const CancelMaintenanceWindowExecutionRequest *>(SsmResponse::request());
+    Q_D(const CancelMaintenanceWindowExecutionResponse);
+    return static_cast<const CancelMaintenanceWindowExecutionRequest *>(d->request);
 }
 
 /*!

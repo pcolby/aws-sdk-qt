@@ -63,7 +63,8 @@ CancelChangeSetResponse::CancelChangeSetResponse(
  */
 const CancelChangeSetRequest * CancelChangeSetResponse::request() const
 {
-    return static_cast<const CancelChangeSetRequest *>(MarketplaceCatalogResponse::request());
+    Q_D(const CancelChangeSetResponse);
+    return static_cast<const CancelChangeSetRequest *>(d->request);
 }
 
 /*!

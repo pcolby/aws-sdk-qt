@@ -66,12 +66,6 @@ public slots:
     PutSnapshotBlockResponse * putSnapshotBlock(const PutSnapshotBlockRequest &request);
     StartSnapshotResponse * startSnapshot(const StartSnapshotRequest &request);
 
-protected:
-    /// @cond internal
-    EbsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EbsClient(EbsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(EbsClient)
     Q_DISABLE_COPY(EbsClient)

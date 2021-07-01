@@ -93,7 +93,7 @@ namespace EventBridge {
  * Constructs a EventBridgeRequest object for EventBridge \a action.
  */
 EventBridgeRequest::EventBridgeRequest(const Action action)
-    : d_ptr(new EventBridgeRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new EventBridgeRequestPrivate(action, this))
 {
 
 }
@@ -102,8 +102,7 @@ EventBridgeRequest::EventBridgeRequest(const Action action)
  * Constructs a copy of \a other.
  */
 EventBridgeRequest::EventBridgeRequest(const EventBridgeRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new EventBridgeRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new EventBridgeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -126,7 +125,7 @@ EventBridgeRequest& EventBridgeRequest::operator=(const EventBridgeRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from EventBridgeRequestPrivate.
  */
-EventBridgeRequest::EventBridgeRequest(EventBridgeRequestPrivate * const d) : d_ptr(d)
+EventBridgeRequest::EventBridgeRequest(EventBridgeRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -295,7 +294,7 @@ QNetworkRequest EventBridgeRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 EventBridgeRequestPrivate::EventBridgeRequestPrivate(const EventBridgeRequest::Action action, EventBridgeRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -310,8 +309,8 @@ EventBridgeRequestPrivate::EventBridgeRequestPrivate(const EventBridgeRequest::A
  */
 EventBridgeRequestPrivate::EventBridgeRequestPrivate(const EventBridgeRequestPrivate &other,
                                      EventBridgeRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

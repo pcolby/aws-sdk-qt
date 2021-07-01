@@ -85,7 +85,8 @@ RevokeClusterSecurityGroupIngressResponse::RevokeClusterSecurityGroupIngressResp
  */
 const RevokeClusterSecurityGroupIngressRequest * RevokeClusterSecurityGroupIngressResponse::request() const
 {
-    return static_cast<const RevokeClusterSecurityGroupIngressRequest *>(RedshiftResponse::request());
+    Q_D(const RevokeClusterSecurityGroupIngressResponse);
+    return static_cast<const RevokeClusterSecurityGroupIngressRequest *>(d->request);
 }
 
 /*!

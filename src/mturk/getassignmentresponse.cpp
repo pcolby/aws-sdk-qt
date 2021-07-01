@@ -55,7 +55,8 @@ GetAssignmentResponse::GetAssignmentResponse(
  */
 const GetAssignmentRequest * GetAssignmentResponse::request() const
 {
-    return static_cast<const GetAssignmentRequest *>(MTurkResponse::request());
+    Q_D(const GetAssignmentResponse);
+    return static_cast<const GetAssignmentRequest *>(d->request);
 }
 
 /*!

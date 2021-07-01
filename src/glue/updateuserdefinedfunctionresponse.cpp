@@ -58,7 +58,8 @@ UpdateUserDefinedFunctionResponse::UpdateUserDefinedFunctionResponse(
  */
 const UpdateUserDefinedFunctionRequest * UpdateUserDefinedFunctionResponse::request() const
 {
-    return static_cast<const UpdateUserDefinedFunctionRequest *>(GlueResponse::request());
+    Q_D(const UpdateUserDefinedFunctionResponse);
+    return static_cast<const UpdateUserDefinedFunctionRequest *>(d->request);
 }
 
 /*!

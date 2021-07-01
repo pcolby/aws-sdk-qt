@@ -69,7 +69,8 @@ DescribeDomainControllersResponse::DescribeDomainControllersResponse(
  */
 const DescribeDomainControllersRequest * DescribeDomainControllersResponse::request() const
 {
-    return static_cast<const DescribeDomainControllersRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DescribeDomainControllersResponse);
+    return static_cast<const DescribeDomainControllersRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ DeleteFunctionDefinitionResponse::DeleteFunctionDefinitionResponse(
  */
 const DeleteFunctionDefinitionRequest * DeleteFunctionDefinitionResponse::request() const
 {
-    return static_cast<const DeleteFunctionDefinitionRequest *>(GreengrassResponse::request());
+    Q_D(const DeleteFunctionDefinitionResponse);
+    return static_cast<const DeleteFunctionDefinitionRequest *>(d->request);
 }
 
 /*!

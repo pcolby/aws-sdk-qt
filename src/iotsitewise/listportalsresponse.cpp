@@ -61,7 +61,8 @@ ListPortalsResponse::ListPortalsResponse(
  */
 const ListPortalsRequest * ListPortalsResponse::request() const
 {
-    return static_cast<const ListPortalsRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const ListPortalsResponse);
+    return static_cast<const ListPortalsRequest *>(d->request);
 }
 
 /*!

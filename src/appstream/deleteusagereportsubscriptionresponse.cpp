@@ -81,7 +81,8 @@ DeleteUsageReportSubscriptionResponse::DeleteUsageReportSubscriptionResponse(
  */
 const DeleteUsageReportSubscriptionRequest * DeleteUsageReportSubscriptionResponse::request() const
 {
-    return static_cast<const DeleteUsageReportSubscriptionRequest *>(AppStreamResponse::request());
+    Q_D(const DeleteUsageReportSubscriptionResponse);
+    return static_cast<const DeleteUsageReportSubscriptionRequest *>(d->request);
 }
 
 /*!

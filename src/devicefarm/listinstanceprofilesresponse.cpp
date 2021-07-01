@@ -75,7 +75,8 @@ ListInstanceProfilesResponse::ListInstanceProfilesResponse(
  */
 const ListInstanceProfilesRequest * ListInstanceProfilesResponse::request() const
 {
-    return static_cast<const ListInstanceProfilesRequest *>(DeviceFarmResponse::request());
+    Q_D(const ListInstanceProfilesResponse);
+    return static_cast<const ListInstanceProfilesRequest *>(d->request);
 }
 
 /*!

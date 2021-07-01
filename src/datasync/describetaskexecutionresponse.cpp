@@ -64,7 +64,8 @@ DescribeTaskExecutionResponse::DescribeTaskExecutionResponse(
  */
 const DescribeTaskExecutionRequest * DescribeTaskExecutionResponse::request() const
 {
-    return static_cast<const DescribeTaskExecutionRequest *>(DataSyncResponse::request());
+    Q_D(const DescribeTaskExecutionResponse);
+    return static_cast<const DescribeTaskExecutionRequest *>(d->request);
 }
 
 /*!

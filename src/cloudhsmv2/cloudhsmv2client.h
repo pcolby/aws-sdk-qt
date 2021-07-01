@@ -93,12 +93,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    CloudHSMV2ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CloudHSMV2Client(CloudHSMV2ClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(CloudHSMV2Client)
     Q_DISABLE_COPY(CloudHSMV2Client)

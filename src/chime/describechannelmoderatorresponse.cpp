@@ -98,7 +98,8 @@ DescribeChannelModeratorResponse::DescribeChannelModeratorResponse(
  */
 const DescribeChannelModeratorRequest * DescribeChannelModeratorResponse::request() const
 {
-    return static_cast<const DescribeChannelModeratorRequest *>(ChimeResponse::request());
+    Q_D(const DescribeChannelModeratorResponse);
+    return static_cast<const DescribeChannelModeratorRequest *>(d->request);
 }
 
 /*!

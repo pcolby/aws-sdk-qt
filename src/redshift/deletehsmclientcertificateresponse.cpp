@@ -85,7 +85,8 @@ DeleteHsmClientCertificateResponse::DeleteHsmClientCertificateResponse(
  */
 const DeleteHsmClientCertificateRequest * DeleteHsmClientCertificateResponse::request() const
 {
-    return static_cast<const DeleteHsmClientCertificateRequest *>(RedshiftResponse::request());
+    Q_D(const DeleteHsmClientCertificateResponse);
+    return static_cast<const DeleteHsmClientCertificateRequest *>(d->request);
 }
 
 /*!

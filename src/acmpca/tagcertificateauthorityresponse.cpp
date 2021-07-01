@@ -69,7 +69,8 @@ TagCertificateAuthorityResponse::TagCertificateAuthorityResponse(
  */
 const TagCertificateAuthorityRequest * TagCertificateAuthorityResponse::request() const
 {
-    return static_cast<const TagCertificateAuthorityRequest *>(AcmpcaResponse::request());
+    Q_D(const TagCertificateAuthorityResponse);
+    return static_cast<const TagCertificateAuthorityRequest *>(d->request);
 }
 
 /*!

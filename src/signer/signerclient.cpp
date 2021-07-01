@@ -118,16 +118,16 @@ signerClient::signerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-08-25"),
-    QStringLiteral("signer"),
-    QStringLiteral("AWS Signer"),
-    QStringLiteral("signer"),
-    parent), d_ptr(new signerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new signerClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(signerClient);
+    d->apiVersion = QStringLiteral("2017-08-25");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("signer");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Signer");
+    d->serviceName = QStringLiteral("signer");
 }
 
 /*!
@@ -146,16 +146,16 @@ signerClient::signerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-08-25"),
-    QStringLiteral("signer"),
-    QStringLiteral("AWS Signer"),
-    QStringLiteral("signer"),
-    parent), d_ptr(new signerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new signerClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(signerClient);
+    d->apiVersion = QStringLiteral("2017-08-25");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("signer");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Signer");
+    d->serviceName = QStringLiteral("signer");
 }
 
 /*!
@@ -444,9 +444,10 @@ UntagResourceResponse * signerClient::untagResource(const UntagResourceRequest &
 /*!
  * Constructs a signerClientPrivate object with public implementation \a q.
  */
-signerClientPrivate::signerClientPrivate(signerClient * const q) : q_ptr(q)
+signerClientPrivate::signerClientPrivate(signerClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace signer

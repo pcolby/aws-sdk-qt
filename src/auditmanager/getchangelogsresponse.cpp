@@ -98,7 +98,8 @@ GetChangeLogsResponse::GetChangeLogsResponse(
  */
 const GetChangeLogsRequest * GetChangeLogsResponse::request() const
 {
-    return static_cast<const GetChangeLogsRequest *>(AuditManagerResponse::request());
+    Q_D(const GetChangeLogsResponse);
+    return static_cast<const GetChangeLogsRequest *>(d->request);
 }
 
 /*!

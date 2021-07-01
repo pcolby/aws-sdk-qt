@@ -62,7 +62,8 @@ DeleteLexiconResponse::DeleteLexiconResponse(
  */
 const DeleteLexiconRequest * DeleteLexiconResponse::request() const
 {
-    return static_cast<const DeleteLexiconRequest *>(PollyResponse::request());
+    Q_D(const DeleteLexiconResponse);
+    return static_cast<const DeleteLexiconRequest *>(d->request);
 }
 
 /*!

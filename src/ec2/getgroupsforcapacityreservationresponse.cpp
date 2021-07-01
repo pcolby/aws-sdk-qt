@@ -87,7 +87,8 @@ GetGroupsForCapacityReservationResponse::GetGroupsForCapacityReservationResponse
  */
 const GetGroupsForCapacityReservationRequest * GetGroupsForCapacityReservationResponse::request() const
 {
-    return static_cast<const GetGroupsForCapacityReservationRequest *>(Ec2Response::request());
+    Q_D(const GetGroupsForCapacityReservationResponse);
+    return static_cast<const GetGroupsForCapacityReservationRequest *>(d->request);
 }
 
 /*!

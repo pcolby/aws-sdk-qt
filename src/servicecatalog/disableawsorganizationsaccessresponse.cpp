@@ -61,7 +61,8 @@ DisableAWSOrganizationsAccessResponse::DisableAWSOrganizationsAccessResponse(
  */
 const DisableAWSOrganizationsAccessRequest * DisableAWSOrganizationsAccessResponse::request() const
 {
-    return static_cast<const DisableAWSOrganizationsAccessRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DisableAWSOrganizationsAccessResponse);
+    return static_cast<const DisableAWSOrganizationsAccessRequest *>(d->request);
 }
 
 /*!

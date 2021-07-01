@@ -88,16 +88,16 @@ TranslateClient::TranslateClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-01"),
-    QStringLiteral("translate"),
-    QStringLiteral("Amazon Translate"),
-    QStringLiteral("translate"),
-    parent), d_ptr(new TranslateClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new TranslateClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(TranslateClient);
+    d->apiVersion = QStringLiteral("2017-07-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("translate");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Translate");
+    d->serviceName = QStringLiteral("translate");
 }
 
 /*!
@@ -116,16 +116,16 @@ TranslateClient::TranslateClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-01"),
-    QStringLiteral("translate"),
-    QStringLiteral("Amazon Translate"),
-    QStringLiteral("translate"),
-    parent), d_ptr(new TranslateClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new TranslateClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(TranslateClient);
+    d->apiVersion = QStringLiteral("2017-07-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("translate");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Translate");
+    d->serviceName = QStringLiteral("translate");
 }
 
 /*!
@@ -355,9 +355,10 @@ UpdateParallelDataResponse * TranslateClient::updateParallelData(const UpdatePar
 /*!
  * Constructs a TranslateClientPrivate object with public implementation \a q.
  */
-TranslateClientPrivate::TranslateClientPrivate(TranslateClient * const q) : q_ptr(q)
+TranslateClientPrivate::TranslateClientPrivate(TranslateClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Translate

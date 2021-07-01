@@ -66,7 +66,8 @@ UpdateSystemTemplateResponse::UpdateSystemTemplateResponse(
  */
 const UpdateSystemTemplateRequest * UpdateSystemTemplateResponse::request() const
 {
-    return static_cast<const UpdateSystemTemplateRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const UpdateSystemTemplateResponse);
+    return static_cast<const UpdateSystemTemplateRequest *>(d->request);
 }
 
 /*!

@@ -98,8 +98,7 @@ public:
 
 protected:
     /// @cond internal
-    Wafv2RequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit Wafv2Request(Wafv2RequestPrivate * const d);
+    Wafv2Request(Wafv2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -115,7 +115,8 @@ DeleteGameServerGroupResponse::DeleteGameServerGroupResponse(
  */
 const DeleteGameServerGroupRequest * DeleteGameServerGroupResponse::request() const
 {
-    return static_cast<const DeleteGameServerGroupRequest *>(GameLiftResponse::request());
+    Q_D(const DeleteGameServerGroupResponse);
+    return static_cast<const DeleteGameServerGroupRequest *>(d->request);
 }
 
 /*!

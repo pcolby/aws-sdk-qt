@@ -58,7 +58,8 @@ DeleteInputResponse::DeleteInputResponse(
  */
 const DeleteInputRequest * DeleteInputResponse::request() const
 {
-    return static_cast<const DeleteInputRequest *>(IoTEventsResponse::request());
+    Q_D(const DeleteInputResponse);
+    return static_cast<const DeleteInputRequest *>(d->request);
 }
 
 /*!

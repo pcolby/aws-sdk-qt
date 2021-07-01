@@ -107,8 +107,7 @@ public:
 
 protected:
     /// @cond internal
-    ProtonRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ProtonRequest(ProtonRequestPrivate * const d);
+    ProtonRequest(ProtonRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

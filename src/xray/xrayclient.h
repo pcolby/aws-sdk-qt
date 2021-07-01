@@ -129,12 +129,6 @@ public slots:
     UpdateGroupResponse * updateGroup(const UpdateGroupRequest &request);
     UpdateSamplingRuleResponse * updateSamplingRule(const UpdateSamplingRuleRequest &request);
 
-protected:
-    /// @cond internal
-    XRayClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit XRayClient(XRayClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(XRayClient)
     Q_DISABLE_COPY(XRayClient)

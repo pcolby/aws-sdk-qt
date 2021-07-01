@@ -66,7 +66,8 @@ GetJobResponse::GetJobResponse(
  */
 const GetJobRequest * GetJobResponse::request() const
 {
-    return static_cast<const GetJobRequest *>(DataExchangeResponse::request());
+    Q_D(const GetJobResponse);
+    return static_cast<const GetJobRequest *>(d->request);
 }
 
 /*!

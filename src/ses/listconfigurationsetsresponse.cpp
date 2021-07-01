@@ -66,7 +66,8 @@ ListConfigurationSetsResponse::ListConfigurationSetsResponse(
  */
 const ListConfigurationSetsRequest * ListConfigurationSetsResponse::request() const
 {
-    return static_cast<const ListConfigurationSetsRequest *>(SesResponse::request());
+    Q_D(const ListConfigurationSetsResponse);
+    return static_cast<const ListConfigurationSetsRequest *>(d->request);
 }
 
 /*!

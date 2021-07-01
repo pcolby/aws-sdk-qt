@@ -82,7 +82,8 @@ ListThingsInBillingGroupResponse::ListThingsInBillingGroupResponse(
  */
 const ListThingsInBillingGroupRequest * ListThingsInBillingGroupResponse::request() const
 {
-    return static_cast<const ListThingsInBillingGroupRequest *>(IoTResponse::request());
+    Q_D(const ListThingsInBillingGroupResponse);
+    return static_cast<const ListThingsInBillingGroupRequest *>(d->request);
 }
 
 /*!

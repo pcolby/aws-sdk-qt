@@ -109,8 +109,7 @@ public:
 
 protected:
     /// @cond internal
-    OrganizationsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit OrganizationsRequest(OrganizationsRequestPrivate * const d);
+    OrganizationsRequest(OrganizationsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -56,7 +56,8 @@ UpdateEndpointsBatchResponse::UpdateEndpointsBatchResponse(
  */
 const UpdateEndpointsBatchRequest * UpdateEndpointsBatchResponse::request() const
 {
-    return static_cast<const UpdateEndpointsBatchRequest *>(PinpointResponse::request());
+    Q_D(const UpdateEndpointsBatchResponse);
+    return static_cast<const UpdateEndpointsBatchRequest *>(d->request);
 }
 
 /*!

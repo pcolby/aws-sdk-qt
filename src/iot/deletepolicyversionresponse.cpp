@@ -82,7 +82,8 @@ DeletePolicyVersionResponse::DeletePolicyVersionResponse(
  */
 const DeletePolicyVersionRequest * DeletePolicyVersionResponse::request() const
 {
-    return static_cast<const DeletePolicyVersionRequest *>(IoTResponse::request());
+    Q_D(const DeletePolicyVersionResponse);
+    return static_cast<const DeletePolicyVersionRequest *>(d->request);
 }
 
 /*!

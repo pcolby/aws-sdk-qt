@@ -90,7 +90,8 @@ DescribeTargetHealthResponse::DescribeTargetHealthResponse(
  */
 const DescribeTargetHealthRequest * DescribeTargetHealthResponse::request() const
 {
-    return static_cast<const DescribeTargetHealthRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const DescribeTargetHealthResponse);
+    return static_cast<const DescribeTargetHealthRequest *>(d->request);
 }
 
 /*!

@@ -382,16 +382,16 @@ IamClient::IamClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2010-05-08"),
-    QStringLiteral("iam"),
-    QStringLiteral("AWS Identity and Access Management"),
-    QStringLiteral("iam"),
-    parent), d_ptr(new IamClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IamClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IamClient);
+    d->apiVersion = QStringLiteral("2010-05-08");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("iam");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Identity and Access Management");
+    d->serviceName = QStringLiteral("iam");
 }
 
 /*!
@@ -410,16 +410,16 @@ IamClient::IamClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2010-05-08"),
-    QStringLiteral("iam"),
-    QStringLiteral("AWS Identity and Access Management"),
-    QStringLiteral("iam"),
-    parent), d_ptr(new IamClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IamClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IamClient);
+    d->apiVersion = QStringLiteral("2010-05-08");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("iam");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Identity and Access Management");
+    d->serviceName = QStringLiteral("iam");
 }
 
 /*!
@@ -4614,9 +4614,10 @@ UploadSigningCertificateResponse * IamClient::uploadSigningCertificate(const Upl
 /*!
  * Constructs a IamClientPrivate object with public implementation \a q.
  */
-IamClientPrivate::IamClientPrivate(IamClient * const q) : q_ptr(q)
+IamClientPrivate::IamClientPrivate(IamClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IAM

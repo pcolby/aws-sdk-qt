@@ -20,12 +20,14 @@
 #ifndef QTAWS_MEDIASTOREDATARESPONSE_P_H
 #define QTAWS_MEDIASTOREDATARESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace MediaStoreData {
 
 class MediaStoreDataResponse;
 
-class MediaStoreDataResponsePrivate {
+class MediaStoreDataResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    MediaStoreDataResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaStoreDataResponse)

@@ -385,7 +385,8 @@ BatchGetChannelResponse::BatchGetChannelResponse(
  */
 const BatchGetChannelRequest * BatchGetChannelResponse::request() const
 {
-    return static_cast<const BatchGetChannelRequest *>(IvsResponse::request());
+    Q_D(const BatchGetChannelResponse);
+    return static_cast<const BatchGetChannelRequest *>(d->request);
 }
 
 /*!

@@ -84,7 +84,8 @@ GetLogGroupFieldsResponse::GetLogGroupFieldsResponse(
  */
 const GetLogGroupFieldsRequest * GetLogGroupFieldsResponse::request() const
 {
-    return static_cast<const GetLogGroupFieldsRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const GetLogGroupFieldsResponse);
+    return static_cast<const GetLogGroupFieldsRequest *>(d->request);
 }
 
 /*!

@@ -79,7 +79,8 @@ UpdateProfilingGroupResponse::UpdateProfilingGroupResponse(
  */
 const UpdateProfilingGroupRequest * UpdateProfilingGroupResponse::request() const
 {
-    return static_cast<const UpdateProfilingGroupRequest *>(CodeGuruProfilerResponse::request());
+    Q_D(const UpdateProfilingGroupResponse);
+    return static_cast<const UpdateProfilingGroupRequest *>(d->request);
 }
 
 /*!

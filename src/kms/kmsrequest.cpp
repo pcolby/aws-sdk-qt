@@ -88,7 +88,7 @@ namespace KMS {
  * Constructs a KmsRequest object for KMS \a action.
  */
 KmsRequest::KmsRequest(const Action action)
-    : d_ptr(new KmsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new KmsRequestPrivate(action, this))
 {
 
 }
@@ -97,8 +97,7 @@ KmsRequest::KmsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 KmsRequest::KmsRequest(const KmsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new KmsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new KmsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -121,7 +120,7 @@ KmsRequest& KmsRequest::operator=(const KmsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KmsRequestPrivate.
  */
-KmsRequest::KmsRequest(KmsRequestPrivate * const d) : d_ptr(d)
+KmsRequest::KmsRequest(KmsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -290,7 +289,7 @@ QNetworkRequest KmsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 KmsRequestPrivate::KmsRequestPrivate(const KmsRequest::Action action, KmsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -305,8 +304,8 @@ KmsRequestPrivate::KmsRequestPrivate(const KmsRequest::Action action, KmsRequest
  */
 KmsRequestPrivate::KmsRequestPrivate(const KmsRequestPrivate &other,
                                      KmsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -56,7 +56,8 @@ ResetDBClusterParameterGroupResponse::ResetDBClusterParameterGroupResponse(
  */
 const ResetDBClusterParameterGroupRequest * ResetDBClusterParameterGroupResponse::request() const
 {
-    return static_cast<const ResetDBClusterParameterGroupRequest *>(DocDBResponse::request());
+    Q_D(const ResetDBClusterParameterGroupResponse);
+    return static_cast<const ResetDBClusterParameterGroupRequest *>(d->request);
 }
 
 /*!

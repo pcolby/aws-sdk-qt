@@ -87,7 +87,8 @@ DescribeTransitGatewayMulticastDomainsResponse::DescribeTransitGatewayMulticastD
  */
 const DescribeTransitGatewayMulticastDomainsRequest * DescribeTransitGatewayMulticastDomainsResponse::request() const
 {
-    return static_cast<const DescribeTransitGatewayMulticastDomainsRequest *>(Ec2Response::request());
+    Q_D(const DescribeTransitGatewayMulticastDomainsResponse);
+    return static_cast<const DescribeTransitGatewayMulticastDomainsRequest *>(d->request);
 }
 
 /*!

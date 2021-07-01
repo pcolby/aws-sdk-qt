@@ -58,7 +58,8 @@ ListTableColumnsResponse::ListTableColumnsResponse(
  */
 const ListTableColumnsRequest * ListTableColumnsResponse::request() const
 {
-    return static_cast<const ListTableColumnsRequest *>(HoneycodeResponse::request());
+    Q_D(const ListTableColumnsResponse);
+    return static_cast<const ListTableColumnsRequest *>(d->request);
 }
 
 /*!

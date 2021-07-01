@@ -82,7 +82,8 @@ DeleteTopicRuleResponse::DeleteTopicRuleResponse(
  */
 const DeleteTopicRuleRequest * DeleteTopicRuleResponse::request() const
 {
-    return static_cast<const DeleteTopicRuleRequest *>(IoTResponse::request());
+    Q_D(const DeleteTopicRuleResponse);
+    return static_cast<const DeleteTopicRuleRequest *>(d->request);
 }
 
 /*!

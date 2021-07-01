@@ -44,8 +44,7 @@ public:
 
 protected:
     /// @cond internal
-    {{ClassName}}Private * const d_ptr; ///< Internal d-pointer.
-    explicit {{ClassName}}({{ClassName}}Private * const d);
+    {{ClassName}}({{ClassName}}Private * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -37,7 +37,7 @@ namespace GroundStation {
  * Constructs a GroundStationResponse object with parent \a parent.
  */
 GroundStationResponse::GroundStationResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new GroundStationResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new GroundStationResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ GroundStationResponse::GroundStationResponse(QObject * const parent)
  * implementation that inherits from GroundStationResponsePrivate.
  */
 GroundStationResponse::GroundStationResponse(GroundStationResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void GroundStationResponse::parseFailure(QIODevice &response)
  * Constructs a GroundStationResponsePrivate object with public implementation \a q.
  */
 GroundStationResponsePrivate::GroundStationResponsePrivate(
-    GroundStationResponse * const q) : q_ptr(q)
+    GroundStationResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

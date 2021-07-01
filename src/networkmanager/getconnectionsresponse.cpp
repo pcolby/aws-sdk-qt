@@ -62,7 +62,8 @@ GetConnectionsResponse::GetConnectionsResponse(
  */
 const GetConnectionsRequest * GetConnectionsResponse::request() const
 {
-    return static_cast<const GetConnectionsRequest *>(NetworkManagerResponse::request());
+    Q_D(const GetConnectionsResponse);
+    return static_cast<const GetConnectionsRequest *>(d->request);
 }
 
 /*!

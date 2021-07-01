@@ -55,7 +55,8 @@ GetMediaForFragmentListResponse::GetMediaForFragmentListResponse(
  */
 const GetMediaForFragmentListRequest * GetMediaForFragmentListResponse::request() const
 {
-    return static_cast<const GetMediaForFragmentListRequest *>(KinesisVideoArchivedMediaResponse::request());
+    Q_D(const GetMediaForFragmentListResponse);
+    return static_cast<const GetMediaForFragmentListRequest *>(d->request);
 }
 
 /*!

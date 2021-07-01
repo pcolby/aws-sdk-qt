@@ -56,7 +56,8 @@ GetDiscoveredSchemaResponse::GetDiscoveredSchemaResponse(
  */
 const GetDiscoveredSchemaRequest * GetDiscoveredSchemaResponse::request() const
 {
-    return static_cast<const GetDiscoveredSchemaRequest *>(SchemasResponse::request());
+    Q_D(const GetDiscoveredSchemaResponse);
+    return static_cast<const GetDiscoveredSchemaRequest *>(d->request);
 }
 
 /*!

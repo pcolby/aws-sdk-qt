@@ -91,7 +91,8 @@ DescribeVaultResponse::DescribeVaultResponse(
  */
 const DescribeVaultRequest * DescribeVaultResponse::request() const
 {
-    return static_cast<const DescribeVaultRequest *>(GlacierResponse::request());
+    Q_D(const DescribeVaultResponse);
+    return static_cast<const DescribeVaultRequest *>(d->request);
 }
 
 /*!

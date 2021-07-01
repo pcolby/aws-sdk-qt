@@ -98,7 +98,8 @@ BatchDeleteDelegationByAssessmentResponse::BatchDeleteDelegationByAssessmentResp
  */
 const BatchDeleteDelegationByAssessmentRequest * BatchDeleteDelegationByAssessmentResponse::request() const
 {
-    return static_cast<const BatchDeleteDelegationByAssessmentRequest *>(AuditManagerResponse::request());
+    Q_D(const BatchDeleteDelegationByAssessmentResponse);
+    return static_cast<const BatchDeleteDelegationByAssessmentRequest *>(d->request);
 }
 
 /*!

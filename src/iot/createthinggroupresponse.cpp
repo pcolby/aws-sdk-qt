@@ -82,7 +82,8 @@ CreateThingGroupResponse::CreateThingGroupResponse(
  */
 const CreateThingGroupRequest * CreateThingGroupResponse::request() const
 {
-    return static_cast<const CreateThingGroupRequest *>(IoTResponse::request());
+    Q_D(const CreateThingGroupResponse);
+    return static_cast<const CreateThingGroupRequest *>(d->request);
 }
 
 /*!

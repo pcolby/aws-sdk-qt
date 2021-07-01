@@ -37,7 +37,7 @@ namespace Glacier {
  * Constructs a GlacierResponse object with parent \a parent.
  */
 GlacierResponse::GlacierResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new GlacierResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new GlacierResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ GlacierResponse::GlacierResponse(QObject * const parent)
  * implementation that inherits from GlacierResponsePrivate.
  */
 GlacierResponse::GlacierResponse(GlacierResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void GlacierResponse::parseFailure(QIODevice &response)
  * Constructs a GlacierResponsePrivate object with public implementation \a q.
  */
 GlacierResponsePrivate::GlacierResponsePrivate(
-    GlacierResponse * const q) : q_ptr(q)
+    GlacierResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

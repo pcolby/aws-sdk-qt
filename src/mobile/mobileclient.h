@@ -75,12 +75,6 @@ public slots:
     ListProjectsResponse * listProjects(const ListProjectsRequest &request);
     UpdateProjectResponse * updateProject(const UpdateProjectRequest &request);
 
-protected:
-    /// @cond internal
-    MobileClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MobileClient(MobileClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MobileClient)
     Q_DISABLE_COPY(MobileClient)

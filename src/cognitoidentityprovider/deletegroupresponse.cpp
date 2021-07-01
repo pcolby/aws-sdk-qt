@@ -66,7 +66,8 @@ DeleteGroupResponse::DeleteGroupResponse(
  */
 const DeleteGroupRequest * DeleteGroupResponse::request() const
 {
-    return static_cast<const DeleteGroupRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const DeleteGroupResponse);
+    return static_cast<const DeleteGroupRequest *>(d->request);
 }
 
 /*!

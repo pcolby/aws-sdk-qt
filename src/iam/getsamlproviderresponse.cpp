@@ -62,7 +62,8 @@ GetSAMLProviderResponse::GetSAMLProviderResponse(
  */
 const GetSAMLProviderRequest * GetSAMLProviderResponse::request() const
 {
-    return static_cast<const GetSAMLProviderRequest *>(IamResponse::request());
+    Q_D(const GetSAMLProviderResponse);
+    return static_cast<const GetSAMLProviderRequest *>(d->request);
 }
 
 /*!

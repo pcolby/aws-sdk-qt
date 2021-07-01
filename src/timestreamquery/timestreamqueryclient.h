@@ -57,12 +57,6 @@ public slots:
     DescribeEndpointsResponse * describeEndpoints(const DescribeEndpointsRequest &request);
     QueryResponse * query(const QueryRequest &request);
 
-protected:
-    /// @cond internal
-    TimestreamQueryClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit TimestreamQueryClient(TimestreamQueryClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(TimestreamQueryClient)
     Q_DISABLE_COPY(TimestreamQueryClient)

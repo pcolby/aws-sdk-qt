@@ -88,7 +88,8 @@ DeleteContactResponse::DeleteContactResponse(
  */
 const DeleteContactRequest * DeleteContactResponse::request() const
 {
-    return static_cast<const DeleteContactRequest *>(Sesv2Response::request());
+    Q_D(const DeleteContactResponse);
+    return static_cast<const DeleteContactRequest *>(d->request);
 }
 
 /*!

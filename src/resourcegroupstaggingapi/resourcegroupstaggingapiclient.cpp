@@ -75,16 +75,16 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-01-26"),
-    QStringLiteral("tagging"),
-    QStringLiteral("AWS Resource Groups Tagging API"),
-    QStringLiteral("tagging"),
-    parent), d_ptr(new ResourceGroupsTaggingAPIClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingAPIClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ResourceGroupsTaggingAPIClient);
+    d->apiVersion = QStringLiteral("2017-01-26");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("tagging");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Resource Groups Tagging API");
+    d->serviceName = QStringLiteral("tagging");
 }
 
 /*!
@@ -103,16 +103,16 @@ ResourceGroupsTaggingAPIClient::ResourceGroupsTaggingAPIClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-01-26"),
-    QStringLiteral("tagging"),
-    QStringLiteral("AWS Resource Groups Tagging API"),
-    QStringLiteral("tagging"),
-    parent), d_ptr(new ResourceGroupsTaggingAPIClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ResourceGroupsTaggingAPIClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ResourceGroupsTaggingAPIClient);
+    d->apiVersion = QStringLiteral("2017-01-26");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("tagging");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Resource Groups Tagging API");
+    d->serviceName = QStringLiteral("tagging");
 }
 
 /*!
@@ -342,9 +342,10 @@ UntagResourcesResponse * ResourceGroupsTaggingAPIClient::untagResources(const Un
 /*!
  * Constructs a ResourceGroupsTaggingAPIClientPrivate object with public implementation \a q.
  */
-ResourceGroupsTaggingAPIClientPrivate::ResourceGroupsTaggingAPIClientPrivate(ResourceGroupsTaggingAPIClient * const q) : q_ptr(q)
+ResourceGroupsTaggingAPIClientPrivate::ResourceGroupsTaggingAPIClientPrivate(ResourceGroupsTaggingAPIClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ResourceGroupsTaggingAPI

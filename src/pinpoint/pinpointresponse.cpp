@@ -37,7 +37,7 @@ namespace Pinpoint {
  * Constructs a PinpointResponse object with parent \a parent.
  */
 PinpointResponse::PinpointResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new PinpointResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new PinpointResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ PinpointResponse::PinpointResponse(QObject * const parent)
  * implementation that inherits from PinpointResponsePrivate.
  */
 PinpointResponse::PinpointResponse(PinpointResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void PinpointResponse::parseFailure(QIODevice &response)
  * Constructs a PinpointResponsePrivate object with public implementation \a q.
  */
 PinpointResponsePrivate::PinpointResponsePrivate(
-    PinpointResponse * const q) : q_ptr(q)
+    PinpointResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

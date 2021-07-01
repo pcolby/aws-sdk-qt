@@ -63,7 +63,8 @@ DescribeStatementResponse::DescribeStatementResponse(
  */
 const DescribeStatementRequest * DescribeStatementResponse::request() const
 {
-    return static_cast<const DescribeStatementRequest *>(RedshiftDataAPIServiceResponse::request());
+    Q_D(const DescribeStatementResponse);
+    return static_cast<const DescribeStatementRequest *>(d->request);
 }
 
 /*!

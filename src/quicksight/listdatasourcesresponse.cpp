@@ -60,7 +60,8 @@ ListDataSourcesResponse::ListDataSourcesResponse(
  */
 const ListDataSourcesRequest * ListDataSourcesResponse::request() const
 {
-    return static_cast<const ListDataSourcesRequest *>(QuickSightResponse::request());
+    Q_D(const ListDataSourcesResponse);
+    return static_cast<const ListDataSourcesRequest *>(d->request);
 }
 
 /*!

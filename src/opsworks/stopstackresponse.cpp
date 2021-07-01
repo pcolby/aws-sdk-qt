@@ -161,7 +161,8 @@ StopStackResponse::StopStackResponse(
  */
 const StopStackRequest * StopStackResponse::request() const
 {
-    return static_cast<const StopStackRequest *>(OpsWorksResponse::request());
+    Q_D(const StopStackResponse);
+    return static_cast<const StopStackRequest *>(d->request);
 }
 
 /*!

@@ -74,7 +74,8 @@ CreateBackupResponse::CreateBackupResponse(
  */
 const CreateBackupRequest * CreateBackupResponse::request() const
 {
-    return static_cast<const CreateBackupRequest *>(DynamoDBResponse::request());
+    Q_D(const CreateBackupResponse);
+    return static_cast<const CreateBackupRequest *>(d->request);
 }
 
 /*!

@@ -40,7 +40,8 @@ namespace {{NameSpaceName}} {
  */
 const {{OperationName}}Request * {{ClassName}}::request() const
 {
-    return static_cast<const {{OperationName}}Request *>({{ServiceClassName}}Response::request());
+    Q_D(const {{ClassName}});
+    return static_cast<const {{OperationName}}Request *>(d->request);
 }
 
 /*!

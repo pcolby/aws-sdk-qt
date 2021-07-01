@@ -58,7 +58,8 @@ ListRequestedServiceQuotaChangeHistoryByQuotaResponse::ListRequestedServiceQuota
  */
 const ListRequestedServiceQuotaChangeHistoryByQuotaRequest * ListRequestedServiceQuotaChangeHistoryByQuotaResponse::request() const
 {
-    return static_cast<const ListRequestedServiceQuotaChangeHistoryByQuotaRequest *>(ServiceQuotasResponse::request());
+    Q_D(const ListRequestedServiceQuotaChangeHistoryByQuotaResponse);
+    return static_cast<const ListRequestedServiceQuotaChangeHistoryByQuotaRequest *>(d->request);
 }
 
 /*!

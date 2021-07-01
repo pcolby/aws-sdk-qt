@@ -87,7 +87,8 @@ AcceptTransitGatewayVpcAttachmentResponse::AcceptTransitGatewayVpcAttachmentResp
  */
 const AcceptTransitGatewayVpcAttachmentRequest * AcceptTransitGatewayVpcAttachmentResponse::request() const
 {
-    return static_cast<const AcceptTransitGatewayVpcAttachmentRequest *>(Ec2Response::request());
+    Q_D(const AcceptTransitGatewayVpcAttachmentResponse);
+    return static_cast<const AcceptTransitGatewayVpcAttachmentRequest *>(d->request);
 }
 
 /*!

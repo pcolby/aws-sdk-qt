@@ -56,7 +56,8 @@ SearchFacesByImageResponse::SearchFacesByImageResponse(
  */
 const SearchFacesByImageRequest * SearchFacesByImageResponse::request() const
 {
-    return static_cast<const SearchFacesByImageRequest *>(RekognitionResponse::request());
+    Q_D(const SearchFacesByImageResponse);
+    return static_cast<const SearchFacesByImageRequest *>(d->request);
 }
 
 /*!

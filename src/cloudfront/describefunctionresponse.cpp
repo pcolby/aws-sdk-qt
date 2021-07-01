@@ -60,7 +60,8 @@ DescribeFunctionResponse::DescribeFunctionResponse(
  */
 const DescribeFunctionRequest * DescribeFunctionResponse::request() const
 {
-    return static_cast<const DescribeFunctionRequest *>(CloudFrontResponse::request());
+    Q_D(const DescribeFunctionResponse);
+    return static_cast<const DescribeFunctionRequest *>(d->request);
 }
 
 /*!

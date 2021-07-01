@@ -58,7 +58,8 @@ UpdateStudioResponse::UpdateStudioResponse(
  */
 const UpdateStudioRequest * UpdateStudioResponse::request() const
 {
-    return static_cast<const UpdateStudioRequest *>(EmrResponse::request());
+    Q_D(const UpdateStudioResponse);
+    return static_cast<const UpdateStudioRequest *>(d->request);
 }
 
 /*!

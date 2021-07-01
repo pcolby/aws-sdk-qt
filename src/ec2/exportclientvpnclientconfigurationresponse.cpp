@@ -87,7 +87,8 @@ ExportClientVpnClientConfigurationResponse::ExportClientVpnClientConfigurationRe
  */
 const ExportClientVpnClientConfigurationRequest * ExportClientVpnClientConfigurationResponse::request() const
 {
-    return static_cast<const ExportClientVpnClientConfigurationRequest *>(Ec2Response::request());
+    Q_D(const ExportClientVpnClientConfigurationResponse);
+    return static_cast<const ExportClientVpnClientConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ PutBucketAnalyticsConfigurationResponse::PutBucketAnalyticsConfigurationResponse
  */
 const PutBucketAnalyticsConfigurationRequest * PutBucketAnalyticsConfigurationResponse::request() const
 {
-    return static_cast<const PutBucketAnalyticsConfigurationRequest *>(S3Response::request());
+    Q_D(const PutBucketAnalyticsConfigurationResponse);
+    return static_cast<const PutBucketAnalyticsConfigurationRequest *>(d->request);
 }
 
 /*!

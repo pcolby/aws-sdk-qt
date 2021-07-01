@@ -79,7 +79,8 @@ GetFindingsReportAccountSummaryResponse::GetFindingsReportAccountSummaryResponse
  */
 const GetFindingsReportAccountSummaryRequest * GetFindingsReportAccountSummaryResponse::request() const
 {
-    return static_cast<const GetFindingsReportAccountSummaryRequest *>(CodeGuruProfilerResponse::request());
+    Q_D(const GetFindingsReportAccountSummaryResponse);
+    return static_cast<const GetFindingsReportAccountSummaryRequest *>(d->request);
 }
 
 /*!

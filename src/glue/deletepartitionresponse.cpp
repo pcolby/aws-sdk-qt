@@ -58,7 +58,8 @@ DeletePartitionResponse::DeletePartitionResponse(
  */
 const DeletePartitionRequest * DeletePartitionResponse::request() const
 {
-    return static_cast<const DeletePartitionRequest *>(GlueResponse::request());
+    Q_D(const DeletePartitionResponse);
+    return static_cast<const DeletePartitionRequest *>(d->request);
 }
 
 /*!

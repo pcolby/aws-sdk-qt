@@ -84,7 +84,8 @@ DescribeFolderContentsResponse::DescribeFolderContentsResponse(
  */
 const DescribeFolderContentsRequest * DescribeFolderContentsResponse::request() const
 {
-    return static_cast<const DescribeFolderContentsRequest *>(WorkDocsResponse::request());
+    Q_D(const DescribeFolderContentsResponse);
+    return static_cast<const DescribeFolderContentsRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ AssociateDeviceWithPlacementResponse::AssociateDeviceWithPlacementResponse(
  */
 const AssociateDeviceWithPlacementRequest * AssociateDeviceWithPlacementResponse::request() const
 {
-    return static_cast<const AssociateDeviceWithPlacementRequest *>(IoT1ClickProjectsResponse::request());
+    Q_D(const AssociateDeviceWithPlacementResponse);
+    return static_cast<const AssociateDeviceWithPlacementRequest *>(d->request);
 }
 
 /*!

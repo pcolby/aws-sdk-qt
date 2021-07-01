@@ -85,7 +85,8 @@ DescribeResizeResponse::DescribeResizeResponse(
  */
 const DescribeResizeRequest * DescribeResizeResponse::request() const
 {
-    return static_cast<const DescribeResizeRequest *>(RedshiftResponse::request());
+    Q_D(const DescribeResizeResponse);
+    return static_cast<const DescribeResizeRequest *>(d->request);
 }
 
 /*!

@@ -85,7 +85,8 @@ CreateClusterSubnetGroupResponse::CreateClusterSubnetGroupResponse(
  */
 const CreateClusterSubnetGroupRequest * CreateClusterSubnetGroupResponse::request() const
 {
-    return static_cast<const CreateClusterSubnetGroupRequest *>(RedshiftResponse::request());
+    Q_D(const CreateClusterSubnetGroupResponse);
+    return static_cast<const CreateClusterSubnetGroupRequest *>(d->request);
 }
 
 /*!

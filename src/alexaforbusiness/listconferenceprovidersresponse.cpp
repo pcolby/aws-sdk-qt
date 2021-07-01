@@ -62,7 +62,8 @@ ListConferenceProvidersResponse::ListConferenceProvidersResponse(
  */
 const ListConferenceProvidersRequest * ListConferenceProvidersResponse::request() const
 {
-    return static_cast<const ListConferenceProvidersRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const ListConferenceProvidersResponse);
+    return static_cast<const ListConferenceProvidersRequest *>(d->request);
 }
 
 /*!

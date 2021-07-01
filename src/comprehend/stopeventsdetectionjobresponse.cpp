@@ -58,7 +58,8 @@ StopEventsDetectionJobResponse::StopEventsDetectionJobResponse(
  */
 const StopEventsDetectionJobRequest * StopEventsDetectionJobResponse::request() const
 {
-    return static_cast<const StopEventsDetectionJobRequest *>(ComprehendResponse::request());
+    Q_D(const StopEventsDetectionJobResponse);
+    return static_cast<const StopEventsDetectionJobRequest *>(d->request);
 }
 
 /*!

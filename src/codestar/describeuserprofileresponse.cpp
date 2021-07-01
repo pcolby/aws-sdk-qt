@@ -143,7 +143,8 @@ DescribeUserProfileResponse::DescribeUserProfileResponse(
  */
 const DescribeUserProfileRequest * DescribeUserProfileResponse::request() const
 {
-    return static_cast<const DescribeUserProfileRequest *>(CodeStarResponse::request());
+    Q_D(const DescribeUserProfileResponse);
+    return static_cast<const DescribeUserProfileRequest *>(d->request);
 }
 
 /*!

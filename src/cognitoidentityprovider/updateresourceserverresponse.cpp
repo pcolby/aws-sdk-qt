@@ -66,7 +66,8 @@ UpdateResourceServerResponse::UpdateResourceServerResponse(
  */
 const UpdateResourceServerRequest * UpdateResourceServerResponse::request() const
 {
-    return static_cast<const UpdateResourceServerRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const UpdateResourceServerResponse);
+    return static_cast<const UpdateResourceServerRequest *>(d->request);
 }
 
 /*!

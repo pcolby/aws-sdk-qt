@@ -60,7 +60,8 @@ CreateCloudFrontOriginAccessIdentityResponse::CreateCloudFrontOriginAccessIdenti
  */
 const CreateCloudFrontOriginAccessIdentityRequest * CreateCloudFrontOriginAccessIdentityResponse::request() const
 {
-    return static_cast<const CreateCloudFrontOriginAccessIdentityRequest *>(CloudFrontResponse::request());
+    Q_D(const CreateCloudFrontOriginAccessIdentityResponse);
+    return static_cast<const CreateCloudFrontOriginAccessIdentityRequest *>(d->request);
 }
 
 /*!

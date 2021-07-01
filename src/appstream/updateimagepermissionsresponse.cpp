@@ -81,7 +81,8 @@ UpdateImagePermissionsResponse::UpdateImagePermissionsResponse(
  */
 const UpdateImagePermissionsRequest * UpdateImagePermissionsResponse::request() const
 {
-    return static_cast<const UpdateImagePermissionsRequest *>(AppStreamResponse::request());
+    Q_D(const UpdateImagePermissionsResponse);
+    return static_cast<const UpdateImagePermissionsRequest *>(d->request);
 }
 
 /*!

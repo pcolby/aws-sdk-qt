@@ -20,20 +20,19 @@
 #ifndef QTAWS_GAMELIFTCLIENT_P_H
 #define QTAWS_GAMELIFTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace GameLift {
 
 class GameLiftClient;
 
-class GameLiftClientPrivate {
+class GameLiftClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit GameLiftClientPrivate(GameLiftClient * const q);
-
-protected:
-    GameLiftClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GameLiftClient)

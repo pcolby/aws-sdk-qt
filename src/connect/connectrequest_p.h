@@ -20,12 +20,15 @@
 #ifndef QTAWS_CONNECTREQUEST_P_H
 #define QTAWS_CONNECTREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "connectrequest.h"
+
 namespace QtAws {
 namespace Connect {
 
 class ConnectRequest;
 
-class ConnectRequestPrivate {
+class ConnectRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ConnectRequest::Action action; ///< Connect action to be performed.
@@ -36,9 +39,6 @@ public:
     ConnectRequestPrivate(const ConnectRequestPrivate &other, ConnectRequest * const q);
 
     static QString toString(const ConnectRequest::Action &action);
-
-protected:
-    ConnectRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ConnectRequest)

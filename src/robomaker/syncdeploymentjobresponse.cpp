@@ -56,7 +56,8 @@ SyncDeploymentJobResponse::SyncDeploymentJobResponse(
  */
 const SyncDeploymentJobRequest * SyncDeploymentJobResponse::request() const
 {
-    return static_cast<const SyncDeploymentJobRequest *>(RoboMakerResponse::request());
+    Q_D(const SyncDeploymentJobResponse);
+    return static_cast<const SyncDeploymentJobRequest *>(d->request);
 }
 
 /*!

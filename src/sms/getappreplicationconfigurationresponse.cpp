@@ -68,7 +68,8 @@ GetAppReplicationConfigurationResponse::GetAppReplicationConfigurationResponse(
  */
 const GetAppReplicationConfigurationRequest * GetAppReplicationConfigurationResponse::request() const
 {
-    return static_cast<const GetAppReplicationConfigurationRequest *>(SmsResponse::request());
+    Q_D(const GetAppReplicationConfigurationResponse);
+    return static_cast<const GetAppReplicationConfigurationRequest *>(d->request);
 }
 
 /*!

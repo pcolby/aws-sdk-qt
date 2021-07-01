@@ -71,7 +71,8 @@ CreateDomainResponse::CreateDomainResponse(
  */
 const CreateDomainRequest * CreateDomainResponse::request() const
 {
-    return static_cast<const CreateDomainRequest *>(CustomerProfilesResponse::request());
+    Q_D(const CreateDomainResponse);
+    return static_cast<const CreateDomainRequest *>(d->request);
 }
 
 /*!

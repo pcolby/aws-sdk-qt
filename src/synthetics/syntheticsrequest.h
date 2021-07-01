@@ -71,8 +71,7 @@ public:
 
 protected:
     /// @cond internal
-    SyntheticsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SyntheticsRequest(SyntheticsRequestPrivate * const d);
+    SyntheticsRequest(SyntheticsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -56,7 +56,8 @@ StartStreamProcessorResponse::StartStreamProcessorResponse(
  */
 const StartStreamProcessorRequest * StartStreamProcessorResponse::request() const
 {
-    return static_cast<const StartStreamProcessorRequest *>(RekognitionResponse::request());
+    Q_D(const StartStreamProcessorResponse);
+    return static_cast<const StartStreamProcessorRequest *>(d->request);
 }
 
 /*!

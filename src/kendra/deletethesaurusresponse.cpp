@@ -56,7 +56,8 @@ DeleteThesaurusResponse::DeleteThesaurusResponse(
  */
 const DeleteThesaurusRequest * DeleteThesaurusResponse::request() const
 {
-    return static_cast<const DeleteThesaurusRequest *>(kendraResponse::request());
+    Q_D(const DeleteThesaurusResponse);
+    return static_cast<const DeleteThesaurusRequest *>(d->request);
 }
 
 /*!

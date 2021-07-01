@@ -66,7 +66,8 @@ GetFunctionResponse::GetFunctionResponse(
  */
 const GetFunctionRequest * GetFunctionResponse::request() const
 {
-    return static_cast<const GetFunctionRequest *>(LambdaResponse::request());
+    Q_D(const GetFunctionResponse);
+    return static_cast<const GetFunctionRequest *>(d->request);
 }
 
 /*!

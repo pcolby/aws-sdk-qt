@@ -61,7 +61,8 @@ BatchAssociateServiceActionWithProvisioningArtifactResponse::BatchAssociateServi
  */
 const BatchAssociateServiceActionWithProvisioningArtifactRequest * BatchAssociateServiceActionWithProvisioningArtifactResponse::request() const
 {
-    return static_cast<const BatchAssociateServiceActionWithProvisioningArtifactRequest *>(ServiceCatalogResponse::request());
+    Q_D(const BatchAssociateServiceActionWithProvisioningArtifactResponse);
+    return static_cast<const BatchAssociateServiceActionWithProvisioningArtifactRequest *>(d->request);
 }
 
 /*!

@@ -66,7 +66,8 @@ ListEventIntegrationsResponse::ListEventIntegrationsResponse(
  */
 const ListEventIntegrationsRequest * ListEventIntegrationsResponse::request() const
 {
-    return static_cast<const ListEventIntegrationsRequest *>(AppIntegrationsServiceResponse::request());
+    Q_D(const ListEventIntegrationsResponse);
+    return static_cast<const ListEventIntegrationsRequest *>(d->request);
 }
 
 /*!

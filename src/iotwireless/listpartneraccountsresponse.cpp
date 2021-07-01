@@ -56,7 +56,8 @@ ListPartnerAccountsResponse::ListPartnerAccountsResponse(
  */
 const ListPartnerAccountsRequest * ListPartnerAccountsResponse::request() const
 {
-    return static_cast<const ListPartnerAccountsRequest *>(IoTWirelessResponse::request());
+    Q_D(const ListPartnerAccountsResponse);
+    return static_cast<const ListPartnerAccountsRequest *>(d->request);
 }
 
 /*!

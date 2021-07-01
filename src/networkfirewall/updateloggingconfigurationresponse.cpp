@@ -145,7 +145,8 @@ UpdateLoggingConfigurationResponse::UpdateLoggingConfigurationResponse(
  */
 const UpdateLoggingConfigurationRequest * UpdateLoggingConfigurationResponse::request() const
 {
-    return static_cast<const UpdateLoggingConfigurationRequest *>(NetworkFirewallResponse::request());
+    Q_D(const UpdateLoggingConfigurationResponse);
+    return static_cast<const UpdateLoggingConfigurationRequest *>(d->request);
 }
 
 /*!

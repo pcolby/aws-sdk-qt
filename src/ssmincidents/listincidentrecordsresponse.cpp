@@ -65,7 +65,8 @@ ListIncidentRecordsResponse::ListIncidentRecordsResponse(
  */
 const ListIncidentRecordsRequest * ListIncidentRecordsResponse::request() const
 {
-    return static_cast<const ListIncidentRecordsRequest *>(SSMIncidentsResponse::request());
+    Q_D(const ListIncidentRecordsResponse);
+    return static_cast<const ListIncidentRecordsRequest *>(d->request);
 }
 
 /*!

@@ -74,7 +74,8 @@ RegisterContainerImageResponse::RegisterContainerImageResponse(
  */
 const RegisterContainerImageRequest * RegisterContainerImageResponse::request() const
 {
-    return static_cast<const RegisterContainerImageRequest *>(LightsailResponse::request());
+    Q_D(const RegisterContainerImageResponse);
+    return static_cast<const RegisterContainerImageRequest *>(d->request);
 }
 
 /*!

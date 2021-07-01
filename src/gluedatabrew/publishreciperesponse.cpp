@@ -58,7 +58,8 @@ PublishRecipeResponse::PublishRecipeResponse(
  */
 const PublishRecipeRequest * PublishRecipeResponse::request() const
 {
-    return static_cast<const PublishRecipeRequest *>(GlueDataBrewResponse::request());
+    Q_D(const PublishRecipeResponse);
+    return static_cast<const PublishRecipeRequest *>(d->request);
 }
 
 /*!

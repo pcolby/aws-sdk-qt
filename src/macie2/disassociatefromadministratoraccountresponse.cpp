@@ -60,7 +60,8 @@ DisassociateFromAdministratorAccountResponse::DisassociateFromAdministratorAccou
  */
 const DisassociateFromAdministratorAccountRequest * DisassociateFromAdministratorAccountResponse::request() const
 {
-    return static_cast<const DisassociateFromAdministratorAccountRequest *>(Macie2Response::request());
+    Q_D(const DisassociateFromAdministratorAccountResponse);
+    return static_cast<const DisassociateFromAdministratorAccountRequest *>(d->request);
 }
 
 /*!

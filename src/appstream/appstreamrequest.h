@@ -106,8 +106,7 @@ public:
 
 protected:
     /// @cond internal
-    AppStreamRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AppStreamRequest(AppStreamRequestPrivate * const d);
+    AppStreamRequest(AppStreamRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

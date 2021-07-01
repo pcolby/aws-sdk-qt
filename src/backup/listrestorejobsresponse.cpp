@@ -59,7 +59,8 @@ ListRestoreJobsResponse::ListRestoreJobsResponse(
  */
 const ListRestoreJobsRequest * ListRestoreJobsResponse::request() const
 {
-    return static_cast<const ListRestoreJobsRequest *>(BackupResponse::request());
+    Q_D(const ListRestoreJobsResponse);
+    return static_cast<const ListRestoreJobsRequest *>(d->request);
 }
 
 /*!

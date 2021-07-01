@@ -76,16 +76,16 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-11-28"),
-    QStringLiteral("runtime.lex"),
-    QStringLiteral("Amazon Lex Runtime Service"),
-    QStringLiteral("lex"),
-    parent), d_ptr(new LexRuntimeServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LexRuntimeServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LexRuntimeServiceClient);
+    d->apiVersion = QStringLiteral("2016-11-28");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("runtime.lex");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Lex Runtime Service");
+    d->serviceName = QStringLiteral("lex");
 }
 
 /*!
@@ -104,16 +104,16 @@ LexRuntimeServiceClient::LexRuntimeServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-11-28"),
-    QStringLiteral("runtime.lex"),
-    QStringLiteral("Amazon Lex Runtime Service"),
-    QStringLiteral("lex"),
-    parent), d_ptr(new LexRuntimeServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LexRuntimeServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LexRuntimeServiceClient);
+    d->apiVersion = QStringLiteral("2016-11-28");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("runtime.lex");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Lex Runtime Service");
+    d->serviceName = QStringLiteral("lex");
 }
 
 /*!
@@ -331,9 +331,10 @@ PutSessionResponse * LexRuntimeServiceClient::putSession(const PutSessionRequest
 /*!
  * Constructs a LexRuntimeServiceClientPrivate object with public implementation \a q.
  */
-LexRuntimeServiceClientPrivate::LexRuntimeServiceClientPrivate(LexRuntimeServiceClient * const q) : q_ptr(q)
+LexRuntimeServiceClientPrivate::LexRuntimeServiceClientPrivate(LexRuntimeServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace LexRuntimeService

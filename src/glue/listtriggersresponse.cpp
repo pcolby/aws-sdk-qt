@@ -58,7 +58,8 @@ ListTriggersResponse::ListTriggersResponse(
  */
 const ListTriggersRequest * ListTriggersResponse::request() const
 {
-    return static_cast<const ListTriggersRequest *>(GlueResponse::request());
+    Q_D(const ListTriggersResponse);
+    return static_cast<const ListTriggersRequest *>(d->request);
 }
 
 /*!

@@ -108,16 +108,16 @@ AmplifyBackendClient::AmplifyBackendClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-08-11"),
-    QStringLiteral("amplifybackend"),
-    QStringLiteral("AmplifyBackend"),
-    QStringLiteral("amplifybackend"),
-    parent), d_ptr(new AmplifyBackendClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AmplifyBackendClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AmplifyBackendClient);
+    d->apiVersion = QStringLiteral("2020-08-11");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("amplifybackend");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AmplifyBackend");
+    d->serviceName = QStringLiteral("amplifybackend");
 }
 
 /*!
@@ -136,16 +136,16 @@ AmplifyBackendClient::AmplifyBackendClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-08-11"),
-    QStringLiteral("amplifybackend"),
-    QStringLiteral("AmplifyBackend"),
-    QStringLiteral("amplifybackend"),
-    parent), d_ptr(new AmplifyBackendClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AmplifyBackendClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AmplifyBackendClient);
+    d->apiVersion = QStringLiteral("2020-08-11");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("amplifybackend");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AmplifyBackend");
+    d->serviceName = QStringLiteral("amplifybackend");
 }
 
 /*!
@@ -472,9 +472,10 @@ UpdateBackendJobResponse * AmplifyBackendClient::updateBackendJob(const UpdateBa
 /*!
  * Constructs a AmplifyBackendClientPrivate object with public implementation \a q.
  */
-AmplifyBackendClientPrivate::AmplifyBackendClientPrivate(AmplifyBackendClient * const q) : q_ptr(q)
+AmplifyBackendClientPrivate::AmplifyBackendClientPrivate(AmplifyBackendClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AmplifyBackend

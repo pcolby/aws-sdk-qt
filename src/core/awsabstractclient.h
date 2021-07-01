@@ -40,8 +40,7 @@ class QTAWSCORE_EXPORT AwsAbstractClient : public QObject {
     Q_OBJECT
 
 public:
-    AwsAbstractClient(const QString &apiVersion, const QString &endpointPrefix,
-        const QString &serviceFullName, const QString &serviceName, QObject * const parent = 0);
+    AwsAbstractClient(QObject * const parent = 0);
 
     virtual ~AwsAbstractClient();
 
@@ -58,7 +57,6 @@ public:
     void setEndpoint(const QUrl &endpoint);
     void setNetworkAccessManager(QNetworkAccessManager * const manager);
     void setRegion(const AwsRegion::Region region);
-    void setSignature(AwsAbstractSignature * const signature);
 
 protected:
     /// @cond internal

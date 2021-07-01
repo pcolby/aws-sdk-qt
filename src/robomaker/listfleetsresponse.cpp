@@ -56,7 +56,8 @@ ListFleetsResponse::ListFleetsResponse(
  */
 const ListFleetsRequest * ListFleetsResponse::request() const
 {
-    return static_cast<const ListFleetsRequest *>(RoboMakerResponse::request());
+    Q_D(const ListFleetsResponse);
+    return static_cast<const ListFleetsRequest *>(d->request);
 }
 
 /*!

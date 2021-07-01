@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    CostExplorerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CostExplorerResponse(CostExplorerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

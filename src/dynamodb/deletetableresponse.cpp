@@ -74,7 +74,8 @@ DeleteTableResponse::DeleteTableResponse(
  */
 const DeleteTableRequest * DeleteTableResponse::request() const
 {
-    return static_cast<const DeleteTableRequest *>(DynamoDBResponse::request());
+    Q_D(const DeleteTableResponse);
+    return static_cast<const DeleteTableRequest *>(d->request);
 }
 
 /*!

@@ -141,7 +141,8 @@ ListDelegatedServicesForAccountResponse::ListDelegatedServicesForAccountResponse
  */
 const ListDelegatedServicesForAccountRequest * ListDelegatedServicesForAccountResponse::request() const
 {
-    return static_cast<const ListDelegatedServicesForAccountRequest *>(OrganizationsResponse::request());
+    Q_D(const ListDelegatedServicesForAccountResponse);
+    return static_cast<const ListDelegatedServicesForAccountRequest *>(d->request);
 }
 
 /*!

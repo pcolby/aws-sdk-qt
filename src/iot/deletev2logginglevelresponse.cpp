@@ -82,7 +82,8 @@ DeleteV2LoggingLevelResponse::DeleteV2LoggingLevelResponse(
  */
 const DeleteV2LoggingLevelRequest * DeleteV2LoggingLevelResponse::request() const
 {
-    return static_cast<const DeleteV2LoggingLevelRequest *>(IoTResponse::request());
+    Q_D(const DeleteV2LoggingLevelResponse);
+    return static_cast<const DeleteV2LoggingLevelRequest *>(d->request);
 }
 
 /*!

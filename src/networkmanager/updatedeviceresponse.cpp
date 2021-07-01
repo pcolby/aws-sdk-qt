@@ -62,7 +62,8 @@ UpdateDeviceResponse::UpdateDeviceResponse(
  */
 const UpdateDeviceRequest * UpdateDeviceResponse::request() const
 {
-    return static_cast<const UpdateDeviceRequest *>(NetworkManagerResponse::request());
+    Q_D(const UpdateDeviceResponse);
+    return static_cast<const UpdateDeviceRequest *>(d->request);
 }
 
 /*!

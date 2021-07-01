@@ -68,7 +68,8 @@ DescribeScalingProcessTypesResponse::DescribeScalingProcessTypesResponse(
  */
 const DescribeScalingProcessTypesRequest * DescribeScalingProcessTypesResponse::request() const
 {
-    return static_cast<const DescribeScalingProcessTypesRequest *>(AutoScalingResponse::request());
+    Q_D(const DescribeScalingProcessTypesResponse);
+    return static_cast<const DescribeScalingProcessTypesRequest *>(d->request);
 }
 
 /*!

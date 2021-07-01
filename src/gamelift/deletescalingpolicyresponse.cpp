@@ -115,7 +115,8 @@ DeleteScalingPolicyResponse::DeleteScalingPolicyResponse(
  */
 const DeleteScalingPolicyRequest * DeleteScalingPolicyResponse::request() const
 {
-    return static_cast<const DeleteScalingPolicyRequest *>(GameLiftResponse::request());
+    Q_D(const DeleteScalingPolicyResponse);
+    return static_cast<const DeleteScalingPolicyRequest *>(d->request);
 }
 
 /*!

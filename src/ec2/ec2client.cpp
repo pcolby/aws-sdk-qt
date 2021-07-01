@@ -993,16 +993,16 @@ Ec2Client::Ec2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-11-15"),
-    QStringLiteral("ec2"),
-    QStringLiteral("Amazon Elastic Compute Cloud"),
-    QStringLiteral("ec2"),
-    parent), d_ptr(new Ec2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new Ec2ClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(Ec2Client);
+    d->apiVersion = QStringLiteral("2016-11-15");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("ec2");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Elastic Compute Cloud");
+    d->serviceName = QStringLiteral("ec2");
 }
 
 /*!
@@ -1021,16 +1021,16 @@ Ec2Client::Ec2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-11-15"),
-    QStringLiteral("ec2"),
-    QStringLiteral("Amazon Elastic Compute Cloud"),
-    QStringLiteral("ec2"),
-    parent), d_ptr(new Ec2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new Ec2ClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(Ec2Client);
+    d->apiVersion = QStringLiteral("2016-11-15");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("ec2");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Elastic Compute Cloud");
+    d->serviceName = QStringLiteral("ec2");
 }
 
 /*!
@@ -10272,9 +10272,10 @@ WithdrawByoipCidrResponse * Ec2Client::withdrawByoipCidr(const WithdrawByoipCidr
 /*!
  * Constructs a Ec2ClientPrivate object with public implementation \a q.
  */
-Ec2ClientPrivate::Ec2ClientPrivate(Ec2Client * const q) : q_ptr(q)
+Ec2ClientPrivate::Ec2ClientPrivate(Ec2Client * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace EC2

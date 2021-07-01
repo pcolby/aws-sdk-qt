@@ -56,7 +56,8 @@ UpdateQuerySuggestionsConfigResponse::UpdateQuerySuggestionsConfigResponse(
  */
 const UpdateQuerySuggestionsConfigRequest * UpdateQuerySuggestionsConfigResponse::request() const
 {
-    return static_cast<const UpdateQuerySuggestionsConfigRequest *>(kendraResponse::request());
+    Q_D(const UpdateQuerySuggestionsConfigResponse);
+    return static_cast<const UpdateQuerySuggestionsConfigRequest *>(d->request);
 }
 
 /*!

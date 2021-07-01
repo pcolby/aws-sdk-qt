@@ -70,7 +70,8 @@ DeleteContextResponse::DeleteContextResponse(
  */
 const DeleteContextRequest * DeleteContextResponse::request() const
 {
-    return static_cast<const DeleteContextRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteContextResponse);
+    return static_cast<const DeleteContextRequest *>(d->request);
 }
 
 /*!

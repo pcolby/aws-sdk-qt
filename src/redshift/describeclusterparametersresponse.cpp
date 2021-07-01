@@ -85,7 +85,8 @@ DescribeClusterParametersResponse::DescribeClusterParametersResponse(
  */
 const DescribeClusterParametersRequest * DescribeClusterParametersResponse::request() const
 {
-    return static_cast<const DescribeClusterParametersRequest *>(RedshiftResponse::request());
+    Q_D(const DescribeClusterParametersResponse);
+    return static_cast<const DescribeClusterParametersRequest *>(d->request);
 }
 
 /*!

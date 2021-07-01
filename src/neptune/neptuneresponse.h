@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    NeptuneResponsePrivate * const d_ptr; ///< Internal d-pointer.
     NeptuneResponse(NeptuneResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

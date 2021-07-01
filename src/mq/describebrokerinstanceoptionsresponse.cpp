@@ -57,7 +57,8 @@ DescribeBrokerInstanceOptionsResponse::DescribeBrokerInstanceOptionsResponse(
  */
 const DescribeBrokerInstanceOptionsRequest * DescribeBrokerInstanceOptionsResponse::request() const
 {
-    return static_cast<const DescribeBrokerInstanceOptionsRequest *>(MqResponse::request());
+    Q_D(const DescribeBrokerInstanceOptionsResponse);
+    return static_cast<const DescribeBrokerInstanceOptionsRequest *>(d->request);
 }
 
 /*!

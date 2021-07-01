@@ -62,7 +62,8 @@ StopSuiteRunResponse::StopSuiteRunResponse(
  */
 const StopSuiteRunRequest * StopSuiteRunResponse::request() const
 {
-    return static_cast<const StopSuiteRunRequest *>(IoTDeviceAdvisorResponse::request());
+    Q_D(const StopSuiteRunResponse);
+    return static_cast<const StopSuiteRunRequest *>(d->request);
 }
 
 /*!

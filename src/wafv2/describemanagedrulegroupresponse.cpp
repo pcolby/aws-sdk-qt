@@ -126,7 +126,8 @@ DescribeManagedRuleGroupResponse::DescribeManagedRuleGroupResponse(
  */
 const DescribeManagedRuleGroupRequest * DescribeManagedRuleGroupResponse::request() const
 {
-    return static_cast<const DescribeManagedRuleGroupRequest *>(Wafv2Response::request());
+    Q_D(const DescribeManagedRuleGroupResponse);
+    return static_cast<const DescribeManagedRuleGroupRequest *>(d->request);
 }
 
 /*!

@@ -140,7 +140,8 @@ ListHostsResponse::ListHostsResponse(
  */
 const ListHostsRequest * ListHostsResponse::request() const
 {
-    return static_cast<const ListHostsRequest *>(CodeStarconnectionsResponse::request());
+    Q_D(const ListHostsResponse);
+    return static_cast<const ListHostsRequest *>(d->request);
 }
 
 /*!

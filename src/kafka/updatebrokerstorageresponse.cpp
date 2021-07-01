@@ -56,7 +56,8 @@ UpdateBrokerStorageResponse::UpdateBrokerStorageResponse(
  */
 const UpdateBrokerStorageRequest * UpdateBrokerStorageResponse::request() const
 {
-    return static_cast<const UpdateBrokerStorageRequest *>(KafkaResponse::request());
+    Q_D(const UpdateBrokerStorageResponse);
+    return static_cast<const UpdateBrokerStorageRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ DescribeDominantLanguageDetectionJobResponse::DescribeDominantLanguageDetectionJ
  */
 const DescribeDominantLanguageDetectionJobRequest * DescribeDominantLanguageDetectionJobResponse::request() const
 {
-    return static_cast<const DescribeDominantLanguageDetectionJobRequest *>(ComprehendResponse::request());
+    Q_D(const DescribeDominantLanguageDetectionJobResponse);
+    return static_cast<const DescribeDominantLanguageDetectionJobRequest *>(d->request);
 }
 
 /*!

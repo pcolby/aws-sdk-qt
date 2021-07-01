@@ -37,7 +37,7 @@ namespace Braket {
  * Constructs a BraketResponse object with parent \a parent.
  */
 BraketResponse::BraketResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new BraketResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new BraketResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ BraketResponse::BraketResponse(QObject * const parent)
  * implementation that inherits from BraketResponsePrivate.
  */
 BraketResponse::BraketResponse(BraketResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void BraketResponse::parseFailure(QIODevice &response)
  * Constructs a BraketResponsePrivate object with public implementation \a q.
  */
 BraketResponsePrivate::BraketResponsePrivate(
-    BraketResponse * const q) : q_ptr(q)
+    BraketResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

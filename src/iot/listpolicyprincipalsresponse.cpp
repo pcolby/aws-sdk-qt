@@ -82,7 +82,8 @@ ListPolicyPrincipalsResponse::ListPolicyPrincipalsResponse(
  */
 const ListPolicyPrincipalsRequest * ListPolicyPrincipalsResponse::request() const
 {
-    return static_cast<const ListPolicyPrincipalsRequest *>(IoTResponse::request());
+    Q_D(const ListPolicyPrincipalsResponse);
+    return static_cast<const ListPolicyPrincipalsRequest *>(d->request);
 }
 
 /*!

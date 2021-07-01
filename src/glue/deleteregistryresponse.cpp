@@ -58,7 +58,8 @@ DeleteRegistryResponse::DeleteRegistryResponse(
  */
 const DeleteRegistryRequest * DeleteRegistryResponse::request() const
 {
-    return static_cast<const DeleteRegistryRequest *>(GlueResponse::request());
+    Q_D(const DeleteRegistryResponse);
+    return static_cast<const DeleteRegistryRequest *>(d->request);
 }
 
 /*!

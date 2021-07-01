@@ -79,7 +79,8 @@ DescribeInstanceStorageConfigResponse::DescribeInstanceStorageConfigResponse(
  */
 const DescribeInstanceStorageConfigRequest * DescribeInstanceStorageConfigResponse::request() const
 {
-    return static_cast<const DescribeInstanceStorageConfigRequest *>(ConnectResponse::request());
+    Q_D(const DescribeInstanceStorageConfigResponse);
+    return static_cast<const DescribeInstanceStorageConfigRequest *>(d->request);
 }
 
 /*!

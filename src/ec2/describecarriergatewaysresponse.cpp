@@ -87,7 +87,8 @@ DescribeCarrierGatewaysResponse::DescribeCarrierGatewaysResponse(
  */
 const DescribeCarrierGatewaysRequest * DescribeCarrierGatewaysResponse::request() const
 {
-    return static_cast<const DescribeCarrierGatewaysRequest *>(Ec2Response::request());
+    Q_D(const DescribeCarrierGatewaysResponse);
+    return static_cast<const DescribeCarrierGatewaysRequest *>(d->request);
 }
 
 /*!

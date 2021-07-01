@@ -119,7 +119,8 @@ DescribeDBSubnetGroupsResponse::DescribeDBSubnetGroupsResponse(
  */
 const DescribeDBSubnetGroupsRequest * DescribeDBSubnetGroupsResponse::request() const
 {
-    return static_cast<const DescribeDBSubnetGroupsRequest *>(RdsResponse::request());
+    Q_D(const DescribeDBSubnetGroupsResponse);
+    return static_cast<const DescribeDBSubnetGroupsRequest *>(d->request);
 }
 
 /*!

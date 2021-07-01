@@ -154,7 +154,8 @@ GenerateRandomResponse::GenerateRandomResponse(
  */
 const GenerateRandomRequest * GenerateRandomResponse::request() const
 {
-    return static_cast<const GenerateRandomRequest *>(KmsResponse::request());
+    Q_D(const GenerateRandomResponse);
+    return static_cast<const GenerateRandomRequest *>(d->request);
 }
 
 /*!

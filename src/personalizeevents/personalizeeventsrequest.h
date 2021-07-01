@@ -61,8 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    PersonalizeEventsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit PersonalizeEventsRequest(PersonalizeEventsRequestPrivate * const d);
+    PersonalizeEventsRequest(PersonalizeEventsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

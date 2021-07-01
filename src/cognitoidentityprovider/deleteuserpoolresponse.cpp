@@ -66,7 +66,8 @@ DeleteUserPoolResponse::DeleteUserPoolResponse(
  */
 const DeleteUserPoolRequest * DeleteUserPoolResponse::request() const
 {
-    return static_cast<const DeleteUserPoolRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const DeleteUserPoolResponse);
+    return static_cast<const DeleteUserPoolRequest *>(d->request);
 }
 
 /*!

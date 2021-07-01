@@ -20,20 +20,19 @@
 #ifndef QTAWS_NETWORKMANAGERCLIENT_P_H
 #define QTAWS_NETWORKMANAGERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace NetworkManager {
 
 class NetworkManagerClient;
 
-class NetworkManagerClientPrivate {
+class NetworkManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit NetworkManagerClientPrivate(NetworkManagerClient * const q);
-
-protected:
-    NetworkManagerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(NetworkManagerClient)

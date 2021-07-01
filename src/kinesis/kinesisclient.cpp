@@ -118,16 +118,16 @@ KinesisClient::KinesisClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2013-12-02"),
-    QStringLiteral("kinesis"),
-    QStringLiteral("Amazon Kinesis"),
-    QStringLiteral("kinesis"),
-    parent), d_ptr(new KinesisClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new KinesisClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(KinesisClient);
+    d->apiVersion = QStringLiteral("2013-12-02");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("kinesis");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis");
+    d->serviceName = QStringLiteral("kinesis");
 }
 
 /*!
@@ -146,16 +146,16 @@ KinesisClient::KinesisClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2013-12-02"),
-    QStringLiteral("kinesis"),
-    QStringLiteral("Amazon Kinesis"),
-    QStringLiteral("kinesis"),
-    parent), d_ptr(new KinesisClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new KinesisClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(KinesisClient);
+    d->apiVersion = QStringLiteral("2013-12-02");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("kinesis");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis");
+    d->serviceName = QStringLiteral("kinesis");
 }
 
 /*!
@@ -1194,9 +1194,10 @@ UpdateShardCountResponse * KinesisClient::updateShardCount(const UpdateShardCoun
 /*!
  * Constructs a KinesisClientPrivate object with public implementation \a q.
  */
-KinesisClientPrivate::KinesisClientPrivate(KinesisClient * const q) : q_ptr(q)
+KinesisClientPrivate::KinesisClientPrivate(KinesisClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Kinesis

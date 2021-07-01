@@ -98,7 +98,8 @@ ListCommandInvocationsResponse::ListCommandInvocationsResponse(
  */
 const ListCommandInvocationsRequest * ListCommandInvocationsResponse::request() const
 {
-    return static_cast<const ListCommandInvocationsRequest *>(SsmResponse::request());
+    Q_D(const ListCommandInvocationsResponse);
+    return static_cast<const ListCommandInvocationsRequest *>(d->request);
 }
 
 /*!

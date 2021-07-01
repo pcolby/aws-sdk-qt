@@ -124,7 +124,8 @@ DeleteChapCredentialsResponse::DeleteChapCredentialsResponse(
  */
 const DeleteChapCredentialsRequest * DeleteChapCredentialsResponse::request() const
 {
-    return static_cast<const DeleteChapCredentialsRequest *>(StorageGatewayResponse::request());
+    Q_D(const DeleteChapCredentialsResponse);
+    return static_cast<const DeleteChapCredentialsRequest *>(d->request);
 }
 
 /*!

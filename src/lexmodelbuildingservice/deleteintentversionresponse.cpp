@@ -59,7 +59,8 @@ DeleteIntentVersionResponse::DeleteIntentVersionResponse(
  */
 const DeleteIntentVersionRequest * DeleteIntentVersionResponse::request() const
 {
-    return static_cast<const DeleteIntentVersionRequest *>(LexModelBuildingServiceResponse::request());
+    Q_D(const DeleteIntentVersionResponse);
+    return static_cast<const DeleteIntentVersionRequest *>(d->request);
 }
 
 /*!

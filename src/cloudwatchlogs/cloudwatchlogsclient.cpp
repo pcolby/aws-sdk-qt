@@ -172,16 +172,16 @@ CloudWatchLogsClient::CloudWatchLogsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-03-28"),
-    QStringLiteral("logs"),
-    QStringLiteral("Amazon CloudWatch Logs"),
-    QStringLiteral("logs"),
-    parent), d_ptr(new CloudWatchLogsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudWatchLogsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudWatchLogsClient);
+    d->apiVersion = QStringLiteral("2014-03-28");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("logs");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudWatch Logs");
+    d->serviceName = QStringLiteral("logs");
 }
 
 /*!
@@ -200,16 +200,16 @@ CloudWatchLogsClient::CloudWatchLogsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-03-28"),
-    QStringLiteral("logs"),
-    QStringLiteral("Amazon CloudWatch Logs"),
-    QStringLiteral("logs"),
-    parent), d_ptr(new CloudWatchLogsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudWatchLogsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudWatchLogsClient);
+    d->apiVersion = QStringLiteral("2014-03-28");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("logs");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudWatch Logs");
+    d->serviceName = QStringLiteral("logs");
 }
 
 /*!
@@ -1149,9 +1149,10 @@ UntagLogGroupResponse * CloudWatchLogsClient::untagLogGroup(const UntagLogGroupR
 /*!
  * Constructs a CloudWatchLogsClientPrivate object with public implementation \a q.
  */
-CloudWatchLogsClientPrivate::CloudWatchLogsClientPrivate(CloudWatchLogsClient * const q) : q_ptr(q)
+CloudWatchLogsClientPrivate::CloudWatchLogsClientPrivate(CloudWatchLogsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudWatchLogs

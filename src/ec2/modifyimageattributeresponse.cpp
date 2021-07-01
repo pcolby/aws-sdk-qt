@@ -87,7 +87,8 @@ ModifyImageAttributeResponse::ModifyImageAttributeResponse(
  */
 const ModifyImageAttributeRequest * ModifyImageAttributeResponse::request() const
 {
-    return static_cast<const ModifyImageAttributeRequest *>(Ec2Response::request());
+    Q_D(const ModifyImageAttributeResponse);
+    return static_cast<const ModifyImageAttributeRequest *>(d->request);
 }
 
 /*!

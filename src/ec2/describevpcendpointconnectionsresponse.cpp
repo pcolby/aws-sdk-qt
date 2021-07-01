@@ -87,7 +87,8 @@ DescribeVpcEndpointConnectionsResponse::DescribeVpcEndpointConnectionsResponse(
  */
 const DescribeVpcEndpointConnectionsRequest * DescribeVpcEndpointConnectionsResponse::request() const
 {
-    return static_cast<const DescribeVpcEndpointConnectionsRequest *>(Ec2Response::request());
+    Q_D(const DescribeVpcEndpointConnectionsResponse);
+    return static_cast<const DescribeVpcEndpointConnectionsRequest *>(d->request);
 }
 
 /*!

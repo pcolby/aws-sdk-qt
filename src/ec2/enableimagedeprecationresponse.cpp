@@ -87,7 +87,8 @@ EnableImageDeprecationResponse::EnableImageDeprecationResponse(
  */
 const EnableImageDeprecationRequest * EnableImageDeprecationResponse::request() const
 {
-    return static_cast<const EnableImageDeprecationRequest *>(Ec2Response::request());
+    Q_D(const EnableImageDeprecationResponse);
+    return static_cast<const EnableImageDeprecationRequest *>(d->request);
 }
 
 /*!

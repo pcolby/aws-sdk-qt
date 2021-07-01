@@ -86,7 +86,8 @@ DescribeCustomDomainsResponse::DescribeCustomDomainsResponse(
  */
 const DescribeCustomDomainsRequest * DescribeCustomDomainsResponse::request() const
 {
-    return static_cast<const DescribeCustomDomainsRequest *>(AppRunnerResponse::request());
+    Q_D(const DescribeCustomDomainsResponse);
+    return static_cast<const DescribeCustomDomainsRequest *>(d->request);
 }
 
 /*!

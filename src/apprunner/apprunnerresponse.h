@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    AppRunnerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AppRunnerResponse(AppRunnerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -58,7 +58,8 @@ CreateConfigResponse::CreateConfigResponse(
  */
 const CreateConfigRequest * CreateConfigResponse::request() const
 {
-    return static_cast<const CreateConfigRequest *>(GroundStationResponse::request());
+    Q_D(const CreateConfigResponse);
+    return static_cast<const CreateConfigRequest *>(d->request);
 }
 
 /*!

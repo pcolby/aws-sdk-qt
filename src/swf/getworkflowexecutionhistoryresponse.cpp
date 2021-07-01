@@ -71,7 +71,8 @@ GetWorkflowExecutionHistoryResponse::GetWorkflowExecutionHistoryResponse(
  */
 const GetWorkflowExecutionHistoryRequest * GetWorkflowExecutionHistoryResponse::request() const
 {
-    return static_cast<const GetWorkflowExecutionHistoryRequest *>(SwfResponse::request());
+    Q_D(const GetWorkflowExecutionHistoryResponse);
+    return static_cast<const GetWorkflowExecutionHistoryRequest *>(d->request);
 }
 
 /*!

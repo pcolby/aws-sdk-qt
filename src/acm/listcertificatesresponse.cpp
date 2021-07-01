@@ -60,7 +60,8 @@ ListCertificatesResponse::ListCertificatesResponse(
  */
 const ListCertificatesRequest * ListCertificatesResponse::request() const
 {
-    return static_cast<const ListCertificatesRequest *>(AcmResponse::request());
+    Q_D(const ListCertificatesResponse);
+    return static_cast<const ListCertificatesRequest *>(d->request);
 }
 
 /*!

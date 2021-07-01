@@ -69,7 +69,8 @@ UpdateApplicationResponse::UpdateApplicationResponse(
  */
 const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 {
-    return static_cast<const UpdateApplicationRequest *>(KinesisAnalyticsResponse::request());
+    Q_D(const UpdateApplicationResponse);
+    return static_cast<const UpdateApplicationRequest *>(d->request);
 }
 
 /*!

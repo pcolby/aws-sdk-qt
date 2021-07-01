@@ -98,7 +98,8 @@ GetInventoryResponse::GetInventoryResponse(
  */
 const GetInventoryRequest * GetInventoryResponse::request() const
 {
-    return static_cast<const GetInventoryRequest *>(SsmResponse::request());
+    Q_D(const GetInventoryResponse);
+    return static_cast<const GetInventoryRequest *>(d->request);
 }
 
 /*!

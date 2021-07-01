@@ -161,7 +161,8 @@ RegisterRdsDbInstanceResponse::RegisterRdsDbInstanceResponse(
  */
 const RegisterRdsDbInstanceRequest * RegisterRdsDbInstanceResponse::request() const
 {
-    return static_cast<const RegisterRdsDbInstanceRequest *>(OpsWorksResponse::request());
+    Q_D(const RegisterRdsDbInstanceResponse);
+    return static_cast<const RegisterRdsDbInstanceRequest *>(d->request);
 }
 
 /*!

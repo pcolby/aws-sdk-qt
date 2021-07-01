@@ -73,7 +73,8 @@ ListPublishingDestinationsResponse::ListPublishingDestinationsResponse(
  */
 const ListPublishingDestinationsRequest * ListPublishingDestinationsResponse::request() const
 {
-    return static_cast<const ListPublishingDestinationsRequest *>(GuardDutyResponse::request());
+    Q_D(const ListPublishingDestinationsResponse);
+    return static_cast<const ListPublishingDestinationsRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ UpdateManagedInstanceRoleResponse::UpdateManagedInstanceRoleResponse(
  */
 const UpdateManagedInstanceRoleRequest * UpdateManagedInstanceRoleResponse::request() const
 {
-    return static_cast<const UpdateManagedInstanceRoleRequest *>(SsmResponse::request());
+    Q_D(const UpdateManagedInstanceRoleResponse);
+    return static_cast<const UpdateManagedInstanceRoleRequest *>(d->request);
 }
 
 /*!

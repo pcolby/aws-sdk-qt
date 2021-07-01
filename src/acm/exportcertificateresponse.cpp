@@ -60,7 +60,8 @@ ExportCertificateResponse::ExportCertificateResponse(
  */
 const ExportCertificateRequest * ExportCertificateResponse::request() const
 {
-    return static_cast<const ExportCertificateRequest *>(AcmResponse::request());
+    Q_D(const ExportCertificateResponse);
+    return static_cast<const ExportCertificateRequest *>(d->request);
 }
 
 /*!

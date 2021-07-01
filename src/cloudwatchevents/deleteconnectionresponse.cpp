@@ -78,7 +78,8 @@ DeleteConnectionResponse::DeleteConnectionResponse(
  */
 const DeleteConnectionRequest * DeleteConnectionResponse::request() const
 {
-    return static_cast<const DeleteConnectionRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const DeleteConnectionResponse);
+    return static_cast<const DeleteConnectionRequest *>(d->request);
 }
 
 /*!

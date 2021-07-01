@@ -75,7 +75,8 @@ GetSavingsPlansPurchaseRecommendationResponse::GetSavingsPlansPurchaseRecommenda
  */
 const GetSavingsPlansPurchaseRecommendationRequest * GetSavingsPlansPurchaseRecommendationResponse::request() const
 {
-    return static_cast<const GetSavingsPlansPurchaseRecommendationRequest *>(CostExplorerResponse::request());
+    Q_D(const GetSavingsPlansPurchaseRecommendationResponse);
+    return static_cast<const GetSavingsPlansPurchaseRecommendationRequest *>(d->request);
 }
 
 /*!

@@ -74,7 +74,8 @@ CreateDistributionResponse::CreateDistributionResponse(
  */
 const CreateDistributionRequest * CreateDistributionResponse::request() const
 {
-    return static_cast<const CreateDistributionRequest *>(LightsailResponse::request());
+    Q_D(const CreateDistributionResponse);
+    return static_cast<const CreateDistributionRequest *>(d->request);
 }
 
 /*!

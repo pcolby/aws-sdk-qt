@@ -87,7 +87,8 @@ EnableVpcClassicLinkResponse::EnableVpcClassicLinkResponse(
  */
 const EnableVpcClassicLinkRequest * EnableVpcClassicLinkResponse::request() const
 {
-    return static_cast<const EnableVpcClassicLinkRequest *>(Ec2Response::request());
+    Q_D(const EnableVpcClassicLinkResponse);
+    return static_cast<const EnableVpcClassicLinkRequest *>(d->request);
 }
 
 /*!

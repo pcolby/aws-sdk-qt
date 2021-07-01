@@ -96,12 +96,6 @@ public slots:
     UpdatePlacementResponse * updatePlacement(const UpdatePlacementRequest &request);
     UpdateProjectResponse * updateProject(const UpdateProjectRequest &request);
 
-protected:
-    /// @cond internal
-    IoT1ClickProjectsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IoT1ClickProjectsClient(IoT1ClickProjectsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(IoT1ClickProjectsClient)
     Q_DISABLE_COPY(IoT1ClickProjectsClient)

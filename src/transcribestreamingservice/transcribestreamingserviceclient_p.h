@@ -20,20 +20,19 @@
 #ifndef QTAWS_TRANSCRIBESTREAMINGSERVICECLIENT_P_H
 #define QTAWS_TRANSCRIBESTREAMINGSERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace TranscribeStreamingService {
 
 class TranscribeStreamingServiceClient;
 
-class TranscribeStreamingServiceClientPrivate {
+class TranscribeStreamingServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit TranscribeStreamingServiceClientPrivate(TranscribeStreamingServiceClient * const q);
-
-protected:
-    TranscribeStreamingServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TranscribeStreamingServiceClient)

@@ -98,7 +98,8 @@ PutVoiceConnectorTerminationResponse::PutVoiceConnectorTerminationResponse(
  */
 const PutVoiceConnectorTerminationRequest * PutVoiceConnectorTerminationResponse::request() const
 {
-    return static_cast<const PutVoiceConnectorTerminationRequest *>(ChimeResponse::request());
+    Q_D(const PutVoiceConnectorTerminationResponse);
+    return static_cast<const PutVoiceConnectorTerminationRequest *>(d->request);
 }
 
 /*!

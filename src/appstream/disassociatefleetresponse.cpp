@@ -81,7 +81,8 @@ DisassociateFleetResponse::DisassociateFleetResponse(
  */
 const DisassociateFleetRequest * DisassociateFleetResponse::request() const
 {
-    return static_cast<const DisassociateFleetRequest *>(AppStreamResponse::request());
+    Q_D(const DisassociateFleetResponse);
+    return static_cast<const DisassociateFleetRequest *>(d->request);
 }
 
 /*!

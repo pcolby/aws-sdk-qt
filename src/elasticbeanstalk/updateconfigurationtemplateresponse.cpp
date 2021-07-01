@@ -77,7 +77,8 @@ UpdateConfigurationTemplateResponse::UpdateConfigurationTemplateResponse(
  */
 const UpdateConfigurationTemplateRequest * UpdateConfigurationTemplateResponse::request() const
 {
-    return static_cast<const UpdateConfigurationTemplateRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const UpdateConfigurationTemplateResponse);
+    return static_cast<const UpdateConfigurationTemplateRequest *>(d->request);
 }
 
 /*!

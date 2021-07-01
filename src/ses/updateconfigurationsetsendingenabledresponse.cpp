@@ -66,7 +66,8 @@ UpdateConfigurationSetSendingEnabledResponse::UpdateConfigurationSetSendingEnabl
  */
 const UpdateConfigurationSetSendingEnabledRequest * UpdateConfigurationSetSendingEnabledResponse::request() const
 {
-    return static_cast<const UpdateConfigurationSetSendingEnabledRequest *>(SesResponse::request());
+    Q_D(const UpdateConfigurationSetSendingEnabledResponse);
+    return static_cast<const UpdateConfigurationSetSendingEnabledRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ DescribeStoreImageTasksResponse::DescribeStoreImageTasksResponse(
  */
 const DescribeStoreImageTasksRequest * DescribeStoreImageTasksResponse::request() const
 {
-    return static_cast<const DescribeStoreImageTasksRequest *>(Ec2Response::request());
+    Q_D(const DescribeStoreImageTasksResponse);
+    return static_cast<const DescribeStoreImageTasksRequest *>(d->request);
 }
 
 /*!

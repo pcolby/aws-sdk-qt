@@ -58,7 +58,8 @@ PutItemsResponse::PutItemsResponse(
  */
 const PutItemsRequest * PutItemsResponse::request() const
 {
-    return static_cast<const PutItemsRequest *>(PersonalizeEventsResponse::request());
+    Q_D(const PutItemsResponse);
+    return static_cast<const PutItemsRequest *>(d->request);
 }
 
 /*!

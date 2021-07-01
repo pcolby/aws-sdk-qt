@@ -124,7 +124,8 @@ NotifyWhenUploadedResponse::NotifyWhenUploadedResponse(
  */
 const NotifyWhenUploadedRequest * NotifyWhenUploadedResponse::request() const
 {
-    return static_cast<const NotifyWhenUploadedRequest *>(StorageGatewayResponse::request());
+    Q_D(const NotifyWhenUploadedResponse);
+    return static_cast<const NotifyWhenUploadedRequest *>(d->request);
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace PI {
  * Constructs a PiResponse object with parent \a parent.
  */
 PiResponse::PiResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new PiResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new PiResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ PiResponse::PiResponse(QObject * const parent)
  * implementation that inherits from PiResponsePrivate.
  */
 PiResponse::PiResponse(PiResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void PiResponse::parseFailure(QIODevice &response)
  * Constructs a PiResponsePrivate object with public implementation \a q.
  */
 PiResponsePrivate::PiResponsePrivate(
-    PiResponse * const q) : q_ptr(q)
+    PiResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

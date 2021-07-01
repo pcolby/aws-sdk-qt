@@ -56,7 +56,8 @@ DeleteDBClusterSnapshotResponse::DeleteDBClusterSnapshotResponse(
  */
 const DeleteDBClusterSnapshotRequest * DeleteDBClusterSnapshotResponse::request() const
 {
-    return static_cast<const DeleteDBClusterSnapshotRequest *>(DocDBResponse::request());
+    Q_D(const DeleteDBClusterSnapshotResponse);
+    return static_cast<const DeleteDBClusterSnapshotRequest *>(d->request);
 }
 
 /*!

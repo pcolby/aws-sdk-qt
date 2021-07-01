@@ -55,7 +55,8 @@ DeleteRealtimeEndpointResponse::DeleteRealtimeEndpointResponse(
  */
 const DeleteRealtimeEndpointRequest * DeleteRealtimeEndpointResponse::request() const
 {
-    return static_cast<const DeleteRealtimeEndpointRequest *>(MachineLearningResponse::request());
+    Q_D(const DeleteRealtimeEndpointResponse);
+    return static_cast<const DeleteRealtimeEndpointRequest *>(d->request);
 }
 
 /*!

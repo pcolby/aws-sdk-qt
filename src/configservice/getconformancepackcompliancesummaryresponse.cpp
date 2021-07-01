@@ -75,7 +75,8 @@ GetConformancePackComplianceSummaryResponse::GetConformancePackComplianceSummary
  */
 const GetConformancePackComplianceSummaryRequest * GetConformancePackComplianceSummaryResponse::request() const
 {
-    return static_cast<const GetConformancePackComplianceSummaryRequest *>(ConfigServiceResponse::request());
+    Q_D(const GetConformancePackComplianceSummaryResponse);
+    return static_cast<const GetConformancePackComplianceSummaryRequest *>(d->request);
 }
 
 /*!

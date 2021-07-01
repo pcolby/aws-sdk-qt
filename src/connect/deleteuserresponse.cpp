@@ -79,7 +79,8 @@ DeleteUserResponse::DeleteUserResponse(
  */
 const DeleteUserRequest * DeleteUserResponse::request() const
 {
-    return static_cast<const DeleteUserRequest *>(ConnectResponse::request());
+    Q_D(const DeleteUserResponse);
+    return static_cast<const DeleteUserRequest *>(d->request);
 }
 
 /*!

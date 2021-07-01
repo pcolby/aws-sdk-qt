@@ -37,7 +37,7 @@ namespace StorageGateway {
  * Constructs a StorageGatewayResponse object with parent \a parent.
  */
 StorageGatewayResponse::StorageGatewayResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new StorageGatewayResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new StorageGatewayResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ StorageGatewayResponse::StorageGatewayResponse(QObject * const parent)
  * implementation that inherits from StorageGatewayResponsePrivate.
  */
 StorageGatewayResponse::StorageGatewayResponse(StorageGatewayResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void StorageGatewayResponse::parseFailure(QIODevice &response)
  * Constructs a StorageGatewayResponsePrivate object with public implementation \a q.
  */
 StorageGatewayResponsePrivate::StorageGatewayResponsePrivate(
-    StorageGatewayResponse * const q) : q_ptr(q)
+    StorageGatewayResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

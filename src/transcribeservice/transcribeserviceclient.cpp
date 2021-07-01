@@ -114,16 +114,16 @@ TranscribeServiceClient::TranscribeServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-10-26"),
-    QStringLiteral("transcribe"),
-    QStringLiteral("Amazon Transcribe Service"),
-    QStringLiteral("transcribe"),
-    parent), d_ptr(new TranscribeServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new TranscribeServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(TranscribeServiceClient);
+    d->apiVersion = QStringLiteral("2017-10-26");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("transcribe");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Transcribe Service");
+    d->serviceName = QStringLiteral("transcribe");
 }
 
 /*!
@@ -142,16 +142,16 @@ TranscribeServiceClient::TranscribeServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-10-26"),
-    QStringLiteral("transcribe"),
-    QStringLiteral("Amazon Transcribe Service"),
-    QStringLiteral("transcribe"),
-    parent), d_ptr(new TranscribeServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new TranscribeServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(TranscribeServiceClient);
+    d->apiVersion = QStringLiteral("2017-10-26");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("transcribe");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Transcribe Service");
+    d->serviceName = QStringLiteral("transcribe");
 }
 
 /*!
@@ -535,9 +535,10 @@ UpdateVocabularyFilterResponse * TranscribeServiceClient::updateVocabularyFilter
 /*!
  * Constructs a TranscribeServiceClientPrivate object with public implementation \a q.
  */
-TranscribeServiceClientPrivate::TranscribeServiceClientPrivate(TranscribeServiceClient * const q) : q_ptr(q)
+TranscribeServiceClientPrivate::TranscribeServiceClientPrivate(TranscribeServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace TranscribeService

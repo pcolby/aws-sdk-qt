@@ -59,8 +59,7 @@ public:
 
 protected:
     /// @cond internal
-    MobileAnalyticsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MobileAnalyticsRequest(MobileAnalyticsRequestPrivate * const d);
+    MobileAnalyticsRequest(MobileAnalyticsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

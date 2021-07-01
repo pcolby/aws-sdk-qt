@@ -66,7 +66,8 @@ DescribeProgramResponse::DescribeProgramResponse(
  */
 const DescribeProgramRequest * DescribeProgramResponse::request() const
 {
-    return static_cast<const DescribeProgramRequest *>(MediaTailorResponse::request());
+    Q_D(const DescribeProgramResponse);
+    return static_cast<const DescribeProgramRequest *>(d->request);
 }
 
 /*!

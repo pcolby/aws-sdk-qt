@@ -98,7 +98,8 @@ RedactRoomMessageResponse::RedactRoomMessageResponse(
  */
 const RedactRoomMessageRequest * RedactRoomMessageResponse::request() const
 {
-    return static_cast<const RedactRoomMessageRequest *>(ChimeResponse::request());
+    Q_D(const RedactRoomMessageResponse);
+    return static_cast<const RedactRoomMessageRequest *>(d->request);
 }
 
 /*!

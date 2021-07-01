@@ -78,7 +78,8 @@ DescribeHomeRegionControlsResponse::DescribeHomeRegionControlsResponse(
  */
 const DescribeHomeRegionControlsRequest * DescribeHomeRegionControlsResponse::request() const
 {
-    return static_cast<const DescribeHomeRegionControlsRequest *>(MigrationHubConfigResponse::request());
+    Q_D(const DescribeHomeRegionControlsResponse);
+    return static_cast<const DescribeHomeRegionControlsRequest *>(d->request);
 }
 
 /*!

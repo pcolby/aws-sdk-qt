@@ -119,16 +119,16 @@ AcmpcaClient::AcmpcaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-08-22"),
-    QStringLiteral("acm-pca"),
-    QStringLiteral("AWS Certificate Manager Private Certificate Authority"),
-    QStringLiteral("acm-pca"),
-    parent), d_ptr(new AcmpcaClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AcmpcaClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AcmpcaClient);
+    d->apiVersion = QStringLiteral("2017-08-22");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("acm-pca");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Certificate Manager Private Certificate Authority");
+    d->serviceName = QStringLiteral("acm-pca");
 }
 
 /*!
@@ -147,16 +147,16 @@ AcmpcaClient::AcmpcaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-08-22"),
-    QStringLiteral("acm-pca"),
-    QStringLiteral("AWS Certificate Manager Private Certificate Authority"),
-    QStringLiteral("acm-pca"),
-    parent), d_ptr(new AcmpcaClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AcmpcaClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AcmpcaClient);
+    d->apiVersion = QStringLiteral("2017-08-22");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("acm-pca");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Certificate Manager Private Certificate Authority");
+    d->serviceName = QStringLiteral("acm-pca");
 }
 
 /*!
@@ -1005,9 +1005,10 @@ UpdateCertificateAuthorityResponse * AcmpcaClient::updateCertificateAuthority(co
 /*!
  * Constructs a AcmpcaClientPrivate object with public implementation \a q.
  */
-AcmpcaClientPrivate::AcmpcaClientPrivate(AcmpcaClient * const q) : q_ptr(q)
+AcmpcaClientPrivate::AcmpcaClientPrivate(AcmpcaClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ACMPCA

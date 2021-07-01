@@ -20,12 +20,14 @@
 #ifndef QTAWS_MEDIACONNECTRESPONSE_P_H
 #define QTAWS_MEDIACONNECTRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace MediaConnect {
 
 class MediaConnectResponse;
 
-class MediaConnectResponsePrivate {
+class MediaConnectResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    MediaConnectResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaConnectResponse)

@@ -98,7 +98,8 @@ GetAutomationExecutionResponse::GetAutomationExecutionResponse(
  */
 const GetAutomationExecutionRequest * GetAutomationExecutionResponse::request() const
 {
-    return static_cast<const GetAutomationExecutionRequest *>(SsmResponse::request());
+    Q_D(const GetAutomationExecutionResponse);
+    return static_cast<const GetAutomationExecutionRequest *>(d->request);
 }
 
 /*!

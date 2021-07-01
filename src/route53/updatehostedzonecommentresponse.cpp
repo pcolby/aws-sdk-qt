@@ -56,7 +56,8 @@ UpdateHostedZoneCommentResponse::UpdateHostedZoneCommentResponse(
  */
 const UpdateHostedZoneCommentRequest * UpdateHostedZoneCommentResponse::request() const
 {
-    return static_cast<const UpdateHostedZoneCommentRequest *>(Route53Response::request());
+    Q_D(const UpdateHostedZoneCommentResponse);
+    return static_cast<const UpdateHostedZoneCommentRequest *>(d->request);
 }
 
 /*!

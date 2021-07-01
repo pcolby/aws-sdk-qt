@@ -58,7 +58,8 @@ DescribeWorkspacesConnectionStatusResponse::DescribeWorkspacesConnectionStatusRe
  */
 const DescribeWorkspacesConnectionStatusRequest * DescribeWorkspacesConnectionStatusResponse::request() const
 {
-    return static_cast<const DescribeWorkspacesConnectionStatusRequest *>(WorkSpacesResponse::request());
+    Q_D(const DescribeWorkspacesConnectionStatusResponse);
+    return static_cast<const DescribeWorkspacesConnectionStatusRequest *>(d->request);
 }
 
 /*!

@@ -61,7 +61,8 @@ DeleteAccessPolicyResponse::DeleteAccessPolicyResponse(
  */
 const DeleteAccessPolicyRequest * DeleteAccessPolicyResponse::request() const
 {
-    return static_cast<const DeleteAccessPolicyRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const DeleteAccessPolicyResponse);
+    return static_cast<const DeleteAccessPolicyRequest *>(d->request);
 }
 
 /*!

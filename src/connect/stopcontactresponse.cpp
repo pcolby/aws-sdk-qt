@@ -79,7 +79,8 @@ StopContactResponse::StopContactResponse(
  */
 const StopContactRequest * StopContactResponse::request() const
 {
-    return static_cast<const StopContactRequest *>(ConnectResponse::request());
+    Q_D(const StopContactResponse);
+    return static_cast<const StopContactRequest *>(d->request);
 }
 
 /*!

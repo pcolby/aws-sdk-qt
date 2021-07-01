@@ -73,7 +73,7 @@ namespace SSOAdmin {
  * Constructs a SSOAdminRequest object for SSOAdmin \a action.
  */
 SSOAdminRequest::SSOAdminRequest(const Action action)
-    : d_ptr(new SSOAdminRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SSOAdminRequestPrivate(action, this))
 {
 
 }
@@ -82,8 +82,7 @@ SSOAdminRequest::SSOAdminRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SSOAdminRequest::SSOAdminRequest(const SSOAdminRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new SSOAdminRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SSOAdminRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -106,7 +105,7 @@ SSOAdminRequest& SSOAdminRequest::operator=(const SSOAdminRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SSOAdminRequestPrivate.
  */
-SSOAdminRequest::SSOAdminRequest(SSOAdminRequestPrivate * const d) : d_ptr(d)
+SSOAdminRequest::SSOAdminRequest(SSOAdminRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -275,7 +274,7 @@ QNetworkRequest SSOAdminRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SSOAdminRequestPrivate::SSOAdminRequestPrivate(const SSOAdminRequest::Action action, SSOAdminRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -290,8 +289,8 @@ SSOAdminRequestPrivate::SSOAdminRequestPrivate(const SSOAdminRequest::Action act
  */
 SSOAdminRequestPrivate::SSOAdminRequestPrivate(const SSOAdminRequestPrivate &other,
                                      SSOAdminRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

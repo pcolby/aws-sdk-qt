@@ -60,7 +60,8 @@ DisableOrganizationAdminAccountResponse::DisableOrganizationAdminAccountResponse
  */
 const DisableOrganizationAdminAccountRequest * DisableOrganizationAdminAccountResponse::request() const
 {
-    return static_cast<const DisableOrganizationAdminAccountRequest *>(Macie2Response::request());
+    Q_D(const DisableOrganizationAdminAccountResponse);
+    return static_cast<const DisableOrganizationAdminAccountRequest *>(d->request);
 }
 
 /*!

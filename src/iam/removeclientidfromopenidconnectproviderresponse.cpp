@@ -62,7 +62,8 @@ RemoveClientIDFromOpenIDConnectProviderResponse::RemoveClientIDFromOpenIDConnect
  */
 const RemoveClientIDFromOpenIDConnectProviderRequest * RemoveClientIDFromOpenIDConnectProviderResponse::request() const
 {
-    return static_cast<const RemoveClientIDFromOpenIDConnectProviderRequest *>(IamResponse::request());
+    Q_D(const RemoveClientIDFromOpenIDConnectProviderResponse);
+    return static_cast<const RemoveClientIDFromOpenIDConnectProviderRequest *>(d->request);
 }
 
 /*!

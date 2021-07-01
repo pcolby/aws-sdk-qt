@@ -58,7 +58,8 @@ DescribeDetectorModelAnalysisResponse::DescribeDetectorModelAnalysisResponse(
  */
 const DescribeDetectorModelAnalysisRequest * DescribeDetectorModelAnalysisResponse::request() const
 {
-    return static_cast<const DescribeDetectorModelAnalysisRequest *>(IoTEventsResponse::request());
+    Q_D(const DescribeDetectorModelAnalysisResponse);
+    return static_cast<const DescribeDetectorModelAnalysisRequest *>(d->request);
 }
 
 /*!

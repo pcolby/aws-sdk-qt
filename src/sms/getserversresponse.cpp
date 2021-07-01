@@ -68,7 +68,8 @@ GetServersResponse::GetServersResponse(
  */
 const GetServersRequest * GetServersResponse::request() const
 {
-    return static_cast<const GetServersRequest *>(SmsResponse::request());
+    Q_D(const GetServersResponse);
+    return static_cast<const GetServersRequest *>(d->request);
 }
 
 /*!

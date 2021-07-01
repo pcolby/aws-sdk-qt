@@ -73,7 +73,8 @@ CreateSampleFindingsResponse::CreateSampleFindingsResponse(
  */
 const CreateSampleFindingsRequest * CreateSampleFindingsResponse::request() const
 {
-    return static_cast<const CreateSampleFindingsRequest *>(GuardDutyResponse::request());
+    Q_D(const CreateSampleFindingsResponse);
+    return static_cast<const CreateSampleFindingsRequest *>(d->request);
 }
 
 /*!

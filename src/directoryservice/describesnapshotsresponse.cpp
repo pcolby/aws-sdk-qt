@@ -69,7 +69,8 @@ DescribeSnapshotsResponse::DescribeSnapshotsResponse(
  */
 const DescribeSnapshotsRequest * DescribeSnapshotsResponse::request() const
 {
-    return static_cast<const DescribeSnapshotsRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DescribeSnapshotsResponse);
+    return static_cast<const DescribeSnapshotsRequest *>(d->request);
 }
 
 /*!

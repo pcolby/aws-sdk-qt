@@ -119,7 +119,8 @@ RemoveRoleFromDBInstanceResponse::RemoveRoleFromDBInstanceResponse(
  */
 const RemoveRoleFromDBInstanceRequest * RemoveRoleFromDBInstanceResponse::request() const
 {
-    return static_cast<const RemoveRoleFromDBInstanceRequest *>(RdsResponse::request());
+    Q_D(const RemoveRoleFromDBInstanceResponse);
+    return static_cast<const RemoveRoleFromDBInstanceRequest *>(d->request);
 }
 
 /*!

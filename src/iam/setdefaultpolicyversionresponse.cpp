@@ -62,7 +62,8 @@ SetDefaultPolicyVersionResponse::SetDefaultPolicyVersionResponse(
  */
 const SetDefaultPolicyVersionRequest * SetDefaultPolicyVersionResponse::request() const
 {
-    return static_cast<const SetDefaultPolicyVersionRequest *>(IamResponse::request());
+    Q_D(const SetDefaultPolicyVersionResponse);
+    return static_cast<const SetDefaultPolicyVersionRequest *>(d->request);
 }
 
 /*!

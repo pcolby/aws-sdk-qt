@@ -20,20 +20,19 @@
 #ifndef QTAWS_APPLICATIONINSIGHTSCLIENT_P_H
 #define QTAWS_APPLICATIONINSIGHTSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ApplicationInsights {
 
 class ApplicationInsightsClient;
 
-class ApplicationInsightsClientPrivate {
+class ApplicationInsightsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ApplicationInsightsClientPrivate(ApplicationInsightsClient * const q);
-
-protected:
-    ApplicationInsightsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApplicationInsightsClient)

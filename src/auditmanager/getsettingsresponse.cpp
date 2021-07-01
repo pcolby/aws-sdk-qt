@@ -98,7 +98,8 @@ GetSettingsResponse::GetSettingsResponse(
  */
 const GetSettingsRequest * GetSettingsResponse::request() const
 {
-    return static_cast<const GetSettingsRequest *>(AuditManagerResponse::request());
+    Q_D(const GetSettingsResponse);
+    return static_cast<const GetSettingsRequest *>(d->request);
 }
 
 /*!

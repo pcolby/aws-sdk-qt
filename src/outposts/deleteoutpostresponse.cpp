@@ -59,7 +59,8 @@ DeleteOutpostResponse::DeleteOutpostResponse(
  */
 const DeleteOutpostRequest * DeleteOutpostResponse::request() const
 {
-    return static_cast<const DeleteOutpostRequest *>(OutpostsResponse::request());
+    Q_D(const DeleteOutpostResponse);
+    return static_cast<const DeleteOutpostRequest *>(d->request);
 }
 
 /*!

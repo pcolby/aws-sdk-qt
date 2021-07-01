@@ -56,7 +56,8 @@ DeleteSchemaVersionResponse::DeleteSchemaVersionResponse(
  */
 const DeleteSchemaVersionRequest * DeleteSchemaVersionResponse::request() const
 {
-    return static_cast<const DeleteSchemaVersionRequest *>(SchemasResponse::request());
+    Q_D(const DeleteSchemaVersionResponse);
+    return static_cast<const DeleteSchemaVersionRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,15 @@
 #ifndef QTAWS_QLDBSESSIONREQUEST_P_H
 #define QTAWS_QLDBSESSIONREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "qldbsessionrequest.h"
+
 namespace QtAws {
 namespace QLDBSession {
 
 class QLDBSessionRequest;
 
-class QLDBSessionRequestPrivate {
+class QLDBSessionRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     QLDBSessionRequest::Action action; ///< QLDBSession action to be performed.
@@ -36,9 +39,6 @@ public:
     QLDBSessionRequestPrivate(const QLDBSessionRequestPrivate &other, QLDBSessionRequest * const q);
 
     static QString toString(const QLDBSessionRequest::Action &action);
-
-protected:
-    QLDBSessionRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(QLDBSessionRequest)

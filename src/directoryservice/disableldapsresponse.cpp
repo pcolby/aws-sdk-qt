@@ -69,7 +69,8 @@ DisableLDAPSResponse::DisableLDAPSResponse(
  */
 const DisableLDAPSRequest * DisableLDAPSResponse::request() const
 {
-    return static_cast<const DisableLDAPSRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DisableLDAPSResponse);
+    return static_cast<const DisableLDAPSRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,14 @@
 #ifndef QTAWS_IOTDATAPLANERESPONSE_P_H
 #define QTAWS_IOTDATAPLANERESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace IoTDataPlane {
 
 class IoTDataPlaneResponse;
 
-class IoTDataPlaneResponsePrivate {
+class IoTDataPlaneResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    IoTDataPlaneResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTDataPlaneResponse)

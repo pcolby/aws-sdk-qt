@@ -98,7 +98,8 @@ GetParametersByPathResponse::GetParametersByPathResponse(
  */
 const GetParametersByPathRequest * GetParametersByPathResponse::request() const
 {
-    return static_cast<const GetParametersByPathRequest *>(SsmResponse::request());
+    Q_D(const GetParametersByPathResponse);
+    return static_cast<const GetParametersByPathRequest *>(d->request);
 }
 
 /*!

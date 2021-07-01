@@ -72,7 +72,8 @@ UpdateServicePrimaryTaskSetResponse::UpdateServicePrimaryTaskSetResponse(
  */
 const UpdateServicePrimaryTaskSetRequest * UpdateServicePrimaryTaskSetResponse::request() const
 {
-    return static_cast<const UpdateServicePrimaryTaskSetRequest *>(EcsResponse::request());
+    Q_D(const UpdateServicePrimaryTaskSetResponse);
+    return static_cast<const UpdateServicePrimaryTaskSetRequest *>(d->request);
 }
 
 /*!

@@ -76,7 +76,8 @@ ListApplicationDependenciesResponse::ListApplicationDependenciesResponse(
  */
 const ListApplicationDependenciesRequest * ListApplicationDependenciesResponse::request() const
 {
-    return static_cast<const ListApplicationDependenciesRequest *>(ServerlessApplicationRepositoryResponse::request());
+    Q_D(const ListApplicationDependenciesResponse);
+    return static_cast<const ListApplicationDependenciesRequest *>(d->request);
 }
 
 /*!

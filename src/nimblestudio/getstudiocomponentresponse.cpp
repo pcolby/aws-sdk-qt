@@ -55,7 +55,8 @@ GetStudioComponentResponse::GetStudioComponentResponse(
  */
 const GetStudioComponentRequest * GetStudioComponentResponse::request() const
 {
-    return static_cast<const GetStudioComponentRequest *>(NimbleStudioResponse::request());
+    Q_D(const GetStudioComponentResponse);
+    return static_cast<const GetStudioComponentRequest *>(d->request);
 }
 
 /*!

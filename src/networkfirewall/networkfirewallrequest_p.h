@@ -20,12 +20,15 @@
 #ifndef QTAWS_NETWORKFIREWALLREQUEST_P_H
 #define QTAWS_NETWORKFIREWALLREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "networkfirewallrequest.h"
+
 namespace QtAws {
 namespace NetworkFirewall {
 
 class NetworkFirewallRequest;
 
-class NetworkFirewallRequestPrivate {
+class NetworkFirewallRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     NetworkFirewallRequest::Action action; ///< NetworkFirewall action to be performed.
@@ -36,9 +39,6 @@ public:
     NetworkFirewallRequestPrivate(const NetworkFirewallRequestPrivate &other, NetworkFirewallRequest * const q);
 
     static QString toString(const NetworkFirewallRequest::Action &action);
-
-protected:
-    NetworkFirewallRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(NetworkFirewallRequest)

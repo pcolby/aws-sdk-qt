@@ -62,7 +62,8 @@ CreateTagsResponse::CreateTagsResponse(
  */
 const CreateTagsRequest * CreateTagsResponse::request() const
 {
-    return static_cast<const CreateTagsRequest *>(EfsResponse::request());
+    Q_D(const CreateTagsResponse);
+    return static_cast<const CreateTagsRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ CreateIpGroupResponse::CreateIpGroupResponse(
  */
 const CreateIpGroupRequest * CreateIpGroupResponse::request() const
 {
-    return static_cast<const CreateIpGroupRequest *>(WorkSpacesResponse::request());
+    Q_D(const CreateIpGroupResponse);
+    return static_cast<const CreateIpGroupRequest *>(d->request);
 }
 
 /*!

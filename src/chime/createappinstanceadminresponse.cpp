@@ -98,7 +98,8 @@ CreateAppInstanceAdminResponse::CreateAppInstanceAdminResponse(
  */
 const CreateAppInstanceAdminRequest * CreateAppInstanceAdminResponse::request() const
 {
-    return static_cast<const CreateAppInstanceAdminRequest *>(ChimeResponse::request());
+    Q_D(const CreateAppInstanceAdminResponse);
+    return static_cast<const CreateAppInstanceAdminRequest *>(d->request);
 }
 
 /*!

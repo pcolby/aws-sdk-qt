@@ -66,7 +66,8 @@ DescribeDomainEndpointOptionsResponse::DescribeDomainEndpointOptionsResponse(
  */
 const DescribeDomainEndpointOptionsRequest * DescribeDomainEndpointOptionsResponse::request() const
 {
-    return static_cast<const DescribeDomainEndpointOptionsRequest *>(CloudSearchResponse::request());
+    Q_D(const DescribeDomainEndpointOptionsResponse);
+    return static_cast<const DescribeDomainEndpointOptionsRequest *>(d->request);
 }
 
 /*!

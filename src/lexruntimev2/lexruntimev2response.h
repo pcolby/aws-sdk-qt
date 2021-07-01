@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    LexRuntimeV2ResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LexRuntimeV2Response(LexRuntimeV2ResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -119,7 +119,8 @@ RestoreDBClusterFromS3Response::RestoreDBClusterFromS3Response(
  */
 const RestoreDBClusterFromS3Request * RestoreDBClusterFromS3Response::request() const
 {
-    return static_cast<const RestoreDBClusterFromS3Request *>(RdsResponse::request());
+    Q_D(const RestoreDBClusterFromS3Response);
+    return static_cast<const RestoreDBClusterFromS3Request *>(d->request);
 }
 
 /*!

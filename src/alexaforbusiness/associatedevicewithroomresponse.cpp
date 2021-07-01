@@ -62,7 +62,8 @@ AssociateDeviceWithRoomResponse::AssociateDeviceWithRoomResponse(
  */
 const AssociateDeviceWithRoomRequest * AssociateDeviceWithRoomResponse::request() const
 {
-    return static_cast<const AssociateDeviceWithRoomRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const AssociateDeviceWithRoomResponse);
+    return static_cast<const AssociateDeviceWithRoomRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ GetMacieSessionResponse::GetMacieSessionResponse(
  */
 const GetMacieSessionRequest * GetMacieSessionResponse::request() const
 {
-    return static_cast<const GetMacieSessionRequest *>(Macie2Response::request());
+    Q_D(const GetMacieSessionResponse);
+    return static_cast<const GetMacieSessionRequest *>(d->request);
 }
 
 /*!

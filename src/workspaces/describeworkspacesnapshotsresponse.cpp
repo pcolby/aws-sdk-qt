@@ -58,7 +58,8 @@ DescribeWorkspaceSnapshotsResponse::DescribeWorkspaceSnapshotsResponse(
  */
 const DescribeWorkspaceSnapshotsRequest * DescribeWorkspaceSnapshotsResponse::request() const
 {
-    return static_cast<const DescribeWorkspaceSnapshotsRequest *>(WorkSpacesResponse::request());
+    Q_D(const DescribeWorkspaceSnapshotsResponse);
+    return static_cast<const DescribeWorkspaceSnapshotsRequest *>(d->request);
 }
 
 /*!

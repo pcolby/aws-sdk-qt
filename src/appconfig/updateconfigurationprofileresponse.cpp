@@ -105,7 +105,8 @@ UpdateConfigurationProfileResponse::UpdateConfigurationProfileResponse(
  */
 const UpdateConfigurationProfileRequest * UpdateConfigurationProfileResponse::request() const
 {
-    return static_cast<const UpdateConfigurationProfileRequest *>(AppConfigResponse::request());
+    Q_D(const UpdateConfigurationProfileResponse);
+    return static_cast<const UpdateConfigurationProfileRequest *>(d->request);
 }
 
 /*!

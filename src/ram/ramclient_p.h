@@ -20,20 +20,19 @@
 #ifndef QTAWS_RAMCLIENT_P_H
 #define QTAWS_RAMCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace RAM {
 
 class RamClient;
 
-class RamClientPrivate {
+class RamClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit RamClientPrivate(RamClient * const q);
-
-protected:
-    RamClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RamClient)

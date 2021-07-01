@@ -56,7 +56,8 @@ CancelDeploymentJobResponse::CancelDeploymentJobResponse(
  */
 const CancelDeploymentJobRequest * CancelDeploymentJobResponse::request() const
 {
-    return static_cast<const CancelDeploymentJobRequest *>(RoboMakerResponse::request());
+    Q_D(const CancelDeploymentJobResponse);
+    return static_cast<const CancelDeploymentJobRequest *>(d->request);
 }
 
 /*!

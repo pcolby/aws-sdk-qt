@@ -78,7 +78,8 @@ DescribeEventSourceResponse::DescribeEventSourceResponse(
  */
 const DescribeEventSourceRequest * DescribeEventSourceResponse::request() const
 {
-    return static_cast<const DescribeEventSourceRequest *>(EventBridgeResponse::request());
+    Q_D(const DescribeEventSourceResponse);
+    return static_cast<const DescribeEventSourceRequest *>(d->request);
 }
 
 /*!

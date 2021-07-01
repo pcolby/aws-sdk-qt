@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    SsooidcResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SsooidcResponse(SsooidcResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

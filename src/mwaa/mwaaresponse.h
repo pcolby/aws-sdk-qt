@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    MwaaResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MwaaResponse(MwaaResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

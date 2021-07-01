@@ -98,7 +98,8 @@ GetOpsMetadataResponse::GetOpsMetadataResponse(
  */
 const GetOpsMetadataRequest * GetOpsMetadataResponse::request() const
 {
-    return static_cast<const GetOpsMetadataRequest *>(SsmResponse::request());
+    Q_D(const GetOpsMetadataResponse);
+    return static_cast<const GetOpsMetadataRequest *>(d->request);
 }
 
 /*!

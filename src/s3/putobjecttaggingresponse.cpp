@@ -55,7 +55,8 @@ PutObjectTaggingResponse::PutObjectTaggingResponse(
  */
 const PutObjectTaggingRequest * PutObjectTaggingResponse::request() const
 {
-    return static_cast<const PutObjectTaggingRequest *>(S3Response::request());
+    Q_D(const PutObjectTaggingResponse);
+    return static_cast<const PutObjectTaggingRequest *>(d->request);
 }
 
 /*!

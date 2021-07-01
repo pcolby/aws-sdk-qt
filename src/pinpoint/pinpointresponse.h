@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    PinpointResponsePrivate * const d_ptr; ///< Internal d-pointer.
     PinpointResponse(PinpointResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

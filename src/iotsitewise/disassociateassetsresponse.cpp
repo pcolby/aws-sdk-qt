@@ -61,7 +61,8 @@ DisassociateAssetsResponse::DisassociateAssetsResponse(
  */
 const DisassociateAssetsRequest * DisassociateAssetsResponse::request() const
 {
-    return static_cast<const DisassociateAssetsRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const DisassociateAssetsResponse);
+    return static_cast<const DisassociateAssetsRequest *>(d->request);
 }
 
 /*!

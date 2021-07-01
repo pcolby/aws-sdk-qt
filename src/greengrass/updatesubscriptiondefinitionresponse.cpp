@@ -58,7 +58,8 @@ UpdateSubscriptionDefinitionResponse::UpdateSubscriptionDefinitionResponse(
  */
 const UpdateSubscriptionDefinitionRequest * UpdateSubscriptionDefinitionResponse::request() const
 {
-    return static_cast<const UpdateSubscriptionDefinitionRequest *>(GreengrassResponse::request());
+    Q_D(const UpdateSubscriptionDefinitionResponse);
+    return static_cast<const UpdateSubscriptionDefinitionRequest *>(d->request);
 }
 
 /*!

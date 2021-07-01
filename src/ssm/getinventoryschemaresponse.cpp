@@ -98,7 +98,8 @@ GetInventorySchemaResponse::GetInventorySchemaResponse(
  */
 const GetInventorySchemaRequest * GetInventorySchemaResponse::request() const
 {
-    return static_cast<const GetInventorySchemaRequest *>(SsmResponse::request());
+    Q_D(const GetInventorySchemaResponse);
+    return static_cast<const GetInventorySchemaRequest *>(d->request);
 }
 
 /*!

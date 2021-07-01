@@ -89,7 +89,7 @@ namespace GlobalAccelerator {
  * Constructs a GlobalAcceleratorRequest object for GlobalAccelerator \a action.
  */
 GlobalAcceleratorRequest::GlobalAcceleratorRequest(const Action action)
-    : d_ptr(new GlobalAcceleratorRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new GlobalAcceleratorRequestPrivate(action, this))
 {
 
 }
@@ -98,8 +98,7 @@ GlobalAcceleratorRequest::GlobalAcceleratorRequest(const Action action)
  * Constructs a copy of \a other.
  */
 GlobalAcceleratorRequest::GlobalAcceleratorRequest(const GlobalAcceleratorRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new GlobalAcceleratorRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new GlobalAcceleratorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -122,7 +121,7 @@ GlobalAcceleratorRequest& GlobalAcceleratorRequest::operator=(const GlobalAccele
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GlobalAcceleratorRequestPrivate.
  */
-GlobalAcceleratorRequest::GlobalAcceleratorRequest(GlobalAcceleratorRequestPrivate * const d) : d_ptr(d)
+GlobalAcceleratorRequest::GlobalAcceleratorRequest(GlobalAcceleratorRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -291,7 +290,7 @@ QNetworkRequest GlobalAcceleratorRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 GlobalAcceleratorRequestPrivate::GlobalAcceleratorRequestPrivate(const GlobalAcceleratorRequest::Action action, GlobalAcceleratorRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,8 +305,8 @@ GlobalAcceleratorRequestPrivate::GlobalAcceleratorRequestPrivate(const GlobalAcc
  */
 GlobalAcceleratorRequestPrivate::GlobalAcceleratorRequestPrivate(const GlobalAcceleratorRequestPrivate &other,
                                      GlobalAcceleratorRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

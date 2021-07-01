@@ -188,16 +188,16 @@ Route53Client::Route53Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2013-04-01"),
-    QStringLiteral("route53"),
-    QStringLiteral("Amazon Route 53"),
-    QStringLiteral("route53"),
-    parent), d_ptr(new Route53ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new Route53ClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(Route53Client);
+    d->apiVersion = QStringLiteral("2013-04-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("route53");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Route 53");
+    d->serviceName = QStringLiteral("route53");
 }
 
 /*!
@@ -216,16 +216,16 @@ Route53Client::Route53Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2013-04-01"),
-    QStringLiteral("route53"),
-    QStringLiteral("Amazon Route 53"),
-    QStringLiteral("route53"),
-    parent), d_ptr(new Route53ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new Route53ClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(Route53Client);
+    d->apiVersion = QStringLiteral("2013-04-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("route53");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Route 53");
+    d->serviceName = QStringLiteral("route53");
 }
 
 /*!
@@ -2031,9 +2031,10 @@ UpdateTrafficPolicyInstanceResponse * Route53Client::updateTrafficPolicyInstance
 /*!
  * Constructs a Route53ClientPrivate object with public implementation \a q.
  */
-Route53ClientPrivate::Route53ClientPrivate(Route53Client * const q) : q_ptr(q)
+Route53ClientPrivate::Route53ClientPrivate(Route53Client * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Route53

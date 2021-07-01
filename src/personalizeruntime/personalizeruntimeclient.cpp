@@ -63,16 +63,16 @@ PersonalizeRuntimeClient::PersonalizeRuntimeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-05-22"),
-    QStringLiteral("personalize-runtime"),
-    QStringLiteral("Amazon Personalize Runtime"),
-    QStringLiteral("personalize"),
-    parent), d_ptr(new PersonalizeRuntimeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new PersonalizeRuntimeClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(PersonalizeRuntimeClient);
+    d->apiVersion = QStringLiteral("2018-05-22");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("personalize-runtime");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Personalize Runtime");
+    d->serviceName = QStringLiteral("personalize");
 }
 
 /*!
@@ -91,16 +91,16 @@ PersonalizeRuntimeClient::PersonalizeRuntimeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-05-22"),
-    QStringLiteral("personalize-runtime"),
-    QStringLiteral("Amazon Personalize Runtime"),
-    QStringLiteral("personalize"),
-    parent), d_ptr(new PersonalizeRuntimeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new PersonalizeRuntimeClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(PersonalizeRuntimeClient);
+    d->apiVersion = QStringLiteral("2018-05-22");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("personalize-runtime");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Personalize Runtime");
+    d->serviceName = QStringLiteral("personalize");
 }
 
 /*!
@@ -159,9 +159,10 @@ GetRecommendationsResponse * PersonalizeRuntimeClient::getRecommendations(const 
 /*!
  * Constructs a PersonalizeRuntimeClientPrivate object with public implementation \a q.
  */
-PersonalizeRuntimeClientPrivate::PersonalizeRuntimeClientPrivate(PersonalizeRuntimeClient * const q) : q_ptr(q)
+PersonalizeRuntimeClientPrivate::PersonalizeRuntimeClientPrivate(PersonalizeRuntimeClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace PersonalizeRuntime

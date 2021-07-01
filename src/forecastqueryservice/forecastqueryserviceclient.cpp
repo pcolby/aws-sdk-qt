@@ -62,16 +62,16 @@ ForecastQueryServiceClient::ForecastQueryServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-06-26"),
-    QStringLiteral("forecastquery"),
-    QStringLiteral("Amazon Forecast Query Service"),
-    QStringLiteral("forecast"),
-    parent), d_ptr(new ForecastQueryServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ForecastQueryServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ForecastQueryServiceClient);
+    d->apiVersion = QStringLiteral("2018-06-26");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("forecastquery");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Forecast Query Service");
+    d->serviceName = QStringLiteral("forecast");
 }
 
 /*!
@@ -90,16 +90,16 @@ ForecastQueryServiceClient::ForecastQueryServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-06-26"),
-    QStringLiteral("forecastquery"),
-    QStringLiteral("Amazon Forecast Query Service"),
-    QStringLiteral("forecast"),
-    parent), d_ptr(new ForecastQueryServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ForecastQueryServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ForecastQueryServiceClient);
+    d->apiVersion = QStringLiteral("2018-06-26");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("forecastquery");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Forecast Query Service");
+    d->serviceName = QStringLiteral("forecast");
 }
 
 /*!
@@ -147,9 +147,10 @@ QueryForecastResponse * ForecastQueryServiceClient::queryForecast(const QueryFor
 /*!
  * Constructs a ForecastQueryServiceClientPrivate object with public implementation \a q.
  */
-ForecastQueryServiceClientPrivate::ForecastQueryServiceClientPrivate(ForecastQueryServiceClient * const q) : q_ptr(q)
+ForecastQueryServiceClientPrivate::ForecastQueryServiceClientPrivate(ForecastQueryServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ForecastQueryService

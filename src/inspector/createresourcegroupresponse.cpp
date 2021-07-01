@@ -60,7 +60,8 @@ CreateResourceGroupResponse::CreateResourceGroupResponse(
  */
 const CreateResourceGroupRequest * CreateResourceGroupResponse::request() const
 {
-    return static_cast<const CreateResourceGroupRequest *>(InspectorResponse::request());
+    Q_D(const CreateResourceGroupResponse);
+    return static_cast<const CreateResourceGroupRequest *>(d->request);
 }
 
 /*!

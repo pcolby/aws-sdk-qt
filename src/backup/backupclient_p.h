@@ -20,20 +20,19 @@
 #ifndef QTAWS_BACKUPCLIENT_P_H
 #define QTAWS_BACKUPCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Backup {
 
 class BackupClient;
 
-class BackupClientPrivate {
+class BackupClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit BackupClientPrivate(BackupClient * const q);
-
-protected:
-    BackupClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BackupClient)

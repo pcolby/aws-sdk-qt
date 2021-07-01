@@ -20,12 +20,15 @@
 #ifndef QTAWS_RAMREQUEST_P_H
 #define QTAWS_RAMREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "ramrequest.h"
+
 namespace QtAws {
 namespace RAM {
 
 class RamRequest;
 
-class RamRequestPrivate {
+class RamRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     RamRequest::Action action; ///< RAM action to be performed.
@@ -36,9 +39,6 @@ public:
     RamRequestPrivate(const RamRequestPrivate &other, RamRequest * const q);
 
     static QString toString(const RamRequest::Action &action);
-
-protected:
-    RamRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RamRequest)

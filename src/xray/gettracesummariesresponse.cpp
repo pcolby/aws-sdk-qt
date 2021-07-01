@@ -56,7 +56,8 @@ GetTraceSummariesResponse::GetTraceSummariesResponse(
  */
 const GetTraceSummariesRequest * GetTraceSummariesResponse::request() const
 {
-    return static_cast<const GetTraceSummariesRequest *>(XRayResponse::request());
+    Q_D(const GetTraceSummariesResponse);
+    return static_cast<const GetTraceSummariesRequest *>(d->request);
 }
 
 /*!

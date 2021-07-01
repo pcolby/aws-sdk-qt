@@ -37,7 +37,7 @@ namespace CodePipeline {
  * Constructs a CodePipelineResponse object with parent \a parent.
  */
 CodePipelineResponse::CodePipelineResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CodePipelineResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CodePipelineResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CodePipelineResponse::CodePipelineResponse(QObject * const parent)
  * implementation that inherits from CodePipelineResponsePrivate.
  */
 CodePipelineResponse::CodePipelineResponse(CodePipelineResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CodePipelineResponse::parseFailure(QIODevice &response)
  * Constructs a CodePipelineResponsePrivate object with public implementation \a q.
  */
 CodePipelineResponsePrivate::CodePipelineResponsePrivate(
-    CodePipelineResponse * const q) : q_ptr(q)
+    CodePipelineResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

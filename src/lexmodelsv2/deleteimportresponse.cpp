@@ -55,7 +55,8 @@ DeleteImportResponse::DeleteImportResponse(
  */
 const DeleteImportRequest * DeleteImportResponse::request() const
 {
-    return static_cast<const DeleteImportRequest *>(LexModelsV2Response::request());
+    Q_D(const DeleteImportResponse);
+    return static_cast<const DeleteImportRequest *>(d->request);
 }
 
 /*!

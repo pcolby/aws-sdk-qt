@@ -119,7 +119,8 @@ DeleteOptionGroupResponse::DeleteOptionGroupResponse(
  */
 const DeleteOptionGroupRequest * DeleteOptionGroupResponse::request() const
 {
-    return static_cast<const DeleteOptionGroupRequest *>(RdsResponse::request());
+    Q_D(const DeleteOptionGroupResponse);
+    return static_cast<const DeleteOptionGroupRequest *>(d->request);
 }
 
 /*!

@@ -137,7 +137,8 @@ DescribeScalableTargetsResponse::DescribeScalableTargetsResponse(
  */
 const DescribeScalableTargetsRequest * DescribeScalableTargetsResponse::request() const
 {
-    return static_cast<const DescribeScalableTargetsRequest *>(ApplicationAutoScalingResponse::request());
+    Q_D(const DescribeScalableTargetsResponse);
+    return static_cast<const DescribeScalableTargetsRequest *>(d->request);
 }
 
 /*!

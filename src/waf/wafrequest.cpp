@@ -119,7 +119,7 @@ namespace WAF {
  * Constructs a WafRequest object for WAF \a action.
  */
 WafRequest::WafRequest(const Action action)
-    : d_ptr(new WafRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new WafRequestPrivate(action, this))
 {
 
 }
@@ -128,8 +128,7 @@ WafRequest::WafRequest(const Action action)
  * Constructs a copy of \a other.
  */
 WafRequest::WafRequest(const WafRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new WafRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new WafRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -152,7 +151,7 @@ WafRequest& WafRequest::operator=(const WafRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WafRequestPrivate.
  */
-WafRequest::WafRequest(WafRequestPrivate * const d) : d_ptr(d)
+WafRequest::WafRequest(WafRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -321,7 +320,7 @@ QNetworkRequest WafRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 WafRequestPrivate::WafRequestPrivate(const WafRequest::Action action, WafRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -336,8 +335,8 @@ WafRequestPrivate::WafRequestPrivate(const WafRequest::Action action, WafRequest
  */
 WafRequestPrivate::WafRequestPrivate(const WafRequestPrivate &other,
                                      WafRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

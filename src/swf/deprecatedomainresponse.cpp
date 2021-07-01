@@ -71,7 +71,8 @@ DeprecateDomainResponse::DeprecateDomainResponse(
  */
 const DeprecateDomainRequest * DeprecateDomainResponse::request() const
 {
-    return static_cast<const DeprecateDomainRequest *>(SwfResponse::request());
+    Q_D(const DeprecateDomainResponse);
+    return static_cast<const DeprecateDomainRequest *>(d->request);
 }
 
 /*!

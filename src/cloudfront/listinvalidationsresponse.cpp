@@ -60,7 +60,8 @@ ListInvalidationsResponse::ListInvalidationsResponse(
  */
 const ListInvalidationsRequest * ListInvalidationsResponse::request() const
 {
-    return static_cast<const ListInvalidationsRequest *>(CloudFrontResponse::request());
+    Q_D(const ListInvalidationsResponse);
+    return static_cast<const ListInvalidationsRequest *>(d->request);
 }
 
 /*!

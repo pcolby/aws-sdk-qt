@@ -58,7 +58,8 @@ UpdateDetectorVersionMetadataResponse::UpdateDetectorVersionMetadataResponse(
  */
 const UpdateDetectorVersionMetadataRequest * UpdateDetectorVersionMetadataResponse::request() const
 {
-    return static_cast<const UpdateDetectorVersionMetadataRequest *>(FraudDetectorResponse::request());
+    Q_D(const UpdateDetectorVersionMetadataResponse);
+    return static_cast<const UpdateDetectorVersionMetadataRequest *>(d->request);
 }
 
 /*!

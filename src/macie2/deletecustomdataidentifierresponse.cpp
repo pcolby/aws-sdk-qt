@@ -60,7 +60,8 @@ DeleteCustomDataIdentifierResponse::DeleteCustomDataIdentifierResponse(
  */
 const DeleteCustomDataIdentifierRequest * DeleteCustomDataIdentifierResponse::request() const
 {
-    return static_cast<const DeleteCustomDataIdentifierRequest *>(Macie2Response::request());
+    Q_D(const DeleteCustomDataIdentifierResponse);
+    return static_cast<const DeleteCustomDataIdentifierRequest *>(d->request);
 }
 
 /*!

@@ -75,12 +75,6 @@ public slots:
     ListStatementsResponse * listStatements(const ListStatementsRequest &request);
     ListTablesResponse * listTables(const ListTablesRequest &request);
 
-protected:
-    /// @cond internal
-    RedshiftDataAPIServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit RedshiftDataAPIServiceClient(RedshiftDataAPIServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(RedshiftDataAPIServiceClient)
     Q_DISABLE_COPY(RedshiftDataAPIServiceClient)

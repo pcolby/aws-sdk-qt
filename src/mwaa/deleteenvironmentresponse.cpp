@@ -59,7 +59,8 @@ DeleteEnvironmentResponse::DeleteEnvironmentResponse(
  */
 const DeleteEnvironmentRequest * DeleteEnvironmentResponse::request() const
 {
-    return static_cast<const DeleteEnvironmentRequest *>(MwaaResponse::request());
+    Q_D(const DeleteEnvironmentResponse);
+    return static_cast<const DeleteEnvironmentRequest *>(d->request);
 }
 
 /*!

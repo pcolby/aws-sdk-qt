@@ -72,7 +72,8 @@ DescribeDomainAutoTunesResponse::DescribeDomainAutoTunesResponse(
  */
 const DescribeDomainAutoTunesRequest * DescribeDomainAutoTunesResponse::request() const
 {
-    return static_cast<const DescribeDomainAutoTunesRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const DescribeDomainAutoTunesResponse);
+    return static_cast<const DescribeDomainAutoTunesRequest *>(d->request);
 }
 
 /*!

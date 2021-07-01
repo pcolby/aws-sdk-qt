@@ -207,12 +207,6 @@ public slots:
     UpdateWorkspaceBundleResponse * updateWorkspaceBundle(const UpdateWorkspaceBundleRequest &request);
     UpdateWorkspaceImagePermissionResponse * updateWorkspaceImagePermission(const UpdateWorkspaceImagePermissionRequest &request);
 
-protected:
-    /// @cond internal
-    WorkSpacesClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit WorkSpacesClient(WorkSpacesClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(WorkSpacesClient)
     Q_DISABLE_COPY(WorkSpacesClient)

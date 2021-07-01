@@ -66,7 +66,8 @@ GetChannelScheduleResponse::GetChannelScheduleResponse(
  */
 const GetChannelScheduleRequest * GetChannelScheduleResponse::request() const
 {
-    return static_cast<const GetChannelScheduleRequest *>(MediaTailorResponse::request());
+    Q_D(const GetChannelScheduleResponse);
+    return static_cast<const GetChannelScheduleRequest *>(d->request);
 }
 
 /*!

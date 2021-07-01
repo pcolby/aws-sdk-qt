@@ -20,12 +20,15 @@
 #ifndef QTAWS_APPINTEGRATIONSSERVICEREQUEST_P_H
 #define QTAWS_APPINTEGRATIONSSERVICEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "appintegrationsservicerequest.h"
+
 namespace QtAws {
 namespace AppIntegrationsService {
 
 class AppIntegrationsServiceRequest;
 
-class AppIntegrationsServiceRequestPrivate {
+class AppIntegrationsServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppIntegrationsServiceRequest::Action action; ///< AppIntegrationsService action to be performed.
@@ -36,9 +39,6 @@ public:
     AppIntegrationsServiceRequestPrivate(const AppIntegrationsServiceRequestPrivate &other, AppIntegrationsServiceRequest * const q);
 
     static QString toString(const AppIntegrationsServiceRequest::Action &action);
-
-protected:
-    AppIntegrationsServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppIntegrationsServiceRequest)

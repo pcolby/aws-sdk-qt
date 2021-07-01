@@ -72,7 +72,8 @@ DescribePackagesResponse::DescribePackagesResponse(
  */
 const DescribePackagesRequest * DescribePackagesResponse::request() const
 {
-    return static_cast<const DescribePackagesRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const DescribePackagesResponse);
+    return static_cast<const DescribePackagesRequest *>(d->request);
 }
 
 /*!

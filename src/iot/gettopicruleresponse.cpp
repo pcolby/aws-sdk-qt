@@ -82,7 +82,8 @@ GetTopicRuleResponse::GetTopicRuleResponse(
  */
 const GetTopicRuleRequest * GetTopicRuleResponse::request() const
 {
-    return static_cast<const GetTopicRuleRequest *>(IoTResponse::request());
+    Q_D(const GetTopicRuleResponse);
+    return static_cast<const GetTopicRuleRequest *>(d->request);
 }
 
 /*!

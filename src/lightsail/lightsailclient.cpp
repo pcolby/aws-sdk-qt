@@ -362,16 +362,16 @@ LightsailClient::LightsailClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-11-28"),
-    QStringLiteral("lightsail"),
-    QStringLiteral("Amazon Lightsail"),
-    QStringLiteral("lightsail"),
-    parent), d_ptr(new LightsailClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LightsailClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LightsailClient);
+    d->apiVersion = QStringLiteral("2016-11-28");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("lightsail");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Lightsail");
+    d->serviceName = QStringLiteral("lightsail");
 }
 
 /*!
@@ -390,16 +390,16 @@ LightsailClient::LightsailClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-11-28"),
-    QStringLiteral("lightsail"),
-    QStringLiteral("Amazon Lightsail"),
-    QStringLiteral("lightsail"),
-    parent), d_ptr(new LightsailClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LightsailClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LightsailClient);
+    d->apiVersion = QStringLiteral("2016-11-28");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("lightsail");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Lightsail");
+    d->serviceName = QStringLiteral("lightsail");
 }
 
 /*!
@@ -3017,9 +3017,10 @@ UpdateRelationalDatabaseParametersResponse * LightsailClient::updateRelationalDa
 /*!
  * Constructs a LightsailClientPrivate object with public implementation \a q.
  */
-LightsailClientPrivate::LightsailClientPrivate(LightsailClient * const q) : q_ptr(q)
+LightsailClientPrivate::LightsailClientPrivate(LightsailClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Lightsail

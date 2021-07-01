@@ -75,7 +75,8 @@ UnsubscribeResponse::UnsubscribeResponse(
  */
 const UnsubscribeRequest * UnsubscribeResponse::request() const
 {
-    return static_cast<const UnsubscribeRequest *>(SnsResponse::request());
+    Q_D(const UnsubscribeResponse);
+    return static_cast<const UnsubscribeRequest *>(d->request);
 }
 
 /*!

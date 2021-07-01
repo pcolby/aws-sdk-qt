@@ -55,7 +55,8 @@ ListBucketIntelligentTieringConfigurationsResponse::ListBucketIntelligentTiering
  */
 const ListBucketIntelligentTieringConfigurationsRequest * ListBucketIntelligentTieringConfigurationsResponse::request() const
 {
-    return static_cast<const ListBucketIntelligentTieringConfigurationsRequest *>(S3Response::request());
+    Q_D(const ListBucketIntelligentTieringConfigurationsResponse);
+    return static_cast<const ListBucketIntelligentTieringConfigurationsRequest *>(d->request);
 }
 
 /*!

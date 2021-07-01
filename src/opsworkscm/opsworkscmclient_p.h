@@ -20,20 +20,19 @@
 #ifndef QTAWS_OPSWORKSCMCLIENT_P_H
 #define QTAWS_OPSWORKSCMCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace OpsWorksCM {
 
 class OpsWorksCMClient;
 
-class OpsWorksCMClientPrivate {
+class OpsWorksCMClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit OpsWorksCMClientPrivate(OpsWorksCMClient * const q);
-
-protected:
-    OpsWorksCMClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(OpsWorksCMClient)

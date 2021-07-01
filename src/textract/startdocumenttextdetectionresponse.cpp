@@ -57,7 +57,8 @@ StartDocumentTextDetectionResponse::StartDocumentTextDetectionResponse(
  */
 const StartDocumentTextDetectionRequest * StartDocumentTextDetectionResponse::request() const
 {
-    return static_cast<const StartDocumentTextDetectionRequest *>(TextractResponse::request());
+    Q_D(const StartDocumentTextDetectionResponse);
+    return static_cast<const StartDocumentTextDetectionRequest *>(d->request);
 }
 
 /*!

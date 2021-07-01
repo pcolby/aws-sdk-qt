@@ -56,7 +56,8 @@ GetBlockResponse::GetBlockResponse(
  */
 const GetBlockRequest * GetBlockResponse::request() const
 {
-    return static_cast<const GetBlockRequest *>(QldbResponse::request());
+    Q_D(const GetBlockResponse);
+    return static_cast<const GetBlockRequest *>(d->request);
 }
 
 /*!

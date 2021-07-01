@@ -91,7 +91,8 @@ SetVaultNotificationsResponse::SetVaultNotificationsResponse(
  */
 const SetVaultNotificationsRequest * SetVaultNotificationsResponse::request() const
 {
-    return static_cast<const SetVaultNotificationsRequest *>(GlacierResponse::request());
+    Q_D(const SetVaultNotificationsResponse);
+    return static_cast<const SetVaultNotificationsRequest *>(d->request);
 }
 
 /*!

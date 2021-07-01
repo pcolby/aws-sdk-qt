@@ -119,7 +119,8 @@ CreateDBSubnetGroupResponse::CreateDBSubnetGroupResponse(
  */
 const CreateDBSubnetGroupRequest * CreateDBSubnetGroupResponse::request() const
 {
-    return static_cast<const CreateDBSubnetGroupRequest *>(RdsResponse::request());
+    Q_D(const CreateDBSubnetGroupResponse);
+    return static_cast<const CreateDBSubnetGroupRequest *>(d->request);
 }
 
 /*!

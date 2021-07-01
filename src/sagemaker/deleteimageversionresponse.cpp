@@ -70,7 +70,8 @@ DeleteImageVersionResponse::DeleteImageVersionResponse(
  */
 const DeleteImageVersionRequest * DeleteImageVersionResponse::request() const
 {
-    return static_cast<const DeleteImageVersionRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteImageVersionResponse);
+    return static_cast<const DeleteImageVersionRequest *>(d->request);
 }
 
 /*!

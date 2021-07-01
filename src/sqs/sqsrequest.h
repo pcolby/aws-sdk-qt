@@ -78,8 +78,7 @@ public:
 
 protected:
     /// @cond internal
-    SqsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SqsRequest(SqsRequestPrivate * const d);
+    SqsRequest(SqsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

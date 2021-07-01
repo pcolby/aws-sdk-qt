@@ -56,7 +56,8 @@ CancelDomainTransferToAnotherAwsAccountResponse::CancelDomainTransferToAnotherAw
  */
 const CancelDomainTransferToAnotherAwsAccountRequest * CancelDomainTransferToAnotherAwsAccountResponse::request() const
 {
-    return static_cast<const CancelDomainTransferToAnotherAwsAccountRequest *>(Route53DomainsResponse::request());
+    Q_D(const CancelDomainTransferToAnotherAwsAccountResponse);
+    return static_cast<const CancelDomainTransferToAnotherAwsAccountRequest *>(d->request);
 }
 
 /*!

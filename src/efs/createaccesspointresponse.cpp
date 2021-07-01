@@ -62,7 +62,8 @@ CreateAccessPointResponse::CreateAccessPointResponse(
  */
 const CreateAccessPointRequest * CreateAccessPointResponse::request() const
 {
-    return static_cast<const CreateAccessPointRequest *>(EfsResponse::request());
+    Q_D(const CreateAccessPointResponse);
+    return static_cast<const CreateAccessPointRequest *>(d->request);
 }
 
 /*!

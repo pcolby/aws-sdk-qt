@@ -115,7 +115,8 @@ DescribeBuildResponse::DescribeBuildResponse(
  */
 const DescribeBuildRequest * DescribeBuildResponse::request() const
 {
-    return static_cast<const DescribeBuildRequest *>(GameLiftResponse::request());
+    Q_D(const DescribeBuildResponse);
+    return static_cast<const DescribeBuildRequest *>(d->request);
 }
 
 /*!

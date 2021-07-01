@@ -123,12 +123,6 @@ public slots:
     UpdatePresetResponse * updatePreset(const UpdatePresetRequest &request);
     UpdateQueueResponse * updateQueue(const UpdateQueueRequest &request);
 
-protected:
-    /// @cond internal
-    MediaConvertClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MediaConvertClient(MediaConvertClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MediaConvertClient)
     Q_DISABLE_COPY(MediaConvertClient)

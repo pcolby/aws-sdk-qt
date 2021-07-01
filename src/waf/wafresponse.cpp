@@ -37,7 +37,7 @@ namespace WAF {
  * Constructs a WafResponse object with parent \a parent.
  */
 WafResponse::WafResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new WafResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new WafResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ WafResponse::WafResponse(QObject * const parent)
  * implementation that inherits from WafResponsePrivate.
  */
 WafResponse::WafResponse(WafResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void WafResponse::parseFailure(QIODevice &response)
  * Constructs a WafResponsePrivate object with public implementation \a q.
  */
 WafResponsePrivate::WafResponsePrivate(
-    WafResponse * const q) : q_ptr(q)
+    WafResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

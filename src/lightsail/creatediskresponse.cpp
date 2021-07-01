@@ -74,7 +74,8 @@ CreateDiskResponse::CreateDiskResponse(
  */
 const CreateDiskRequest * CreateDiskResponse::request() const
 {
-    return static_cast<const CreateDiskRequest *>(LightsailResponse::request());
+    Q_D(const CreateDiskResponse);
+    return static_cast<const CreateDiskRequest *>(d->request);
 }
 
 /*!

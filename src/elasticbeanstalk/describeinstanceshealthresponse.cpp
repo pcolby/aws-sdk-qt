@@ -77,7 +77,8 @@ DescribeInstancesHealthResponse::DescribeInstancesHealthResponse(
  */
 const DescribeInstancesHealthRequest * DescribeInstancesHealthResponse::request() const
 {
-    return static_cast<const DescribeInstancesHealthRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const DescribeInstancesHealthResponse);
+    return static_cast<const DescribeInstancesHealthRequest *>(d->request);
 }
 
 /*!

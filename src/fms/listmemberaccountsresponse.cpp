@@ -67,7 +67,8 @@ ListMemberAccountsResponse::ListMemberAccountsResponse(
  */
 const ListMemberAccountsRequest * ListMemberAccountsResponse::request() const
 {
-    return static_cast<const ListMemberAccountsRequest *>(FmsResponse::request());
+    Q_D(const ListMemberAccountsResponse);
+    return static_cast<const ListMemberAccountsRequest *>(d->request);
 }
 
 /*!

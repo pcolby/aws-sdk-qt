@@ -87,7 +87,8 @@ ModifyAvailabilityZoneGroupResponse::ModifyAvailabilityZoneGroupResponse(
  */
 const ModifyAvailabilityZoneGroupRequest * ModifyAvailabilityZoneGroupResponse::request() const
 {
-    return static_cast<const ModifyAvailabilityZoneGroupRequest *>(Ec2Response::request());
+    Q_D(const ModifyAvailabilityZoneGroupResponse);
+    return static_cast<const ModifyAvailabilityZoneGroupRequest *>(d->request);
 }
 
 /*!

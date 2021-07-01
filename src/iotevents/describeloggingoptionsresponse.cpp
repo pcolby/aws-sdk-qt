@@ -58,7 +58,8 @@ DescribeLoggingOptionsResponse::DescribeLoggingOptionsResponse(
  */
 const DescribeLoggingOptionsRequest * DescribeLoggingOptionsResponse::request() const
 {
-    return static_cast<const DescribeLoggingOptionsRequest *>(IoTEventsResponse::request());
+    Q_D(const DescribeLoggingOptionsResponse);
+    return static_cast<const DescribeLoggingOptionsRequest *>(d->request);
 }
 
 /*!

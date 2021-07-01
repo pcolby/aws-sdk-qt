@@ -63,7 +63,8 @@ DescribeEntityResponse::DescribeEntityResponse(
  */
 const DescribeEntityRequest * DescribeEntityResponse::request() const
 {
-    return static_cast<const DescribeEntityRequest *>(MarketplaceCatalogResponse::request());
+    Q_D(const DescribeEntityResponse);
+    return static_cast<const DescribeEntityRequest *>(d->request);
 }
 
 /*!

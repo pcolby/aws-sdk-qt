@@ -55,7 +55,8 @@ UpdateLaunchProfileResponse::UpdateLaunchProfileResponse(
  */
 const UpdateLaunchProfileRequest * UpdateLaunchProfileResponse::request() const
 {
-    return static_cast<const UpdateLaunchProfileRequest *>(NimbleStudioResponse::request());
+    Q_D(const UpdateLaunchProfileResponse);
+    return static_cast<const UpdateLaunchProfileRequest *>(d->request);
 }
 
 /*!

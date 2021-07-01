@@ -75,7 +75,8 @@ GetDatasetContentResponse::GetDatasetContentResponse(
  */
 const GetDatasetContentRequest * GetDatasetContentResponse::request() const
 {
-    return static_cast<const GetDatasetContentRequest *>(IoTAnalyticsResponse::request());
+    Q_D(const GetDatasetContentResponse);
+    return static_cast<const GetDatasetContentRequest *>(d->request);
 }
 
 /*!

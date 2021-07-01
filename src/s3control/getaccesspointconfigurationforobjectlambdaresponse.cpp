@@ -56,7 +56,8 @@ GetAccessPointConfigurationForObjectLambdaResponse::GetAccessPointConfigurationF
  */
 const GetAccessPointConfigurationForObjectLambdaRequest * GetAccessPointConfigurationForObjectLambdaResponse::request() const
 {
-    return static_cast<const GetAccessPointConfigurationForObjectLambdaRequest *>(S3ControlResponse::request());
+    Q_D(const GetAccessPointConfigurationForObjectLambdaResponse);
+    return static_cast<const GetAccessPointConfigurationForObjectLambdaRequest *>(d->request);
 }
 
 /*!

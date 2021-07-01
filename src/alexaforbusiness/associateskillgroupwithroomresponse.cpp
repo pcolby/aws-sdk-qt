@@ -62,7 +62,8 @@ AssociateSkillGroupWithRoomResponse::AssociateSkillGroupWithRoomResponse(
  */
 const AssociateSkillGroupWithRoomRequest * AssociateSkillGroupWithRoomResponse::request() const
 {
-    return static_cast<const AssociateSkillGroupWithRoomRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const AssociateSkillGroupWithRoomResponse);
+    return static_cast<const AssociateSkillGroupWithRoomRequest *>(d->request);
 }
 
 /*!

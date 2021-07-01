@@ -141,7 +141,8 @@ ListOrganizationalUnitsForParentResponse::ListOrganizationalUnitsForParentRespon
  */
 const ListOrganizationalUnitsForParentRequest * ListOrganizationalUnitsForParentResponse::request() const
 {
-    return static_cast<const ListOrganizationalUnitsForParentRequest *>(OrganizationsResponse::request());
+    Q_D(const ListOrganizationalUnitsForParentResponse);
+    return static_cast<const ListOrganizationalUnitsForParentRequest *>(d->request);
 }
 
 /*!

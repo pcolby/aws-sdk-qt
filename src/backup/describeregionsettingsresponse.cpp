@@ -59,7 +59,8 @@ DescribeRegionSettingsResponse::DescribeRegionSettingsResponse(
  */
 const DescribeRegionSettingsRequest * DescribeRegionSettingsResponse::request() const
 {
-    return static_cast<const DescribeRegionSettingsRequest *>(BackupResponse::request());
+    Q_D(const DescribeRegionSettingsResponse);
+    return static_cast<const DescribeRegionSettingsRequest *>(d->request);
 }
 
 /*!

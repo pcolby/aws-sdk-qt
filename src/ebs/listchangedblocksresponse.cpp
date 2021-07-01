@@ -77,7 +77,8 @@ ListChangedBlocksResponse::ListChangedBlocksResponse(
  */
 const ListChangedBlocksRequest * ListChangedBlocksResponse::request() const
 {
-    return static_cast<const ListChangedBlocksRequest *>(EbsResponse::request());
+    Q_D(const ListChangedBlocksResponse);
+    return static_cast<const ListChangedBlocksRequest *>(d->request);
 }
 
 /*!

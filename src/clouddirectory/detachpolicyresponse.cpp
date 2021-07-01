@@ -63,7 +63,8 @@ DetachPolicyResponse::DetachPolicyResponse(
  */
 const DetachPolicyRequest * DetachPolicyResponse::request() const
 {
-    return static_cast<const DetachPolicyRequest *>(CloudDirectoryResponse::request());
+    Q_D(const DetachPolicyResponse);
+    return static_cast<const DetachPolicyRequest *>(d->request);
 }
 
 /*!

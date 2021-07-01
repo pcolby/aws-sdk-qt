@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    IvsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     IvsResponse(IvsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

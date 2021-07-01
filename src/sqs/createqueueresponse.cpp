@@ -126,7 +126,8 @@ CreateQueueResponse::CreateQueueResponse(
  */
 const CreateQueueRequest * CreateQueueResponse::request() const
 {
-    return static_cast<const CreateQueueRequest *>(SqsResponse::request());
+    Q_D(const CreateQueueResponse);
+    return static_cast<const CreateQueueRequest *>(d->request);
 }
 
 /*!

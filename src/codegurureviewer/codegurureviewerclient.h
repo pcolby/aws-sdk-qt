@@ -90,12 +90,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    CodeGuruReviewerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CodeGuruReviewerClient(CodeGuruReviewerClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(CodeGuruReviewerClient)
     Q_DISABLE_COPY(CodeGuruReviewerClient)

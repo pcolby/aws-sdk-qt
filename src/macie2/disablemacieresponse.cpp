@@ -60,7 +60,8 @@ DisableMacieResponse::DisableMacieResponse(
  */
 const DisableMacieRequest * DisableMacieResponse::request() const
 {
-    return static_cast<const DisableMacieRequest *>(Macie2Response::request());
+    Q_D(const DisableMacieResponse);
+    return static_cast<const DisableMacieRequest *>(d->request);
 }
 
 /*!

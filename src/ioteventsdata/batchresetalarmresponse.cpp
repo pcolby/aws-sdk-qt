@@ -64,7 +64,8 @@ BatchResetAlarmResponse::BatchResetAlarmResponse(
  */
 const BatchResetAlarmRequest * BatchResetAlarmResponse::request() const
 {
-    return static_cast<const BatchResetAlarmRequest *>(IoTEventsDataResponse::request());
+    Q_D(const BatchResetAlarmResponse);
+    return static_cast<const BatchResetAlarmRequest *>(d->request);
 }
 
 /*!

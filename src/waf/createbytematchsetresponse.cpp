@@ -76,7 +76,8 @@ CreateByteMatchSetResponse::CreateByteMatchSetResponse(
  */
 const CreateByteMatchSetRequest * CreateByteMatchSetResponse::request() const
 {
-    return static_cast<const CreateByteMatchSetRequest *>(WafResponse::request());
+    Q_D(const CreateByteMatchSetResponse);
+    return static_cast<const CreateByteMatchSetRequest *>(d->request);
 }
 
 /*!

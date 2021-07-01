@@ -56,7 +56,8 @@ GetEmailChannelResponse::GetEmailChannelResponse(
  */
 const GetEmailChannelRequest * GetEmailChannelResponse::request() const
 {
-    return static_cast<const GetEmailChannelRequest *>(PinpointResponse::request());
+    Q_D(const GetEmailChannelResponse);
+    return static_cast<const GetEmailChannelRequest *>(d->request);
 }
 
 /*!

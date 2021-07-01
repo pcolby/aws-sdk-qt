@@ -20,20 +20,19 @@
 #ifndef QTAWS_APPINTEGRATIONSSERVICECLIENT_P_H
 #define QTAWS_APPINTEGRATIONSSERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace AppIntegrationsService {
 
 class AppIntegrationsServiceClient;
 
-class AppIntegrationsServiceClientPrivate {
+class AppIntegrationsServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit AppIntegrationsServiceClientPrivate(AppIntegrationsServiceClient * const q);
-
-protected:
-    AppIntegrationsServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppIntegrationsServiceClient)

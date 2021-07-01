@@ -58,7 +58,8 @@ CreateResourceDefinitionVersionResponse::CreateResourceDefinitionVersionResponse
  */
 const CreateResourceDefinitionVersionRequest * CreateResourceDefinitionVersionResponse::request() const
 {
-    return static_cast<const CreateResourceDefinitionVersionRequest *>(GreengrassResponse::request());
+    Q_D(const CreateResourceDefinitionVersionResponse);
+    return static_cast<const CreateResourceDefinitionVersionRequest *>(d->request);
 }
 
 /*!

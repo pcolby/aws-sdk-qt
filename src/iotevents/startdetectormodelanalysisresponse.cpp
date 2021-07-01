@@ -58,7 +58,8 @@ StartDetectorModelAnalysisResponse::StartDetectorModelAnalysisResponse(
  */
 const StartDetectorModelAnalysisRequest * StartDetectorModelAnalysisResponse::request() const
 {
-    return static_cast<const StartDetectorModelAnalysisRequest *>(IoTEventsResponse::request());
+    Q_D(const StartDetectorModelAnalysisResponse);
+    return static_cast<const StartDetectorModelAnalysisRequest *>(d->request);
 }
 
 /*!

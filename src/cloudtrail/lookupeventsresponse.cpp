@@ -78,7 +78,8 @@ LookupEventsResponse::LookupEventsResponse(
  */
 const LookupEventsRequest * LookupEventsResponse::request() const
 {
-    return static_cast<const LookupEventsRequest *>(CloudTrailResponse::request());
+    Q_D(const LookupEventsResponse);
+    return static_cast<const LookupEventsRequest *>(d->request);
 }
 
 /*!

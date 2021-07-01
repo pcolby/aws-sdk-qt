@@ -85,7 +85,8 @@ DescribeStorageResponse::DescribeStorageResponse(
  */
 const DescribeStorageRequest * DescribeStorageResponse::request() const
 {
-    return static_cast<const DescribeStorageRequest *>(RedshiftResponse::request());
+    Q_D(const DescribeStorageResponse);
+    return static_cast<const DescribeStorageRequest *>(d->request);
 }
 
 /*!

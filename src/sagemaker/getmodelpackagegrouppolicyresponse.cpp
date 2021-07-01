@@ -70,7 +70,8 @@ GetModelPackageGroupPolicyResponse::GetModelPackageGroupPolicyResponse(
  */
 const GetModelPackageGroupPolicyRequest * GetModelPackageGroupPolicyResponse::request() const
 {
-    return static_cast<const GetModelPackageGroupPolicyRequest *>(SageMakerResponse::request());
+    Q_D(const GetModelPackageGroupPolicyResponse);
+    return static_cast<const GetModelPackageGroupPolicyRequest *>(d->request);
 }
 
 /*!

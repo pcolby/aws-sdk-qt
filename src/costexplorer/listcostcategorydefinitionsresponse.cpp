@@ -75,7 +75,8 @@ ListCostCategoryDefinitionsResponse::ListCostCategoryDefinitionsResponse(
  */
 const ListCostCategoryDefinitionsRequest * ListCostCategoryDefinitionsResponse::request() const
 {
-    return static_cast<const ListCostCategoryDefinitionsRequest *>(CostExplorerResponse::request());
+    Q_D(const ListCostCategoryDefinitionsResponse);
+    return static_cast<const ListCostCategoryDefinitionsRequest *>(d->request);
 }
 
 /*!

@@ -69,7 +69,8 @@ AddApplicationReferenceDataSourceResponse::AddApplicationReferenceDataSourceResp
  */
 const AddApplicationReferenceDataSourceRequest * AddApplicationReferenceDataSourceResponse::request() const
 {
-    return static_cast<const AddApplicationReferenceDataSourceRequest *>(KinesisAnalyticsResponse::request());
+    Q_D(const AddApplicationReferenceDataSourceResponse);
+    return static_cast<const AddApplicationReferenceDataSourceRequest *>(d->request);
 }
 
 /*!

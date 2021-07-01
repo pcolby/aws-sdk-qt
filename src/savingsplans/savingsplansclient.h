@@ -75,12 +75,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    SavingsPlansClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SavingsPlansClient(SavingsPlansClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SavingsPlansClient)
     Q_DISABLE_COPY(SavingsPlansClient)

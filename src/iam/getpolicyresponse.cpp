@@ -62,7 +62,8 @@ GetPolicyResponse::GetPolicyResponse(
  */
 const GetPolicyRequest * GetPolicyResponse::request() const
 {
-    return static_cast<const GetPolicyRequest *>(IamResponse::request());
+    Q_D(const GetPolicyResponse);
+    return static_cast<const GetPolicyRequest *>(d->request);
 }
 
 /*!

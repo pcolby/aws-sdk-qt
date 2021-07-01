@@ -70,7 +70,8 @@ StopHyperParameterTuningJobResponse::StopHyperParameterTuningJobResponse(
  */
 const StopHyperParameterTuningJobRequest * StopHyperParameterTuningJobResponse::request() const
 {
-    return static_cast<const StopHyperParameterTuningJobRequest *>(SageMakerResponse::request());
+    Q_D(const StopHyperParameterTuningJobResponse);
+    return static_cast<const StopHyperParameterTuningJobRequest *>(d->request);
 }
 
 /*!

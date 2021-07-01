@@ -61,7 +61,8 @@ UpdateConstraintResponse::UpdateConstraintResponse(
  */
 const UpdateConstraintRequest * UpdateConstraintResponse::request() const
 {
-    return static_cast<const UpdateConstraintRequest *>(ServiceCatalogResponse::request());
+    Q_D(const UpdateConstraintResponse);
+    return static_cast<const UpdateConstraintRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_WAFREGIONALCLIENT_P_H
 #define QTAWS_WAFREGIONALCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace WAFRegional {
 
 class WAFRegionalClient;
 
-class WAFRegionalClientPrivate {
+class WAFRegionalClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit WAFRegionalClientPrivate(WAFRegionalClient * const q);
-
-protected:
-    WAFRegionalClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WAFRegionalClient)

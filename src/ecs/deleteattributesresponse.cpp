@@ -72,7 +72,8 @@ DeleteAttributesResponse::DeleteAttributesResponse(
  */
 const DeleteAttributesRequest * DeleteAttributesResponse::request() const
 {
-    return static_cast<const DeleteAttributesRequest *>(EcsResponse::request());
+    Q_D(const DeleteAttributesResponse);
+    return static_cast<const DeleteAttributesRequest *>(d->request);
 }
 
 /*!

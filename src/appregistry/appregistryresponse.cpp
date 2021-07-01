@@ -37,7 +37,7 @@ namespace AppRegistry {
  * Constructs a AppRegistryResponse object with parent \a parent.
  */
 AppRegistryResponse::AppRegistryResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AppRegistryResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new AppRegistryResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ AppRegistryResponse::AppRegistryResponse(QObject * const parent)
  * implementation that inherits from AppRegistryResponsePrivate.
  */
 AppRegistryResponse::AppRegistryResponse(AppRegistryResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void AppRegistryResponse::parseFailure(QIODevice &response)
  * Constructs a AppRegistryResponsePrivate object with public implementation \a q.
  */
 AppRegistryResponsePrivate::AppRegistryResponsePrivate(
-    AppRegistryResponse * const q) : q_ptr(q)
+    AppRegistryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

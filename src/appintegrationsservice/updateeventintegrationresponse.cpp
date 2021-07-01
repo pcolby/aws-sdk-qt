@@ -66,7 +66,8 @@ UpdateEventIntegrationResponse::UpdateEventIntegrationResponse(
  */
 const UpdateEventIntegrationRequest * UpdateEventIntegrationResponse::request() const
 {
-    return static_cast<const UpdateEventIntegrationRequest *>(AppIntegrationsServiceResponse::request());
+    Q_D(const UpdateEventIntegrationResponse);
+    return static_cast<const UpdateEventIntegrationRequest *>(d->request);
 }
 
 /*!

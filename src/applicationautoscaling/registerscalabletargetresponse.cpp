@@ -137,7 +137,8 @@ RegisterScalableTargetResponse::RegisterScalableTargetResponse(
  */
 const RegisterScalableTargetRequest * RegisterScalableTargetResponse::request() const
 {
-    return static_cast<const RegisterScalableTargetRequest *>(ApplicationAutoScalingResponse::request());
+    Q_D(const RegisterScalableTargetResponse);
+    return static_cast<const RegisterScalableTargetRequest *>(d->request);
 }
 
 /*!

@@ -124,7 +124,8 @@ ListFileSharesResponse::ListFileSharesResponse(
  */
 const ListFileSharesRequest * ListFileSharesResponse::request() const
 {
-    return static_cast<const ListFileSharesRequest *>(StorageGatewayResponse::request());
+    Q_D(const ListFileSharesResponse);
+    return static_cast<const ListFileSharesRequest *>(d->request);
 }
 
 /*!

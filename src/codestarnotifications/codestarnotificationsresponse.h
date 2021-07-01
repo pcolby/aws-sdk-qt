@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    CodeStarNotificationsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CodeStarNotificationsResponse(CodeStarNotificationsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

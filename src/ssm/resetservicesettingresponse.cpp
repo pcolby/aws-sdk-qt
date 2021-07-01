@@ -98,7 +98,8 @@ ResetServiceSettingResponse::ResetServiceSettingResponse(
  */
 const ResetServiceSettingRequest * ResetServiceSettingResponse::request() const
 {
-    return static_cast<const ResetServiceSettingRequest *>(SsmResponse::request());
+    Q_D(const ResetServiceSettingResponse);
+    return static_cast<const ResetServiceSettingRequest *>(d->request);
 }
 
 /*!

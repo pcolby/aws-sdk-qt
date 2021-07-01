@@ -62,7 +62,8 @@ CreateInstanceProfileResponse::CreateInstanceProfileResponse(
  */
 const CreateInstanceProfileRequest * CreateInstanceProfileResponse::request() const
 {
-    return static_cast<const CreateInstanceProfileRequest *>(IamResponse::request());
+    Q_D(const CreateInstanceProfileResponse);
+    return static_cast<const CreateInstanceProfileRequest *>(d->request);
 }
 
 /*!

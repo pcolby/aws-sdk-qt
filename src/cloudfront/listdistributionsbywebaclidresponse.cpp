@@ -60,7 +60,8 @@ ListDistributionsByWebACLIdResponse::ListDistributionsByWebACLIdResponse(
  */
 const ListDistributionsByWebACLIdRequest * ListDistributionsByWebACLIdResponse::request() const
 {
-    return static_cast<const ListDistributionsByWebACLIdRequest *>(CloudFrontResponse::request());
+    Q_D(const ListDistributionsByWebACLIdResponse);
+    return static_cast<const ListDistributionsByWebACLIdRequest *>(d->request);
 }
 
 /*!

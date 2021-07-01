@@ -70,7 +70,8 @@ UpdateArtifactResponse::UpdateArtifactResponse(
  */
 const UpdateArtifactRequest * UpdateArtifactResponse::request() const
 {
-    return static_cast<const UpdateArtifactRequest *>(SageMakerResponse::request());
+    Q_D(const UpdateArtifactResponse);
+    return static_cast<const UpdateArtifactRequest *>(d->request);
 }
 
 /*!

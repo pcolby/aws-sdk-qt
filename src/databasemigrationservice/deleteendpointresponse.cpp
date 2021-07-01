@@ -66,7 +66,8 @@ DeleteEndpointResponse::DeleteEndpointResponse(
  */
 const DeleteEndpointRequest * DeleteEndpointResponse::request() const
 {
-    return static_cast<const DeleteEndpointRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const DeleteEndpointResponse);
+    return static_cast<const DeleteEndpointRequest *>(d->request);
 }
 
 /*!

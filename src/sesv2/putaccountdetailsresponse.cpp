@@ -88,7 +88,8 @@ PutAccountDetailsResponse::PutAccountDetailsResponse(
  */
 const PutAccountDetailsRequest * PutAccountDetailsResponse::request() const
 {
-    return static_cast<const PutAccountDetailsRequest *>(Sesv2Response::request());
+    Q_D(const PutAccountDetailsResponse);
+    return static_cast<const PutAccountDetailsRequest *>(d->request);
 }
 
 /*!

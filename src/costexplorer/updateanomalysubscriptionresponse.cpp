@@ -75,7 +75,8 @@ UpdateAnomalySubscriptionResponse::UpdateAnomalySubscriptionResponse(
  */
 const UpdateAnomalySubscriptionRequest * UpdateAnomalySubscriptionResponse::request() const
 {
-    return static_cast<const UpdateAnomalySubscriptionRequest *>(CostExplorerResponse::request());
+    Q_D(const UpdateAnomalySubscriptionResponse);
+    return static_cast<const UpdateAnomalySubscriptionRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ DeleteDatasetImportJobResponse::DeleteDatasetImportJobResponse(
  */
 const DeleteDatasetImportJobRequest * DeleteDatasetImportJobResponse::request() const
 {
-    return static_cast<const DeleteDatasetImportJobRequest *>(ForecastServiceResponse::request());
+    Q_D(const DeleteDatasetImportJobResponse);
+    return static_cast<const DeleteDatasetImportJobRequest *>(d->request);
 }
 
 /*!

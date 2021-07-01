@@ -72,7 +72,8 @@ RemoveRoleFromDBClusterResponse::RemoveRoleFromDBClusterResponse(
  */
 const RemoveRoleFromDBClusterRequest * RemoveRoleFromDBClusterResponse::request() const
 {
-    return static_cast<const RemoveRoleFromDBClusterRequest *>(NeptuneResponse::request());
+    Q_D(const RemoveRoleFromDBClusterResponse);
+    return static_cast<const RemoveRoleFromDBClusterRequest *>(d->request);
 }
 
 /*!

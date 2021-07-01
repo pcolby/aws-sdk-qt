@@ -56,7 +56,8 @@ GetBucketResponse::GetBucketResponse(
  */
 const GetBucketRequest * GetBucketResponse::request() const
 {
-    return static_cast<const GetBucketRequest *>(S3ControlResponse::request());
+    Q_D(const GetBucketResponse);
+    return static_cast<const GetBucketRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ GetDetectorsResponse::GetDetectorsResponse(
  */
 const GetDetectorsRequest * GetDetectorsResponse::request() const
 {
-    return static_cast<const GetDetectorsRequest *>(FraudDetectorResponse::request());
+    Q_D(const GetDetectorsResponse);
+    return static_cast<const GetDetectorsRequest *>(d->request);
 }
 
 /*!

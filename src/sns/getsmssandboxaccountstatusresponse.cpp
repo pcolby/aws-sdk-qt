@@ -75,7 +75,8 @@ GetSMSSandboxAccountStatusResponse::GetSMSSandboxAccountStatusResponse(
  */
 const GetSMSSandboxAccountStatusRequest * GetSMSSandboxAccountStatusResponse::request() const
 {
-    return static_cast<const GetSMSSandboxAccountStatusRequest *>(SnsResponse::request());
+    Q_D(const GetSMSSandboxAccountStatusResponse);
+    return static_cast<const GetSMSSandboxAccountStatusRequest *>(d->request);
 }
 
 /*!

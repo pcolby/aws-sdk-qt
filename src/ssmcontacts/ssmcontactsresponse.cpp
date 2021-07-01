@@ -37,7 +37,7 @@ namespace SSMContacts {
  * Constructs a SSMContactsResponse object with parent \a parent.
  */
 SSMContactsResponse::SSMContactsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SSMContactsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SSMContactsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SSMContactsResponse::SSMContactsResponse(QObject * const parent)
  * implementation that inherits from SSMContactsResponsePrivate.
  */
 SSMContactsResponse::SSMContactsResponse(SSMContactsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SSMContactsResponse::parseFailure(QIODevice &response)
  * Constructs a SSMContactsResponsePrivate object with public implementation \a q.
  */
 SSMContactsResponsePrivate::SSMContactsResponsePrivate(
-    SSMContactsResponse * const q) : q_ptr(q)
+    SSMContactsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

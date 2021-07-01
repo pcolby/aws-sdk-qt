@@ -60,7 +60,8 @@ GetBucketStatisticsResponse::GetBucketStatisticsResponse(
  */
 const GetBucketStatisticsRequest * GetBucketStatisticsResponse::request() const
 {
-    return static_cast<const GetBucketStatisticsRequest *>(Macie2Response::request());
+    Q_D(const GetBucketStatisticsResponse);
+    return static_cast<const GetBucketStatisticsRequest *>(d->request);
 }
 
 /*!

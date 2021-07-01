@@ -56,7 +56,8 @@ DescribeStreamProcessorResponse::DescribeStreamProcessorResponse(
  */
 const DescribeStreamProcessorRequest * DescribeStreamProcessorResponse::request() const
 {
-    return static_cast<const DescribeStreamProcessorRequest *>(RekognitionResponse::request());
+    Q_D(const DescribeStreamProcessorResponse);
+    return static_cast<const DescribeStreamProcessorRequest *>(d->request);
 }
 
 /*!

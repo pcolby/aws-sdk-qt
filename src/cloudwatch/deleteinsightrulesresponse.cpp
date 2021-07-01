@@ -69,7 +69,8 @@ DeleteInsightRulesResponse::DeleteInsightRulesResponse(
  */
 const DeleteInsightRulesRequest * DeleteInsightRulesResponse::request() const
 {
-    return static_cast<const DeleteInsightRulesRequest *>(CloudWatchResponse::request());
+    Q_D(const DeleteInsightRulesResponse);
+    return static_cast<const DeleteInsightRulesRequest *>(d->request);
 }
 
 /*!

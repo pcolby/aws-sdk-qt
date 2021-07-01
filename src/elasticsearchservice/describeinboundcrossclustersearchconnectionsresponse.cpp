@@ -72,7 +72,8 @@ DescribeInboundCrossClusterSearchConnectionsResponse::DescribeInboundCrossCluste
  */
 const DescribeInboundCrossClusterSearchConnectionsRequest * DescribeInboundCrossClusterSearchConnectionsResponse::request() const
 {
-    return static_cast<const DescribeInboundCrossClusterSearchConnectionsRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const DescribeInboundCrossClusterSearchConnectionsResponse);
+    return static_cast<const DescribeInboundCrossClusterSearchConnectionsRequest *>(d->request);
 }
 
 /*!

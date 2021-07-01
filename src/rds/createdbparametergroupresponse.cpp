@@ -119,7 +119,8 @@ CreateDBParameterGroupResponse::CreateDBParameterGroupResponse(
  */
 const CreateDBParameterGroupRequest * CreateDBParameterGroupResponse::request() const
 {
-    return static_cast<const CreateDBParameterGroupRequest *>(RdsResponse::request());
+    Q_D(const CreateDBParameterGroupResponse);
+    return static_cast<const CreateDBParameterGroupRequest *>(d->request);
 }
 
 /*!

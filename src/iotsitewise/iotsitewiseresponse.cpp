@@ -37,7 +37,7 @@ namespace IoTSiteWise {
  * Constructs a IoTSiteWiseResponse object with parent \a parent.
  */
 IoTSiteWiseResponse::IoTSiteWiseResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTSiteWiseResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new IoTSiteWiseResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ IoTSiteWiseResponse::IoTSiteWiseResponse(QObject * const parent)
  * implementation that inherits from IoTSiteWiseResponsePrivate.
  */
 IoTSiteWiseResponse::IoTSiteWiseResponse(IoTSiteWiseResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTSiteWiseResponse::parseFailure(QIODevice &response)
  * Constructs a IoTSiteWiseResponsePrivate object with public implementation \a q.
  */
 IoTSiteWiseResponsePrivate::IoTSiteWiseResponsePrivate(
-    IoTSiteWiseResponse * const q) : q_ptr(q)
+    IoTSiteWiseResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

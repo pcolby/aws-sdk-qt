@@ -84,7 +84,8 @@ DeleteSubscriptionFilterResponse::DeleteSubscriptionFilterResponse(
  */
 const DeleteSubscriptionFilterRequest * DeleteSubscriptionFilterResponse::request() const
 {
-    return static_cast<const DeleteSubscriptionFilterRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const DeleteSubscriptionFilterResponse);
+    return static_cast<const DeleteSubscriptionFilterRequest *>(d->request);
 }
 
 /*!

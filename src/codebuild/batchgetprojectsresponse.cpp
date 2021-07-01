@@ -64,7 +64,8 @@ BatchGetProjectsResponse::BatchGetProjectsResponse(
  */
 const BatchGetProjectsRequest * BatchGetProjectsResponse::request() const
 {
-    return static_cast<const BatchGetProjectsRequest *>(CodeBuildResponse::request());
+    Q_D(const BatchGetProjectsResponse);
+    return static_cast<const BatchGetProjectsRequest *>(d->request);
 }
 
 /*!

@@ -131,7 +131,8 @@ UpdateSecretVersionStageResponse::UpdateSecretVersionStageResponse(
  */
 const UpdateSecretVersionStageRequest * UpdateSecretVersionStageResponse::request() const
 {
-    return static_cast<const UpdateSecretVersionStageRequest *>(SecretsManagerResponse::request());
+    Q_D(const UpdateSecretVersionStageResponse);
+    return static_cast<const UpdateSecretVersionStageRequest *>(d->request);
 }
 
 /*!

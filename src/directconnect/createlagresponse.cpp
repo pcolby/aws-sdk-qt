@@ -61,7 +61,8 @@ CreateLagResponse::CreateLagResponse(
  */
 const CreateLagRequest * CreateLagResponse::request() const
 {
-    return static_cast<const CreateLagRequest *>(DirectConnectResponse::request());
+    Q_D(const CreateLagResponse);
+    return static_cast<const CreateLagRequest *>(d->request);
 }
 
 /*!

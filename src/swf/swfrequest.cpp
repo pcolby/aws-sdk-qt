@@ -79,7 +79,7 @@ namespace SWF {
  * Constructs a SwfRequest object for SWF \a action.
  */
 SwfRequest::SwfRequest(const Action action)
-    : d_ptr(new SwfRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SwfRequestPrivate(action, this))
 {
 
 }
@@ -88,8 +88,7 @@ SwfRequest::SwfRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SwfRequest::SwfRequest(const SwfRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new SwfRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SwfRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +111,7 @@ SwfRequest& SwfRequest::operator=(const SwfRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SwfRequestPrivate.
  */
-SwfRequest::SwfRequest(SwfRequestPrivate * const d) : d_ptr(d)
+SwfRequest::SwfRequest(SwfRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -281,7 +280,7 @@ QNetworkRequest SwfRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SwfRequestPrivate::SwfRequestPrivate(const SwfRequest::Action action, SwfRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -296,8 +295,8 @@ SwfRequestPrivate::SwfRequestPrivate(const SwfRequest::Action action, SwfRequest
  */
 SwfRequestPrivate::SwfRequestPrivate(const SwfRequestPrivate &other,
                                      SwfRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

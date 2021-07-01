@@ -57,7 +57,8 @@ DescribeConfigurationRevisionResponse::DescribeConfigurationRevisionResponse(
  */
 const DescribeConfigurationRevisionRequest * DescribeConfigurationRevisionResponse::request() const
 {
-    return static_cast<const DescribeConfigurationRevisionRequest *>(MqResponse::request());
+    Q_D(const DescribeConfigurationRevisionResponse);
+    return static_cast<const DescribeConfigurationRevisionRequest *>(d->request);
 }
 
 /*!

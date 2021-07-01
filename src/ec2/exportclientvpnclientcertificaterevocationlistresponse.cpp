@@ -87,7 +87,8 @@ ExportClientVpnClientCertificateRevocationListResponse::ExportClientVpnClientCer
  */
 const ExportClientVpnClientCertificateRevocationListRequest * ExportClientVpnClientCertificateRevocationListResponse::request() const
 {
-    return static_cast<const ExportClientVpnClientCertificateRevocationListRequest *>(Ec2Response::request());
+    Q_D(const ExportClientVpnClientCertificateRevocationListResponse);
+    return static_cast<const ExportClientVpnClientCertificateRevocationListRequest *>(d->request);
 }
 
 /*!

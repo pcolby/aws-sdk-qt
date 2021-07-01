@@ -89,7 +89,8 @@ PutAccessControlRuleResponse::PutAccessControlRuleResponse(
  */
 const PutAccessControlRuleRequest * PutAccessControlRuleResponse::request() const
 {
-    return static_cast<const PutAccessControlRuleRequest *>(WorkMailResponse::request());
+    Q_D(const PutAccessControlRuleResponse);
+    return static_cast<const PutAccessControlRuleRequest *>(d->request);
 }
 
 /*!

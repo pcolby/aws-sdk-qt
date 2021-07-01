@@ -58,7 +58,8 @@ GetMLTaskRunsResponse::GetMLTaskRunsResponse(
  */
 const GetMLTaskRunsRequest * GetMLTaskRunsResponse::request() const
 {
-    return static_cast<const GetMLTaskRunsRequest *>(GlueResponse::request());
+    Q_D(const GetMLTaskRunsResponse);
+    return static_cast<const GetMLTaskRunsRequest *>(d->request);
 }
 
 /*!

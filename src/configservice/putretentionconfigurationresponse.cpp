@@ -75,7 +75,8 @@ PutRetentionConfigurationResponse::PutRetentionConfigurationResponse(
  */
 const PutRetentionConfigurationRequest * PutRetentionConfigurationResponse::request() const
 {
-    return static_cast<const PutRetentionConfigurationRequest *>(ConfigServiceResponse::request());
+    Q_D(const PutRetentionConfigurationResponse);
+    return static_cast<const PutRetentionConfigurationRequest *>(d->request);
 }
 
 /*!

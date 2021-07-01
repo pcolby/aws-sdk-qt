@@ -60,7 +60,8 @@ TestFunctionResponse::TestFunctionResponse(
  */
 const TestFunctionRequest * TestFunctionResponse::request() const
 {
-    return static_cast<const TestFunctionRequest *>(CloudFrontResponse::request());
+    Q_D(const TestFunctionResponse);
+    return static_cast<const TestFunctionRequest *>(d->request);
 }
 
 /*!

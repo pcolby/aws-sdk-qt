@@ -66,7 +66,8 @@ DefineIndexFieldResponse::DefineIndexFieldResponse(
  */
 const DefineIndexFieldRequest * DefineIndexFieldResponse::request() const
 {
-    return static_cast<const DefineIndexFieldRequest *>(CloudSearchResponse::request());
+    Q_D(const DefineIndexFieldResponse);
+    return static_cast<const DefineIndexFieldRequest *>(d->request);
 }
 
 /*!

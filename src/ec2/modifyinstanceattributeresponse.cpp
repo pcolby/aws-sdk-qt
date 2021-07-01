@@ -87,7 +87,8 @@ ModifyInstanceAttributeResponse::ModifyInstanceAttributeResponse(
  */
 const ModifyInstanceAttributeRequest * ModifyInstanceAttributeResponse::request() const
 {
-    return static_cast<const ModifyInstanceAttributeRequest *>(Ec2Response::request());
+    Q_D(const ModifyInstanceAttributeResponse);
+    return static_cast<const ModifyInstanceAttributeRequest *>(d->request);
 }
 
 /*!

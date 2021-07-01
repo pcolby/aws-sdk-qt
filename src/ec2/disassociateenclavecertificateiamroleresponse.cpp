@@ -87,7 +87,8 @@ DisassociateEnclaveCertificateIamRoleResponse::DisassociateEnclaveCertificateIam
  */
 const DisassociateEnclaveCertificateIamRoleRequest * DisassociateEnclaveCertificateIamRoleResponse::request() const
 {
-    return static_cast<const DisassociateEnclaveCertificateIamRoleRequest *>(Ec2Response::request());
+    Q_D(const DisassociateEnclaveCertificateIamRoleResponse);
+    return static_cast<const DisassociateEnclaveCertificateIamRoleRequest *>(d->request);
 }
 
 /*!

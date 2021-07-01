@@ -85,7 +85,8 @@ DeletePartnerResponse::DeletePartnerResponse(
  */
 const DeletePartnerRequest * DeletePartnerResponse::request() const
 {
-    return static_cast<const DeletePartnerRequest *>(RedshiftResponse::request());
+    Q_D(const DeletePartnerResponse);
+    return static_cast<const DeletePartnerRequest *>(d->request);
 }
 
 /*!

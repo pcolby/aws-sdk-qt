@@ -58,7 +58,8 @@ DeleteStudioSessionMappingResponse::DeleteStudioSessionMappingResponse(
  */
 const DeleteStudioSessionMappingRequest * DeleteStudioSessionMappingResponse::request() const
 {
-    return static_cast<const DeleteStudioSessionMappingRequest *>(EmrResponse::request());
+    Q_D(const DeleteStudioSessionMappingResponse);
+    return static_cast<const DeleteStudioSessionMappingRequest *>(d->request);
 }
 
 /*!

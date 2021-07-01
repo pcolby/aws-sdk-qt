@@ -88,7 +88,8 @@ CreateEmailTemplateResponse::CreateEmailTemplateResponse(
  */
 const CreateEmailTemplateRequest * CreateEmailTemplateResponse::request() const
 {
-    return static_cast<const CreateEmailTemplateRequest *>(Sesv2Response::request());
+    Q_D(const CreateEmailTemplateResponse);
+    return static_cast<const CreateEmailTemplateRequest *>(d->request);
 }
 
 /*!

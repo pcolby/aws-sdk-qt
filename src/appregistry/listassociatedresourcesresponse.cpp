@@ -58,7 +58,8 @@ ListAssociatedResourcesResponse::ListAssociatedResourcesResponse(
  */
 const ListAssociatedResourcesRequest * ListAssociatedResourcesResponse::request() const
 {
-    return static_cast<const ListAssociatedResourcesRequest *>(AppRegistryResponse::request());
+    Q_D(const ListAssociatedResourcesResponse);
+    return static_cast<const ListAssociatedResourcesRequest *>(d->request);
 }
 
 /*!

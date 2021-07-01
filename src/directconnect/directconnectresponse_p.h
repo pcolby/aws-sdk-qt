@@ -20,12 +20,14 @@
 #ifndef QTAWS_DIRECTCONNECTRESPONSE_P_H
 #define QTAWS_DIRECTCONNECTRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace DirectConnect {
 
 class DirectConnectResponse;
 
-class DirectConnectResponsePrivate {
+class DirectConnectResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    DirectConnectResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DirectConnectResponse)

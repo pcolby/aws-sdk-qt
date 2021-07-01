@@ -56,7 +56,8 @@ GetQuantumTaskResponse::GetQuantumTaskResponse(
  */
 const GetQuantumTaskRequest * GetQuantumTaskResponse::request() const
 {
-    return static_cast<const GetQuantumTaskRequest *>(BraketResponse::request());
+    Q_D(const GetQuantumTaskResponse);
+    return static_cast<const GetQuantumTaskRequest *>(d->request);
 }
 
 /*!

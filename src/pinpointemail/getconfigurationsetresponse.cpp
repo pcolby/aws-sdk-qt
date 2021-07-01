@@ -92,7 +92,8 @@ GetConfigurationSetResponse::GetConfigurationSetResponse(
  */
 const GetConfigurationSetRequest * GetConfigurationSetResponse::request() const
 {
-    return static_cast<const GetConfigurationSetRequest *>(PinpointEmailResponse::request());
+    Q_D(const GetConfigurationSetResponse);
+    return static_cast<const GetConfigurationSetRequest *>(d->request);
 }
 
 /*!

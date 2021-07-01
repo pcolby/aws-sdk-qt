@@ -60,7 +60,8 @@ ListCustomDataIdentifiersResponse::ListCustomDataIdentifiersResponse(
  */
 const ListCustomDataIdentifiersRequest * ListCustomDataIdentifiersResponse::request() const
 {
-    return static_cast<const ListCustomDataIdentifiersRequest *>(Macie2Response::request());
+    Q_D(const ListCustomDataIdentifiersResponse);
+    return static_cast<const ListCustomDataIdentifiersRequest *>(d->request);
 }
 
 /*!

@@ -439,7 +439,8 @@ BatchGetCommitsResponse::BatchGetCommitsResponse(
  */
 const BatchGetCommitsRequest * BatchGetCommitsResponse::request() const
 {
-    return static_cast<const BatchGetCommitsRequest *>(CodeCommitResponse::request());
+    Q_D(const BatchGetCommitsResponse);
+    return static_cast<const BatchGetCommitsRequest *>(d->request);
 }
 
 /*!

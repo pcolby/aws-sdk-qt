@@ -66,7 +66,8 @@ ListFlowExecutionMessagesResponse::ListFlowExecutionMessagesResponse(
  */
 const ListFlowExecutionMessagesRequest * ListFlowExecutionMessagesResponse::request() const
 {
-    return static_cast<const ListFlowExecutionMessagesRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const ListFlowExecutionMessagesResponse);
+    return static_cast<const ListFlowExecutionMessagesRequest *>(d->request);
 }
 
 /*!

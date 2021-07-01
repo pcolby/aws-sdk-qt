@@ -61,7 +61,8 @@ DeleteBGPPeerResponse::DeleteBGPPeerResponse(
  */
 const DeleteBGPPeerRequest * DeleteBGPPeerResponse::request() const
 {
-    return static_cast<const DeleteBGPPeerRequest *>(DirectConnectResponse::request());
+    Q_D(const DeleteBGPPeerResponse);
+    return static_cast<const DeleteBGPPeerRequest *>(d->request);
 }
 
 /*!

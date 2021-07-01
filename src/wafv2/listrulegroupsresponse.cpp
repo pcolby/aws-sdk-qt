@@ -126,7 +126,8 @@ ListRuleGroupsResponse::ListRuleGroupsResponse(
  */
 const ListRuleGroupsRequest * ListRuleGroupsResponse::request() const
 {
-    return static_cast<const ListRuleGroupsRequest *>(Wafv2Response::request());
+    Q_D(const ListRuleGroupsResponse);
+    return static_cast<const ListRuleGroupsRequest *>(d->request);
 }
 
 /*!

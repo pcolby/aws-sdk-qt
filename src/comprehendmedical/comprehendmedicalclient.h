@@ -111,12 +111,6 @@ public slots:
     StopPHIDetectionJobResponse * stopPHIDetectionJob(const StopPHIDetectionJobRequest &request);
     StopRxNormInferenceJobResponse * stopRxNormInferenceJob(const StopRxNormInferenceJobRequest &request);
 
-protected:
-    /// @cond internal
-    ComprehendMedicalClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ComprehendMedicalClient(ComprehendMedicalClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ComprehendMedicalClient)
     Q_DISABLE_COPY(ComprehendMedicalClient)

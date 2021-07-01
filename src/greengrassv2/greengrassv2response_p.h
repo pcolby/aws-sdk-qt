@@ -20,12 +20,14 @@
 #ifndef QTAWS_GREENGRASSV2RESPONSE_P_H
 #define QTAWS_GREENGRASSV2RESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace GreengrassV2 {
 
 class GreengrassV2Response;
 
-class GreengrassV2ResponsePrivate {
+class GreengrassV2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    GreengrassV2Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GreengrassV2Response)

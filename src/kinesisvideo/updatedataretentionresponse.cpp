@@ -55,7 +55,8 @@ UpdateDataRetentionResponse::UpdateDataRetentionResponse(
  */
 const UpdateDataRetentionRequest * UpdateDataRetentionResponse::request() const
 {
-    return static_cast<const UpdateDataRetentionRequest *>(KinesisVideoResponse::request());
+    Q_D(const UpdateDataRetentionResponse);
+    return static_cast<const UpdateDataRetentionRequest *>(d->request);
 }
 
 /*!

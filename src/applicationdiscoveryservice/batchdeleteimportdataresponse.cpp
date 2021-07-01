@@ -159,7 +159,8 @@ BatchDeleteImportDataResponse::BatchDeleteImportDataResponse(
  */
 const BatchDeleteImportDataRequest * BatchDeleteImportDataResponse::request() const
 {
-    return static_cast<const BatchDeleteImportDataRequest *>(ApplicationDiscoveryServiceResponse::request());
+    Q_D(const BatchDeleteImportDataResponse);
+    return static_cast<const BatchDeleteImportDataRequest *>(d->request);
 }
 
 /*!

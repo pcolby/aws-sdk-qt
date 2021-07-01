@@ -58,7 +58,8 @@ DeleteResourcePolicyResponse::DeleteResourcePolicyResponse(
  */
 const DeleteResourcePolicyRequest * DeleteResourcePolicyResponse::request() const
 {
-    return static_cast<const DeleteResourcePolicyRequest *>(GlueResponse::request());
+    Q_D(const DeleteResourcePolicyResponse);
+    return static_cast<const DeleteResourcePolicyRequest *>(d->request);
 }
 
 /*!

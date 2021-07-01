@@ -63,7 +63,7 @@ namespace DevOpsGuru {
  * Constructs a DevOpsGuruRequest object for DevOpsGuru \a action.
  */
 DevOpsGuruRequest::DevOpsGuruRequest(const Action action)
-    : d_ptr(new DevOpsGuruRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DevOpsGuruRequestPrivate(action, this))
 {
 
 }
@@ -72,8 +72,7 @@ DevOpsGuruRequest::DevOpsGuruRequest(const Action action)
  * Constructs a copy of \a other.
  */
 DevOpsGuruRequest::DevOpsGuruRequest(const DevOpsGuruRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new DevOpsGuruRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DevOpsGuruRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -96,7 +95,7 @@ DevOpsGuruRequest& DevOpsGuruRequest::operator=(const DevOpsGuruRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DevOpsGuruRequestPrivate.
  */
-DevOpsGuruRequest::DevOpsGuruRequest(DevOpsGuruRequestPrivate * const d) : d_ptr(d)
+DevOpsGuruRequest::DevOpsGuruRequest(DevOpsGuruRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -265,7 +264,7 @@ QNetworkRequest DevOpsGuruRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DevOpsGuruRequestPrivate::DevOpsGuruRequestPrivate(const DevOpsGuruRequest::Action action, DevOpsGuruRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -280,8 +279,8 @@ DevOpsGuruRequestPrivate::DevOpsGuruRequestPrivate(const DevOpsGuruRequest::Acti
  */
 DevOpsGuruRequestPrivate::DevOpsGuruRequestPrivate(const DevOpsGuruRequestPrivate &other,
                                      DevOpsGuruRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

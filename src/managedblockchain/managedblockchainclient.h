@@ -117,12 +117,6 @@ public slots:
     UpdateNodeResponse * updateNode(const UpdateNodeRequest &request);
     VoteOnProposalResponse * voteOnProposal(const VoteOnProposalRequest &request);
 
-protected:
-    /// @cond internal
-    ManagedBlockchainClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ManagedBlockchainClient(ManagedBlockchainClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ManagedBlockchainClient)
     Q_DISABLE_COPY(ManagedBlockchainClient)

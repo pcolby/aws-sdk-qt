@@ -69,7 +69,7 @@ namespace XRay {
  * Constructs a XRayRequest object for XRay \a action.
  */
 XRayRequest::XRayRequest(const Action action)
-    : d_ptr(new XRayRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new XRayRequestPrivate(action, this))
 {
 
 }
@@ -78,8 +78,7 @@ XRayRequest::XRayRequest(const Action action)
  * Constructs a copy of \a other.
  */
 XRayRequest::XRayRequest(const XRayRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new XRayRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new XRayRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -102,7 +101,7 @@ XRayRequest& XRayRequest::operator=(const XRayRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from XRayRequestPrivate.
  */
-XRayRequest::XRayRequest(XRayRequestPrivate * const d) : d_ptr(d)
+XRayRequest::XRayRequest(XRayRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -271,7 +270,7 @@ QNetworkRequest XRayRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 XRayRequestPrivate::XRayRequestPrivate(const XRayRequest::Action action, XRayRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -286,8 +285,8 @@ XRayRequestPrivate::XRayRequestPrivate(const XRayRequest::Action action, XRayReq
  */
 XRayRequestPrivate::XRayRequestPrivate(const XRayRequestPrivate &other,
                                      XRayRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

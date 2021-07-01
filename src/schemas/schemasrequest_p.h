@@ -20,12 +20,15 @@
 #ifndef QTAWS_SCHEMASREQUEST_P_H
 #define QTAWS_SCHEMASREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "schemasrequest.h"
+
 namespace QtAws {
 namespace Schemas {
 
 class SchemasRequest;
 
-class SchemasRequestPrivate {
+class SchemasRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SchemasRequest::Action action; ///< Schemas action to be performed.
@@ -36,9 +39,6 @@ public:
     SchemasRequestPrivate(const SchemasRequestPrivate &other, SchemasRequest * const q);
 
     static QString toString(const SchemasRequest::Action &action);
-
-protected:
-    SchemasRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SchemasRequest)

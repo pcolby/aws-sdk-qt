@@ -62,7 +62,8 @@ CreateAccessKeyResponse::CreateAccessKeyResponse(
  */
 const CreateAccessKeyRequest * CreateAccessKeyResponse::request() const
 {
-    return static_cast<const CreateAccessKeyRequest *>(IamResponse::request());
+    Q_D(const CreateAccessKeyResponse);
+    return static_cast<const CreateAccessKeyRequest *>(d->request);
 }
 
 /*!

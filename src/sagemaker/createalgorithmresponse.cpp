@@ -70,7 +70,8 @@ CreateAlgorithmResponse::CreateAlgorithmResponse(
  */
 const CreateAlgorithmRequest * CreateAlgorithmResponse::request() const
 {
-    return static_cast<const CreateAlgorithmRequest *>(SageMakerResponse::request());
+    Q_D(const CreateAlgorithmResponse);
+    return static_cast<const CreateAlgorithmRequest *>(d->request);
 }
 
 /*!

@@ -63,7 +63,8 @@ ListChangeSetsResponse::ListChangeSetsResponse(
  */
 const ListChangeSetsRequest * ListChangeSetsResponse::request() const
 {
-    return static_cast<const ListChangeSetsRequest *>(MarketplaceCatalogResponse::request());
+    Q_D(const ListChangeSetsResponse);
+    return static_cast<const ListChangeSetsRequest *>(d->request);
 }
 
 /*!

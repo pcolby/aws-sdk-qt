@@ -62,7 +62,8 @@ CreateWorkloadResponse::CreateWorkloadResponse(
  */
 const CreateWorkloadRequest * CreateWorkloadResponse::request() const
 {
-    return static_cast<const CreateWorkloadRequest *>(WellArchitectedResponse::request());
+    Q_D(const CreateWorkloadResponse);
+    return static_cast<const CreateWorkloadRequest *>(d->request);
 }
 
 /*!

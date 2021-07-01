@@ -87,7 +87,8 @@ RegisterInstanceEventNotificationAttributesResponse::RegisterInstanceEventNotifi
  */
 const RegisterInstanceEventNotificationAttributesRequest * RegisterInstanceEventNotificationAttributesResponse::request() const
 {
-    return static_cast<const RegisterInstanceEventNotificationAttributesRequest *>(Ec2Response::request());
+    Q_D(const RegisterInstanceEventNotificationAttributesResponse);
+    return static_cast<const RegisterInstanceEventNotificationAttributesRequest *>(d->request);
 }
 
 /*!

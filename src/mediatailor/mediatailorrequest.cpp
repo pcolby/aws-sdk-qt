@@ -73,7 +73,7 @@ namespace MediaTailor {
  * Constructs a MediaTailorRequest object for MediaTailor \a action.
  */
 MediaTailorRequest::MediaTailorRequest(const Action action)
-    : d_ptr(new MediaTailorRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MediaTailorRequestPrivate(action, this))
 {
 
 }
@@ -82,8 +82,7 @@ MediaTailorRequest::MediaTailorRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MediaTailorRequest::MediaTailorRequest(const MediaTailorRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new MediaTailorRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MediaTailorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -106,7 +105,7 @@ MediaTailorRequest& MediaTailorRequest::operator=(const MediaTailorRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MediaTailorRequestPrivate.
  */
-MediaTailorRequest::MediaTailorRequest(MediaTailorRequestPrivate * const d) : d_ptr(d)
+MediaTailorRequest::MediaTailorRequest(MediaTailorRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -275,7 +274,7 @@ QNetworkRequest MediaTailorRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 MediaTailorRequestPrivate::MediaTailorRequestPrivate(const MediaTailorRequest::Action action, MediaTailorRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -290,8 +289,8 @@ MediaTailorRequestPrivate::MediaTailorRequestPrivate(const MediaTailorRequest::A
  */
 MediaTailorRequestPrivate::MediaTailorRequestPrivate(const MediaTailorRequestPrivate &other,
                                      MediaTailorRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

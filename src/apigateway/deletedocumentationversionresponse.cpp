@@ -60,7 +60,8 @@ DeleteDocumentationVersionResponse::DeleteDocumentationVersionResponse(
  */
 const DeleteDocumentationVersionRequest * DeleteDocumentationVersionResponse::request() const
 {
-    return static_cast<const DeleteDocumentationVersionRequest *>(APIGatewayResponse::request());
+    Q_D(const DeleteDocumentationVersionResponse);
+    return static_cast<const DeleteDocumentationVersionRequest *>(d->request);
 }
 
 /*!

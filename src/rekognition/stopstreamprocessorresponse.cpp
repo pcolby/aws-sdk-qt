@@ -56,7 +56,8 @@ StopStreamProcessorResponse::StopStreamProcessorResponse(
  */
 const StopStreamProcessorRequest * StopStreamProcessorResponse::request() const
 {
-    return static_cast<const StopStreamProcessorRequest *>(RekognitionResponse::request());
+    Q_D(const StopStreamProcessorResponse);
+    return static_cast<const StopStreamProcessorRequest *>(d->request);
 }
 
 /*!

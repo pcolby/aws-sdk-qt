@@ -72,7 +72,8 @@ ListProposalsResponse::ListProposalsResponse(
  */
 const ListProposalsRequest * ListProposalsResponse::request() const
 {
-    return static_cast<const ListProposalsRequest *>(ManagedBlockchainResponse::request());
+    Q_D(const ListProposalsResponse);
+    return static_cast<const ListProposalsRequest *>(d->request);
 }
 
 /*!

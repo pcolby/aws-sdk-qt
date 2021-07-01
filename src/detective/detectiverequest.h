@@ -73,8 +73,7 @@ public:
 
 protected:
     /// @cond internal
-    DetectiveRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DetectiveRequest(DetectiveRequestPrivate * const d);
+    DetectiveRequest(DetectiveRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

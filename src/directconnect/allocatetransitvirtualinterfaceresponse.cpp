@@ -61,7 +61,8 @@ AllocateTransitVirtualInterfaceResponse::AllocateTransitVirtualInterfaceResponse
  */
 const AllocateTransitVirtualInterfaceRequest * AllocateTransitVirtualInterfaceResponse::request() const
 {
-    return static_cast<const AllocateTransitVirtualInterfaceRequest *>(DirectConnectResponse::request());
+    Q_D(const AllocateTransitVirtualInterfaceResponse);
+    return static_cast<const AllocateTransitVirtualInterfaceRequest *>(d->request);
 }
 
 /*!

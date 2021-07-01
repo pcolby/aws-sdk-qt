@@ -69,7 +69,8 @@ CreateUserGroupResponse::CreateUserGroupResponse(
  */
 const CreateUserGroupRequest * CreateUserGroupResponse::request() const
 {
-    return static_cast<const CreateUserGroupRequest *>(ElastiCacheResponse::request());
+    Q_D(const CreateUserGroupResponse);
+    return static_cast<const CreateUserGroupRequest *>(d->request);
 }
 
 /*!

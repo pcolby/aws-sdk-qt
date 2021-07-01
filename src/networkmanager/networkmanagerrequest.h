@@ -93,8 +93,7 @@ public:
 
 protected:
     /// @cond internal
-    NetworkManagerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit NetworkManagerRequest(NetworkManagerRequestPrivate * const d);
+    NetworkManagerRequest(NetworkManagerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

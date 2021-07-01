@@ -56,7 +56,8 @@ ListDevicePositionsResponse::ListDevicePositionsResponse(
  */
 const ListDevicePositionsRequest * ListDevicePositionsResponse::request() const
 {
-    return static_cast<const ListDevicePositionsRequest *>(LocationServiceResponse::request());
+    Q_D(const ListDevicePositionsResponse);
+    return static_cast<const ListDevicePositionsRequest *>(d->request);
 }
 
 /*!

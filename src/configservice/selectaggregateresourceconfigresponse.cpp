@@ -75,7 +75,8 @@ SelectAggregateResourceConfigResponse::SelectAggregateResourceConfigResponse(
  */
 const SelectAggregateResourceConfigRequest * SelectAggregateResourceConfigResponse::request() const
 {
-    return static_cast<const SelectAggregateResourceConfigRequest *>(ConfigServiceResponse::request());
+    Q_D(const SelectAggregateResourceConfigResponse);
+    return static_cast<const SelectAggregateResourceConfigRequest *>(d->request);
 }
 
 /*!

@@ -76,7 +76,8 @@ CreateRuleResponse::CreateRuleResponse(
  */
 const CreateRuleRequest * CreateRuleResponse::request() const
 {
-    return static_cast<const CreateRuleRequest *>(WafResponse::request());
+    Q_D(const CreateRuleResponse);
+    return static_cast<const CreateRuleRequest *>(d->request);
 }
 
 /*!

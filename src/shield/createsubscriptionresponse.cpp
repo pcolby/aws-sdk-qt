@@ -61,7 +61,8 @@ CreateSubscriptionResponse::CreateSubscriptionResponse(
  */
 const CreateSubscriptionRequest * CreateSubscriptionResponse::request() const
 {
-    return static_cast<const CreateSubscriptionRequest *>(ShieldResponse::request());
+    Q_D(const CreateSubscriptionResponse);
+    return static_cast<const CreateSubscriptionRequest *>(d->request);
 }
 
 /*!

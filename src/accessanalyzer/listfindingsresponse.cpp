@@ -67,7 +67,8 @@ ListFindingsResponse::ListFindingsResponse(
  */
 const ListFindingsRequest * ListFindingsResponse::request() const
 {
-    return static_cast<const ListFindingsRequest *>(AccessAnalyzerResponse::request());
+    Q_D(const ListFindingsResponse);
+    return static_cast<const ListFindingsRequest *>(d->request);
 }
 
 /*!

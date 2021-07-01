@@ -99,8 +99,7 @@ public:
 
 protected:
     /// @cond internal
-    AppSyncRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AppSyncRequest(AppSyncRequestPrivate * const d);
+    AppSyncRequest(AppSyncRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

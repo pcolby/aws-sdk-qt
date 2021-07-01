@@ -94,12 +94,6 @@ public slots:
     ResendValidationEmailResponse * resendValidationEmail(const ResendValidationEmailRequest &request);
     UpdateCertificateOptionsResponse * updateCertificateOptions(const UpdateCertificateOptionsRequest &request);
 
-protected:
-    /// @cond internal
-    AcmClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AcmClient(AcmClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(AcmClient)
     Q_DISABLE_COPY(AcmClient)

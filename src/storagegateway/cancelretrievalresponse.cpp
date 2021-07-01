@@ -124,7 +124,8 @@ CancelRetrievalResponse::CancelRetrievalResponse(
  */
 const CancelRetrievalRequest * CancelRetrievalResponse::request() const
 {
-    return static_cast<const CancelRetrievalRequest *>(StorageGatewayResponse::request());
+    Q_D(const CancelRetrievalResponse);
+    return static_cast<const CancelRetrievalRequest *>(d->request);
 }
 
 /*!

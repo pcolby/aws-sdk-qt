@@ -66,7 +66,8 @@ SendRawEmailResponse::SendRawEmailResponse(
  */
 const SendRawEmailRequest * SendRawEmailResponse::request() const
 {
-    return static_cast<const SendRawEmailRequest *>(SesResponse::request());
+    Q_D(const SendRawEmailResponse);
+    return static_cast<const SendRawEmailRequest *>(d->request);
 }
 
 /*!

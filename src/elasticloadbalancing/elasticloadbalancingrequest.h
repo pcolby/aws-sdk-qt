@@ -87,8 +87,7 @@ public:
 
 protected:
     /// @cond internal
-    ElasticLoadBalancingRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ElasticLoadBalancingRequest(ElasticLoadBalancingRequestPrivate * const d);
+    ElasticLoadBalancingRequest(ElasticLoadBalancingRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

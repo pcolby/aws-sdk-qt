@@ -87,7 +87,8 @@ DescribeFastSnapshotRestoresResponse::DescribeFastSnapshotRestoresResponse(
  */
 const DescribeFastSnapshotRestoresRequest * DescribeFastSnapshotRestoresResponse::request() const
 {
-    return static_cast<const DescribeFastSnapshotRestoresRequest *>(Ec2Response::request());
+    Q_D(const DescribeFastSnapshotRestoresResponse);
+    return static_cast<const DescribeFastSnapshotRestoresRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ CreateGlobalNetworkResponse::CreateGlobalNetworkResponse(
  */
 const CreateGlobalNetworkRequest * CreateGlobalNetworkResponse::request() const
 {
-    return static_cast<const CreateGlobalNetworkRequest *>(NetworkManagerResponse::request());
+    Q_D(const CreateGlobalNetworkResponse);
+    return static_cast<const CreateGlobalNetworkRequest *>(d->request);
 }
 
 /*!

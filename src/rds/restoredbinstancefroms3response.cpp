@@ -119,7 +119,8 @@ RestoreDBInstanceFromS3Response::RestoreDBInstanceFromS3Response(
  */
 const RestoreDBInstanceFromS3Request * RestoreDBInstanceFromS3Response::request() const
 {
-    return static_cast<const RestoreDBInstanceFromS3Request *>(RdsResponse::request());
+    Q_D(const RestoreDBInstanceFromS3Response);
+    return static_cast<const RestoreDBInstanceFromS3Request *>(d->request);
 }
 
 /*!

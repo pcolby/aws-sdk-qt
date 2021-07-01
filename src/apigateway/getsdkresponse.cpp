@@ -60,7 +60,8 @@ GetSdkResponse::GetSdkResponse(
  */
 const GetSdkRequest * GetSdkResponse::request() const
 {
-    return static_cast<const GetSdkRequest *>(APIGatewayResponse::request());
+    Q_D(const GetSdkResponse);
+    return static_cast<const GetSdkRequest *>(d->request);
 }
 
 /*!

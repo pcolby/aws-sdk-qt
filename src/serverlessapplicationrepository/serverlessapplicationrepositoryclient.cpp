@@ -108,16 +108,16 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-09-08"),
-    QStringLiteral("serverlessrepo"),
-    QStringLiteral("AWSServerlessApplicationRepository"),
-    QStringLiteral("serverlessrepo"),
-    parent), d_ptr(new ServerlessApplicationRepositoryClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ServerlessApplicationRepositoryClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ServerlessApplicationRepositoryClient);
+    d->apiVersion = QStringLiteral("2017-09-08");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("serverlessrepo");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWSServerlessApplicationRepository");
+    d->serviceName = QStringLiteral("serverlessrepo");
 }
 
 /*!
@@ -136,16 +136,16 @@ ServerlessApplicationRepositoryClient::ServerlessApplicationRepositoryClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-09-08"),
-    QStringLiteral("serverlessrepo"),
-    QStringLiteral("AWSServerlessApplicationRepository"),
-    QStringLiteral("serverlessrepo"),
-    parent), d_ptr(new ServerlessApplicationRepositoryClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ServerlessApplicationRepositoryClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ServerlessApplicationRepositoryClient);
+    d->apiVersion = QStringLiteral("2017-09-08");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("serverlessrepo");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWSServerlessApplicationRepository");
+    d->serviceName = QStringLiteral("serverlessrepo");
 }
 
 /*!
@@ -344,9 +344,10 @@ UpdateApplicationResponse * ServerlessApplicationRepositoryClient::updateApplica
 /*!
  * Constructs a ServerlessApplicationRepositoryClientPrivate object with public implementation \a q.
  */
-ServerlessApplicationRepositoryClientPrivate::ServerlessApplicationRepositoryClientPrivate(ServerlessApplicationRepositoryClient * const q) : q_ptr(q)
+ServerlessApplicationRepositoryClientPrivate::ServerlessApplicationRepositoryClientPrivate(ServerlessApplicationRepositoryClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ServerlessApplicationRepository

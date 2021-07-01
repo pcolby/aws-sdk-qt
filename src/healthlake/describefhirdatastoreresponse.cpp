@@ -57,7 +57,8 @@ DescribeFHIRDatastoreResponse::DescribeFHIRDatastoreResponse(
  */
 const DescribeFHIRDatastoreRequest * DescribeFHIRDatastoreResponse::request() const
 {
-    return static_cast<const DescribeFHIRDatastoreRequest *>(HealthLakeResponse::request());
+    Q_D(const DescribeFHIRDatastoreResponse);
+    return static_cast<const DescribeFHIRDatastoreRequest *>(d->request);
 }
 
 /*!

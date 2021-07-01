@@ -72,7 +72,8 @@ DescribeComponentResponse::DescribeComponentResponse(
  */
 const DescribeComponentRequest * DescribeComponentResponse::request() const
 {
-    return static_cast<const DescribeComponentRequest *>(GreengrassV2Response::request());
+    Q_D(const DescribeComponentResponse);
+    return static_cast<const DescribeComponentRequest *>(d->request);
 }
 
 /*!

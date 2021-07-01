@@ -56,7 +56,8 @@ CancelJournalKinesisStreamResponse::CancelJournalKinesisStreamResponse(
  */
 const CancelJournalKinesisStreamRequest * CancelJournalKinesisStreamResponse::request() const
 {
-    return static_cast<const CancelJournalKinesisStreamRequest *>(QldbResponse::request());
+    Q_D(const CancelJournalKinesisStreamResponse);
+    return static_cast<const CancelJournalKinesisStreamRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ GetAnomaliesResponse::GetAnomaliesResponse(
  */
 const GetAnomaliesRequest * GetAnomaliesResponse::request() const
 {
-    return static_cast<const GetAnomaliesRequest *>(CostExplorerResponse::request());
+    Q_D(const GetAnomaliesResponse);
+    return static_cast<const GetAnomaliesRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ CreateLocalGatewayRouteTableVpcAssociationResponse::CreateLocalGatewayRouteTable
  */
 const CreateLocalGatewayRouteTableVpcAssociationRequest * CreateLocalGatewayRouteTableVpcAssociationResponse::request() const
 {
-    return static_cast<const CreateLocalGatewayRouteTableVpcAssociationRequest *>(Ec2Response::request());
+    Q_D(const CreateLocalGatewayRouteTableVpcAssociationResponse);
+    return static_cast<const CreateLocalGatewayRouteTableVpcAssociationRequest *>(d->request);
 }
 
 /*!

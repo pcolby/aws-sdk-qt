@@ -119,7 +119,8 @@ StopDBClusterResponse::StopDBClusterResponse(
  */
 const StopDBClusterRequest * StopDBClusterResponse::request() const
 {
-    return static_cast<const StopDBClusterRequest *>(RdsResponse::request());
+    Q_D(const StopDBClusterResponse);
+    return static_cast<const StopDBClusterRequest *>(d->request);
 }
 
 /*!

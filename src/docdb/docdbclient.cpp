@@ -166,16 +166,16 @@ DocDBClient::DocDBClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-10-31"),
-    QStringLiteral("rds"),
-    QStringLiteral("Amazon DocumentDB with MongoDB compatibility"),
-    QStringLiteral("rds"),
-    parent), d_ptr(new DocDBClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new DocDBClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(DocDBClient);
+    d->apiVersion = QStringLiteral("2014-10-31");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("rds");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon DocumentDB with MongoDB compatibility");
+    d->serviceName = QStringLiteral("rds");
 }
 
 /*!
@@ -194,16 +194,16 @@ DocDBClient::DocDBClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-10-31"),
-    QStringLiteral("rds"),
-    QStringLiteral("Amazon DocumentDB with MongoDB compatibility"),
-    QStringLiteral("rds"),
-    parent), d_ptr(new DocDBClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new DocDBClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(DocDBClient);
+    d->apiVersion = QStringLiteral("2014-10-31");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("rds");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon DocumentDB with MongoDB compatibility");
+    d->serviceName = QStringLiteral("rds");
 }
 
 /*!
@@ -1089,9 +1089,10 @@ StopDBClusterResponse * DocDBClient::stopDBCluster(const StopDBClusterRequest &r
 /*!
  * Constructs a DocDBClientPrivate object with public implementation \a q.
  */
-DocDBClientPrivate::DocDBClientPrivate(DocDBClient * const q) : q_ptr(q)
+DocDBClientPrivate::DocDBClientPrivate(DocDBClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DocDB

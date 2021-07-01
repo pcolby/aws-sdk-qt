@@ -20,20 +20,19 @@
 #ifndef QTAWS_LEXMODELSV2CLIENT_P_H
 #define QTAWS_LEXMODELSV2CLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace LexModelsV2 {
 
 class LexModelsV2Client;
 
-class LexModelsV2ClientPrivate {
+class LexModelsV2ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit LexModelsV2ClientPrivate(LexModelsV2Client * const q);
-
-protected:
-    LexModelsV2Client * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LexModelsV2Client)

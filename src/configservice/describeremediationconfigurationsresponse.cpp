@@ -75,7 +75,8 @@ DescribeRemediationConfigurationsResponse::DescribeRemediationConfigurationsResp
  */
 const DescribeRemediationConfigurationsRequest * DescribeRemediationConfigurationsResponse::request() const
 {
-    return static_cast<const DescribeRemediationConfigurationsRequest *>(ConfigServiceResponse::request());
+    Q_D(const DescribeRemediationConfigurationsResponse);
+    return static_cast<const DescribeRemediationConfigurationsRequest *>(d->request);
 }
 
 /*!

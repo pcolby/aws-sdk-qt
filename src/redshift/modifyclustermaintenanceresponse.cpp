@@ -85,7 +85,8 @@ ModifyClusterMaintenanceResponse::ModifyClusterMaintenanceResponse(
  */
 const ModifyClusterMaintenanceRequest * ModifyClusterMaintenanceResponse::request() const
 {
-    return static_cast<const ModifyClusterMaintenanceRequest *>(RedshiftResponse::request());
+    Q_D(const ModifyClusterMaintenanceResponse);
+    return static_cast<const ModifyClusterMaintenanceRequest *>(d->request);
 }
 
 /*!

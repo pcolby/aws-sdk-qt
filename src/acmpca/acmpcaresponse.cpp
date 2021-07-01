@@ -37,7 +37,7 @@ namespace ACMPCA {
  * Constructs a AcmpcaResponse object with parent \a parent.
  */
 AcmpcaResponse::AcmpcaResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AcmpcaResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new AcmpcaResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ AcmpcaResponse::AcmpcaResponse(QObject * const parent)
  * implementation that inherits from AcmpcaResponsePrivate.
  */
 AcmpcaResponse::AcmpcaResponse(AcmpcaResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void AcmpcaResponse::parseFailure(QIODevice &response)
  * Constructs a AcmpcaResponsePrivate object with public implementation \a q.
  */
 AcmpcaResponsePrivate::AcmpcaResponsePrivate(
-    AcmpcaResponse * const q) : q_ptr(q)
+    AcmpcaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

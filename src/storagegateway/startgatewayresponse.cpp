@@ -124,7 +124,8 @@ StartGatewayResponse::StartGatewayResponse(
  */
 const StartGatewayRequest * StartGatewayResponse::request() const
 {
-    return static_cast<const StartGatewayRequest *>(StorageGatewayResponse::request());
+    Q_D(const StartGatewayResponse);
+    return static_cast<const StartGatewayRequest *>(d->request);
 }
 
 /*!

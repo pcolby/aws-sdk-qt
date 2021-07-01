@@ -20,20 +20,19 @@
 #ifndef QTAWS_ACMPCACLIENT_P_H
 #define QTAWS_ACMPCACLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ACMPCA {
 
 class AcmpcaClient;
 
-class AcmpcaClientPrivate {
+class AcmpcaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit AcmpcaClientPrivate(AcmpcaClient * const q);
-
-protected:
-    AcmpcaClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AcmpcaClient)

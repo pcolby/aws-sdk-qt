@@ -87,7 +87,8 @@ DisassociateRouteTableResponse::DisassociateRouteTableResponse(
  */
 const DisassociateRouteTableRequest * DisassociateRouteTableResponse::request() const
 {
-    return static_cast<const DisassociateRouteTableRequest *>(Ec2Response::request());
+    Q_D(const DisassociateRouteTableResponse);
+    return static_cast<const DisassociateRouteTableRequest *>(d->request);
 }
 
 /*!

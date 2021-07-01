@@ -55,7 +55,8 @@ DescribePermissionSetProvisioningStatusResponse::DescribePermissionSetProvisioni
  */
 const DescribePermissionSetProvisioningStatusRequest * DescribePermissionSetProvisioningStatusResponse::request() const
 {
-    return static_cast<const DescribePermissionSetProvisioningStatusRequest *>(SSOAdminResponse::request());
+    Q_D(const DescribePermissionSetProvisioningStatusResponse);
+    return static_cast<const DescribePermissionSetProvisioningStatusRequest *>(d->request);
 }
 
 /*!

@@ -119,7 +119,8 @@ StopDBInstanceAutomatedBackupsReplicationResponse::StopDBInstanceAutomatedBackup
  */
 const StopDBInstanceAutomatedBackupsReplicationRequest * StopDBInstanceAutomatedBackupsReplicationResponse::request() const
 {
-    return static_cast<const StopDBInstanceAutomatedBackupsReplicationRequest *>(RdsResponse::request());
+    Q_D(const StopDBInstanceAutomatedBackupsReplicationResponse);
+    return static_cast<const StopDBInstanceAutomatedBackupsReplicationRequest *>(d->request);
 }
 
 /*!

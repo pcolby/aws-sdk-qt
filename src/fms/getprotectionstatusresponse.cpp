@@ -67,7 +67,8 @@ GetProtectionStatusResponse::GetProtectionStatusResponse(
  */
 const GetProtectionStatusRequest * GetProtectionStatusResponse::request() const
 {
-    return static_cast<const GetProtectionStatusRequest *>(FmsResponse::request());
+    Q_D(const GetProtectionStatusResponse);
+    return static_cast<const GetProtectionStatusRequest *>(d->request);
 }
 
 /*!

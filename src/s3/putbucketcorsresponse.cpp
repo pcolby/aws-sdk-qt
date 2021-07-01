@@ -55,7 +55,8 @@ PutBucketCorsResponse::PutBucketCorsResponse(
  */
 const PutBucketCorsRequest * PutBucketCorsResponse::request() const
 {
-    return static_cast<const PutBucketCorsRequest *>(S3Response::request());
+    Q_D(const PutBucketCorsResponse);
+    return static_cast<const PutBucketCorsRequest *>(d->request);
 }
 
 /*!

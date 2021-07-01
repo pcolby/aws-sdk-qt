@@ -62,8 +62,7 @@ public:
 
 protected:
     /// @cond internal
-    CostandUsageReportServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CostandUsageReportServiceRequest(CostandUsageReportServiceRequestPrivate * const d);
+    CostandUsageReportServiceRequest(CostandUsageReportServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

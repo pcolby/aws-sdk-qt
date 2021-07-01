@@ -56,7 +56,8 @@ ListTerminologiesResponse::ListTerminologiesResponse(
  */
 const ListTerminologiesRequest * ListTerminologiesResponse::request() const
 {
-    return static_cast<const ListTerminologiesRequest *>(TranslateResponse::request());
+    Q_D(const ListTerminologiesResponse);
+    return static_cast<const ListTerminologiesRequest *>(d->request);
 }
 
 /*!

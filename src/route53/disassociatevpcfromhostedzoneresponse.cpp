@@ -56,7 +56,8 @@ DisassociateVPCFromHostedZoneResponse::DisassociateVPCFromHostedZoneResponse(
  */
 const DisassociateVPCFromHostedZoneRequest * DisassociateVPCFromHostedZoneResponse::request() const
 {
-    return static_cast<const DisassociateVPCFromHostedZoneRequest *>(Route53Response::request());
+    Q_D(const DisassociateVPCFromHostedZoneResponse);
+    return static_cast<const DisassociateVPCFromHostedZoneRequest *>(d->request);
 }
 
 /*!

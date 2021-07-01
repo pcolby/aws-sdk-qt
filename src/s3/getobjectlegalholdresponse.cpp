@@ -55,7 +55,8 @@ GetObjectLegalHoldResponse::GetObjectLegalHoldResponse(
  */
 const GetObjectLegalHoldRequest * GetObjectLegalHoldResponse::request() const
 {
-    return static_cast<const GetObjectLegalHoldRequest *>(S3Response::request());
+    Q_D(const GetObjectLegalHoldResponse);
+    return static_cast<const GetObjectLegalHoldRequest *>(d->request);
 }
 
 /*!

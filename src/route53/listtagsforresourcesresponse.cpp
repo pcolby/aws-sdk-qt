@@ -56,7 +56,8 @@ ListTagsForResourcesResponse::ListTagsForResourcesResponse(
  */
 const ListTagsForResourcesRequest * ListTagsForResourcesResponse::request() const
 {
-    return static_cast<const ListTagsForResourcesRequest *>(Route53Response::request());
+    Q_D(const ListTagsForResourcesResponse);
+    return static_cast<const ListTagsForResourcesRequest *>(d->request);
 }
 
 /*!

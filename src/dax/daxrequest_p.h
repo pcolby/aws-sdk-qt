@@ -20,12 +20,15 @@
 #ifndef QTAWS_DAXREQUEST_P_H
 #define QTAWS_DAXREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "daxrequest.h"
+
 namespace QtAws {
 namespace DAX {
 
 class DaxRequest;
 
-class DaxRequestPrivate {
+class DaxRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DaxRequest::Action action; ///< DAX action to be performed.
@@ -36,9 +39,6 @@ public:
     DaxRequestPrivate(const DaxRequestPrivate &other, DaxRequest * const q);
 
     static QString toString(const DaxRequest::Action &action);
-
-protected:
-    DaxRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DaxRequest)

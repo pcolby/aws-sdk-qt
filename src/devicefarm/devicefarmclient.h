@@ -279,12 +279,6 @@ public slots:
     UpdateUploadResponse * updateUpload(const UpdateUploadRequest &request);
     UpdateVPCEConfigurationResponse * updateVPCEConfiguration(const UpdateVPCEConfigurationRequest &request);
 
-protected:
-    /// @cond internal
-    DeviceFarmClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DeviceFarmClient(DeviceFarmClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(DeviceFarmClient)
     Q_DISABLE_COPY(DeviceFarmClient)

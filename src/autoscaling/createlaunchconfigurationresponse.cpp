@@ -68,7 +68,8 @@ CreateLaunchConfigurationResponse::CreateLaunchConfigurationResponse(
  */
 const CreateLaunchConfigurationRequest * CreateLaunchConfigurationResponse::request() const
 {
-    return static_cast<const CreateLaunchConfigurationRequest *>(AutoScalingResponse::request());
+    Q_D(const CreateLaunchConfigurationResponse);
+    return static_cast<const CreateLaunchConfigurationRequest *>(d->request);
 }
 
 /*!

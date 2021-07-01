@@ -121,7 +121,8 @@ UpdateEnvironmentResponse::UpdateEnvironmentResponse(
  */
 const UpdateEnvironmentRequest * UpdateEnvironmentResponse::request() const
 {
-    return static_cast<const UpdateEnvironmentRequest *>(Cloud9Response::request());
+    Q_D(const UpdateEnvironmentResponse);
+    return static_cast<const UpdateEnvironmentRequest *>(d->request);
 }
 
 /*!

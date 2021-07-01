@@ -37,7 +37,7 @@ namespace Appflow {
  * Constructs a AppflowResponse object with parent \a parent.
  */
 AppflowResponse::AppflowResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AppflowResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new AppflowResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ AppflowResponse::AppflowResponse(QObject * const parent)
  * implementation that inherits from AppflowResponsePrivate.
  */
 AppflowResponse::AppflowResponse(AppflowResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void AppflowResponse::parseFailure(QIODevice &response)
  * Constructs a AppflowResponsePrivate object with public implementation \a q.
  */
 AppflowResponsePrivate::AppflowResponsePrivate(
-    AppflowResponse * const q) : q_ptr(q)
+    AppflowResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

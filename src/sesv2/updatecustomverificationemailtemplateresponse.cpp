@@ -88,7 +88,8 @@ UpdateCustomVerificationEmailTemplateResponse::UpdateCustomVerificationEmailTemp
  */
 const UpdateCustomVerificationEmailTemplateRequest * UpdateCustomVerificationEmailTemplateResponse::request() const
 {
-    return static_cast<const UpdateCustomVerificationEmailTemplateRequest *>(Sesv2Response::request());
+    Q_D(const UpdateCustomVerificationEmailTemplateResponse);
+    return static_cast<const UpdateCustomVerificationEmailTemplateRequest *>(d->request);
 }
 
 /*!

@@ -74,7 +74,8 @@ GetKeyPairResponse::GetKeyPairResponse(
  */
 const GetKeyPairRequest * GetKeyPairResponse::request() const
 {
-    return static_cast<const GetKeyPairRequest *>(LightsailResponse::request());
+    Q_D(const GetKeyPairResponse);
+    return static_cast<const GetKeyPairRequest *>(d->request);
 }
 
 /*!

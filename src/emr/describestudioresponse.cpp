@@ -58,7 +58,8 @@ DescribeStudioResponse::DescribeStudioResponse(
  */
 const DescribeStudioRequest * DescribeStudioResponse::request() const
 {
-    return static_cast<const DescribeStudioRequest *>(EmrResponse::request());
+    Q_D(const DescribeStudioResponse);
+    return static_cast<const DescribeStudioRequest *>(d->request);
 }
 
 /*!

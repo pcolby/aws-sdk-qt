@@ -61,7 +61,8 @@ DescribeAttackResponse::DescribeAttackResponse(
  */
 const DescribeAttackRequest * DescribeAttackResponse::request() const
 {
-    return static_cast<const DescribeAttackRequest *>(ShieldResponse::request());
+    Q_D(const DescribeAttackResponse);
+    return static_cast<const DescribeAttackRequest *>(d->request);
 }
 
 /*!

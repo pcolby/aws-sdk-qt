@@ -68,7 +68,8 @@ NotifyAppValidationOutputResponse::NotifyAppValidationOutputResponse(
  */
 const NotifyAppValidationOutputRequest * NotifyAppValidationOutputResponse::request() const
 {
-    return static_cast<const NotifyAppValidationOutputRequest *>(SmsResponse::request());
+    Q_D(const NotifyAppValidationOutputResponse);
+    return static_cast<const NotifyAppValidationOutputRequest *>(d->request);
 }
 
 /*!

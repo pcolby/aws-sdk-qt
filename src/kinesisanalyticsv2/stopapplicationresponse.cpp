@@ -58,7 +58,8 @@ StopApplicationResponse::StopApplicationResponse(
  */
 const StopApplicationRequest * StopApplicationResponse::request() const
 {
-    return static_cast<const StopApplicationRequest *>(KinesisAnalyticsV2Response::request());
+    Q_D(const StopApplicationResponse);
+    return static_cast<const StopApplicationRequest *>(d->request);
 }
 
 /*!

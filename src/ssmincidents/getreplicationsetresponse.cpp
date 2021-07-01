@@ -65,7 +65,8 @@ GetReplicationSetResponse::GetReplicationSetResponse(
  */
 const GetReplicationSetRequest * GetReplicationSetResponse::request() const
 {
-    return static_cast<const GetReplicationSetRequest *>(SSMIncidentsResponse::request());
+    Q_D(const GetReplicationSetResponse);
+    return static_cast<const GetReplicationSetRequest *>(d->request);
 }
 
 /*!

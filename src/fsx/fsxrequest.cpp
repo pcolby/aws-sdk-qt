@@ -60,7 +60,7 @@ namespace FSx {
  * Constructs a FSxRequest object for FSx \a action.
  */
 FSxRequest::FSxRequest(const Action action)
-    : d_ptr(new FSxRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new FSxRequestPrivate(action, this))
 {
 
 }
@@ -69,8 +69,7 @@ FSxRequest::FSxRequest(const Action action)
  * Constructs a copy of \a other.
  */
 FSxRequest::FSxRequest(const FSxRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new FSxRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new FSxRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -93,7 +92,7 @@ FSxRequest& FSxRequest::operator=(const FSxRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from FSxRequestPrivate.
  */
-FSxRequest::FSxRequest(FSxRequestPrivate * const d) : d_ptr(d)
+FSxRequest::FSxRequest(FSxRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -262,7 +261,7 @@ QNetworkRequest FSxRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 FSxRequestPrivate::FSxRequestPrivate(const FSxRequest::Action action, FSxRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -277,8 +276,8 @@ FSxRequestPrivate::FSxRequestPrivate(const FSxRequest::Action action, FSxRequest
  */
 FSxRequestPrivate::FSxRequestPrivate(const FSxRequestPrivate &other,
                                      FSxRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

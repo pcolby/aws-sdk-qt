@@ -59,7 +59,8 @@ CreateWebLoginTokenResponse::CreateWebLoginTokenResponse(
  */
 const CreateWebLoginTokenRequest * CreateWebLoginTokenResponse::request() const
 {
-    return static_cast<const CreateWebLoginTokenRequest *>(MwaaResponse::request());
+    Q_D(const CreateWebLoginTokenResponse);
+    return static_cast<const CreateWebLoginTokenRequest *>(d->request);
 }
 
 /*!

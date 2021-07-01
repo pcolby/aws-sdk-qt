@@ -65,7 +65,8 @@ UpdateDeletionProtectionResponse::UpdateDeletionProtectionResponse(
  */
 const UpdateDeletionProtectionRequest * UpdateDeletionProtectionResponse::request() const
 {
-    return static_cast<const UpdateDeletionProtectionRequest *>(SSMIncidentsResponse::request());
+    Q_D(const UpdateDeletionProtectionResponse);
+    return static_cast<const UpdateDeletionProtectionRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetHostedZoneLimitResponse::GetHostedZoneLimitResponse(
  */
 const GetHostedZoneLimitRequest * GetHostedZoneLimitResponse::request() const
 {
-    return static_cast<const GetHostedZoneLimitRequest *>(Route53Response::request());
+    Q_D(const GetHostedZoneLimitResponse);
+    return static_cast<const GetHostedZoneLimitRequest *>(d->request);
 }
 
 /*!

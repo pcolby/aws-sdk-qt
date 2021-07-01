@@ -56,7 +56,8 @@ DeleteMapResponse::DeleteMapResponse(
  */
 const DeleteMapRequest * DeleteMapResponse::request() const
 {
-    return static_cast<const DeleteMapRequest *>(LocationServiceResponse::request());
+    Q_D(const DeleteMapResponse);
+    return static_cast<const DeleteMapRequest *>(d->request);
 }
 
 /*!

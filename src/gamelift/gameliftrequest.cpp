@@ -137,7 +137,7 @@ namespace GameLift {
  * Constructs a GameLiftRequest object for GameLift \a action.
  */
 GameLiftRequest::GameLiftRequest(const Action action)
-    : d_ptr(new GameLiftRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new GameLiftRequestPrivate(action, this))
 {
 
 }
@@ -146,8 +146,7 @@ GameLiftRequest::GameLiftRequest(const Action action)
  * Constructs a copy of \a other.
  */
 GameLiftRequest::GameLiftRequest(const GameLiftRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new GameLiftRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new GameLiftRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -170,7 +169,7 @@ GameLiftRequest& GameLiftRequest::operator=(const GameLiftRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GameLiftRequestPrivate.
  */
-GameLiftRequest::GameLiftRequest(GameLiftRequestPrivate * const d) : d_ptr(d)
+GameLiftRequest::GameLiftRequest(GameLiftRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -339,7 +338,7 @@ QNetworkRequest GameLiftRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 GameLiftRequestPrivate::GameLiftRequestPrivate(const GameLiftRequest::Action action, GameLiftRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -354,8 +353,8 @@ GameLiftRequestPrivate::GameLiftRequestPrivate(const GameLiftRequest::Action act
  */
 GameLiftRequestPrivate::GameLiftRequestPrivate(const GameLiftRequestPrivate &other,
                                      GameLiftRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

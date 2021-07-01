@@ -60,7 +60,8 @@ CreateInvalidationResponse::CreateInvalidationResponse(
  */
 const CreateInvalidationRequest * CreateInvalidationResponse::request() const
 {
-    return static_cast<const CreateInvalidationRequest *>(CloudFrontResponse::request());
+    Q_D(const CreateInvalidationResponse);
+    return static_cast<const CreateInvalidationRequest *>(d->request);
 }
 
 /*!

@@ -59,7 +59,8 @@ PutBotResponse::PutBotResponse(
  */
 const PutBotRequest * PutBotResponse::request() const
 {
-    return static_cast<const PutBotRequest *>(LexModelBuildingServiceResponse::request());
+    Q_D(const PutBotResponse);
+    return static_cast<const PutBotRequest *>(d->request);
 }
 
 /*!

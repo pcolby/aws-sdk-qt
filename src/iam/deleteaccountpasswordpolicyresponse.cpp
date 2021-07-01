@@ -62,7 +62,8 @@ DeleteAccountPasswordPolicyResponse::DeleteAccountPasswordPolicyResponse(
  */
 const DeleteAccountPasswordPolicyRequest * DeleteAccountPasswordPolicyResponse::request() const
 {
-    return static_cast<const DeleteAccountPasswordPolicyRequest *>(IamResponse::request());
+    Q_D(const DeleteAccountPasswordPolicyResponse);
+    return static_cast<const DeleteAccountPasswordPolicyRequest *>(d->request);
 }
 
 /*!

@@ -66,7 +66,8 @@ CreateFunctionResponse::CreateFunctionResponse(
  */
 const CreateFunctionRequest * CreateFunctionResponse::request() const
 {
-    return static_cast<const CreateFunctionRequest *>(LambdaResponse::request());
+    Q_D(const CreateFunctionResponse);
+    return static_cast<const CreateFunctionRequest *>(d->request);
 }
 
 /*!

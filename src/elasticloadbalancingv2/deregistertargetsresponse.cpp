@@ -90,7 +90,8 @@ DeregisterTargetsResponse::DeregisterTargetsResponse(
  */
 const DeregisterTargetsRequest * DeregisterTargetsResponse::request() const
 {
-    return static_cast<const DeregisterTargetsRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const DeregisterTargetsResponse);
+    return static_cast<const DeregisterTargetsRequest *>(d->request);
 }
 
 /*!

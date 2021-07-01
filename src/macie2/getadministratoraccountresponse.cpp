@@ -60,7 +60,8 @@ GetAdministratorAccountResponse::GetAdministratorAccountResponse(
  */
 const GetAdministratorAccountRequest * GetAdministratorAccountResponse::request() const
 {
-    return static_cast<const GetAdministratorAccountRequest *>(Macie2Response::request());
+    Q_D(const GetAdministratorAccountResponse);
+    return static_cast<const GetAdministratorAccountRequest *>(d->request);
 }
 
 /*!

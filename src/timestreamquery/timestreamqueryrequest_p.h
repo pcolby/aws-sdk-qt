@@ -20,12 +20,15 @@
 #ifndef QTAWS_TIMESTREAMQUERYREQUEST_P_H
 #define QTAWS_TIMESTREAMQUERYREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "timestreamqueryrequest.h"
+
 namespace QtAws {
 namespace TimestreamQuery {
 
 class TimestreamQueryRequest;
 
-class TimestreamQueryRequestPrivate {
+class TimestreamQueryRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     TimestreamQueryRequest::Action action; ///< TimestreamQuery action to be performed.
@@ -36,9 +39,6 @@ public:
     TimestreamQueryRequestPrivate(const TimestreamQueryRequestPrivate &other, TimestreamQueryRequest * const q);
 
     static QString toString(const TimestreamQueryRequest::Action &action);
-
-protected:
-    TimestreamQueryRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TimestreamQueryRequest)

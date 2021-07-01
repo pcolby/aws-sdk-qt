@@ -79,7 +79,8 @@ AssociateRoutingProfileQueuesResponse::AssociateRoutingProfileQueuesResponse(
  */
 const AssociateRoutingProfileQueuesRequest * AssociateRoutingProfileQueuesResponse::request() const
 {
-    return static_cast<const AssociateRoutingProfileQueuesRequest *>(ConnectResponse::request());
+    Q_D(const AssociateRoutingProfileQueuesResponse);
+    return static_cast<const AssociateRoutingProfileQueuesRequest *>(d->request);
 }
 
 /*!

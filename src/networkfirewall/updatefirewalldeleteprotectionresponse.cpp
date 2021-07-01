@@ -145,7 +145,8 @@ UpdateFirewallDeleteProtectionResponse::UpdateFirewallDeleteProtectionResponse(
  */
 const UpdateFirewallDeleteProtectionRequest * UpdateFirewallDeleteProtectionResponse::request() const
 {
-    return static_cast<const UpdateFirewallDeleteProtectionRequest *>(NetworkFirewallResponse::request());
+    Q_D(const UpdateFirewallDeleteProtectionResponse);
+    return static_cast<const UpdateFirewallDeleteProtectionRequest *>(d->request);
 }
 
 /*!

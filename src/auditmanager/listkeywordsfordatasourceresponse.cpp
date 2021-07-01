@@ -98,7 +98,8 @@ ListKeywordsForDataSourceResponse::ListKeywordsForDataSourceResponse(
  */
 const ListKeywordsForDataSourceRequest * ListKeywordsForDataSourceResponse::request() const
 {
-    return static_cast<const ListKeywordsForDataSourceRequest *>(AuditManagerResponse::request());
+    Q_D(const ListKeywordsForDataSourceResponse);
+    return static_cast<const ListKeywordsForDataSourceRequest *>(d->request);
 }
 
 /*!

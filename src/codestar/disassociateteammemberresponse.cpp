@@ -143,7 +143,8 @@ DisassociateTeamMemberResponse::DisassociateTeamMemberResponse(
  */
 const DisassociateTeamMemberRequest * DisassociateTeamMemberResponse::request() const
 {
-    return static_cast<const DisassociateTeamMemberRequest *>(CodeStarResponse::request());
+    Q_D(const DisassociateTeamMemberResponse);
+    return static_cast<const DisassociateTeamMemberRequest *>(d->request);
 }
 
 /*!

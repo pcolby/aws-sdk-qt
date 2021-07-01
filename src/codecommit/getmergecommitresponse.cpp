@@ -439,7 +439,8 @@ GetMergeCommitResponse::GetMergeCommitResponse(
  */
 const GetMergeCommitRequest * GetMergeCommitResponse::request() const
 {
-    return static_cast<const GetMergeCommitRequest *>(CodeCommitResponse::request());
+    Q_D(const GetMergeCommitResponse);
+    return static_cast<const GetMergeCommitRequest *>(d->request);
 }
 
 /*!

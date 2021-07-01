@@ -98,7 +98,8 @@ DeleteActivationResponse::DeleteActivationResponse(
  */
 const DeleteActivationRequest * DeleteActivationResponse::request() const
 {
-    return static_cast<const DeleteActivationRequest *>(SsmResponse::request());
+    Q_D(const DeleteActivationResponse);
+    return static_cast<const DeleteActivationRequest *>(d->request);
 }
 
 /*!

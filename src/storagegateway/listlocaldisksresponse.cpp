@@ -124,7 +124,8 @@ ListLocalDisksResponse::ListLocalDisksResponse(
  */
 const ListLocalDisksRequest * ListLocalDisksResponse::request() const
 {
-    return static_cast<const ListLocalDisksRequest *>(StorageGatewayResponse::request());
+    Q_D(const ListLocalDisksResponse);
+    return static_cast<const ListLocalDisksRequest *>(d->request);
 }
 
 /*!

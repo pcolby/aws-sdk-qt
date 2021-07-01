@@ -61,7 +61,8 @@ AssociateProactiveEngagementDetailsResponse::AssociateProactiveEngagementDetails
  */
 const AssociateProactiveEngagementDetailsRequest * AssociateProactiveEngagementDetailsResponse::request() const
 {
-    return static_cast<const AssociateProactiveEngagementDetailsRequest *>(ShieldResponse::request());
+    Q_D(const AssociateProactiveEngagementDetailsResponse);
+    return static_cast<const AssociateProactiveEngagementDetailsRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ UpdateTemplatePermissionsResponse::UpdateTemplatePermissionsResponse(
  */
 const UpdateTemplatePermissionsRequest * UpdateTemplatePermissionsResponse::request() const
 {
-    return static_cast<const UpdateTemplatePermissionsRequest *>(QuickSightResponse::request());
+    Q_D(const UpdateTemplatePermissionsResponse);
+    return static_cast<const UpdateTemplatePermissionsRequest *>(d->request);
 }
 
 /*!

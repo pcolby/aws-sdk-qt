@@ -20,12 +20,15 @@
 #ifndef QTAWS_DIRECTORYSERVICEREQUEST_P_H
 #define QTAWS_DIRECTORYSERVICEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "directoryservicerequest.h"
+
 namespace QtAws {
 namespace DirectoryService {
 
 class DirectoryServiceRequest;
 
-class DirectoryServiceRequestPrivate {
+class DirectoryServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DirectoryServiceRequest::Action action; ///< DirectoryService action to be performed.
@@ -36,9 +39,6 @@ public:
     DirectoryServiceRequestPrivate(const DirectoryServiceRequestPrivate &other, DirectoryServiceRequest * const q);
 
     static QString toString(const DirectoryServiceRequest::Action &action);
-
-protected:
-    DirectoryServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DirectoryServiceRequest)

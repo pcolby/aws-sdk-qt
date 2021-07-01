@@ -20,12 +20,14 @@
 #ifndef QTAWS_DOCDBRESPONSE_P_H
 #define QTAWS_DOCDBRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace DocDB {
 
 class DocDBResponse;
 
-class DocDBResponsePrivate {
+class DocDBResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    DocDBResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DocDBResponse)

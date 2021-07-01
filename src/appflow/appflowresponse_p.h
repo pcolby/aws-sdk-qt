@@ -20,12 +20,14 @@
 #ifndef QTAWS_APPFLOWRESPONSE_P_H
 #define QTAWS_APPFLOWRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace Appflow {
 
 class AppflowResponse;
 
-class AppflowResponsePrivate {
+class AppflowResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    AppflowResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppflowResponse)

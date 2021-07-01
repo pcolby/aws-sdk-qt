@@ -79,7 +79,8 @@ UpdateQueueNameResponse::UpdateQueueNameResponse(
  */
 const UpdateQueueNameRequest * UpdateQueueNameResponse::request() const
 {
-    return static_cast<const UpdateQueueNameRequest *>(ConnectResponse::request());
+    Q_D(const UpdateQueueNameResponse);
+    return static_cast<const UpdateQueueNameRequest *>(d->request);
 }
 
 /*!

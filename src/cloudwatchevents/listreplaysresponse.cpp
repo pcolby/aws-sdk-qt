@@ -78,7 +78,8 @@ ListReplaysResponse::ListReplaysResponse(
  */
 const ListReplaysRequest * ListReplaysResponse::request() const
 {
-    return static_cast<const ListReplaysRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const ListReplaysResponse);
+    return static_cast<const ListReplaysRequest *>(d->request);
 }
 
 /*!

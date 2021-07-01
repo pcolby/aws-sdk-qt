@@ -70,7 +70,8 @@ ListTrainingJobsForHyperParameterTuningJobResponse::ListTrainingJobsForHyperPara
  */
 const ListTrainingJobsForHyperParameterTuningJobRequest * ListTrainingJobsForHyperParameterTuningJobResponse::request() const
 {
-    return static_cast<const ListTrainingJobsForHyperParameterTuningJobRequest *>(SageMakerResponse::request());
+    Q_D(const ListTrainingJobsForHyperParameterTuningJobResponse);
+    return static_cast<const ListTrainingJobsForHyperParameterTuningJobRequest *>(d->request);
 }
 
 /*!

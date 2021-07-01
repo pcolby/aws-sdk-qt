@@ -75,7 +75,8 @@ DescribeIdentityUsageResponse::DescribeIdentityUsageResponse(
  */
 const DescribeIdentityUsageRequest * DescribeIdentityUsageResponse::request() const
 {
-    return static_cast<const DescribeIdentityUsageRequest *>(CognitoSyncResponse::request());
+    Q_D(const DescribeIdentityUsageResponse);
+    return static_cast<const DescribeIdentityUsageRequest *>(d->request);
 }
 
 /*!

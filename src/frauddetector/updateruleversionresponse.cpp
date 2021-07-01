@@ -58,7 +58,8 @@ UpdateRuleVersionResponse::UpdateRuleVersionResponse(
  */
 const UpdateRuleVersionRequest * UpdateRuleVersionResponse::request() const
 {
-    return static_cast<const UpdateRuleVersionRequest *>(FraudDetectorResponse::request());
+    Q_D(const UpdateRuleVersionResponse);
+    return static_cast<const UpdateRuleVersionRequest *>(d->request);
 }
 
 /*!

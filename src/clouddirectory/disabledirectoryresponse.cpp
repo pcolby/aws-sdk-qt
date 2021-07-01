@@ -63,7 +63,8 @@ DisableDirectoryResponse::DisableDirectoryResponse(
  */
 const DisableDirectoryRequest * DisableDirectoryResponse::request() const
 {
-    return static_cast<const DisableDirectoryRequest *>(CloudDirectoryResponse::request());
+    Q_D(const DisableDirectoryResponse);
+    return static_cast<const DisableDirectoryRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ GetSpeechSynthesisTaskResponse::GetSpeechSynthesisTaskResponse(
  */
 const GetSpeechSynthesisTaskRequest * GetSpeechSynthesisTaskResponse::request() const
 {
-    return static_cast<const GetSpeechSynthesisTaskRequest *>(PollyResponse::request());
+    Q_D(const GetSpeechSynthesisTaskResponse);
+    return static_cast<const GetSpeechSynthesisTaskRequest *>(d->request);
 }
 
 /*!

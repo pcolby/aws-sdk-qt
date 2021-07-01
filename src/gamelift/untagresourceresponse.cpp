@@ -115,7 +115,8 @@ UntagResourceResponse::UntagResourceResponse(
  */
 const UntagResourceRequest * UntagResourceResponse::request() const
 {
-    return static_cast<const UntagResourceRequest *>(GameLiftResponse::request());
+    Q_D(const UntagResourceResponse);
+    return static_cast<const UntagResourceRequest *>(d->request);
 }
 
 /*!

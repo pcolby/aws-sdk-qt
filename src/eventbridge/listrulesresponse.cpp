@@ -78,7 +78,8 @@ ListRulesResponse::ListRulesResponse(
  */
 const ListRulesRequest * ListRulesResponse::request() const
 {
-    return static_cast<const ListRulesRequest *>(EventBridgeResponse::request());
+    Q_D(const ListRulesResponse);
+    return static_cast<const ListRulesRequest *>(d->request);
 }
 
 /*!

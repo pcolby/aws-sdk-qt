@@ -61,7 +61,8 @@ DescribeVirtualInterfacesResponse::DescribeVirtualInterfacesResponse(
  */
 const DescribeVirtualInterfacesRequest * DescribeVirtualInterfacesResponse::request() const
 {
-    return static_cast<const DescribeVirtualInterfacesRequest *>(DirectConnectResponse::request());
+    Q_D(const DescribeVirtualInterfacesResponse);
+    return static_cast<const DescribeVirtualInterfacesRequest *>(d->request);
 }
 
 /*!

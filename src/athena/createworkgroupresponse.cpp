@@ -73,7 +73,8 @@ CreateWorkGroupResponse::CreateWorkGroupResponse(
  */
 const CreateWorkGroupRequest * CreateWorkGroupResponse::request() const
 {
-    return static_cast<const CreateWorkGroupRequest *>(AthenaResponse::request());
+    Q_D(const CreateWorkGroupResponse);
+    return static_cast<const CreateWorkGroupRequest *>(d->request);
 }
 
 /*!

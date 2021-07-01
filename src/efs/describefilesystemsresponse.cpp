@@ -62,7 +62,8 @@ DescribeFileSystemsResponse::DescribeFileSystemsResponse(
  */
 const DescribeFileSystemsRequest * DescribeFileSystemsResponse::request() const
 {
-    return static_cast<const DescribeFileSystemsRequest *>(EfsResponse::request());
+    Q_D(const DescribeFileSystemsResponse);
+    return static_cast<const DescribeFileSystemsRequest *>(d->request);
 }
 
 /*!

@@ -91,7 +91,8 @@ ListVaultsResponse::ListVaultsResponse(
  */
 const ListVaultsRequest * ListVaultsResponse::request() const
 {
-    return static_cast<const ListVaultsRequest *>(GlacierResponse::request());
+    Q_D(const ListVaultsResponse);
+    return static_cast<const ListVaultsRequest *>(d->request);
 }
 
 /*!

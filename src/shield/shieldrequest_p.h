@@ -20,12 +20,15 @@
 #ifndef QTAWS_SHIELDREQUEST_P_H
 #define QTAWS_SHIELDREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "shieldrequest.h"
+
 namespace QtAws {
 namespace Shield {
 
 class ShieldRequest;
 
-class ShieldRequestPrivate {
+class ShieldRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ShieldRequest::Action action; ///< Shield action to be performed.
@@ -36,9 +39,6 @@ public:
     ShieldRequestPrivate(const ShieldRequestPrivate &other, ShieldRequest * const q);
 
     static QString toString(const ShieldRequest::Action &action);
-
-protected:
-    ShieldRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ShieldRequest)

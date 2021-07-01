@@ -87,7 +87,8 @@ DeleteVpnGatewayResponse::DeleteVpnGatewayResponse(
  */
 const DeleteVpnGatewayRequest * DeleteVpnGatewayResponse::request() const
 {
-    return static_cast<const DeleteVpnGatewayRequest *>(Ec2Response::request());
+    Q_D(const DeleteVpnGatewayResponse);
+    return static_cast<const DeleteVpnGatewayRequest *>(d->request);
 }
 
 /*!

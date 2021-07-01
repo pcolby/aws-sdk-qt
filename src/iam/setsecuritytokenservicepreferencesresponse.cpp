@@ -62,7 +62,8 @@ SetSecurityTokenServicePreferencesResponse::SetSecurityTokenServicePreferencesRe
  */
 const SetSecurityTokenServicePreferencesRequest * SetSecurityTokenServicePreferencesResponse::request() const
 {
-    return static_cast<const SetSecurityTokenServicePreferencesRequest *>(IamResponse::request());
+    Q_D(const SetSecurityTokenServicePreferencesResponse);
+    return static_cast<const SetSecurityTokenServicePreferencesRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ GetDomainNameResponse::GetDomainNameResponse(
  */
 const GetDomainNameRequest * GetDomainNameResponse::request() const
 {
-    return static_cast<const GetDomainNameRequest *>(APIGatewayResponse::request());
+    Q_D(const GetDomainNameResponse);
+    return static_cast<const GetDomainNameRequest *>(d->request);
 }
 
 /*!

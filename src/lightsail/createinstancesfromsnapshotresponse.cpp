@@ -74,7 +74,8 @@ CreateInstancesFromSnapshotResponse::CreateInstancesFromSnapshotResponse(
  */
 const CreateInstancesFromSnapshotRequest * CreateInstancesFromSnapshotResponse::request() const
 {
-    return static_cast<const CreateInstancesFromSnapshotRequest *>(LightsailResponse::request());
+    Q_D(const CreateInstancesFromSnapshotResponse);
+    return static_cast<const CreateInstancesFromSnapshotRequest *>(d->request);
 }
 
 /*!

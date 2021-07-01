@@ -88,7 +88,8 @@ ListEmailTemplatesResponse::ListEmailTemplatesResponse(
  */
 const ListEmailTemplatesRequest * ListEmailTemplatesResponse::request() const
 {
-    return static_cast<const ListEmailTemplatesRequest *>(Sesv2Response::request());
+    Q_D(const ListEmailTemplatesResponse);
+    return static_cast<const ListEmailTemplatesRequest *>(d->request);
 }
 
 /*!

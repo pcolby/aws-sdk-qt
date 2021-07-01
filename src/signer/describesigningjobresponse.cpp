@@ -80,7 +80,8 @@ DescribeSigningJobResponse::DescribeSigningJobResponse(
  */
 const DescribeSigningJobRequest * DescribeSigningJobResponse::request() const
 {
-    return static_cast<const DescribeSigningJobRequest *>(signerResponse::request());
+    Q_D(const DescribeSigningJobResponse);
+    return static_cast<const DescribeSigningJobRequest *>(d->request);
 }
 
 /*!

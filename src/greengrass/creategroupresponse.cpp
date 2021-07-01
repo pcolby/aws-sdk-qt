@@ -58,7 +58,8 @@ CreateGroupResponse::CreateGroupResponse(
  */
 const CreateGroupRequest * CreateGroupResponse::request() const
 {
-    return static_cast<const CreateGroupRequest *>(GreengrassResponse::request());
+    Q_D(const CreateGroupResponse);
+    return static_cast<const CreateGroupRequest *>(d->request);
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace ElasticInference {
  * Constructs a ElasticInferenceResponse object with parent \a parent.
  */
 ElasticInferenceResponse::ElasticInferenceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ElasticInferenceResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ElasticInferenceResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ElasticInferenceResponse::ElasticInferenceResponse(QObject * const parent)
  * implementation that inherits from ElasticInferenceResponsePrivate.
  */
 ElasticInferenceResponse::ElasticInferenceResponse(ElasticInferenceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ElasticInferenceResponse::parseFailure(QIODevice &response)
  * Constructs a ElasticInferenceResponsePrivate object with public implementation \a q.
  */
 ElasticInferenceResponsePrivate::ElasticInferenceResponsePrivate(
-    ElasticInferenceResponse * const q) : q_ptr(q)
+    ElasticInferenceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

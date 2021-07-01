@@ -64,7 +64,8 @@ StartTaskExecutionResponse::StartTaskExecutionResponse(
  */
 const StartTaskExecutionRequest * StartTaskExecutionResponse::request() const
 {
-    return static_cast<const StartTaskExecutionRequest *>(DataSyncResponse::request());
+    Q_D(const StartTaskExecutionResponse);
+    return static_cast<const StartTaskExecutionRequest *>(d->request);
 }
 
 /*!

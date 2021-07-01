@@ -156,16 +156,16 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-01-01"),
-    QStringLiteral("es"),
-    QStringLiteral("Amazon Elasticsearch Service"),
-    QStringLiteral("es"),
-    parent), d_ptr(new ElasticsearchServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ElasticsearchServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ElasticsearchServiceClient);
+    d->apiVersion = QStringLiteral("2015-01-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("es");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Elasticsearch Service");
+    d->serviceName = QStringLiteral("es");
 }
 
 /*!
@@ -184,16 +184,16 @@ ElasticsearchServiceClient::ElasticsearchServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-01-01"),
-    QStringLiteral("es"),
-    QStringLiteral("Amazon Elasticsearch Service"),
-    QStringLiteral("es"),
-    parent), d_ptr(new ElasticsearchServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ElasticsearchServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ElasticsearchServiceClient);
+    d->apiVersion = QStringLiteral("2015-01-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("es");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Elasticsearch Service");
+    d->serviceName = QStringLiteral("es");
 }
 
 /*!
@@ -773,9 +773,10 @@ UpgradeElasticsearchDomainResponse * ElasticsearchServiceClient::upgradeElastics
 /*!
  * Constructs a ElasticsearchServiceClientPrivate object with public implementation \a q.
  */
-ElasticsearchServiceClientPrivate::ElasticsearchServiceClientPrivate(ElasticsearchServiceClient * const q) : q_ptr(q)
+ElasticsearchServiceClientPrivate::ElasticsearchServiceClientPrivate(ElasticsearchServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ElasticsearchService

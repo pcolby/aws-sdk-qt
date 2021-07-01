@@ -98,7 +98,8 @@ DescribePatchGroupStateResponse::DescribePatchGroupStateResponse(
  */
 const DescribePatchGroupStateRequest * DescribePatchGroupStateResponse::request() const
 {
-    return static_cast<const DescribePatchGroupStateRequest *>(SsmResponse::request());
+    Q_D(const DescribePatchGroupStateResponse);
+    return static_cast<const DescribePatchGroupStateRequest *>(d->request);
 }
 
 /*!

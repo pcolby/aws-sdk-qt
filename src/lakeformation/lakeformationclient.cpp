@@ -108,16 +108,16 @@ LakeFormationClient::LakeFormationClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-03-31"),
-    QStringLiteral("lakeformation"),
-    QStringLiteral("AWS Lake Formation"),
-    QStringLiteral("lakeformation"),
-    parent), d_ptr(new LakeFormationClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LakeFormationClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LakeFormationClient);
+    d->apiVersion = QStringLiteral("2017-03-31");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("lakeformation");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Lake Formation");
+    d->serviceName = QStringLiteral("lakeformation");
 }
 
 /*!
@@ -136,16 +136,16 @@ LakeFormationClient::LakeFormationClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-03-31"),
-    QStringLiteral("lakeformation"),
-    QStringLiteral("AWS Lake Formation"),
-    QStringLiteral("lakeformation"),
-    parent), d_ptr(new LakeFormationClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LakeFormationClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LakeFormationClient);
+    d->apiVersion = QStringLiteral("2017-03-31");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("lakeformation");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Lake Formation");
+    d->serviceName = QStringLiteral("lakeformation");
 }
 
 /*!
@@ -528,9 +528,10 @@ UpdateResourceResponse * LakeFormationClient::updateResource(const UpdateResourc
 /*!
  * Constructs a LakeFormationClientPrivate object with public implementation \a q.
  */
-LakeFormationClientPrivate::LakeFormationClientPrivate(LakeFormationClient * const q) : q_ptr(q)
+LakeFormationClientPrivate::LakeFormationClientPrivate(LakeFormationClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace LakeFormation

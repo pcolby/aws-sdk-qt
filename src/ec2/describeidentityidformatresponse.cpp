@@ -87,7 +87,8 @@ DescribeIdentityIdFormatResponse::DescribeIdentityIdFormatResponse(
  */
 const DescribeIdentityIdFormatRequest * DescribeIdentityIdFormatResponse::request() const
 {
-    return static_cast<const DescribeIdentityIdFormatRequest *>(Ec2Response::request());
+    Q_D(const DescribeIdentityIdFormatResponse);
+    return static_cast<const DescribeIdentityIdFormatRequest *>(d->request);
 }
 
 /*!

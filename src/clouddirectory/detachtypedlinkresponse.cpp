@@ -63,7 +63,8 @@ DetachTypedLinkResponse::DetachTypedLinkResponse(
  */
 const DetachTypedLinkRequest * DetachTypedLinkResponse::request() const
 {
-    return static_cast<const DetachTypedLinkRequest *>(CloudDirectoryResponse::request());
+    Q_D(const DetachTypedLinkResponse);
+    return static_cast<const DetachTypedLinkRequest *>(d->request);
 }
 
 /*!

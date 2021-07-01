@@ -66,7 +66,8 @@ UpdateTemplateResponse::UpdateTemplateResponse(
  */
 const UpdateTemplateRequest * UpdateTemplateResponse::request() const
 {
-    return static_cast<const UpdateTemplateRequest *>(SesResponse::request());
+    Q_D(const UpdateTemplateResponse);
+    return static_cast<const UpdateTemplateRequest *>(d->request);
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace SESV2 {
  * Constructs a Sesv2Response object with parent \a parent.
  */
 Sesv2Response::Sesv2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new Sesv2ResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new Sesv2ResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ Sesv2Response::Sesv2Response(QObject * const parent)
  * implementation that inherits from Sesv2ResponsePrivate.
  */
 Sesv2Response::Sesv2Response(Sesv2ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void Sesv2Response::parseFailure(QIODevice &response)
  * Constructs a Sesv2ResponsePrivate object with public implementation \a q.
  */
 Sesv2ResponsePrivate::Sesv2ResponsePrivate(
-    Sesv2Response * const q) : q_ptr(q)
+    Sesv2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

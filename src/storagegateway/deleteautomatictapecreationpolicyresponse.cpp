@@ -124,7 +124,8 @@ DeleteAutomaticTapeCreationPolicyResponse::DeleteAutomaticTapeCreationPolicyResp
  */
 const DeleteAutomaticTapeCreationPolicyRequest * DeleteAutomaticTapeCreationPolicyResponse::request() const
 {
-    return static_cast<const DeleteAutomaticTapeCreationPolicyRequest *>(StorageGatewayResponse::request());
+    Q_D(const DeleteAutomaticTapeCreationPolicyResponse);
+    return static_cast<const DeleteAutomaticTapeCreationPolicyRequest *>(d->request);
 }
 
 /*!

@@ -112,8 +112,7 @@ public:
 
 protected:
     /// @cond internal
-    WorkMailRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit WorkMailRequest(WorkMailRequestPrivate * const d);
+    WorkMailRequest(WorkMailRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

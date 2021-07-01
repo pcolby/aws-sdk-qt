@@ -94,7 +94,8 @@ AssociateFirewallRuleGroupResponse::AssociateFirewallRuleGroupResponse(
  */
 const AssociateFirewallRuleGroupRequest * AssociateFirewallRuleGroupResponse::request() const
 {
-    return static_cast<const AssociateFirewallRuleGroupRequest *>(Route53ResolverResponse::request());
+    Q_D(const AssociateFirewallRuleGroupResponse);
+    return static_cast<const AssociateFirewallRuleGroupRequest *>(d->request);
 }
 
 /*!

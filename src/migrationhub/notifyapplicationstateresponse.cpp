@@ -62,7 +62,8 @@ NotifyApplicationStateResponse::NotifyApplicationStateResponse(
  */
 const NotifyApplicationStateRequest * NotifyApplicationStateResponse::request() const
 {
-    return static_cast<const NotifyApplicationStateRequest *>(MigrationHubResponse::request());
+    Q_D(const NotifyApplicationStateResponse);
+    return static_cast<const NotifyApplicationStateRequest *>(d->request);
 }
 
 /*!

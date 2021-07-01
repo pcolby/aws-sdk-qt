@@ -66,7 +66,8 @@ DeleteEventSourceMappingResponse::DeleteEventSourceMappingResponse(
  */
 const DeleteEventSourceMappingRequest * DeleteEventSourceMappingResponse::request() const
 {
-    return static_cast<const DeleteEventSourceMappingRequest *>(LambdaResponse::request());
+    Q_D(const DeleteEventSourceMappingResponse);
+    return static_cast<const DeleteEventSourceMappingRequest *>(d->request);
 }
 
 /*!

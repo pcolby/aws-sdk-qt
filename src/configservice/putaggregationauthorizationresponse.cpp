@@ -75,7 +75,8 @@ PutAggregationAuthorizationResponse::PutAggregationAuthorizationResponse(
  */
 const PutAggregationAuthorizationRequest * PutAggregationAuthorizationResponse::request() const
 {
-    return static_cast<const PutAggregationAuthorizationRequest *>(ConfigServiceResponse::request());
+    Q_D(const PutAggregationAuthorizationResponse);
+    return static_cast<const PutAggregationAuthorizationRequest *>(d->request);
 }
 
 /*!

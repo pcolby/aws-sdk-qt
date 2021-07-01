@@ -62,7 +62,8 @@ DeregisterTransitGatewayResponse::DeregisterTransitGatewayResponse(
  */
 const DeregisterTransitGatewayRequest * DeregisterTransitGatewayResponse::request() const
 {
-    return static_cast<const DeregisterTransitGatewayRequest *>(NetworkManagerResponse::request());
+    Q_D(const DeregisterTransitGatewayResponse);
+    return static_cast<const DeregisterTransitGatewayRequest *>(d->request);
 }
 
 /*!

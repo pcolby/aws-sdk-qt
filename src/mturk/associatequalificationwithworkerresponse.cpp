@@ -55,7 +55,8 @@ AssociateQualificationWithWorkerResponse::AssociateQualificationWithWorkerRespon
  */
 const AssociateQualificationWithWorkerRequest * AssociateQualificationWithWorkerResponse::request() const
 {
-    return static_cast<const AssociateQualificationWithWorkerRequest *>(MTurkResponse::request());
+    Q_D(const AssociateQualificationWithWorkerResponse);
+    return static_cast<const AssociateQualificationWithWorkerRequest *>(d->request);
 }
 
 /*!

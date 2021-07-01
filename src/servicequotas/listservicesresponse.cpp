@@ -58,7 +58,8 @@ ListServicesResponse::ListServicesResponse(
  */
 const ListServicesRequest * ListServicesResponse::request() const
 {
-    return static_cast<const ListServicesRequest *>(ServiceQuotasResponse::request());
+    Q_D(const ListServicesResponse);
+    return static_cast<const ListServicesRequest *>(d->request);
 }
 
 /*!

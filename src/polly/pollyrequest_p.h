@@ -20,12 +20,15 @@
 #ifndef QTAWS_POLLYREQUEST_P_H
 #define QTAWS_POLLYREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "pollyrequest.h"
+
 namespace QtAws {
 namespace Polly {
 
 class PollyRequest;
 
-class PollyRequestPrivate {
+class PollyRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PollyRequest::Action action; ///< Polly action to be performed.
@@ -36,9 +39,6 @@ public:
     PollyRequestPrivate(const PollyRequestPrivate &other, PollyRequest * const q);
 
     static QString toString(const PollyRequest::Action &action);
-
-protected:
-    PollyRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PollyRequest)

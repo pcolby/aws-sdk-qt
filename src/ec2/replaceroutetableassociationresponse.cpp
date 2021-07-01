@@ -87,7 +87,8 @@ ReplaceRouteTableAssociationResponse::ReplaceRouteTableAssociationResponse(
  */
 const ReplaceRouteTableAssociationRequest * ReplaceRouteTableAssociationResponse::request() const
 {
-    return static_cast<const ReplaceRouteTableAssociationRequest *>(Ec2Response::request());
+    Q_D(const ReplaceRouteTableAssociationResponse);
+    return static_cast<const ReplaceRouteTableAssociationRequest *>(d->request);
 }
 
 /*!

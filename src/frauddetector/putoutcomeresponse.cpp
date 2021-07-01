@@ -58,7 +58,8 @@ PutOutcomeResponse::PutOutcomeResponse(
  */
 const PutOutcomeRequest * PutOutcomeResponse::request() const
 {
-    return static_cast<const PutOutcomeRequest *>(FraudDetectorResponse::request());
+    Q_D(const PutOutcomeResponse);
+    return static_cast<const PutOutcomeRequest *>(d->request);
 }
 
 /*!

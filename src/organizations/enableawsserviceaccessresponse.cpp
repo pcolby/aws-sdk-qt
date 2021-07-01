@@ -141,7 +141,8 @@ EnableAWSServiceAccessResponse::EnableAWSServiceAccessResponse(
  */
 const EnableAWSServiceAccessRequest * EnableAWSServiceAccessResponse::request() const
 {
-    return static_cast<const EnableAWSServiceAccessRequest *>(OrganizationsResponse::request());
+    Q_D(const EnableAWSServiceAccessResponse);
+    return static_cast<const EnableAWSServiceAccessRequest *>(d->request);
 }
 
 /*!

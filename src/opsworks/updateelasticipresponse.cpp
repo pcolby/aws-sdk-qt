@@ -161,7 +161,8 @@ UpdateElasticIpResponse::UpdateElasticIpResponse(
  */
 const UpdateElasticIpRequest * UpdateElasticIpResponse::request() const
 {
-    return static_cast<const UpdateElasticIpRequest *>(OpsWorksResponse::request());
+    Q_D(const UpdateElasticIpResponse);
+    return static_cast<const UpdateElasticIpRequest *>(d->request);
 }
 
 /*!

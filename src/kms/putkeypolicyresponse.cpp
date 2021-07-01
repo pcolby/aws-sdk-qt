@@ -154,7 +154,8 @@ PutKeyPolicyResponse::PutKeyPolicyResponse(
  */
 const PutKeyPolicyRequest * PutKeyPolicyResponse::request() const
 {
-    return static_cast<const PutKeyPolicyRequest *>(KmsResponse::request());
+    Q_D(const PutKeyPolicyResponse);
+    return static_cast<const PutKeyPolicyRequest *>(d->request);
 }
 
 /*!

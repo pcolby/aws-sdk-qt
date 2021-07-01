@@ -60,7 +60,8 @@ GetPublicKeyResponse::GetPublicKeyResponse(
  */
 const GetPublicKeyRequest * GetPublicKeyResponse::request() const
 {
-    return static_cast<const GetPublicKeyRequest *>(CloudFrontResponse::request());
+    Q_D(const GetPublicKeyResponse);
+    return static_cast<const GetPublicKeyRequest *>(d->request);
 }
 
 /*!

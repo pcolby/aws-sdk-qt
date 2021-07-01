@@ -73,7 +73,8 @@ TagResourceResponse::TagResourceResponse(
  */
 const TagResourceRequest * TagResourceResponse::request() const
 {
-    return static_cast<const TagResourceRequest *>(GuardDutyResponse::request());
+    Q_D(const TagResourceResponse);
+    return static_cast<const TagResourceRequest *>(d->request);
 }
 
 /*!

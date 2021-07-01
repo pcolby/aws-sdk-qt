@@ -56,7 +56,8 @@ DeleteResourceTreeResponse::DeleteResourceTreeResponse(
  */
 const DeleteResourceTreeRequest * DeleteResourceTreeResponse::request() const
 {
-    return static_cast<const DeleteResourceTreeRequest *>(ForecastServiceResponse::request());
+    Q_D(const DeleteResourceTreeResponse);
+    return static_cast<const DeleteResourceTreeRequest *>(d->request);
 }
 
 /*!

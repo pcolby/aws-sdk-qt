@@ -74,7 +74,8 @@ CopySnapshotResponse::CopySnapshotResponse(
  */
 const CopySnapshotRequest * CopySnapshotResponse::request() const
 {
-    return static_cast<const CopySnapshotRequest *>(LightsailResponse::request());
+    Q_D(const CopySnapshotResponse);
+    return static_cast<const CopySnapshotRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_FMSCLIENT_P_H
 #define QTAWS_FMSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace FMS {
 
 class FmsClient;
 
-class FmsClientPrivate {
+class FmsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit FmsClientPrivate(FmsClient * const q);
-
-protected:
-    FmsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FmsClient)

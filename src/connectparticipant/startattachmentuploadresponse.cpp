@@ -65,7 +65,8 @@ StartAttachmentUploadResponse::StartAttachmentUploadResponse(
  */
 const StartAttachmentUploadRequest * StartAttachmentUploadResponse::request() const
 {
-    return static_cast<const StartAttachmentUploadRequest *>(ConnectParticipantResponse::request());
+    Q_D(const StartAttachmentUploadResponse);
+    return static_cast<const StartAttachmentUploadRequest *>(d->request);
 }
 
 /*!

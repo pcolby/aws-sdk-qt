@@ -98,7 +98,8 @@ DeleteControlResponse::DeleteControlResponse(
  */
 const DeleteControlRequest * DeleteControlResponse::request() const
 {
-    return static_cast<const DeleteControlRequest *>(AuditManagerResponse::request());
+    Q_D(const DeleteControlResponse);
+    return static_cast<const DeleteControlRequest *>(d->request);
 }
 
 /*!

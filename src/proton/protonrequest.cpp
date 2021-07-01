@@ -91,7 +91,7 @@ namespace Proton {
  * Constructs a ProtonRequest object for Proton \a action.
  */
 ProtonRequest::ProtonRequest(const Action action)
-    : d_ptr(new ProtonRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ProtonRequestPrivate(action, this))
 {
 
 }
@@ -100,8 +100,7 @@ ProtonRequest::ProtonRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ProtonRequest::ProtonRequest(const ProtonRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ProtonRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ProtonRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -124,7 +123,7 @@ ProtonRequest& ProtonRequest::operator=(const ProtonRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ProtonRequestPrivate.
  */
-ProtonRequest::ProtonRequest(ProtonRequestPrivate * const d) : d_ptr(d)
+ProtonRequest::ProtonRequest(ProtonRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -293,7 +292,7 @@ QNetworkRequest ProtonRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ProtonRequestPrivate::ProtonRequestPrivate(const ProtonRequest::Action action, ProtonRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -308,8 +307,8 @@ ProtonRequestPrivate::ProtonRequestPrivate(const ProtonRequest::Action action, P
  */
 ProtonRequestPrivate::ProtonRequestPrivate(const ProtonRequestPrivate &other,
                                      ProtonRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

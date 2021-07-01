@@ -55,7 +55,7 @@ namespace IoT1ClickDevicesService {
  * Constructs a IoT1ClickDevicesServiceRequest object for IoT1ClickDevicesService \a action.
  */
 IoT1ClickDevicesServiceRequest::IoT1ClickDevicesServiceRequest(const Action action)
-    : d_ptr(new IoT1ClickDevicesServiceRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new IoT1ClickDevicesServiceRequestPrivate(action, this))
 {
 
 }
@@ -64,8 +64,7 @@ IoT1ClickDevicesServiceRequest::IoT1ClickDevicesServiceRequest(const Action acti
  * Constructs a copy of \a other.
  */
 IoT1ClickDevicesServiceRequest::IoT1ClickDevicesServiceRequest(const IoT1ClickDevicesServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new IoT1ClickDevicesServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new IoT1ClickDevicesServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -88,7 +87,7 @@ IoT1ClickDevicesServiceRequest& IoT1ClickDevicesServiceRequest::operator=(const 
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoT1ClickDevicesServiceRequestPrivate.
  */
-IoT1ClickDevicesServiceRequest::IoT1ClickDevicesServiceRequest(IoT1ClickDevicesServiceRequestPrivate * const d) : d_ptr(d)
+IoT1ClickDevicesServiceRequest::IoT1ClickDevicesServiceRequest(IoT1ClickDevicesServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -257,7 +256,7 @@ QNetworkRequest IoT1ClickDevicesServiceRequest::unsignedRequest(const QUrl &endp
  * with public implementation \a q.
  */
 IoT1ClickDevicesServiceRequestPrivate::IoT1ClickDevicesServiceRequestPrivate(const IoT1ClickDevicesServiceRequest::Action action, IoT1ClickDevicesServiceRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -272,8 +271,8 @@ IoT1ClickDevicesServiceRequestPrivate::IoT1ClickDevicesServiceRequestPrivate(con
  */
 IoT1ClickDevicesServiceRequestPrivate::IoT1ClickDevicesServiceRequestPrivate(const IoT1ClickDevicesServiceRequestPrivate &other,
                                      IoT1ClickDevicesServiceRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

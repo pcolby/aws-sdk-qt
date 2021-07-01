@@ -74,7 +74,8 @@ DeleteContactMethodResponse::DeleteContactMethodResponse(
  */
 const DeleteContactMethodRequest * DeleteContactMethodResponse::request() const
 {
-    return static_cast<const DeleteContactMethodRequest *>(LightsailResponse::request());
+    Q_D(const DeleteContactMethodResponse);
+    return static_cast<const DeleteContactMethodRequest *>(d->request);
 }
 
 /*!

@@ -729,12 +729,6 @@ public slots:
     UpdateTopicRuleDestinationResponse * updateTopicRuleDestination(const UpdateTopicRuleDestinationRequest &request);
     ValidateSecurityProfileBehaviorsResponse * validateSecurityProfileBehaviors(const ValidateSecurityProfileBehaviorsRequest &request);
 
-protected:
-    /// @cond internal
-    IoTClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IoTClient(IoTClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(IoTClient)
     Q_DISABLE_COPY(IoTClient)

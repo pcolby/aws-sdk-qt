@@ -69,7 +69,8 @@ BatchStopUpdateActionResponse::BatchStopUpdateActionResponse(
  */
 const BatchStopUpdateActionRequest * BatchStopUpdateActionResponse::request() const
 {
-    return static_cast<const BatchStopUpdateActionRequest *>(ElastiCacheResponse::request());
+    Q_D(const BatchStopUpdateActionResponse);
+    return static_cast<const BatchStopUpdateActionRequest *>(d->request);
 }
 
 /*!

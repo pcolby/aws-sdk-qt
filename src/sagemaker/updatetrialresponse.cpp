@@ -70,7 +70,8 @@ UpdateTrialResponse::UpdateTrialResponse(
  */
 const UpdateTrialRequest * UpdateTrialResponse::request() const
 {
-    return static_cast<const UpdateTrialRequest *>(SageMakerResponse::request());
+    Q_D(const UpdateTrialResponse);
+    return static_cast<const UpdateTrialRequest *>(d->request);
 }
 
 /*!

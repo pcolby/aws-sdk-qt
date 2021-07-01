@@ -86,7 +86,8 @@ DisassociateCustomDomainResponse::DisassociateCustomDomainResponse(
  */
 const DisassociateCustomDomainRequest * DisassociateCustomDomainResponse::request() const
 {
-    return static_cast<const DisassociateCustomDomainRequest *>(AppRunnerResponse::request());
+    Q_D(const DisassociateCustomDomainResponse);
+    return static_cast<const DisassociateCustomDomainRequest *>(d->request);
 }
 
 /*!

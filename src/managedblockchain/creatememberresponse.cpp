@@ -72,7 +72,8 @@ CreateMemberResponse::CreateMemberResponse(
  */
 const CreateMemberRequest * CreateMemberResponse::request() const
 {
-    return static_cast<const CreateMemberRequest *>(ManagedBlockchainResponse::request());
+    Q_D(const CreateMemberResponse);
+    return static_cast<const CreateMemberRequest *>(d->request);
 }
 
 /*!

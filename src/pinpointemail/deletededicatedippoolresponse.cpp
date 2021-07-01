@@ -92,7 +92,8 @@ DeleteDedicatedIpPoolResponse::DeleteDedicatedIpPoolResponse(
  */
 const DeleteDedicatedIpPoolRequest * DeleteDedicatedIpPoolResponse::request() const
 {
-    return static_cast<const DeleteDedicatedIpPoolRequest *>(PinpointEmailResponse::request());
+    Q_D(const DeleteDedicatedIpPoolResponse);
+    return static_cast<const DeleteDedicatedIpPoolRequest *>(d->request);
 }
 
 /*!

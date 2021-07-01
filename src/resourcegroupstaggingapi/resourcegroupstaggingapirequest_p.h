@@ -20,12 +20,15 @@
 #ifndef QTAWS_RESOURCEGROUPSTAGGINGAPIREQUEST_P_H
 #define QTAWS_RESOURCEGROUPSTAGGINGAPIREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "resourcegroupstaggingapirequest.h"
+
 namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
 class ResourceGroupsTaggingAPIRequest;
 
-class ResourceGroupsTaggingAPIRequestPrivate {
+class ResourceGroupsTaggingAPIRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ResourceGroupsTaggingAPIRequest::Action action; ///< ResourceGroupsTaggingAPI action to be performed.
@@ -36,9 +39,6 @@ public:
     ResourceGroupsTaggingAPIRequestPrivate(const ResourceGroupsTaggingAPIRequestPrivate &other, ResourceGroupsTaggingAPIRequest * const q);
 
     static QString toString(const ResourceGroupsTaggingAPIRequest::Action &action);
-
-protected:
-    ResourceGroupsTaggingAPIRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ResourceGroupsTaggingAPIRequest)

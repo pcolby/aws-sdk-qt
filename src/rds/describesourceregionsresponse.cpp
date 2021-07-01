@@ -119,7 +119,8 @@ DescribeSourceRegionsResponse::DescribeSourceRegionsResponse(
  */
 const DescribeSourceRegionsRequest * DescribeSourceRegionsResponse::request() const
 {
-    return static_cast<const DescribeSourceRegionsRequest *>(RdsResponse::request());
+    Q_D(const DescribeSourceRegionsResponse);
+    return static_cast<const DescribeSourceRegionsRequest *>(d->request);
 }
 
 /*!

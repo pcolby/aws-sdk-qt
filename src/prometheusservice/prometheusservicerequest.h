@@ -63,8 +63,7 @@ public:
 
 protected:
     /// @cond internal
-    PrometheusServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit PrometheusServiceRequest(PrometheusServiceRequestPrivate * const d);
+    PrometheusServiceRequest(PrometheusServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

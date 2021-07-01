@@ -240,7 +240,8 @@ PutActionRevisionResponse::PutActionRevisionResponse(
  */
 const PutActionRevisionRequest * PutActionRevisionResponse::request() const
 {
-    return static_cast<const PutActionRevisionRequest *>(CodePipelineResponse::request());
+    Q_D(const PutActionRevisionResponse);
+    return static_cast<const PutActionRevisionRequest *>(d->request);
 }
 
 /*!

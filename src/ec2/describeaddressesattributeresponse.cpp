@@ -87,7 +87,8 @@ DescribeAddressesAttributeResponse::DescribeAddressesAttributeResponse(
  */
 const DescribeAddressesAttributeRequest * DescribeAddressesAttributeResponse::request() const
 {
-    return static_cast<const DescribeAddressesAttributeRequest *>(Ec2Response::request());
+    Q_D(const DescribeAddressesAttributeResponse);
+    return static_cast<const DescribeAddressesAttributeRequest *>(d->request);
 }
 
 /*!

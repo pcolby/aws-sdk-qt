@@ -154,7 +154,8 @@ DisableKeyRotationResponse::DisableKeyRotationResponse(
  */
 const DisableKeyRotationRequest * DisableKeyRotationResponse::request() const
 {
-    return static_cast<const DisableKeyRotationRequest *>(KmsResponse::request());
+    Q_D(const DisableKeyRotationResponse);
+    return static_cast<const DisableKeyRotationRequest *>(d->request);
 }
 
 /*!

@@ -85,7 +85,8 @@ RevokeEndpointAccessResponse::RevokeEndpointAccessResponse(
  */
 const RevokeEndpointAccessRequest * RevokeEndpointAccessResponse::request() const
 {
-    return static_cast<const RevokeEndpointAccessRequest *>(RedshiftResponse::request());
+    Q_D(const RevokeEndpointAccessResponse);
+    return static_cast<const RevokeEndpointAccessRequest *>(d->request);
 }
 
 /*!

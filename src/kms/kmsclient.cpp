@@ -250,16 +250,16 @@ KmsClient::KmsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-11-01"),
-    QStringLiteral("kms"),
-    QStringLiteral("AWS Key Management Service"),
-    QStringLiteral("kms"),
-    parent), d_ptr(new KmsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new KmsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(KmsClient);
+    d->apiVersion = QStringLiteral("2014-11-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("kms");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Key Management Service");
+    d->serviceName = QStringLiteral("kms");
 }
 
 /*!
@@ -278,16 +278,16 @@ KmsClient::KmsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-11-01"),
-    QStringLiteral("kms"),
-    QStringLiteral("AWS Key Management Service"),
-    QStringLiteral("kms"),
-    parent), d_ptr(new KmsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new KmsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(KmsClient);
+    d->apiVersion = QStringLiteral("2014-11-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("kms");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Key Management Service");
+    d->serviceName = QStringLiteral("kms");
 }
 
 /*!
@@ -3521,9 +3521,10 @@ VerifyResponse * KmsClient::verify(const VerifyRequest &request)
 /*!
  * Constructs a KmsClientPrivate object with public implementation \a q.
  */
-KmsClientPrivate::KmsClientPrivate(KmsClient * const q) : q_ptr(q)
+KmsClientPrivate::KmsClientPrivate(KmsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace KMS

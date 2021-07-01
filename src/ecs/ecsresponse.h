@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    EcsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     EcsResponse(EcsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

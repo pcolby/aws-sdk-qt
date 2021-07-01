@@ -20,20 +20,19 @@
 #ifndef QTAWS_GLUECLIENT_P_H
 #define QTAWS_GLUECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Glue {
 
 class GlueClient;
 
-class GlueClientPrivate {
+class GlueClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit GlueClientPrivate(GlueClient * const q);
-
-protected:
-    GlueClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GlueClient)

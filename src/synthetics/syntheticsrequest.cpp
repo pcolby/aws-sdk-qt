@@ -55,7 +55,7 @@ namespace Synthetics {
  * Constructs a SyntheticsRequest object for Synthetics \a action.
  */
 SyntheticsRequest::SyntheticsRequest(const Action action)
-    : d_ptr(new SyntheticsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SyntheticsRequestPrivate(action, this))
 {
 
 }
@@ -64,8 +64,7 @@ SyntheticsRequest::SyntheticsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SyntheticsRequest::SyntheticsRequest(const SyntheticsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new SyntheticsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SyntheticsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -88,7 +87,7 @@ SyntheticsRequest& SyntheticsRequest::operator=(const SyntheticsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SyntheticsRequestPrivate.
  */
-SyntheticsRequest::SyntheticsRequest(SyntheticsRequestPrivate * const d) : d_ptr(d)
+SyntheticsRequest::SyntheticsRequest(SyntheticsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -257,7 +256,7 @@ QNetworkRequest SyntheticsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SyntheticsRequestPrivate::SyntheticsRequestPrivate(const SyntheticsRequest::Action action, SyntheticsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -272,8 +271,8 @@ SyntheticsRequestPrivate::SyntheticsRequestPrivate(const SyntheticsRequest::Acti
  */
 SyntheticsRequestPrivate::SyntheticsRequestPrivate(const SyntheticsRequestPrivate &other,
                                      SyntheticsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -87,7 +87,8 @@ DeleteSubnetResponse::DeleteSubnetResponse(
  */
 const DeleteSubnetRequest * DeleteSubnetResponse::request() const
 {
-    return static_cast<const DeleteSubnetRequest *>(Ec2Response::request());
+    Q_D(const DeleteSubnetResponse);
+    return static_cast<const DeleteSubnetRequest *>(d->request);
 }
 
 /*!

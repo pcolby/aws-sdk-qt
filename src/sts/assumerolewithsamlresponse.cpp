@@ -61,7 +61,8 @@ AssumeRoleWithSAMLResponse::AssumeRoleWithSAMLResponse(
  */
 const AssumeRoleWithSAMLRequest * AssumeRoleWithSAMLResponse::request() const
 {
-    return static_cast<const AssumeRoleWithSAMLRequest *>(StsResponse::request());
+    Q_D(const AssumeRoleWithSAMLResponse);
+    return static_cast<const AssumeRoleWithSAMLRequest *>(d->request);
 }
 
 /*!

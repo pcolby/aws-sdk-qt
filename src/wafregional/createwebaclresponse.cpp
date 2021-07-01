@@ -78,7 +78,8 @@ CreateWebACLResponse::CreateWebACLResponse(
  */
 const CreateWebACLRequest * CreateWebACLResponse::request() const
 {
-    return static_cast<const CreateWebACLRequest *>(WAFRegionalResponse::request());
+    Q_D(const CreateWebACLResponse);
+    return static_cast<const CreateWebACLRequest *>(d->request);
 }
 
 /*!

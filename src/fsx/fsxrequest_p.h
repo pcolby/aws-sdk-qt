@@ -20,12 +20,15 @@
 #ifndef QTAWS_FSXREQUEST_P_H
 #define QTAWS_FSXREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "fsxrequest.h"
+
 namespace QtAws {
 namespace FSx {
 
 class FSxRequest;
 
-class FSxRequestPrivate {
+class FSxRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     FSxRequest::Action action; ///< FSx action to be performed.
@@ -36,9 +39,6 @@ public:
     FSxRequestPrivate(const FSxRequestPrivate &other, FSxRequest * const q);
 
     static QString toString(const FSxRequest::Action &action);
-
-protected:
-    FSxRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FSxRequest)

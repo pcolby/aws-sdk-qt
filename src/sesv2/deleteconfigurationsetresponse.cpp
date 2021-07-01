@@ -88,7 +88,8 @@ DeleteConfigurationSetResponse::DeleteConfigurationSetResponse(
  */
 const DeleteConfigurationSetRequest * DeleteConfigurationSetResponse::request() const
 {
-    return static_cast<const DeleteConfigurationSetRequest *>(Sesv2Response::request());
+    Q_D(const DeleteConfigurationSetResponse);
+    return static_cast<const DeleteConfigurationSetRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ RebootInstancesResponse::RebootInstancesResponse(
  */
 const RebootInstancesRequest * RebootInstancesResponse::request() const
 {
-    return static_cast<const RebootInstancesRequest *>(Ec2Response::request());
+    Q_D(const RebootInstancesResponse);
+    return static_cast<const RebootInstancesRequest *>(d->request);
 }
 
 /*!

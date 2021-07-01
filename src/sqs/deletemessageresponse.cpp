@@ -126,7 +126,8 @@ DeleteMessageResponse::DeleteMessageResponse(
  */
 const DeleteMessageRequest * DeleteMessageResponse::request() const
 {
-    return static_cast<const DeleteMessageRequest *>(SqsResponse::request());
+    Q_D(const DeleteMessageResponse);
+    return static_cast<const DeleteMessageRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetCheckerIpRangesResponse::GetCheckerIpRangesResponse(
  */
 const GetCheckerIpRangesRequest * GetCheckerIpRangesResponse::request() const
 {
-    return static_cast<const GetCheckerIpRangesRequest *>(Route53Response::request());
+    Q_D(const GetCheckerIpRangesResponse);
+    return static_cast<const GetCheckerIpRangesRequest *>(d->request);
 }
 
 /*!

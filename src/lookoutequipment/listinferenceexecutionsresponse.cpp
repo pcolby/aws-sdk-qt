@@ -57,7 +57,8 @@ ListInferenceExecutionsResponse::ListInferenceExecutionsResponse(
  */
 const ListInferenceExecutionsRequest * ListInferenceExecutionsResponse::request() const
 {
-    return static_cast<const ListInferenceExecutionsRequest *>(LookoutEquipmentResponse::request());
+    Q_D(const ListInferenceExecutionsResponse);
+    return static_cast<const ListInferenceExecutionsRequest *>(d->request);
 }
 
 /*!

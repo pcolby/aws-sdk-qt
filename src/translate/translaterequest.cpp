@@ -56,7 +56,7 @@ namespace Translate {
  * Constructs a TranslateRequest object for Translate \a action.
  */
 TranslateRequest::TranslateRequest(const Action action)
-    : d_ptr(new TranslateRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new TranslateRequestPrivate(action, this))
 {
 
 }
@@ -65,8 +65,7 @@ TranslateRequest::TranslateRequest(const Action action)
  * Constructs a copy of \a other.
  */
 TranslateRequest::TranslateRequest(const TranslateRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new TranslateRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new TranslateRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -89,7 +88,7 @@ TranslateRequest& TranslateRequest::operator=(const TranslateRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from TranslateRequestPrivate.
  */
-TranslateRequest::TranslateRequest(TranslateRequestPrivate * const d) : d_ptr(d)
+TranslateRequest::TranslateRequest(TranslateRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -258,7 +257,7 @@ QNetworkRequest TranslateRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 TranslateRequestPrivate::TranslateRequestPrivate(const TranslateRequest::Action action, TranslateRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -273,8 +272,8 @@ TranslateRequestPrivate::TranslateRequestPrivate(const TranslateRequest::Action 
  */
 TranslateRequestPrivate::TranslateRequestPrivate(const TranslateRequestPrivate &other,
                                      TranslateRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

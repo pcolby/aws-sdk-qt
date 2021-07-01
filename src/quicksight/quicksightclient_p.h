@@ -20,20 +20,19 @@
 #ifndef QTAWS_QUICKSIGHTCLIENT_P_H
 #define QTAWS_QUICKSIGHTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace QuickSight {
 
 class QuickSightClient;
 
-class QuickSightClientPrivate {
+class QuickSightClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit QuickSightClientPrivate(QuickSightClient * const q);
-
-protected:
-    QuickSightClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(QuickSightClient)

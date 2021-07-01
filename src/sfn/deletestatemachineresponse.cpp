@@ -74,7 +74,8 @@ DeleteStateMachineResponse::DeleteStateMachineResponse(
  */
 const DeleteStateMachineRequest * DeleteStateMachineResponse::request() const
 {
-    return static_cast<const DeleteStateMachineRequest *>(SfnResponse::request());
+    Q_D(const DeleteStateMachineResponse);
+    return static_cast<const DeleteStateMachineRequest *>(d->request);
 }
 
 /*!

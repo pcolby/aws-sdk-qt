@@ -74,7 +74,8 @@ ListStateMachinesResponse::ListStateMachinesResponse(
  */
 const ListStateMachinesRequest * ListStateMachinesResponse::request() const
 {
-    return static_cast<const ListStateMachinesRequest *>(SfnResponse::request());
+    Q_D(const ListStateMachinesResponse);
+    return static_cast<const ListStateMachinesRequest *>(d->request);
 }
 
 /*!

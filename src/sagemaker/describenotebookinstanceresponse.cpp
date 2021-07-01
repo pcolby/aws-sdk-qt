@@ -70,7 +70,8 @@ DescribeNotebookInstanceResponse::DescribeNotebookInstanceResponse(
  */
 const DescribeNotebookInstanceRequest * DescribeNotebookInstanceResponse::request() const
 {
-    return static_cast<const DescribeNotebookInstanceRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeNotebookInstanceResponse);
+    return static_cast<const DescribeNotebookInstanceRequest *>(d->request);
 }
 
 /*!

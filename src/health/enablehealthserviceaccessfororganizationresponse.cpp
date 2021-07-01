@@ -106,7 +106,8 @@ EnableHealthServiceAccessForOrganizationResponse::EnableHealthServiceAccessForOr
  */
 const EnableHealthServiceAccessForOrganizationRequest * EnableHealthServiceAccessForOrganizationResponse::request() const
 {
-    return static_cast<const EnableHealthServiceAccessForOrganizationRequest *>(HealthResponse::request());
+    Q_D(const EnableHealthServiceAccessForOrganizationResponse);
+    return static_cast<const EnableHealthServiceAccessForOrganizationRequest *>(d->request);
 }
 
 /*!

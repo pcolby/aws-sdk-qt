@@ -74,7 +74,8 @@ DescribeLimitsResponse::DescribeLimitsResponse(
  */
 const DescribeLimitsRequest * DescribeLimitsResponse::request() const
 {
-    return static_cast<const DescribeLimitsRequest *>(DynamoDBResponse::request());
+    Q_D(const DescribeLimitsResponse);
+    return static_cast<const DescribeLimitsRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ DeregisterInstanceEventNotificationAttributesResponse::DeregisterInstanceEventNo
  */
 const DeregisterInstanceEventNotificationAttributesRequest * DeregisterInstanceEventNotificationAttributesResponse::request() const
 {
-    return static_cast<const DeregisterInstanceEventNotificationAttributesRequest *>(Ec2Response::request());
+    Q_D(const DeregisterInstanceEventNotificationAttributesResponse);
+    return static_cast<const DeregisterInstanceEventNotificationAttributesRequest *>(d->request);
 }
 
 /*!

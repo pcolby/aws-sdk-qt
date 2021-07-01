@@ -63,7 +63,8 @@ ListTablesResponse::ListTablesResponse(
  */
 const ListTablesRequest * ListTablesResponse::request() const
 {
-    return static_cast<const ListTablesRequest *>(RedshiftDataAPIServiceResponse::request());
+    Q_D(const ListTablesResponse);
+    return static_cast<const ListTablesRequest *>(d->request);
 }
 
 /*!

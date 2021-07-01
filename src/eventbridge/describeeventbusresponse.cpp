@@ -78,7 +78,8 @@ DescribeEventBusResponse::DescribeEventBusResponse(
  */
 const DescribeEventBusRequest * DescribeEventBusResponse::request() const
 {
-    return static_cast<const DescribeEventBusRequest *>(EventBridgeResponse::request());
+    Q_D(const DescribeEventBusResponse);
+    return static_cast<const DescribeEventBusRequest *>(d->request);
 }
 
 /*!

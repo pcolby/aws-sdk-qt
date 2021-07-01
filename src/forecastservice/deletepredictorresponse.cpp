@@ -56,7 +56,8 @@ DeletePredictorResponse::DeletePredictorResponse(
  */
 const DeletePredictorRequest * DeletePredictorResponse::request() const
 {
-    return static_cast<const DeletePredictorRequest *>(ForecastServiceResponse::request());
+    Q_D(const DeletePredictorResponse);
+    return static_cast<const DeletePredictorRequest *>(d->request);
 }
 
 /*!

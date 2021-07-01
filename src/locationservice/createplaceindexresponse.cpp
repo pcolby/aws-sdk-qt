@@ -56,7 +56,8 @@ CreatePlaceIndexResponse::CreatePlaceIndexResponse(
  */
 const CreatePlaceIndexRequest * CreatePlaceIndexResponse::request() const
 {
-    return static_cast<const CreatePlaceIndexRequest *>(LocationServiceResponse::request());
+    Q_D(const CreatePlaceIndexResponse);
+    return static_cast<const CreatePlaceIndexRequest *>(d->request);
 }
 
 /*!

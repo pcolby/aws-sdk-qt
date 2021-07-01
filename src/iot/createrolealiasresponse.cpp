@@ -82,7 +82,8 @@ CreateRoleAliasResponse::CreateRoleAliasResponse(
  */
 const CreateRoleAliasRequest * CreateRoleAliasResponse::request() const
 {
-    return static_cast<const CreateRoleAliasRequest *>(IoTResponse::request());
+    Q_D(const CreateRoleAliasResponse);
+    return static_cast<const CreateRoleAliasRequest *>(d->request);
 }
 
 /*!

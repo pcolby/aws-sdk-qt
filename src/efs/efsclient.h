@@ -129,12 +129,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateFileSystemResponse * updateFileSystem(const UpdateFileSystemRequest &request);
 
-protected:
-    /// @cond internal
-    EfsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EfsClient(EfsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(EfsClient)
     Q_DISABLE_COPY(EfsClient)

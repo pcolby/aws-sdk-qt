@@ -87,7 +87,8 @@ DisableFastSnapshotRestoresResponse::DisableFastSnapshotRestoresResponse(
  */
 const DisableFastSnapshotRestoresRequest * DisableFastSnapshotRestoresResponse::request() const
 {
-    return static_cast<const DisableFastSnapshotRestoresRequest *>(Ec2Response::request());
+    Q_D(const DisableFastSnapshotRestoresResponse);
+    return static_cast<const DisableFastSnapshotRestoresRequest *>(d->request);
 }
 
 /*!

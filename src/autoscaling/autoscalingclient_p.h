@@ -20,20 +20,19 @@
 #ifndef QTAWS_AUTOSCALINGCLIENT_P_H
 #define QTAWS_AUTOSCALINGCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace AutoScaling {
 
 class AutoScalingClient;
 
-class AutoScalingClientPrivate {
+class AutoScalingClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit AutoScalingClientPrivate(AutoScalingClient * const q);
-
-protected:
-    AutoScalingClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AutoScalingClient)

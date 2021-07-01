@@ -103,7 +103,8 @@ DeleteInsightResponse::DeleteInsightResponse(
  */
 const DeleteInsightRequest * DeleteInsightResponse::request() const
 {
-    return static_cast<const DeleteInsightRequest *>(SecurityHubResponse::request());
+    Q_D(const DeleteInsightResponse);
+    return static_cast<const DeleteInsightRequest *>(d->request);
 }
 
 /*!

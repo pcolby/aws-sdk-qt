@@ -88,7 +88,8 @@ PutAccountSuppressionAttributesResponse::PutAccountSuppressionAttributesResponse
  */
 const PutAccountSuppressionAttributesRequest * PutAccountSuppressionAttributesResponse::request() const
 {
-    return static_cast<const PutAccountSuppressionAttributesRequest *>(Sesv2Response::request());
+    Q_D(const PutAccountSuppressionAttributesResponse);
+    return static_cast<const PutAccountSuppressionAttributesRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ DisassociateRoleFromGroupResponse::DisassociateRoleFromGroupResponse(
  */
 const DisassociateRoleFromGroupRequest * DisassociateRoleFromGroupResponse::request() const
 {
-    return static_cast<const DisassociateRoleFromGroupRequest *>(GreengrassResponse::request());
+    Q_D(const DisassociateRoleFromGroupResponse);
+    return static_cast<const DisassociateRoleFromGroupRequest *>(d->request);
 }
 
 /*!

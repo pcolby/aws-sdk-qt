@@ -58,7 +58,8 @@ GetResourceDefinitionResponse::GetResourceDefinitionResponse(
  */
 const GetResourceDefinitionRequest * GetResourceDefinitionResponse::request() const
 {
-    return static_cast<const GetResourceDefinitionRequest *>(GreengrassResponse::request());
+    Q_D(const GetResourceDefinitionResponse);
+    return static_cast<const GetResourceDefinitionRequest *>(d->request);
 }
 
 /*!

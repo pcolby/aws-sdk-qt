@@ -20,12 +20,15 @@
 #ifndef QTAWS_ACCESSANALYZERREQUEST_P_H
 #define QTAWS_ACCESSANALYZERREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "accessanalyzerrequest.h"
+
 namespace QtAws {
 namespace AccessAnalyzer {
 
 class AccessAnalyzerRequest;
 
-class AccessAnalyzerRequestPrivate {
+class AccessAnalyzerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AccessAnalyzerRequest::Action action; ///< AccessAnalyzer action to be performed.
@@ -36,9 +39,6 @@ public:
     AccessAnalyzerRequestPrivate(const AccessAnalyzerRequestPrivate &other, AccessAnalyzerRequest * const q);
 
     static QString toString(const AccessAnalyzerRequest::Action &action);
-
-protected:
-    AccessAnalyzerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AccessAnalyzerRequest)

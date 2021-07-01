@@ -56,7 +56,8 @@ GetBackendJobResponse::GetBackendJobResponse(
  */
 const GetBackendJobRequest * GetBackendJobResponse::request() const
 {
-    return static_cast<const GetBackendJobRequest *>(AmplifyBackendResponse::request());
+    Q_D(const GetBackendJobResponse);
+    return static_cast<const GetBackendJobRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ ListEnvironmentsResponse::ListEnvironmentsResponse(
  */
 const ListEnvironmentsRequest * ListEnvironmentsResponse::request() const
 {
-    return static_cast<const ListEnvironmentsRequest *>(finspaceResponse::request());
+    Q_D(const ListEnvironmentsResponse);
+    return static_cast<const ListEnvironmentsRequest *>(d->request);
 }
 
 /*!

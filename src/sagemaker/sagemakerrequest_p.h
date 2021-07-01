@@ -20,12 +20,15 @@
 #ifndef QTAWS_SAGEMAKERREQUEST_P_H
 #define QTAWS_SAGEMAKERREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "sagemakerrequest.h"
+
 namespace QtAws {
 namespace SageMaker {
 
 class SageMakerRequest;
 
-class SageMakerRequestPrivate {
+class SageMakerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SageMakerRequest::Action action; ///< SageMaker action to be performed.
@@ -36,9 +39,6 @@ public:
     SageMakerRequestPrivate(const SageMakerRequestPrivate &other, SageMakerRequest * const q);
 
     static QString toString(const SageMakerRequest::Action &action);
-
-protected:
-    SageMakerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SageMakerRequest)

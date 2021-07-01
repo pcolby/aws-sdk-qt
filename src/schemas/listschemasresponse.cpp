@@ -56,7 +56,8 @@ ListSchemasResponse::ListSchemasResponse(
  */
 const ListSchemasRequest * ListSchemasResponse::request() const
 {
-    return static_cast<const ListSchemasRequest *>(SchemasResponse::request());
+    Q_D(const ListSchemasResponse);
+    return static_cast<const ListSchemasRequest *>(d->request);
 }
 
 /*!

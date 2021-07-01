@@ -66,7 +66,8 @@ DeleteVodSourceResponse::DeleteVodSourceResponse(
  */
 const DeleteVodSourceRequest * DeleteVodSourceResponse::request() const
 {
-    return static_cast<const DeleteVodSourceRequest *>(MediaTailorResponse::request());
+    Q_D(const DeleteVodSourceResponse);
+    return static_cast<const DeleteVodSourceRequest *>(d->request);
 }
 
 /*!

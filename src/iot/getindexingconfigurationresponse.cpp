@@ -82,7 +82,8 @@ GetIndexingConfigurationResponse::GetIndexingConfigurationResponse(
  */
 const GetIndexingConfigurationRequest * GetIndexingConfigurationResponse::request() const
 {
-    return static_cast<const GetIndexingConfigurationRequest *>(IoTResponse::request());
+    Q_D(const GetIndexingConfigurationResponse);
+    return static_cast<const GetIndexingConfigurationRequest *>(d->request);
 }
 
 /*!

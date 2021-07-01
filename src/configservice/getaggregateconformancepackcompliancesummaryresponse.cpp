@@ -75,7 +75,8 @@ GetAggregateConformancePackComplianceSummaryResponse::GetAggregateConformancePac
  */
 const GetAggregateConformancePackComplianceSummaryRequest * GetAggregateConformancePackComplianceSummaryResponse::request() const
 {
-    return static_cast<const GetAggregateConformancePackComplianceSummaryRequest *>(ConfigServiceResponse::request());
+    Q_D(const GetAggregateConformancePackComplianceSummaryResponse);
+    return static_cast<const GetAggregateConformancePackComplianceSummaryRequest *>(d->request);
 }
 
 /*!

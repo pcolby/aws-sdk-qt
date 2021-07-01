@@ -74,8 +74,7 @@ public:
 
 protected:
     /// @cond internal
-    ResourceGroupsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ResourceGroupsRequest(ResourceGroupsRequestPrivate * const d);
+    ResourceGroupsRequest(ResourceGroupsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

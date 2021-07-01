@@ -60,7 +60,8 @@ DescribeBucketsResponse::DescribeBucketsResponse(
  */
 const DescribeBucketsRequest * DescribeBucketsResponse::request() const
 {
-    return static_cast<const DescribeBucketsRequest *>(Macie2Response::request());
+    Q_D(const DescribeBucketsResponse);
+    return static_cast<const DescribeBucketsRequest *>(d->request);
 }
 
 /*!

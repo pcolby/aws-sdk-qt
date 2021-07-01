@@ -66,7 +66,8 @@ CreateReceiptFilterResponse::CreateReceiptFilterResponse(
  */
 const CreateReceiptFilterRequest * CreateReceiptFilterResponse::request() const
 {
-    return static_cast<const CreateReceiptFilterRequest *>(SesResponse::request());
+    Q_D(const CreateReceiptFilterResponse);
+    return static_cast<const CreateReceiptFilterRequest *>(d->request);
 }
 
 /*!

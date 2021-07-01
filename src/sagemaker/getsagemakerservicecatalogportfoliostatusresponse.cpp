@@ -70,7 +70,8 @@ GetSagemakerServicecatalogPortfolioStatusResponse::GetSagemakerServicecatalogPor
  */
 const GetSagemakerServicecatalogPortfolioStatusRequest * GetSagemakerServicecatalogPortfolioStatusResponse::request() const
 {
-    return static_cast<const GetSagemakerServicecatalogPortfolioStatusRequest *>(SageMakerResponse::request());
+    Q_D(const GetSagemakerServicecatalogPortfolioStatusResponse);
+    return static_cast<const GetSagemakerServicecatalogPortfolioStatusRequest *>(d->request);
 }
 
 /*!

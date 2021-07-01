@@ -61,7 +61,8 @@ CreateApplicationResponse::CreateApplicationResponse(
  */
 const CreateApplicationRequest * CreateApplicationResponse::request() const
 {
-    return static_cast<const CreateApplicationRequest *>(IoTFleetHubResponse::request());
+    Q_D(const CreateApplicationResponse);
+    return static_cast<const CreateApplicationRequest *>(d->request);
 }
 
 /*!

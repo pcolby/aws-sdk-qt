@@ -20,20 +20,19 @@
 #ifndef QTAWS_PINPOINTCLIENT_P_H
 #define QTAWS_PINPOINTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Pinpoint {
 
 class PinpointClient;
 
-class PinpointClientPrivate {
+class PinpointClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit PinpointClientPrivate(PinpointClient * const q);
-
-protected:
-    PinpointClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PinpointClient)

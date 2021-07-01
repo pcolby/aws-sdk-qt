@@ -61,7 +61,8 @@ DescribeDRTAccessResponse::DescribeDRTAccessResponse(
  */
 const DescribeDRTAccessRequest * DescribeDRTAccessResponse::request() const
 {
-    return static_cast<const DescribeDRTAccessRequest *>(ShieldResponse::request());
+    Q_D(const DescribeDRTAccessResponse);
+    return static_cast<const DescribeDRTAccessRequest *>(d->request);
 }
 
 /*!

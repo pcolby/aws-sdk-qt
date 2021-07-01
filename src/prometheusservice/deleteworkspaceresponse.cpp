@@ -56,7 +56,8 @@ DeleteWorkspaceResponse::DeleteWorkspaceResponse(
  */
 const DeleteWorkspaceRequest * DeleteWorkspaceResponse::request() const
 {
-    return static_cast<const DeleteWorkspaceRequest *>(PrometheusServiceResponse::request());
+    Q_D(const DeleteWorkspaceResponse);
+    return static_cast<const DeleteWorkspaceRequest *>(d->request);
 }
 
 /*!

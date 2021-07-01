@@ -218,7 +218,8 @@ DescribeAcceleratorResponse::DescribeAcceleratorResponse(
  */
 const DescribeAcceleratorRequest * DescribeAcceleratorResponse::request() const
 {
-    return static_cast<const DescribeAcceleratorRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const DescribeAcceleratorResponse);
+    return static_cast<const DescribeAcceleratorRequest *>(d->request);
 }
 
 /*!

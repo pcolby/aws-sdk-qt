@@ -75,7 +75,8 @@ StopRemoteAccessSessionResponse::StopRemoteAccessSessionResponse(
  */
 const StopRemoteAccessSessionRequest * StopRemoteAccessSessionResponse::request() const
 {
-    return static_cast<const StopRemoteAccessSessionRequest *>(DeviceFarmResponse::request());
+    Q_D(const StopRemoteAccessSessionResponse);
+    return static_cast<const StopRemoteAccessSessionRequest *>(d->request);
 }
 
 /*!

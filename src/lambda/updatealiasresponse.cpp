@@ -66,7 +66,8 @@ UpdateAliasResponse::UpdateAliasResponse(
  */
 const UpdateAliasRequest * UpdateAliasResponse::request() const
 {
-    return static_cast<const UpdateAliasRequest *>(LambdaResponse::request());
+    Q_D(const UpdateAliasResponse);
+    return static_cast<const UpdateAliasRequest *>(d->request);
 }
 
 /*!

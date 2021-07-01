@@ -85,7 +85,8 @@ EnableLoggingResponse::EnableLoggingResponse(
  */
 const EnableLoggingRequest * EnableLoggingResponse::request() const
 {
-    return static_cast<const EnableLoggingRequest *>(RedshiftResponse::request());
+    Q_D(const EnableLoggingResponse);
+    return static_cast<const EnableLoggingRequest *>(d->request);
 }
 
 /*!

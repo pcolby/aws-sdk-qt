@@ -65,7 +65,8 @@ DescribeNodegroupResponse::DescribeNodegroupResponse(
  */
 const DescribeNodegroupRequest * DescribeNodegroupResponse::request() const
 {
-    return static_cast<const DescribeNodegroupRequest *>(EksResponse::request());
+    Q_D(const DescribeNodegroupResponse);
+    return static_cast<const DescribeNodegroupRequest *>(d->request);
 }
 
 /*!

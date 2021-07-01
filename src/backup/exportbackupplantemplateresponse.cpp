@@ -59,7 +59,8 @@ ExportBackupPlanTemplateResponse::ExportBackupPlanTemplateResponse(
  */
 const ExportBackupPlanTemplateRequest * ExportBackupPlanTemplateResponse::request() const
 {
-    return static_cast<const ExportBackupPlanTemplateRequest *>(BackupResponse::request());
+    Q_D(const ExportBackupPlanTemplateResponse);
+    return static_cast<const ExportBackupPlanTemplateRequest *>(d->request);
 }
 
 /*!

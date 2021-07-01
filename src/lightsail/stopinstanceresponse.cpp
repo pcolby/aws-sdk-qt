@@ -74,7 +74,8 @@ StopInstanceResponse::StopInstanceResponse(
  */
 const StopInstanceRequest * StopInstanceResponse::request() const
 {
-    return static_cast<const StopInstanceRequest *>(LightsailResponse::request());
+    Q_D(const StopInstanceResponse);
+    return static_cast<const StopInstanceRequest *>(d->request);
 }
 
 /*!

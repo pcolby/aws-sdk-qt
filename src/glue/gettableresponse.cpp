@@ -58,7 +58,8 @@ GetTableResponse::GetTableResponse(
  */
 const GetTableRequest * GetTableResponse::request() const
 {
-    return static_cast<const GetTableRequest *>(GlueResponse::request());
+    Q_D(const GetTableResponse);
+    return static_cast<const GetTableRequest *>(d->request);
 }
 
 /*!

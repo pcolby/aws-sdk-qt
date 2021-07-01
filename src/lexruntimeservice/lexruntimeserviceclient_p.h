@@ -20,20 +20,19 @@
 #ifndef QTAWS_LEXRUNTIMESERVICECLIENT_P_H
 #define QTAWS_LEXRUNTIMESERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace LexRuntimeService {
 
 class LexRuntimeServiceClient;
 
-class LexRuntimeServiceClientPrivate {
+class LexRuntimeServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit LexRuntimeServiceClientPrivate(LexRuntimeServiceClient * const q);
-
-protected:
-    LexRuntimeServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LexRuntimeServiceClient)

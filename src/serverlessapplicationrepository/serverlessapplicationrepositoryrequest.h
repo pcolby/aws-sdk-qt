@@ -72,8 +72,7 @@ public:
 
 protected:
     /// @cond internal
-    ServerlessApplicationRepositoryRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ServerlessApplicationRepositoryRequest(ServerlessApplicationRepositoryRequestPrivate * const d);
+    ServerlessApplicationRepositoryRequest(ServerlessApplicationRepositoryRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

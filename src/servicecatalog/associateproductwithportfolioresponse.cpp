@@ -61,7 +61,8 @@ AssociateProductWithPortfolioResponse::AssociateProductWithPortfolioResponse(
  */
 const AssociateProductWithPortfolioRequest * AssociateProductWithPortfolioResponse::request() const
 {
-    return static_cast<const AssociateProductWithPortfolioRequest *>(ServiceCatalogResponse::request());
+    Q_D(const AssociateProductWithPortfolioResponse);
+    return static_cast<const AssociateProductWithPortfolioRequest *>(d->request);
 }
 
 /*!

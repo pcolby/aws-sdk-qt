@@ -75,7 +75,8 @@ ListNetworkProfilesResponse::ListNetworkProfilesResponse(
  */
 const ListNetworkProfilesRequest * ListNetworkProfilesResponse::request() const
 {
-    return static_cast<const ListNetworkProfilesRequest *>(DeviceFarmResponse::request());
+    Q_D(const ListNetworkProfilesResponse);
+    return static_cast<const ListNetworkProfilesRequest *>(d->request);
 }
 
 /*!

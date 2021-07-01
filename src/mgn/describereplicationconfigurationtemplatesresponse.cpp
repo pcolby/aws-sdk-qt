@@ -56,7 +56,8 @@ DescribeReplicationConfigurationTemplatesResponse::DescribeReplicationConfigurat
  */
 const DescribeReplicationConfigurationTemplatesRequest * DescribeReplicationConfigurationTemplatesResponse::request() const
 {
-    return static_cast<const DescribeReplicationConfigurationTemplatesRequest *>(mgnResponse::request());
+    Q_D(const DescribeReplicationConfigurationTemplatesResponse);
+    return static_cast<const DescribeReplicationConfigurationTemplatesRequest *>(d->request);
 }
 
 /*!

@@ -74,7 +74,8 @@ PutFeedbackResponse::PutFeedbackResponse(
  */
 const PutFeedbackRequest * PutFeedbackResponse::request() const
 {
-    return static_cast<const PutFeedbackRequest *>(DevOpsGuruResponse::request());
+    Q_D(const PutFeedbackResponse);
+    return static_cast<const PutFeedbackRequest *>(d->request);
 }
 
 /*!

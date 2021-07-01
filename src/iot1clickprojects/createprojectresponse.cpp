@@ -56,7 +56,8 @@ CreateProjectResponse::CreateProjectResponse(
  */
 const CreateProjectRequest * CreateProjectResponse::request() const
 {
-    return static_cast<const CreateProjectRequest *>(IoT1ClickProjectsResponse::request());
+    Q_D(const CreateProjectResponse);
+    return static_cast<const CreateProjectRequest *>(d->request);
 }
 
 /*!

@@ -126,7 +126,8 @@ CreateIPSetResponse::CreateIPSetResponse(
  */
 const CreateIPSetRequest * CreateIPSetResponse::request() const
 {
-    return static_cast<const CreateIPSetRequest *>(Wafv2Response::request());
+    Q_D(const CreateIPSetResponse);
+    return static_cast<const CreateIPSetRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ ListProjectsResponse::ListProjectsResponse(
  */
 const ListProjectsRequest * ListProjectsResponse::request() const
 {
-    return static_cast<const ListProjectsRequest *>(IoT1ClickProjectsResponse::request());
+    Q_D(const ListProjectsResponse);
+    return static_cast<const ListProjectsRequest *>(d->request);
 }
 
 /*!

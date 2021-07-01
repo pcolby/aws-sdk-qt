@@ -119,7 +119,8 @@ DescribeEngineDefaultClusterParametersResponse::DescribeEngineDefaultClusterPara
  */
 const DescribeEngineDefaultClusterParametersRequest * DescribeEngineDefaultClusterParametersResponse::request() const
 {
-    return static_cast<const DescribeEngineDefaultClusterParametersRequest *>(RdsResponse::request());
+    Q_D(const DescribeEngineDefaultClusterParametersResponse);
+    return static_cast<const DescribeEngineDefaultClusterParametersRequest *>(d->request);
 }
 
 /*!

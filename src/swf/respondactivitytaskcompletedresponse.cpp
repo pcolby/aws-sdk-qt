@@ -71,7 +71,8 @@ RespondActivityTaskCompletedResponse::RespondActivityTaskCompletedResponse(
  */
 const RespondActivityTaskCompletedRequest * RespondActivityTaskCompletedResponse::request() const
 {
-    return static_cast<const RespondActivityTaskCompletedRequest *>(SwfResponse::request());
+    Q_D(const RespondActivityTaskCompletedResponse);
+    return static_cast<const RespondActivityTaskCompletedRequest *>(d->request);
 }
 
 /*!

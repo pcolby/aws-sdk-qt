@@ -98,7 +98,8 @@ DeleteVoiceConnectorGroupResponse::DeleteVoiceConnectorGroupResponse(
  */
 const DeleteVoiceConnectorGroupRequest * DeleteVoiceConnectorGroupResponse::request() const
 {
-    return static_cast<const DeleteVoiceConnectorGroupRequest *>(ChimeResponse::request());
+    Q_D(const DeleteVoiceConnectorGroupResponse);
+    return static_cast<const DeleteVoiceConnectorGroupRequest *>(d->request);
 }
 
 /*!

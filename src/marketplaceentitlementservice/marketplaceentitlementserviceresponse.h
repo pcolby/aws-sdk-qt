@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    MarketplaceEntitlementServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MarketplaceEntitlementServiceResponse(MarketplaceEntitlementServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

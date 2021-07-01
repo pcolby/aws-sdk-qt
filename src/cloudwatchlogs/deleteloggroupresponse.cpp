@@ -84,7 +84,8 @@ DeleteLogGroupResponse::DeleteLogGroupResponse(
  */
 const DeleteLogGroupRequest * DeleteLogGroupResponse::request() const
 {
-    return static_cast<const DeleteLogGroupRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const DeleteLogGroupResponse);
+    return static_cast<const DeleteLogGroupRequest *>(d->request);
 }
 
 /*!

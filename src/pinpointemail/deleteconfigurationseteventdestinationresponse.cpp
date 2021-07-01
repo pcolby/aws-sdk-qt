@@ -92,7 +92,8 @@ DeleteConfigurationSetEventDestinationResponse::DeleteConfigurationSetEventDesti
  */
 const DeleteConfigurationSetEventDestinationRequest * DeleteConfigurationSetEventDestinationResponse::request() const
 {
-    return static_cast<const DeleteConfigurationSetEventDestinationRequest *>(PinpointEmailResponse::request());
+    Q_D(const DeleteConfigurationSetEventDestinationResponse);
+    return static_cast<const DeleteConfigurationSetEventDestinationRequest *>(d->request);
 }
 
 /*!

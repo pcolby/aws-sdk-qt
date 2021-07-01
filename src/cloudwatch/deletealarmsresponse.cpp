@@ -69,7 +69,8 @@ DeleteAlarmsResponse::DeleteAlarmsResponse(
  */
 const DeleteAlarmsRequest * DeleteAlarmsResponse::request() const
 {
-    return static_cast<const DeleteAlarmsRequest *>(CloudWatchResponse::request());
+    Q_D(const DeleteAlarmsResponse);
+    return static_cast<const DeleteAlarmsRequest *>(d->request);
 }
 
 /*!

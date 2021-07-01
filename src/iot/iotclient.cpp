@@ -540,16 +540,16 @@ IoTClient::IoTClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-05-28"),
-    QStringLiteral("iot"),
-    QStringLiteral("AWS IoT"),
-    QStringLiteral("execute-api"),
-    parent), d_ptr(new IoTClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoTClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoTClient);
+    d->apiVersion = QStringLiteral("2015-05-28");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("iot");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS IoT");
+    d->serviceName = QStringLiteral("execute-api");
 }
 
 /*!
@@ -568,16 +568,16 @@ IoTClient::IoTClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-05-28"),
-    QStringLiteral("iot"),
-    QStringLiteral("AWS IoT"),
-    QStringLiteral("execute-api"),
-    parent), d_ptr(new IoTClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoTClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoTClient);
+    d->apiVersion = QStringLiteral("2015-05-28");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("iot");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS IoT");
+    d->serviceName = QStringLiteral("execute-api");
 }
 
 /*!
@@ -3836,9 +3836,10 @@ ValidateSecurityProfileBehaviorsResponse * IoTClient::validateSecurityProfileBeh
 /*!
  * Constructs a IoTClientPrivate object with public implementation \a q.
  */
-IoTClientPrivate::IoTClientPrivate(IoTClient * const q) : q_ptr(q)
+IoTClientPrivate::IoTClientPrivate(IoTClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IoT

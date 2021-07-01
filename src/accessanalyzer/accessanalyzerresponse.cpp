@@ -37,7 +37,7 @@ namespace AccessAnalyzer {
  * Constructs a AccessAnalyzerResponse object with parent \a parent.
  */
 AccessAnalyzerResponse::AccessAnalyzerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AccessAnalyzerResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new AccessAnalyzerResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ AccessAnalyzerResponse::AccessAnalyzerResponse(QObject * const parent)
  * implementation that inherits from AccessAnalyzerResponsePrivate.
  */
 AccessAnalyzerResponse::AccessAnalyzerResponse(AccessAnalyzerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void AccessAnalyzerResponse::parseFailure(QIODevice &response)
  * Constructs a AccessAnalyzerResponsePrivate object with public implementation \a q.
  */
 AccessAnalyzerResponsePrivate::AccessAnalyzerResponsePrivate(
-    AccessAnalyzerResponse * const q) : q_ptr(q)
+    AccessAnalyzerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

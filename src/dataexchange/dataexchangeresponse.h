@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    DataExchangeResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DataExchangeResponse(DataExchangeResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

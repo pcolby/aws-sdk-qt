@@ -85,7 +85,8 @@ DescribeReservedNodeOfferingsResponse::DescribeReservedNodeOfferingsResponse(
  */
 const DescribeReservedNodeOfferingsRequest * DescribeReservedNodeOfferingsResponse::request() const
 {
-    return static_cast<const DescribeReservedNodeOfferingsRequest *>(RedshiftResponse::request());
+    Q_D(const DescribeReservedNodeOfferingsResponse);
+    return static_cast<const DescribeReservedNodeOfferingsRequest *>(d->request);
 }
 
 /*!

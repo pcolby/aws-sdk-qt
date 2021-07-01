@@ -116,7 +116,8 @@ UpdateSubscriberResponse::UpdateSubscriberResponse(
  */
 const UpdateSubscriberRequest * UpdateSubscriberResponse::request() const
 {
-    return static_cast<const UpdateSubscriberRequest *>(BudgetsResponse::request());
+    Q_D(const UpdateSubscriberResponse);
+    return static_cast<const UpdateSubscriberRequest *>(d->request);
 }
 
 /*!

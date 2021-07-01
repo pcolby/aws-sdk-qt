@@ -64,7 +64,8 @@ CreateWebhookResponse::CreateWebhookResponse(
  */
 const CreateWebhookRequest * CreateWebhookResponse::request() const
 {
-    return static_cast<const CreateWebhookRequest *>(CodeBuildResponse::request());
+    Q_D(const CreateWebhookResponse);
+    return static_cast<const CreateWebhookRequest *>(d->request);
 }
 
 /*!

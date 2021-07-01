@@ -20,12 +20,15 @@
 #ifndef QTAWS_STSREQUEST_P_H
 #define QTAWS_STSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "stsrequest.h"
+
 namespace QtAws {
 namespace STS {
 
 class StsRequest;
 
-class StsRequestPrivate {
+class StsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     StsRequest::Action action; ///< STS action to be performed.
@@ -36,9 +39,6 @@ public:
     StsRequestPrivate(const StsRequestPrivate &other, StsRequest * const q);
 
     static QString toString(const StsRequest::Action &action);
-
-protected:
-    StsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(StsRequest)

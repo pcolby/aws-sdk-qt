@@ -56,7 +56,8 @@ RemoveSourceIdentifierFromSubscriptionResponse::RemoveSourceIdentifierFromSubscr
  */
 const RemoveSourceIdentifierFromSubscriptionRequest * RemoveSourceIdentifierFromSubscriptionResponse::request() const
 {
-    return static_cast<const RemoveSourceIdentifierFromSubscriptionRequest *>(DocDBResponse::request());
+    Q_D(const RemoveSourceIdentifierFromSubscriptionResponse);
+    return static_cast<const RemoveSourceIdentifierFromSubscriptionRequest *>(d->request);
 }
 
 /*!

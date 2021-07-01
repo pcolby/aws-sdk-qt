@@ -177,7 +177,8 @@ AcceptEnvironmentAccountConnectionResponse::AcceptEnvironmentAccountConnectionRe
  */
 const AcceptEnvironmentAccountConnectionRequest * AcceptEnvironmentAccountConnectionResponse::request() const
 {
-    return static_cast<const AcceptEnvironmentAccountConnectionRequest *>(ProtonResponse::request());
+    Q_D(const AcceptEnvironmentAccountConnectionResponse);
+    return static_cast<const AcceptEnvironmentAccountConnectionRequest *>(d->request);
 }
 
 /*!

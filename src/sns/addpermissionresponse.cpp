@@ -75,7 +75,8 @@ AddPermissionResponse::AddPermissionResponse(
  */
 const AddPermissionRequest * AddPermissionResponse::request() const
 {
-    return static_cast<const AddPermissionRequest *>(SnsResponse::request());
+    Q_D(const AddPermissionResponse);
+    return static_cast<const AddPermissionRequest *>(d->request);
 }
 
 /*!

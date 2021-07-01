@@ -87,7 +87,8 @@ WithdrawByoipCidrResponse::WithdrawByoipCidrResponse(
  */
 const WithdrawByoipCidrRequest * WithdrawByoipCidrResponse::request() const
 {
-    return static_cast<const WithdrawByoipCidrRequest *>(Ec2Response::request());
+    Q_D(const WithdrawByoipCidrResponse);
+    return static_cast<const WithdrawByoipCidrRequest *>(d->request);
 }
 
 /*!

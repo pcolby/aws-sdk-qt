@@ -87,7 +87,8 @@ DeleteEgressOnlyInternetGatewayResponse::DeleteEgressOnlyInternetGatewayResponse
  */
 const DeleteEgressOnlyInternetGatewayRequest * DeleteEgressOnlyInternetGatewayResponse::request() const
 {
-    return static_cast<const DeleteEgressOnlyInternetGatewayRequest *>(Ec2Response::request());
+    Q_D(const DeleteEgressOnlyInternetGatewayResponse);
+    return static_cast<const DeleteEgressOnlyInternetGatewayRequest *>(d->request);
 }
 
 /*!

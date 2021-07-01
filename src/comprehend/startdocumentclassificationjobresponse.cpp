@@ -58,7 +58,8 @@ StartDocumentClassificationJobResponse::StartDocumentClassificationJobResponse(
  */
 const StartDocumentClassificationJobRequest * StartDocumentClassificationJobResponse::request() const
 {
-    return static_cast<const StartDocumentClassificationJobRequest *>(ComprehendResponse::request());
+    Q_D(const StartDocumentClassificationJobResponse);
+    return static_cast<const StartDocumentClassificationJobRequest *>(d->request);
 }
 
 /*!

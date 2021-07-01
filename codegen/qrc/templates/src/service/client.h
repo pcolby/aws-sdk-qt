@@ -40,12 +40,6 @@ public slots:
 {% endif %}
 {% endfor %}
 
-protected:
-    /// @cond internal
-    {{ClassName}}Private * const d_ptr; ///< Internal d-pointer.
-    explicit {{ClassName}}({{ClassName}}Private * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE({{ClassName}})
     Q_DISABLE_COPY({{ClassName}})

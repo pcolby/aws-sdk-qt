@@ -66,7 +66,8 @@ ListResourceServersResponse::ListResourceServersResponse(
  */
 const ListResourceServersRequest * ListResourceServersResponse::request() const
 {
-    return static_cast<const ListResourceServersRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const ListResourceServersResponse);
+    return static_cast<const ListResourceServersRequest *>(d->request);
 }
 
 /*!

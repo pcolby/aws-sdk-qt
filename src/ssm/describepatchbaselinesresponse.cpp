@@ -98,7 +98,8 @@ DescribePatchBaselinesResponse::DescribePatchBaselinesResponse(
  */
 const DescribePatchBaselinesRequest * DescribePatchBaselinesResponse::request() const
 {
-    return static_cast<const DescribePatchBaselinesRequest *>(SsmResponse::request());
+    Q_D(const DescribePatchBaselinesResponse);
+    return static_cast<const DescribePatchBaselinesRequest *>(d->request);
 }
 
 /*!

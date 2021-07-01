@@ -98,7 +98,8 @@ SendAutomationSignalResponse::SendAutomationSignalResponse(
  */
 const SendAutomationSignalRequest * SendAutomationSignalResponse::request() const
 {
-    return static_cast<const SendAutomationSignalRequest *>(SsmResponse::request());
+    Q_D(const SendAutomationSignalResponse);
+    return static_cast<const SendAutomationSignalRequest *>(d->request);
 }
 
 /*!

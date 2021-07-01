@@ -20,12 +20,15 @@
 #ifndef QTAWS_FORECASTSERVICEREQUEST_P_H
 #define QTAWS_FORECASTSERVICEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "forecastservicerequest.h"
+
 namespace QtAws {
 namespace ForecastService {
 
 class ForecastServiceRequest;
 
-class ForecastServiceRequestPrivate {
+class ForecastServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ForecastServiceRequest::Action action; ///< ForecastService action to be performed.
@@ -36,9 +39,6 @@ public:
     ForecastServiceRequestPrivate(const ForecastServiceRequestPrivate &other, ForecastServiceRequest * const q);
 
     static QString toString(const ForecastServiceRequest::Action &action);
-
-protected:
-    ForecastServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ForecastServiceRequest)

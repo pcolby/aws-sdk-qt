@@ -93,7 +93,8 @@ DeleteHumanLoopResponse::DeleteHumanLoopResponse(
  */
 const DeleteHumanLoopRequest * DeleteHumanLoopResponse::request() const
 {
-    return static_cast<const DeleteHumanLoopRequest *>(AugmentedAIRuntimeResponse::request());
+    Q_D(const DeleteHumanLoopResponse);
+    return static_cast<const DeleteHumanLoopRequest *>(d->request);
 }
 
 /*!

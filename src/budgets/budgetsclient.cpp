@@ -164,16 +164,16 @@ BudgetsClient::BudgetsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-10-20"),
-    QStringLiteral("budgets"),
-    QStringLiteral("AWS Budgets"),
-    QStringLiteral("budgets"),
-    parent), d_ptr(new BudgetsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new BudgetsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(BudgetsClient);
+    d->apiVersion = QStringLiteral("2016-10-20");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("budgets");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Budgets");
+    d->serviceName = QStringLiteral("budgets");
 }
 
 /*!
@@ -192,16 +192,16 @@ BudgetsClient::BudgetsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-10-20"),
-    QStringLiteral("budgets"),
-    QStringLiteral("AWS Budgets"),
-    QStringLiteral("budgets"),
-    parent), d_ptr(new BudgetsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new BudgetsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(BudgetsClient);
+    d->apiVersion = QStringLiteral("2016-10-20");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("budgets");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Budgets");
+    d->serviceName = QStringLiteral("budgets");
 }
 
 /*!
@@ -545,9 +545,10 @@ UpdateSubscriberResponse * BudgetsClient::updateSubscriber(const UpdateSubscribe
 /*!
  * Constructs a BudgetsClientPrivate object with public implementation \a q.
  */
-BudgetsClientPrivate::BudgetsClientPrivate(BudgetsClient * const q) : q_ptr(q)
+BudgetsClientPrivate::BudgetsClientPrivate(BudgetsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Budgets

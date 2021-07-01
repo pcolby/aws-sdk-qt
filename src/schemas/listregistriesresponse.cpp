@@ -56,7 +56,8 @@ ListRegistriesResponse::ListRegistriesResponse(
  */
 const ListRegistriesRequest * ListRegistriesResponse::request() const
 {
-    return static_cast<const ListRegistriesRequest *>(SchemasResponse::request());
+    Q_D(const ListRegistriesResponse);
+    return static_cast<const ListRegistriesRequest *>(d->request);
 }
 
 /*!

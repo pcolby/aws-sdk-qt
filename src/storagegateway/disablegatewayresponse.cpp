@@ -124,7 +124,8 @@ DisableGatewayResponse::DisableGatewayResponse(
  */
 const DisableGatewayRequest * DisableGatewayResponse::request() const
 {
-    return static_cast<const DisableGatewayRequest *>(StorageGatewayResponse::request());
+    Q_D(const DisableGatewayResponse);
+    return static_cast<const DisableGatewayRequest *>(d->request);
 }
 
 /*!

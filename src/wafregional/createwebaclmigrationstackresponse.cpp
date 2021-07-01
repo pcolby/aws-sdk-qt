@@ -78,7 +78,8 @@ CreateWebACLMigrationStackResponse::CreateWebACLMigrationStackResponse(
  */
 const CreateWebACLMigrationStackRequest * CreateWebACLMigrationStackResponse::request() const
 {
-    return static_cast<const CreateWebACLMigrationStackRequest *>(WAFRegionalResponse::request());
+    Q_D(const CreateWebACLMigrationStackResponse);
+    return static_cast<const CreateWebACLMigrationStackRequest *>(d->request);
 }
 
 /*!

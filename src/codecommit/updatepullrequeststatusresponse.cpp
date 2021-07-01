@@ -439,7 +439,8 @@ UpdatePullRequestStatusResponse::UpdatePullRequestStatusResponse(
  */
 const UpdatePullRequestStatusRequest * UpdatePullRequestStatusResponse::request() const
 {
-    return static_cast<const UpdatePullRequestStatusRequest *>(CodeCommitResponse::request());
+    Q_D(const UpdatePullRequestStatusResponse);
+    return static_cast<const UpdatePullRequestStatusRequest *>(d->request);
 }
 
 /*!

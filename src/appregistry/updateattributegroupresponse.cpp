@@ -58,7 +58,8 @@ UpdateAttributeGroupResponse::UpdateAttributeGroupResponse(
  */
 const UpdateAttributeGroupRequest * UpdateAttributeGroupResponse::request() const
 {
-    return static_cast<const UpdateAttributeGroupRequest *>(AppRegistryResponse::request());
+    Q_D(const UpdateAttributeGroupResponse);
+    return static_cast<const UpdateAttributeGroupRequest *>(d->request);
 }
 
 /*!

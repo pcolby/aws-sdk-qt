@@ -56,7 +56,8 @@ ListMedicalTranscriptionJobsResponse::ListMedicalTranscriptionJobsResponse(
  */
 const ListMedicalTranscriptionJobsRequest * ListMedicalTranscriptionJobsResponse::request() const
 {
-    return static_cast<const ListMedicalTranscriptionJobsRequest *>(TranscribeServiceResponse::request());
+    Q_D(const ListMedicalTranscriptionJobsResponse);
+    return static_cast<const ListMedicalTranscriptionJobsRequest *>(d->request);
 }
 
 /*!

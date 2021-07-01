@@ -68,7 +68,7 @@ namespace CloudSearch {
  * Constructs a CloudSearchRequest object for CloudSearch \a action.
  */
 CloudSearchRequest::CloudSearchRequest(const Action action)
-    : d_ptr(new CloudSearchRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudSearchRequestPrivate(action, this))
 {
 
 }
@@ -77,8 +77,7 @@ CloudSearchRequest::CloudSearchRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CloudSearchRequest::CloudSearchRequest(const CloudSearchRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new CloudSearchRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudSearchRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -101,7 +100,7 @@ CloudSearchRequest& CloudSearchRequest::operator=(const CloudSearchRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudSearchRequestPrivate.
  */
-CloudSearchRequest::CloudSearchRequest(CloudSearchRequestPrivate * const d) : d_ptr(d)
+CloudSearchRequest::CloudSearchRequest(CloudSearchRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -270,7 +269,7 @@ QNetworkRequest CloudSearchRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CloudSearchRequestPrivate::CloudSearchRequestPrivate(const CloudSearchRequest::Action action, CloudSearchRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -285,8 +284,8 @@ CloudSearchRequestPrivate::CloudSearchRequestPrivate(const CloudSearchRequest::A
  */
 CloudSearchRequestPrivate::CloudSearchRequestPrivate(const CloudSearchRequestPrivate &other,
                                      CloudSearchRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -77,7 +77,8 @@ RegisterTypeResponse::RegisterTypeResponse(
  */
 const RegisterTypeRequest * RegisterTypeResponse::request() const
 {
-    return static_cast<const RegisterTypeRequest *>(CloudFormationResponse::request());
+    Q_D(const RegisterTypeResponse);
+    return static_cast<const RegisterTypeRequest *>(d->request);
 }
 
 /*!

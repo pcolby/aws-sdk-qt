@@ -74,7 +74,8 @@ UnpeerVpcResponse::UnpeerVpcResponse(
  */
 const UnpeerVpcRequest * UnpeerVpcResponse::request() const
 {
-    return static_cast<const UnpeerVpcRequest *>(LightsailResponse::request());
+    Q_D(const UnpeerVpcResponse);
+    return static_cast<const UnpeerVpcRequest *>(d->request);
 }
 
 /*!

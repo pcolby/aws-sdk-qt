@@ -58,7 +58,8 @@ StartStreamEncryptionResponse::StartStreamEncryptionResponse(
  */
 const StartStreamEncryptionRequest * StartStreamEncryptionResponse::request() const
 {
-    return static_cast<const StartStreamEncryptionRequest *>(KinesisResponse::request());
+    Q_D(const StartStreamEncryptionResponse);
+    return static_cast<const StartStreamEncryptionRequest *>(d->request);
 }
 
 /*!

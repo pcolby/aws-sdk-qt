@@ -87,7 +87,8 @@ CreateSpotDatafeedSubscriptionResponse::CreateSpotDatafeedSubscriptionResponse(
  */
 const CreateSpotDatafeedSubscriptionRequest * CreateSpotDatafeedSubscriptionResponse::request() const
 {
-    return static_cast<const CreateSpotDatafeedSubscriptionRequest *>(Ec2Response::request());
+    Q_D(const CreateSpotDatafeedSubscriptionResponse);
+    return static_cast<const CreateSpotDatafeedSubscriptionRequest *>(d->request);
 }
 
 /*!

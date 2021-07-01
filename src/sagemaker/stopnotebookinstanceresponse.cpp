@@ -70,7 +70,8 @@ StopNotebookInstanceResponse::StopNotebookInstanceResponse(
  */
 const StopNotebookInstanceRequest * StopNotebookInstanceResponse::request() const
 {
-    return static_cast<const StopNotebookInstanceRequest *>(SageMakerResponse::request());
+    Q_D(const StopNotebookInstanceResponse);
+    return static_cast<const StopNotebookInstanceRequest *>(d->request);
 }
 
 /*!

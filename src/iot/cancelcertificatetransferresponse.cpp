@@ -82,7 +82,8 @@ CancelCertificateTransferResponse::CancelCertificateTransferResponse(
  */
 const CancelCertificateTransferRequest * CancelCertificateTransferResponse::request() const
 {
-    return static_cast<const CancelCertificateTransferRequest *>(IoTResponse::request());
+    Q_D(const CancelCertificateTransferResponse);
+    return static_cast<const CancelCertificateTransferRequest *>(d->request);
 }
 
 /*!

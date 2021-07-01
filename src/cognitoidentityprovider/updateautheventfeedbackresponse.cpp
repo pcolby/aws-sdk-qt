@@ -66,7 +66,8 @@ UpdateAuthEventFeedbackResponse::UpdateAuthEventFeedbackResponse(
  */
 const UpdateAuthEventFeedbackRequest * UpdateAuthEventFeedbackResponse::request() const
 {
-    return static_cast<const UpdateAuthEventFeedbackRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const UpdateAuthEventFeedbackResponse);
+    return static_cast<const UpdateAuthEventFeedbackRequest *>(d->request);
 }
 
 /*!

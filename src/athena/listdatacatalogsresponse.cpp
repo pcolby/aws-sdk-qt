@@ -73,7 +73,8 @@ ListDataCatalogsResponse::ListDataCatalogsResponse(
  */
 const ListDataCatalogsRequest * ListDataCatalogsResponse::request() const
 {
-    return static_cast<const ListDataCatalogsRequest *>(AthenaResponse::request());
+    Q_D(const ListDataCatalogsResponse);
+    return static_cast<const ListDataCatalogsRequest *>(d->request);
 }
 
 /*!

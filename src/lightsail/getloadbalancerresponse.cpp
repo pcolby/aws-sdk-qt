@@ -74,7 +74,8 @@ GetLoadBalancerResponse::GetLoadBalancerResponse(
  */
 const GetLoadBalancerRequest * GetLoadBalancerResponse::request() const
 {
-    return static_cast<const GetLoadBalancerRequest *>(LightsailResponse::request());
+    Q_D(const GetLoadBalancerResponse);
+    return static_cast<const GetLoadBalancerRequest *>(d->request);
 }
 
 /*!

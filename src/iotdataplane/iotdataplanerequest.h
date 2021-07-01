@@ -63,8 +63,7 @@ public:
 
 protected:
     /// @cond internal
-    IoTDataPlaneRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IoTDataPlaneRequest(IoTDataPlaneRequestPrivate * const d);
+    IoTDataPlaneRequest(IoTDataPlaneRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

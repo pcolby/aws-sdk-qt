@@ -66,12 +66,6 @@ public slots:
     ListEntitiesResponse * listEntities(const ListEntitiesRequest &request);
     StartChangeSetResponse * startChangeSet(const StartChangeSetRequest &request);
 
-protected:
-    /// @cond internal
-    MarketplaceCatalogClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MarketplaceCatalogClient(MarketplaceCatalogClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MarketplaceCatalogClient)
     Q_DISABLE_COPY(MarketplaceCatalogClient)

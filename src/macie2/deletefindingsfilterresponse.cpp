@@ -60,7 +60,8 @@ DeleteFindingsFilterResponse::DeleteFindingsFilterResponse(
  */
 const DeleteFindingsFilterRequest * DeleteFindingsFilterResponse::request() const
 {
-    return static_cast<const DeleteFindingsFilterRequest *>(Macie2Response::request());
+    Q_D(const DeleteFindingsFilterResponse);
+    return static_cast<const DeleteFindingsFilterRequest *>(d->request);
 }
 
 /*!

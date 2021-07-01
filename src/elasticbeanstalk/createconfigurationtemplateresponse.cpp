@@ -77,7 +77,8 @@ CreateConfigurationTemplateResponse::CreateConfigurationTemplateResponse(
  */
 const CreateConfigurationTemplateRequest * CreateConfigurationTemplateResponse::request() const
 {
-    return static_cast<const CreateConfigurationTemplateRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const CreateConfigurationTemplateResponse);
+    return static_cast<const CreateConfigurationTemplateRequest *>(d->request);
 }
 
 /*!

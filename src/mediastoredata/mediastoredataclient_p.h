@@ -20,20 +20,19 @@
 #ifndef QTAWS_MEDIASTOREDATACLIENT_P_H
 #define QTAWS_MEDIASTOREDATACLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MediaStoreData {
 
 class MediaStoreDataClient;
 
-class MediaStoreDataClientPrivate {
+class MediaStoreDataClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MediaStoreDataClientPrivate(MediaStoreDataClient * const q);
-
-protected:
-    MediaStoreDataClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaStoreDataClient)

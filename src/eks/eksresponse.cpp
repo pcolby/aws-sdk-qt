@@ -37,7 +37,7 @@ namespace EKS {
  * Constructs a EksResponse object with parent \a parent.
  */
 EksResponse::EksResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new EksResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new EksResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ EksResponse::EksResponse(QObject * const parent)
  * implementation that inherits from EksResponsePrivate.
  */
 EksResponse::EksResponse(EksResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void EksResponse::parseFailure(QIODevice &response)
  * Constructs a EksResponsePrivate object with public implementation \a q.
  */
 EksResponsePrivate::EksResponsePrivate(
-    EksResponse * const q) : q_ptr(q)
+    EksResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

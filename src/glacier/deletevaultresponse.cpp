@@ -91,7 +91,8 @@ DeleteVaultResponse::DeleteVaultResponse(
  */
 const DeleteVaultRequest * DeleteVaultResponse::request() const
 {
-    return static_cast<const DeleteVaultRequest *>(GlacierResponse::request());
+    Q_D(const DeleteVaultResponse);
+    return static_cast<const DeleteVaultRequest *>(d->request);
 }
 
 /*!

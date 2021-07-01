@@ -61,7 +61,8 @@ ListAttacksResponse::ListAttacksResponse(
  */
 const ListAttacksRequest * ListAttacksResponse::request() const
 {
-    return static_cast<const ListAttacksRequest *>(ShieldResponse::request());
+    Q_D(const ListAttacksResponse);
+    return static_cast<const ListAttacksRequest *>(d->request);
 }
 
 /*!

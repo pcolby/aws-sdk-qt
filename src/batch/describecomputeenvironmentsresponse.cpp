@@ -68,7 +68,8 @@ DescribeComputeEnvironmentsResponse::DescribeComputeEnvironmentsResponse(
  */
 const DescribeComputeEnvironmentsRequest * DescribeComputeEnvironmentsResponse::request() const
 {
-    return static_cast<const DescribeComputeEnvironmentsRequest *>(BatchResponse::request());
+    Q_D(const DescribeComputeEnvironmentsResponse);
+    return static_cast<const DescribeComputeEnvironmentsRequest *>(d->request);
 }
 
 /*!

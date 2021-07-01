@@ -20,12 +20,14 @@
 #ifndef QTAWS_LOOKOUTEQUIPMENTRESPONSE_P_H
 #define QTAWS_LOOKOUTEQUIPMENTRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace LookoutEquipment {
 
 class LookoutEquipmentResponse;
 
-class LookoutEquipmentResponsePrivate {
+class LookoutEquipmentResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    LookoutEquipmentResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LookoutEquipmentResponse)

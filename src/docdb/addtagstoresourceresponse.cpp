@@ -56,7 +56,8 @@ AddTagsToResourceResponse::AddTagsToResourceResponse(
  */
 const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
 {
-    return static_cast<const AddTagsToResourceRequest *>(DocDBResponse::request());
+    Q_D(const AddTagsToResourceResponse);
+    return static_cast<const AddTagsToResourceRequest *>(d->request);
 }
 
 /*!

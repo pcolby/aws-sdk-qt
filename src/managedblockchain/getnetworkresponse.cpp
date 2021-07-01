@@ -72,7 +72,8 @@ GetNetworkResponse::GetNetworkResponse(
  */
 const GetNetworkRequest * GetNetworkResponse::request() const
 {
-    return static_cast<const GetNetworkRequest *>(ManagedBlockchainResponse::request());
+    Q_D(const GetNetworkResponse);
+    return static_cast<const GetNetworkRequest *>(d->request);
 }
 
 /*!

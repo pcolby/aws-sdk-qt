@@ -116,8 +116,7 @@ public:
 
 protected:
     /// @cond internal
-    IoTSiteWiseRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IoTSiteWiseRequest(IoTSiteWiseRequestPrivate * const d);
+    IoTSiteWiseRequest(IoTSiteWiseRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

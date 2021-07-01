@@ -55,7 +55,8 @@ CreateDataSourceFromRDSResponse::CreateDataSourceFromRDSResponse(
  */
 const CreateDataSourceFromRDSRequest * CreateDataSourceFromRDSResponse::request() const
 {
-    return static_cast<const CreateDataSourceFromRDSRequest *>(MachineLearningResponse::request());
+    Q_D(const CreateDataSourceFromRDSResponse);
+    return static_cast<const CreateDataSourceFromRDSRequest *>(d->request);
 }
 
 /*!

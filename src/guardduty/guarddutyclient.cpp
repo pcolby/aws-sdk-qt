@@ -193,16 +193,16 @@ GuardDutyClient::GuardDutyClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-11-28"),
-    QStringLiteral("guardduty"),
-    QStringLiteral("Amazon GuardDuty"),
-    QStringLiteral("guardduty"),
-    parent), d_ptr(new GuardDutyClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GuardDutyClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GuardDutyClient);
+    d->apiVersion = QStringLiteral("2017-11-28");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("guardduty");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon GuardDuty");
+    d->serviceName = QStringLiteral("guardduty");
 }
 
 /*!
@@ -221,16 +221,16 @@ GuardDutyClient::GuardDutyClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-11-28"),
-    QStringLiteral("guardduty"),
-    QStringLiteral("Amazon GuardDuty"),
-    QStringLiteral("guardduty"),
-    parent), d_ptr(new GuardDutyClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GuardDutyClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GuardDutyClient);
+    d->apiVersion = QStringLiteral("2017-11-28");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("guardduty");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon GuardDuty");
+    d->serviceName = QStringLiteral("guardduty");
 }
 
 /*!
@@ -1035,9 +1035,10 @@ UpdateThreatIntelSetResponse * GuardDutyClient::updateThreatIntelSet(const Updat
 /*!
  * Constructs a GuardDutyClientPrivate object with public implementation \a q.
  */
-GuardDutyClientPrivate::GuardDutyClientPrivate(GuardDutyClient * const q) : q_ptr(q)
+GuardDutyClientPrivate::GuardDutyClientPrivate(GuardDutyClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace GuardDuty

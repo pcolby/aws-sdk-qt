@@ -20,12 +20,15 @@
 #ifndef QTAWS_PERSONALIZERUNTIMEREQUEST_P_H
 #define QTAWS_PERSONALIZERUNTIMEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "personalizeruntimerequest.h"
+
 namespace QtAws {
 namespace PersonalizeRuntime {
 
 class PersonalizeRuntimeRequest;
 
-class PersonalizeRuntimeRequestPrivate {
+class PersonalizeRuntimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PersonalizeRuntimeRequest::Action action; ///< PersonalizeRuntime action to be performed.
@@ -36,9 +39,6 @@ public:
     PersonalizeRuntimeRequestPrivate(const PersonalizeRuntimeRequestPrivate &other, PersonalizeRuntimeRequest * const q);
 
     static QString toString(const PersonalizeRuntimeRequest::Action &action);
-
-protected:
-    PersonalizeRuntimeRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PersonalizeRuntimeRequest)

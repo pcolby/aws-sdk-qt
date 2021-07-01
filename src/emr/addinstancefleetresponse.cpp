@@ -58,7 +58,8 @@ AddInstanceFleetResponse::AddInstanceFleetResponse(
  */
 const AddInstanceFleetRequest * AddInstanceFleetResponse::request() const
 {
-    return static_cast<const AddInstanceFleetRequest *>(EmrResponse::request());
+    Q_D(const AddInstanceFleetResponse);
+    return static_cast<const AddInstanceFleetRequest *>(d->request);
 }
 
 /*!

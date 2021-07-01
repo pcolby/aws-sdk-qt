@@ -55,7 +55,8 @@ ListAssetsResponse::ListAssetsResponse(
  */
 const ListAssetsRequest * ListAssetsResponse::request() const
 {
-    return static_cast<const ListAssetsRequest *>(MediaPackageVodResponse::request());
+    Q_D(const ListAssetsResponse);
+    return static_cast<const ListAssetsRequest *>(d->request);
 }
 
 /*!

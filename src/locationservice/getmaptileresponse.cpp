@@ -56,7 +56,8 @@ GetMapTileResponse::GetMapTileResponse(
  */
 const GetMapTileRequest * GetMapTileResponse::request() const
 {
-    return static_cast<const GetMapTileRequest *>(LocationServiceResponse::request());
+    Q_D(const GetMapTileResponse);
+    return static_cast<const GetMapTileRequest *>(d->request);
 }
 
 /*!

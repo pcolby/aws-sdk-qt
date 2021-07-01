@@ -84,7 +84,8 @@ AbortDocumentVersionUploadResponse::AbortDocumentVersionUploadResponse(
  */
 const AbortDocumentVersionUploadRequest * AbortDocumentVersionUploadResponse::request() const
 {
-    return static_cast<const AbortDocumentVersionUploadRequest *>(WorkDocsResponse::request());
+    Q_D(const AbortDocumentVersionUploadResponse);
+    return static_cast<const AbortDocumentVersionUploadRequest *>(d->request);
 }
 
 /*!

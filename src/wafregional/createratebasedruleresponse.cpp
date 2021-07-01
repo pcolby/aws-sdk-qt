@@ -78,7 +78,8 @@ CreateRateBasedRuleResponse::CreateRateBasedRuleResponse(
  */
 const CreateRateBasedRuleRequest * CreateRateBasedRuleResponse::request() const
 {
-    return static_cast<const CreateRateBasedRuleRequest *>(WAFRegionalResponse::request());
+    Q_D(const CreateRateBasedRuleResponse);
+    return static_cast<const CreateRateBasedRuleRequest *>(d->request);
 }
 
 /*!

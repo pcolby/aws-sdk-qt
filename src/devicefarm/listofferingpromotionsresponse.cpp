@@ -75,7 +75,8 @@ ListOfferingPromotionsResponse::ListOfferingPromotionsResponse(
  */
 const ListOfferingPromotionsRequest * ListOfferingPromotionsResponse::request() const
 {
-    return static_cast<const ListOfferingPromotionsRequest *>(DeviceFarmResponse::request());
+    Q_D(const ListOfferingPromotionsResponse);
+    return static_cast<const ListOfferingPromotionsRequest *>(d->request);
 }
 
 /*!

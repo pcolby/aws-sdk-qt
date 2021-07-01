@@ -98,7 +98,8 @@ AssociatePhoneNumberWithUserResponse::AssociatePhoneNumberWithUserResponse(
  */
 const AssociatePhoneNumberWithUserRequest * AssociatePhoneNumberWithUserResponse::request() const
 {
-    return static_cast<const AssociatePhoneNumberWithUserRequest *>(ChimeResponse::request());
+    Q_D(const AssociatePhoneNumberWithUserResponse);
+    return static_cast<const AssociatePhoneNumberWithUserRequest *>(d->request);
 }
 
 /*!

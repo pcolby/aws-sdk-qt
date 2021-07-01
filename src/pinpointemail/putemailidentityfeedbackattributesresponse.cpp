@@ -92,7 +92,8 @@ PutEmailIdentityFeedbackAttributesResponse::PutEmailIdentityFeedbackAttributesRe
  */
 const PutEmailIdentityFeedbackAttributesRequest * PutEmailIdentityFeedbackAttributesResponse::request() const
 {
-    return static_cast<const PutEmailIdentityFeedbackAttributesRequest *>(PinpointEmailResponse::request());
+    Q_D(const PutEmailIdentityFeedbackAttributesResponse);
+    return static_cast<const PutEmailIdentityFeedbackAttributesRequest *>(d->request);
 }
 
 /*!

@@ -72,8 +72,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeGuruReviewerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CodeGuruReviewerRequest(CodeGuruReviewerRequestPrivate * const d);
+    CodeGuruReviewerRequest(CodeGuruReviewerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

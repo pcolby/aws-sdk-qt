@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ConnectContactLensResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ConnectContactLensResponse(ConnectContactLensResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

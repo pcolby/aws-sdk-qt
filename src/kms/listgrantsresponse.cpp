@@ -154,7 +154,8 @@ ListGrantsResponse::ListGrantsResponse(
  */
 const ListGrantsRequest * ListGrantsResponse::request() const
 {
-    return static_cast<const ListGrantsRequest *>(KmsResponse::request());
+    Q_D(const ListGrantsResponse);
+    return static_cast<const ListGrantsRequest *>(d->request);
 }
 
 /*!

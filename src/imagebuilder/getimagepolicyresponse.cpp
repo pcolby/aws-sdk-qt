@@ -58,7 +58,8 @@ GetImagePolicyResponse::GetImagePolicyResponse(
  */
 const GetImagePolicyRequest * GetImagePolicyResponse::request() const
 {
-    return static_cast<const GetImagePolicyRequest *>(imagebuilderResponse::request());
+    Q_D(const GetImagePolicyResponse);
+    return static_cast<const GetImagePolicyRequest *>(d->request);
 }
 
 /*!

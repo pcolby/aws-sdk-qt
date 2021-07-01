@@ -78,7 +78,8 @@ ListApiDestinationsResponse::ListApiDestinationsResponse(
  */
 const ListApiDestinationsRequest * ListApiDestinationsResponse::request() const
 {
-    return static_cast<const ListApiDestinationsRequest *>(EventBridgeResponse::request());
+    Q_D(const ListApiDestinationsResponse);
+    return static_cast<const ListApiDestinationsRequest *>(d->request);
 }
 
 /*!

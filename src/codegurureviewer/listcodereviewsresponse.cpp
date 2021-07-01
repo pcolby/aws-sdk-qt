@@ -72,7 +72,8 @@ ListCodeReviewsResponse::ListCodeReviewsResponse(
  */
 const ListCodeReviewsRequest * ListCodeReviewsResponse::request() const
 {
-    return static_cast<const ListCodeReviewsRequest *>(CodeGuruReviewerResponse::request());
+    Q_D(const ListCodeReviewsResponse);
+    return static_cast<const ListCodeReviewsRequest *>(d->request);
 }
 
 /*!

@@ -57,12 +57,6 @@ public slots:
     DescribeHomeRegionControlsResponse * describeHomeRegionControls(const DescribeHomeRegionControlsRequest &request);
     GetHomeRegionResponse * getHomeRegion(const GetHomeRegionRequest &request);
 
-protected:
-    /// @cond internal
-    MigrationHubConfigClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MigrationHubConfigClient(MigrationHubConfigClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MigrationHubConfigClient)
     Q_DISABLE_COPY(MigrationHubConfigClient)

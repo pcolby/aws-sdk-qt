@@ -58,7 +58,8 @@ BatchDeleteTableVersionResponse::BatchDeleteTableVersionResponse(
  */
 const BatchDeleteTableVersionRequest * BatchDeleteTableVersionResponse::request() const
 {
-    return static_cast<const BatchDeleteTableVersionRequest *>(GlueResponse::request());
+    Q_D(const BatchDeleteTableVersionResponse);
+    return static_cast<const BatchDeleteTableVersionRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ DescribeCompanyNetworkConfigurationResponse::DescribeCompanyNetworkConfiguration
  */
 const DescribeCompanyNetworkConfigurationRequest * DescribeCompanyNetworkConfigurationResponse::request() const
 {
-    return static_cast<const DescribeCompanyNetworkConfigurationRequest *>(WorkLinkResponse::request());
+    Q_D(const DescribeCompanyNetworkConfigurationResponse);
+    return static_cast<const DescribeCompanyNetworkConfigurationRequest *>(d->request);
 }
 
 /*!

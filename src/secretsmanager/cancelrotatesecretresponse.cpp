@@ -131,7 +131,8 @@ CancelRotateSecretResponse::CancelRotateSecretResponse(
  */
 const CancelRotateSecretRequest * CancelRotateSecretResponse::request() const
 {
-    return static_cast<const CancelRotateSecretRequest *>(SecretsManagerResponse::request());
+    Q_D(const CancelRotateSecretResponse);
+    return static_cast<const CancelRotateSecretRequest *>(d->request);
 }
 
 /*!

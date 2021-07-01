@@ -129,7 +129,8 @@ UnsubscribeResponse::UnsubscribeResponse(
  */
 const UnsubscribeRequest * UnsubscribeResponse::request() const
 {
-    return static_cast<const UnsubscribeRequest *>(CodeStarNotificationsResponse::request());
+    Q_D(const UnsubscribeResponse);
+    return static_cast<const UnsubscribeRequest *>(d->request);
 }
 
 /*!

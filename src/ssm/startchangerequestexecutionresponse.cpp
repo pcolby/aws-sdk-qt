@@ -98,7 +98,8 @@ StartChangeRequestExecutionResponse::StartChangeRequestExecutionResponse(
  */
 const StartChangeRequestExecutionRequest * StartChangeRequestExecutionResponse::request() const
 {
-    return static_cast<const StartChangeRequestExecutionRequest *>(SsmResponse::request());
+    Q_D(const StartChangeRequestExecutionResponse);
+    return static_cast<const StartChangeRequestExecutionRequest *>(d->request);
 }
 
 /*!

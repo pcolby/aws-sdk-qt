@@ -65,7 +65,8 @@ RollbackTransactionResponse::RollbackTransactionResponse(
  */
 const RollbackTransactionRequest * RollbackTransactionResponse::request() const
 {
-    return static_cast<const RollbackTransactionRequest *>(RDSDataServiceResponse::request());
+    Q_D(const RollbackTransactionResponse);
+    return static_cast<const RollbackTransactionRequest *>(d->request);
 }
 
 /*!

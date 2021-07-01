@@ -74,7 +74,8 @@ DescribeKinesisStreamingDestinationResponse::DescribeKinesisStreamingDestination
  */
 const DescribeKinesisStreamingDestinationRequest * DescribeKinesisStreamingDestinationResponse::request() const
 {
-    return static_cast<const DescribeKinesisStreamingDestinationRequest *>(DynamoDBResponse::request());
+    Q_D(const DescribeKinesisStreamingDestinationResponse);
+    return static_cast<const DescribeKinesisStreamingDestinationRequest *>(d->request);
 }
 
 /*!

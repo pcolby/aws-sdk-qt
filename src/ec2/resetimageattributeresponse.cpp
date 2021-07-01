@@ -87,7 +87,8 @@ ResetImageAttributeResponse::ResetImageAttributeResponse(
  */
 const ResetImageAttributeRequest * ResetImageAttributeResponse::request() const
 {
-    return static_cast<const ResetImageAttributeRequest *>(Ec2Response::request());
+    Q_D(const ResetImageAttributeResponse);
+    return static_cast<const ResetImageAttributeRequest *>(d->request);
 }
 
 /*!

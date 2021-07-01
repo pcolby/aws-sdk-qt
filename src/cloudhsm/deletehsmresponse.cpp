@@ -67,7 +67,8 @@ DeleteHsmResponse::DeleteHsmResponse(
  */
 const DeleteHsmRequest * DeleteHsmResponse::request() const
 {
-    return static_cast<const DeleteHsmRequest *>(CloudHSMResponse::request());
+    Q_D(const DeleteHsmResponse);
+    return static_cast<const DeleteHsmRequest *>(d->request);
 }
 
 /*!

@@ -115,7 +115,8 @@ DeleteVpcPeeringConnectionResponse::DeleteVpcPeeringConnectionResponse(
  */
 const DeleteVpcPeeringConnectionRequest * DeleteVpcPeeringConnectionResponse::request() const
 {
-    return static_cast<const DeleteVpcPeeringConnectionRequest *>(GameLiftResponse::request());
+    Q_D(const DeleteVpcPeeringConnectionResponse);
+    return static_cast<const DeleteVpcPeeringConnectionRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ DeleteClientVpnEndpointResponse::DeleteClientVpnEndpointResponse(
  */
 const DeleteClientVpnEndpointRequest * DeleteClientVpnEndpointResponse::request() const
 {
-    return static_cast<const DeleteClientVpnEndpointRequest *>(Ec2Response::request());
+    Q_D(const DeleteClientVpnEndpointResponse);
+    return static_cast<const DeleteClientVpnEndpointRequest *>(d->request);
 }
 
 /*!

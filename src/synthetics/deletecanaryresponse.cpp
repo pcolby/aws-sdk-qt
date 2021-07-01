@@ -71,7 +71,8 @@ DeleteCanaryResponse::DeleteCanaryResponse(
  */
 const DeleteCanaryRequest * DeleteCanaryResponse::request() const
 {
-    return static_cast<const DeleteCanaryRequest *>(SyntheticsResponse::request());
+    Q_D(const DeleteCanaryResponse);
+    return static_cast<const DeleteCanaryRequest *>(d->request);
 }
 
 /*!

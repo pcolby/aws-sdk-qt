@@ -65,7 +65,8 @@ CreateAddonResponse::CreateAddonResponse(
  */
 const CreateAddonRequest * CreateAddonResponse::request() const
 {
-    return static_cast<const CreateAddonRequest *>(EksResponse::request());
+    Q_D(const CreateAddonResponse);
+    return static_cast<const CreateAddonRequest *>(d->request);
 }
 
 /*!

@@ -376,16 +376,16 @@ GlueClient::GlueClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-03-31"),
-    QStringLiteral("glue"),
-    QStringLiteral("AWS Glue"),
-    QStringLiteral("glue"),
-    parent), d_ptr(new GlueClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GlueClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GlueClient);
+    d->apiVersion = QStringLiteral("2017-03-31");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("glue");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Glue");
+    d->serviceName = QStringLiteral("glue");
 }
 
 /*!
@@ -404,16 +404,16 @@ GlueClient::GlueClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-03-31"),
-    QStringLiteral("glue"),
-    QStringLiteral("AWS Glue"),
-    QStringLiteral("glue"),
-    parent), d_ptr(new GlueClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GlueClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GlueClient);
+    d->apiVersion = QStringLiteral("2017-03-31");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("glue");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Glue");
+    d->serviceName = QStringLiteral("glue");
 }
 
 /*!
@@ -2789,9 +2789,10 @@ UpdateWorkflowResponse * GlueClient::updateWorkflow(const UpdateWorkflowRequest 
 /*!
  * Constructs a GlueClientPrivate object with public implementation \a q.
  */
-GlueClientPrivate::GlueClientPrivate(GlueClient * const q) : q_ptr(q)
+GlueClientPrivate::GlueClientPrivate(GlueClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Glue

@@ -218,7 +218,8 @@ AdvertiseByoipCidrResponse::AdvertiseByoipCidrResponse(
  */
 const AdvertiseByoipCidrRequest * AdvertiseByoipCidrResponse::request() const
 {
-    return static_cast<const AdvertiseByoipCidrRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const AdvertiseByoipCidrResponse);
+    return static_cast<const AdvertiseByoipCidrRequest *>(d->request);
 }
 
 /*!

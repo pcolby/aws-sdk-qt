@@ -58,7 +58,8 @@ GetAnomalyGroupResponse::GetAnomalyGroupResponse(
  */
 const GetAnomalyGroupRequest * GetAnomalyGroupResponse::request() const
 {
-    return static_cast<const GetAnomalyGroupRequest *>(LookoutMetricsResponse::request());
+    Q_D(const GetAnomalyGroupResponse);
+    return static_cast<const GetAnomalyGroupRequest *>(d->request);
 }
 
 /*!

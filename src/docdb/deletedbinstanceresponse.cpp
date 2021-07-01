@@ -56,7 +56,8 @@ DeleteDBInstanceResponse::DeleteDBInstanceResponse(
  */
 const DeleteDBInstanceRequest * DeleteDBInstanceResponse::request() const
 {
-    return static_cast<const DeleteDBInstanceRequest *>(DocDBResponse::request());
+    Q_D(const DeleteDBInstanceResponse);
+    return static_cast<const DeleteDBInstanceRequest *>(d->request);
 }
 
 /*!

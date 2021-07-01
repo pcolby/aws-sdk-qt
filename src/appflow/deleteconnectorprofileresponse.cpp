@@ -100,7 +100,8 @@ DeleteConnectorProfileResponse::DeleteConnectorProfileResponse(
  */
 const DeleteConnectorProfileRequest * DeleteConnectorProfileResponse::request() const
 {
-    return static_cast<const DeleteConnectorProfileRequest *>(AppflowResponse::request());
+    Q_D(const DeleteConnectorProfileResponse);
+    return static_cast<const DeleteConnectorProfileRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ DeleteDomainNameResponse::DeleteDomainNameResponse(
  */
 const DeleteDomainNameRequest * DeleteDomainNameResponse::request() const
 {
-    return static_cast<const DeleteDomainNameRequest *>(APIGatewayResponse::request());
+    Q_D(const DeleteDomainNameResponse);
+    return static_cast<const DeleteDomainNameRequest *>(d->request);
 }
 
 /*!

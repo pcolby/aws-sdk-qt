@@ -56,7 +56,8 @@ BatchGetDevicePositionResponse::BatchGetDevicePositionResponse(
  */
 const BatchGetDevicePositionRequest * BatchGetDevicePositionResponse::request() const
 {
-    return static_cast<const BatchGetDevicePositionRequest *>(LocationServiceResponse::request());
+    Q_D(const BatchGetDevicePositionResponse);
+    return static_cast<const BatchGetDevicePositionRequest *>(d->request);
 }
 
 /*!

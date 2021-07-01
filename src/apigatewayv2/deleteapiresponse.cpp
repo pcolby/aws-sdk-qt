@@ -56,7 +56,8 @@ DeleteApiResponse::DeleteApiResponse(
  */
 const DeleteApiRequest * DeleteApiResponse::request() const
 {
-    return static_cast<const DeleteApiRequest *>(ApiGatewayV2Response::request());
+    Q_D(const DeleteApiResponse);
+    return static_cast<const DeleteApiRequest *>(d->request);
 }
 
 /*!

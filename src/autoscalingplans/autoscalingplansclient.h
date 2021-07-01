@@ -66,12 +66,6 @@ public slots:
     GetScalingPlanResourceForecastDataResponse * getScalingPlanResourceForecastData(const GetScalingPlanResourceForecastDataRequest &request);
     UpdateScalingPlanResponse * updateScalingPlan(const UpdateScalingPlanRequest &request);
 
-protected:
-    /// @cond internal
-    AutoScalingPlansClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AutoScalingPlansClient(AutoScalingPlansClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(AutoScalingPlansClient)
     Q_DISABLE_COPY(AutoScalingPlansClient)

@@ -77,7 +77,8 @@ GetIdResponse::GetIdResponse(
  */
 const GetIdRequest * GetIdResponse::request() const
 {
-    return static_cast<const GetIdRequest *>(CognitoIdentityResponse::request());
+    Q_D(const GetIdResponse);
+    return static_cast<const GetIdRequest *>(d->request);
 }
 
 /*!

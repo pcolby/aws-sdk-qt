@@ -20,20 +20,19 @@
 #ifndef QTAWS_SAGEMAKERRUNTIMECLIENT_P_H
 #define QTAWS_SAGEMAKERRUNTIMECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SageMakerRuntime {
 
 class SageMakerRuntimeClient;
 
-class SageMakerRuntimeClientPrivate {
+class SageMakerRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SageMakerRuntimeClientPrivate(SageMakerRuntimeClient * const q);
-
-protected:
-    SageMakerRuntimeClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SageMakerRuntimeClient)

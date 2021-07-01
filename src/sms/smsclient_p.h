@@ -20,20 +20,19 @@
 #ifndef QTAWS_SMSCLIENT_P_H
 #define QTAWS_SMSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SMS {
 
 class SmsClient;
 
-class SmsClientPrivate {
+class SmsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SmsClientPrivate(SmsClient * const q);
-
-protected:
-    SmsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SmsClient)

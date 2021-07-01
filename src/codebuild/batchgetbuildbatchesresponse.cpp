@@ -64,7 +64,8 @@ BatchGetBuildBatchesResponse::BatchGetBuildBatchesResponse(
  */
 const BatchGetBuildBatchesRequest * BatchGetBuildBatchesResponse::request() const
 {
-    return static_cast<const BatchGetBuildBatchesRequest *>(CodeBuildResponse::request());
+    Q_D(const BatchGetBuildBatchesResponse);
+    return static_cast<const BatchGetBuildBatchesRequest *>(d->request);
 }
 
 /*!

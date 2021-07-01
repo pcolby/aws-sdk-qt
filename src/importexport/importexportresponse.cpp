@@ -37,7 +37,7 @@ namespace ImportExport {
  * Constructs a ImportExportResponse object with parent \a parent.
  */
 ImportExportResponse::ImportExportResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ImportExportResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ImportExportResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ImportExportResponse::ImportExportResponse(QObject * const parent)
  * implementation that inherits from ImportExportResponsePrivate.
  */
 ImportExportResponse::ImportExportResponse(ImportExportResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ImportExportResponse::parseFailure(QIODevice &response)
  * Constructs a ImportExportResponsePrivate object with public implementation \a q.
  */
 ImportExportResponsePrivate::ImportExportResponsePrivate(
-    ImportExportResponse * const q) : q_ptr(q)
+    ImportExportResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

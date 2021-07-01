@@ -69,7 +69,8 @@ DeleteCacheParameterGroupResponse::DeleteCacheParameterGroupResponse(
  */
 const DeleteCacheParameterGroupRequest * DeleteCacheParameterGroupResponse::request() const
 {
-    return static_cast<const DeleteCacheParameterGroupRequest *>(ElastiCacheResponse::request());
+    Q_D(const DeleteCacheParameterGroupResponse);
+    return static_cast<const DeleteCacheParameterGroupRequest *>(d->request);
 }
 
 /*!

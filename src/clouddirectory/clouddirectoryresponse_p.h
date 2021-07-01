@@ -20,12 +20,14 @@
 #ifndef QTAWS_CLOUDDIRECTORYRESPONSE_P_H
 #define QTAWS_CLOUDDIRECTORYRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace CloudDirectory {
 
 class CloudDirectoryResponse;
 
-class CloudDirectoryResponsePrivate {
+class CloudDirectoryResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    CloudDirectoryResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudDirectoryResponse)

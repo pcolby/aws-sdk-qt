@@ -58,7 +58,8 @@ GetSchemaResponse::GetSchemaResponse(
  */
 const GetSchemaRequest * GetSchemaResponse::request() const
 {
-    return static_cast<const GetSchemaRequest *>(GlueResponse::request());
+    Q_D(const GetSchemaResponse);
+    return static_cast<const GetSchemaRequest *>(d->request);
 }
 
 /*!

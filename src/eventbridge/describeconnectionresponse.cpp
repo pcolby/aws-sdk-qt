@@ -78,7 +78,8 @@ DescribeConnectionResponse::DescribeConnectionResponse(
  */
 const DescribeConnectionRequest * DescribeConnectionResponse::request() const
 {
-    return static_cast<const DescribeConnectionRequest *>(EventBridgeResponse::request());
+    Q_D(const DescribeConnectionResponse);
+    return static_cast<const DescribeConnectionRequest *>(d->request);
 }
 
 /*!

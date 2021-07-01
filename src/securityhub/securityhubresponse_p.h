@@ -20,12 +20,14 @@
 #ifndef QTAWS_SECURITYHUBRESPONSE_P_H
 #define QTAWS_SECURITYHUBRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace SecurityHub {
 
 class SecurityHubResponse;
 
-class SecurityHubResponsePrivate {
+class SecurityHubResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    SecurityHubResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SecurityHubResponse)

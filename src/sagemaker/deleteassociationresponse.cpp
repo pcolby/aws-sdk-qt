@@ -70,7 +70,8 @@ DeleteAssociationResponse::DeleteAssociationResponse(
  */
 const DeleteAssociationRequest * DeleteAssociationResponse::request() const
 {
-    return static_cast<const DeleteAssociationRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteAssociationResponse);
+    return static_cast<const DeleteAssociationRequest *>(d->request);
 }
 
 /*!

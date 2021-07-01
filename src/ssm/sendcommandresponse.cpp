@@ -98,7 +98,8 @@ SendCommandResponse::SendCommandResponse(
  */
 const SendCommandRequest * SendCommandResponse::request() const
 {
-    return static_cast<const SendCommandRequest *>(SsmResponse::request());
+    Q_D(const SendCommandResponse);
+    return static_cast<const SendCommandRequest *>(d->request);
 }
 
 /*!

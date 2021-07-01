@@ -68,7 +68,8 @@ ImportAppCatalogResponse::ImportAppCatalogResponse(
  */
 const ImportAppCatalogRequest * ImportAppCatalogResponse::request() const
 {
-    return static_cast<const ImportAppCatalogRequest *>(SmsResponse::request());
+    Q_D(const ImportAppCatalogResponse);
+    return static_cast<const ImportAppCatalogRequest *>(d->request);
 }
 
 /*!

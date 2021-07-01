@@ -61,7 +61,8 @@ UpdateProjectResponse::UpdateProjectResponse(
  */
 const UpdateProjectRequest * UpdateProjectResponse::request() const
 {
-    return static_cast<const UpdateProjectRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const UpdateProjectResponse);
+    return static_cast<const UpdateProjectRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ CreateDocumentationVersionResponse::CreateDocumentationVersionResponse(
  */
 const CreateDocumentationVersionRequest * CreateDocumentationVersionResponse::request() const
 {
-    return static_cast<const CreateDocumentationVersionRequest *>(APIGatewayResponse::request());
+    Q_D(const CreateDocumentationVersionResponse);
+    return static_cast<const CreateDocumentationVersionRequest *>(d->request);
 }
 
 /*!

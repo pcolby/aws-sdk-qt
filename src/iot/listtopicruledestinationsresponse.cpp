@@ -82,7 +82,8 @@ ListTopicRuleDestinationsResponse::ListTopicRuleDestinationsResponse(
  */
 const ListTopicRuleDestinationsRequest * ListTopicRuleDestinationsResponse::request() const
 {
-    return static_cast<const ListTopicRuleDestinationsRequest *>(IoTResponse::request());
+    Q_D(const ListTopicRuleDestinationsResponse);
+    return static_cast<const ListTopicRuleDestinationsRequest *>(d->request);
 }
 
 /*!

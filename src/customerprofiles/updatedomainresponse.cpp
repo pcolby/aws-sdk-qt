@@ -71,7 +71,8 @@ UpdateDomainResponse::UpdateDomainResponse(
  */
 const UpdateDomainRequest * UpdateDomainResponse::request() const
 {
-    return static_cast<const UpdateDomainRequest *>(CustomerProfilesResponse::request());
+    Q_D(const UpdateDomainResponse);
+    return static_cast<const UpdateDomainRequest *>(d->request);
 }
 
 /*!

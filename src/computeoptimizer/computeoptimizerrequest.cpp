@@ -55,7 +55,7 @@ namespace ComputeOptimizer {
  * Constructs a ComputeOptimizerRequest object for ComputeOptimizer \a action.
  */
 ComputeOptimizerRequest::ComputeOptimizerRequest(const Action action)
-    : d_ptr(new ComputeOptimizerRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ComputeOptimizerRequestPrivate(action, this))
 {
 
 }
@@ -64,8 +64,7 @@ ComputeOptimizerRequest::ComputeOptimizerRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ComputeOptimizerRequest::ComputeOptimizerRequest(const ComputeOptimizerRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ComputeOptimizerRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ComputeOptimizerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -88,7 +87,7 @@ ComputeOptimizerRequest& ComputeOptimizerRequest::operator=(const ComputeOptimiz
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ComputeOptimizerRequestPrivate.
  */
-ComputeOptimizerRequest::ComputeOptimizerRequest(ComputeOptimizerRequestPrivate * const d) : d_ptr(d)
+ComputeOptimizerRequest::ComputeOptimizerRequest(ComputeOptimizerRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -257,7 +256,7 @@ QNetworkRequest ComputeOptimizerRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 ComputeOptimizerRequestPrivate::ComputeOptimizerRequestPrivate(const ComputeOptimizerRequest::Action action, ComputeOptimizerRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -272,8 +271,8 @@ ComputeOptimizerRequestPrivate::ComputeOptimizerRequestPrivate(const ComputeOpti
  */
 ComputeOptimizerRequestPrivate::ComputeOptimizerRequestPrivate(const ComputeOptimizerRequestPrivate &other,
                                      ComputeOptimizerRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

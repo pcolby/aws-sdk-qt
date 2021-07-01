@@ -77,7 +77,8 @@ ApplyEnvironmentManagedActionResponse::ApplyEnvironmentManagedActionResponse(
  */
 const ApplyEnvironmentManagedActionRequest * ApplyEnvironmentManagedActionResponse::request() const
 {
-    return static_cast<const ApplyEnvironmentManagedActionRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const ApplyEnvironmentManagedActionResponse);
+    return static_cast<const ApplyEnvironmentManagedActionRequest *>(d->request);
 }
 
 /*!

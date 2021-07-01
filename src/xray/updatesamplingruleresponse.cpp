@@ -56,7 +56,8 @@ UpdateSamplingRuleResponse::UpdateSamplingRuleResponse(
  */
 const UpdateSamplingRuleRequest * UpdateSamplingRuleResponse::request() const
 {
-    return static_cast<const UpdateSamplingRuleRequest *>(XRayResponse::request());
+    Q_D(const UpdateSamplingRuleResponse);
+    return static_cast<const UpdateSamplingRuleRequest *>(d->request);
 }
 
 /*!

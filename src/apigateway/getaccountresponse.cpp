@@ -60,7 +60,8 @@ GetAccountResponse::GetAccountResponse(
  */
 const GetAccountRequest * GetAccountResponse::request() const
 {
-    return static_cast<const GetAccountRequest *>(APIGatewayResponse::request());
+    Q_D(const GetAccountResponse);
+    return static_cast<const GetAccountRequest *>(d->request);
 }
 
 /*!

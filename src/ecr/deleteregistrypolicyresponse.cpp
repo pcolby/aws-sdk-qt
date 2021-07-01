@@ -62,7 +62,8 @@ DeleteRegistryPolicyResponse::DeleteRegistryPolicyResponse(
  */
 const DeleteRegistryPolicyRequest * DeleteRegistryPolicyResponse::request() const
 {
-    return static_cast<const DeleteRegistryPolicyRequest *>(EcrResponse::request());
+    Q_D(const DeleteRegistryPolicyResponse);
+    return static_cast<const DeleteRegistryPolicyRequest *>(d->request);
 }
 
 /*!

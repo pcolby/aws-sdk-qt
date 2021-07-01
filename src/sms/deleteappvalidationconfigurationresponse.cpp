@@ -68,7 +68,8 @@ DeleteAppValidationConfigurationResponse::DeleteAppValidationConfigurationRespon
  */
 const DeleteAppValidationConfigurationRequest * DeleteAppValidationConfigurationResponse::request() const
 {
-    return static_cast<const DeleteAppValidationConfigurationRequest *>(SmsResponse::request());
+    Q_D(const DeleteAppValidationConfigurationResponse);
+    return static_cast<const DeleteAppValidationConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ DeleteAccessPointForObjectLambdaResponse::DeleteAccessPointForObjectLambdaRespon
  */
 const DeleteAccessPointForObjectLambdaRequest * DeleteAccessPointForObjectLambdaResponse::request() const
 {
-    return static_cast<const DeleteAccessPointForObjectLambdaRequest *>(S3ControlResponse::request());
+    Q_D(const DeleteAccessPointForObjectLambdaResponse);
+    return static_cast<const DeleteAccessPointForObjectLambdaRequest *>(d->request);
 }
 
 /*!

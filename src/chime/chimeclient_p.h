@@ -20,20 +20,19 @@
 #ifndef QTAWS_CHIMECLIENT_P_H
 #define QTAWS_CHIMECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Chime {
 
 class ChimeClient;
 
-class ChimeClientPrivate {
+class ChimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ChimeClientPrivate(ChimeClient * const q);
-
-protected:
-    ChimeClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ChimeClient)

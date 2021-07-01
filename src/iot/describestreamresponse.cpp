@@ -82,7 +82,8 @@ DescribeStreamResponse::DescribeStreamResponse(
  */
 const DescribeStreamRequest * DescribeStreamResponse::request() const
 {
-    return static_cast<const DescribeStreamRequest *>(IoTResponse::request());
+    Q_D(const DescribeStreamResponse);
+    return static_cast<const DescribeStreamRequest *>(d->request);
 }
 
 /*!

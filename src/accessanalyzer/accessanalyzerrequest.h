@@ -86,8 +86,7 @@ public:
 
 protected:
     /// @cond internal
-    AccessAnalyzerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AccessAnalyzerRequest(AccessAnalyzerRequestPrivate * const d);
+    AccessAnalyzerRequest(AccessAnalyzerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

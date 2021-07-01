@@ -71,7 +71,8 @@ UndeprecateActivityTypeResponse::UndeprecateActivityTypeResponse(
  */
 const UndeprecateActivityTypeRequest * UndeprecateActivityTypeResponse::request() const
 {
-    return static_cast<const UndeprecateActivityTypeRequest *>(SwfResponse::request());
+    Q_D(const UndeprecateActivityTypeResponse);
+    return static_cast<const UndeprecateActivityTypeRequest *>(d->request);
 }
 
 /*!

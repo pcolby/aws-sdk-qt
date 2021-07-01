@@ -87,7 +87,8 @@ DisableVgwRoutePropagationResponse::DisableVgwRoutePropagationResponse(
  */
 const DisableVgwRoutePropagationRequest * DisableVgwRoutePropagationResponse::request() const
 {
-    return static_cast<const DisableVgwRoutePropagationRequest *>(Ec2Response::request());
+    Q_D(const DisableVgwRoutePropagationResponse);
+    return static_cast<const DisableVgwRoutePropagationRequest *>(d->request);
 }
 
 /*!

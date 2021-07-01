@@ -55,7 +55,8 @@ DeletePackagingGroupResponse::DeletePackagingGroupResponse(
  */
 const DeletePackagingGroupRequest * DeletePackagingGroupResponse::request() const
 {
-    return static_cast<const DeletePackagingGroupRequest *>(MediaPackageVodResponse::request());
+    Q_D(const DeletePackagingGroupResponse);
+    return static_cast<const DeletePackagingGroupRequest *>(d->request);
 }
 
 /*!

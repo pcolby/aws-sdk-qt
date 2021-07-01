@@ -87,7 +87,8 @@ DescribeReplaceRootVolumeTasksResponse::DescribeReplaceRootVolumeTasksResponse(
  */
 const DescribeReplaceRootVolumeTasksRequest * DescribeReplaceRootVolumeTasksResponse::request() const
 {
-    return static_cast<const DescribeReplaceRootVolumeTasksRequest *>(Ec2Response::request());
+    Q_D(const DescribeReplaceRootVolumeTasksResponse);
+    return static_cast<const DescribeReplaceRootVolumeTasksRequest *>(d->request);
 }
 
 /*!

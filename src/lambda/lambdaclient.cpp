@@ -186,16 +186,16 @@ LambdaClient::LambdaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-03-31"),
-    QStringLiteral("lambda"),
-    QStringLiteral("AWS Lambda"),
-    QStringLiteral("lambda"),
-    parent), d_ptr(new LambdaClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LambdaClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LambdaClient);
+    d->apiVersion = QStringLiteral("2015-03-31");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("lambda");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Lambda");
+    d->serviceName = QStringLiteral("lambda");
 }
 
 /*!
@@ -214,16 +214,16 @@ LambdaClient::LambdaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-03-31"),
-    QStringLiteral("lambda"),
-    QStringLiteral("AWS Lambda"),
-    QStringLiteral("lambda"),
-    parent), d_ptr(new LambdaClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LambdaClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LambdaClient);
+    d->apiVersion = QStringLiteral("2015-03-31");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("lambda");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Lambda");
+    d->serviceName = QStringLiteral("lambda");
 }
 
 /*!
@@ -1353,9 +1353,10 @@ UpdateFunctionEventInvokeConfigResponse * LambdaClient::updateFunctionEventInvok
 /*!
  * Constructs a LambdaClientPrivate object with public implementation \a q.
  */
-LambdaClientPrivate::LambdaClientPrivate(LambdaClient * const q) : q_ptr(q)
+LambdaClientPrivate::LambdaClientPrivate(LambdaClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Lambda

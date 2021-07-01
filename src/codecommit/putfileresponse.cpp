@@ -439,7 +439,8 @@ PutFileResponse::PutFileResponse(
  */
 const PutFileRequest * PutFileResponse::request() const
 {
-    return static_cast<const PutFileRequest *>(CodeCommitResponse::request());
+    Q_D(const PutFileResponse);
+    return static_cast<const PutFileRequest *>(d->request);
 }
 
 /*!

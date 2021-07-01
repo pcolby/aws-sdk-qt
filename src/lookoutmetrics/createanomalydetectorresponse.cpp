@@ -58,7 +58,8 @@ CreateAnomalyDetectorResponse::CreateAnomalyDetectorResponse(
  */
 const CreateAnomalyDetectorRequest * CreateAnomalyDetectorResponse::request() const
 {
-    return static_cast<const CreateAnomalyDetectorRequest *>(LookoutMetricsResponse::request());
+    Q_D(const CreateAnomalyDetectorResponse);
+    return static_cast<const CreateAnomalyDetectorRequest *>(d->request);
 }
 
 /*!

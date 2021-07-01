@@ -76,7 +76,8 @@ DeleteRateBasedRuleResponse::DeleteRateBasedRuleResponse(
  */
 const DeleteRateBasedRuleRequest * DeleteRateBasedRuleResponse::request() const
 {
-    return static_cast<const DeleteRateBasedRuleRequest *>(WafResponse::request());
+    Q_D(const DeleteRateBasedRuleResponse);
+    return static_cast<const DeleteRateBasedRuleRequest *>(d->request);
 }
 
 /*!

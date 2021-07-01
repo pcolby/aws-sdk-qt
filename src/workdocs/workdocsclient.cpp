@@ -170,16 +170,16 @@ WorkDocsClient::WorkDocsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-05-01"),
-    QStringLiteral("workdocs"),
-    QStringLiteral("Amazon WorkDocs"),
-    QStringLiteral("workdocs"),
-    parent), d_ptr(new WorkDocsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new WorkDocsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(WorkDocsClient);
+    d->apiVersion = QStringLiteral("2016-05-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("workdocs");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon WorkDocs");
+    d->serviceName = QStringLiteral("workdocs");
 }
 
 /*!
@@ -198,16 +198,16 @@ WorkDocsClient::WorkDocsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-05-01"),
-    QStringLiteral("workdocs"),
-    QStringLiteral("Amazon WorkDocs"),
-    QStringLiteral("workdocs"),
-    parent), d_ptr(new WorkDocsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new WorkDocsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(WorkDocsClient);
+    d->apiVersion = QStringLiteral("2016-05-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("workdocs");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon WorkDocs");
+    d->serviceName = QStringLiteral("workdocs");
 }
 
 /*!
@@ -825,9 +825,10 @@ UpdateUserResponse * WorkDocsClient::updateUser(const UpdateUserRequest &request
 /*!
  * Constructs a WorkDocsClientPrivate object with public implementation \a q.
  */
-WorkDocsClientPrivate::WorkDocsClientPrivate(WorkDocsClient * const q) : q_ptr(q)
+WorkDocsClientPrivate::WorkDocsClientPrivate(WorkDocsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace WorkDocs

@@ -70,7 +70,8 @@ AddTagsResponse::AddTagsResponse(
  */
 const AddTagsRequest * AddTagsResponse::request() const
 {
-    return static_cast<const AddTagsRequest *>(SageMakerResponse::request());
+    Q_D(const AddTagsResponse);
+    return static_cast<const AddTagsRequest *>(d->request);
 }
 
 /*!

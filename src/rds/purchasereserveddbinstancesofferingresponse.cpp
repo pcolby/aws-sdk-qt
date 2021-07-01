@@ -119,7 +119,8 @@ PurchaseReservedDBInstancesOfferingResponse::PurchaseReservedDBInstancesOffering
  */
 const PurchaseReservedDBInstancesOfferingRequest * PurchaseReservedDBInstancesOfferingResponse::request() const
 {
-    return static_cast<const PurchaseReservedDBInstancesOfferingRequest *>(RdsResponse::request());
+    Q_D(const PurchaseReservedDBInstancesOfferingResponse);
+    return static_cast<const PurchaseReservedDBInstancesOfferingRequest *>(d->request);
 }
 
 /*!

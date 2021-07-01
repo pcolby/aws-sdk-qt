@@ -75,7 +75,8 @@ DeleteOrganizationConformancePackResponse::DeleteOrganizationConformancePackResp
  */
 const DeleteOrganizationConformancePackRequest * DeleteOrganizationConformancePackResponse::request() const
 {
-    return static_cast<const DeleteOrganizationConformancePackRequest *>(ConfigServiceResponse::request());
+    Q_D(const DeleteOrganizationConformancePackResponse);
+    return static_cast<const DeleteOrganizationConformancePackRequest *>(d->request);
 }
 
 /*!

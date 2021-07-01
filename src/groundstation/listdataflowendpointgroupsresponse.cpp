@@ -58,7 +58,8 @@ ListDataflowEndpointGroupsResponse::ListDataflowEndpointGroupsResponse(
  */
 const ListDataflowEndpointGroupsRequest * ListDataflowEndpointGroupsResponse::request() const
 {
-    return static_cast<const ListDataflowEndpointGroupsRequest *>(GroundStationResponse::request());
+    Q_D(const ListDataflowEndpointGroupsResponse);
+    return static_cast<const ListDataflowEndpointGroupsRequest *>(d->request);
 }
 
 /*!

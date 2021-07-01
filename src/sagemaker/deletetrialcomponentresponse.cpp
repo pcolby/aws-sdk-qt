@@ -70,7 +70,8 @@ DeleteTrialComponentResponse::DeleteTrialComponentResponse(
  */
 const DeleteTrialComponentRequest * DeleteTrialComponentResponse::request() const
 {
-    return static_cast<const DeleteTrialComponentRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteTrialComponentResponse);
+    return static_cast<const DeleteTrialComponentRequest *>(d->request);
 }
 
 /*!

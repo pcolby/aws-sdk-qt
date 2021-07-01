@@ -81,7 +81,8 @@ StartFleetResponse::StartFleetResponse(
  */
 const StartFleetRequest * StartFleetResponse::request() const
 {
-    return static_cast<const StartFleetRequest *>(AppStreamResponse::request());
+    Q_D(const StartFleetResponse);
+    return static_cast<const StartFleetRequest *>(d->request);
 }
 
 /*!

@@ -79,7 +79,8 @@ DisassociateInstanceStorageConfigResponse::DisassociateInstanceStorageConfigResp
  */
 const DisassociateInstanceStorageConfigRequest * DisassociateInstanceStorageConfigResponse::request() const
 {
-    return static_cast<const DisassociateInstanceStorageConfigRequest *>(ConnectResponse::request());
+    Q_D(const DisassociateInstanceStorageConfigResponse);
+    return static_cast<const DisassociateInstanceStorageConfigRequest *>(d->request);
 }
 
 /*!

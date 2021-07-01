@@ -60,7 +60,8 @@ GetNamespaceResponse::GetNamespaceResponse(
  */
 const GetNamespaceRequest * GetNamespaceResponse::request() const
 {
-    return static_cast<const GetNamespaceRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const GetNamespaceResponse);
+    return static_cast<const GetNamespaceRequest *>(d->request);
 }
 
 /*!

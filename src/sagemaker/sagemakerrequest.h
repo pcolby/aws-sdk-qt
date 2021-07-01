@@ -293,8 +293,7 @@ public:
 
 protected:
     /// @cond internal
-    SageMakerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SageMakerRequest(SageMakerRequestPrivate * const d);
+    SageMakerRequest(SageMakerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

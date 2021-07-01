@@ -61,7 +61,8 @@ UpdateProvisioningArtifactResponse::UpdateProvisioningArtifactResponse(
  */
 const UpdateProvisioningArtifactRequest * UpdateProvisioningArtifactResponse::request() const
 {
-    return static_cast<const UpdateProvisioningArtifactRequest *>(ServiceCatalogResponse::request());
+    Q_D(const UpdateProvisioningArtifactResponse);
+    return static_cast<const UpdateProvisioningArtifactRequest *>(d->request);
 }
 
 /*!

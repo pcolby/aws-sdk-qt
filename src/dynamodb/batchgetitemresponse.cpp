@@ -74,7 +74,8 @@ BatchGetItemResponse::BatchGetItemResponse(
  */
 const BatchGetItemRequest * BatchGetItemResponse::request() const
 {
-    return static_cast<const BatchGetItemRequest *>(DynamoDBResponse::request());
+    Q_D(const BatchGetItemResponse);
+    return static_cast<const BatchGetItemRequest *>(d->request);
 }
 
 /*!

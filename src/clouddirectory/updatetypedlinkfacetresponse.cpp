@@ -63,7 +63,8 @@ UpdateTypedLinkFacetResponse::UpdateTypedLinkFacetResponse(
  */
 const UpdateTypedLinkFacetRequest * UpdateTypedLinkFacetResponse::request() const
 {
-    return static_cast<const UpdateTypedLinkFacetRequest *>(CloudDirectoryResponse::request());
+    Q_D(const UpdateTypedLinkFacetResponse);
+    return static_cast<const UpdateTypedLinkFacetRequest *>(d->request);
 }
 
 /*!

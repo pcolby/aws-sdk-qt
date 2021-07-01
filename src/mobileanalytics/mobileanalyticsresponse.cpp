@@ -37,7 +37,7 @@ namespace MobileAnalytics {
  * Constructs a MobileAnalyticsResponse object with parent \a parent.
  */
 MobileAnalyticsResponse::MobileAnalyticsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MobileAnalyticsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new MobileAnalyticsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ MobileAnalyticsResponse::MobileAnalyticsResponse(QObject * const parent)
  * implementation that inherits from MobileAnalyticsResponsePrivate.
  */
 MobileAnalyticsResponse::MobileAnalyticsResponse(MobileAnalyticsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void MobileAnalyticsResponse::parseFailure(QIODevice &response)
  * Constructs a MobileAnalyticsResponsePrivate object with public implementation \a q.
  */
 MobileAnalyticsResponsePrivate::MobileAnalyticsResponsePrivate(
-    MobileAnalyticsResponse * const q) : q_ptr(q)
+    MobileAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

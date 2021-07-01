@@ -58,7 +58,8 @@ AddApplicationInputProcessingConfigurationResponse::AddApplicationInputProcessin
  */
 const AddApplicationInputProcessingConfigurationRequest * AddApplicationInputProcessingConfigurationResponse::request() const
 {
-    return static_cast<const AddApplicationInputProcessingConfigurationRequest *>(KinesisAnalyticsV2Response::request());
+    Q_D(const AddApplicationInputProcessingConfigurationResponse);
+    return static_cast<const AddApplicationInputProcessingConfigurationRequest *>(d->request);
 }
 
 /*!

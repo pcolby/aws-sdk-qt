@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    BackupResponsePrivate * const d_ptr; ///< Internal d-pointer.
     BackupResponse(BackupResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

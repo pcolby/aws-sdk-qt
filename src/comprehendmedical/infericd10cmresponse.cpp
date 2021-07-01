@@ -57,7 +57,8 @@ InferICD10CMResponse::InferICD10CMResponse(
  */
 const InferICD10CMRequest * InferICD10CMResponse::request() const
 {
-    return static_cast<const InferICD10CMRequest *>(ComprehendMedicalResponse::request());
+    Q_D(const InferICD10CMResponse);
+    return static_cast<const InferICD10CMRequest *>(d->request);
 }
 
 /*!

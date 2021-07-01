@@ -76,7 +76,8 @@ CreateWebACLResponse::CreateWebACLResponse(
  */
 const CreateWebACLRequest * CreateWebACLResponse::request() const
 {
-    return static_cast<const CreateWebACLRequest *>(WafResponse::request());
+    Q_D(const CreateWebACLResponse);
+    return static_cast<const CreateWebACLRequest *>(d->request);
 }
 
 /*!

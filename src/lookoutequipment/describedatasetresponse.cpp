@@ -57,7 +57,8 @@ DescribeDatasetResponse::DescribeDatasetResponse(
  */
 const DescribeDatasetRequest * DescribeDatasetResponse::request() const
 {
-    return static_cast<const DescribeDatasetRequest *>(LookoutEquipmentResponse::request());
+    Q_D(const DescribeDatasetResponse);
+    return static_cast<const DescribeDatasetRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ PutAppInstanceRetentionSettingsResponse::PutAppInstanceRetentionSettingsResponse
  */
 const PutAppInstanceRetentionSettingsRequest * PutAppInstanceRetentionSettingsResponse::request() const
 {
-    return static_cast<const PutAppInstanceRetentionSettingsRequest *>(ChimeResponse::request());
+    Q_D(const PutAppInstanceRetentionSettingsResponse);
+    return static_cast<const PutAppInstanceRetentionSettingsRequest *>(d->request);
 }
 
 /*!

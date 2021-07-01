@@ -98,7 +98,8 @@ UpdateSipMediaApplicationResponse::UpdateSipMediaApplicationResponse(
  */
 const UpdateSipMediaApplicationRequest * UpdateSipMediaApplicationResponse::request() const
 {
-    return static_cast<const UpdateSipMediaApplicationRequest *>(ChimeResponse::request());
+    Q_D(const UpdateSipMediaApplicationResponse);
+    return static_cast<const UpdateSipMediaApplicationRequest *>(d->request);
 }
 
 /*!

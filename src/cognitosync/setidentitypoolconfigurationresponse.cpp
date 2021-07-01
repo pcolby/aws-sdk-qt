@@ -75,7 +75,8 @@ SetIdentityPoolConfigurationResponse::SetIdentityPoolConfigurationResponse(
  */
 const SetIdentityPoolConfigurationRequest * SetIdentityPoolConfigurationResponse::request() const
 {
-    return static_cast<const SetIdentityPoolConfigurationRequest *>(CognitoSyncResponse::request());
+    Q_D(const SetIdentityPoolConfigurationResponse);
+    return static_cast<const SetIdentityPoolConfigurationRequest *>(d->request);
 }
 
 /*!

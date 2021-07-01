@@ -61,7 +61,8 @@ EnableProactiveEngagementResponse::EnableProactiveEngagementResponse(
  */
 const EnableProactiveEngagementRequest * EnableProactiveEngagementResponse::request() const
 {
-    return static_cast<const EnableProactiveEngagementRequest *>(ShieldResponse::request());
+    Q_D(const EnableProactiveEngagementResponse);
+    return static_cast<const EnableProactiveEngagementRequest *>(d->request);
 }
 
 /*!

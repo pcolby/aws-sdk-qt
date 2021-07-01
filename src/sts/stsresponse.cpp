@@ -37,7 +37,7 @@ namespace STS {
  * Constructs a StsResponse object with parent \a parent.
  */
 StsResponse::StsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new StsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new StsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ StsResponse::StsResponse(QObject * const parent)
  * implementation that inherits from StsResponsePrivate.
  */
 StsResponse::StsResponse(StsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void StsResponse::parseFailure(QIODevice &response)
  * Constructs a StsResponsePrivate object with public implementation \a q.
  */
 StsResponsePrivate::StsResponsePrivate(
-    StsResponse * const q) : q_ptr(q)
+    StsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -115,7 +115,8 @@ SuspendGameServerGroupResponse::SuspendGameServerGroupResponse(
  */
 const SuspendGameServerGroupRequest * SuspendGameServerGroupResponse::request() const
 {
-    return static_cast<const SuspendGameServerGroupRequest *>(GameLiftResponse::request());
+    Q_D(const SuspendGameServerGroupResponse);
+    return static_cast<const SuspendGameServerGroupRequest *>(d->request);
 }
 
 /*!

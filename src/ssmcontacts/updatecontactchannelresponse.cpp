@@ -55,7 +55,8 @@ UpdateContactChannelResponse::UpdateContactChannelResponse(
  */
 const UpdateContactChannelRequest * UpdateContactChannelResponse::request() const
 {
-    return static_cast<const UpdateContactChannelRequest *>(SSMContactsResponse::request());
+    Q_D(const UpdateContactChannelResponse);
+    return static_cast<const UpdateContactChannelRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ UpdateNetworkProfileResponse::UpdateNetworkProfileResponse(
  */
 const UpdateNetworkProfileRequest * UpdateNetworkProfileResponse::request() const
 {
-    return static_cast<const UpdateNetworkProfileRequest *>(DeviceFarmResponse::request());
+    Q_D(const UpdateNetworkProfileResponse);
+    return static_cast<const UpdateNetworkProfileRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ UpdateEndpointResponse::UpdateEndpointResponse(
  */
 const UpdateEndpointRequest * UpdateEndpointResponse::request() const
 {
-    return static_cast<const UpdateEndpointRequest *>(ComprehendResponse::request());
+    Q_D(const UpdateEndpointResponse);
+    return static_cast<const UpdateEndpointRequest *>(d->request);
 }
 
 /*!

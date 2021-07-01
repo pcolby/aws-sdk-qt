@@ -64,7 +64,8 @@ DescribeLocationEfsResponse::DescribeLocationEfsResponse(
  */
 const DescribeLocationEfsRequest * DescribeLocationEfsResponse::request() const
 {
-    return static_cast<const DescribeLocationEfsRequest *>(DataSyncResponse::request());
+    Q_D(const DescribeLocationEfsResponse);
+    return static_cast<const DescribeLocationEfsRequest *>(d->request);
 }
 
 /*!

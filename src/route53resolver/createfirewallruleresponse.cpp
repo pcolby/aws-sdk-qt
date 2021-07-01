@@ -94,7 +94,8 @@ CreateFirewallRuleResponse::CreateFirewallRuleResponse(
  */
 const CreateFirewallRuleRequest * CreateFirewallRuleResponse::request() const
 {
-    return static_cast<const CreateFirewallRuleRequest *>(Route53ResolverResponse::request());
+    Q_D(const CreateFirewallRuleResponse);
+    return static_cast<const CreateFirewallRuleRequest *>(d->request);
 }
 
 /*!

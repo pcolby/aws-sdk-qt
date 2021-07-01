@@ -55,7 +55,8 @@ UpdateEvaluationResponse::UpdateEvaluationResponse(
  */
 const UpdateEvaluationRequest * UpdateEvaluationResponse::request() const
 {
-    return static_cast<const UpdateEvaluationRequest *>(MachineLearningResponse::request());
+    Q_D(const UpdateEvaluationResponse);
+    return static_cast<const UpdateEvaluationRequest *>(d->request);
 }
 
 /*!

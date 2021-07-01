@@ -63,7 +63,8 @@ ListPublishedSchemaArnsResponse::ListPublishedSchemaArnsResponse(
  */
 const ListPublishedSchemaArnsRequest * ListPublishedSchemaArnsResponse::request() const
 {
-    return static_cast<const ListPublishedSchemaArnsRequest *>(CloudDirectoryResponse::request());
+    Q_D(const ListPublishedSchemaArnsResponse);
+    return static_cast<const ListPublishedSchemaArnsRequest *>(d->request);
 }
 
 /*!

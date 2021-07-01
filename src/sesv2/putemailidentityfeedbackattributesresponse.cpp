@@ -88,7 +88,8 @@ PutEmailIdentityFeedbackAttributesResponse::PutEmailIdentityFeedbackAttributesRe
  */
 const PutEmailIdentityFeedbackAttributesRequest * PutEmailIdentityFeedbackAttributesResponse::request() const
 {
-    return static_cast<const PutEmailIdentityFeedbackAttributesRequest *>(Sesv2Response::request());
+    Q_D(const PutEmailIdentityFeedbackAttributesResponse);
+    return static_cast<const PutEmailIdentityFeedbackAttributesRequest *>(d->request);
 }
 
 /*!

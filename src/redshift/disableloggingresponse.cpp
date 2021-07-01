@@ -85,7 +85,8 @@ DisableLoggingResponse::DisableLoggingResponse(
  */
 const DisableLoggingRequest * DisableLoggingResponse::request() const
 {
-    return static_cast<const DisableLoggingRequest *>(RedshiftResponse::request());
+    Q_D(const DisableLoggingResponse);
+    return static_cast<const DisableLoggingRequest *>(d->request);
 }
 
 /*!

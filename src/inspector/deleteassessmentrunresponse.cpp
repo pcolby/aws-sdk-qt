@@ -60,7 +60,8 @@ DeleteAssessmentRunResponse::DeleteAssessmentRunResponse(
  */
 const DeleteAssessmentRunRequest * DeleteAssessmentRunResponse::request() const
 {
-    return static_cast<const DeleteAssessmentRunRequest *>(InspectorResponse::request());
+    Q_D(const DeleteAssessmentRunResponse);
+    return static_cast<const DeleteAssessmentRunRequest *>(d->request);
 }
 
 /*!

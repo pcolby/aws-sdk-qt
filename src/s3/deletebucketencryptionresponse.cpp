@@ -55,7 +55,8 @@ DeleteBucketEncryptionResponse::DeleteBucketEncryptionResponse(
  */
 const DeleteBucketEncryptionRequest * DeleteBucketEncryptionResponse::request() const
 {
-    return static_cast<const DeleteBucketEncryptionRequest *>(S3Response::request());
+    Q_D(const DeleteBucketEncryptionResponse);
+    return static_cast<const DeleteBucketEncryptionRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ ProvideAnomalyFeedbackResponse::ProvideAnomalyFeedbackResponse(
  */
 const ProvideAnomalyFeedbackRequest * ProvideAnomalyFeedbackResponse::request() const
 {
-    return static_cast<const ProvideAnomalyFeedbackRequest *>(CostExplorerResponse::request());
+    Q_D(const ProvideAnomalyFeedbackResponse);
+    return static_cast<const ProvideAnomalyFeedbackRequest *>(d->request);
 }
 
 /*!

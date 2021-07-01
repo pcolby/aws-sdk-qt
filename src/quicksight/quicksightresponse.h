@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    QuickSightResponsePrivate * const d_ptr; ///< Internal d-pointer.
     QuickSightResponse(QuickSightResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

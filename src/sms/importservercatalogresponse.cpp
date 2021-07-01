@@ -68,7 +68,8 @@ ImportServerCatalogResponse::ImportServerCatalogResponse(
  */
 const ImportServerCatalogRequest * ImportServerCatalogResponse::request() const
 {
-    return static_cast<const ImportServerCatalogRequest *>(SmsResponse::request());
+    Q_D(const ImportServerCatalogResponse);
+    return static_cast<const ImportServerCatalogRequest *>(d->request);
 }
 
 /*!

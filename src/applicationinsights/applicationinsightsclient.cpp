@@ -126,16 +126,16 @@ ApplicationInsightsClient::ApplicationInsightsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-11-25"),
-    QStringLiteral("applicationinsights"),
-    QStringLiteral("Amazon CloudWatch Application Insights"),
-    QStringLiteral("applicationinsights"),
-    parent), d_ptr(new ApplicationInsightsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ApplicationInsightsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ApplicationInsightsClient);
+    d->apiVersion = QStringLiteral("2018-11-25");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("applicationinsights");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudWatch Application Insights");
+    d->serviceName = QStringLiteral("applicationinsights");
 }
 
 /*!
@@ -154,16 +154,16 @@ ApplicationInsightsClient::ApplicationInsightsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-11-25"),
-    QStringLiteral("applicationinsights"),
-    QStringLiteral("Amazon CloudWatch Application Insights"),
-    QStringLiteral("applicationinsights"),
-    parent), d_ptr(new ApplicationInsightsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ApplicationInsightsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ApplicationInsightsClient);
+    d->apiVersion = QStringLiteral("2018-11-25");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("applicationinsights");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudWatch Application Insights");
+    d->serviceName = QStringLiteral("applicationinsights");
 }
 
 /*!
@@ -555,9 +555,10 @@ UpdateLogPatternResponse * ApplicationInsightsClient::updateLogPattern(const Upd
 /*!
  * Constructs a ApplicationInsightsClientPrivate object with public implementation \a q.
  */
-ApplicationInsightsClientPrivate::ApplicationInsightsClientPrivate(ApplicationInsightsClient * const q) : q_ptr(q)
+ApplicationInsightsClientPrivate::ApplicationInsightsClientPrivate(ApplicationInsightsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ApplicationInsights

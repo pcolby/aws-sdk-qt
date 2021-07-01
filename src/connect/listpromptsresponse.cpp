@@ -79,7 +79,8 @@ ListPromptsResponse::ListPromptsResponse(
  */
 const ListPromptsRequest * ListPromptsResponse::request() const
 {
-    return static_cast<const ListPromptsRequest *>(ConnectResponse::request());
+    Q_D(const ListPromptsResponse);
+    return static_cast<const ListPromptsRequest *>(d->request);
 }
 
 /*!

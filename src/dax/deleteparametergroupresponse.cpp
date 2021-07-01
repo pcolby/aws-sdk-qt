@@ -59,7 +59,8 @@ DeleteParameterGroupResponse::DeleteParameterGroupResponse(
  */
 const DeleteParameterGroupRequest * DeleteParameterGroupResponse::request() const
 {
-    return static_cast<const DeleteParameterGroupRequest *>(DaxResponse::request());
+    Q_D(const DeleteParameterGroupResponse);
+    return static_cast<const DeleteParameterGroupRequest *>(d->request);
 }
 
 /*!

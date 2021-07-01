@@ -218,7 +218,8 @@ RemoveCustomRoutingEndpointsResponse::RemoveCustomRoutingEndpointsResponse(
  */
 const RemoveCustomRoutingEndpointsRequest * RemoveCustomRoutingEndpointsResponse::request() const
 {
-    return static_cast<const RemoveCustomRoutingEndpointsRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const RemoveCustomRoutingEndpointsResponse);
+    return static_cast<const RemoveCustomRoutingEndpointsRequest *>(d->request);
 }
 
 /*!

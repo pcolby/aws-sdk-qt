@@ -37,7 +37,7 @@ namespace CodeGuruProfiler {
  * Constructs a CodeGuruProfilerResponse object with parent \a parent.
  */
 CodeGuruProfilerResponse::CodeGuruProfilerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CodeGuruProfilerResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CodeGuruProfilerResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CodeGuruProfilerResponse::CodeGuruProfilerResponse(QObject * const parent)
  * implementation that inherits from CodeGuruProfilerResponsePrivate.
  */
 CodeGuruProfilerResponse::CodeGuruProfilerResponse(CodeGuruProfilerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CodeGuruProfilerResponse::parseFailure(QIODevice &response)
  * Constructs a CodeGuruProfilerResponsePrivate object with public implementation \a q.
  */
 CodeGuruProfilerResponsePrivate::CodeGuruProfilerResponsePrivate(
-    CodeGuruProfilerResponse * const q) : q_ptr(q)
+    CodeGuruProfilerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

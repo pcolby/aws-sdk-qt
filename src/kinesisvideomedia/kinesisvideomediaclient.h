@@ -51,12 +51,6 @@ public:
 public slots:
     GetMediaResponse * getMedia(const GetMediaRequest &request);
 
-protected:
-    /// @cond internal
-    KinesisVideoMediaClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit KinesisVideoMediaClient(KinesisVideoMediaClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(KinesisVideoMediaClient)
     Q_DISABLE_COPY(KinesisVideoMediaClient)

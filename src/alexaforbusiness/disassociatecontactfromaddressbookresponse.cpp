@@ -62,7 +62,8 @@ DisassociateContactFromAddressBookResponse::DisassociateContactFromAddressBookRe
  */
 const DisassociateContactFromAddressBookRequest * DisassociateContactFromAddressBookResponse::request() const
 {
-    return static_cast<const DisassociateContactFromAddressBookRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const DisassociateContactFromAddressBookResponse);
+    return static_cast<const DisassociateContactFromAddressBookRequest *>(d->request);
 }
 
 /*!

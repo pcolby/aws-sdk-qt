@@ -58,7 +58,8 @@ RunJobFlowResponse::RunJobFlowResponse(
  */
 const RunJobFlowRequest * RunJobFlowResponse::request() const
 {
-    return static_cast<const RunJobFlowRequest *>(EmrResponse::request());
+    Q_D(const RunJobFlowResponse);
+    return static_cast<const RunJobFlowRequest *>(d->request);
 }
 
 /*!

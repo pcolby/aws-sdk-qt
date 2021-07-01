@@ -20,20 +20,19 @@
 #ifndef QTAWS_DATAEXCHANGECLIENT_P_H
 #define QTAWS_DATAEXCHANGECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace DataExchange {
 
 class DataExchangeClient;
 
-class DataExchangeClientPrivate {
+class DataExchangeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit DataExchangeClientPrivate(DataExchangeClient * const q);
-
-protected:
-    DataExchangeClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DataExchangeClient)

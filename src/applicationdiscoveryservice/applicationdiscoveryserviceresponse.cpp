@@ -37,7 +37,7 @@ namespace ApplicationDiscoveryService {
  * Constructs a ApplicationDiscoveryServiceResponse object with parent \a parent.
  */
 ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ApplicationDiscoveryServiceResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ApplicationDiscoveryServiceResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(QObject
  * implementation that inherits from ApplicationDiscoveryServiceResponsePrivate.
  */
 ApplicationDiscoveryServiceResponse::ApplicationDiscoveryServiceResponse(ApplicationDiscoveryServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ApplicationDiscoveryServiceResponse::parseFailure(QIODevice &response)
  * Constructs a ApplicationDiscoveryServiceResponsePrivate object with public implementation \a q.
  */
 ApplicationDiscoveryServiceResponsePrivate::ApplicationDiscoveryServiceResponsePrivate(
-    ApplicationDiscoveryServiceResponse * const q) : q_ptr(q)
+    ApplicationDiscoveryServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

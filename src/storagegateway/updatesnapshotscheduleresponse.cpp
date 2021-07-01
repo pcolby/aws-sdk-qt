@@ -124,7 +124,8 @@ UpdateSnapshotScheduleResponse::UpdateSnapshotScheduleResponse(
  */
 const UpdateSnapshotScheduleRequest * UpdateSnapshotScheduleResponse::request() const
 {
-    return static_cast<const UpdateSnapshotScheduleRequest *>(StorageGatewayResponse::request());
+    Q_D(const UpdateSnapshotScheduleResponse);
+    return static_cast<const UpdateSnapshotScheduleRequest *>(d->request);
 }
 
 /*!

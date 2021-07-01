@@ -20,20 +20,19 @@
 #ifndef QTAWS_STORAGEGATEWAYCLIENT_P_H
 #define QTAWS_STORAGEGATEWAYCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace StorageGateway {
 
 class StorageGatewayClient;
 
-class StorageGatewayClientPrivate {
+class StorageGatewayClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit StorageGatewayClientPrivate(StorageGatewayClient * const q);
-
-protected:
-    StorageGatewayClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(StorageGatewayClient)

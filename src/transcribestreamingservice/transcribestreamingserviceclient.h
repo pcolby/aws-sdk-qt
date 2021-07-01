@@ -54,12 +54,6 @@ public slots:
     StartMedicalStreamTranscriptionResponse * startMedicalStreamTranscription(const StartMedicalStreamTranscriptionRequest &request);
     StartStreamTranscriptionResponse * startStreamTranscription(const StartStreamTranscriptionRequest &request);
 
-protected:
-    /// @cond internal
-    TranscribeStreamingServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit TranscribeStreamingServiceClient(TranscribeStreamingServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(TranscribeStreamingServiceClient)
     Q_DISABLE_COPY(TranscribeStreamingServiceClient)

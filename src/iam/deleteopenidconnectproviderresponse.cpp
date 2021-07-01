@@ -62,7 +62,8 @@ DeleteOpenIDConnectProviderResponse::DeleteOpenIDConnectProviderResponse(
  */
 const DeleteOpenIDConnectProviderRequest * DeleteOpenIDConnectProviderResponse::request() const
 {
-    return static_cast<const DeleteOpenIDConnectProviderRequest *>(IamResponse::request());
+    Q_D(const DeleteOpenIDConnectProviderResponse);
+    return static_cast<const DeleteOpenIDConnectProviderRequest *>(d->request);
 }
 
 /*!

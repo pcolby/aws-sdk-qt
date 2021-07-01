@@ -60,7 +60,8 @@ UpdateAssessmentTargetResponse::UpdateAssessmentTargetResponse(
  */
 const UpdateAssessmentTargetRequest * UpdateAssessmentTargetResponse::request() const
 {
-    return static_cast<const UpdateAssessmentTargetRequest *>(InspectorResponse::request());
+    Q_D(const UpdateAssessmentTargetResponse);
+    return static_cast<const UpdateAssessmentTargetRequest *>(d->request);
 }
 
 /*!

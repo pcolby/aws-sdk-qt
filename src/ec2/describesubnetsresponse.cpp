@@ -87,7 +87,8 @@ DescribeSubnetsResponse::DescribeSubnetsResponse(
  */
 const DescribeSubnetsRequest * DescribeSubnetsResponse::request() const
 {
-    return static_cast<const DescribeSubnetsRequest *>(Ec2Response::request());
+    Q_D(const DescribeSubnetsResponse);
+    return static_cast<const DescribeSubnetsRequest *>(d->request);
 }
 
 /*!

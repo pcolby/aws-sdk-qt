@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    CloudWatchLogsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CloudWatchLogsResponse(CloudWatchLogsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

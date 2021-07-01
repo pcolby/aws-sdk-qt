@@ -58,7 +58,8 @@ StartWorkspacesResponse::StartWorkspacesResponse(
  */
 const StartWorkspacesRequest * StartWorkspacesResponse::request() const
 {
-    return static_cast<const StartWorkspacesRequest *>(WorkSpacesResponse::request());
+    Q_D(const StartWorkspacesResponse);
+    return static_cast<const StartWorkspacesRequest *>(d->request);
 }
 
 /*!

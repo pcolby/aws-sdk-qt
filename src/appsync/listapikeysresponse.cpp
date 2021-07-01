@@ -56,7 +56,8 @@ ListApiKeysResponse::ListApiKeysResponse(
  */
 const ListApiKeysRequest * ListApiKeysResponse::request() const
 {
-    return static_cast<const ListApiKeysRequest *>(AppSyncResponse::request());
+    Q_D(const ListApiKeysResponse);
+    return static_cast<const ListApiKeysRequest *>(d->request);
 }
 
 /*!

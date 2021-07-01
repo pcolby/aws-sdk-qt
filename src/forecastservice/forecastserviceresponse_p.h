@@ -20,12 +20,14 @@
 #ifndef QTAWS_FORECASTSERVICERESPONSE_P_H
 #define QTAWS_FORECASTSERVICERESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace ForecastService {
 
 class ForecastServiceResponse;
 
-class ForecastServiceResponsePrivate {
+class ForecastServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    ForecastServiceResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ForecastServiceResponse)

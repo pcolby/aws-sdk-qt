@@ -87,7 +87,8 @@ ResetAddressAttributeResponse::ResetAddressAttributeResponse(
  */
 const ResetAddressAttributeRequest * ResetAddressAttributeResponse::request() const
 {
-    return static_cast<const ResetAddressAttributeRequest *>(Ec2Response::request());
+    Q_D(const ResetAddressAttributeResponse);
+    return static_cast<const ResetAddressAttributeRequest *>(d->request);
 }
 
 /*!

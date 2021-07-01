@@ -82,7 +82,8 @@ CreateProvisioningClaimResponse::CreateProvisioningClaimResponse(
  */
 const CreateProvisioningClaimRequest * CreateProvisioningClaimResponse::request() const
 {
-    return static_cast<const CreateProvisioningClaimRequest *>(IoTResponse::request());
+    Q_D(const CreateProvisioningClaimResponse);
+    return static_cast<const CreateProvisioningClaimRequest *>(d->request);
 }
 
 /*!

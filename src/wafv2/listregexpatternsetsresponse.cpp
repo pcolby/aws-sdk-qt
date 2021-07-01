@@ -126,7 +126,8 @@ ListRegexPatternSetsResponse::ListRegexPatternSetsResponse(
  */
 const ListRegexPatternSetsRequest * ListRegexPatternSetsResponse::request() const
 {
-    return static_cast<const ListRegexPatternSetsRequest *>(Wafv2Response::request());
+    Q_D(const ListRegexPatternSetsResponse);
+    return static_cast<const ListRegexPatternSetsRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ PurchaseOfferingResponse::PurchaseOfferingResponse(
  */
 const PurchaseOfferingRequest * PurchaseOfferingResponse::request() const
 {
-    return static_cast<const PurchaseOfferingRequest *>(MediaConnectResponse::request());
+    Q_D(const PurchaseOfferingResponse);
+    return static_cast<const PurchaseOfferingRequest *>(d->request);
 }
 
 /*!

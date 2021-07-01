@@ -207,16 +207,16 @@ NetworkFirewallClient::NetworkFirewallClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-11-12"),
-    QStringLiteral("network-firewall"),
-    QStringLiteral("AWS Network Firewall"),
-    QStringLiteral("network-firewall"),
-    parent), d_ptr(new NetworkFirewallClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new NetworkFirewallClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(NetworkFirewallClient);
+    d->apiVersion = QStringLiteral("2020-11-12");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("network-firewall");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Network Firewall");
+    d->serviceName = QStringLiteral("network-firewall");
 }
 
 /*!
@@ -235,16 +235,16 @@ NetworkFirewallClient::NetworkFirewallClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-11-12"),
-    QStringLiteral("network-firewall"),
-    QStringLiteral("AWS Network Firewall"),
-    QStringLiteral("network-firewall"),
-    parent), d_ptr(new NetworkFirewallClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new NetworkFirewallClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(NetworkFirewallClient);
+    d->apiVersion = QStringLiteral("2020-11-12");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("network-firewall");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Network Firewall");
+    d->serviceName = QStringLiteral("network-firewall");
 }
 
 /*!
@@ -792,9 +792,10 @@ UpdateSubnetChangeProtectionResponse * NetworkFirewallClient::updateSubnetChange
 /*!
  * Constructs a NetworkFirewallClientPrivate object with public implementation \a q.
  */
-NetworkFirewallClientPrivate::NetworkFirewallClientPrivate(NetworkFirewallClient * const q) : q_ptr(q)
+NetworkFirewallClientPrivate::NetworkFirewallClientPrivate(NetworkFirewallClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace NetworkFirewall

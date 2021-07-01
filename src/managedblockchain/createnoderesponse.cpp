@@ -72,7 +72,8 @@ CreateNodeResponse::CreateNodeResponse(
  */
 const CreateNodeRequest * CreateNodeResponse::request() const
 {
-    return static_cast<const CreateNodeRequest *>(ManagedBlockchainResponse::request());
+    Q_D(const CreateNodeResponse);
+    return static_cast<const CreateNodeRequest *>(d->request);
 }
 
 /*!

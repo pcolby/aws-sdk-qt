@@ -124,7 +124,8 @@ UpdateSMBSecurityStrategyResponse::UpdateSMBSecurityStrategyResponse(
  */
 const UpdateSMBSecurityStrategyRequest * UpdateSMBSecurityStrategyResponse::request() const
 {
-    return static_cast<const UpdateSMBSecurityStrategyRequest *>(StorageGatewayResponse::request());
+    Q_D(const UpdateSMBSecurityStrategyResponse);
+    return static_cast<const UpdateSMBSecurityStrategyRequest *>(d->request);
 }
 
 /*!

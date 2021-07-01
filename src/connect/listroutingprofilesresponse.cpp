@@ -79,7 +79,8 @@ ListRoutingProfilesResponse::ListRoutingProfilesResponse(
  */
 const ListRoutingProfilesRequest * ListRoutingProfilesResponse::request() const
 {
-    return static_cast<const ListRoutingProfilesRequest *>(ConnectResponse::request());
+    Q_D(const ListRoutingProfilesResponse);
+    return static_cast<const ListRoutingProfilesRequest *>(d->request);
 }
 
 /*!

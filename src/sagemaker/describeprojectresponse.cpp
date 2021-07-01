@@ -70,7 +70,8 @@ DescribeProjectResponse::DescribeProjectResponse(
  */
 const DescribeProjectRequest * DescribeProjectResponse::request() const
 {
-    return static_cast<const DescribeProjectRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeProjectResponse);
+    return static_cast<const DescribeProjectRequest *>(d->request);
 }
 
 /*!

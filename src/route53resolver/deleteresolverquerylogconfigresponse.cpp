@@ -94,7 +94,8 @@ DeleteResolverQueryLogConfigResponse::DeleteResolverQueryLogConfigResponse(
  */
 const DeleteResolverQueryLogConfigRequest * DeleteResolverQueryLogConfigResponse::request() const
 {
-    return static_cast<const DeleteResolverQueryLogConfigRequest *>(Route53ResolverResponse::request());
+    Q_D(const DeleteResolverQueryLogConfigResponse);
+    return static_cast<const DeleteResolverQueryLogConfigRequest *>(d->request);
 }
 
 /*!

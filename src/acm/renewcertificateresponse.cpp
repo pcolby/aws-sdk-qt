@@ -60,7 +60,8 @@ RenewCertificateResponse::RenewCertificateResponse(
  */
 const RenewCertificateRequest * RenewCertificateResponse::request() const
 {
-    return static_cast<const RenewCertificateRequest *>(AcmResponse::request());
+    Q_D(const RenewCertificateResponse);
+    return static_cast<const RenewCertificateRequest *>(d->request);
 }
 
 /*!

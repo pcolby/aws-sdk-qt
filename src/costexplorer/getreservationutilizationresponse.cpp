@@ -75,7 +75,8 @@ GetReservationUtilizationResponse::GetReservationUtilizationResponse(
  */
 const GetReservationUtilizationRequest * GetReservationUtilizationResponse::request() const
 {
-    return static_cast<const GetReservationUtilizationRequest *>(CostExplorerResponse::request());
+    Q_D(const GetReservationUtilizationResponse);
+    return static_cast<const GetReservationUtilizationRequest *>(d->request);
 }
 
 /*!

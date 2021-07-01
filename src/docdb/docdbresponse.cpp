@@ -37,7 +37,7 @@ namespace DocDB {
  * Constructs a DocDBResponse object with parent \a parent.
  */
 DocDBResponse::DocDBResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DocDBResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new DocDBResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ DocDBResponse::DocDBResponse(QObject * const parent)
  * implementation that inherits from DocDBResponsePrivate.
  */
 DocDBResponse::DocDBResponse(DocDBResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void DocDBResponse::parseFailure(QIODevice &response)
  * Constructs a DocDBResponsePrivate object with public implementation \a q.
  */
 DocDBResponsePrivate::DocDBResponsePrivate(
-    DocDBResponse * const q) : q_ptr(q)
+    DocDBResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

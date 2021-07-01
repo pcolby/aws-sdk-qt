@@ -240,7 +240,8 @@ AcknowledgeJobResponse::AcknowledgeJobResponse(
  */
 const AcknowledgeJobRequest * AcknowledgeJobResponse::request() const
 {
-    return static_cast<const AcknowledgeJobRequest *>(CodePipelineResponse::request());
+    Q_D(const AcknowledgeJobResponse);
+    return static_cast<const AcknowledgeJobRequest *>(d->request);
 }
 
 /*!

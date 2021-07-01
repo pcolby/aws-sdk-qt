@@ -77,7 +77,7 @@ namespace IoTThingsGraph {
  * Constructs a IoTThingsGraphRequest object for IoTThingsGraph \a action.
  */
 IoTThingsGraphRequest::IoTThingsGraphRequest(const Action action)
-    : d_ptr(new IoTThingsGraphRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new IoTThingsGraphRequestPrivate(action, this))
 {
 
 }
@@ -86,8 +86,7 @@ IoTThingsGraphRequest::IoTThingsGraphRequest(const Action action)
  * Constructs a copy of \a other.
  */
 IoTThingsGraphRequest::IoTThingsGraphRequest(const IoTThingsGraphRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new IoTThingsGraphRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new IoTThingsGraphRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -110,7 +109,7 @@ IoTThingsGraphRequest& IoTThingsGraphRequest::operator=(const IoTThingsGraphRequ
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTThingsGraphRequestPrivate.
  */
-IoTThingsGraphRequest::IoTThingsGraphRequest(IoTThingsGraphRequestPrivate * const d) : d_ptr(d)
+IoTThingsGraphRequest::IoTThingsGraphRequest(IoTThingsGraphRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -279,7 +278,7 @@ QNetworkRequest IoTThingsGraphRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 IoTThingsGraphRequestPrivate::IoTThingsGraphRequestPrivate(const IoTThingsGraphRequest::Action action, IoTThingsGraphRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -294,8 +293,8 @@ IoTThingsGraphRequestPrivate::IoTThingsGraphRequestPrivate(const IoTThingsGraphR
  */
 IoTThingsGraphRequestPrivate::IoTThingsGraphRequestPrivate(const IoTThingsGraphRequestPrivate &other,
                                      IoTThingsGraphRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

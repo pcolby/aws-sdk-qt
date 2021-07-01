@@ -64,7 +64,8 @@ DeleteLocationResponse::DeleteLocationResponse(
  */
 const DeleteLocationRequest * DeleteLocationResponse::request() const
 {
-    return static_cast<const DeleteLocationRequest *>(DataSyncResponse::request());
+    Q_D(const DeleteLocationResponse);
+    return static_cast<const DeleteLocationRequest *>(d->request);
 }
 
 /*!

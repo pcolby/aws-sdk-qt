@@ -62,7 +62,8 @@ PutBackupPolicyResponse::PutBackupPolicyResponse(
  */
 const PutBackupPolicyRequest * PutBackupPolicyResponse::request() const
 {
-    return static_cast<const PutBackupPolicyRequest *>(EfsResponse::request());
+    Q_D(const PutBackupPolicyResponse);
+    return static_cast<const PutBackupPolicyRequest *>(d->request);
 }
 
 /*!

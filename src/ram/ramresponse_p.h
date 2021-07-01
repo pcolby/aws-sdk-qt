@@ -20,12 +20,14 @@
 #ifndef QTAWS_RAMRESPONSE_P_H
 #define QTAWS_RAMRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace RAM {
 
 class RamResponse;
 
-class RamResponsePrivate {
+class RamResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    RamResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RamResponse)

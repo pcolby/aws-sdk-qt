@@ -87,7 +87,8 @@ GetTransitGatewayRouteTableAssociationsResponse::GetTransitGatewayRouteTableAsso
  */
 const GetTransitGatewayRouteTableAssociationsRequest * GetTransitGatewayRouteTableAssociationsResponse::request() const
 {
-    return static_cast<const GetTransitGatewayRouteTableAssociationsRequest *>(Ec2Response::request());
+    Q_D(const GetTransitGatewayRouteTableAssociationsResponse);
+    return static_cast<const GetTransitGatewayRouteTableAssociationsRequest *>(d->request);
 }
 
 /*!

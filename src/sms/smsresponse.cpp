@@ -37,7 +37,7 @@ namespace SMS {
  * Constructs a SmsResponse object with parent \a parent.
  */
 SmsResponse::SmsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SmsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SmsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SmsResponse::SmsResponse(QObject * const parent)
  * implementation that inherits from SmsResponsePrivate.
  */
 SmsResponse::SmsResponse(SmsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SmsResponse::parseFailure(QIODevice &response)
  * Constructs a SmsResponsePrivate object with public implementation \a q.
  */
 SmsResponsePrivate::SmsResponsePrivate(
-    SmsResponse * const q) : q_ptr(q)
+    SmsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

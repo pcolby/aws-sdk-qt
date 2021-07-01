@@ -58,7 +58,8 @@ PutAutoScalingPolicyResponse::PutAutoScalingPolicyResponse(
  */
 const PutAutoScalingPolicyRequest * PutAutoScalingPolicyResponse::request() const
 {
-    return static_cast<const PutAutoScalingPolicyRequest *>(EmrResponse::request());
+    Q_D(const PutAutoScalingPolicyResponse);
+    return static_cast<const PutAutoScalingPolicyRequest *>(d->request);
 }
 
 /*!

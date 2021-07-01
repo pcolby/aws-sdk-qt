@@ -20,20 +20,19 @@
 #ifndef QTAWS_COSTANDUSAGEREPORTSERVICECLIENT_P_H
 #define QTAWS_COSTANDUSAGEREPORTSERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CostandUsageReportService {
 
 class CostandUsageReportServiceClient;
 
-class CostandUsageReportServiceClientPrivate {
+class CostandUsageReportServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CostandUsageReportServiceClientPrivate(CostandUsageReportServiceClient * const q);
-
-protected:
-    CostandUsageReportServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CostandUsageReportServiceClient)

@@ -87,7 +87,8 @@ DescribeClientVpnAuthorizationRulesResponse::DescribeClientVpnAuthorizationRules
  */
 const DescribeClientVpnAuthorizationRulesRequest * DescribeClientVpnAuthorizationRulesResponse::request() const
 {
-    return static_cast<const DescribeClientVpnAuthorizationRulesRequest *>(Ec2Response::request());
+    Q_D(const DescribeClientVpnAuthorizationRulesResponse);
+    return static_cast<const DescribeClientVpnAuthorizationRulesRequest *>(d->request);
 }
 
 /*!

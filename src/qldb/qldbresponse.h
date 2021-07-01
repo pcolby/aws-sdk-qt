@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    QldbResponsePrivate * const d_ptr; ///< Internal d-pointer.
     QldbResponse(QldbResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

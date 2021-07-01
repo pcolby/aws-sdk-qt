@@ -439,7 +439,8 @@ PutCommentReactionResponse::PutCommentReactionResponse(
  */
 const PutCommentReactionRequest * PutCommentReactionResponse::request() const
 {
-    return static_cast<const PutCommentReactionRequest *>(CodeCommitResponse::request());
+    Q_D(const PutCommentReactionResponse);
+    return static_cast<const PutCommentReactionRequest *>(d->request);
 }
 
 /*!

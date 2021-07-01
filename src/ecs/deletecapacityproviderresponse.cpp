@@ -72,7 +72,8 @@ DeleteCapacityProviderResponse::DeleteCapacityProviderResponse(
  */
 const DeleteCapacityProviderRequest * DeleteCapacityProviderResponse::request() const
 {
-    return static_cast<const DeleteCapacityProviderRequest *>(EcsResponse::request());
+    Q_D(const DeleteCapacityProviderResponse);
+    return static_cast<const DeleteCapacityProviderRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ GetAccessKeyLastUsedResponse::GetAccessKeyLastUsedResponse(
  */
 const GetAccessKeyLastUsedRequest * GetAccessKeyLastUsedResponse::request() const
 {
-    return static_cast<const GetAccessKeyLastUsedRequest *>(IamResponse::request());
+    Q_D(const GetAccessKeyLastUsedResponse);
+    return static_cast<const GetAccessKeyLastUsedRequest *>(d->request);
 }
 
 /*!

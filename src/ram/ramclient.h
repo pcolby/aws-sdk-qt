@@ -120,12 +120,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateResourceShareResponse * updateResourceShare(const UpdateResourceShareRequest &request);
 
-protected:
-    /// @cond internal
-    RamClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit RamClient(RamClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(RamClient)
     Q_DISABLE_COPY(RamClient)

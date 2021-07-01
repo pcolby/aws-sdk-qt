@@ -87,7 +87,8 @@ CancelConversionTaskResponse::CancelConversionTaskResponse(
  */
 const CancelConversionTaskRequest * CancelConversionTaskResponse::request() const
 {
-    return static_cast<const CancelConversionTaskRequest *>(Ec2Response::request());
+    Q_D(const CancelConversionTaskResponse);
+    return static_cast<const CancelConversionTaskRequest *>(d->request);
 }
 
 /*!

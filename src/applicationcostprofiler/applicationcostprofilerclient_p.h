@@ -20,20 +20,19 @@
 #ifndef QTAWS_APPLICATIONCOSTPROFILERCLIENT_P_H
 #define QTAWS_APPLICATIONCOSTPROFILERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ApplicationCostProfiler {
 
 class ApplicationCostProfilerClient;
 
-class ApplicationCostProfilerClientPrivate {
+class ApplicationCostProfilerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ApplicationCostProfilerClientPrivate(ApplicationCostProfilerClient * const q);
-
-protected:
-    ApplicationCostProfilerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApplicationCostProfilerClient)

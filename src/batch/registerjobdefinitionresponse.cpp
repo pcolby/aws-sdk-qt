@@ -68,7 +68,8 @@ RegisterJobDefinitionResponse::RegisterJobDefinitionResponse(
  */
 const RegisterJobDefinitionRequest * RegisterJobDefinitionResponse::request() const
 {
-    return static_cast<const RegisterJobDefinitionRequest *>(BatchResponse::request());
+    Q_D(const RegisterJobDefinitionResponse);
+    return static_cast<const RegisterJobDefinitionRequest *>(d->request);
 }
 
 /*!

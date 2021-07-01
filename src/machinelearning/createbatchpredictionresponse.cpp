@@ -55,7 +55,8 @@ CreateBatchPredictionResponse::CreateBatchPredictionResponse(
  */
 const CreateBatchPredictionRequest * CreateBatchPredictionResponse::request() const
 {
-    return static_cast<const CreateBatchPredictionRequest *>(MachineLearningResponse::request());
+    Q_D(const CreateBatchPredictionResponse);
+    return static_cast<const CreateBatchPredictionRequest *>(d->request);
 }
 
 /*!

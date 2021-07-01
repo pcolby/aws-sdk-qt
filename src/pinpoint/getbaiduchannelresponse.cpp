@@ -56,7 +56,8 @@ GetBaiduChannelResponse::GetBaiduChannelResponse(
  */
 const GetBaiduChannelRequest * GetBaiduChannelResponse::request() const
 {
-    return static_cast<const GetBaiduChannelRequest *>(PinpointResponse::request());
+    Q_D(const GetBaiduChannelResponse);
+    return static_cast<const GetBaiduChannelRequest *>(d->request);
 }
 
 /*!

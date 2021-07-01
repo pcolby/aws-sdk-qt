@@ -207,12 +207,6 @@ public slots:
     StartDBClusterResponse * startDBCluster(const StartDBClusterRequest &request);
     StopDBClusterResponse * stopDBCluster(const StopDBClusterRequest &request);
 
-protected:
-    /// @cond internal
-    DocDBClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DocDBClient(DocDBClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(DocDBClient)
     Q_DISABLE_COPY(DocDBClient)

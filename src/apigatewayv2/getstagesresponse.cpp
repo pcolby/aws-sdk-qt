@@ -56,7 +56,8 @@ GetStagesResponse::GetStagesResponse(
  */
 const GetStagesRequest * GetStagesResponse::request() const
 {
-    return static_cast<const GetStagesRequest *>(ApiGatewayV2Response::request());
+    Q_D(const GetStagesResponse);
+    return static_cast<const GetStagesRequest *>(d->request);
 }
 
 /*!

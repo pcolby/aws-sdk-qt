@@ -60,7 +60,8 @@ DescribeAnalysisResponse::DescribeAnalysisResponse(
  */
 const DescribeAnalysisRequest * DescribeAnalysisResponse::request() const
 {
-    return static_cast<const DescribeAnalysisRequest *>(QuickSightResponse::request());
+    Q_D(const DescribeAnalysisResponse);
+    return static_cast<const DescribeAnalysisRequest *>(d->request);
 }
 
 /*!

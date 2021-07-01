@@ -131,7 +131,8 @@ RestoreSecretResponse::RestoreSecretResponse(
  */
 const RestoreSecretRequest * RestoreSecretResponse::request() const
 {
-    return static_cast<const RestoreSecretRequest *>(SecretsManagerResponse::request());
+    Q_D(const RestoreSecretResponse);
+    return static_cast<const RestoreSecretRequest *>(d->request);
 }
 
 /*!

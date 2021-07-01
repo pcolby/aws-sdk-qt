@@ -66,7 +66,8 @@ DeleteSystemTemplateResponse::DeleteSystemTemplateResponse(
  */
 const DeleteSystemTemplateRequest * DeleteSystemTemplateResponse::request() const
 {
-    return static_cast<const DeleteSystemTemplateRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const DeleteSystemTemplateResponse);
+    return static_cast<const DeleteSystemTemplateRequest *>(d->request);
 }
 
 /*!

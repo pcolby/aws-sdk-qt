@@ -126,7 +126,8 @@ GetQueueUrlResponse::GetQueueUrlResponse(
  */
 const GetQueueUrlRequest * GetQueueUrlResponse::request() const
 {
-    return static_cast<const GetQueueUrlRequest *>(SqsResponse::request());
+    Q_D(const GetQueueUrlResponse);
+    return static_cast<const GetQueueUrlRequest *>(d->request);
 }
 
 /*!

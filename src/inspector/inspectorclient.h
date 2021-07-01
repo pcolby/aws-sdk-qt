@@ -160,12 +160,6 @@ public slots:
     UnsubscribeFromEventResponse * unsubscribeFromEvent(const UnsubscribeFromEventRequest &request);
     UpdateAssessmentTargetResponse * updateAssessmentTarget(const UpdateAssessmentTargetRequest &request);
 
-protected:
-    /// @cond internal
-    InspectorClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit InspectorClient(InspectorClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(InspectorClient)
     Q_DISABLE_COPY(InspectorClient)

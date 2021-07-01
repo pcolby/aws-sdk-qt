@@ -68,7 +68,8 @@ DetachInstancesResponse::DetachInstancesResponse(
  */
 const DetachInstancesRequest * DetachInstancesResponse::request() const
 {
-    return static_cast<const DetachInstancesRequest *>(AutoScalingResponse::request());
+    Q_D(const DetachInstancesResponse);
+    return static_cast<const DetachInstancesRequest *>(d->request);
 }
 
 /*!

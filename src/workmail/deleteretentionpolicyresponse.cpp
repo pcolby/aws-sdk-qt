@@ -89,7 +89,8 @@ DeleteRetentionPolicyResponse::DeleteRetentionPolicyResponse(
  */
 const DeleteRetentionPolicyRequest * DeleteRetentionPolicyResponse::request() const
 {
-    return static_cast<const DeleteRetentionPolicyRequest *>(WorkMailResponse::request());
+    Q_D(const DeleteRetentionPolicyResponse);
+    return static_cast<const DeleteRetentionPolicyRequest *>(d->request);
 }
 
 /*!

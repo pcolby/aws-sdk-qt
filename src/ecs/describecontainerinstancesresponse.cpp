@@ -72,7 +72,8 @@ DescribeContainerInstancesResponse::DescribeContainerInstancesResponse(
  */
 const DescribeContainerInstancesRequest * DescribeContainerInstancesResponse::request() const
 {
-    return static_cast<const DescribeContainerInstancesRequest *>(EcsResponse::request());
+    Q_D(const DescribeContainerInstancesResponse);
+    return static_cast<const DescribeContainerInstancesRequest *>(d->request);
 }
 
 /*!

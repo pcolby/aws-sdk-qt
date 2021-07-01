@@ -124,7 +124,8 @@ ShutdownGatewayResponse::ShutdownGatewayResponse(
  */
 const ShutdownGatewayRequest * ShutdownGatewayResponse::request() const
 {
-    return static_cast<const ShutdownGatewayRequest *>(StorageGatewayResponse::request());
+    Q_D(const ShutdownGatewayResponse);
+    return static_cast<const ShutdownGatewayRequest *>(d->request);
 }
 
 /*!

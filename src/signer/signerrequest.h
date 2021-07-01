@@ -75,8 +75,7 @@ public:
 
 protected:
     /// @cond internal
-    signerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit signerRequest(signerRequestPrivate * const d);
+    signerRequest(signerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

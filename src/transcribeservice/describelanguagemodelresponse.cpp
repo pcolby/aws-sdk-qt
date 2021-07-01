@@ -56,7 +56,8 @@ DescribeLanguageModelResponse::DescribeLanguageModelResponse(
  */
 const DescribeLanguageModelRequest * DescribeLanguageModelResponse::request() const
 {
-    return static_cast<const DescribeLanguageModelRequest *>(TranscribeServiceResponse::request());
+    Q_D(const DescribeLanguageModelResponse);
+    return static_cast<const DescribeLanguageModelRequest *>(d->request);
 }
 
 /*!

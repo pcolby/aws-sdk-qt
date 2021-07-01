@@ -81,7 +81,8 @@ BatchAssociateUserStackResponse::BatchAssociateUserStackResponse(
  */
 const BatchAssociateUserStackRequest * BatchAssociateUserStackResponse::request() const
 {
-    return static_cast<const BatchAssociateUserStackRequest *>(AppStreamResponse::request());
+    Q_D(const BatchAssociateUserStackResponse);
+    return static_cast<const BatchAssociateUserStackRequest *>(d->request);
 }
 
 /*!

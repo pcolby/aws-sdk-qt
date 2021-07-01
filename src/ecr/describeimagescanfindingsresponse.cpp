@@ -62,7 +62,8 @@ DescribeImageScanFindingsResponse::DescribeImageScanFindingsResponse(
  */
 const DescribeImageScanFindingsRequest * DescribeImageScanFindingsResponse::request() const
 {
-    return static_cast<const DescribeImageScanFindingsRequest *>(EcrResponse::request());
+    Q_D(const DescribeImageScanFindingsResponse);
+    return static_cast<const DescribeImageScanFindingsRequest *>(d->request);
 }
 
 /*!

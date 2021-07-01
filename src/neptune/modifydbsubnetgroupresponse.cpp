@@ -72,7 +72,8 @@ ModifyDBSubnetGroupResponse::ModifyDBSubnetGroupResponse(
  */
 const ModifyDBSubnetGroupRequest * ModifyDBSubnetGroupResponse::request() const
 {
-    return static_cast<const ModifyDBSubnetGroupRequest *>(NeptuneResponse::request());
+    Q_D(const ModifyDBSubnetGroupResponse);
+    return static_cast<const ModifyDBSubnetGroupRequest *>(d->request);
 }
 
 /*!

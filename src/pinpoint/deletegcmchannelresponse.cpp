@@ -56,7 +56,8 @@ DeleteGcmChannelResponse::DeleteGcmChannelResponse(
  */
 const DeleteGcmChannelRequest * DeleteGcmChannelResponse::request() const
 {
-    return static_cast<const DeleteGcmChannelRequest *>(PinpointResponse::request());
+    Q_D(const DeleteGcmChannelResponse);
+    return static_cast<const DeleteGcmChannelRequest *>(d->request);
 }
 
 /*!

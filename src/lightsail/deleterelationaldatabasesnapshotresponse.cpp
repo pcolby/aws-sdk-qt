@@ -74,7 +74,8 @@ DeleteRelationalDatabaseSnapshotResponse::DeleteRelationalDatabaseSnapshotRespon
  */
 const DeleteRelationalDatabaseSnapshotRequest * DeleteRelationalDatabaseSnapshotResponse::request() const
 {
-    return static_cast<const DeleteRelationalDatabaseSnapshotRequest *>(LightsailResponse::request());
+    Q_D(const DeleteRelationalDatabaseSnapshotResponse);
+    return static_cast<const DeleteRelationalDatabaseSnapshotRequest *>(d->request);
 }
 
 /*!

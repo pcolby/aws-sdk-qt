@@ -77,7 +77,8 @@ SetPrincipalTagAttributeMapResponse::SetPrincipalTagAttributeMapResponse(
  */
 const SetPrincipalTagAttributeMapRequest * SetPrincipalTagAttributeMapResponse::request() const
 {
-    return static_cast<const SetPrincipalTagAttributeMapRequest *>(CognitoIdentityResponse::request());
+    Q_D(const SetPrincipalTagAttributeMapResponse);
+    return static_cast<const SetPrincipalTagAttributeMapRequest *>(d->request);
 }
 
 /*!

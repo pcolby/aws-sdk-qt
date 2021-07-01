@@ -55,7 +55,8 @@ DeleteMLModelResponse::DeleteMLModelResponse(
  */
 const DeleteMLModelRequest * DeleteMLModelResponse::request() const
 {
-    return static_cast<const DeleteMLModelRequest *>(MachineLearningResponse::request());
+    Q_D(const DeleteMLModelResponse);
+    return static_cast<const DeleteMLModelRequest *>(d->request);
 }
 
 /*!

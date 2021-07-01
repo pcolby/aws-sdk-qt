@@ -59,7 +59,8 @@ PutIntentResponse::PutIntentResponse(
  */
 const PutIntentRequest * PutIntentResponse::request() const
 {
-    return static_cast<const PutIntentRequest *>(LexModelBuildingServiceResponse::request());
+    Q_D(const PutIntentResponse);
+    return static_cast<const PutIntentRequest *>(d->request);
 }
 
 /*!

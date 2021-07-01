@@ -45,7 +45,7 @@ namespace CloudSearchDomain {
  * Constructs a CloudSearchDomainRequest object for CloudSearchDomain \a action.
  */
 CloudSearchDomainRequest::CloudSearchDomainRequest(const Action action)
-    : d_ptr(new CloudSearchDomainRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CloudSearchDomainRequestPrivate(action, this))
 {
 
 }
@@ -54,8 +54,7 @@ CloudSearchDomainRequest::CloudSearchDomainRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CloudSearchDomainRequest::CloudSearchDomainRequest(const CloudSearchDomainRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new CloudSearchDomainRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CloudSearchDomainRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +77,7 @@ CloudSearchDomainRequest& CloudSearchDomainRequest::operator=(const CloudSearchD
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CloudSearchDomainRequestPrivate.
  */
-CloudSearchDomainRequest::CloudSearchDomainRequest(CloudSearchDomainRequestPrivate * const d) : d_ptr(d)
+CloudSearchDomainRequest::CloudSearchDomainRequest(CloudSearchDomainRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -247,7 +246,7 @@ QNetworkRequest CloudSearchDomainRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 CloudSearchDomainRequestPrivate::CloudSearchDomainRequestPrivate(const CloudSearchDomainRequest::Action action, CloudSearchDomainRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -262,8 +261,8 @@ CloudSearchDomainRequestPrivate::CloudSearchDomainRequestPrivate(const CloudSear
  */
 CloudSearchDomainRequestPrivate::CloudSearchDomainRequestPrivate(const CloudSearchDomainRequestPrivate &other,
                                      CloudSearchDomainRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

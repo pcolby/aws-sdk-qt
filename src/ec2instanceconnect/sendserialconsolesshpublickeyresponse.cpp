@@ -57,7 +57,8 @@ SendSerialConsoleSSHPublicKeyResponse::SendSerialConsoleSSHPublicKeyResponse(
  */
 const SendSerialConsoleSSHPublicKeyRequest * SendSerialConsoleSSHPublicKeyResponse::request() const
 {
-    return static_cast<const SendSerialConsoleSSHPublicKeyRequest *>(EC2InstanceConnectResponse::request());
+    Q_D(const SendSerialConsoleSSHPublicKeyResponse);
+    return static_cast<const SendSerialConsoleSSHPublicKeyRequest *>(d->request);
 }
 
 /*!

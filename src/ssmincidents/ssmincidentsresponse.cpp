@@ -37,7 +37,7 @@ namespace SSMIncidents {
  * Constructs a SSMIncidentsResponse object with parent \a parent.
  */
 SSMIncidentsResponse::SSMIncidentsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SSMIncidentsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SSMIncidentsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SSMIncidentsResponse::SSMIncidentsResponse(QObject * const parent)
  * implementation that inherits from SSMIncidentsResponsePrivate.
  */
 SSMIncidentsResponse::SSMIncidentsResponse(SSMIncidentsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SSMIncidentsResponse::parseFailure(QIODevice &response)
  * Constructs a SSMIncidentsResponsePrivate object with public implementation \a q.
  */
 SSMIncidentsResponsePrivate::SSMIncidentsResponsePrivate(
-    SSMIncidentsResponse * const q) : q_ptr(q)
+    SSMIncidentsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -61,7 +61,8 @@ DescribeRecordResponse::DescribeRecordResponse(
  */
 const DescribeRecordRequest * DescribeRecordResponse::request() const
 {
-    return static_cast<const DescribeRecordRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DescribeRecordResponse);
+    return static_cast<const DescribeRecordRequest *>(d->request);
 }
 
 /*!

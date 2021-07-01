@@ -68,7 +68,8 @@ DescribeScalingActivitiesResponse::DescribeScalingActivitiesResponse(
  */
 const DescribeScalingActivitiesRequest * DescribeScalingActivitiesResponse::request() const
 {
-    return static_cast<const DescribeScalingActivitiesRequest *>(AutoScalingResponse::request());
+    Q_D(const DescribeScalingActivitiesResponse);
+    return static_cast<const DescribeScalingActivitiesRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ BulkPublishResponse::BulkPublishResponse(
  */
 const BulkPublishRequest * BulkPublishResponse::request() const
 {
-    return static_cast<const BulkPublishRequest *>(CognitoSyncResponse::request());
+    Q_D(const BulkPublishResponse);
+    return static_cast<const BulkPublishRequest *>(d->request);
 }
 
 /*!

@@ -202,12 +202,6 @@ public slots:
     UpdateRecoveryPointLifecycleResponse * updateRecoveryPointLifecycle(const UpdateRecoveryPointLifecycleRequest &request);
     UpdateRegionSettingsResponse * updateRegionSettings(const UpdateRegionSettingsRequest &request);
 
-protected:
-    /// @cond internal
-    BackupClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit BackupClient(BackupClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(BackupClient)
     Q_DISABLE_COPY(BackupClient)

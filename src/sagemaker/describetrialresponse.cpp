@@ -70,7 +70,8 @@ DescribeTrialResponse::DescribeTrialResponse(
  */
 const DescribeTrialRequest * DescribeTrialResponse::request() const
 {
-    return static_cast<const DescribeTrialRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeTrialResponse);
+    return static_cast<const DescribeTrialRequest *>(d->request);
 }
 
 /*!

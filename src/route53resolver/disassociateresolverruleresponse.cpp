@@ -94,7 +94,8 @@ DisassociateResolverRuleResponse::DisassociateResolverRuleResponse(
  */
 const DisassociateResolverRuleRequest * DisassociateResolverRuleResponse::request() const
 {
-    return static_cast<const DisassociateResolverRuleRequest *>(Route53ResolverResponse::request());
+    Q_D(const DisassociateResolverRuleResponse);
+    return static_cast<const DisassociateResolverRuleRequest *>(d->request);
 }
 
 /*!

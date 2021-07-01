@@ -141,7 +141,8 @@ DeletePolicyResponse::DeletePolicyResponse(
  */
 const DeletePolicyRequest * DeletePolicyResponse::request() const
 {
-    return static_cast<const DeletePolicyRequest *>(OrganizationsResponse::request());
+    Q_D(const DeletePolicyResponse);
+    return static_cast<const DeletePolicyRequest *>(d->request);
 }
 
 /*!

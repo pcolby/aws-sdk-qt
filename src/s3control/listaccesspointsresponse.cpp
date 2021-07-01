@@ -56,7 +56,8 @@ ListAccessPointsResponse::ListAccessPointsResponse(
  */
 const ListAccessPointsRequest * ListAccessPointsResponse::request() const
 {
-    return static_cast<const ListAccessPointsRequest *>(S3ControlResponse::request());
+    Q_D(const ListAccessPointsResponse);
+    return static_cast<const ListAccessPointsRequest *>(d->request);
 }
 
 /*!

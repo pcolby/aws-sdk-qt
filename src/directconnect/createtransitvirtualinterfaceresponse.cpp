@@ -61,7 +61,8 @@ CreateTransitVirtualInterfaceResponse::CreateTransitVirtualInterfaceResponse(
  */
 const CreateTransitVirtualInterfaceRequest * CreateTransitVirtualInterfaceResponse::request() const
 {
-    return static_cast<const CreateTransitVirtualInterfaceRequest *>(DirectConnectResponse::request());
+    Q_D(const CreateTransitVirtualInterfaceResponse);
+    return static_cast<const CreateTransitVirtualInterfaceRequest *>(d->request);
 }
 
 /*!

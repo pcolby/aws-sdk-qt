@@ -73,7 +73,8 @@ DeleteFilterResponse::DeleteFilterResponse(
  */
 const DeleteFilterRequest * DeleteFilterResponse::request() const
 {
-    return static_cast<const DeleteFilterRequest *>(GuardDutyResponse::request());
+    Q_D(const DeleteFilterResponse);
+    return static_cast<const DeleteFilterRequest *>(d->request);
 }
 
 /*!

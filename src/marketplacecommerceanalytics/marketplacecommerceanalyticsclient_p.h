@@ -20,20 +20,19 @@
 #ifndef QTAWS_MARKETPLACECOMMERCEANALYTICSCLIENT_P_H
 #define QTAWS_MARKETPLACECOMMERCEANALYTICSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsClient;
 
-class MarketplaceCommerceAnalyticsClientPrivate {
+class MarketplaceCommerceAnalyticsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MarketplaceCommerceAnalyticsClientPrivate(MarketplaceCommerceAnalyticsClient * const q);
-
-protected:
-    MarketplaceCommerceAnalyticsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MarketplaceCommerceAnalyticsClient)

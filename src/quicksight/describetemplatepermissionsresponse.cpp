@@ -60,7 +60,8 @@ DescribeTemplatePermissionsResponse::DescribeTemplatePermissionsResponse(
  */
 const DescribeTemplatePermissionsRequest * DescribeTemplatePermissionsResponse::request() const
 {
-    return static_cast<const DescribeTemplatePermissionsRequest *>(QuickSightResponse::request());
+    Q_D(const DescribeTemplatePermissionsResponse);
+    return static_cast<const DescribeTemplatePermissionsRequest *>(d->request);
 }
 
 /*!

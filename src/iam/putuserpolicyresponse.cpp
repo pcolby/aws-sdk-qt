@@ -62,7 +62,8 @@ PutUserPolicyResponse::PutUserPolicyResponse(
  */
 const PutUserPolicyRequest * PutUserPolicyResponse::request() const
 {
-    return static_cast<const PutUserPolicyRequest *>(IamResponse::request());
+    Q_D(const PutUserPolicyResponse);
+    return static_cast<const PutUserPolicyRequest *>(d->request);
 }
 
 /*!

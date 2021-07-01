@@ -60,7 +60,8 @@ DescribeExclusionsResponse::DescribeExclusionsResponse(
  */
 const DescribeExclusionsRequest * DescribeExclusionsResponse::request() const
 {
-    return static_cast<const DescribeExclusionsRequest *>(InspectorResponse::request());
+    Q_D(const DescribeExclusionsResponse);
+    return static_cast<const DescribeExclusionsRequest *>(d->request);
 }
 
 /*!

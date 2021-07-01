@@ -61,7 +61,8 @@ DescribeAttackStatisticsResponse::DescribeAttackStatisticsResponse(
  */
 const DescribeAttackStatisticsRequest * DescribeAttackStatisticsResponse::request() const
 {
-    return static_cast<const DescribeAttackStatisticsRequest *>(ShieldResponse::request());
+    Q_D(const DescribeAttackStatisticsResponse);
+    return static_cast<const DescribeAttackStatisticsRequest *>(d->request);
 }
 
 /*!

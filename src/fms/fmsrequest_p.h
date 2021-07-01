@@ -20,12 +20,15 @@
 #ifndef QTAWS_FMSREQUEST_P_H
 #define QTAWS_FMSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "fmsrequest.h"
+
 namespace QtAws {
 namespace FMS {
 
 class FmsRequest;
 
-class FmsRequestPrivate {
+class FmsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     FmsRequest::Action action; ///< FMS action to be performed.
@@ -36,9 +39,6 @@ public:
     FmsRequestPrivate(const FmsRequestPrivate &other, FmsRequest * const q);
 
     static QString toString(const FmsRequest::Action &action);
-
-protected:
-    FmsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FmsRequest)

@@ -77,7 +77,8 @@ CreateTokenResponse::CreateTokenResponse(
  */
 const CreateTokenRequest * CreateTokenResponse::request() const
 {
-    return static_cast<const CreateTokenRequest *>(SsooidcResponse::request());
+    Q_D(const CreateTokenResponse);
+    return static_cast<const CreateTokenRequest *>(d->request);
 }
 
 /*!

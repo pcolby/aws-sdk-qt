@@ -58,7 +58,8 @@ UpdateTableResponse::UpdateTableResponse(
  */
 const UpdateTableRequest * UpdateTableResponse::request() const
 {
-    return static_cast<const UpdateTableRequest *>(GlueResponse::request());
+    Q_D(const UpdateTableResponse);
+    return static_cast<const UpdateTableRequest *>(d->request);
 }
 
 /*!

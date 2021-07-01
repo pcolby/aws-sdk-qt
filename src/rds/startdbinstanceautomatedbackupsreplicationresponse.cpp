@@ -119,7 +119,8 @@ StartDBInstanceAutomatedBackupsReplicationResponse::StartDBInstanceAutomatedBack
  */
 const StartDBInstanceAutomatedBackupsReplicationRequest * StartDBInstanceAutomatedBackupsReplicationResponse::request() const
 {
-    return static_cast<const StartDBInstanceAutomatedBackupsReplicationRequest *>(RdsResponse::request());
+    Q_D(const StartDBInstanceAutomatedBackupsReplicationResponse);
+    return static_cast<const StartDBInstanceAutomatedBackupsReplicationRequest *>(d->request);
 }
 
 /*!

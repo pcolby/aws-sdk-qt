@@ -123,12 +123,6 @@ public slots:
     UpdateJobShipmentStateResponse * updateJobShipmentState(const UpdateJobShipmentStateRequest &request);
     UpdateLongTermPricingResponse * updateLongTermPricing(const UpdateLongTermPricingRequest &request);
 
-protected:
-    /// @cond internal
-    SnowballClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SnowballClient(SnowballClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SnowballClient)
     Q_DISABLE_COPY(SnowballClient)

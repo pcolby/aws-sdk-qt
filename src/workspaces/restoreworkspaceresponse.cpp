@@ -58,7 +58,8 @@ RestoreWorkspaceResponse::RestoreWorkspaceResponse(
  */
 const RestoreWorkspaceRequest * RestoreWorkspaceResponse::request() const
 {
-    return static_cast<const RestoreWorkspaceRequest *>(WorkSpacesResponse::request());
+    Q_D(const RestoreWorkspaceResponse);
+    return static_cast<const RestoreWorkspaceRequest *>(d->request);
 }
 
 /*!

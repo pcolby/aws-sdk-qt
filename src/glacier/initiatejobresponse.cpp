@@ -91,7 +91,8 @@ InitiateJobResponse::InitiateJobResponse(
  */
 const InitiateJobRequest * InitiateJobResponse::request() const
 {
-    return static_cast<const InitiateJobRequest *>(GlacierResponse::request());
+    Q_D(const InitiateJobResponse);
+    return static_cast<const InitiateJobRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ TestRoleResponse::TestRoleResponse(
  */
 const TestRoleRequest * TestRoleResponse::request() const
 {
-    return static_cast<const TestRoleRequest *>(ElasticTranscoderResponse::request());
+    Q_D(const TestRoleResponse);
+    return static_cast<const TestRoleRequest *>(d->request);
 }
 
 /*!

@@ -61,7 +61,8 @@ AssociateVirtualInterfaceResponse::AssociateVirtualInterfaceResponse(
  */
 const AssociateVirtualInterfaceRequest * AssociateVirtualInterfaceResponse::request() const
 {
-    return static_cast<const AssociateVirtualInterfaceRequest *>(DirectConnectResponse::request());
+    Q_D(const AssociateVirtualInterfaceResponse);
+    return static_cast<const AssociateVirtualInterfaceRequest *>(d->request);
 }
 
 /*!

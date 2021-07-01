@@ -52,7 +52,7 @@ namespace Outposts {
  * Constructs a OutpostsRequest object for Outposts \a action.
  */
 OutpostsRequest::OutpostsRequest(const Action action)
-    : d_ptr(new OutpostsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new OutpostsRequestPrivate(action, this))
 {
 
 }
@@ -61,8 +61,7 @@ OutpostsRequest::OutpostsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 OutpostsRequest::OutpostsRequest(const OutpostsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new OutpostsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new OutpostsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -85,7 +84,7 @@ OutpostsRequest& OutpostsRequest::operator=(const OutpostsRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from OutpostsRequestPrivate.
  */
-OutpostsRequest::OutpostsRequest(OutpostsRequestPrivate * const d) : d_ptr(d)
+OutpostsRequest::OutpostsRequest(OutpostsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -254,7 +253,7 @@ QNetworkRequest OutpostsRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 OutpostsRequestPrivate::OutpostsRequestPrivate(const OutpostsRequest::Action action, OutpostsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -269,8 +268,8 @@ OutpostsRequestPrivate::OutpostsRequestPrivate(const OutpostsRequest::Action act
  */
 OutpostsRequestPrivate::OutpostsRequestPrivate(const OutpostsRequestPrivate &other,
                                      OutpostsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

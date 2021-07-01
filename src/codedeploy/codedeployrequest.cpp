@@ -89,7 +89,7 @@ namespace CodeDeploy {
  * Constructs a CodeDeployRequest object for CodeDeploy \a action.
  */
 CodeDeployRequest::CodeDeployRequest(const Action action)
-    : d_ptr(new CodeDeployRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CodeDeployRequestPrivate(action, this))
 {
 
 }
@@ -98,8 +98,7 @@ CodeDeployRequest::CodeDeployRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CodeDeployRequest::CodeDeployRequest(const CodeDeployRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new CodeDeployRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CodeDeployRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -122,7 +121,7 @@ CodeDeployRequest& CodeDeployRequest::operator=(const CodeDeployRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeDeployRequestPrivate.
  */
-CodeDeployRequest::CodeDeployRequest(CodeDeployRequestPrivate * const d) : d_ptr(d)
+CodeDeployRequest::CodeDeployRequest(CodeDeployRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -291,7 +290,7 @@ QNetworkRequest CodeDeployRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 CodeDeployRequestPrivate::CodeDeployRequestPrivate(const CodeDeployRequest::Action action, CodeDeployRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -306,8 +305,8 @@ CodeDeployRequestPrivate::CodeDeployRequestPrivate(const CodeDeployRequest::Acti
  */
 CodeDeployRequestPrivate::CodeDeployRequestPrivate(const CodeDeployRequestPrivate &other,
                                      CodeDeployRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

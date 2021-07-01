@@ -132,12 +132,6 @@ public slots:
     UpdateEvaluationResponse * updateEvaluation(const UpdateEvaluationRequest &request);
     UpdateMLModelResponse * updateMLModel(const UpdateMLModelRequest &request);
 
-protected:
-    /// @cond internal
-    MachineLearningClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MachineLearningClient(MachineLearningClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MachineLearningClient)
     Q_DISABLE_COPY(MachineLearningClient)

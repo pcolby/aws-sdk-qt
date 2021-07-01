@@ -70,7 +70,7 @@ namespace Kinesis {
  * Constructs a KinesisRequest object for Kinesis \a action.
  */
 KinesisRequest::KinesisRequest(const Action action)
-    : d_ptr(new KinesisRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisRequestPrivate(action, this))
 {
 
 }
@@ -79,8 +79,7 @@ KinesisRequest::KinesisRequest(const Action action)
  * Constructs a copy of \a other.
  */
 KinesisRequest::KinesisRequest(const KinesisRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new KinesisRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -103,7 +102,7 @@ KinesisRequest& KinesisRequest::operator=(const KinesisRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisRequestPrivate.
  */
-KinesisRequest::KinesisRequest(KinesisRequestPrivate * const d) : d_ptr(d)
+KinesisRequest::KinesisRequest(KinesisRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -272,7 +271,7 @@ QNetworkRequest KinesisRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 KinesisRequestPrivate::KinesisRequestPrivate(const KinesisRequest::Action action, KinesisRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -287,8 +286,8 @@ KinesisRequestPrivate::KinesisRequestPrivate(const KinesisRequest::Action action
  */
 KinesisRequestPrivate::KinesisRequestPrivate(const KinesisRequestPrivate &other,
                                      KinesisRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

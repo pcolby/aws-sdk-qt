@@ -246,12 +246,6 @@ public slots:
     UpgradeAppliedSchemaResponse * upgradeAppliedSchema(const UpgradeAppliedSchemaRequest &request);
     UpgradePublishedSchemaResponse * upgradePublishedSchema(const UpgradePublishedSchemaRequest &request);
 
-protected:
-    /// @cond internal
-    CloudDirectoryClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CloudDirectoryClient(CloudDirectoryClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(CloudDirectoryClient)
     Q_DISABLE_COPY(CloudDirectoryClient)

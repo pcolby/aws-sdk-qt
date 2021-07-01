@@ -60,7 +60,8 @@ SearchAnalysesResponse::SearchAnalysesResponse(
  */
 const SearchAnalysesRequest * SearchAnalysesResponse::request() const
 {
-    return static_cast<const SearchAnalysesRequest *>(QuickSightResponse::request());
+    Q_D(const SearchAnalysesResponse);
+    return static_cast<const SearchAnalysesRequest *>(d->request);
 }
 
 /*!

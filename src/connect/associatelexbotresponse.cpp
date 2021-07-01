@@ -79,7 +79,8 @@ AssociateLexBotResponse::AssociateLexBotResponse(
  */
 const AssociateLexBotRequest * AssociateLexBotResponse::request() const
 {
-    return static_cast<const AssociateLexBotRequest *>(ConnectResponse::request());
+    Q_D(const AssociateLexBotResponse);
+    return static_cast<const AssociateLexBotRequest *>(d->request);
 }
 
 /*!

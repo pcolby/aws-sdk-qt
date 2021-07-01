@@ -121,7 +121,8 @@ CreateGraphResponse::CreateGraphResponse(
  */
 const CreateGraphRequest * CreateGraphResponse::request() const
 {
-    return static_cast<const CreateGraphRequest *>(DetectiveResponse::request());
+    Q_D(const CreateGraphResponse);
+    return static_cast<const CreateGraphRequest *>(d->request);
 }
 
 /*!

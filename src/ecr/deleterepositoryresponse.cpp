@@ -62,7 +62,8 @@ DeleteRepositoryResponse::DeleteRepositoryResponse(
  */
 const DeleteRepositoryRequest * DeleteRepositoryResponse::request() const
 {
-    return static_cast<const DeleteRepositoryRequest *>(EcrResponse::request());
+    Q_D(const DeleteRepositoryResponse);
+    return static_cast<const DeleteRepositoryRequest *>(d->request);
 }
 
 /*!

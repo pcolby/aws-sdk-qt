@@ -56,7 +56,8 @@ ListDatasetExportJobsResponse::ListDatasetExportJobsResponse(
  */
 const ListDatasetExportJobsRequest * ListDatasetExportJobsResponse::request() const
 {
-    return static_cast<const ListDatasetExportJobsRequest *>(PersonalizeResponse::request());
+    Q_D(const ListDatasetExportJobsResponse);
+    return static_cast<const ListDatasetExportJobsRequest *>(d->request);
 }
 
 /*!

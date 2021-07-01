@@ -58,7 +58,8 @@ UpdateShardCountResponse::UpdateShardCountResponse(
  */
 const UpdateShardCountRequest * UpdateShardCountResponse::request() const
 {
-    return static_cast<const UpdateShardCountRequest *>(KinesisResponse::request());
+    Q_D(const UpdateShardCountResponse);
+    return static_cast<const UpdateShardCountRequest *>(d->request);
 }
 
 /*!

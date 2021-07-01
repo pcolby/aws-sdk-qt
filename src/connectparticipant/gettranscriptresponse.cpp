@@ -65,7 +65,8 @@ GetTranscriptResponse::GetTranscriptResponse(
  */
 const GetTranscriptRequest * GetTranscriptResponse::request() const
 {
-    return static_cast<const GetTranscriptRequest *>(ConnectParticipantResponse::request());
+    Q_D(const GetTranscriptResponse);
+    return static_cast<const GetTranscriptRequest *>(d->request);
 }
 
 /*!

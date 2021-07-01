@@ -89,8 +89,7 @@ public:
 
 protected:
     /// @cond internal
-    SchemasRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SchemasRequest(SchemasRequestPrivate * const d);
+    SchemasRequest(SchemasRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -55,7 +55,8 @@ GetMLModelResponse::GetMLModelResponse(
  */
 const GetMLModelRequest * GetMLModelResponse::request() const
 {
-    return static_cast<const GetMLModelRequest *>(MachineLearningResponse::request());
+    Q_D(const GetMLModelResponse);
+    return static_cast<const GetMLModelRequest *>(d->request);
 }
 
 /*!

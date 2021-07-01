@@ -439,7 +439,8 @@ MergePullRequestByThreeWayResponse::MergePullRequestByThreeWayResponse(
  */
 const MergePullRequestByThreeWayRequest * MergePullRequestByThreeWayResponse::request() const
 {
-    return static_cast<const MergePullRequestByThreeWayRequest *>(CodeCommitResponse::request());
+    Q_D(const MergePullRequestByThreeWayResponse);
+    return static_cast<const MergePullRequestByThreeWayRequest *>(d->request);
 }
 
 /*!

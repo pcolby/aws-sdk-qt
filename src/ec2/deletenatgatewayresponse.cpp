@@ -87,7 +87,8 @@ DeleteNatGatewayResponse::DeleteNatGatewayResponse(
  */
 const DeleteNatGatewayRequest * DeleteNatGatewayResponse::request() const
 {
-    return static_cast<const DeleteNatGatewayRequest *>(Ec2Response::request());
+    Q_D(const DeleteNatGatewayResponse);
+    return static_cast<const DeleteNatGatewayRequest *>(d->request);
 }
 
 /*!

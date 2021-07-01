@@ -78,7 +78,8 @@ CreateSqlInjectionMatchSetResponse::CreateSqlInjectionMatchSetResponse(
  */
 const CreateSqlInjectionMatchSetRequest * CreateSqlInjectionMatchSetResponse::request() const
 {
-    return static_cast<const CreateSqlInjectionMatchSetRequest *>(WAFRegionalResponse::request());
+    Q_D(const CreateSqlInjectionMatchSetResponse);
+    return static_cast<const CreateSqlInjectionMatchSetRequest *>(d->request);
 }
 
 /*!

@@ -68,7 +68,8 @@ DeregisterJobDefinitionResponse::DeregisterJobDefinitionResponse(
  */
 const DeregisterJobDefinitionRequest * DeregisterJobDefinitionResponse::request() const
 {
-    return static_cast<const DeregisterJobDefinitionRequest *>(BatchResponse::request());
+    Q_D(const DeregisterJobDefinitionResponse);
+    return static_cast<const DeregisterJobDefinitionRequest *>(d->request);
 }
 
 /*!

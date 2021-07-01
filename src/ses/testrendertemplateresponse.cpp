@@ -66,7 +66,8 @@ TestRenderTemplateResponse::TestRenderTemplateResponse(
  */
 const TestRenderTemplateRequest * TestRenderTemplateResponse::request() const
 {
-    return static_cast<const TestRenderTemplateRequest *>(SesResponse::request());
+    Q_D(const TestRenderTemplateResponse);
+    return static_cast<const TestRenderTemplateRequest *>(d->request);
 }
 
 /*!

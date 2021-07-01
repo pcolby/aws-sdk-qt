@@ -119,7 +119,8 @@ CopyDBParameterGroupResponse::CopyDBParameterGroupResponse(
  */
 const CopyDBParameterGroupRequest * CopyDBParameterGroupResponse::request() const
 {
-    return static_cast<const CopyDBParameterGroupRequest *>(RdsResponse::request());
+    Q_D(const CopyDBParameterGroupResponse);
+    return static_cast<const CopyDBParameterGroupRequest *>(d->request);
 }
 
 /*!

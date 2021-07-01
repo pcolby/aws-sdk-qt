@@ -55,7 +55,8 @@ PutBucketAccelerateConfigurationResponse::PutBucketAccelerateConfigurationRespon
  */
 const PutBucketAccelerateConfigurationRequest * PutBucketAccelerateConfigurationResponse::request() const
 {
-    return static_cast<const PutBucketAccelerateConfigurationRequest *>(S3Response::request());
+    Q_D(const PutBucketAccelerateConfigurationResponse);
+    return static_cast<const PutBucketAccelerateConfigurationRequest *>(d->request);
 }
 
 /*!

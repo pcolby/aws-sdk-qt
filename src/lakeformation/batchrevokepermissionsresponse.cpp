@@ -58,7 +58,8 @@ BatchRevokePermissionsResponse::BatchRevokePermissionsResponse(
  */
 const BatchRevokePermissionsRequest * BatchRevokePermissionsResponse::request() const
 {
-    return static_cast<const BatchRevokePermissionsRequest *>(LakeFormationResponse::request());
+    Q_D(const BatchRevokePermissionsResponse);
+    return static_cast<const BatchRevokePermissionsRequest *>(d->request);
 }
 
 /*!

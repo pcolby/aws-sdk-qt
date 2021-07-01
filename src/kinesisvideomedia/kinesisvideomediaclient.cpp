@@ -61,16 +61,16 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-09-30"),
-    QStringLiteral("kinesisvideo"),
-    QStringLiteral("Amazon Kinesis Video Streams Media"),
-    QStringLiteral("kinesisvideo"),
-    parent), d_ptr(new KinesisVideoMediaClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new KinesisVideoMediaClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(KinesisVideoMediaClient);
+    d->apiVersion = QStringLiteral("2017-09-30");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("kinesisvideo");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Video Streams Media");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
 
 /*!
@@ -89,16 +89,16 @@ KinesisVideoMediaClient::KinesisVideoMediaClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-09-30"),
-    QStringLiteral("kinesisvideo"),
-    QStringLiteral("Amazon Kinesis Video Streams Media"),
-    QStringLiteral("kinesisvideo"),
-    parent), d_ptr(new KinesisVideoMediaClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new KinesisVideoMediaClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(KinesisVideoMediaClient);
+    d->apiVersion = QStringLiteral("2017-09-30");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("kinesisvideo");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Video Streams Media");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
 
 /*!
@@ -180,9 +180,10 @@ GetMediaResponse * KinesisVideoMediaClient::getMedia(const GetMediaRequest &requ
 /*!
  * Constructs a KinesisVideoMediaClientPrivate object with public implementation \a q.
  */
-KinesisVideoMediaClientPrivate::KinesisVideoMediaClientPrivate(KinesisVideoMediaClient * const q) : q_ptr(q)
+KinesisVideoMediaClientPrivate::KinesisVideoMediaClientPrivate(KinesisVideoMediaClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace KinesisVideoMedia

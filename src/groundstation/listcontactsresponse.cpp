@@ -58,7 +58,8 @@ ListContactsResponse::ListContactsResponse(
  */
 const ListContactsRequest * ListContactsResponse::request() const
 {
-    return static_cast<const ListContactsRequest *>(GroundStationResponse::request());
+    Q_D(const ListContactsResponse);
+    return static_cast<const ListContactsRequest *>(d->request);
 }
 
 /*!

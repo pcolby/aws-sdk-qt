@@ -56,7 +56,8 @@ DeleteApnsVoipChannelResponse::DeleteApnsVoipChannelResponse(
  */
 const DeleteApnsVoipChannelRequest * DeleteApnsVoipChannelResponse::request() const
 {
-    return static_cast<const DeleteApnsVoipChannelRequest *>(PinpointResponse::request());
+    Q_D(const DeleteApnsVoipChannelResponse);
+    return static_cast<const DeleteApnsVoipChannelRequest *>(d->request);
 }
 
 /*!

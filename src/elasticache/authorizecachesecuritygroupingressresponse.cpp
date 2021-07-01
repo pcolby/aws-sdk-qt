@@ -69,7 +69,8 @@ AuthorizeCacheSecurityGroupIngressResponse::AuthorizeCacheSecurityGroupIngressRe
  */
 const AuthorizeCacheSecurityGroupIngressRequest * AuthorizeCacheSecurityGroupIngressResponse::request() const
 {
-    return static_cast<const AuthorizeCacheSecurityGroupIngressRequest *>(ElastiCacheResponse::request());
+    Q_D(const AuthorizeCacheSecurityGroupIngressResponse);
+    return static_cast<const AuthorizeCacheSecurityGroupIngressRequest *>(d->request);
 }
 
 /*!

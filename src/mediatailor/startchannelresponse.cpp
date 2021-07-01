@@ -66,7 +66,8 @@ StartChannelResponse::StartChannelResponse(
  */
 const StartChannelRequest * StartChannelResponse::request() const
 {
-    return static_cast<const StartChannelRequest *>(MediaTailorResponse::request());
+    Q_D(const StartChannelResponse);
+    return static_cast<const StartChannelRequest *>(d->request);
 }
 
 /*!

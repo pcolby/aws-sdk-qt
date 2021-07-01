@@ -154,7 +154,8 @@ ImportKeyMaterialResponse::ImportKeyMaterialResponse(
  */
 const ImportKeyMaterialRequest * ImportKeyMaterialResponse::request() const
 {
-    return static_cast<const ImportKeyMaterialRequest *>(KmsResponse::request());
+    Q_D(const ImportKeyMaterialResponse);
+    return static_cast<const ImportKeyMaterialRequest *>(d->request);
 }
 
 /*!

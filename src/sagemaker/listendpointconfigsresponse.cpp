@@ -70,7 +70,8 @@ ListEndpointConfigsResponse::ListEndpointConfigsResponse(
  */
 const ListEndpointConfigsRequest * ListEndpointConfigsResponse::request() const
 {
-    return static_cast<const ListEndpointConfigsRequest *>(SageMakerResponse::request());
+    Q_D(const ListEndpointConfigsResponse);
+    return static_cast<const ListEndpointConfigsRequest *>(d->request);
 }
 
 /*!

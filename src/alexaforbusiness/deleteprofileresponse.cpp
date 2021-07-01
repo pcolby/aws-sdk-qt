@@ -62,7 +62,8 @@ DeleteProfileResponse::DeleteProfileResponse(
  */
 const DeleteProfileRequest * DeleteProfileResponse::request() const
 {
-    return static_cast<const DeleteProfileRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const DeleteProfileResponse);
+    return static_cast<const DeleteProfileRequest *>(d->request);
 }
 
 /*!

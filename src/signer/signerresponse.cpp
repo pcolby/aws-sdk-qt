@@ -37,7 +37,7 @@ namespace signer {
  * Constructs a signerResponse object with parent \a parent.
  */
 signerResponse::signerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new signerResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new signerResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ signerResponse::signerResponse(QObject * const parent)
  * implementation that inherits from signerResponsePrivate.
  */
 signerResponse::signerResponse(signerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void signerResponse::parseFailure(QIODevice &response)
  * Constructs a signerResponsePrivate object with public implementation \a q.
  */
 signerResponsePrivate::signerResponsePrivate(
-    signerResponse * const q) : q_ptr(q)
+    signerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

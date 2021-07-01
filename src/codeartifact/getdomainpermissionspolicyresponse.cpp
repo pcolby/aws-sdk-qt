@@ -293,7 +293,8 @@ GetDomainPermissionsPolicyResponse::GetDomainPermissionsPolicyResponse(
  */
 const GetDomainPermissionsPolicyRequest * GetDomainPermissionsPolicyResponse::request() const
 {
-    return static_cast<const GetDomainPermissionsPolicyRequest *>(CodeArtifactResponse::request());
+    Q_D(const GetDomainPermissionsPolicyResponse);
+    return static_cast<const GetDomainPermissionsPolicyRequest *>(d->request);
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace ApiGatewayManagementApi {
  * Constructs a ApiGatewayManagementApiResponse object with parent \a parent.
  */
 ApiGatewayManagementApiResponse::ApiGatewayManagementApiResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ApiGatewayManagementApiResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ApiGatewayManagementApiResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ApiGatewayManagementApiResponse::ApiGatewayManagementApiResponse(QObject * const
  * implementation that inherits from ApiGatewayManagementApiResponsePrivate.
  */
 ApiGatewayManagementApiResponse::ApiGatewayManagementApiResponse(ApiGatewayManagementApiResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ApiGatewayManagementApiResponse::parseFailure(QIODevice &response)
  * Constructs a ApiGatewayManagementApiResponsePrivate object with public implementation \a q.
  */
 ApiGatewayManagementApiResponsePrivate::ApiGatewayManagementApiResponsePrivate(
-    ApiGatewayManagementApiResponse * const q) : q_ptr(q)
+    ApiGatewayManagementApiResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

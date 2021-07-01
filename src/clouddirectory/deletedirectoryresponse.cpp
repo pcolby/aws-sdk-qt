@@ -63,7 +63,8 @@ DeleteDirectoryResponse::DeleteDirectoryResponse(
  */
 const DeleteDirectoryRequest * DeleteDirectoryResponse::request() const
 {
-    return static_cast<const DeleteDirectoryRequest *>(CloudDirectoryResponse::request());
+    Q_D(const DeleteDirectoryResponse);
+    return static_cast<const DeleteDirectoryRequest *>(d->request);
 }
 
 /*!

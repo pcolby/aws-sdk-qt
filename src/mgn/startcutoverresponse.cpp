@@ -56,7 +56,8 @@ StartCutoverResponse::StartCutoverResponse(
  */
 const StartCutoverRequest * StartCutoverResponse::request() const
 {
-    return static_cast<const StartCutoverRequest *>(mgnResponse::request());
+    Q_D(const StartCutoverResponse);
+    return static_cast<const StartCutoverRequest *>(d->request);
 }
 
 /*!

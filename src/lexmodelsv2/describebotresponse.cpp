@@ -55,7 +55,8 @@ DescribeBotResponse::DescribeBotResponse(
  */
 const DescribeBotRequest * DescribeBotResponse::request() const
 {
-    return static_cast<const DescribeBotRequest *>(LexModelsV2Response::request());
+    Q_D(const DescribeBotResponse);
+    return static_cast<const DescribeBotRequest *>(d->request);
 }
 
 /*!

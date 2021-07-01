@@ -78,7 +78,8 @@ PutTargetsResponse::PutTargetsResponse(
  */
 const PutTargetsRequest * PutTargetsResponse::request() const
 {
-    return static_cast<const PutTargetsRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const PutTargetsResponse);
+    return static_cast<const PutTargetsRequest *>(d->request);
 }
 
 /*!

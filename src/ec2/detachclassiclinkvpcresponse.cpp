@@ -87,7 +87,8 @@ DetachClassicLinkVpcResponse::DetachClassicLinkVpcResponse(
  */
 const DetachClassicLinkVpcRequest * DetachClassicLinkVpcResponse::request() const
 {
-    return static_cast<const DetachClassicLinkVpcRequest *>(Ec2Response::request());
+    Q_D(const DetachClassicLinkVpcResponse);
+    return static_cast<const DetachClassicLinkVpcRequest *>(d->request);
 }
 
 /*!

@@ -64,7 +64,8 @@ GetLambdaFunctionRecommendationsResponse::GetLambdaFunctionRecommendationsRespon
  */
 const GetLambdaFunctionRecommendationsRequest * GetLambdaFunctionRecommendationsResponse::request() const
 {
-    return static_cast<const GetLambdaFunctionRecommendationsRequest *>(ComputeOptimizerResponse::request());
+    Q_D(const GetLambdaFunctionRecommendationsResponse);
+    return static_cast<const GetLambdaFunctionRecommendationsRequest *>(d->request);
 }
 
 /*!

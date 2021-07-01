@@ -58,7 +58,8 @@ ListAnomalyGroupTimeSeriesResponse::ListAnomalyGroupTimeSeriesResponse(
  */
 const ListAnomalyGroupTimeSeriesRequest * ListAnomalyGroupTimeSeriesResponse::request() const
 {
-    return static_cast<const ListAnomalyGroupTimeSeriesRequest *>(LookoutMetricsResponse::request());
+    Q_D(const ListAnomalyGroupTimeSeriesResponse);
+    return static_cast<const ListAnomalyGroupTimeSeriesRequest *>(d->request);
 }
 
 /*!

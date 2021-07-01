@@ -126,7 +126,8 @@ ListIPSetsResponse::ListIPSetsResponse(
  */
 const ListIPSetsRequest * ListIPSetsResponse::request() const
 {
-    return static_cast<const ListIPSetsRequest *>(Wafv2Response::request());
+    Q_D(const ListIPSetsResponse);
+    return static_cast<const ListIPSetsRequest *>(d->request);
 }
 
 /*!

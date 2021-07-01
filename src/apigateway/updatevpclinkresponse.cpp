@@ -60,7 +60,8 @@ UpdateVpcLinkResponse::UpdateVpcLinkResponse(
  */
 const UpdateVpcLinkRequest * UpdateVpcLinkResponse::request() const
 {
-    return static_cast<const UpdateVpcLinkRequest *>(APIGatewayResponse::request());
+    Q_D(const UpdateVpcLinkResponse);
+    return static_cast<const UpdateVpcLinkRequest *>(d->request);
 }
 
 /*!

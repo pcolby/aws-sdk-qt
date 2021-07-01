@@ -78,7 +78,8 @@ ListGeoMatchSetsResponse::ListGeoMatchSetsResponse(
  */
 const ListGeoMatchSetsRequest * ListGeoMatchSetsResponse::request() const
 {
-    return static_cast<const ListGeoMatchSetsRequest *>(WAFRegionalResponse::request());
+    Q_D(const ListGeoMatchSetsResponse);
+    return static_cast<const ListGeoMatchSetsRequest *>(d->request);
 }
 
 /*!

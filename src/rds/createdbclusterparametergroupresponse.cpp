@@ -119,7 +119,8 @@ CreateDBClusterParameterGroupResponse::CreateDBClusterParameterGroupResponse(
  */
 const CreateDBClusterParameterGroupRequest * CreateDBClusterParameterGroupResponse::request() const
 {
-    return static_cast<const CreateDBClusterParameterGroupRequest *>(RdsResponse::request());
+    Q_D(const CreateDBClusterParameterGroupResponse);
+    return static_cast<const CreateDBClusterParameterGroupRequest *>(d->request);
 }
 
 /*!

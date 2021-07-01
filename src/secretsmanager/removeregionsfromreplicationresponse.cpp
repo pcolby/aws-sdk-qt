@@ -131,7 +131,8 @@ RemoveRegionsFromReplicationResponse::RemoveRegionsFromReplicationResponse(
  */
 const RemoveRegionsFromReplicationRequest * RemoveRegionsFromReplicationResponse::request() const
 {
-    return static_cast<const RemoveRegionsFromReplicationRequest *>(SecretsManagerResponse::request());
+    Q_D(const RemoveRegionsFromReplicationResponse);
+    return static_cast<const RemoveRegionsFromReplicationRequest *>(d->request);
 }
 
 /*!

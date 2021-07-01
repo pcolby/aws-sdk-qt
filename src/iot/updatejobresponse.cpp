@@ -82,7 +82,8 @@ UpdateJobResponse::UpdateJobResponse(
  */
 const UpdateJobRequest * UpdateJobResponse::request() const
 {
-    return static_cast<const UpdateJobRequest *>(IoTResponse::request());
+    Q_D(const UpdateJobResponse);
+    return static_cast<const UpdateJobRequest *>(d->request);
 }
 
 /*!

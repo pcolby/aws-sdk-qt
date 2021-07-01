@@ -78,7 +78,8 @@ UpdateArchiveResponse::UpdateArchiveResponse(
  */
 const UpdateArchiveRequest * UpdateArchiveResponse::request() const
 {
-    return static_cast<const UpdateArchiveRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const UpdateArchiveResponse);
+    return static_cast<const UpdateArchiveRequest *>(d->request);
 }
 
 /*!

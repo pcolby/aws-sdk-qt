@@ -88,7 +88,8 @@ SendBulkEmailResponse::SendBulkEmailResponse(
  */
 const SendBulkEmailRequest * SendBulkEmailResponse::request() const
 {
-    return static_cast<const SendBulkEmailRequest *>(Sesv2Response::request());
+    Q_D(const SendBulkEmailResponse);
+    return static_cast<const SendBulkEmailRequest *>(d->request);
 }
 
 /*!

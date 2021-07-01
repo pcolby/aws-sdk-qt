@@ -61,7 +61,8 @@ DescribeApplicationResponse::DescribeApplicationResponse(
  */
 const DescribeApplicationRequest * DescribeApplicationResponse::request() const
 {
-    return static_cast<const DescribeApplicationRequest *>(IoTFleetHubResponse::request());
+    Q_D(const DescribeApplicationResponse);
+    return static_cast<const DescribeApplicationRequest *>(d->request);
 }
 
 /*!

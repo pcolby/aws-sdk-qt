@@ -59,7 +59,8 @@ DeleteGrantResponse::DeleteGrantResponse(
  */
 const DeleteGrantRequest * DeleteGrantResponse::request() const
 {
-    return static_cast<const DeleteGrantRequest *>(LicenseManagerResponse::request());
+    Q_D(const DeleteGrantResponse);
+    return static_cast<const DeleteGrantRequest *>(d->request);
 }
 
 /*!

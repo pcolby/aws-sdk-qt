@@ -70,7 +70,8 @@ DescribeModelExplainabilityJobDefinitionResponse::DescribeModelExplainabilityJob
  */
 const DescribeModelExplainabilityJobDefinitionRequest * DescribeModelExplainabilityJobDefinitionResponse::request() const
 {
-    return static_cast<const DescribeModelExplainabilityJobDefinitionRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeModelExplainabilityJobDefinitionResponse);
+    return static_cast<const DescribeModelExplainabilityJobDefinitionRequest *>(d->request);
 }
 
 /*!

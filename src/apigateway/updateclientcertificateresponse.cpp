@@ -60,7 +60,8 @@ UpdateClientCertificateResponse::UpdateClientCertificateResponse(
  */
 const UpdateClientCertificateRequest * UpdateClientCertificateResponse::request() const
 {
-    return static_cast<const UpdateClientCertificateRequest *>(APIGatewayResponse::request());
+    Q_D(const UpdateClientCertificateResponse);
+    return static_cast<const UpdateClientCertificateRequest *>(d->request);
 }
 
 /*!

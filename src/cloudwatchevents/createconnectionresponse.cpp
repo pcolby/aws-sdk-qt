@@ -78,7 +78,8 @@ CreateConnectionResponse::CreateConnectionResponse(
  */
 const CreateConnectionRequest * CreateConnectionResponse::request() const
 {
-    return static_cast<const CreateConnectionRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const CreateConnectionResponse);
+    return static_cast<const CreateConnectionRequest *>(d->request);
 }
 
 /*!

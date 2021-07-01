@@ -87,7 +87,8 @@ SearchLocalGatewayRoutesResponse::SearchLocalGatewayRoutesResponse(
  */
 const SearchLocalGatewayRoutesRequest * SearchLocalGatewayRoutesResponse::request() const
 {
-    return static_cast<const SearchLocalGatewayRoutesRequest *>(Ec2Response::request());
+    Q_D(const SearchLocalGatewayRoutesResponse);
+    return static_cast<const SearchLocalGatewayRoutesRequest *>(d->request);
 }
 
 /*!

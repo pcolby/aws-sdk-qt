@@ -62,7 +62,8 @@ GetAccountSummaryResponse::GetAccountSummaryResponse(
  */
 const GetAccountSummaryRequest * GetAccountSummaryResponse::request() const
 {
-    return static_cast<const GetAccountSummaryRequest *>(IamResponse::request());
+    Q_D(const GetAccountSummaryResponse);
+    return static_cast<const GetAccountSummaryRequest *>(d->request);
 }
 
 /*!

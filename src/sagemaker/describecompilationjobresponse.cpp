@@ -70,7 +70,8 @@ DescribeCompilationJobResponse::DescribeCompilationJobResponse(
  */
 const DescribeCompilationJobRequest * DescribeCompilationJobResponse::request() const
 {
-    return static_cast<const DescribeCompilationJobRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeCompilationJobResponse);
+    return static_cast<const DescribeCompilationJobRequest *>(d->request);
 }
 
 /*!

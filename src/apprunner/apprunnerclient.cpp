@@ -134,16 +134,16 @@ AppRunnerClient::AppRunnerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-05-15"),
-    QStringLiteral("apprunner"),
-    QStringLiteral("AWS App Runner"),
-    QStringLiteral("apprunner"),
-    parent), d_ptr(new AppRunnerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AppRunnerClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AppRunnerClient);
+    d->apiVersion = QStringLiteral("2020-05-15");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("apprunner");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS App Runner");
+    d->serviceName = QStringLiteral("apprunner");
 }
 
 /*!
@@ -162,16 +162,16 @@ AppRunnerClient::AppRunnerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-05-15"),
-    QStringLiteral("apprunner"),
-    QStringLiteral("AWS App Runner"),
-    QStringLiteral("apprunner"),
-    parent), d_ptr(new AppRunnerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AppRunnerClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AppRunnerClient);
+    d->apiVersion = QStringLiteral("2020-05-15");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("apprunner");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS App Runner");
+    d->serviceName = QStringLiteral("apprunner");
 }
 
 /*!
@@ -564,9 +564,10 @@ UpdateServiceResponse * AppRunnerClient::updateService(const UpdateServiceReques
 /*!
  * Constructs a AppRunnerClientPrivate object with public implementation \a q.
  */
-AppRunnerClientPrivate::AppRunnerClientPrivate(AppRunnerClient * const q) : q_ptr(q)
+AppRunnerClientPrivate::AppRunnerClientPrivate(AppRunnerClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AppRunner

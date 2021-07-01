@@ -82,7 +82,8 @@ DeleteDimensionResponse::DeleteDimensionResponse(
  */
 const DeleteDimensionRequest * DeleteDimensionResponse::request() const
 {
-    return static_cast<const DeleteDimensionRequest *>(IoTResponse::request());
+    Q_D(const DeleteDimensionResponse);
+    return static_cast<const DeleteDimensionRequest *>(d->request);
 }
 
 /*!

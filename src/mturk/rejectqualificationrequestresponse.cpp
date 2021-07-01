@@ -55,7 +55,8 @@ RejectQualificationRequestResponse::RejectQualificationRequestResponse(
  */
 const RejectQualificationRequestRequest * RejectQualificationRequestResponse::request() const
 {
-    return static_cast<const RejectQualificationRequestRequest *>(MTurkResponse::request());
+    Q_D(const RejectQualificationRequestResponse);
+    return static_cast<const RejectQualificationRequestRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ UpdateRoomMembershipResponse::UpdateRoomMembershipResponse(
  */
 const UpdateRoomMembershipRequest * UpdateRoomMembershipResponse::request() const
 {
-    return static_cast<const UpdateRoomMembershipRequest *>(ChimeResponse::request());
+    Q_D(const UpdateRoomMembershipResponse);
+    return static_cast<const UpdateRoomMembershipRequest *>(d->request);
 }
 
 /*!

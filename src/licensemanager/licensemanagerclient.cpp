@@ -153,16 +153,16 @@ LicenseManagerClient::LicenseManagerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-08-01"),
-    QStringLiteral("license-manager"),
-    QStringLiteral("AWS License Manager"),
-    QStringLiteral("license-manager"),
-    parent), d_ptr(new LicenseManagerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LicenseManagerClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LicenseManagerClient);
+    d->apiVersion = QStringLiteral("2018-08-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("license-manager");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS License Manager");
+    d->serviceName = QStringLiteral("license-manager");
 }
 
 /*!
@@ -181,16 +181,16 @@ LicenseManagerClient::LicenseManagerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-08-01"),
-    QStringLiteral("license-manager"),
-    QStringLiteral("AWS License Manager"),
-    QStringLiteral("license-manager"),
-    parent), d_ptr(new LicenseManagerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LicenseManagerClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LicenseManagerClient);
+    d->apiVersion = QStringLiteral("2018-08-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("license-manager");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS License Manager");
+    d->serviceName = QStringLiteral("license-manager");
 }
 
 /*!
@@ -827,9 +827,10 @@ UpdateServiceSettingsResponse * LicenseManagerClient::updateServiceSettings(cons
 /*!
  * Constructs a LicenseManagerClientPrivate object with public implementation \a q.
  */
-LicenseManagerClientPrivate::LicenseManagerClientPrivate(LicenseManagerClient * const q) : q_ptr(q)
+LicenseManagerClientPrivate::LicenseManagerClientPrivate(LicenseManagerClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace LicenseManager

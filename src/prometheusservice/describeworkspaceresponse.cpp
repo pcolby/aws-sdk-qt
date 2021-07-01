@@ -56,7 +56,8 @@ DescribeWorkspaceResponse::DescribeWorkspaceResponse(
  */
 const DescribeWorkspaceRequest * DescribeWorkspaceResponse::request() const
 {
-    return static_cast<const DescribeWorkspaceRequest *>(PrometheusServiceResponse::request());
+    Q_D(const DescribeWorkspaceResponse);
+    return static_cast<const DescribeWorkspaceRequest *>(d->request);
 }
 
 /*!

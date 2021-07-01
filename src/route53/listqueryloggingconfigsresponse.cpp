@@ -56,7 +56,8 @@ ListQueryLoggingConfigsResponse::ListQueryLoggingConfigsResponse(
  */
 const ListQueryLoggingConfigsRequest * ListQueryLoggingConfigsResponse::request() const
 {
-    return static_cast<const ListQueryLoggingConfigsRequest *>(Route53Response::request());
+    Q_D(const ListQueryLoggingConfigsResponse);
+    return static_cast<const ListQueryLoggingConfigsRequest *>(d->request);
 }
 
 /*!

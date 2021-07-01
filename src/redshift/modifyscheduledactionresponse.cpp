@@ -85,7 +85,8 @@ ModifyScheduledActionResponse::ModifyScheduledActionResponse(
  */
 const ModifyScheduledActionRequest * ModifyScheduledActionResponse::request() const
 {
-    return static_cast<const ModifyScheduledActionRequest *>(RedshiftResponse::request());
+    Q_D(const ModifyScheduledActionResponse);
+    return static_cast<const ModifyScheduledActionRequest *>(d->request);
 }
 
 /*!

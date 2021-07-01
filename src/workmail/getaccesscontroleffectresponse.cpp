@@ -89,7 +89,8 @@ GetAccessControlEffectResponse::GetAccessControlEffectResponse(
  */
 const GetAccessControlEffectRequest * GetAccessControlEffectResponse::request() const
 {
-    return static_cast<const GetAccessControlEffectRequest *>(WorkMailResponse::request());
+    Q_D(const GetAccessControlEffectResponse);
+    return static_cast<const GetAccessControlEffectRequest *>(d->request);
 }
 
 /*!

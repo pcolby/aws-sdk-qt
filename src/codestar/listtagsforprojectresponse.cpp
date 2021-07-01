@@ -143,7 +143,8 @@ ListTagsForProjectResponse::ListTagsForProjectResponse(
  */
 const ListTagsForProjectRequest * ListTagsForProjectResponse::request() const
 {
-    return static_cast<const ListTagsForProjectRequest *>(CodeStarResponse::request());
+    Q_D(const ListTagsForProjectResponse);
+    return static_cast<const ListTagsForProjectRequest *>(d->request);
 }
 
 /*!

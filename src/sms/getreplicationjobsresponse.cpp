@@ -68,7 +68,8 @@ GetReplicationJobsResponse::GetReplicationJobsResponse(
  */
 const GetReplicationJobsRequest * GetReplicationJobsResponse::request() const
 {
-    return static_cast<const GetReplicationJobsRequest *>(SmsResponse::request());
+    Q_D(const GetReplicationJobsResponse);
+    return static_cast<const GetReplicationJobsRequest *>(d->request);
 }
 
 /*!

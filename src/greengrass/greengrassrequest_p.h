@@ -20,12 +20,15 @@
 #ifndef QTAWS_GREENGRASSREQUEST_P_H
 #define QTAWS_GREENGRASSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "greengrassrequest.h"
+
 namespace QtAws {
 namespace Greengrass {
 
 class GreengrassRequest;
 
-class GreengrassRequestPrivate {
+class GreengrassRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GreengrassRequest::Action action; ///< Greengrass action to be performed.
@@ -36,9 +39,6 @@ public:
     GreengrassRequestPrivate(const GreengrassRequestPrivate &other, GreengrassRequest * const q);
 
     static QString toString(const GreengrassRequest::Action &action);
-
-protected:
-    GreengrassRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GreengrassRequest)

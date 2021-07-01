@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ChimeResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ChimeResponse(ChimeResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

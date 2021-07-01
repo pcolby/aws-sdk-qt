@@ -20,12 +20,15 @@
 #ifndef QTAWS_TEXTRACTREQUEST_P_H
 #define QTAWS_TEXTRACTREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "textractrequest.h"
+
 namespace QtAws {
 namespace Textract {
 
 class TextractRequest;
 
-class TextractRequestPrivate {
+class TextractRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     TextractRequest::Action action; ///< Textract action to be performed.
@@ -36,9 +39,6 @@ public:
     TextractRequestPrivate(const TextractRequestPrivate &other, TextractRequest * const q);
 
     static QString toString(const TextractRequest::Action &action);
-
-protected:
-    TextractRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TextractRequest)

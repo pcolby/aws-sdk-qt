@@ -98,7 +98,8 @@ DescribeInstanceAssociationsStatusResponse::DescribeInstanceAssociationsStatusRe
  */
 const DescribeInstanceAssociationsStatusRequest * DescribeInstanceAssociationsStatusResponse::request() const
 {
-    return static_cast<const DescribeInstanceAssociationsStatusRequest *>(SsmResponse::request());
+    Q_D(const DescribeInstanceAssociationsStatusResponse);
+    return static_cast<const DescribeInstanceAssociationsStatusRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ CreateAddressBookResponse::CreateAddressBookResponse(
  */
 const CreateAddressBookRequest * CreateAddressBookResponse::request() const
 {
-    return static_cast<const CreateAddressBookRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const CreateAddressBookResponse);
+    return static_cast<const CreateAddressBookRequest *>(d->request);
 }
 
 /*!

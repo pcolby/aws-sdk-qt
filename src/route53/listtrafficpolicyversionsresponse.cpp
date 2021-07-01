@@ -56,7 +56,8 @@ ListTrafficPolicyVersionsResponse::ListTrafficPolicyVersionsResponse(
  */
 const ListTrafficPolicyVersionsRequest * ListTrafficPolicyVersionsResponse::request() const
 {
-    return static_cast<const ListTrafficPolicyVersionsRequest *>(Route53Response::request());
+    Q_D(const ListTrafficPolicyVersionsResponse);
+    return static_cast<const ListTrafficPolicyVersionsRequest *>(d->request);
 }
 
 /*!

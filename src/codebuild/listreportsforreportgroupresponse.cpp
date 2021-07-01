@@ -64,7 +64,8 @@ ListReportsForReportGroupResponse::ListReportsForReportGroupResponse(
  */
 const ListReportsForReportGroupRequest * ListReportsForReportGroupResponse::request() const
 {
-    return static_cast<const ListReportsForReportGroupRequest *>(CodeBuildResponse::request());
+    Q_D(const ListReportsForReportGroupResponse);
+    return static_cast<const ListReportsForReportGroupRequest *>(d->request);
 }
 
 /*!

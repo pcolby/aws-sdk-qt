@@ -63,7 +63,8 @@ UpdateDatabaseResponse::UpdateDatabaseResponse(
  */
 const UpdateDatabaseRequest * UpdateDatabaseResponse::request() const
 {
-    return static_cast<const UpdateDatabaseRequest *>(TimestreamWriteResponse::request());
+    Q_D(const UpdateDatabaseResponse);
+    return static_cast<const UpdateDatabaseRequest *>(d->request);
 }
 
 /*!

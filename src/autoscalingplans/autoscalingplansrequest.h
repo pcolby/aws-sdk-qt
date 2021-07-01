@@ -64,8 +64,7 @@ public:
 
 protected:
     /// @cond internal
-    AutoScalingPlansRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AutoScalingPlansRequest(AutoScalingPlansRequestPrivate * const d);
+    AutoScalingPlansRequest(AutoScalingPlansRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

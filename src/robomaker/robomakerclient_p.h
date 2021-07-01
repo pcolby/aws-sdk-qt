@@ -20,20 +20,19 @@
 #ifndef QTAWS_ROBOMAKERCLIENT_P_H
 #define QTAWS_ROBOMAKERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace RoboMaker {
 
 class RoboMakerClient;
 
-class RoboMakerClientPrivate {
+class RoboMakerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit RoboMakerClientPrivate(RoboMakerClient * const q);
-
-protected:
-    RoboMakerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RoboMakerClient)

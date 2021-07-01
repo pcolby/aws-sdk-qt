@@ -85,7 +85,8 @@ DeleteSnapshotCopyGrantResponse::DeleteSnapshotCopyGrantResponse(
  */
 const DeleteSnapshotCopyGrantRequest * DeleteSnapshotCopyGrantResponse::request() const
 {
-    return static_cast<const DeleteSnapshotCopyGrantRequest *>(RedshiftResponse::request());
+    Q_D(const DeleteSnapshotCopyGrantResponse);
+    return static_cast<const DeleteSnapshotCopyGrantRequest *>(d->request);
 }
 
 /*!

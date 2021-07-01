@@ -63,7 +63,8 @@ EnableDirectoryResponse::EnableDirectoryResponse(
  */
 const EnableDirectoryRequest * EnableDirectoryResponse::request() const
 {
-    return static_cast<const EnableDirectoryRequest *>(CloudDirectoryResponse::request());
+    Q_D(const EnableDirectoryResponse);
+    return static_cast<const EnableDirectoryRequest *>(d->request);
 }
 
 /*!

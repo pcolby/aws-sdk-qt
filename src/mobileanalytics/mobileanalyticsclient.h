@@ -51,12 +51,6 @@ public:
 public slots:
     PutEventsResponse * putEvents(const PutEventsRequest &request);
 
-protected:
-    /// @cond internal
-    MobileAnalyticsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MobileAnalyticsClient(MobileAnalyticsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MobileAnalyticsClient)
     Q_DISABLE_COPY(MobileAnalyticsClient)

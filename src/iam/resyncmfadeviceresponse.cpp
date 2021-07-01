@@ -62,7 +62,8 @@ ResyncMFADeviceResponse::ResyncMFADeviceResponse(
  */
 const ResyncMFADeviceRequest * ResyncMFADeviceResponse::request() const
 {
-    return static_cast<const ResyncMFADeviceRequest *>(IamResponse::request());
+    Q_D(const ResyncMFADeviceResponse);
+    return static_cast<const ResyncMFADeviceRequest *>(d->request);
 }
 
 /*!

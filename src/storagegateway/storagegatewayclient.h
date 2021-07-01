@@ -315,12 +315,6 @@ public slots:
     UpdateSnapshotScheduleResponse * updateSnapshotSchedule(const UpdateSnapshotScheduleRequest &request);
     UpdateVTLDeviceTypeResponse * updateVTLDeviceType(const UpdateVTLDeviceTypeRequest &request);
 
-protected:
-    /// @cond internal
-    StorageGatewayClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit StorageGatewayClient(StorageGatewayClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(StorageGatewayClient)
     Q_DISABLE_COPY(StorageGatewayClient)

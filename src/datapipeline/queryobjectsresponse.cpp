@@ -73,7 +73,8 @@ QueryObjectsResponse::QueryObjectsResponse(
  */
 const QueryObjectsRequest * QueryObjectsResponse::request() const
 {
-    return static_cast<const QueryObjectsRequest *>(DataPipelineResponse::request());
+    Q_D(const QueryObjectsResponse);
+    return static_cast<const QueryObjectsRequest *>(d->request);
 }
 
 /*!

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    DynamoDBResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DynamoDBResponse(DynamoDBResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

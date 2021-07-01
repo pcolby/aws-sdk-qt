@@ -55,7 +55,8 @@ DeleteIntentResponse::DeleteIntentResponse(
  */
 const DeleteIntentRequest * DeleteIntentResponse::request() const
 {
-    return static_cast<const DeleteIntentRequest *>(LexModelsV2Response::request());
+    Q_D(const DeleteIntentResponse);
+    return static_cast<const DeleteIntentRequest *>(d->request);
 }
 
 /*!

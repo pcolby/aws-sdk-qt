@@ -56,7 +56,8 @@ DeleteBackendAuthResponse::DeleteBackendAuthResponse(
  */
 const DeleteBackendAuthRequest * DeleteBackendAuthResponse::request() const
 {
-    return static_cast<const DeleteBackendAuthRequest *>(AmplifyBackendResponse::request());
+    Q_D(const DeleteBackendAuthResponse);
+    return static_cast<const DeleteBackendAuthRequest *>(d->request);
 }
 
 /*!

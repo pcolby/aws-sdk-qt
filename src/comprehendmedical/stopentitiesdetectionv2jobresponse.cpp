@@ -57,7 +57,8 @@ StopEntitiesDetectionV2JobResponse::StopEntitiesDetectionV2JobResponse(
  */
 const StopEntitiesDetectionV2JobRequest * StopEntitiesDetectionV2JobResponse::request() const
 {
-    return static_cast<const StopEntitiesDetectionV2JobRequest *>(ComprehendMedicalResponse::request());
+    Q_D(const StopEntitiesDetectionV2JobResponse);
+    return static_cast<const StopEntitiesDetectionV2JobRequest *>(d->request);
 }
 
 /*!

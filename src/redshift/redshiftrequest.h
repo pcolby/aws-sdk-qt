@@ -162,8 +162,7 @@ public:
 
 protected:
     /// @cond internal
-    RedshiftRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit RedshiftRequest(RedshiftRequestPrivate * const d);
+    RedshiftRequest(RedshiftRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

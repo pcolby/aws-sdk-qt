@@ -65,7 +65,7 @@ namespace SFN {
  * Constructs a SfnRequest object for SFN \a action.
  */
 SfnRequest::SfnRequest(const Action action)
-    : d_ptr(new SfnRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SfnRequestPrivate(action, this))
 {
 
 }
@@ -74,8 +74,7 @@ SfnRequest::SfnRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SfnRequest::SfnRequest(const SfnRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new SfnRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SfnRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -98,7 +97,7 @@ SfnRequest& SfnRequest::operator=(const SfnRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SfnRequestPrivate.
  */
-SfnRequest::SfnRequest(SfnRequestPrivate * const d) : d_ptr(d)
+SfnRequest::SfnRequest(SfnRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -267,7 +266,7 @@ QNetworkRequest SfnRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SfnRequestPrivate::SfnRequestPrivate(const SfnRequest::Action action, SfnRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -282,8 +281,8 @@ SfnRequestPrivate::SfnRequestPrivate(const SfnRequest::Action action, SfnRequest
  */
 SfnRequestPrivate::SfnRequestPrivate(const SfnRequestPrivate &other,
                                      SfnRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

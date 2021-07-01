@@ -37,7 +37,7 @@ namespace EMR {
  * Constructs a EmrResponse object with parent \a parent.
  */
 EmrResponse::EmrResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new EmrResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new EmrResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ EmrResponse::EmrResponse(QObject * const parent)
  * implementation that inherits from EmrResponsePrivate.
  */
 EmrResponse::EmrResponse(EmrResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void EmrResponse::parseFailure(QIODevice &response)
  * Constructs a EmrResponsePrivate object with public implementation \a q.
  */
 EmrResponsePrivate::EmrResponsePrivate(
-    EmrResponse * const q) : q_ptr(q)
+    EmrResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

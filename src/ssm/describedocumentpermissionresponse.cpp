@@ -98,7 +98,8 @@ DescribeDocumentPermissionResponse::DescribeDocumentPermissionResponse(
  */
 const DescribeDocumentPermissionRequest * DescribeDocumentPermissionResponse::request() const
 {
-    return static_cast<const DescribeDocumentPermissionRequest *>(SsmResponse::request());
+    Q_D(const DescribeDocumentPermissionResponse);
+    return static_cast<const DescribeDocumentPermissionRequest *>(d->request);
 }
 
 /*!

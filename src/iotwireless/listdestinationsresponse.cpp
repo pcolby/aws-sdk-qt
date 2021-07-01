@@ -56,7 +56,8 @@ ListDestinationsResponse::ListDestinationsResponse(
  */
 const ListDestinationsRequest * ListDestinationsResponse::request() const
 {
-    return static_cast<const ListDestinationsRequest *>(IoTWirelessResponse::request());
+    Q_D(const ListDestinationsResponse);
+    return static_cast<const ListDestinationsRequest *>(d->request);
 }
 
 /*!

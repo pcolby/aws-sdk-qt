@@ -20,12 +20,15 @@
 #ifndef QTAWS_CLOUDSEARCHREQUEST_P_H
 #define QTAWS_CLOUDSEARCHREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "cloudsearchrequest.h"
+
 namespace QtAws {
 namespace CloudSearch {
 
 class CloudSearchRequest;
 
-class CloudSearchRequestPrivate {
+class CloudSearchRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CloudSearchRequest::Action action; ///< CloudSearch action to be performed.
@@ -36,9 +39,6 @@ public:
     CloudSearchRequestPrivate(const CloudSearchRequestPrivate &other, CloudSearchRequest * const q);
 
     static QString toString(const CloudSearchRequest::Action &action);
-
-protected:
-    CloudSearchRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudSearchRequest)

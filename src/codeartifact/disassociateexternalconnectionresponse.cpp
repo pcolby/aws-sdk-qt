@@ -293,7 +293,8 @@ DisassociateExternalConnectionResponse::DisassociateExternalConnectionResponse(
  */
 const DisassociateExternalConnectionRequest * DisassociateExternalConnectionResponse::request() const
 {
-    return static_cast<const DisassociateExternalConnectionRequest *>(CodeArtifactResponse::request());
+    Q_D(const DisassociateExternalConnectionResponse);
+    return static_cast<const DisassociateExternalConnectionRequest *>(d->request);
 }
 
 /*!

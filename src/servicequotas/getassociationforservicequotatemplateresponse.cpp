@@ -58,7 +58,8 @@ GetAssociationForServiceQuotaTemplateResponse::GetAssociationForServiceQuotaTemp
  */
 const GetAssociationForServiceQuotaTemplateRequest * GetAssociationForServiceQuotaTemplateResponse::request() const
 {
-    return static_cast<const GetAssociationForServiceQuotaTemplateRequest *>(ServiceQuotasResponse::request());
+    Q_D(const GetAssociationForServiceQuotaTemplateResponse);
+    return static_cast<const GetAssociationForServiceQuotaTemplateRequest *>(d->request);
 }
 
 /*!

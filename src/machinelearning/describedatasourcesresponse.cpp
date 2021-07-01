@@ -55,7 +55,8 @@ DescribeDataSourcesResponse::DescribeDataSourcesResponse(
  */
 const DescribeDataSourcesRequest * DescribeDataSourcesResponse::request() const
 {
-    return static_cast<const DescribeDataSourcesRequest *>(MachineLearningResponse::request());
+    Q_D(const DescribeDataSourcesResponse);
+    return static_cast<const DescribeDataSourcesRequest *>(d->request);
 }
 
 /*!

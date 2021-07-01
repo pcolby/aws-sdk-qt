@@ -98,7 +98,8 @@ ListVoiceConnectorsResponse::ListVoiceConnectorsResponse(
  */
 const ListVoiceConnectorsRequest * ListVoiceConnectorsResponse::request() const
 {
-    return static_cast<const ListVoiceConnectorsRequest *>(ChimeResponse::request());
+    Q_D(const ListVoiceConnectorsResponse);
+    return static_cast<const ListVoiceConnectorsRequest *>(d->request);
 }
 
 /*!

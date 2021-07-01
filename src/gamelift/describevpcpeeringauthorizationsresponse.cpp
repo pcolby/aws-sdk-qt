@@ -115,7 +115,8 @@ DescribeVpcPeeringAuthorizationsResponse::DescribeVpcPeeringAuthorizationsRespon
  */
 const DescribeVpcPeeringAuthorizationsRequest * DescribeVpcPeeringAuthorizationsResponse::request() const
 {
-    return static_cast<const DescribeVpcPeeringAuthorizationsRequest *>(GameLiftResponse::request());
+    Q_D(const DescribeVpcPeeringAuthorizationsResponse);
+    return static_cast<const DescribeVpcPeeringAuthorizationsRequest *>(d->request);
 }
 
 /*!

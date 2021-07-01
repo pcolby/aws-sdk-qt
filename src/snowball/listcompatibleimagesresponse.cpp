@@ -61,7 +61,8 @@ ListCompatibleImagesResponse::ListCompatibleImagesResponse(
  */
 const ListCompatibleImagesRequest * ListCompatibleImagesResponse::request() const
 {
-    return static_cast<const ListCompatibleImagesRequest *>(SnowballResponse::request());
+    Q_D(const ListCompatibleImagesResponse);
+    return static_cast<const ListCompatibleImagesRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ GetTableVersionResponse::GetTableVersionResponse(
  */
 const GetTableVersionRequest * GetTableVersionResponse::request() const
 {
-    return static_cast<const GetTableVersionRequest *>(GlueResponse::request());
+    Q_D(const GetTableVersionResponse);
+    return static_cast<const GetTableVersionRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ ListConfigurationsResponse::ListConfigurationsResponse(
  */
 const ListConfigurationsRequest * ListConfigurationsResponse::request() const
 {
-    return static_cast<const ListConfigurationsRequest *>(KafkaResponse::request());
+    Q_D(const ListConfigurationsResponse);
+    return static_cast<const ListConfigurationsRequest *>(d->request);
 }
 
 /*!

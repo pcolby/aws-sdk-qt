@@ -59,7 +59,8 @@ UpdateDestinationResponse::UpdateDestinationResponse(
  */
 const UpdateDestinationRequest * UpdateDestinationResponse::request() const
 {
-    return static_cast<const UpdateDestinationRequest *>(FirehoseResponse::request());
+    Q_D(const UpdateDestinationResponse);
+    return static_cast<const UpdateDestinationRequest *>(d->request);
 }
 
 /*!

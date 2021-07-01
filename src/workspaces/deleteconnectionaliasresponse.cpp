@@ -58,7 +58,8 @@ DeleteConnectionAliasResponse::DeleteConnectionAliasResponse(
  */
 const DeleteConnectionAliasRequest * DeleteConnectionAliasResponse::request() const
 {
-    return static_cast<const DeleteConnectionAliasRequest *>(WorkSpacesResponse::request());
+    Q_D(const DeleteConnectionAliasResponse);
+    return static_cast<const DeleteConnectionAliasRequest *>(d->request);
 }
 
 /*!

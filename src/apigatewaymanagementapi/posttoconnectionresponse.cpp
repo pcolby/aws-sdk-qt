@@ -59,7 +59,8 @@ PostToConnectionResponse::PostToConnectionResponse(
  */
 const PostToConnectionRequest * PostToConnectionResponse::request() const
 {
-    return static_cast<const PostToConnectionRequest *>(ApiGatewayManagementApiResponse::request());
+    Q_D(const PostToConnectionResponse);
+    return static_cast<const PostToConnectionRequest *>(d->request);
 }
 
 /*!

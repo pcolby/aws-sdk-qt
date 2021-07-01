@@ -62,7 +62,8 @@ UpdateAssumeRolePolicyResponse::UpdateAssumeRolePolicyResponse(
  */
 const UpdateAssumeRolePolicyRequest * UpdateAssumeRolePolicyResponse::request() const
 {
-    return static_cast<const UpdateAssumeRolePolicyRequest *>(IamResponse::request());
+    Q_D(const UpdateAssumeRolePolicyResponse);
+    return static_cast<const UpdateAssumeRolePolicyRequest *>(d->request);
 }
 
 /*!

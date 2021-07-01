@@ -56,7 +56,8 @@ ListAccessPointsForObjectLambdaResponse::ListAccessPointsForObjectLambdaResponse
  */
 const ListAccessPointsForObjectLambdaRequest * ListAccessPointsForObjectLambdaResponse::request() const
 {
-    return static_cast<const ListAccessPointsForObjectLambdaRequest *>(S3ControlResponse::request());
+    Q_D(const ListAccessPointsForObjectLambdaResponse);
+    return static_cast<const ListAccessPointsForObjectLambdaRequest *>(d->request);
 }
 
 /*!

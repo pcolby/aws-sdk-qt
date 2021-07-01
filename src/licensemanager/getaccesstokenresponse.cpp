@@ -59,7 +59,8 @@ GetAccessTokenResponse::GetAccessTokenResponse(
  */
 const GetAccessTokenRequest * GetAccessTokenResponse::request() const
 {
-    return static_cast<const GetAccessTokenRequest *>(LicenseManagerResponse::request());
+    Q_D(const GetAccessTokenResponse);
+    return static_cast<const GetAccessTokenRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ GetProjectResponse::GetProjectResponse(
  */
 const GetProjectRequest * GetProjectResponse::request() const
 {
-    return static_cast<const GetProjectRequest *>(DeviceFarmResponse::request());
+    Q_D(const GetProjectResponse);
+    return static_cast<const GetProjectRequest *>(d->request);
 }
 
 /*!

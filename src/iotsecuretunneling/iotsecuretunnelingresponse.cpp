@@ -37,7 +37,7 @@ namespace IoTSecureTunneling {
  * Constructs a IoTSecureTunnelingResponse object with parent \a parent.
  */
 IoTSecureTunnelingResponse::IoTSecureTunnelingResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTSecureTunnelingResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new IoTSecureTunnelingResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ IoTSecureTunnelingResponse::IoTSecureTunnelingResponse(QObject * const parent)
  * implementation that inherits from IoTSecureTunnelingResponsePrivate.
  */
 IoTSecureTunnelingResponse::IoTSecureTunnelingResponse(IoTSecureTunnelingResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTSecureTunnelingResponse::parseFailure(QIODevice &response)
  * Constructs a IoTSecureTunnelingResponsePrivate object with public implementation \a q.
  */
 IoTSecureTunnelingResponsePrivate::IoTSecureTunnelingResponsePrivate(
-    IoTSecureTunnelingResponse * const q) : q_ptr(q)
+    IoTSecureTunnelingResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

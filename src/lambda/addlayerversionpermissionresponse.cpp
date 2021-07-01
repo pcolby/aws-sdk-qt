@@ -66,7 +66,8 @@ AddLayerVersionPermissionResponse::AddLayerVersionPermissionResponse(
  */
 const AddLayerVersionPermissionRequest * AddLayerVersionPermissionResponse::request() const
 {
-    return static_cast<const AddLayerVersionPermissionRequest *>(LambdaResponse::request());
+    Q_D(const AddLayerVersionPermissionResponse);
+    return static_cast<const AddLayerVersionPermissionRequest *>(d->request);
 }
 
 /*!

@@ -193,11 +193,6 @@ QString AwsAbstractResponse::xmlParseErrorString() const
  *
  * Return the response's originating AWS request.
  */
-const AwsAbstractRequest * AwsAbstractResponse::request() const
-{
-    Q_D(const AwsAbstractResponse);
-    return d->request;
-}
 
 /*!
  * Returns a QVariantMap representation of \a xml, stopping at \a maxDepth.

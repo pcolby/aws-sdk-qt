@@ -60,7 +60,8 @@ ImportDocumentationPartsResponse::ImportDocumentationPartsResponse(
  */
 const ImportDocumentationPartsRequest * ImportDocumentationPartsResponse::request() const
 {
-    return static_cast<const ImportDocumentationPartsRequest *>(APIGatewayResponse::request());
+    Q_D(const ImportDocumentationPartsResponse);
+    return static_cast<const ImportDocumentationPartsRequest *>(d->request);
 }
 
 /*!

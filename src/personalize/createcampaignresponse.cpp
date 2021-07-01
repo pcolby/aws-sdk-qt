@@ -56,7 +56,8 @@ CreateCampaignResponse::CreateCampaignResponse(
  */
 const CreateCampaignRequest * CreateCampaignResponse::request() const
 {
-    return static_cast<const CreateCampaignRequest *>(PersonalizeResponse::request());
+    Q_D(const CreateCampaignResponse);
+    return static_cast<const CreateCampaignRequest *>(d->request);
 }
 
 /*!

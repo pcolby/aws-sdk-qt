@@ -98,7 +98,8 @@ BatchUpdatePhoneNumberResponse::BatchUpdatePhoneNumberResponse(
  */
 const BatchUpdatePhoneNumberRequest * BatchUpdatePhoneNumberResponse::request() const
 {
-    return static_cast<const BatchUpdatePhoneNumberRequest *>(ChimeResponse::request());
+    Q_D(const BatchUpdatePhoneNumberResponse);
+    return static_cast<const BatchUpdatePhoneNumberRequest *>(d->request);
 }
 
 /*!

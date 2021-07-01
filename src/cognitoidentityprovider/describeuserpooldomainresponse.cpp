@@ -66,7 +66,8 @@ DescribeUserPoolDomainResponse::DescribeUserPoolDomainResponse(
  */
 const DescribeUserPoolDomainRequest * DescribeUserPoolDomainResponse::request() const
 {
-    return static_cast<const DescribeUserPoolDomainRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const DescribeUserPoolDomainResponse);
+    return static_cast<const DescribeUserPoolDomainRequest *>(d->request);
 }
 
 /*!

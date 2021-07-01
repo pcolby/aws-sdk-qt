@@ -78,7 +78,8 @@ PutPartnerEventsResponse::PutPartnerEventsResponse(
  */
 const PutPartnerEventsRequest * PutPartnerEventsResponse::request() const
 {
-    return static_cast<const PutPartnerEventsRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const PutPartnerEventsResponse);
+    return static_cast<const PutPartnerEventsRequest *>(d->request);
 }
 
 /*!

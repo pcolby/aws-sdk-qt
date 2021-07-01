@@ -57,7 +57,8 @@ DescribeBackupsResponse::DescribeBackupsResponse(
  */
 const DescribeBackupsRequest * DescribeBackupsResponse::request() const
 {
-    return static_cast<const DescribeBackupsRequest *>(FSxResponse::request());
+    Q_D(const DescribeBackupsResponse);
+    return static_cast<const DescribeBackupsRequest *>(d->request);
 }
 
 /*!

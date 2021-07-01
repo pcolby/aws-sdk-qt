@@ -218,7 +218,8 @@ WithdrawByoipCidrResponse::WithdrawByoipCidrResponse(
  */
 const WithdrawByoipCidrRequest * WithdrawByoipCidrResponse::request() const
 {
-    return static_cast<const WithdrawByoipCidrRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const WithdrawByoipCidrResponse);
+    return static_cast<const WithdrawByoipCidrRequest *>(d->request);
 }
 
 /*!

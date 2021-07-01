@@ -59,7 +59,8 @@ CheckoutLicenseResponse::CheckoutLicenseResponse(
  */
 const CheckoutLicenseRequest * CheckoutLicenseResponse::request() const
 {
-    return static_cast<const CheckoutLicenseRequest *>(LicenseManagerResponse::request());
+    Q_D(const CheckoutLicenseResponse);
+    return static_cast<const CheckoutLicenseRequest *>(d->request);
 }
 
 /*!

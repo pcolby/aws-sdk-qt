@@ -80,8 +80,7 @@ public:
 
 protected:
     /// @cond internal
-    SecretsManagerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SecretsManagerRequest(SecretsManagerRequestPrivate * const d);
+    SecretsManagerRequest(SecretsManagerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

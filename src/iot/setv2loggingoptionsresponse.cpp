@@ -82,7 +82,8 @@ SetV2LoggingOptionsResponse::SetV2LoggingOptionsResponse(
  */
 const SetV2LoggingOptionsRequest * SetV2LoggingOptionsResponse::request() const
 {
-    return static_cast<const SetV2LoggingOptionsRequest *>(IoTResponse::request());
+    Q_D(const SetV2LoggingOptionsResponse);
+    return static_cast<const SetV2LoggingOptionsRequest *>(d->request);
 }
 
 /*!

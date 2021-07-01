@@ -79,7 +79,8 @@ DescribeUserHierarchyGroupResponse::DescribeUserHierarchyGroupResponse(
  */
 const DescribeUserHierarchyGroupRequest * DescribeUserHierarchyGroupResponse::request() const
 {
-    return static_cast<const DescribeUserHierarchyGroupRequest *>(ConnectResponse::request());
+    Q_D(const DescribeUserHierarchyGroupResponse);
+    return static_cast<const DescribeUserHierarchyGroupRequest *>(d->request);
 }
 
 /*!

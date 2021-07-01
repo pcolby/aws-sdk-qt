@@ -92,8 +92,7 @@ public:
 
 protected:
     /// @cond internal
-    EcrRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EcrRequest(EcrRequestPrivate * const d);
+    EcrRequest(EcrRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

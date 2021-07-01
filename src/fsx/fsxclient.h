@@ -102,12 +102,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateFileSystemResponse * updateFileSystem(const UpdateFileSystemRequest &request);
 
-protected:
-    /// @cond internal
-    FSxClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit FSxClient(FSxClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(FSxClient)
     Q_DISABLE_COPY(FSxClient)

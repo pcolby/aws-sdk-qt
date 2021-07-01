@@ -20,12 +20,15 @@
 #ifndef QTAWS_BACKUPREQUEST_P_H
 #define QTAWS_BACKUPREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "backuprequest.h"
+
 namespace QtAws {
 namespace Backup {
 
 class BackupRequest;
 
-class BackupRequestPrivate {
+class BackupRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     BackupRequest::Action action; ///< Backup action to be performed.
@@ -36,9 +39,6 @@ public:
     BackupRequestPrivate(const BackupRequestPrivate &other, BackupRequest * const q);
 
     static QString toString(const BackupRequest::Action &action);
-
-protected:
-    BackupRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BackupRequest)

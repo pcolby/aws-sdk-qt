@@ -72,7 +72,8 @@ ExecuteCommandResponse::ExecuteCommandResponse(
  */
 const ExecuteCommandRequest * ExecuteCommandResponse::request() const
 {
-    return static_cast<const ExecuteCommandRequest *>(EcsResponse::request());
+    Q_D(const ExecuteCommandResponse);
+    return static_cast<const ExecuteCommandRequest *>(d->request);
 }
 
 /*!

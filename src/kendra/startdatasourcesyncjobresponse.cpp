@@ -56,7 +56,8 @@ StartDataSourceSyncJobResponse::StartDataSourceSyncJobResponse(
  */
 const StartDataSourceSyncJobRequest * StartDataSourceSyncJobResponse::request() const
 {
-    return static_cast<const StartDataSourceSyncJobRequest *>(kendraResponse::request());
+    Q_D(const StartDataSourceSyncJobResponse);
+    return static_cast<const StartDataSourceSyncJobRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetAppResponse::GetAppResponse(
  */
 const GetAppRequest * GetAppResponse::request() const
 {
-    return static_cast<const GetAppRequest *>(PinpointResponse::request());
+    Q_D(const GetAppResponse);
+    return static_cast<const GetAppRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ CreateDataSourceFromRedshiftResponse::CreateDataSourceFromRedshiftResponse(
  */
 const CreateDataSourceFromRedshiftRequest * CreateDataSourceFromRedshiftResponse::request() const
 {
-    return static_cast<const CreateDataSourceFromRedshiftRequest *>(MachineLearningResponse::request());
+    Q_D(const CreateDataSourceFromRedshiftResponse);
+    return static_cast<const CreateDataSourceFromRedshiftRequest *>(d->request);
 }
 
 /*!

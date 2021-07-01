@@ -78,7 +78,8 @@ DeleteEventBusResponse::DeleteEventBusResponse(
  */
 const DeleteEventBusRequest * DeleteEventBusResponse::request() const
 {
-    return static_cast<const DeleteEventBusRequest *>(EventBridgeResponse::request());
+    Q_D(const DeleteEventBusResponse);
+    return static_cast<const DeleteEventBusRequest *>(d->request);
 }
 
 /*!

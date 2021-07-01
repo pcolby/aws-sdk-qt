@@ -60,7 +60,8 @@ UpdateThemeResponse::UpdateThemeResponse(
  */
 const UpdateThemeRequest * UpdateThemeResponse::request() const
 {
-    return static_cast<const UpdateThemeRequest *>(QuickSightResponse::request());
+    Q_D(const UpdateThemeResponse);
+    return static_cast<const UpdateThemeRequest *>(d->request);
 }
 
 /*!

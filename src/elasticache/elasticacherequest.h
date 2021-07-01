@@ -123,8 +123,7 @@ public:
 
 protected:
     /// @cond internal
-    ElastiCacheRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ElastiCacheRequest(ElastiCacheRequestPrivate * const d);
+    ElastiCacheRequest(ElastiCacheRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

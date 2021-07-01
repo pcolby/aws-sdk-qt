@@ -71,7 +71,8 @@ CreateProfileResponse::CreateProfileResponse(
  */
 const CreateProfileRequest * CreateProfileResponse::request() const
 {
-    return static_cast<const CreateProfileRequest *>(CustomerProfilesResponse::request());
+    Q_D(const CreateProfileResponse);
+    return static_cast<const CreateProfileRequest *>(d->request);
 }
 
 /*!

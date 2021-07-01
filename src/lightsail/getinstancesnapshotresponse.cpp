@@ -74,7 +74,8 @@ GetInstanceSnapshotResponse::GetInstanceSnapshotResponse(
  */
 const GetInstanceSnapshotRequest * GetInstanceSnapshotResponse::request() const
 {
-    return static_cast<const GetInstanceSnapshotRequest *>(LightsailResponse::request());
+    Q_D(const GetInstanceSnapshotResponse);
+    return static_cast<const GetInstanceSnapshotRequest *>(d->request);
 }
 
 /*!

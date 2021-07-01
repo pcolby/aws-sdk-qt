@@ -58,7 +58,8 @@ StartTriggerResponse::StartTriggerResponse(
  */
 const StartTriggerRequest * StartTriggerResponse::request() const
 {
-    return static_cast<const StartTriggerRequest *>(GlueResponse::request());
+    Q_D(const StartTriggerResponse);
+    return static_cast<const StartTriggerRequest *>(d->request);
 }
 
 /*!

@@ -143,7 +143,8 @@ CreateUserProfileResponse::CreateUserProfileResponse(
  */
 const CreateUserProfileRequest * CreateUserProfileResponse::request() const
 {
-    return static_cast<const CreateUserProfileRequest *>(CodeStarResponse::request());
+    Q_D(const CreateUserProfileResponse);
+    return static_cast<const CreateUserProfileRequest *>(d->request);
 }
 
 /*!

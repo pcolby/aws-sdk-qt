@@ -56,7 +56,8 @@ CompareFacesResponse::CompareFacesResponse(
  */
 const CompareFacesRequest * CompareFacesResponse::request() const
 {
-    return static_cast<const CompareFacesRequest *>(RekognitionResponse::request());
+    Q_D(const CompareFacesResponse);
+    return static_cast<const CompareFacesRequest *>(d->request);
 }
 
 /*!

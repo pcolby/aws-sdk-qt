@@ -70,7 +70,8 @@ DescribeArtifactResponse::DescribeArtifactResponse(
  */
 const DescribeArtifactRequest * DescribeArtifactResponse::request() const
 {
-    return static_cast<const DescribeArtifactRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeArtifactResponse);
+    return static_cast<const DescribeArtifactRequest *>(d->request);
 }
 
 /*!

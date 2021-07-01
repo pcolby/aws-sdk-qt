@@ -62,7 +62,8 @@ SearchDevicesResponse::SearchDevicesResponse(
  */
 const SearchDevicesRequest * SearchDevicesResponse::request() const
 {
-    return static_cast<const SearchDevicesRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const SearchDevicesResponse);
+    return static_cast<const SearchDevicesRequest *>(d->request);
 }
 
 /*!

@@ -69,7 +69,8 @@ RegisterCertificateResponse::RegisterCertificateResponse(
  */
 const RegisterCertificateRequest * RegisterCertificateResponse::request() const
 {
-    return static_cast<const RegisterCertificateRequest *>(DirectoryServiceResponse::request());
+    Q_D(const RegisterCertificateResponse);
+    return static_cast<const RegisterCertificateRequest *>(d->request);
 }
 
 /*!

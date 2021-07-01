@@ -20,12 +20,15 @@
 #ifndef QTAWS_SERVERLESSAPPLICATIONREPOSITORYREQUEST_P_H
 #define QTAWS_SERVERLESSAPPLICATIONREPOSITORYREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "serverlessapplicationrepositoryrequest.h"
+
 namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryRequest;
 
-class ServerlessApplicationRepositoryRequestPrivate {
+class ServerlessApplicationRepositoryRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ServerlessApplicationRepositoryRequest::Action action; ///< ServerlessApplicationRepository action to be performed.
@@ -36,9 +39,6 @@ public:
     ServerlessApplicationRepositoryRequestPrivate(const ServerlessApplicationRepositoryRequestPrivate &other, ServerlessApplicationRepositoryRequest * const q);
 
     static QString toString(const ServerlessApplicationRepositoryRequest::Action &action);
-
-protected:
-    ServerlessApplicationRepositoryRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ServerlessApplicationRepositoryRequest)

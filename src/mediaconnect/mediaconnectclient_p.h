@@ -20,20 +20,19 @@
 #ifndef QTAWS_MEDIACONNECTCLIENT_P_H
 #define QTAWS_MEDIACONNECTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MediaConnect {
 
 class MediaConnectClient;
 
-class MediaConnectClientPrivate {
+class MediaConnectClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MediaConnectClientPrivate(MediaConnectClient * const q);
-
-protected:
-    MediaConnectClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaConnectClient)

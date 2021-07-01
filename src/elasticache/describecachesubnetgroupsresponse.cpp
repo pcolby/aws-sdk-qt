@@ -69,7 +69,8 @@ DescribeCacheSubnetGroupsResponse::DescribeCacheSubnetGroupsResponse(
  */
 const DescribeCacheSubnetGroupsRequest * DescribeCacheSubnetGroupsResponse::request() const
 {
-    return static_cast<const DescribeCacheSubnetGroupsRequest *>(ElastiCacheResponse::request());
+    Q_D(const DescribeCacheSubnetGroupsResponse);
+    return static_cast<const DescribeCacheSubnetGroupsRequest *>(d->request);
 }
 
 /*!

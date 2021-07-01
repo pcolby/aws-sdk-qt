@@ -135,12 +135,6 @@ public slots:
     UpdateResponsePlanResponse * updateResponsePlan(const UpdateResponsePlanRequest &request);
     UpdateTimelineEventResponse * updateTimelineEvent(const UpdateTimelineEventRequest &request);
 
-protected:
-    /// @cond internal
-    SSMIncidentsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SSMIncidentsClient(SSMIncidentsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SSMIncidentsClient)
     Q_DISABLE_COPY(SSMIncidentsClient)

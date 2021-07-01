@@ -56,7 +56,8 @@ CreateTrafficPolicyInstanceResponse::CreateTrafficPolicyInstanceResponse(
  */
 const CreateTrafficPolicyInstanceRequest * CreateTrafficPolicyInstanceResponse::request() const
 {
-    return static_cast<const CreateTrafficPolicyInstanceRequest *>(Route53Response::request());
+    Q_D(const CreateTrafficPolicyInstanceResponse);
+    return static_cast<const CreateTrafficPolicyInstanceRequest *>(d->request);
 }
 
 /*!

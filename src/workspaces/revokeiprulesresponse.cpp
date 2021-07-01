@@ -58,7 +58,8 @@ RevokeIpRulesResponse::RevokeIpRulesResponse(
  */
 const RevokeIpRulesRequest * RevokeIpRulesResponse::request() const
 {
-    return static_cast<const RevokeIpRulesRequest *>(WorkSpacesResponse::request());
+    Q_D(const RevokeIpRulesResponse);
+    return static_cast<const RevokeIpRulesRequest *>(d->request);
 }
 
 /*!

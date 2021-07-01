@@ -77,7 +77,8 @@ EstimateTemplateCostResponse::EstimateTemplateCostResponse(
  */
 const EstimateTemplateCostRequest * EstimateTemplateCostResponse::request() const
 {
-    return static_cast<const EstimateTemplateCostRequest *>(CloudFormationResponse::request());
+    Q_D(const EstimateTemplateCostResponse);
+    return static_cast<const EstimateTemplateCostRequest *>(d->request);
 }
 
 /*!

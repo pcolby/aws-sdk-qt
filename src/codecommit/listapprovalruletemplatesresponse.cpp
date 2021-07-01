@@ -439,7 +439,8 @@ ListApprovalRuleTemplatesResponse::ListApprovalRuleTemplatesResponse(
  */
 const ListApprovalRuleTemplatesRequest * ListApprovalRuleTemplatesResponse::request() const
 {
-    return static_cast<const ListApprovalRuleTemplatesRequest *>(CodeCommitResponse::request());
+    Q_D(const ListApprovalRuleTemplatesResponse);
+    return static_cast<const ListApprovalRuleTemplatesRequest *>(d->request);
 }
 
 /*!

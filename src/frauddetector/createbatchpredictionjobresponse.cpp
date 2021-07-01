@@ -58,7 +58,8 @@ CreateBatchPredictionJobResponse::CreateBatchPredictionJobResponse(
  */
 const CreateBatchPredictionJobRequest * CreateBatchPredictionJobResponse::request() const
 {
-    return static_cast<const CreateBatchPredictionJobRequest *>(FraudDetectorResponse::request());
+    Q_D(const CreateBatchPredictionJobResponse);
+    return static_cast<const CreateBatchPredictionJobRequest *>(d->request);
 }
 
 /*!

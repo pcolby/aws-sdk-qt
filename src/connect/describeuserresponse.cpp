@@ -79,7 +79,8 @@ DescribeUserResponse::DescribeUserResponse(
  */
 const DescribeUserRequest * DescribeUserResponse::request() const
 {
-    return static_cast<const DescribeUserRequest *>(ConnectResponse::request());
+    Q_D(const DescribeUserResponse);
+    return static_cast<const DescribeUserRequest *>(d->request);
 }
 
 /*!

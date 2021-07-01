@@ -119,7 +119,8 @@ CancelExportTaskResponse::CancelExportTaskResponse(
  */
 const CancelExportTaskRequest * CancelExportTaskResponse::request() const
 {
-    return static_cast<const CancelExportTaskRequest *>(RdsResponse::request());
+    Q_D(const CancelExportTaskResponse);
+    return static_cast<const CancelExportTaskRequest *>(d->request);
 }
 
 /*!

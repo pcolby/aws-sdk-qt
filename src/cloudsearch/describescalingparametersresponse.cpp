@@ -66,7 +66,8 @@ DescribeScalingParametersResponse::DescribeScalingParametersResponse(
  */
 const DescribeScalingParametersRequest * DescribeScalingParametersResponse::request() const
 {
-    return static_cast<const DescribeScalingParametersRequest *>(CloudSearchResponse::request());
+    Q_D(const DescribeScalingParametersResponse);
+    return static_cast<const DescribeScalingParametersRequest *>(d->request);
 }
 
 /*!

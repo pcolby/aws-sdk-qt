@@ -74,7 +74,8 @@ GetRelationalDatabaseLogEventsResponse::GetRelationalDatabaseLogEventsResponse(
  */
 const GetRelationalDatabaseLogEventsRequest * GetRelationalDatabaseLogEventsResponse::request() const
 {
-    return static_cast<const GetRelationalDatabaseLogEventsRequest *>(LightsailResponse::request());
+    Q_D(const GetRelationalDatabaseLogEventsResponse);
+    return static_cast<const GetRelationalDatabaseLogEventsRequest *>(d->request);
 }
 
 /*!

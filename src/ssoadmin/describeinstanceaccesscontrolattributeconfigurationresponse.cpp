@@ -55,7 +55,8 @@ DescribeInstanceAccessControlAttributeConfigurationResponse::DescribeInstanceAcc
  */
 const DescribeInstanceAccessControlAttributeConfigurationRequest * DescribeInstanceAccessControlAttributeConfigurationResponse::request() const
 {
-    return static_cast<const DescribeInstanceAccessControlAttributeConfigurationRequest *>(SSOAdminResponse::request());
+    Q_D(const DescribeInstanceAccessControlAttributeConfigurationResponse);
+    return static_cast<const DescribeInstanceAccessControlAttributeConfigurationRequest *>(d->request);
 }
 
 /*!

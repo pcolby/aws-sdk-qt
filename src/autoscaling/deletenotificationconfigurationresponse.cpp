@@ -68,7 +68,8 @@ DeleteNotificationConfigurationResponse::DeleteNotificationConfigurationResponse
  */
 const DeleteNotificationConfigurationRequest * DeleteNotificationConfigurationResponse::request() const
 {
-    return static_cast<const DeleteNotificationConfigurationRequest *>(AutoScalingResponse::request());
+    Q_D(const DeleteNotificationConfigurationResponse);
+    return static_cast<const DeleteNotificationConfigurationRequest *>(d->request);
 }
 
 /*!

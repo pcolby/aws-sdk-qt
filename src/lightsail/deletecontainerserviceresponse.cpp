@@ -74,7 +74,8 @@ DeleteContainerServiceResponse::DeleteContainerServiceResponse(
  */
 const DeleteContainerServiceRequest * DeleteContainerServiceResponse::request() const
 {
-    return static_cast<const DeleteContainerServiceRequest *>(LightsailResponse::request());
+    Q_D(const DeleteContainerServiceResponse);
+    return static_cast<const DeleteContainerServiceRequest *>(d->request);
 }
 
 /*!

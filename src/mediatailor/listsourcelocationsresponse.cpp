@@ -66,7 +66,8 @@ ListSourceLocationsResponse::ListSourceLocationsResponse(
  */
 const ListSourceLocationsRequest * ListSourceLocationsResponse::request() const
 {
-    return static_cast<const ListSourceLocationsRequest *>(MediaTailorResponse::request());
+    Q_D(const ListSourceLocationsResponse);
+    return static_cast<const ListSourceLocationsRequest *>(d->request);
 }
 
 /*!

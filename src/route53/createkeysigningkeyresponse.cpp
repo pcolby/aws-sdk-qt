@@ -56,7 +56,8 @@ CreateKeySigningKeyResponse::CreateKeySigningKeyResponse(
  */
 const CreateKeySigningKeyRequest * CreateKeySigningKeyResponse::request() const
 {
-    return static_cast<const CreateKeySigningKeyRequest *>(Route53Response::request());
+    Q_D(const CreateKeySigningKeyResponse);
+    return static_cast<const CreateKeySigningKeyRequest *>(d->request);
 }
 
 /*!

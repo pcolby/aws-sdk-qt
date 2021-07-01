@@ -189,12 +189,6 @@ public slots:
     UpdateStudioResponse * updateStudio(const UpdateStudioRequest &request);
     UpdateStudioSessionMappingResponse * updateStudioSessionMapping(const UpdateStudioSessionMappingRequest &request);
 
-protected:
-    /// @cond internal
-    EmrClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EmrClient(EmrClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(EmrClient)
     Q_DISABLE_COPY(EmrClient)

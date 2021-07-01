@@ -84,7 +84,8 @@ DeleteMetricFilterResponse::DeleteMetricFilterResponse(
  */
 const DeleteMetricFilterRequest * DeleteMetricFilterResponse::request() const
 {
-    return static_cast<const DeleteMetricFilterRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const DeleteMetricFilterResponse);
+    return static_cast<const DeleteMetricFilterRequest *>(d->request);
 }
 
 /*!

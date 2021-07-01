@@ -141,7 +141,8 @@ RegisterApplicationRevisionResponse::RegisterApplicationRevisionResponse(
  */
 const RegisterApplicationRevisionRequest * RegisterApplicationRevisionResponse::request() const
 {
-    return static_cast<const RegisterApplicationRevisionRequest *>(CodeDeployResponse::request());
+    Q_D(const RegisterApplicationRevisionResponse);
+    return static_cast<const RegisterApplicationRevisionRequest *>(d->request);
 }
 
 /*!

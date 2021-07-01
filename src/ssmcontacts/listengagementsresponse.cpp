@@ -55,7 +55,8 @@ ListEngagementsResponse::ListEngagementsResponse(
  */
 const ListEngagementsRequest * ListEngagementsResponse::request() const
 {
-    return static_cast<const ListEngagementsRequest *>(SSMContactsResponse::request());
+    Q_D(const ListEngagementsResponse);
+    return static_cast<const ListEngagementsRequest *>(d->request);
 }
 
 /*!

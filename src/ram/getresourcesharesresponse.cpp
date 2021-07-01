@@ -64,7 +64,8 @@ GetResourceSharesResponse::GetResourceSharesResponse(
  */
 const GetResourceSharesRequest * GetResourceSharesResponse::request() const
 {
-    return static_cast<const GetResourceSharesRequest *>(RamResponse::request());
+    Q_D(const GetResourceSharesResponse);
+    return static_cast<const GetResourceSharesRequest *>(d->request);
 }
 
 /*!

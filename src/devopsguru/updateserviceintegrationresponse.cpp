@@ -74,7 +74,8 @@ UpdateServiceIntegrationResponse::UpdateServiceIntegrationResponse(
  */
 const UpdateServiceIntegrationRequest * UpdateServiceIntegrationResponse::request() const
 {
-    return static_cast<const UpdateServiceIntegrationRequest *>(DevOpsGuruResponse::request());
+    Q_D(const UpdateServiceIntegrationResponse);
+    return static_cast<const UpdateServiceIntegrationRequest *>(d->request);
 }
 
 /*!

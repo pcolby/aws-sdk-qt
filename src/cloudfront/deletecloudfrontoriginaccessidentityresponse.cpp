@@ -60,7 +60,8 @@ DeleteCloudFrontOriginAccessIdentityResponse::DeleteCloudFrontOriginAccessIdenti
  */
 const DeleteCloudFrontOriginAccessIdentityRequest * DeleteCloudFrontOriginAccessIdentityResponse::request() const
 {
-    return static_cast<const DeleteCloudFrontOriginAccessIdentityRequest *>(CloudFrontResponse::request());
+    Q_D(const DeleteCloudFrontOriginAccessIdentityResponse);
+    return static_cast<const DeleteCloudFrontOriginAccessIdentityRequest *>(d->request);
 }
 
 /*!

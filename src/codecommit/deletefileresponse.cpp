@@ -439,7 +439,8 @@ DeleteFileResponse::DeleteFileResponse(
  */
 const DeleteFileRequest * DeleteFileResponse::request() const
 {
-    return static_cast<const DeleteFileRequest *>(CodeCommitResponse::request());
+    Q_D(const DeleteFileResponse);
+    return static_cast<const DeleteFileRequest *>(d->request);
 }
 
 /*!

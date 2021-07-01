@@ -73,7 +73,8 @@ UpdateThreatIntelSetResponse::UpdateThreatIntelSetResponse(
  */
 const UpdateThreatIntelSetRequest * UpdateThreatIntelSetResponse::request() const
 {
-    return static_cast<const UpdateThreatIntelSetRequest *>(GuardDutyResponse::request());
+    Q_D(const UpdateThreatIntelSetResponse);
+    return static_cast<const UpdateThreatIntelSetRequest *>(d->request);
 }
 
 /*!

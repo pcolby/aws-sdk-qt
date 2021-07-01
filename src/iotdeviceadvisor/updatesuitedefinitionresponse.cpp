@@ -62,7 +62,8 @@ UpdateSuiteDefinitionResponse::UpdateSuiteDefinitionResponse(
  */
 const UpdateSuiteDefinitionRequest * UpdateSuiteDefinitionResponse::request() const
 {
-    return static_cast<const UpdateSuiteDefinitionRequest *>(IoTDeviceAdvisorResponse::request());
+    Q_D(const UpdateSuiteDefinitionResponse);
+    return static_cast<const UpdateSuiteDefinitionRequest *>(d->request);
 }
 
 /*!

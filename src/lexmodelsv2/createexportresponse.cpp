@@ -55,7 +55,8 @@ CreateExportResponse::CreateExportResponse(
  */
 const CreateExportRequest * CreateExportResponse::request() const
 {
-    return static_cast<const CreateExportRequest *>(LexModelsV2Response::request());
+    Q_D(const CreateExportResponse);
+    return static_cast<const CreateExportRequest *>(d->request);
 }
 
 /*!

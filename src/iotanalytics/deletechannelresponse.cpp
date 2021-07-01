@@ -75,7 +75,8 @@ DeleteChannelResponse::DeleteChannelResponse(
  */
 const DeleteChannelRequest * DeleteChannelResponse::request() const
 {
-    return static_cast<const DeleteChannelRequest *>(IoTAnalyticsResponse::request());
+    Q_D(const DeleteChannelResponse);
+    return static_cast<const DeleteChannelRequest *>(d->request);
 }
 
 /*!

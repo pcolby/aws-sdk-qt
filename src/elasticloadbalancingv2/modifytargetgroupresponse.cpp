@@ -90,7 +90,8 @@ ModifyTargetGroupResponse::ModifyTargetGroupResponse(
  */
 const ModifyTargetGroupRequest * ModifyTargetGroupResponse::request() const
 {
-    return static_cast<const ModifyTargetGroupRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const ModifyTargetGroupResponse);
+    return static_cast<const ModifyTargetGroupRequest *>(d->request);
 }
 
 /*!

@@ -74,7 +74,8 @@ GetLoadBalancerTlsCertificatesResponse::GetLoadBalancerTlsCertificatesResponse(
  */
 const GetLoadBalancerTlsCertificatesRequest * GetLoadBalancerTlsCertificatesResponse::request() const
 {
-    return static_cast<const GetLoadBalancerTlsCertificatesRequest *>(LightsailResponse::request());
+    Q_D(const GetLoadBalancerTlsCertificatesResponse);
+    return static_cast<const GetLoadBalancerTlsCertificatesRequest *>(d->request);
 }
 
 /*!

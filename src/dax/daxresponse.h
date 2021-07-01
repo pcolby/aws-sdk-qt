@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    DaxResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DaxResponse(DaxResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

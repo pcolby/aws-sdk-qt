@@ -129,12 +129,6 @@ public slots:
     UpdateComponentConfigurationResponse * updateComponentConfiguration(const UpdateComponentConfigurationRequest &request);
     UpdateLogPatternResponse * updateLogPattern(const UpdateLogPatternRequest &request);
 
-protected:
-    /// @cond internal
-    ApplicationInsightsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ApplicationInsightsClient(ApplicationInsightsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ApplicationInsightsClient)
     Q_DISABLE_COPY(ApplicationInsightsClient)

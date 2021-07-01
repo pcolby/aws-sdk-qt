@@ -87,8 +87,7 @@ public:
 
 protected:
     /// @cond internal
-    NetworkFirewallRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit NetworkFirewallRequest(NetworkFirewallRequestPrivate * const d);
+    NetworkFirewallRequest(NetworkFirewallRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

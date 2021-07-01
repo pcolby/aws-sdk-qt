@@ -69,7 +69,8 @@ ResetUserPasswordResponse::ResetUserPasswordResponse(
  */
 const ResetUserPasswordRequest * ResetUserPasswordResponse::request() const
 {
-    return static_cast<const ResetUserPasswordRequest *>(DirectoryServiceResponse::request());
+    Q_D(const ResetUserPasswordResponse);
+    return static_cast<const ResetUserPasswordRequest *>(d->request);
 }
 
 /*!

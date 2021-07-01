@@ -55,7 +55,8 @@ StartSupportDataExportResponse::StartSupportDataExportResponse(
  */
 const StartSupportDataExportRequest * StartSupportDataExportResponse::request() const
 {
-    return static_cast<const StartSupportDataExportRequest *>(MarketplaceCommerceAnalyticsResponse::request());
+    Q_D(const StartSupportDataExportResponse);
+    return static_cast<const StartSupportDataExportRequest *>(d->request);
 }
 
 /*!

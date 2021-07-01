@@ -98,7 +98,8 @@ GetServicesInScopeResponse::GetServicesInScopeResponse(
  */
 const GetServicesInScopeRequest * GetServicesInScopeResponse::request() const
 {
-    return static_cast<const GetServicesInScopeRequest *>(AuditManagerResponse::request());
+    Q_D(const GetServicesInScopeResponse);
+    return static_cast<const GetServicesInScopeRequest *>(d->request);
 }
 
 /*!

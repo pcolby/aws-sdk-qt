@@ -121,7 +121,8 @@ ListGraphsResponse::ListGraphsResponse(
  */
 const ListGraphsRequest * ListGraphsResponse::request() const
 {
-    return static_cast<const ListGraphsRequest *>(DetectiveResponse::request());
+    Q_D(const ListGraphsResponse);
+    return static_cast<const ListGraphsRequest *>(d->request);
 }
 
 /*!

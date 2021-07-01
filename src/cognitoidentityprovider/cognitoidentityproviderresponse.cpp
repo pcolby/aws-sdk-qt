@@ -37,7 +37,7 @@ namespace CognitoIdentityProvider {
  * Constructs a CognitoIdentityProviderResponse object with parent \a parent.
  */
 CognitoIdentityProviderResponse::CognitoIdentityProviderResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CognitoIdentityProviderResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CognitoIdentityProviderResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CognitoIdentityProviderResponse::CognitoIdentityProviderResponse(QObject * const
  * implementation that inherits from CognitoIdentityProviderResponsePrivate.
  */
 CognitoIdentityProviderResponse::CognitoIdentityProviderResponse(CognitoIdentityProviderResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CognitoIdentityProviderResponse::parseFailure(QIODevice &response)
  * Constructs a CognitoIdentityProviderResponsePrivate object with public implementation \a q.
  */
 CognitoIdentityProviderResponsePrivate::CognitoIdentityProviderResponsePrivate(
-    CognitoIdentityProviderResponse * const q) : q_ptr(q)
+    CognitoIdentityProviderResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

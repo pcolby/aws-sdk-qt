@@ -90,7 +90,8 @@ DescribeRulesResponse::DescribeRulesResponse(
  */
 const DescribeRulesRequest * DescribeRulesResponse::request() const
 {
-    return static_cast<const DescribeRulesRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const DescribeRulesResponse);
+    return static_cast<const DescribeRulesRequest *>(d->request);
 }
 
 /*!

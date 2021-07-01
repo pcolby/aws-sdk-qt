@@ -55,7 +55,8 @@ DescribeEvaluationsResponse::DescribeEvaluationsResponse(
  */
 const DescribeEvaluationsRequest * DescribeEvaluationsResponse::request() const
 {
-    return static_cast<const DescribeEvaluationsRequest *>(MachineLearningResponse::request());
+    Q_D(const DescribeEvaluationsResponse);
+    return static_cast<const DescribeEvaluationsRequest *>(d->request);
 }
 
 /*!

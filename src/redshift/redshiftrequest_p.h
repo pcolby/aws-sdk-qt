@@ -20,12 +20,15 @@
 #ifndef QTAWS_REDSHIFTREQUEST_P_H
 #define QTAWS_REDSHIFTREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "redshiftrequest.h"
+
 namespace QtAws {
 namespace Redshift {
 
 class RedshiftRequest;
 
-class RedshiftRequestPrivate {
+class RedshiftRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     RedshiftRequest::Action action; ///< Redshift action to be performed.
@@ -36,9 +39,6 @@ public:
     RedshiftRequestPrivate(const RedshiftRequestPrivate &other, RedshiftRequest * const q);
 
     static QString toString(const RedshiftRequest::Action &action);
-
-protected:
-    RedshiftRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RedshiftRequest)

@@ -115,7 +115,8 @@ DescribeAliasResponse::DescribeAliasResponse(
  */
 const DescribeAliasRequest * DescribeAliasResponse::request() const
 {
-    return static_cast<const DescribeAliasRequest *>(GameLiftResponse::request());
+    Q_D(const DescribeAliasResponse);
+    return static_cast<const DescribeAliasRequest *>(d->request);
 }
 
 /*!

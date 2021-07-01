@@ -141,7 +141,8 @@ PutLifecycleEventHookExecutionStatusResponse::PutLifecycleEventHookExecutionStat
  */
 const PutLifecycleEventHookExecutionStatusRequest * PutLifecycleEventHookExecutionStatusResponse::request() const
 {
-    return static_cast<const PutLifecycleEventHookExecutionStatusRequest *>(CodeDeployResponse::request());
+    Q_D(const PutLifecycleEventHookExecutionStatusResponse);
+    return static_cast<const PutLifecycleEventHookExecutionStatusRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ DeregisterManagedInstanceResponse::DeregisterManagedInstanceResponse(
  */
 const DeregisterManagedInstanceRequest * DeregisterManagedInstanceResponse::request() const
 {
-    return static_cast<const DeregisterManagedInstanceRequest *>(SsmResponse::request());
+    Q_D(const DeregisterManagedInstanceResponse);
+    return static_cast<const DeregisterManagedInstanceRequest *>(d->request);
 }
 
 /*!

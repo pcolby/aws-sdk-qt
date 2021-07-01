@@ -55,7 +55,8 @@ GetDASHStreamingSessionURLResponse::GetDASHStreamingSessionURLResponse(
  */
 const GetDASHStreamingSessionURLRequest * GetDASHStreamingSessionURLResponse::request() const
 {
-    return static_cast<const GetDASHStreamingSessionURLRequest *>(KinesisVideoArchivedMediaResponse::request());
+    Q_D(const GetDASHStreamingSessionURLResponse);
+    return static_cast<const GetDASHStreamingSessionURLRequest *>(d->request);
 }
 
 /*!

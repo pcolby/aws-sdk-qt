@@ -60,7 +60,8 @@ CreateModelResponse::CreateModelResponse(
  */
 const CreateModelRequest * CreateModelResponse::request() const
 {
-    return static_cast<const CreateModelRequest *>(APIGatewayResponse::request());
+    Q_D(const CreateModelResponse);
+    return static_cast<const CreateModelRequest *>(d->request);
 }
 
 /*!

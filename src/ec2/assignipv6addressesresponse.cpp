@@ -87,7 +87,8 @@ AssignIpv6AddressesResponse::AssignIpv6AddressesResponse(
  */
 const AssignIpv6AddressesRequest * AssignIpv6AddressesResponse::request() const
 {
-    return static_cast<const AssignIpv6AddressesRequest *>(Ec2Response::request());
+    Q_D(const AssignIpv6AddressesResponse);
+    return static_cast<const AssignIpv6AddressesRequest *>(d->request);
 }
 
 /*!

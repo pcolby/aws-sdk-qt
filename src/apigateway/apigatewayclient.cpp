@@ -304,16 +304,16 @@ APIGatewayClient::APIGatewayClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-07-09"),
-    QStringLiteral("apigateway"),
-    QStringLiteral("Amazon API Gateway"),
-    QStringLiteral("apigateway"),
-    parent), d_ptr(new APIGatewayClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new APIGatewayClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(APIGatewayClient);
+    d->apiVersion = QStringLiteral("2015-07-09");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("apigateway");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon API Gateway");
+    d->serviceName = QStringLiteral("apigateway");
 }
 
 /*!
@@ -332,16 +332,16 @@ APIGatewayClient::APIGatewayClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-07-09"),
-    QStringLiteral("apigateway"),
-    QStringLiteral("Amazon API Gateway"),
-    QStringLiteral("apigateway"),
-    parent), d_ptr(new APIGatewayClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new APIGatewayClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(APIGatewayClient);
+    d->apiVersion = QStringLiteral("2015-07-09");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("apigateway");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon API Gateway");
+    d->serviceName = QStringLiteral("apigateway");
 }
 
 /*!
@@ -1926,9 +1926,10 @@ UpdateVpcLinkResponse * APIGatewayClient::updateVpcLink(const UpdateVpcLinkReque
 /*!
  * Constructs a APIGatewayClientPrivate object with public implementation \a q.
  */
-APIGatewayClientPrivate::APIGatewayClientPrivate(APIGatewayClient * const q) : q_ptr(q)
+APIGatewayClientPrivate::APIGatewayClientPrivate(APIGatewayClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace APIGateway

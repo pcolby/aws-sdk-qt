@@ -89,7 +89,8 @@ DescribeGroupResponse::DescribeGroupResponse(
  */
 const DescribeGroupRequest * DescribeGroupResponse::request() const
 {
-    return static_cast<const DescribeGroupRequest *>(WorkMailResponse::request());
+    Q_D(const DescribeGroupResponse);
+    return static_cast<const DescribeGroupRequest *>(d->request);
 }
 
 /*!

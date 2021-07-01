@@ -60,7 +60,8 @@ UpdateOrganizationConfigurationResponse::UpdateOrganizationConfigurationResponse
  */
 const UpdateOrganizationConfigurationRequest * UpdateOrganizationConfigurationResponse::request() const
 {
-    return static_cast<const UpdateOrganizationConfigurationRequest *>(Macie2Response::request());
+    Q_D(const UpdateOrganizationConfigurationResponse);
+    return static_cast<const UpdateOrganizationConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -57,7 +57,8 @@ DescribeDataRepositoryTasksResponse::DescribeDataRepositoryTasksResponse(
  */
 const DescribeDataRepositoryTasksRequest * DescribeDataRepositoryTasksResponse::request() const
 {
-    return static_cast<const DescribeDataRepositoryTasksRequest *>(FSxResponse::request());
+    Q_D(const DescribeDataRepositoryTasksResponse);
+    return static_cast<const DescribeDataRepositoryTasksRequest *>(d->request);
 }
 
 /*!

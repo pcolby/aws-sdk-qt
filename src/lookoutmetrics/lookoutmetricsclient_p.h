@@ -20,20 +20,19 @@
 #ifndef QTAWS_LOOKOUTMETRICSCLIENT_P_H
 #define QTAWS_LOOKOUTMETRICSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace LookoutMetrics {
 
 class LookoutMetricsClient;
 
-class LookoutMetricsClientPrivate {
+class LookoutMetricsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit LookoutMetricsClientPrivate(LookoutMetricsClient * const q);
-
-protected:
-    LookoutMetricsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LookoutMetricsClient)

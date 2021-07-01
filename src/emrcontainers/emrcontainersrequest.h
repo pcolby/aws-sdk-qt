@@ -73,8 +73,7 @@ public:
 
 protected:
     /// @cond internal
-    EMRContainersRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EMRContainersRequest(EMRContainersRequestPrivate * const d);
+    EMRContainersRequest(EMRContainersRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

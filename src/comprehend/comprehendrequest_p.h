@@ -20,12 +20,15 @@
 #ifndef QTAWS_COMPREHENDREQUEST_P_H
 #define QTAWS_COMPREHENDREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "comprehendrequest.h"
+
 namespace QtAws {
 namespace Comprehend {
 
 class ComprehendRequest;
 
-class ComprehendRequestPrivate {
+class ComprehendRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ComprehendRequest::Action action; ///< Comprehend action to be performed.
@@ -36,9 +39,6 @@ public:
     ComprehendRequestPrivate(const ComprehendRequestPrivate &other, ComprehendRequest * const q);
 
     static QString toString(const ComprehendRequest::Action &action);
-
-protected:
-    ComprehendRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ComprehendRequest)

@@ -75,7 +75,7 @@ namespace Glacier {
  * Constructs a GlacierRequest object for Glacier \a action.
  */
 GlacierRequest::GlacierRequest(const Action action)
-    : d_ptr(new GlacierRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new GlacierRequestPrivate(action, this))
 {
 
 }
@@ -84,8 +84,7 @@ GlacierRequest::GlacierRequest(const Action action)
  * Constructs a copy of \a other.
  */
 GlacierRequest::GlacierRequest(const GlacierRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new GlacierRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new GlacierRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -108,7 +107,7 @@ GlacierRequest& GlacierRequest::operator=(const GlacierRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from GlacierRequestPrivate.
  */
-GlacierRequest::GlacierRequest(GlacierRequestPrivate * const d) : d_ptr(d)
+GlacierRequest::GlacierRequest(GlacierRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -277,7 +276,7 @@ QNetworkRequest GlacierRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 GlacierRequestPrivate::GlacierRequestPrivate(const GlacierRequest::Action action, GlacierRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -292,8 +291,8 @@ GlacierRequestPrivate::GlacierRequestPrivate(const GlacierRequest::Action action
  */
 GlacierRequestPrivate::GlacierRequestPrivate(const GlacierRequestPrivate &other,
                                      GlacierRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

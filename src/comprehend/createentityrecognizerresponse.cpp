@@ -58,7 +58,8 @@ CreateEntityRecognizerResponse::CreateEntityRecognizerResponse(
  */
 const CreateEntityRecognizerRequest * CreateEntityRecognizerResponse::request() const
 {
-    return static_cast<const CreateEntityRecognizerRequest *>(ComprehendResponse::request());
+    Q_D(const CreateEntityRecognizerResponse);
+    return static_cast<const CreateEntityRecognizerRequest *>(d->request);
 }
 
 /*!

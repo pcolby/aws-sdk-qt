@@ -161,7 +161,8 @@ DescribeVolumesResponse::DescribeVolumesResponse(
  */
 const DescribeVolumesRequest * DescribeVolumesResponse::request() const
 {
-    return static_cast<const DescribeVolumesRequest *>(OpsWorksResponse::request());
+    Q_D(const DescribeVolumesResponse);
+    return static_cast<const DescribeVolumesRequest *>(d->request);
 }
 
 /*!

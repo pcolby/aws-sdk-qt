@@ -20,12 +20,15 @@
 #ifndef QTAWS_ELASTICSEARCHSERVICEREQUEST_P_H
 #define QTAWS_ELASTICSEARCHSERVICEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "elasticsearchservicerequest.h"
+
 namespace QtAws {
 namespace ElasticsearchService {
 
 class ElasticsearchServiceRequest;
 
-class ElasticsearchServiceRequestPrivate {
+class ElasticsearchServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ElasticsearchServiceRequest::Action action; ///< ElasticsearchService action to be performed.
@@ -36,9 +39,6 @@ public:
     ElasticsearchServiceRequestPrivate(const ElasticsearchServiceRequestPrivate &other, ElasticsearchServiceRequest * const q);
 
     static QString toString(const ElasticsearchServiceRequest::Action &action);
-
-protected:
-    ElasticsearchServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticsearchServiceRequest)

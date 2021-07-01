@@ -81,7 +81,8 @@ GetProductsResponse::GetProductsResponse(
  */
 const GetProductsRequest * GetProductsResponse::request() const
 {
-    return static_cast<const GetProductsRequest *>(PricingResponse::request());
+    Q_D(const GetProductsResponse);
+    return static_cast<const GetProductsRequest *>(d->request);
 }
 
 /*!

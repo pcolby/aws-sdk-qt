@@ -60,7 +60,8 @@ DescribeRulesPackagesResponse::DescribeRulesPackagesResponse(
  */
 const DescribeRulesPackagesRequest * DescribeRulesPackagesResponse::request() const
 {
-    return static_cast<const DescribeRulesPackagesRequest *>(InspectorResponse::request());
+    Q_D(const DescribeRulesPackagesResponse);
+    return static_cast<const DescribeRulesPackagesRequest *>(d->request);
 }
 
 /*!

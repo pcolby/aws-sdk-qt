@@ -69,7 +69,8 @@ DisassociateGlobalReplicationGroupResponse::DisassociateGlobalReplicationGroupRe
  */
 const DisassociateGlobalReplicationGroupRequest * DisassociateGlobalReplicationGroupResponse::request() const
 {
-    return static_cast<const DisassociateGlobalReplicationGroupRequest *>(ElastiCacheResponse::request());
+    Q_D(const DisassociateGlobalReplicationGroupResponse);
+    return static_cast<const DisassociateGlobalReplicationGroupRequest *>(d->request);
 }
 
 /*!

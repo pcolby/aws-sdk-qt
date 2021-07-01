@@ -56,7 +56,7 @@ namespace Support {
  * Constructs a SupportRequest object for Support \a action.
  */
 SupportRequest::SupportRequest(const Action action)
-    : d_ptr(new SupportRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SupportRequestPrivate(action, this))
 {
 
 }
@@ -65,8 +65,7 @@ SupportRequest::SupportRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SupportRequest::SupportRequest(const SupportRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new SupportRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SupportRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -89,7 +88,7 @@ SupportRequest& SupportRequest::operator=(const SupportRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SupportRequestPrivate.
  */
-SupportRequest::SupportRequest(SupportRequestPrivate * const d) : d_ptr(d)
+SupportRequest::SupportRequest(SupportRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -258,7 +257,7 @@ QNetworkRequest SupportRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SupportRequestPrivate::SupportRequestPrivate(const SupportRequest::Action action, SupportRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -273,8 +272,8 @@ SupportRequestPrivate::SupportRequestPrivate(const SupportRequest::Action action
  */
 SupportRequestPrivate::SupportRequestPrivate(const SupportRequestPrivate &other,
                                      SupportRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

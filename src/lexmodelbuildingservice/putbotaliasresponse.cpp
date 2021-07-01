@@ -59,7 +59,8 @@ PutBotAliasResponse::PutBotAliasResponse(
  */
 const PutBotAliasRequest * PutBotAliasResponse::request() const
 {
-    return static_cast<const PutBotAliasRequest *>(LexModelBuildingServiceResponse::request());
+    Q_D(const PutBotAliasResponse);
+    return static_cast<const PutBotAliasRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,15 @@
 #ifndef QTAWS_SIGNERREQUEST_P_H
 #define QTAWS_SIGNERREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "signerrequest.h"
+
 namespace QtAws {
 namespace signer {
 
 class signerRequest;
 
-class signerRequestPrivate {
+class signerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     signerRequest::Action action; ///< signer action to be performed.
@@ -36,9 +39,6 @@ public:
     signerRequestPrivate(const signerRequestPrivate &other, signerRequest * const q);
 
     static QString toString(const signerRequest::Action &action);
-
-protected:
-    signerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(signerRequest)

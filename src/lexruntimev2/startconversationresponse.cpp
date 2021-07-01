@@ -55,7 +55,8 @@ StartConversationResponse::StartConversationResponse(
  */
 const StartConversationRequest * StartConversationResponse::request() const
 {
-    return static_cast<const StartConversationRequest *>(LexRuntimeV2Response::request());
+    Q_D(const StartConversationResponse);
+    return static_cast<const StartConversationRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ ConfirmSubscriptionResponse::ConfirmSubscriptionResponse(
  */
 const ConfirmSubscriptionRequest * ConfirmSubscriptionResponse::request() const
 {
-    return static_cast<const ConfirmSubscriptionRequest *>(SnsResponse::request());
+    Q_D(const ConfirmSubscriptionResponse);
+    return static_cast<const ConfirmSubscriptionRequest *>(d->request);
 }
 
 /*!

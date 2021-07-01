@@ -85,7 +85,8 @@ CreateSnapshotScheduleResponse::CreateSnapshotScheduleResponse(
  */
 const CreateSnapshotScheduleRequest * CreateSnapshotScheduleResponse::request() const
 {
-    return static_cast<const CreateSnapshotScheduleRequest *>(RedshiftResponse::request());
+    Q_D(const CreateSnapshotScheduleResponse);
+    return static_cast<const CreateSnapshotScheduleRequest *>(d->request);
 }
 
 /*!

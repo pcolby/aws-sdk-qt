@@ -143,7 +143,8 @@ ListTeamMembersResponse::ListTeamMembersResponse(
  */
 const ListTeamMembersRequest * ListTeamMembersResponse::request() const
 {
-    return static_cast<const ListTeamMembersRequest *>(CodeStarResponse::request());
+    Q_D(const ListTeamMembersResponse);
+    return static_cast<const ListTeamMembersRequest *>(d->request);
 }
 
 /*!

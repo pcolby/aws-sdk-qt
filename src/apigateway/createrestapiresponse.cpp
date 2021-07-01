@@ -60,7 +60,8 @@ CreateRestApiResponse::CreateRestApiResponse(
  */
 const CreateRestApiRequest * CreateRestApiResponse::request() const
 {
-    return static_cast<const CreateRestApiRequest *>(APIGatewayResponse::request());
+    Q_D(const CreateRestApiResponse);
+    return static_cast<const CreateRestApiRequest *>(d->request);
 }
 
 /*!

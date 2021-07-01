@@ -82,7 +82,8 @@ GetBehaviorModelTrainingSummariesResponse::GetBehaviorModelTrainingSummariesResp
  */
 const GetBehaviorModelTrainingSummariesRequest * GetBehaviorModelTrainingSummariesResponse::request() const
 {
-    return static_cast<const GetBehaviorModelTrainingSummariesRequest *>(IoTResponse::request());
+    Q_D(const GetBehaviorModelTrainingSummariesResponse);
+    return static_cast<const GetBehaviorModelTrainingSummariesRequest *>(d->request);
 }
 
 /*!

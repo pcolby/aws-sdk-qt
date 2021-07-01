@@ -56,7 +56,8 @@ ListWorldsResponse::ListWorldsResponse(
  */
 const ListWorldsRequest * ListWorldsResponse::request() const
 {
-    return static_cast<const ListWorldsRequest *>(RoboMakerResponse::request());
+    Q_D(const ListWorldsResponse);
+    return static_cast<const ListWorldsRequest *>(d->request);
 }
 
 /*!

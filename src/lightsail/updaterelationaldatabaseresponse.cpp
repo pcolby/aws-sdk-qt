@@ -74,7 +74,8 @@ UpdateRelationalDatabaseResponse::UpdateRelationalDatabaseResponse(
  */
 const UpdateRelationalDatabaseRequest * UpdateRelationalDatabaseResponse::request() const
 {
-    return static_cast<const UpdateRelationalDatabaseRequest *>(LightsailResponse::request());
+    Q_D(const UpdateRelationalDatabaseResponse);
+    return static_cast<const UpdateRelationalDatabaseRequest *>(d->request);
 }
 
 /*!

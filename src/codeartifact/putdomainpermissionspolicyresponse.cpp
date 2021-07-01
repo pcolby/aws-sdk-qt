@@ -293,7 +293,8 @@ PutDomainPermissionsPolicyResponse::PutDomainPermissionsPolicyResponse(
  */
 const PutDomainPermissionsPolicyRequest * PutDomainPermissionsPolicyResponse::request() const
 {
-    return static_cast<const PutDomainPermissionsPolicyRequest *>(CodeArtifactResponse::request());
+    Q_D(const PutDomainPermissionsPolicyResponse);
+    return static_cast<const PutDomainPermissionsPolicyRequest *>(d->request);
 }
 
 /*!

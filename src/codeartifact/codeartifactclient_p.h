@@ -20,20 +20,19 @@
 #ifndef QTAWS_CODEARTIFACTCLIENT_P_H
 #define QTAWS_CODEARTIFACTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CodeArtifact {
 
 class CodeArtifactClient;
 
-class CodeArtifactClientPrivate {
+class CodeArtifactClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CodeArtifactClientPrivate(CodeArtifactClient * const q);
-
-protected:
-    CodeArtifactClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeArtifactClient)

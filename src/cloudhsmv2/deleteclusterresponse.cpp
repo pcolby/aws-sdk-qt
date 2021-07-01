@@ -57,7 +57,8 @@ DeleteClusterResponse::DeleteClusterResponse(
  */
 const DeleteClusterRequest * DeleteClusterResponse::request() const
 {
-    return static_cast<const DeleteClusterRequest *>(CloudHSMV2Response::request());
+    Q_D(const DeleteClusterResponse);
+    return static_cast<const DeleteClusterRequest *>(d->request);
 }
 
 /*!

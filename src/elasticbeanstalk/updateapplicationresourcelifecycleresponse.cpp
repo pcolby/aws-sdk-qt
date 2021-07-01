@@ -77,7 +77,8 @@ UpdateApplicationResourceLifecycleResponse::UpdateApplicationResourceLifecycleRe
  */
 const UpdateApplicationResourceLifecycleRequest * UpdateApplicationResourceLifecycleResponse::request() const
 {
-    return static_cast<const UpdateApplicationResourceLifecycleRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const UpdateApplicationResourceLifecycleResponse);
+    return static_cast<const UpdateApplicationResourceLifecycleRequest *>(d->request);
 }
 
 /*!

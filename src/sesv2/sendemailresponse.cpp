@@ -88,7 +88,8 @@ SendEmailResponse::SendEmailResponse(
  */
 const SendEmailRequest * SendEmailResponse::request() const
 {
-    return static_cast<const SendEmailRequest *>(Sesv2Response::request());
+    Q_D(const SendEmailResponse);
+    return static_cast<const SendEmailRequest *>(d->request);
 }
 
 /*!

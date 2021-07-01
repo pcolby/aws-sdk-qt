@@ -58,7 +58,8 @@ GetShardIteratorResponse::GetShardIteratorResponse(
  */
 const GetShardIteratorRequest * GetShardIteratorResponse::request() const
 {
-    return static_cast<const GetShardIteratorRequest *>(KinesisResponse::request());
+    Q_D(const GetShardIteratorResponse);
+    return static_cast<const GetShardIteratorRequest *>(d->request);
 }
 
 /*!

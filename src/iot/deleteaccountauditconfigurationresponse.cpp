@@ -82,7 +82,8 @@ DeleteAccountAuditConfigurationResponse::DeleteAccountAuditConfigurationResponse
  */
 const DeleteAccountAuditConfigurationRequest * DeleteAccountAuditConfigurationResponse::request() const
 {
-    return static_cast<const DeleteAccountAuditConfigurationRequest *>(IoTResponse::request());
+    Q_D(const DeleteAccountAuditConfigurationResponse);
+    return static_cast<const DeleteAccountAuditConfigurationRequest *>(d->request);
 }
 
 /*!

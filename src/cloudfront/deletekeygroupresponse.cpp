@@ -60,7 +60,8 @@ DeleteKeyGroupResponse::DeleteKeyGroupResponse(
  */
 const DeleteKeyGroupRequest * DeleteKeyGroupResponse::request() const
 {
-    return static_cast<const DeleteKeyGroupRequest *>(CloudFrontResponse::request());
+    Q_D(const DeleteKeyGroupResponse);
+    return static_cast<const DeleteKeyGroupRequest *>(d->request);
 }
 
 /*!

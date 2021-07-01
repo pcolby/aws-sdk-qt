@@ -131,7 +131,8 @@ DescribeSecretResponse::DescribeSecretResponse(
  */
 const DescribeSecretRequest * DescribeSecretResponse::request() const
 {
-    return static_cast<const DescribeSecretRequest *>(SecretsManagerResponse::request());
+    Q_D(const DescribeSecretResponse);
+    return static_cast<const DescribeSecretRequest *>(d->request);
 }
 
 /*!

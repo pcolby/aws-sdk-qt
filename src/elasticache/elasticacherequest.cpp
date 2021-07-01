@@ -107,7 +107,7 @@ namespace ElastiCache {
  * Constructs a ElastiCacheRequest object for ElastiCache \a action.
  */
 ElastiCacheRequest::ElastiCacheRequest(const Action action)
-    : d_ptr(new ElastiCacheRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ElastiCacheRequestPrivate(action, this))
 {
 
 }
@@ -116,8 +116,7 @@ ElastiCacheRequest::ElastiCacheRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ElastiCacheRequest::ElastiCacheRequest(const ElastiCacheRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ElastiCacheRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ElastiCacheRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -140,7 +139,7 @@ ElastiCacheRequest& ElastiCacheRequest::operator=(const ElastiCacheRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElastiCacheRequestPrivate.
  */
-ElastiCacheRequest::ElastiCacheRequest(ElastiCacheRequestPrivate * const d) : d_ptr(d)
+ElastiCacheRequest::ElastiCacheRequest(ElastiCacheRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -309,7 +308,7 @@ QNetworkRequest ElastiCacheRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 ElastiCacheRequestPrivate::ElastiCacheRequestPrivate(const ElastiCacheRequest::Action action, ElastiCacheRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -324,8 +323,8 @@ ElastiCacheRequestPrivate::ElastiCacheRequestPrivate(const ElastiCacheRequest::A
  */
 ElastiCacheRequestPrivate::ElastiCacheRequestPrivate(const ElastiCacheRequestPrivate &other,
                                      ElastiCacheRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

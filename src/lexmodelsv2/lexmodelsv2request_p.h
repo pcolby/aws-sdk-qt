@@ -20,12 +20,15 @@
 #ifndef QTAWS_LEXMODELSV2REQUEST_P_H
 #define QTAWS_LEXMODELSV2REQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "lexmodelsv2request.h"
+
 namespace QtAws {
 namespace LexModelsV2 {
 
 class LexModelsV2Request;
 
-class LexModelsV2RequestPrivate {
+class LexModelsV2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LexModelsV2Request::Action action; ///< LexModelsV2 action to be performed.
@@ -36,9 +39,6 @@ public:
     LexModelsV2RequestPrivate(const LexModelsV2RequestPrivate &other, LexModelsV2Request * const q);
 
     static QString toString(const LexModelsV2Request::Action &action);
-
-protected:
-    LexModelsV2Request * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LexModelsV2Request)

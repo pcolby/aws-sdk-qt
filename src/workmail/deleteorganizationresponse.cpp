@@ -89,7 +89,8 @@ DeleteOrganizationResponse::DeleteOrganizationResponse(
  */
 const DeleteOrganizationRequest * DeleteOrganizationResponse::request() const
 {
-    return static_cast<const DeleteOrganizationRequest *>(WorkMailResponse::request());
+    Q_D(const DeleteOrganizationResponse);
+    return static_cast<const DeleteOrganizationRequest *>(d->request);
 }
 
 /*!

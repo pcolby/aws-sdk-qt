@@ -82,7 +82,8 @@ DetachSecurityProfileResponse::DetachSecurityProfileResponse(
  */
 const DetachSecurityProfileRequest * DetachSecurityProfileResponse::request() const
 {
-    return static_cast<const DetachSecurityProfileRequest *>(IoTResponse::request());
+    Q_D(const DetachSecurityProfileResponse);
+    return static_cast<const DetachSecurityProfileRequest *>(d->request);
 }
 
 /*!

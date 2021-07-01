@@ -64,16 +64,16 @@ WorkMailMessageFlowClient::WorkMailMessageFlowClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-05-01"),
-    QStringLiteral("workmailmessageflow"),
-    QStringLiteral("Amazon WorkMail Message Flow"),
-    QStringLiteral("workmailmessageflow"),
-    parent), d_ptr(new WorkMailMessageFlowClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new WorkMailMessageFlowClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(WorkMailMessageFlowClient);
+    d->apiVersion = QStringLiteral("2019-05-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("workmailmessageflow");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon WorkMail Message Flow");
+    d->serviceName = QStringLiteral("workmailmessageflow");
 }
 
 /*!
@@ -92,16 +92,16 @@ WorkMailMessageFlowClient::WorkMailMessageFlowClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-05-01"),
-    QStringLiteral("workmailmessageflow"),
-    QStringLiteral("Amazon WorkMail Message Flow"),
-    QStringLiteral("workmailmessageflow"),
-    parent), d_ptr(new WorkMailMessageFlowClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new WorkMailMessageFlowClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(WorkMailMessageFlowClient);
+    d->apiVersion = QStringLiteral("2019-05-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("workmailmessageflow");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon WorkMail Message Flow");
+    d->serviceName = QStringLiteral("workmailmessageflow");
 }
 
 /*!
@@ -157,9 +157,10 @@ PutRawMessageContentResponse * WorkMailMessageFlowClient::putRawMessageContent(c
 /*!
  * Constructs a WorkMailMessageFlowClientPrivate object with public implementation \a q.
  */
-WorkMailMessageFlowClientPrivate::WorkMailMessageFlowClientPrivate(WorkMailMessageFlowClient * const q) : q_ptr(q)
+WorkMailMessageFlowClientPrivate::WorkMailMessageFlowClientPrivate(WorkMailMessageFlowClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace WorkMailMessageFlow

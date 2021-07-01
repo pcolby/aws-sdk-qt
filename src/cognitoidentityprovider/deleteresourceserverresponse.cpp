@@ -66,7 +66,8 @@ DeleteResourceServerResponse::DeleteResourceServerResponse(
  */
 const DeleteResourceServerRequest * DeleteResourceServerResponse::request() const
 {
-    return static_cast<const DeleteResourceServerRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const DeleteResourceServerResponse);
+    return static_cast<const DeleteResourceServerRequest *>(d->request);
 }
 
 /*!

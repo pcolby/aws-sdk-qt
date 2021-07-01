@@ -82,7 +82,8 @@ CreatePolicyResponse::CreatePolicyResponse(
  */
 const CreatePolicyRequest * CreatePolicyResponse::request() const
 {
-    return static_cast<const CreatePolicyRequest *>(IoTResponse::request());
+    Q_D(const CreatePolicyResponse);
+    return static_cast<const CreatePolicyRequest *>(d->request);
 }
 
 /*!

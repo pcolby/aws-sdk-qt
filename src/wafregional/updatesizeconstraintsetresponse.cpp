@@ -78,7 +78,8 @@ UpdateSizeConstraintSetResponse::UpdateSizeConstraintSetResponse(
  */
 const UpdateSizeConstraintSetRequest * UpdateSizeConstraintSetResponse::request() const
 {
-    return static_cast<const UpdateSizeConstraintSetRequest *>(WAFRegionalResponse::request());
+    Q_D(const UpdateSizeConstraintSetResponse);
+    return static_cast<const UpdateSizeConstraintSetRequest *>(d->request);
 }
 
 /*!

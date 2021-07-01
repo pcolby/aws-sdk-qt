@@ -103,7 +103,8 @@ UpdateOrganizationConfigurationResponse::UpdateOrganizationConfigurationResponse
  */
 const UpdateOrganizationConfigurationRequest * UpdateOrganizationConfigurationResponse::request() const
 {
-    return static_cast<const UpdateOrganizationConfigurationRequest *>(SecurityHubResponse::request());
+    Q_D(const UpdateOrganizationConfigurationResponse);
+    return static_cast<const UpdateOrganizationConfigurationRequest *>(d->request);
 }
 
 /*!

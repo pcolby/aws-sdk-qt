@@ -62,7 +62,8 @@ CreateServerResponse::CreateServerResponse(
  */
 const CreateServerRequest * CreateServerResponse::request() const
 {
-    return static_cast<const CreateServerRequest *>(TransferResponse::request());
+    Q_D(const CreateServerResponse);
+    return static_cast<const CreateServerRequest *>(d->request);
 }
 
 /*!

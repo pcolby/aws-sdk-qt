@@ -119,7 +119,8 @@ DescribePendingMaintenanceActionsResponse::DescribePendingMaintenanceActionsResp
  */
 const DescribePendingMaintenanceActionsRequest * DescribePendingMaintenanceActionsResponse::request() const
 {
-    return static_cast<const DescribePendingMaintenanceActionsRequest *>(RdsResponse::request());
+    Q_D(const DescribePendingMaintenanceActionsResponse);
+    return static_cast<const DescribePendingMaintenanceActionsRequest *>(d->request);
 }
 
 /*!

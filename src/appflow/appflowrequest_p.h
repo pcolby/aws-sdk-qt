@@ -20,12 +20,15 @@
 #ifndef QTAWS_APPFLOWREQUEST_P_H
 #define QTAWS_APPFLOWREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "appflowrequest.h"
+
 namespace QtAws {
 namespace Appflow {
 
 class AppflowRequest;
 
-class AppflowRequestPrivate {
+class AppflowRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppflowRequest::Action action; ///< Appflow action to be performed.
@@ -36,9 +39,6 @@ public:
     AppflowRequestPrivate(const AppflowRequestPrivate &other, AppflowRequest * const q);
 
     static QString toString(const AppflowRequest::Action &action);
-
-protected:
-    AppflowRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppflowRequest)

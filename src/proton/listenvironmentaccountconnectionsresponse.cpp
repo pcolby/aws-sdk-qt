@@ -177,7 +177,8 @@ ListEnvironmentAccountConnectionsResponse::ListEnvironmentAccountConnectionsResp
  */
 const ListEnvironmentAccountConnectionsRequest * ListEnvironmentAccountConnectionsResponse::request() const
 {
-    return static_cast<const ListEnvironmentAccountConnectionsRequest *>(ProtonResponse::request());
+    Q_D(const ListEnvironmentAccountConnectionsResponse);
+    return static_cast<const ListEnvironmentAccountConnectionsRequest *>(d->request);
 }
 
 /*!

@@ -75,12 +75,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateEventIntegrationResponse * updateEventIntegration(const UpdateEventIntegrationRequest &request);
 
-protected:
-    /// @cond internal
-    AppIntegrationsServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AppIntegrationsServiceClient(AppIntegrationsServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(AppIntegrationsServiceClient)
     Q_DISABLE_COPY(AppIntegrationsServiceClient)

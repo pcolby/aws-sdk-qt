@@ -85,7 +85,8 @@ DeleteEndpointAccessResponse::DeleteEndpointAccessResponse(
  */
 const DeleteEndpointAccessRequest * DeleteEndpointAccessResponse::request() const
 {
-    return static_cast<const DeleteEndpointAccessRequest *>(RedshiftResponse::request());
+    Q_D(const DeleteEndpointAccessResponse);
+    return static_cast<const DeleteEndpointAccessRequest *>(d->request);
 }
 
 /*!

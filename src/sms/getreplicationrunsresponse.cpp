@@ -68,7 +68,8 @@ GetReplicationRunsResponse::GetReplicationRunsResponse(
  */
 const GetReplicationRunsRequest * GetReplicationRunsResponse::request() const
 {
-    return static_cast<const GetReplicationRunsRequest *>(SmsResponse::request());
+    Q_D(const GetReplicationRunsResponse);
+    return static_cast<const GetReplicationRunsRequest *>(d->request);
 }
 
 /*!

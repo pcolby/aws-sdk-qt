@@ -66,7 +66,8 @@ SetReceiptRulePositionResponse::SetReceiptRulePositionResponse(
  */
 const SetReceiptRulePositionRequest * SetReceiptRulePositionResponse::request() const
 {
-    return static_cast<const SetReceiptRulePositionRequest *>(SesResponse::request());
+    Q_D(const SetReceiptRulePositionResponse);
+    return static_cast<const SetReceiptRulePositionRequest *>(d->request);
 }
 
 /*!

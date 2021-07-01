@@ -59,7 +59,8 @@ UpdateSubnetGroupResponse::UpdateSubnetGroupResponse(
  */
 const UpdateSubnetGroupRequest * UpdateSubnetGroupResponse::request() const
 {
-    return static_cast<const UpdateSubnetGroupRequest *>(DaxResponse::request());
+    Q_D(const UpdateSubnetGroupResponse);
+    return static_cast<const UpdateSubnetGroupRequest *>(d->request);
 }
 
 /*!

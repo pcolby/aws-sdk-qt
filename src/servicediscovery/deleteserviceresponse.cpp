@@ -60,7 +60,8 @@ DeleteServiceResponse::DeleteServiceResponse(
  */
 const DeleteServiceRequest * DeleteServiceResponse::request() const
 {
-    return static_cast<const DeleteServiceRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const DeleteServiceResponse);
+    return static_cast<const DeleteServiceRequest *>(d->request);
 }
 
 /*!

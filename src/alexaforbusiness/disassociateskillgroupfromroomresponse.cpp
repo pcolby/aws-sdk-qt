@@ -62,7 +62,8 @@ DisassociateSkillGroupFromRoomResponse::DisassociateSkillGroupFromRoomResponse(
  */
 const DisassociateSkillGroupFromRoomRequest * DisassociateSkillGroupFromRoomResponse::request() const
 {
-    return static_cast<const DisassociateSkillGroupFromRoomRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const DisassociateSkillGroupFromRoomResponse);
+    return static_cast<const DisassociateSkillGroupFromRoomRequest *>(d->request);
 }
 
 /*!

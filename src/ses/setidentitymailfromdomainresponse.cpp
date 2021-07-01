@@ -66,7 +66,8 @@ SetIdentityMailFromDomainResponse::SetIdentityMailFromDomainResponse(
  */
 const SetIdentityMailFromDomainRequest * SetIdentityMailFromDomainResponse::request() const
 {
-    return static_cast<const SetIdentityMailFromDomainRequest *>(SesResponse::request());
+    Q_D(const SetIdentityMailFromDomainResponse);
+    return static_cast<const SetIdentityMailFromDomainRequest *>(d->request);
 }
 
 /*!

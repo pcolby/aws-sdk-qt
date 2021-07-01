@@ -56,7 +56,8 @@ GetChannelsResponse::GetChannelsResponse(
  */
 const GetChannelsRequest * GetChannelsResponse::request() const
 {
-    return static_cast<const GetChannelsRequest *>(PinpointResponse::request());
+    Q_D(const GetChannelsResponse);
+    return static_cast<const GetChannelsRequest *>(d->request);
 }
 
 /*!

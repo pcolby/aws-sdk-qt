@@ -58,7 +58,8 @@ BatchGetDevEndpointsResponse::BatchGetDevEndpointsResponse(
  */
 const BatchGetDevEndpointsRequest * BatchGetDevEndpointsResponse::request() const
 {
-    return static_cast<const BatchGetDevEndpointsRequest *>(GlueResponse::request());
+    Q_D(const BatchGetDevEndpointsResponse);
+    return static_cast<const BatchGetDevEndpointsRequest *>(d->request);
 }
 
 /*!

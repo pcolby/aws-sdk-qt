@@ -51,12 +51,6 @@ public:
 public slots:
     GetEntitlementsResponse * getEntitlements(const GetEntitlementsRequest &request);
 
-protected:
-    /// @cond internal
-    MarketplaceEntitlementServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MarketplaceEntitlementServiceClient(MarketplaceEntitlementServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MarketplaceEntitlementServiceClient)
     Q_DISABLE_COPY(MarketplaceEntitlementServiceClient)

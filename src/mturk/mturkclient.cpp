@@ -137,16 +137,16 @@ MTurkClient::MTurkClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-01-17"),
-    QStringLiteral("mturk-requester"),
-    QStringLiteral("Amazon Mechanical Turk"),
-    QStringLiteral("mturk-requester"),
-    parent), d_ptr(new MTurkClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MTurkClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MTurkClient);
+    d->apiVersion = QStringLiteral("2017-01-17");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mturk-requester");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Mechanical Turk");
+    d->serviceName = QStringLiteral("mturk-requester");
 }
 
 /*!
@@ -165,16 +165,16 @@ MTurkClient::MTurkClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-01-17"),
-    QStringLiteral("mturk-requester"),
-    QStringLiteral("Amazon Mechanical Turk"),
-    QStringLiteral("mturk-requester"),
-    parent), d_ptr(new MTurkClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MTurkClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MTurkClient);
+    d->apiVersion = QStringLiteral("2017-01-17");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mturk-requester");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Mechanical Turk");
+    d->serviceName = QStringLiteral("mturk-requester");
 }
 
 /*!
@@ -973,9 +973,10 @@ UpdateQualificationTypeResponse * MTurkClient::updateQualificationType(const Upd
 /*!
  * Constructs a MTurkClientPrivate object with public implementation \a q.
  */
-MTurkClientPrivate::MTurkClientPrivate(MTurkClient * const q) : q_ptr(q)
+MTurkClientPrivate::MTurkClientPrivate(MTurkClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MTurk

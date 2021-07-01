@@ -87,7 +87,8 @@ ReplaceNetworkAclEntryResponse::ReplaceNetworkAclEntryResponse(
  */
 const ReplaceNetworkAclEntryRequest * ReplaceNetworkAclEntryResponse::request() const
 {
-    return static_cast<const ReplaceNetworkAclEntryRequest *>(Ec2Response::request());
+    Q_D(const ReplaceNetworkAclEntryResponse);
+    return static_cast<const ReplaceNetworkAclEntryRequest *>(d->request);
 }
 
 /*!

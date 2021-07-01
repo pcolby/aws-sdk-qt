@@ -69,7 +69,8 @@ StartNextPendingJobExecutionResponse::StartNextPendingJobExecutionResponse(
  */
 const StartNextPendingJobExecutionRequest * StartNextPendingJobExecutionResponse::request() const
 {
-    return static_cast<const StartNextPendingJobExecutionRequest *>(IoTJobsDataPlaneResponse::request());
+    Q_D(const StartNextPendingJobExecutionResponse);
+    return static_cast<const StartNextPendingJobExecutionRequest *>(d->request);
 }
 
 /*!

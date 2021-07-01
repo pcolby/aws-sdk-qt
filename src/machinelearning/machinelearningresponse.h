@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    MachineLearningResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MachineLearningResponse(MachineLearningResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

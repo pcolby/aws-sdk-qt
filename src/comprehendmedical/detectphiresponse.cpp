@@ -57,7 +57,8 @@ DetectPHIResponse::DetectPHIResponse(
  */
 const DetectPHIRequest * DetectPHIResponse::request() const
 {
-    return static_cast<const DetectPHIRequest *>(ComprehendMedicalResponse::request());
+    Q_D(const DetectPHIResponse);
+    return static_cast<const DetectPHIRequest *>(d->request);
 }
 
 /*!

@@ -240,7 +240,8 @@ CreateCustomActionTypeResponse::CreateCustomActionTypeResponse(
  */
 const CreateCustomActionTypeRequest * CreateCustomActionTypeResponse::request() const
 {
-    return static_cast<const CreateCustomActionTypeRequest *>(CodePipelineResponse::request());
+    Q_D(const CreateCustomActionTypeResponse);
+    return static_cast<const CreateCustomActionTypeRequest *>(d->request);
 }
 
 /*!

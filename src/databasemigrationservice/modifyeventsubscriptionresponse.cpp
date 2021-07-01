@@ -66,7 +66,8 @@ ModifyEventSubscriptionResponse::ModifyEventSubscriptionResponse(
  */
 const ModifyEventSubscriptionRequest * ModifyEventSubscriptionResponse::request() const
 {
-    return static_cast<const ModifyEventSubscriptionRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const ModifyEventSubscriptionResponse);
+    return static_cast<const ModifyEventSubscriptionRequest *>(d->request);
 }
 
 /*!

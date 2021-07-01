@@ -58,7 +58,8 @@ GetSatelliteResponse::GetSatelliteResponse(
  */
 const GetSatelliteRequest * GetSatelliteResponse::request() const
 {
-    return static_cast<const GetSatelliteRequest *>(GroundStationResponse::request());
+    Q_D(const GetSatelliteResponse);
+    return static_cast<const GetSatelliteRequest *>(d->request);
 }
 
 /*!

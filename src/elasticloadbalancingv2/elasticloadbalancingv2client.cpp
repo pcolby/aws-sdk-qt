@@ -162,16 +162,16 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-12-01"),
-    QStringLiteral("elasticloadbalancing"),
-    QStringLiteral("Elastic Load Balancing"),
-    QStringLiteral("elasticloadbalancing"),
-    parent), d_ptr(new ElasticLoadBalancingv2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ElasticLoadBalancingv2ClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ElasticLoadBalancingv2Client);
+    d->apiVersion = QStringLiteral("2015-12-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("elasticloadbalancing");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Elastic Load Balancing");
+    d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 
 /*!
@@ -190,16 +190,16 @@ ElasticLoadBalancingv2Client::ElasticLoadBalancingv2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-12-01"),
-    QStringLiteral("elasticloadbalancing"),
-    QStringLiteral("Elastic Load Balancing"),
-    QStringLiteral("elasticloadbalancing"),
-    parent), d_ptr(new ElasticLoadBalancingv2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ElasticLoadBalancingv2ClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ElasticLoadBalancingv2Client);
+    d->apiVersion = QStringLiteral("2015-12-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("elasticloadbalancing");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Elastic Load Balancing");
+    d->serviceName = QStringLiteral("elasticloadbalancing");
 }
 
 /*!
@@ -922,9 +922,10 @@ SetSubnetsResponse * ElasticLoadBalancingv2Client::setSubnets(const SetSubnetsRe
 /*!
  * Constructs a ElasticLoadBalancingv2ClientPrivate object with public implementation \a q.
  */
-ElasticLoadBalancingv2ClientPrivate::ElasticLoadBalancingv2ClientPrivate(ElasticLoadBalancingv2Client * const q) : q_ptr(q)
+ElasticLoadBalancingv2ClientPrivate::ElasticLoadBalancingv2ClientPrivate(ElasticLoadBalancingv2Client * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ElasticLoadBalancingv2

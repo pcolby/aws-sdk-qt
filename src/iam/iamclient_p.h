@@ -20,20 +20,19 @@
 #ifndef QTAWS_IAMCLIENT_P_H
 #define QTAWS_IAMCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace IAM {
 
 class IamClient;
 
-class IamClientPrivate {
+class IamClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit IamClientPrivate(IamClient * const q);
-
-protected:
-    IamClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IamClient)

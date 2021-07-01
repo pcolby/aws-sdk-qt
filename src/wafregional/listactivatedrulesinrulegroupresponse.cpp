@@ -78,7 +78,8 @@ ListActivatedRulesInRuleGroupResponse::ListActivatedRulesInRuleGroupResponse(
  */
 const ListActivatedRulesInRuleGroupRequest * ListActivatedRulesInRuleGroupResponse::request() const
 {
-    return static_cast<const ListActivatedRulesInRuleGroupRequest *>(WAFRegionalResponse::request());
+    Q_D(const ListActivatedRulesInRuleGroupResponse);
+    return static_cast<const ListActivatedRulesInRuleGroupRequest *>(d->request);
 }
 
 /*!

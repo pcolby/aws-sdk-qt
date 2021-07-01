@@ -119,7 +119,8 @@ DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
  */
 const DescribeEventCategoriesRequest * DescribeEventCategoriesResponse::request() const
 {
-    return static_cast<const DescribeEventCategoriesRequest *>(RdsResponse::request());
+    Q_D(const DescribeEventCategoriesResponse);
+    return static_cast<const DescribeEventCategoriesRequest *>(d->request);
 }
 
 /*!

@@ -103,7 +103,8 @@ DescribeStandardsControlsResponse::DescribeStandardsControlsResponse(
  */
 const DescribeStandardsControlsRequest * DescribeStandardsControlsResponse::request() const
 {
-    return static_cast<const DescribeStandardsControlsRequest *>(SecurityHubResponse::request());
+    Q_D(const DescribeStandardsControlsResponse);
+    return static_cast<const DescribeStandardsControlsRequest *>(d->request);
 }
 
 /*!

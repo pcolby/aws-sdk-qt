@@ -55,7 +55,8 @@ ListBonusPaymentsResponse::ListBonusPaymentsResponse(
  */
 const ListBonusPaymentsRequest * ListBonusPaymentsResponse::request() const
 {
-    return static_cast<const ListBonusPaymentsRequest *>(MTurkResponse::request());
+    Q_D(const ListBonusPaymentsResponse);
+    return static_cast<const ListBonusPaymentsRequest *>(d->request);
 }
 
 /*!

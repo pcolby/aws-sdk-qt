@@ -79,7 +79,8 @@ ListSecurityProfilesResponse::ListSecurityProfilesResponse(
  */
 const ListSecurityProfilesRequest * ListSecurityProfilesResponse::request() const
 {
-    return static_cast<const ListSecurityProfilesRequest *>(ConnectResponse::request());
+    Q_D(const ListSecurityProfilesResponse);
+    return static_cast<const ListSecurityProfilesRequest *>(d->request);
 }
 
 /*!

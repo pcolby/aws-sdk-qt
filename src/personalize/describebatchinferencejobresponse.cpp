@@ -56,7 +56,8 @@ DescribeBatchInferenceJobResponse::DescribeBatchInferenceJobResponse(
  */
 const DescribeBatchInferenceJobRequest * DescribeBatchInferenceJobResponse::request() const
 {
-    return static_cast<const DescribeBatchInferenceJobRequest *>(PersonalizeResponse::request());
+    Q_D(const DescribeBatchInferenceJobResponse);
+    return static_cast<const DescribeBatchInferenceJobRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_SSMINCIDENTSCLIENT_P_H
 #define QTAWS_SSMINCIDENTSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SSMIncidents {
 
 class SSMIncidentsClient;
 
-class SSMIncidentsClientPrivate {
+class SSMIncidentsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SSMIncidentsClientPrivate(SSMIncidentsClient * const q);
-
-protected:
-    SSMIncidentsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SSMIncidentsClient)

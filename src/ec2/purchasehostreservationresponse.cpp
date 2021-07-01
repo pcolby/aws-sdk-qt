@@ -87,7 +87,8 @@ PurchaseHostReservationResponse::PurchaseHostReservationResponse(
  */
 const PurchaseHostReservationRequest * PurchaseHostReservationResponse::request() const
 {
-    return static_cast<const PurchaseHostReservationRequest *>(Ec2Response::request());
+    Q_D(const PurchaseHostReservationResponse);
+    return static_cast<const PurchaseHostReservationRequest *>(d->request);
 }
 
 /*!

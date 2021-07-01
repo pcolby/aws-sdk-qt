@@ -87,7 +87,8 @@ DescribeLocalGatewaysResponse::DescribeLocalGatewaysResponse(
  */
 const DescribeLocalGatewaysRequest * DescribeLocalGatewaysResponse::request() const
 {
-    return static_cast<const DescribeLocalGatewaysRequest *>(Ec2Response::request());
+    Q_D(const DescribeLocalGatewaysResponse);
+    return static_cast<const DescribeLocalGatewaysRequest *>(d->request);
 }
 
 /*!

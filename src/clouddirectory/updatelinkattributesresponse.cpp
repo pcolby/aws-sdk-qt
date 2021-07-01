@@ -63,7 +63,8 @@ UpdateLinkAttributesResponse::UpdateLinkAttributesResponse(
  */
 const UpdateLinkAttributesRequest * UpdateLinkAttributesResponse::request() const
 {
-    return static_cast<const UpdateLinkAttributesRequest *>(CloudDirectoryResponse::request());
+    Q_D(const UpdateLinkAttributesResponse);
+    return static_cast<const UpdateLinkAttributesRequest *>(d->request);
 }
 
 /*!

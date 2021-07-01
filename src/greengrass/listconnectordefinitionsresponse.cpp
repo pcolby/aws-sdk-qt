@@ -58,7 +58,8 @@ ListConnectorDefinitionsResponse::ListConnectorDefinitionsResponse(
  */
 const ListConnectorDefinitionsRequest * ListConnectorDefinitionsResponse::request() const
 {
-    return static_cast<const ListConnectorDefinitionsRequest *>(GreengrassResponse::request());
+    Q_D(const ListConnectorDefinitionsResponse);
+    return static_cast<const ListConnectorDefinitionsRequest *>(d->request);
 }
 
 /*!

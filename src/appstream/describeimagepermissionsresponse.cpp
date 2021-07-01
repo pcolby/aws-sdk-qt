@@ -81,7 +81,8 @@ DescribeImagePermissionsResponse::DescribeImagePermissionsResponse(
  */
 const DescribeImagePermissionsRequest * DescribeImagePermissionsResponse::request() const
 {
-    return static_cast<const DescribeImagePermissionsRequest *>(AppStreamResponse::request());
+    Q_D(const DescribeImagePermissionsResponse);
+    return static_cast<const DescribeImagePermissionsRequest *>(d->request);
 }
 
 /*!

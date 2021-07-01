@@ -20,20 +20,19 @@
 #ifndef QTAWS_CODESTARNOTIFICATIONSCLIENT_P_H
 #define QTAWS_CODESTARNOTIFICATIONSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CodeStarNotifications {
 
 class CodeStarNotificationsClient;
 
-class CodeStarNotificationsClientPrivate {
+class CodeStarNotificationsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CodeStarNotificationsClientPrivate(CodeStarNotificationsClient * const q);
-
-protected:
-    CodeStarNotificationsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeStarNotificationsClient)

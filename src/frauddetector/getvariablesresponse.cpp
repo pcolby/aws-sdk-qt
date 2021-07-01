@@ -58,7 +58,8 @@ GetVariablesResponse::GetVariablesResponse(
  */
 const GetVariablesRequest * GetVariablesResponse::request() const
 {
-    return static_cast<const GetVariablesRequest *>(FraudDetectorResponse::request());
+    Q_D(const GetVariablesResponse);
+    return static_cast<const GetVariablesRequest *>(d->request);
 }
 
 /*!

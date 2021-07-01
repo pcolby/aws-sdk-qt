@@ -62,7 +62,8 @@ ListInstanceProfilesForRoleResponse::ListInstanceProfilesForRoleResponse(
  */
 const ListInstanceProfilesForRoleRequest * ListInstanceProfilesForRoleResponse::request() const
 {
-    return static_cast<const ListInstanceProfilesForRoleRequest *>(IamResponse::request());
+    Q_D(const ListInstanceProfilesForRoleResponse);
+    return static_cast<const ListInstanceProfilesForRoleRequest *>(d->request);
 }
 
 /*!

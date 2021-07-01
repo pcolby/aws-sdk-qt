@@ -161,7 +161,8 @@ AssignVolumeResponse::AssignVolumeResponse(
  */
 const AssignVolumeRequest * AssignVolumeResponse::request() const
 {
-    return static_cast<const AssignVolumeRequest *>(OpsWorksResponse::request());
+    Q_D(const AssignVolumeResponse);
+    return static_cast<const AssignVolumeRequest *>(d->request);
 }
 
 /*!

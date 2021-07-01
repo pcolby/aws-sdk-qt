@@ -56,7 +56,8 @@ DescribeRecipeResponse::DescribeRecipeResponse(
  */
 const DescribeRecipeRequest * DescribeRecipeResponse::request() const
 {
-    return static_cast<const DescribeRecipeRequest *>(PersonalizeResponse::request());
+    Q_D(const DescribeRecipeResponse);
+    return static_cast<const DescribeRecipeRequest *>(d->request);
 }
 
 /*!

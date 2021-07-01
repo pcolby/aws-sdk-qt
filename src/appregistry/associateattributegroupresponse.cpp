@@ -58,7 +58,8 @@ AssociateAttributeGroupResponse::AssociateAttributeGroupResponse(
  */
 const AssociateAttributeGroupRequest * AssociateAttributeGroupResponse::request() const
 {
-    return static_cast<const AssociateAttributeGroupRequest *>(AppRegistryResponse::request());
+    Q_D(const AssociateAttributeGroupResponse);
+    return static_cast<const AssociateAttributeGroupRequest *>(d->request);
 }
 
 /*!

@@ -141,7 +141,8 @@ DeleteOrganizationResponse::DeleteOrganizationResponse(
  */
 const DeleteOrganizationRequest * DeleteOrganizationResponse::request() const
 {
-    return static_cast<const DeleteOrganizationRequest *>(OrganizationsResponse::request());
+    Q_D(const DeleteOrganizationResponse);
+    return static_cast<const DeleteOrganizationRequest *>(d->request);
 }
 
 /*!

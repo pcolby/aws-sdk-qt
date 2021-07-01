@@ -69,7 +69,8 @@ PutMetricStreamResponse::PutMetricStreamResponse(
  */
 const PutMetricStreamRequest * PutMetricStreamResponse::request() const
 {
-    return static_cast<const PutMetricStreamRequest *>(CloudWatchResponse::request());
+    Q_D(const PutMetricStreamResponse);
+    return static_cast<const PutMetricStreamRequest *>(d->request);
 }
 
 /*!

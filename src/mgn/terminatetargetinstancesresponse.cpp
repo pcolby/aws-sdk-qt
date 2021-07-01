@@ -56,7 +56,8 @@ TerminateTargetInstancesResponse::TerminateTargetInstancesResponse(
  */
 const TerminateTargetInstancesRequest * TerminateTargetInstancesResponse::request() const
 {
-    return static_cast<const TerminateTargetInstancesRequest *>(mgnResponse::request());
+    Q_D(const TerminateTargetInstancesResponse);
+    return static_cast<const TerminateTargetInstancesRequest *>(d->request);
 }
 
 /*!

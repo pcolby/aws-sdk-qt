@@ -55,7 +55,8 @@ DeleteBatchPredictionResponse::DeleteBatchPredictionResponse(
  */
 const DeleteBatchPredictionRequest * DeleteBatchPredictionResponse::request() const
 {
-    return static_cast<const DeleteBatchPredictionRequest *>(MachineLearningResponse::request());
+    Q_D(const DeleteBatchPredictionResponse);
+    return static_cast<const DeleteBatchPredictionRequest *>(d->request);
 }
 
 /*!

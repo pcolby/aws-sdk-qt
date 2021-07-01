@@ -58,7 +58,8 @@ DescribeTopicsDetectionJobResponse::DescribeTopicsDetectionJobResponse(
  */
 const DescribeTopicsDetectionJobRequest * DescribeTopicsDetectionJobResponse::request() const
 {
-    return static_cast<const DescribeTopicsDetectionJobRequest *>(ComprehendResponse::request());
+    Q_D(const DescribeTopicsDetectionJobResponse);
+    return static_cast<const DescribeTopicsDetectionJobRequest *>(d->request);
 }
 
 /*!

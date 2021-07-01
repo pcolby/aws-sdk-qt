@@ -67,7 +67,7 @@ namespace ApplicationDiscoveryService {
  * Constructs a ApplicationDiscoveryServiceRequest object for ApplicationDiscoveryService \a action.
  */
 ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(const Action action)
-    : d_ptr(new ApplicationDiscoveryServiceRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ApplicationDiscoveryServiceRequestPrivate(action, this))
 {
 
 }
@@ -76,8 +76,7 @@ ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(const Act
  * Constructs a copy of \a other.
  */
 ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(const ApplicationDiscoveryServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ApplicationDiscoveryServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ApplicationDiscoveryServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -100,7 +99,7 @@ ApplicationDiscoveryServiceRequest& ApplicationDiscoveryServiceRequest::operator
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ApplicationDiscoveryServiceRequestPrivate.
  */
-ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(ApplicationDiscoveryServiceRequestPrivate * const d) : d_ptr(d)
+ApplicationDiscoveryServiceRequest::ApplicationDiscoveryServiceRequest(ApplicationDiscoveryServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -269,7 +268,7 @@ QNetworkRequest ApplicationDiscoveryServiceRequest::unsignedRequest(const QUrl &
  * with public implementation \a q.
  */
 ApplicationDiscoveryServiceRequestPrivate::ApplicationDiscoveryServiceRequestPrivate(const ApplicationDiscoveryServiceRequest::Action action, ApplicationDiscoveryServiceRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -284,8 +283,8 @@ ApplicationDiscoveryServiceRequestPrivate::ApplicationDiscoveryServiceRequestPri
  */
 ApplicationDiscoveryServiceRequestPrivate::ApplicationDiscoveryServiceRequestPrivate(const ApplicationDiscoveryServiceRequestPrivate &other,
                                      ApplicationDiscoveryServiceRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

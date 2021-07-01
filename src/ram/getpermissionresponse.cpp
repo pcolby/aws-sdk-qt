@@ -64,7 +64,8 @@ GetPermissionResponse::GetPermissionResponse(
  */
 const GetPermissionRequest * GetPermissionResponse::request() const
 {
-    return static_cast<const GetPermissionRequest *>(RamResponse::request());
+    Q_D(const GetPermissionResponse);
+    return static_cast<const GetPermissionRequest *>(d->request);
 }
 
 /*!

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    LexModelsV2ResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LexModelsV2Response(LexModelsV2ResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

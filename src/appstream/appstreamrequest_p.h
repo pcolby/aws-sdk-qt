@@ -20,12 +20,15 @@
 #ifndef QTAWS_APPSTREAMREQUEST_P_H
 #define QTAWS_APPSTREAMREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "appstreamrequest.h"
+
 namespace QtAws {
 namespace AppStream {
 
 class AppStreamRequest;
 
-class AppStreamRequestPrivate {
+class AppStreamRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppStreamRequest::Action action; ///< AppStream action to be performed.
@@ -36,9 +39,6 @@ public:
     AppStreamRequestPrivate(const AppStreamRequestPrivate &other, AppStreamRequest * const q);
 
     static QString toString(const AppStreamRequest::Action &action);
-
-protected:
-    AppStreamRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppStreamRequest)

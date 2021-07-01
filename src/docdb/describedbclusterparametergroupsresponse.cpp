@@ -56,7 +56,8 @@ DescribeDBClusterParameterGroupsResponse::DescribeDBClusterParameterGroupsRespon
  */
 const DescribeDBClusterParameterGroupsRequest * DescribeDBClusterParameterGroupsResponse::request() const
 {
-    return static_cast<const DescribeDBClusterParameterGroupsRequest *>(DocDBResponse::request());
+    Q_D(const DescribeDBClusterParameterGroupsResponse);
+    return static_cast<const DescribeDBClusterParameterGroupsRequest *>(d->request);
 }
 
 /*!

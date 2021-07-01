@@ -60,7 +60,8 @@ UpdateFunctionResponse::UpdateFunctionResponse(
  */
 const UpdateFunctionRequest * UpdateFunctionResponse::request() const
 {
-    return static_cast<const UpdateFunctionRequest *>(CloudFrontResponse::request());
+    Q_D(const UpdateFunctionResponse);
+    return static_cast<const UpdateFunctionRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ GetCoipPoolUsageResponse::GetCoipPoolUsageResponse(
  */
 const GetCoipPoolUsageRequest * GetCoipPoolUsageResponse::request() const
 {
-    return static_cast<const GetCoipPoolUsageRequest *>(Ec2Response::request());
+    Q_D(const GetCoipPoolUsageResponse);
+    return static_cast<const GetCoipPoolUsageRequest *>(d->request);
 }
 
 /*!

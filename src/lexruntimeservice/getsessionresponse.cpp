@@ -62,7 +62,8 @@ GetSessionResponse::GetSessionResponse(
  */
 const GetSessionRequest * GetSessionResponse::request() const
 {
-    return static_cast<const GetSessionRequest *>(LexRuntimeServiceResponse::request());
+    Q_D(const GetSessionResponse);
+    return static_cast<const GetSessionRequest *>(d->request);
 }
 
 /*!

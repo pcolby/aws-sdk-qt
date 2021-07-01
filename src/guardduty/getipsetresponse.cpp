@@ -73,7 +73,8 @@ GetIPSetResponse::GetIPSetResponse(
  */
 const GetIPSetRequest * GetIPSetResponse::request() const
 {
-    return static_cast<const GetIPSetRequest *>(GuardDutyResponse::request());
+    Q_D(const GetIPSetResponse);
+    return static_cast<const GetIPSetRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ UpdateResourceDataSyncResponse::UpdateResourceDataSyncResponse(
  */
 const UpdateResourceDataSyncRequest * UpdateResourceDataSyncResponse::request() const
 {
-    return static_cast<const UpdateResourceDataSyncRequest *>(SsmResponse::request());
+    Q_D(const UpdateResourceDataSyncResponse);
+    return static_cast<const UpdateResourceDataSyncRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ AddTagsToStreamResponse::AddTagsToStreamResponse(
  */
 const AddTagsToStreamRequest * AddTagsToStreamResponse::request() const
 {
-    return static_cast<const AddTagsToStreamRequest *>(KinesisResponse::request());
+    Q_D(const AddTagsToStreamResponse);
+    return static_cast<const AddTagsToStreamRequest *>(d->request);
 }
 
 /*!

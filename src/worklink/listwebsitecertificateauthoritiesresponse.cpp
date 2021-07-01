@@ -60,7 +60,8 @@ ListWebsiteCertificateAuthoritiesResponse::ListWebsiteCertificateAuthoritiesResp
  */
 const ListWebsiteCertificateAuthoritiesRequest * ListWebsiteCertificateAuthoritiesResponse::request() const
 {
-    return static_cast<const ListWebsiteCertificateAuthoritiesRequest *>(WorkLinkResponse::request());
+    Q_D(const ListWebsiteCertificateAuthoritiesResponse);
+    return static_cast<const ListWebsiteCertificateAuthoritiesRequest *>(d->request);
 }
 
 /*!

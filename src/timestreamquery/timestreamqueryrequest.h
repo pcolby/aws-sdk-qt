@@ -61,8 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    TimestreamQueryRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit TimestreamQueryRequest(TimestreamQueryRequestPrivate * const d);
+    TimestreamQueryRequest(TimestreamQueryRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

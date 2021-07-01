@@ -90,7 +90,8 @@ CreateListenerResponse::CreateListenerResponse(
  */
 const CreateListenerRequest * CreateListenerResponse::request() const
 {
-    return static_cast<const CreateListenerRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const CreateListenerResponse);
+    return static_cast<const CreateListenerRequest *>(d->request);
 }
 
 /*!

@@ -89,7 +89,8 @@ DescribeResourceResponse::DescribeResourceResponse(
  */
 const DescribeResourceRequest * DescribeResourceResponse::request() const
 {
-    return static_cast<const DescribeResourceRequest *>(WorkMailResponse::request());
+    Q_D(const DescribeResourceResponse);
+    return static_cast<const DescribeResourceRequest *>(d->request);
 }
 
 /*!

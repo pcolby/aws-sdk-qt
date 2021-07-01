@@ -75,7 +75,8 @@ StopJobResponse::StopJobResponse(
  */
 const StopJobRequest * StopJobResponse::request() const
 {
-    return static_cast<const StopJobRequest *>(DeviceFarmResponse::request());
+    Q_D(const StopJobResponse);
+    return static_cast<const StopJobRequest *>(d->request);
 }
 
 /*!

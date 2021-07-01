@@ -133,7 +133,8 @@ ResolveCaseResponse::ResolveCaseResponse(
  */
 const ResolveCaseRequest * ResolveCaseResponse::request() const
 {
-    return static_cast<const ResolveCaseRequest *>(SupportResponse::request());
+    Q_D(const ResolveCaseResponse);
+    return static_cast<const ResolveCaseRequest *>(d->request);
 }
 
 /*!

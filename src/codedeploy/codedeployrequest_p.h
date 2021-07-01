@@ -20,12 +20,15 @@
 #ifndef QTAWS_CODEDEPLOYREQUEST_P_H
 #define QTAWS_CODEDEPLOYREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "codedeployrequest.h"
+
 namespace QtAws {
 namespace CodeDeploy {
 
 class CodeDeployRequest;
 
-class CodeDeployRequestPrivate {
+class CodeDeployRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeDeployRequest::Action action; ///< CodeDeploy action to be performed.
@@ -36,9 +39,6 @@ public:
     CodeDeployRequestPrivate(const CodeDeployRequestPrivate &other, CodeDeployRequest * const q);
 
     static QString toString(const CodeDeployRequest::Action &action);
-
-protected:
-    CodeDeployRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeDeployRequest)

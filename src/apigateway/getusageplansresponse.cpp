@@ -60,7 +60,8 @@ GetUsagePlansResponse::GetUsagePlansResponse(
  */
 const GetUsagePlansRequest * GetUsagePlansResponse::request() const
 {
-    return static_cast<const GetUsagePlansRequest *>(APIGatewayResponse::request());
+    Q_D(const GetUsagePlansResponse);
+    return static_cast<const GetUsagePlansRequest *>(d->request);
 }
 
 /*!

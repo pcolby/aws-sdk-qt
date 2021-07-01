@@ -37,7 +37,7 @@ namespace Kafka {
  * Constructs a KafkaResponse object with parent \a parent.
  */
 KafkaResponse::KafkaResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new KafkaResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new KafkaResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ KafkaResponse::KafkaResponse(QObject * const parent)
  * implementation that inherits from KafkaResponsePrivate.
  */
 KafkaResponse::KafkaResponse(KafkaResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void KafkaResponse::parseFailure(QIODevice &response)
  * Constructs a KafkaResponsePrivate object with public implementation \a q.
  */
 KafkaResponsePrivate::KafkaResponsePrivate(
-    KafkaResponse * const q) : q_ptr(q)
+    KafkaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

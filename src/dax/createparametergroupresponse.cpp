@@ -59,7 +59,8 @@ CreateParameterGroupResponse::CreateParameterGroupResponse(
  */
 const CreateParameterGroupRequest * CreateParameterGroupResponse::request() const
 {
-    return static_cast<const CreateParameterGroupRequest *>(DaxResponse::request());
+    Q_D(const CreateParameterGroupResponse);
+    return static_cast<const CreateParameterGroupRequest *>(d->request);
 }
 
 /*!

@@ -103,7 +103,8 @@ GetInsightsResponse::GetInsightsResponse(
  */
 const GetInsightsRequest * GetInsightsResponse::request() const
 {
-    return static_cast<const GetInsightsRequest *>(SecurityHubResponse::request());
+    Q_D(const GetInsightsResponse);
+    return static_cast<const GetInsightsRequest *>(d->request);
 }
 
 /*!

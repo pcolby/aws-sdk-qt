@@ -123,16 +123,16 @@ FmsClient::FmsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-01-01"),
-    QStringLiteral("fms"),
-    QStringLiteral("Firewall Management Service"),
-    QStringLiteral("fms"),
-    parent), d_ptr(new FmsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new FmsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(FmsClient);
+    d->apiVersion = QStringLiteral("2018-01-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("fms");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Firewall Management Service");
+    d->serviceName = QStringLiteral("fms");
 }
 
 /*!
@@ -151,16 +151,16 @@ FmsClient::FmsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-01-01"),
-    QStringLiteral("fms"),
-    QStringLiteral("Firewall Management Service"),
-    QStringLiteral("fms"),
-    parent), d_ptr(new FmsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new FmsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(FmsClient);
+    d->apiVersion = QStringLiteral("2018-01-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("fms");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Firewall Management Service");
+    d->serviceName = QStringLiteral("fms");
 }
 
 /*!
@@ -577,9 +577,10 @@ UntagResourceResponse * FmsClient::untagResource(const UntagResourceRequest &req
 /*!
  * Constructs a FmsClientPrivate object with public implementation \a q.
  */
-FmsClientPrivate::FmsClientPrivate(FmsClient * const q) : q_ptr(q)
+FmsClientPrivate::FmsClientPrivate(FmsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace FMS

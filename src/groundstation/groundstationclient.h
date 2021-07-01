@@ -123,12 +123,6 @@ public slots:
     UpdateConfigResponse * updateConfig(const UpdateConfigRequest &request);
     UpdateMissionProfileResponse * updateMissionProfile(const UpdateMissionProfileRequest &request);
 
-protected:
-    /// @cond internal
-    GroundStationClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit GroundStationClient(GroundStationClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(GroundStationClient)
     Q_DISABLE_COPY(GroundStationClient)

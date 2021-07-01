@@ -240,7 +240,8 @@ ListActionExecutionsResponse::ListActionExecutionsResponse(
  */
 const ListActionExecutionsRequest * ListActionExecutionsResponse::request() const
 {
-    return static_cast<const ListActionExecutionsRequest *>(CodePipelineResponse::request());
+    Q_D(const ListActionExecutionsResponse);
+    return static_cast<const ListActionExecutionsRequest *>(d->request);
 }
 
 /*!

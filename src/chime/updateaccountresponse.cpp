@@ -98,7 +98,8 @@ UpdateAccountResponse::UpdateAccountResponse(
  */
 const UpdateAccountRequest * UpdateAccountResponse::request() const
 {
-    return static_cast<const UpdateAccountRequest *>(ChimeResponse::request());
+    Q_D(const UpdateAccountResponse);
+    return static_cast<const UpdateAccountRequest *>(d->request);
 }
 
 /*!

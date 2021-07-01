@@ -161,16 +161,16 @@ GlacierClient::GlacierClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2012-06-01"),
-    QStringLiteral("glacier"),
-    QStringLiteral("Amazon Glacier"),
-    QStringLiteral("glacier"),
-    parent), d_ptr(new GlacierClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GlacierClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GlacierClient);
+    d->apiVersion = QStringLiteral("2012-06-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("glacier");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Glacier");
+    d->serviceName = QStringLiteral("glacier");
 }
 
 /*!
@@ -189,16 +189,16 @@ GlacierClient::GlacierClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2012-06-01"),
-    QStringLiteral("glacier"),
-    QStringLiteral("Amazon Glacier"),
-    QStringLiteral("glacier"),
-    parent), d_ptr(new GlacierClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GlacierClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GlacierClient);
+    d->apiVersion = QStringLiteral("2012-06-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("glacier");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Glacier");
+    d->serviceName = QStringLiteral("glacier");
 }
 
 /*!
@@ -1372,9 +1372,10 @@ UploadMultipartPartResponse * GlacierClient::uploadMultipartPart(const UploadMul
 /*!
  * Constructs a GlacierClientPrivate object with public implementation \a q.
  */
-GlacierClientPrivate::GlacierClientPrivate(GlacierClient * const q) : q_ptr(q)
+GlacierClientPrivate::GlacierClientPrivate(GlacierClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Glacier

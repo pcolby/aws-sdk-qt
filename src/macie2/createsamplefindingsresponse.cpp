@@ -60,7 +60,8 @@ CreateSampleFindingsResponse::CreateSampleFindingsResponse(
  */
 const CreateSampleFindingsRequest * CreateSampleFindingsResponse::request() const
 {
-    return static_cast<const CreateSampleFindingsRequest *>(Macie2Response::request());
+    Q_D(const CreateSampleFindingsResponse);
+    return static_cast<const CreateSampleFindingsRequest *>(d->request);
 }
 
 /*!

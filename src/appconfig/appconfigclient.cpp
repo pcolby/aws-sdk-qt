@@ -175,16 +175,16 @@ AppConfigClient::AppConfigClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-10-09"),
-    QStringLiteral("appconfig"),
-    QStringLiteral("Amazon AppConfig"),
-    QStringLiteral("appconfig"),
-    parent), d_ptr(new AppConfigClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AppConfigClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AppConfigClient);
+    d->apiVersion = QStringLiteral("2019-10-09");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("appconfig");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon AppConfig");
+    d->serviceName = QStringLiteral("appconfig");
 }
 
 /*!
@@ -203,16 +203,16 @@ AppConfigClient::AppConfigClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-10-09"),
-    QStringLiteral("appconfig"),
-    QStringLiteral("Amazon AppConfig"),
-    QStringLiteral("appconfig"),
-    parent), d_ptr(new AppConfigClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AppConfigClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AppConfigClient);
+    d->apiVersion = QStringLiteral("2019-10-09");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("appconfig");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon AppConfig");
+    d->serviceName = QStringLiteral("appconfig");
 }
 
 /*!
@@ -704,9 +704,10 @@ ValidateConfigurationResponse * AppConfigClient::validateConfiguration(const Val
 /*!
  * Constructs a AppConfigClientPrivate object with public implementation \a q.
  */
-AppConfigClientPrivate::AppConfigClientPrivate(AppConfigClient * const q) : q_ptr(q)
+AppConfigClientPrivate::AppConfigClientPrivate(AppConfigClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AppConfig

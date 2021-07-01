@@ -20,12 +20,15 @@
 #ifndef QTAWS_PROTONREQUEST_P_H
 #define QTAWS_PROTONREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "protonrequest.h"
+
 namespace QtAws {
 namespace Proton {
 
 class ProtonRequest;
 
-class ProtonRequestPrivate {
+class ProtonRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ProtonRequest::Action action; ///< Proton action to be performed.
@@ -36,9 +39,6 @@ public:
     ProtonRequestPrivate(const ProtonRequestPrivate &other, ProtonRequest * const q);
 
     static QString toString(const ProtonRequest::Action &action);
-
-protected:
-    ProtonRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ProtonRequest)

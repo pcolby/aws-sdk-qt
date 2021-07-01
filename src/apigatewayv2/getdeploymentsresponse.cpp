@@ -56,7 +56,8 @@ GetDeploymentsResponse::GetDeploymentsResponse(
  */
 const GetDeploymentsRequest * GetDeploymentsResponse::request() const
 {
-    return static_cast<const GetDeploymentsRequest *>(ApiGatewayV2Response::request());
+    Q_D(const GetDeploymentsResponse);
+    return static_cast<const GetDeploymentsRequest *>(d->request);
 }
 
 /*!

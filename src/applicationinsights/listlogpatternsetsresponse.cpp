@@ -68,7 +68,8 @@ ListLogPatternSetsResponse::ListLogPatternSetsResponse(
  */
 const ListLogPatternSetsRequest * ListLogPatternSetsResponse::request() const
 {
-    return static_cast<const ListLogPatternSetsRequest *>(ApplicationInsightsResponse::request());
+    Q_D(const ListLogPatternSetsResponse);
+    return static_cast<const ListLogPatternSetsRequest *>(d->request);
 }
 
 /*!

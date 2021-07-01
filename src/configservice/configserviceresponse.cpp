@@ -37,7 +37,7 @@ namespace ConfigService {
  * Constructs a ConfigServiceResponse object with parent \a parent.
  */
 ConfigServiceResponse::ConfigServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ConfigServiceResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ConfigServiceResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ConfigServiceResponse::ConfigServiceResponse(QObject * const parent)
  * implementation that inherits from ConfigServiceResponsePrivate.
  */
 ConfigServiceResponse::ConfigServiceResponse(ConfigServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ConfigServiceResponse::parseFailure(QIODevice &response)
  * Constructs a ConfigServiceResponsePrivate object with public implementation \a q.
  */
 ConfigServiceResponsePrivate::ConfigServiceResponsePrivate(
-    ConfigServiceResponse * const q) : q_ptr(q)
+    ConfigServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

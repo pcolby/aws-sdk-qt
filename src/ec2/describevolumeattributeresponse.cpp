@@ -87,7 +87,8 @@ DescribeVolumeAttributeResponse::DescribeVolumeAttributeResponse(
  */
 const DescribeVolumeAttributeRequest * DescribeVolumeAttributeResponse::request() const
 {
-    return static_cast<const DescribeVolumeAttributeRequest *>(Ec2Response::request());
+    Q_D(const DescribeVolumeAttributeResponse);
+    return static_cast<const DescribeVolumeAttributeRequest *>(d->request);
 }
 
 /*!

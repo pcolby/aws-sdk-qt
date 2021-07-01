@@ -73,7 +73,8 @@ DeletePreparedStatementResponse::DeletePreparedStatementResponse(
  */
 const DeletePreparedStatementRequest * DeletePreparedStatementResponse::request() const
 {
-    return static_cast<const DeletePreparedStatementRequest *>(AthenaResponse::request());
+    Q_D(const DeletePreparedStatementResponse);
+    return static_cast<const DeletePreparedStatementRequest *>(d->request);
 }
 
 /*!

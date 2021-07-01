@@ -62,7 +62,8 @@ DeleteRoomSkillParameterResponse::DeleteRoomSkillParameterResponse(
  */
 const DeleteRoomSkillParameterRequest * DeleteRoomSkillParameterResponse::request() const
 {
-    return static_cast<const DeleteRoomSkillParameterRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const DeleteRoomSkillParameterResponse);
+    return static_cast<const DeleteRoomSkillParameterRequest *>(d->request);
 }
 
 /*!

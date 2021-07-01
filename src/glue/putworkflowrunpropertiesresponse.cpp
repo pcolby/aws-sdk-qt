@@ -58,7 +58,8 @@ PutWorkflowRunPropertiesResponse::PutWorkflowRunPropertiesResponse(
  */
 const PutWorkflowRunPropertiesRequest * PutWorkflowRunPropertiesResponse::request() const
 {
-    return static_cast<const PutWorkflowRunPropertiesRequest *>(GlueResponse::request());
+    Q_D(const PutWorkflowRunPropertiesResponse);
+    return static_cast<const PutWorkflowRunPropertiesRequest *>(d->request);
 }
 
 /*!

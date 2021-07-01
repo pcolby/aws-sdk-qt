@@ -90,7 +90,8 @@ DescribeLoadBalancersResponse::DescribeLoadBalancersResponse(
  */
 const DescribeLoadBalancersRequest * DescribeLoadBalancersResponse::request() const
 {
-    return static_cast<const DescribeLoadBalancersRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const DescribeLoadBalancersResponse);
+    return static_cast<const DescribeLoadBalancersRequest *>(d->request);
 }
 
 /*!

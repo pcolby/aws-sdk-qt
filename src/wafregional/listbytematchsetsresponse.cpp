@@ -78,7 +78,8 @@ ListByteMatchSetsResponse::ListByteMatchSetsResponse(
  */
 const ListByteMatchSetsRequest * ListByteMatchSetsResponse::request() const
 {
-    return static_cast<const ListByteMatchSetsRequest *>(WAFRegionalResponse::request());
+    Q_D(const ListByteMatchSetsResponse);
+    return static_cast<const ListByteMatchSetsRequest *>(d->request);
 }
 
 /*!

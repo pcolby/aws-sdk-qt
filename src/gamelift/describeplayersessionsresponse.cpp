@@ -115,7 +115,8 @@ DescribePlayerSessionsResponse::DescribePlayerSessionsResponse(
  */
 const DescribePlayerSessionsRequest * DescribePlayerSessionsResponse::request() const
 {
-    return static_cast<const DescribePlayerSessionsRequest *>(GameLiftResponse::request());
+    Q_D(const DescribePlayerSessionsResponse);
+    return static_cast<const DescribePlayerSessionsRequest *>(d->request);
 }
 
 /*!

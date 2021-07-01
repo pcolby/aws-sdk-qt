@@ -63,7 +63,8 @@ CreateTableResponse::CreateTableResponse(
  */
 const CreateTableRequest * CreateTableResponse::request() const
 {
-    return static_cast<const CreateTableRequest *>(TimestreamWriteResponse::request());
+    Q_D(const CreateTableResponse);
+    return static_cast<const CreateTableRequest *>(d->request);
 }
 
 /*!

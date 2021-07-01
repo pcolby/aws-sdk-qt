@@ -55,7 +55,8 @@ CreateOriginEndpointResponse::CreateOriginEndpointResponse(
  */
 const CreateOriginEndpointRequest * CreateOriginEndpointResponse::request() const
 {
-    return static_cast<const CreateOriginEndpointRequest *>(MediaPackageResponse::request());
+    Q_D(const CreateOriginEndpointResponse);
+    return static_cast<const CreateOriginEndpointRequest *>(d->request);
 }
 
 /*!

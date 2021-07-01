@@ -20,20 +20,19 @@
 #ifndef QTAWS_COSTEXPLORERCLIENT_P_H
 #define QTAWS_COSTEXPLORERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CostExplorer {
 
 class CostExplorerClient;
 
-class CostExplorerClientPrivate {
+class CostExplorerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CostExplorerClientPrivate(CostExplorerClient * const q);
-
-protected:
-    CostExplorerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CostExplorerClient)

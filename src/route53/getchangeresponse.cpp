@@ -56,7 +56,8 @@ GetChangeResponse::GetChangeResponse(
  */
 const GetChangeRequest * GetChangeResponse::request() const
 {
-    return static_cast<const GetChangeRequest *>(Route53Response::request());
+    Q_D(const GetChangeResponse);
+    return static_cast<const GetChangeRequest *>(d->request);
 }
 
 /*!

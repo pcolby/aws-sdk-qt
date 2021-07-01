@@ -105,7 +105,8 @@ UpdateApplicationResponse::UpdateApplicationResponse(
  */
 const UpdateApplicationRequest * UpdateApplicationResponse::request() const
 {
-    return static_cast<const UpdateApplicationRequest *>(AppConfigResponse::request());
+    Q_D(const UpdateApplicationResponse);
+    return static_cast<const UpdateApplicationRequest *>(d->request);
 }
 
 /*!

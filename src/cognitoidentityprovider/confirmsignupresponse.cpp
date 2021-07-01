@@ -66,7 +66,8 @@ ConfirmSignUpResponse::ConfirmSignUpResponse(
  */
 const ConfirmSignUpRequest * ConfirmSignUpResponse::request() const
 {
-    return static_cast<const ConfirmSignUpRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const ConfirmSignUpResponse);
+    return static_cast<const ConfirmSignUpRequest *>(d->request);
 }
 
 /*!

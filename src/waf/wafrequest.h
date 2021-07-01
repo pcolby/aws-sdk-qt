@@ -135,8 +135,7 @@ public:
 
 protected:
     /// @cond internal
-    WafRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit WafRequest(WafRequestPrivate * const d);
+    WafRequest(WafRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

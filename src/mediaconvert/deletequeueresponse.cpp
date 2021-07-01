@@ -55,7 +55,8 @@ DeleteQueueResponse::DeleteQueueResponse(
  */
 const DeleteQueueRequest * DeleteQueueResponse::request() const
 {
-    return static_cast<const DeleteQueueRequest *>(MediaConvertResponse::request());
+    Q_D(const DeleteQueueResponse);
+    return static_cast<const DeleteQueueRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ SetSMSAttributesResponse::SetSMSAttributesResponse(
  */
 const SetSMSAttributesRequest * SetSMSAttributesResponse::request() const
 {
-    return static_cast<const SetSMSAttributesRequest *>(SnsResponse::request());
+    Q_D(const SetSMSAttributesResponse);
+    return static_cast<const SetSMSAttributesRequest *>(d->request);
 }
 
 /*!

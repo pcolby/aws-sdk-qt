@@ -72,7 +72,8 @@ StopDBClusterResponse::StopDBClusterResponse(
  */
 const StopDBClusterRequest * StopDBClusterResponse::request() const
 {
-    return static_cast<const StopDBClusterRequest *>(NeptuneResponse::request());
+    Q_D(const StopDBClusterResponse);
+    return static_cast<const StopDBClusterRequest *>(d->request);
 }
 
 /*!

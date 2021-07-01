@@ -56,7 +56,8 @@ TransferDomainToAnotherAwsAccountResponse::TransferDomainToAnotherAwsAccountResp
  */
 const TransferDomainToAnotherAwsAccountRequest * TransferDomainToAnotherAwsAccountResponse::request() const
 {
-    return static_cast<const TransferDomainToAnotherAwsAccountRequest *>(Route53DomainsResponse::request());
+    Q_D(const TransferDomainToAnotherAwsAccountResponse);
+    return static_cast<const TransferDomainToAnotherAwsAccountRequest *>(d->request);
 }
 
 /*!

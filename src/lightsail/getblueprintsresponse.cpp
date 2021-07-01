@@ -74,7 +74,8 @@ GetBlueprintsResponse::GetBlueprintsResponse(
  */
 const GetBlueprintsRequest * GetBlueprintsResponse::request() const
 {
-    return static_cast<const GetBlueprintsRequest *>(LightsailResponse::request());
+    Q_D(const GetBlueprintsResponse);
+    return static_cast<const GetBlueprintsRequest *>(d->request);
 }
 
 /*!

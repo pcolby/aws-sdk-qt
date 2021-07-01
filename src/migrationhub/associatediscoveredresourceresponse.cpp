@@ -62,7 +62,8 @@ AssociateDiscoveredResourceResponse::AssociateDiscoveredResourceResponse(
  */
 const AssociateDiscoveredResourceRequest * AssociateDiscoveredResourceResponse::request() const
 {
-    return static_cast<const AssociateDiscoveredResourceRequest *>(MigrationHubResponse::request());
+    Q_D(const AssociateDiscoveredResourceResponse);
+    return static_cast<const AssociateDiscoveredResourceRequest *>(d->request);
 }
 
 /*!

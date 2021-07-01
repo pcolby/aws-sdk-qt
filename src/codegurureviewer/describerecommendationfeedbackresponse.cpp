@@ -72,7 +72,8 @@ DescribeRecommendationFeedbackResponse::DescribeRecommendationFeedbackResponse(
  */
 const DescribeRecommendationFeedbackRequest * DescribeRecommendationFeedbackResponse::request() const
 {
-    return static_cast<const DescribeRecommendationFeedbackRequest *>(CodeGuruReviewerResponse::request());
+    Q_D(const DescribeRecommendationFeedbackResponse);
+    return static_cast<const DescribeRecommendationFeedbackRequest *>(d->request);
 }
 
 /*!

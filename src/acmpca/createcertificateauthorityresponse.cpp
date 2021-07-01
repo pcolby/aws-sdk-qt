@@ -69,7 +69,8 @@ CreateCertificateAuthorityResponse::CreateCertificateAuthorityResponse(
  */
 const CreateCertificateAuthorityRequest * CreateCertificateAuthorityResponse::request() const
 {
-    return static_cast<const CreateCertificateAuthorityRequest *>(AcmpcaResponse::request());
+    Q_D(const CreateCertificateAuthorityResponse);
+    return static_cast<const CreateCertificateAuthorityRequest *>(d->request);
 }
 
 /*!

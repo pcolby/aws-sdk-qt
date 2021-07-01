@@ -55,7 +55,8 @@ ListPagesByEngagementResponse::ListPagesByEngagementResponse(
  */
 const ListPagesByEngagementRequest * ListPagesByEngagementResponse::request() const
 {
-    return static_cast<const ListPagesByEngagementRequest *>(SSMContactsResponse::request());
+    Q_D(const ListPagesByEngagementResponse);
+    return static_cast<const ListPagesByEngagementRequest *>(d->request);
 }
 
 /*!

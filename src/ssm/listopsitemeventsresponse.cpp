@@ -98,7 +98,8 @@ ListOpsItemEventsResponse::ListOpsItemEventsResponse(
  */
 const ListOpsItemEventsRequest * ListOpsItemEventsResponse::request() const
 {
-    return static_cast<const ListOpsItemEventsRequest *>(SsmResponse::request());
+    Q_D(const ListOpsItemEventsResponse);
+    return static_cast<const ListOpsItemEventsRequest *>(d->request);
 }
 
 /*!

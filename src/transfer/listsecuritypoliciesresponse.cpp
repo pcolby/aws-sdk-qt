@@ -62,7 +62,8 @@ ListSecurityPoliciesResponse::ListSecurityPoliciesResponse(
  */
 const ListSecurityPoliciesRequest * ListSecurityPoliciesResponse::request() const
 {
-    return static_cast<const ListSecurityPoliciesRequest *>(TransferResponse::request());
+    Q_D(const ListSecurityPoliciesResponse);
+    return static_cast<const ListSecurityPoliciesRequest *>(d->request);
 }
 
 /*!

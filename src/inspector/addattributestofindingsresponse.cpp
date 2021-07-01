@@ -60,7 +60,8 @@ AddAttributesToFindingsResponse::AddAttributesToFindingsResponse(
  */
 const AddAttributesToFindingsRequest * AddAttributesToFindingsResponse::request() const
 {
-    return static_cast<const AddAttributesToFindingsRequest *>(InspectorResponse::request());
+    Q_D(const AddAttributesToFindingsResponse);
+    return static_cast<const AddAttributesToFindingsRequest *>(d->request);
 }
 
 /*!

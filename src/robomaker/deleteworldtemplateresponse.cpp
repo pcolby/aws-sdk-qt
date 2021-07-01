@@ -56,7 +56,8 @@ DeleteWorldTemplateResponse::DeleteWorldTemplateResponse(
  */
 const DeleteWorldTemplateRequest * DeleteWorldTemplateResponse::request() const
 {
-    return static_cast<const DeleteWorldTemplateRequest *>(RoboMakerResponse::request());
+    Q_D(const DeleteWorldTemplateResponse);
+    return static_cast<const DeleteWorldTemplateRequest *>(d->request);
 }
 
 /*!

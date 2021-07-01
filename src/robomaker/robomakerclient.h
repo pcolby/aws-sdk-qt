@@ -219,12 +219,6 @@ public slots:
     UpdateSimulationApplicationResponse * updateSimulationApplication(const UpdateSimulationApplicationRequest &request);
     UpdateWorldTemplateResponse * updateWorldTemplate(const UpdateWorldTemplateRequest &request);
 
-protected:
-    /// @cond internal
-    RoboMakerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit RoboMakerClient(RoboMakerClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(RoboMakerClient)
     Q_DISABLE_COPY(RoboMakerClient)

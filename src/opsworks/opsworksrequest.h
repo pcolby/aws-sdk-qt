@@ -132,8 +132,7 @@ public:
 
 protected:
     /// @cond internal
-    OpsWorksRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit OpsWorksRequest(OpsWorksRequestPrivate * const d);
+    OpsWorksRequest(OpsWorksRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

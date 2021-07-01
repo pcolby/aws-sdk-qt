@@ -66,7 +66,8 @@ DescribeReplicationSubnetGroupsResponse::DescribeReplicationSubnetGroupsResponse
  */
 const DescribeReplicationSubnetGroupsRequest * DescribeReplicationSubnetGroupsResponse::request() const
 {
-    return static_cast<const DescribeReplicationSubnetGroupsRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const DescribeReplicationSubnetGroupsResponse);
+    return static_cast<const DescribeReplicationSubnetGroupsRequest *>(d->request);
 }
 
 /*!

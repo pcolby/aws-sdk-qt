@@ -58,7 +58,8 @@ AddInstanceGroupsResponse::AddInstanceGroupsResponse(
  */
 const AddInstanceGroupsRequest * AddInstanceGroupsResponse::request() const
 {
-    return static_cast<const AddInstanceGroupsRequest *>(EmrResponse::request());
+    Q_D(const AddInstanceGroupsResponse);
+    return static_cast<const AddInstanceGroupsRequest *>(d->request);
 }
 
 /*!

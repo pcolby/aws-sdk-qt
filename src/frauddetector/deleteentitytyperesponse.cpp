@@ -58,7 +58,8 @@ DeleteEntityTypeResponse::DeleteEntityTypeResponse(
  */
 const DeleteEntityTypeRequest * DeleteEntityTypeResponse::request() const
 {
-    return static_cast<const DeleteEntityTypeRequest *>(FraudDetectorResponse::request());
+    Q_D(const DeleteEntityTypeResponse);
+    return static_cast<const DeleteEntityTypeRequest *>(d->request);
 }
 
 /*!

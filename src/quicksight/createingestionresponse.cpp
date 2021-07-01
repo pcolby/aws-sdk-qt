@@ -60,7 +60,8 @@ CreateIngestionResponse::CreateIngestionResponse(
  */
 const CreateIngestionRequest * CreateIngestionResponse::request() const
 {
-    return static_cast<const CreateIngestionRequest *>(QuickSightResponse::request());
+    Q_D(const CreateIngestionResponse);
+    return static_cast<const CreateIngestionRequest *>(d->request);
 }
 
 /*!

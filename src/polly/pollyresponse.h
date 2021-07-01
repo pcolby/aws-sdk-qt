@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    PollyResponsePrivate * const d_ptr; ///< Internal d-pointer.
     PollyResponse(PollyResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

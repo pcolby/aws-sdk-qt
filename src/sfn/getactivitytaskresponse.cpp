@@ -74,7 +74,8 @@ GetActivityTaskResponse::GetActivityTaskResponse(
  */
 const GetActivityTaskRequest * GetActivityTaskResponse::request() const
 {
-    return static_cast<const GetActivityTaskRequest *>(SfnResponse::request());
+    Q_D(const GetActivityTaskResponse);
+    return static_cast<const GetActivityTaskRequest *>(d->request);
 }
 
 /*!

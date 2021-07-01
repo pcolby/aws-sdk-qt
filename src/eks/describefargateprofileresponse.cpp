@@ -65,7 +65,8 @@ DescribeFargateProfileResponse::DescribeFargateProfileResponse(
  */
 const DescribeFargateProfileRequest * DescribeFargateProfileResponse::request() const
 {
-    return static_cast<const DescribeFargateProfileRequest *>(EksResponse::request());
+    Q_D(const DescribeFargateProfileResponse);
+    return static_cast<const DescribeFargateProfileRequest *>(d->request);
 }
 
 /*!

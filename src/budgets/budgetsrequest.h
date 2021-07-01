@@ -80,8 +80,7 @@ public:
 
 protected:
     /// @cond internal
-    BudgetsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit BudgetsRequest(BudgetsRequestPrivate * const d);
+    BudgetsRequest(BudgetsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

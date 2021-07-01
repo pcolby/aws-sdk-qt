@@ -55,7 +55,8 @@ RevokeFlowEntitlementResponse::RevokeFlowEntitlementResponse(
  */
 const RevokeFlowEntitlementRequest * RevokeFlowEntitlementResponse::request() const
 {
-    return static_cast<const RevokeFlowEntitlementRequest *>(MediaConnectResponse::request());
+    Q_D(const RevokeFlowEntitlementResponse);
+    return static_cast<const RevokeFlowEntitlementRequest *>(d->request);
 }
 
 /*!

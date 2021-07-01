@@ -73,7 +73,8 @@ GetFindingsStatisticsResponse::GetFindingsStatisticsResponse(
  */
 const GetFindingsStatisticsRequest * GetFindingsStatisticsResponse::request() const
 {
-    return static_cast<const GetFindingsStatisticsRequest *>(GuardDutyResponse::request());
+    Q_D(const GetFindingsStatisticsResponse);
+    return static_cast<const GetFindingsStatisticsRequest *>(d->request);
 }
 
 /*!

@@ -83,7 +83,8 @@ AttachLoadBalancerToSubnetsResponse::AttachLoadBalancerToSubnetsResponse(
  */
 const AttachLoadBalancerToSubnetsRequest * AttachLoadBalancerToSubnetsResponse::request() const
 {
-    return static_cast<const AttachLoadBalancerToSubnetsRequest *>(ElasticLoadBalancingResponse::request());
+    Q_D(const AttachLoadBalancerToSubnetsResponse);
+    return static_cast<const AttachLoadBalancerToSubnetsRequest *>(d->request);
 }
 
 /*!

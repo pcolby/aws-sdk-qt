@@ -55,7 +55,8 @@ DescribeEndpointsResponse::DescribeEndpointsResponse(
  */
 const DescribeEndpointsRequest * DescribeEndpointsResponse::request() const
 {
-    return static_cast<const DescribeEndpointsRequest *>(MediaConvertResponse::request());
+    Q_D(const DescribeEndpointsResponse);
+    return static_cast<const DescribeEndpointsRequest *>(d->request);
 }
 
 /*!

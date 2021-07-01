@@ -37,7 +37,7 @@ namespace PrometheusService {
  * Constructs a PrometheusServiceResponse object with parent \a parent.
  */
 PrometheusServiceResponse::PrometheusServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new PrometheusServiceResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new PrometheusServiceResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ PrometheusServiceResponse::PrometheusServiceResponse(QObject * const parent)
  * implementation that inherits from PrometheusServiceResponsePrivate.
  */
 PrometheusServiceResponse::PrometheusServiceResponse(PrometheusServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void PrometheusServiceResponse::parseFailure(QIODevice &response)
  * Constructs a PrometheusServiceResponsePrivate object with public implementation \a q.
  */
 PrometheusServiceResponsePrivate::PrometheusServiceResponsePrivate(
-    PrometheusServiceResponse * const q) : q_ptr(q)
+    PrometheusServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

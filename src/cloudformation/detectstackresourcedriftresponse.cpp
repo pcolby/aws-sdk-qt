@@ -77,7 +77,8 @@ DetectStackResourceDriftResponse::DetectStackResourceDriftResponse(
  */
 const DetectStackResourceDriftRequest * DetectStackResourceDriftResponse::request() const
 {
-    return static_cast<const DetectStackResourceDriftRequest *>(CloudFormationResponse::request());
+    Q_D(const DetectStackResourceDriftResponse);
+    return static_cast<const DetectStackResourceDriftRequest *>(d->request);
 }
 
 /*!

@@ -89,7 +89,8 @@ DeregisterFromWorkMailResponse::DeregisterFromWorkMailResponse(
  */
 const DeregisterFromWorkMailRequest * DeregisterFromWorkMailResponse::request() const
 {
-    return static_cast<const DeregisterFromWorkMailRequest *>(WorkMailResponse::request());
+    Q_D(const DeregisterFromWorkMailResponse);
+    return static_cast<const DeregisterFromWorkMailRequest *>(d->request);
 }
 
 /*!

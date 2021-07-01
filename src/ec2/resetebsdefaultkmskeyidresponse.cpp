@@ -87,7 +87,8 @@ ResetEbsDefaultKmsKeyIdResponse::ResetEbsDefaultKmsKeyIdResponse(
  */
 const ResetEbsDefaultKmsKeyIdRequest * ResetEbsDefaultKmsKeyIdResponse::request() const
 {
-    return static_cast<const ResetEbsDefaultKmsKeyIdRequest *>(Ec2Response::request());
+    Q_D(const ResetEbsDefaultKmsKeyIdResponse);
+    return static_cast<const ResetEbsDefaultKmsKeyIdRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ CreateDatastoreResponse::CreateDatastoreResponse(
  */
 const CreateDatastoreRequest * CreateDatastoreResponse::request() const
 {
-    return static_cast<const CreateDatastoreRequest *>(IoTAnalyticsResponse::request());
+    Q_D(const CreateDatastoreResponse);
+    return static_cast<const CreateDatastoreRequest *>(d->request);
 }
 
 /*!

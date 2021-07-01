@@ -58,7 +58,8 @@ PutRecordsResponse::PutRecordsResponse(
  */
 const PutRecordsRequest * PutRecordsResponse::request() const
 {
-    return static_cast<const PutRecordsRequest *>(KinesisResponse::request());
+    Q_D(const PutRecordsResponse);
+    return static_cast<const PutRecordsRequest *>(d->request);
 }
 
 /*!

@@ -115,7 +115,8 @@ CreateVpcPeeringConnectionResponse::CreateVpcPeeringConnectionResponse(
  */
 const CreateVpcPeeringConnectionRequest * CreateVpcPeeringConnectionResponse::request() const
 {
-    return static_cast<const CreateVpcPeeringConnectionRequest *>(GameLiftResponse::request());
+    Q_D(const CreateVpcPeeringConnectionResponse);
+    return static_cast<const CreateVpcPeeringConnectionRequest *>(d->request);
 }
 
 /*!

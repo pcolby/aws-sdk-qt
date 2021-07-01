@@ -87,7 +87,8 @@ DescribePublicIpv4PoolsResponse::DescribePublicIpv4PoolsResponse(
  */
 const DescribePublicIpv4PoolsRequest * DescribePublicIpv4PoolsResponse::request() const
 {
-    return static_cast<const DescribePublicIpv4PoolsRequest *>(Ec2Response::request());
+    Q_D(const DescribePublicIpv4PoolsResponse);
+    return static_cast<const DescribePublicIpv4PoolsRequest *>(d->request);
 }
 
 /*!

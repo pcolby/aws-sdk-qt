@@ -73,7 +73,7 @@ namespace Schemas {
  * Constructs a SchemasRequest object for Schemas \a action.
  */
 SchemasRequest::SchemasRequest(const Action action)
-    : d_ptr(new SchemasRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SchemasRequestPrivate(action, this))
 {
 
 }
@@ -82,8 +82,7 @@ SchemasRequest::SchemasRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SchemasRequest::SchemasRequest(const SchemasRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new SchemasRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SchemasRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -106,7 +105,7 @@ SchemasRequest& SchemasRequest::operator=(const SchemasRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SchemasRequestPrivate.
  */
-SchemasRequest::SchemasRequest(SchemasRequestPrivate * const d) : d_ptr(d)
+SchemasRequest::SchemasRequest(SchemasRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -275,7 +274,7 @@ QNetworkRequest SchemasRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SchemasRequestPrivate::SchemasRequestPrivate(const SchemasRequest::Action action, SchemasRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -290,8 +289,8 @@ SchemasRequestPrivate::SchemasRequestPrivate(const SchemasRequest::Action action
  */
 SchemasRequestPrivate::SchemasRequestPrivate(const SchemasRequestPrivate &other,
                                      SchemasRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

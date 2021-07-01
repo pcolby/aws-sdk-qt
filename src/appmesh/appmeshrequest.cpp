@@ -80,7 +80,7 @@ namespace AppMesh {
  * Constructs a AppMeshRequest object for AppMesh \a action.
  */
 AppMeshRequest::AppMeshRequest(const Action action)
-    : d_ptr(new AppMeshRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new AppMeshRequestPrivate(action, this))
 {
 
 }
@@ -89,8 +89,7 @@ AppMeshRequest::AppMeshRequest(const Action action)
  * Constructs a copy of \a other.
  */
 AppMeshRequest::AppMeshRequest(const AppMeshRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new AppMeshRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new AppMeshRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -113,7 +112,7 @@ AppMeshRequest& AppMeshRequest::operator=(const AppMeshRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from AppMeshRequestPrivate.
  */
-AppMeshRequest::AppMeshRequest(AppMeshRequestPrivate * const d) : d_ptr(d)
+AppMeshRequest::AppMeshRequest(AppMeshRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -282,7 +281,7 @@ QNetworkRequest AppMeshRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 AppMeshRequestPrivate::AppMeshRequestPrivate(const AppMeshRequest::Action action, AppMeshRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -297,8 +296,8 @@ AppMeshRequestPrivate::AppMeshRequestPrivate(const AppMeshRequest::Action action
  */
 AppMeshRequestPrivate::AppMeshRequestPrivate(const AppMeshRequestPrivate &other,
                                      AppMeshRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -55,7 +55,8 @@ DeleteChannelResponse::DeleteChannelResponse(
  */
 const DeleteChannelRequest * DeleteChannelResponse::request() const
 {
-    return static_cast<const DeleteChannelRequest *>(MediaLiveResponse::request());
+    Q_D(const DeleteChannelResponse);
+    return static_cast<const DeleteChannelRequest *>(d->request);
 }
 
 /*!

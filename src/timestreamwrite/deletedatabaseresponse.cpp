@@ -63,7 +63,8 @@ DeleteDatabaseResponse::DeleteDatabaseResponse(
  */
 const DeleteDatabaseRequest * DeleteDatabaseResponse::request() const
 {
-    return static_cast<const DeleteDatabaseRequest *>(TimestreamWriteResponse::request());
+    Q_D(const DeleteDatabaseResponse);
+    return static_cast<const DeleteDatabaseRequest *>(d->request);
 }
 
 /*!

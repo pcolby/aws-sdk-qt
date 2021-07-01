@@ -66,7 +66,8 @@ DeleteDomainResponse::DeleteDomainResponse(
  */
 const DeleteDomainRequest * DeleteDomainResponse::request() const
 {
-    return static_cast<const DeleteDomainRequest *>(CloudSearchResponse::request());
+    Q_D(const DeleteDomainResponse);
+    return static_cast<const DeleteDomainRequest *>(d->request);
 }
 
 /*!

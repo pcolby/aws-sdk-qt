@@ -58,7 +58,8 @@ RegisterStreamConsumerResponse::RegisterStreamConsumerResponse(
  */
 const RegisterStreamConsumerRequest * RegisterStreamConsumerResponse::request() const
 {
-    return static_cast<const RegisterStreamConsumerRequest *>(KinesisResponse::request());
+    Q_D(const RegisterStreamConsumerResponse);
+    return static_cast<const RegisterStreamConsumerRequest *>(d->request);
 }
 
 /*!

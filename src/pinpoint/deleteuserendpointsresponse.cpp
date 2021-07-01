@@ -56,7 +56,8 @@ DeleteUserEndpointsResponse::DeleteUserEndpointsResponse(
  */
 const DeleteUserEndpointsRequest * DeleteUserEndpointsResponse::request() const
 {
-    return static_cast<const DeleteUserEndpointsRequest *>(PinpointResponse::request());
+    Q_D(const DeleteUserEndpointsResponse);
+    return static_cast<const DeleteUserEndpointsRequest *>(d->request);
 }
 
 /*!

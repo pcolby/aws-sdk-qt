@@ -61,7 +61,8 @@ DescribeEmergencyContactSettingsResponse::DescribeEmergencyContactSettingsRespon
  */
 const DescribeEmergencyContactSettingsRequest * DescribeEmergencyContactSettingsResponse::request() const
 {
-    return static_cast<const DescribeEmergencyContactSettingsRequest *>(ShieldResponse::request());
+    Q_D(const DescribeEmergencyContactSettingsResponse);
+    return static_cast<const DescribeEmergencyContactSettingsRequest *>(d->request);
 }
 
 /*!

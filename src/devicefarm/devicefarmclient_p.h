@@ -20,20 +20,19 @@
 #ifndef QTAWS_DEVICEFARMCLIENT_P_H
 #define QTAWS_DEVICEFARMCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace DeviceFarm {
 
 class DeviceFarmClient;
 
-class DeviceFarmClientPrivate {
+class DeviceFarmClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit DeviceFarmClientPrivate(DeviceFarmClient * const q);
-
-protected:
-    DeviceFarmClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DeviceFarmClient)

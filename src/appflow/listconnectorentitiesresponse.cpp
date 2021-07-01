@@ -100,7 +100,8 @@ ListConnectorEntitiesResponse::ListConnectorEntitiesResponse(
  */
 const ListConnectorEntitiesRequest * ListConnectorEntitiesResponse::request() const
 {
-    return static_cast<const ListConnectorEntitiesRequest *>(AppflowResponse::request());
+    Q_D(const ListConnectorEntitiesResponse);
+    return static_cast<const ListConnectorEntitiesRequest *>(d->request);
 }
 
 /*!

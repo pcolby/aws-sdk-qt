@@ -71,8 +71,7 @@ public:
 
 protected:
     /// @cond internal
-    Cloud9RequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit Cloud9Request(Cloud9RequestPrivate * const d);
+    Cloud9Request(Cloud9RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -87,7 +87,8 @@ ModifySpotFleetRequestResponse::ModifySpotFleetRequestResponse(
  */
 const ModifySpotFleetRequestRequest * ModifySpotFleetRequestResponse::request() const
 {
-    return static_cast<const ModifySpotFleetRequestRequest *>(Ec2Response::request());
+    Q_D(const ModifySpotFleetRequestResponse);
+    return static_cast<const ModifySpotFleetRequestRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ DescribeNetworkAclsResponse::DescribeNetworkAclsResponse(
  */
 const DescribeNetworkAclsRequest * DescribeNetworkAclsResponse::request() const
 {
-    return static_cast<const DescribeNetworkAclsRequest *>(Ec2Response::request());
+    Q_D(const DescribeNetworkAclsResponse);
+    return static_cast<const DescribeNetworkAclsRequest *>(d->request);
 }
 
 /*!

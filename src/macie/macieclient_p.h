@@ -20,20 +20,19 @@
 #ifndef QTAWS_MACIECLIENT_P_H
 #define QTAWS_MACIECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Macie {
 
 class MacieClient;
 
-class MacieClientPrivate {
+class MacieClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MacieClientPrivate(MacieClient * const q);
-
-protected:
-    MacieClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MacieClient)

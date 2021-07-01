@@ -93,16 +93,16 @@ PiClient::PiClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-02-27"),
-    QStringLiteral("pi"),
-    QStringLiteral("AWS Performance Insights"),
-    QStringLiteral("pi"),
-    parent), d_ptr(new PiClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new PiClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(PiClient);
+    d->apiVersion = QStringLiteral("2018-02-27");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("pi");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Performance Insights");
+    d->serviceName = QStringLiteral("pi");
 }
 
 /*!
@@ -121,16 +121,16 @@ PiClient::PiClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-02-27"),
-    QStringLiteral("pi"),
-    QStringLiteral("AWS Performance Insights"),
-    QStringLiteral("pi"),
-    parent), d_ptr(new PiClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new PiClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(PiClient);
+    d->apiVersion = QStringLiteral("2018-02-27");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("pi");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Performance Insights");
+    d->serviceName = QStringLiteral("pi");
 }
 
 /*!
@@ -198,9 +198,10 @@ GetResourceMetricsResponse * PiClient::getResourceMetrics(const GetResourceMetri
 /*!
  * Constructs a PiClientPrivate object with public implementation \a q.
  */
-PiClientPrivate::PiClientPrivate(PiClient * const q) : q_ptr(q)
+PiClientPrivate::PiClientPrivate(PiClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace PI

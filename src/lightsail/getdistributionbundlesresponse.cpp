@@ -74,7 +74,8 @@ GetDistributionBundlesResponse::GetDistributionBundlesResponse(
  */
 const GetDistributionBundlesRequest * GetDistributionBundlesResponse::request() const
 {
-    return static_cast<const GetDistributionBundlesRequest *>(LightsailResponse::request());
+    Q_D(const GetDistributionBundlesResponse);
+    return static_cast<const GetDistributionBundlesRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ GetQueueResponse::GetQueueResponse(
  */
 const GetQueueRequest * GetQueueResponse::request() const
 {
-    return static_cast<const GetQueueRequest *>(MediaConvertResponse::request());
+    Q_D(const GetQueueResponse);
+    return static_cast<const GetQueueRequest *>(d->request);
 }
 
 /*!

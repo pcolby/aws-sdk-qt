@@ -58,7 +58,8 @@ GetStatusResponse::GetStatusResponse(
  */
 const GetStatusRequest * GetStatusResponse::request() const
 {
-    return static_cast<const GetStatusRequest *>(ImportExportResponse::request());
+    Q_D(const GetStatusResponse);
+    return static_cast<const GetStatusRequest *>(d->request);
 }
 
 /*!

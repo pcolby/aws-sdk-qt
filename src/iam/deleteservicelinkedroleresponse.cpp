@@ -62,7 +62,8 @@ DeleteServiceLinkedRoleResponse::DeleteServiceLinkedRoleResponse(
  */
 const DeleteServiceLinkedRoleRequest * DeleteServiceLinkedRoleResponse::request() const
 {
-    return static_cast<const DeleteServiceLinkedRoleRequest *>(IamResponse::request());
+    Q_D(const DeleteServiceLinkedRoleResponse);
+    return static_cast<const DeleteServiceLinkedRoleRequest *>(d->request);
 }
 
 /*!

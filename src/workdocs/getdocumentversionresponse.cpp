@@ -84,7 +84,8 @@ GetDocumentVersionResponse::GetDocumentVersionResponse(
  */
 const GetDocumentVersionRequest * GetDocumentVersionResponse::request() const
 {
-    return static_cast<const GetDocumentVersionRequest *>(WorkDocsResponse::request());
+    Q_D(const GetDocumentVersionResponse);
+    return static_cast<const GetDocumentVersionRequest *>(d->request);
 }
 
 /*!

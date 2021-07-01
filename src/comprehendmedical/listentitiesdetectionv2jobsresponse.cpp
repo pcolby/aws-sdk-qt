@@ -57,7 +57,8 @@ ListEntitiesDetectionV2JobsResponse::ListEntitiesDetectionV2JobsResponse(
  */
 const ListEntitiesDetectionV2JobsRequest * ListEntitiesDetectionV2JobsResponse::request() const
 {
-    return static_cast<const ListEntitiesDetectionV2JobsRequest *>(ComprehendMedicalResponse::request());
+    Q_D(const ListEntitiesDetectionV2JobsResponse);
+    return static_cast<const ListEntitiesDetectionV2JobsRequest *>(d->request);
 }
 
 /*!

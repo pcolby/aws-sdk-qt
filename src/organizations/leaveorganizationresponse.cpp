@@ -141,7 +141,8 @@ LeaveOrganizationResponse::LeaveOrganizationResponse(
  */
 const LeaveOrganizationRequest * LeaveOrganizationResponse::request() const
 {
-    return static_cast<const LeaveOrganizationRequest *>(OrganizationsResponse::request());
+    Q_D(const LeaveOrganizationResponse);
+    return static_cast<const LeaveOrganizationRequest *>(d->request);
 }
 
 /*!

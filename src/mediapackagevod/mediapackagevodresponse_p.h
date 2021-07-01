@@ -20,12 +20,14 @@
 #ifndef QTAWS_MEDIAPACKAGEVODRESPONSE_P_H
 #define QTAWS_MEDIAPACKAGEVODRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace MediaPackageVod {
 
 class MediaPackageVodResponse;
 
-class MediaPackageVodResponsePrivate {
+class MediaPackageVodResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    MediaPackageVodResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaPackageVodResponse)

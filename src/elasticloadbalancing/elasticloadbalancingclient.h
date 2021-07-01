@@ -135,12 +135,6 @@ public slots:
     SetLoadBalancerPoliciesForBackendServerResponse * setLoadBalancerPoliciesForBackendServer(const SetLoadBalancerPoliciesForBackendServerRequest &request);
     SetLoadBalancerPoliciesOfListenerResponse * setLoadBalancerPoliciesOfListener(const SetLoadBalancerPoliciesOfListenerRequest &request);
 
-protected:
-    /// @cond internal
-    ElasticLoadBalancingClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ElasticLoadBalancingClient(ElasticLoadBalancingClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ElasticLoadBalancingClient)
     Q_DISABLE_COPY(ElasticLoadBalancingClient)

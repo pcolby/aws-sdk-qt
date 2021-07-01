@@ -58,7 +58,8 @@ StartImportLabelsTaskRunResponse::StartImportLabelsTaskRunResponse(
  */
 const StartImportLabelsTaskRunRequest * StartImportLabelsTaskRunResponse::request() const
 {
-    return static_cast<const StartImportLabelsTaskRunRequest *>(GlueResponse::request());
+    Q_D(const StartImportLabelsTaskRunResponse);
+    return static_cast<const StartImportLabelsTaskRunRequest *>(d->request);
 }
 
 /*!

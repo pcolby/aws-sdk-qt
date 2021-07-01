@@ -154,7 +154,8 @@ GetKeyRotationStatusResponse::GetKeyRotationStatusResponse(
  */
 const GetKeyRotationStatusRequest * GetKeyRotationStatusResponse::request() const
 {
-    return static_cast<const GetKeyRotationStatusRequest *>(KmsResponse::request());
+    Q_D(const GetKeyRotationStatusResponse);
+    return static_cast<const GetKeyRotationStatusRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ ListAggregateDiscoveredResourcesResponse::ListAggregateDiscoveredResourcesRespon
  */
 const ListAggregateDiscoveredResourcesRequest * ListAggregateDiscoveredResourcesResponse::request() const
 {
-    return static_cast<const ListAggregateDiscoveredResourcesRequest *>(ConfigServiceResponse::request());
+    Q_D(const ListAggregateDiscoveredResourcesResponse);
+    return static_cast<const ListAggregateDiscoveredResourcesRequest *>(d->request);
 }
 
 /*!

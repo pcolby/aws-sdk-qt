@@ -68,7 +68,8 @@ PutAppLaunchConfigurationResponse::PutAppLaunchConfigurationResponse(
  */
 const PutAppLaunchConfigurationRequest * PutAppLaunchConfigurationResponse::request() const
 {
-    return static_cast<const PutAppLaunchConfigurationRequest *>(SmsResponse::request());
+    Q_D(const PutAppLaunchConfigurationResponse);
+    return static_cast<const PutAppLaunchConfigurationRequest *>(d->request);
 }
 
 /*!

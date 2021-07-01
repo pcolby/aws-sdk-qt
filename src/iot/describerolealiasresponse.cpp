@@ -82,7 +82,8 @@ DescribeRoleAliasResponse::DescribeRoleAliasResponse(
  */
 const DescribeRoleAliasRequest * DescribeRoleAliasResponse::request() const
 {
-    return static_cast<const DescribeRoleAliasRequest *>(IoTResponse::request());
+    Q_D(const DescribeRoleAliasResponse);
+    return static_cast<const DescribeRoleAliasRequest *>(d->request);
 }
 
 /*!

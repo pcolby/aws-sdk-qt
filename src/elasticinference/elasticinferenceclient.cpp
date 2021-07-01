@@ -72,16 +72,16 @@ ElasticInferenceClient::ElasticInferenceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("api.elastic-inference"),
-    QStringLiteral("Amazon Elastic  Inference"),
-    QStringLiteral("elastic-inference"),
-    parent), d_ptr(new ElasticInferenceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ElasticInferenceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ElasticInferenceClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("api.elastic-inference");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Elastic  Inference");
+    d->serviceName = QStringLiteral("elastic-inference");
 }
 
 /*!
@@ -100,16 +100,16 @@ ElasticInferenceClient::ElasticInferenceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("api.elastic-inference"),
-    QStringLiteral("Amazon Elastic  Inference"),
-    QStringLiteral("elastic-inference"),
-    parent), d_ptr(new ElasticInferenceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ElasticInferenceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ElasticInferenceClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("api.elastic-inference");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Elastic  Inference");
+    d->serviceName = QStringLiteral("elastic-inference");
 }
 
 /*!
@@ -203,9 +203,10 @@ UntagResourceResponse * ElasticInferenceClient::untagResource(const UntagResourc
 /*!
  * Constructs a ElasticInferenceClientPrivate object with public implementation \a q.
  */
-ElasticInferenceClientPrivate::ElasticInferenceClientPrivate(ElasticInferenceClient * const q) : q_ptr(q)
+ElasticInferenceClientPrivate::ElasticInferenceClientPrivate(ElasticInferenceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ElasticInference

@@ -99,12 +99,6 @@ public slots:
     UpdatePipelineNotificationsResponse * updatePipelineNotifications(const UpdatePipelineNotificationsRequest &request);
     UpdatePipelineStatusResponse * updatePipelineStatus(const UpdatePipelineStatusRequest &request);
 
-protected:
-    /// @cond internal
-    ElasticTranscoderClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ElasticTranscoderClient(ElasticTranscoderClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ElasticTranscoderClient)
     Q_DISABLE_COPY(ElasticTranscoderClient)

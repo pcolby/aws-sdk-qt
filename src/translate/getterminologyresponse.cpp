@@ -56,7 +56,8 @@ GetTerminologyResponse::GetTerminologyResponse(
  */
 const GetTerminologyRequest * GetTerminologyResponse::request() const
 {
-    return static_cast<const GetTerminologyRequest *>(TranslateResponse::request());
+    Q_D(const GetTerminologyResponse);
+    return static_cast<const GetTerminologyRequest *>(d->request);
 }
 
 /*!

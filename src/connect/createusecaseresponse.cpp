@@ -79,7 +79,8 @@ CreateUseCaseResponse::CreateUseCaseResponse(
  */
 const CreateUseCaseRequest * CreateUseCaseResponse::request() const
 {
-    return static_cast<const CreateUseCaseRequest *>(ConnectResponse::request());
+    Q_D(const CreateUseCaseResponse);
+    return static_cast<const CreateUseCaseRequest *>(d->request);
 }
 
 /*!

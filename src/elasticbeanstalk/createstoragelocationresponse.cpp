@@ -77,7 +77,8 @@ CreateStorageLocationResponse::CreateStorageLocationResponse(
  */
 const CreateStorageLocationRequest * CreateStorageLocationResponse::request() const
 {
-    return static_cast<const CreateStorageLocationRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const CreateStorageLocationResponse);
+    return static_cast<const CreateStorageLocationRequest *>(d->request);
 }
 
 /*!

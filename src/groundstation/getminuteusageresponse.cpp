@@ -58,7 +58,8 @@ GetMinuteUsageResponse::GetMinuteUsageResponse(
  */
 const GetMinuteUsageRequest * GetMinuteUsageResponse::request() const
 {
-    return static_cast<const GetMinuteUsageRequest *>(GroundStationResponse::request());
+    Q_D(const GetMinuteUsageResponse);
+    return static_cast<const GetMinuteUsageRequest *>(d->request);
 }
 
 /*!

@@ -115,7 +115,8 @@ DeleteGameSessionQueueResponse::DeleteGameSessionQueueResponse(
  */
 const DeleteGameSessionQueueRequest * DeleteGameSessionQueueResponse::request() const
 {
-    return static_cast<const DeleteGameSessionQueueRequest *>(GameLiftResponse::request());
+    Q_D(const DeleteGameSessionQueueResponse);
+    return static_cast<const DeleteGameSessionQueueRequest *>(d->request);
 }
 
 /*!

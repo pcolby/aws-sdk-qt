@@ -56,7 +56,8 @@ DisassociateDeviceFromPlacementResponse::DisassociateDeviceFromPlacementResponse
  */
 const DisassociateDeviceFromPlacementRequest * DisassociateDeviceFromPlacementResponse::request() const
 {
-    return static_cast<const DisassociateDeviceFromPlacementRequest *>(IoT1ClickProjectsResponse::request());
+    Q_D(const DisassociateDeviceFromPlacementResponse);
+    return static_cast<const DisassociateDeviceFromPlacementRequest *>(d->request);
 }
 
 /*!

@@ -140,16 +140,16 @@ GlueDataBrewClient::GlueDataBrewClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("databrew"),
-    QStringLiteral("AWS Glue DataBrew"),
-    QStringLiteral("databrew"),
-    parent), d_ptr(new GlueDataBrewClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GlueDataBrewClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GlueDataBrewClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("databrew");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Glue DataBrew");
+    d->serviceName = QStringLiteral("databrew");
 }
 
 /*!
@@ -168,16 +168,16 @@ GlueDataBrewClient::GlueDataBrewClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("databrew"),
-    QStringLiteral("AWS Glue DataBrew"),
-    QStringLiteral("databrew"),
-    parent), d_ptr(new GlueDataBrewClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GlueDataBrewClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GlueDataBrewClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("databrew");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Glue DataBrew");
+    d->serviceName = QStringLiteral("databrew");
 }
 
 /*!
@@ -749,9 +749,10 @@ UpdateScheduleResponse * GlueDataBrewClient::updateSchedule(const UpdateSchedule
 /*!
  * Constructs a GlueDataBrewClientPrivate object with public implementation \a q.
  */
-GlueDataBrewClientPrivate::GlueDataBrewClientPrivate(GlueDataBrewClient * const q) : q_ptr(q)
+GlueDataBrewClientPrivate::GlueDataBrewClientPrivate(GlueDataBrewClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace GlueDataBrew

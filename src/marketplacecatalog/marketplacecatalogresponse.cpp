@@ -37,7 +37,7 @@ namespace MarketplaceCatalog {
  * Constructs a MarketplaceCatalogResponse object with parent \a parent.
  */
 MarketplaceCatalogResponse::MarketplaceCatalogResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MarketplaceCatalogResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new MarketplaceCatalogResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ MarketplaceCatalogResponse::MarketplaceCatalogResponse(QObject * const parent)
  * implementation that inherits from MarketplaceCatalogResponsePrivate.
  */
 MarketplaceCatalogResponse::MarketplaceCatalogResponse(MarketplaceCatalogResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void MarketplaceCatalogResponse::parseFailure(QIODevice &response)
  * Constructs a MarketplaceCatalogResponsePrivate object with public implementation \a q.
  */
 MarketplaceCatalogResponsePrivate::MarketplaceCatalogResponsePrivate(
-    MarketplaceCatalogResponse * const q) : q_ptr(q)
+    MarketplaceCatalogResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

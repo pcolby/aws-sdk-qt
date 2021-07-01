@@ -60,7 +60,8 @@ CreateAssessmentTargetResponse::CreateAssessmentTargetResponse(
  */
 const CreateAssessmentTargetRequest * CreateAssessmentTargetResponse::request() const
 {
-    return static_cast<const CreateAssessmentTargetRequest *>(InspectorResponse::request());
+    Q_D(const CreateAssessmentTargetResponse);
+    return static_cast<const CreateAssessmentTargetRequest *>(d->request);
 }
 
 /*!

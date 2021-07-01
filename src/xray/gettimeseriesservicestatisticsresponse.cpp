@@ -56,7 +56,8 @@ GetTimeSeriesServiceStatisticsResponse::GetTimeSeriesServiceStatisticsResponse(
  */
 const GetTimeSeriesServiceStatisticsRequest * GetTimeSeriesServiceStatisticsResponse::request() const
 {
-    return static_cast<const GetTimeSeriesServiceStatisticsRequest *>(XRayResponse::request());
+    Q_D(const GetTimeSeriesServiceStatisticsResponse);
+    return static_cast<const GetTimeSeriesServiceStatisticsRequest *>(d->request);
 }
 
 /*!

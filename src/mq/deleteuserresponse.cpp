@@ -57,7 +57,8 @@ DeleteUserResponse::DeleteUserResponse(
  */
 const DeleteUserRequest * DeleteUserResponse::request() const
 {
-    return static_cast<const DeleteUserRequest *>(MqResponse::request());
+    Q_D(const DeleteUserResponse);
+    return static_cast<const DeleteUserRequest *>(d->request);
 }
 
 /*!

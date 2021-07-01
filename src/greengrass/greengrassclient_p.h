@@ -20,20 +20,19 @@
 #ifndef QTAWS_GREENGRASSCLIENT_P_H
 #define QTAWS_GREENGRASSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Greengrass {
 
 class GreengrassClient;
 
-class GreengrassClientPrivate {
+class GreengrassClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit GreengrassClientPrivate(GreengrassClient * const q);
-
-protected:
-    GreengrassClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GreengrassClient)

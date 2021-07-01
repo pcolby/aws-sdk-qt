@@ -86,7 +86,8 @@ ResumeServiceResponse::ResumeServiceResponse(
  */
 const ResumeServiceRequest * ResumeServiceResponse::request() const
 {
-    return static_cast<const ResumeServiceRequest *>(AppRunnerResponse::request());
+    Q_D(const ResumeServiceResponse);
+    return static_cast<const ResumeServiceRequest *>(d->request);
 }
 
 /*!

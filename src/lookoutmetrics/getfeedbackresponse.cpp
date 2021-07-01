@@ -58,7 +58,8 @@ GetFeedbackResponse::GetFeedbackResponse(
  */
 const GetFeedbackRequest * GetFeedbackResponse::request() const
 {
-    return static_cast<const GetFeedbackRequest *>(LookoutMetricsResponse::request());
+    Q_D(const GetFeedbackResponse);
+    return static_cast<const GetFeedbackRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ DeleteDataSetResponse::DeleteDataSetResponse(
  */
 const DeleteDataSetRequest * DeleteDataSetResponse::request() const
 {
-    return static_cast<const DeleteDataSetRequest *>(QuickSightResponse::request());
+    Q_D(const DeleteDataSetResponse);
+    return static_cast<const DeleteDataSetRequest *>(d->request);
 }
 
 /*!

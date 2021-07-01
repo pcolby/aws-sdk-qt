@@ -98,7 +98,8 @@ ListNotificationsResponse::ListNotificationsResponse(
  */
 const ListNotificationsRequest * ListNotificationsResponse::request() const
 {
-    return static_cast<const ListNotificationsRequest *>(AuditManagerResponse::request());
+    Q_D(const ListNotificationsResponse);
+    return static_cast<const ListNotificationsRequest *>(d->request);
 }
 
 /*!

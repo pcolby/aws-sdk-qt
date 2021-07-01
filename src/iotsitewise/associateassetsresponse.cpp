@@ -61,7 +61,8 @@ AssociateAssetsResponse::AssociateAssetsResponse(
  */
 const AssociateAssetsRequest * AssociateAssetsResponse::request() const
 {
-    return static_cast<const AssociateAssetsRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const AssociateAssetsResponse);
+    return static_cast<const AssociateAssetsRequest *>(d->request);
 }
 
 /*!

@@ -72,7 +72,8 @@ StartElasticsearchServiceSoftwareUpdateResponse::StartElasticsearchServiceSoftwa
  */
 const StartElasticsearchServiceSoftwareUpdateRequest * StartElasticsearchServiceSoftwareUpdateResponse::request() const
 {
-    return static_cast<const StartElasticsearchServiceSoftwareUpdateRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const StartElasticsearchServiceSoftwareUpdateResponse);
+    return static_cast<const StartElasticsearchServiceSoftwareUpdateRequest *>(d->request);
 }
 
 /*!

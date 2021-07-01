@@ -37,7 +37,7 @@ namespace ResourceGroups {
  * Constructs a ResourceGroupsResponse object with parent \a parent.
  */
 ResourceGroupsResponse::ResourceGroupsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ResourceGroupsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ResourceGroupsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ResourceGroupsResponse::ResourceGroupsResponse(QObject * const parent)
  * implementation that inherits from ResourceGroupsResponsePrivate.
  */
 ResourceGroupsResponse::ResourceGroupsResponse(ResourceGroupsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ResourceGroupsResponse::parseFailure(QIODevice &response)
  * Constructs a ResourceGroupsResponsePrivate object with public implementation \a q.
  */
 ResourceGroupsResponsePrivate::ResourceGroupsResponsePrivate(
-    ResourceGroupsResponse * const q) : q_ptr(q)
+    ResourceGroupsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

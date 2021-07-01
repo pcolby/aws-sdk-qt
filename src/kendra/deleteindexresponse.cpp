@@ -56,7 +56,8 @@ DeleteIndexResponse::DeleteIndexResponse(
  */
 const DeleteIndexRequest * DeleteIndexResponse::request() const
 {
-    return static_cast<const DeleteIndexRequest *>(kendraResponse::request());
+    Q_D(const DeleteIndexResponse);
+    return static_cast<const DeleteIndexRequest *>(d->request);
 }
 
 /*!

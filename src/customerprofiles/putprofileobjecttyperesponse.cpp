@@ -71,7 +71,8 @@ PutProfileObjectTypeResponse::PutProfileObjectTypeResponse(
  */
 const PutProfileObjectTypeRequest * PutProfileObjectTypeResponse::request() const
 {
-    return static_cast<const PutProfileObjectTypeRequest *>(CustomerProfilesResponse::request());
+    Q_D(const PutProfileObjectTypeResponse);
+    return static_cast<const PutProfileObjectTypeRequest *>(d->request);
 }
 
 /*!

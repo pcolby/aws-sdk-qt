@@ -37,7 +37,7 @@ namespace Synthetics {
  * Constructs a SyntheticsResponse object with parent \a parent.
  */
 SyntheticsResponse::SyntheticsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SyntheticsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SyntheticsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SyntheticsResponse::SyntheticsResponse(QObject * const parent)
  * implementation that inherits from SyntheticsResponsePrivate.
  */
 SyntheticsResponse::SyntheticsResponse(SyntheticsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SyntheticsResponse::parseFailure(QIODevice &response)
  * Constructs a SyntheticsResponsePrivate object with public implementation \a q.
  */
 SyntheticsResponsePrivate::SyntheticsResponsePrivate(
-    SyntheticsResponse * const q) : q_ptr(q)
+    SyntheticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

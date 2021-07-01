@@ -70,16 +70,16 @@ PrometheusServiceClient::PrometheusServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-08-01"),
-    QStringLiteral("aps"),
-    QStringLiteral("Amazon Prometheus Service"),
-    QStringLiteral("aps"),
-    parent), d_ptr(new PrometheusServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new PrometheusServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(PrometheusServiceClient);
+    d->apiVersion = QStringLiteral("2020-08-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("aps");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Prometheus Service");
+    d->serviceName = QStringLiteral("aps");
 }
 
 /*!
@@ -98,16 +98,16 @@ PrometheusServiceClient::PrometheusServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-08-01"),
-    QStringLiteral("aps"),
-    QStringLiteral("Amazon Prometheus Service"),
-    QStringLiteral("aps"),
-    parent), d_ptr(new PrometheusServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new PrometheusServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(PrometheusServiceClient);
+    d->apiVersion = QStringLiteral("2020-08-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("aps");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Prometheus Service");
+    d->serviceName = QStringLiteral("aps");
 }
 
 /*!
@@ -187,9 +187,10 @@ UpdateWorkspaceAliasResponse * PrometheusServiceClient::updateWorkspaceAlias(con
 /*!
  * Constructs a PrometheusServiceClientPrivate object with public implementation \a q.
  */
-PrometheusServiceClientPrivate::PrometheusServiceClientPrivate(PrometheusServiceClient * const q) : q_ptr(q)
+PrometheusServiceClientPrivate::PrometheusServiceClientPrivate(PrometheusServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace PrometheusService

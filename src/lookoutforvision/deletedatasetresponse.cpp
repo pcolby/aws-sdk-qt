@@ -64,7 +64,8 @@ DeleteDatasetResponse::DeleteDatasetResponse(
  */
 const DeleteDatasetRequest * DeleteDatasetResponse::request() const
 {
-    return static_cast<const DeleteDatasetRequest *>(LookoutforVisionResponse::request());
+    Q_D(const DeleteDatasetResponse);
+    return static_cast<const DeleteDatasetRequest *>(d->request);
 }
 
 /*!

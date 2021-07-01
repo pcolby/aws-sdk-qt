@@ -126,7 +126,8 @@ ListResourcesForWebACLResponse::ListResourcesForWebACLResponse(
  */
 const ListResourcesForWebACLRequest * ListResourcesForWebACLResponse::request() const
 {
-    return static_cast<const ListResourcesForWebACLRequest *>(Wafv2Response::request());
+    Q_D(const ListResourcesForWebACLResponse);
+    return static_cast<const ListResourcesForWebACLRequest *>(d->request);
 }
 
 /*!

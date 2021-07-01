@@ -59,7 +59,8 @@ DescribeClustersResponse::DescribeClustersResponse(
  */
 const DescribeClustersRequest * DescribeClustersResponse::request() const
 {
-    return static_cast<const DescribeClustersRequest *>(DaxResponse::request());
+    Q_D(const DescribeClustersResponse);
+    return static_cast<const DescribeClustersRequest *>(d->request);
 }
 
 /*!

@@ -161,7 +161,8 @@ UpdateVolumeResponse::UpdateVolumeResponse(
  */
 const UpdateVolumeRequest * UpdateVolumeResponse::request() const
 {
-    return static_cast<const UpdateVolumeRequest *>(OpsWorksResponse::request());
+    Q_D(const UpdateVolumeResponse);
+    return static_cast<const UpdateVolumeRequest *>(d->request);
 }
 
 /*!

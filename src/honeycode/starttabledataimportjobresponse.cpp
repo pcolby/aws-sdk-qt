@@ -58,7 +58,8 @@ StartTableDataImportJobResponse::StartTableDataImportJobResponse(
  */
 const StartTableDataImportJobRequest * StartTableDataImportJobResponse::request() const
 {
-    return static_cast<const StartTableDataImportJobRequest *>(HoneycodeResponse::request());
+    Q_D(const StartTableDataImportJobResponse);
+    return static_cast<const StartTableDataImportJobRequest *>(d->request);
 }
 
 /*!

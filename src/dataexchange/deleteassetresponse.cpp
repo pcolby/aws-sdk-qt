@@ -66,7 +66,8 @@ DeleteAssetResponse::DeleteAssetResponse(
  */
 const DeleteAssetRequest * DeleteAssetResponse::request() const
 {
-    return static_cast<const DeleteAssetRequest *>(DataExchangeResponse::request());
+    Q_D(const DeleteAssetResponse);
+    return static_cast<const DeleteAssetRequest *>(d->request);
 }
 
 /*!

@@ -57,7 +57,8 @@ DescribeFileSystemAliasesResponse::DescribeFileSystemAliasesResponse(
  */
 const DescribeFileSystemAliasesRequest * DescribeFileSystemAliasesResponse::request() const
 {
-    return static_cast<const DescribeFileSystemAliasesRequest *>(FSxResponse::request());
+    Q_D(const DescribeFileSystemAliasesResponse);
+    return static_cast<const DescribeFileSystemAliasesRequest *>(d->request);
 }
 
 /*!

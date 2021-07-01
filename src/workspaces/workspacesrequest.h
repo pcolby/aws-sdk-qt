@@ -111,8 +111,7 @@ public:
 
 protected:
     /// @cond internal
-    WorkSpacesRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit WorkSpacesRequest(WorkSpacesRequestPrivate * const d);
+    WorkSpacesRequest(WorkSpacesRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

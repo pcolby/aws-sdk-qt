@@ -59,7 +59,8 @@ ListBackupVaultsResponse::ListBackupVaultsResponse(
  */
 const ListBackupVaultsRequest * ListBackupVaultsResponse::request() const
 {
-    return static_cast<const ListBackupVaultsRequest *>(BackupResponse::request());
+    Q_D(const ListBackupVaultsResponse);
+    return static_cast<const ListBackupVaultsRequest *>(d->request);
 }
 
 /*!

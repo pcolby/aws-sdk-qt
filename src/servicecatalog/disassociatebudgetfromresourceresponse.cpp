@@ -61,7 +61,8 @@ DisassociateBudgetFromResourceResponse::DisassociateBudgetFromResourceResponse(
  */
 const DisassociateBudgetFromResourceRequest * DisassociateBudgetFromResourceResponse::request() const
 {
-    return static_cast<const DisassociateBudgetFromResourceRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DisassociateBudgetFromResourceResponse);
+    return static_cast<const DisassociateBudgetFromResourceRequest *>(d->request);
 }
 
 /*!

@@ -59,7 +59,8 @@ CreateBotVersionResponse::CreateBotVersionResponse(
  */
 const CreateBotVersionRequest * CreateBotVersionResponse::request() const
 {
-    return static_cast<const CreateBotVersionRequest *>(LexModelBuildingServiceResponse::request());
+    Q_D(const CreateBotVersionResponse);
+    return static_cast<const CreateBotVersionRequest *>(d->request);
 }
 
 /*!

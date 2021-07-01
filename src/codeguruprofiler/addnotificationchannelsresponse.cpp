@@ -79,7 +79,8 @@ AddNotificationChannelsResponse::AddNotificationChannelsResponse(
  */
 const AddNotificationChannelsRequest * AddNotificationChannelsResponse::request() const
 {
-    return static_cast<const AddNotificationChannelsRequest *>(CodeGuruProfilerResponse::request());
+    Q_D(const AddNotificationChannelsResponse);
+    return static_cast<const AddNotificationChannelsRequest *>(d->request);
 }
 
 /*!

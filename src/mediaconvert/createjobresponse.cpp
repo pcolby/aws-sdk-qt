@@ -55,7 +55,8 @@ CreateJobResponse::CreateJobResponse(
  */
 const CreateJobRequest * CreateJobResponse::request() const
 {
-    return static_cast<const CreateJobRequest *>(MediaConvertResponse::request());
+    Q_D(const CreateJobResponse);
+    return static_cast<const CreateJobRequest *>(d->request);
 }
 
 /*!

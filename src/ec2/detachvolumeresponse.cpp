@@ -87,7 +87,8 @@ DetachVolumeResponse::DetachVolumeResponse(
  */
 const DetachVolumeRequest * DetachVolumeResponse::request() const
 {
-    return static_cast<const DetachVolumeRequest *>(Ec2Response::request());
+    Q_D(const DetachVolumeResponse);
+    return static_cast<const DetachVolumeRequest *>(d->request);
 }
 
 /*!

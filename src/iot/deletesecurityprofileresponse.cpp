@@ -82,7 +82,8 @@ DeleteSecurityProfileResponse::DeleteSecurityProfileResponse(
  */
 const DeleteSecurityProfileRequest * DeleteSecurityProfileResponse::request() const
 {
-    return static_cast<const DeleteSecurityProfileRequest *>(IoTResponse::request());
+    Q_D(const DeleteSecurityProfileResponse);
+    return static_cast<const DeleteSecurityProfileRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ DeleteChannelMessageResponse::DeleteChannelMessageResponse(
  */
 const DeleteChannelMessageRequest * DeleteChannelMessageResponse::request() const
 {
-    return static_cast<const DeleteChannelMessageRequest *>(ChimeResponse::request());
+    Q_D(const DeleteChannelMessageResponse);
+    return static_cast<const DeleteChannelMessageRequest *>(d->request);
 }
 
 /*!

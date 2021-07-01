@@ -75,7 +75,8 @@ GetCostAndUsageResponse::GetCostAndUsageResponse(
  */
 const GetCostAndUsageRequest * GetCostAndUsageResponse::request() const
 {
-    return static_cast<const GetCostAndUsageRequest *>(CostExplorerResponse::request());
+    Q_D(const GetCostAndUsageResponse);
+    return static_cast<const GetCostAndUsageRequest *>(d->request);
 }
 
 /*!

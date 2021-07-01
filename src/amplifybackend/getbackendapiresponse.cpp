@@ -56,7 +56,8 @@ GetBackendAPIResponse::GetBackendAPIResponse(
  */
 const GetBackendAPIRequest * GetBackendAPIResponse::request() const
 {
-    return static_cast<const GetBackendAPIRequest *>(AmplifyBackendResponse::request());
+    Q_D(const GetBackendAPIResponse);
+    return static_cast<const GetBackendAPIRequest *>(d->request);
 }
 
 /*!

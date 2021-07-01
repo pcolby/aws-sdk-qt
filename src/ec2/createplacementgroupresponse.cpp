@@ -87,7 +87,8 @@ CreatePlacementGroupResponse::CreatePlacementGroupResponse(
  */
 const CreatePlacementGroupRequest * CreatePlacementGroupResponse::request() const
 {
-    return static_cast<const CreatePlacementGroupRequest *>(Ec2Response::request());
+    Q_D(const CreatePlacementGroupResponse);
+    return static_cast<const CreatePlacementGroupRequest *>(d->request);
 }
 
 /*!

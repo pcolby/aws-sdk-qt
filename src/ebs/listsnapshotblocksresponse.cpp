@@ -77,7 +77,8 @@ ListSnapshotBlocksResponse::ListSnapshotBlocksResponse(
  */
 const ListSnapshotBlocksRequest * ListSnapshotBlocksResponse::request() const
 {
-    return static_cast<const ListSnapshotBlocksRequest *>(EbsResponse::request());
+    Q_D(const ListSnapshotBlocksResponse);
+    return static_cast<const ListSnapshotBlocksRequest *>(d->request);
 }
 
 /*!

@@ -62,16 +62,16 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-05-13"),
-    QStringLiteral("runtime.sagemaker"),
-    QStringLiteral("Amazon SageMaker Runtime"),
-    QStringLiteral("sagemaker"),
-    parent), d_ptr(new SageMakerRuntimeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new SageMakerRuntimeClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(SageMakerRuntimeClient);
+    d->apiVersion = QStringLiteral("2017-05-13");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("runtime.sagemaker");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon SageMaker Runtime");
+    d->serviceName = QStringLiteral("sagemaker");
 }
 
 /*!
@@ -90,16 +90,16 @@ SageMakerRuntimeClient::SageMakerRuntimeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-05-13"),
-    QStringLiteral("runtime.sagemaker"),
-    QStringLiteral("Amazon SageMaker Runtime"),
-    QStringLiteral("sagemaker"),
-    parent), d_ptr(new SageMakerRuntimeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new SageMakerRuntimeClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(SageMakerRuntimeClient);
+    d->apiVersion = QStringLiteral("2017-05-13");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("runtime.sagemaker");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon SageMaker Runtime");
+    d->serviceName = QStringLiteral("sagemaker");
 }
 
 /*!
@@ -155,9 +155,10 @@ InvokeEndpointResponse * SageMakerRuntimeClient::invokeEndpoint(const InvokeEndp
 /*!
  * Constructs a SageMakerRuntimeClientPrivate object with public implementation \a q.
  */
-SageMakerRuntimeClientPrivate::SageMakerRuntimeClientPrivate(SageMakerRuntimeClient * const q) : q_ptr(q)
+SageMakerRuntimeClientPrivate::SageMakerRuntimeClientPrivate(SageMakerRuntimeClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SageMakerRuntime

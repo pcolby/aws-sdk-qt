@@ -134,7 +134,8 @@ AssociateNodeResponse::AssociateNodeResponse(
  */
 const AssociateNodeRequest * AssociateNodeResponse::request() const
 {
-    return static_cast<const AssociateNodeRequest *>(OpsWorksCMResponse::request());
+    Q_D(const AssociateNodeResponse);
+    return static_cast<const AssociateNodeRequest *>(d->request);
 }
 
 /*!

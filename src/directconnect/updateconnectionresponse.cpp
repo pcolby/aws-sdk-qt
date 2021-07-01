@@ -61,7 +61,8 @@ UpdateConnectionResponse::UpdateConnectionResponse(
  */
 const UpdateConnectionRequest * UpdateConnectionResponse::request() const
 {
-    return static_cast<const UpdateConnectionRequest *>(DirectConnectResponse::request());
+    Q_D(const UpdateConnectionResponse);
+    return static_cast<const UpdateConnectionRequest *>(d->request);
 }
 
 /*!

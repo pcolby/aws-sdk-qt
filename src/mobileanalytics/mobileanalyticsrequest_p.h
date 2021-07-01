@@ -20,12 +20,15 @@
 #ifndef QTAWS_MOBILEANALYTICSREQUEST_P_H
 #define QTAWS_MOBILEANALYTICSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "mobileanalyticsrequest.h"
+
 namespace QtAws {
 namespace MobileAnalytics {
 
 class MobileAnalyticsRequest;
 
-class MobileAnalyticsRequestPrivate {
+class MobileAnalyticsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MobileAnalyticsRequest::Action action; ///< MobileAnalytics action to be performed.
@@ -36,9 +39,6 @@ public:
     MobileAnalyticsRequestPrivate(const MobileAnalyticsRequestPrivate &other, MobileAnalyticsRequest * const q);
 
     static QString toString(const MobileAnalyticsRequest::Action &action);
-
-protected:
-    MobileAnalyticsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MobileAnalyticsRequest)

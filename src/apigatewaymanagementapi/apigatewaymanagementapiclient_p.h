@@ -20,20 +20,19 @@
 #ifndef QTAWS_APIGATEWAYMANAGEMENTAPICLIENT_P_H
 #define QTAWS_APIGATEWAYMANAGEMENTAPICLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ApiGatewayManagementApi {
 
 class ApiGatewayManagementApiClient;
 
-class ApiGatewayManagementApiClientPrivate {
+class ApiGatewayManagementApiClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ApiGatewayManagementApiClientPrivate(ApiGatewayManagementApiClient * const q);
-
-protected:
-    ApiGatewayManagementApiClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApiGatewayManagementApiClient)

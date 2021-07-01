@@ -20,20 +20,19 @@
 #ifndef QTAWS_BRAKETCLIENT_P_H
 #define QTAWS_BRAKETCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Braket {
 
 class BraketClient;
 
-class BraketClientPrivate {
+class BraketClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit BraketClientPrivate(BraketClient * const q);
-
-protected:
-    BraketClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BraketClient)

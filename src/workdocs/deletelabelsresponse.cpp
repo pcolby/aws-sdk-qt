@@ -84,7 +84,8 @@ DeleteLabelsResponse::DeleteLabelsResponse(
  */
 const DeleteLabelsRequest * DeleteLabelsResponse::request() const
 {
-    return static_cast<const DeleteLabelsRequest *>(WorkDocsResponse::request());
+    Q_D(const DeleteLabelsResponse);
+    return static_cast<const DeleteLabelsRequest *>(d->request);
 }
 
 /*!

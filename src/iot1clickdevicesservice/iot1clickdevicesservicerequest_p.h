@@ -20,12 +20,15 @@
 #ifndef QTAWS_IOT1CLICKDEVICESSERVICEREQUEST_P_H
 #define QTAWS_IOT1CLICKDEVICESSERVICEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "iot1clickdevicesservicerequest.h"
+
 namespace QtAws {
 namespace IoT1ClickDevicesService {
 
 class IoT1ClickDevicesServiceRequest;
 
-class IoT1ClickDevicesServiceRequestPrivate {
+class IoT1ClickDevicesServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoT1ClickDevicesServiceRequest::Action action; ///< IoT1ClickDevicesService action to be performed.
@@ -36,9 +39,6 @@ public:
     IoT1ClickDevicesServiceRequestPrivate(const IoT1ClickDevicesServiceRequestPrivate &other, IoT1ClickDevicesServiceRequest * const q);
 
     static QString toString(const IoT1ClickDevicesServiceRequest::Action &action);
-
-protected:
-    IoT1ClickDevicesServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoT1ClickDevicesServiceRequest)

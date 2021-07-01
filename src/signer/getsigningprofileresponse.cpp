@@ -80,7 +80,8 @@ GetSigningProfileResponse::GetSigningProfileResponse(
  */
 const GetSigningProfileRequest * GetSigningProfileResponse::request() const
 {
-    return static_cast<const GetSigningProfileRequest *>(signerResponse::request());
+    Q_D(const GetSigningProfileResponse);
+    return static_cast<const GetSigningProfileRequest *>(d->request);
 }
 
 /*!

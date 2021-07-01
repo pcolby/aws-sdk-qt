@@ -56,7 +56,8 @@ DeleteLanguageModelResponse::DeleteLanguageModelResponse(
  */
 const DeleteLanguageModelRequest * DeleteLanguageModelResponse::request() const
 {
-    return static_cast<const DeleteLanguageModelRequest *>(TranscribeServiceResponse::request());
+    Q_D(const DeleteLanguageModelResponse);
+    return static_cast<const DeleteLanguageModelRequest *>(d->request);
 }
 
 /*!

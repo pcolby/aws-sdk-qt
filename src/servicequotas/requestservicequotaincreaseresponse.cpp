@@ -58,7 +58,8 @@ RequestServiceQuotaIncreaseResponse::RequestServiceQuotaIncreaseResponse(
  */
 const RequestServiceQuotaIncreaseRequest * RequestServiceQuotaIncreaseResponse::request() const
 {
-    return static_cast<const RequestServiceQuotaIncreaseRequest *>(ServiceQuotasResponse::request());
+    Q_D(const RequestServiceQuotaIncreaseResponse);
+    return static_cast<const RequestServiceQuotaIncreaseRequest *>(d->request);
 }
 
 /*!

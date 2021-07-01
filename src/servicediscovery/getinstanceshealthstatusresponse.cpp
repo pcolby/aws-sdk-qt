@@ -60,7 +60,8 @@ GetInstancesHealthStatusResponse::GetInstancesHealthStatusResponse(
  */
 const GetInstancesHealthStatusRequest * GetInstancesHealthStatusResponse::request() const
 {
-    return static_cast<const GetInstancesHealthStatusRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const GetInstancesHealthStatusResponse);
+    return static_cast<const GetInstancesHealthStatusRequest *>(d->request);
 }
 
 /*!

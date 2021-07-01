@@ -75,7 +75,8 @@ UpdateCostCategoryDefinitionResponse::UpdateCostCategoryDefinitionResponse(
  */
 const UpdateCostCategoryDefinitionRequest * UpdateCostCategoryDefinitionResponse::request() const
 {
-    return static_cast<const UpdateCostCategoryDefinitionRequest *>(CostExplorerResponse::request());
+    Q_D(const UpdateCostCategoryDefinitionResponse);
+    return static_cast<const UpdateCostCategoryDefinitionRequest *>(d->request);
 }
 
 /*!

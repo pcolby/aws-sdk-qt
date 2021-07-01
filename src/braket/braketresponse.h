@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    BraketResponsePrivate * const d_ptr; ///< Internal d-pointer.
     BraketResponse(BraketResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

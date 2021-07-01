@@ -84,7 +84,8 @@ PutSubscriptionFilterResponse::PutSubscriptionFilterResponse(
  */
 const PutSubscriptionFilterRequest * PutSubscriptionFilterResponse::request() const
 {
-    return static_cast<const PutSubscriptionFilterRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const PutSubscriptionFilterResponse);
+    return static_cast<const PutSubscriptionFilterRequest *>(d->request);
 }
 
 /*!

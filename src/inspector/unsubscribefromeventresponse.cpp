@@ -60,7 +60,8 @@ UnsubscribeFromEventResponse::UnsubscribeFromEventResponse(
  */
 const UnsubscribeFromEventRequest * UnsubscribeFromEventResponse::request() const
 {
-    return static_cast<const UnsubscribeFromEventRequest *>(InspectorResponse::request());
+    Q_D(const UnsubscribeFromEventResponse);
+    return static_cast<const UnsubscribeFromEventRequest *>(d->request);
 }
 
 /*!

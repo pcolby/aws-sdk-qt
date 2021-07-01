@@ -43,7 +43,7 @@ namespace QLDBSession {
  * Constructs a QLDBSessionRequest object for QLDBSession \a action.
  */
 QLDBSessionRequest::QLDBSessionRequest(const Action action)
-    : d_ptr(new QLDBSessionRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new QLDBSessionRequestPrivate(action, this))
 {
 
 }
@@ -52,8 +52,7 @@ QLDBSessionRequest::QLDBSessionRequest(const Action action)
  * Constructs a copy of \a other.
  */
 QLDBSessionRequest::QLDBSessionRequest(const QLDBSessionRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new QLDBSessionRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new QLDBSessionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +75,7 @@ QLDBSessionRequest& QLDBSessionRequest::operator=(const QLDBSessionRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from QLDBSessionRequestPrivate.
  */
-QLDBSessionRequest::QLDBSessionRequest(QLDBSessionRequestPrivate * const d) : d_ptr(d)
+QLDBSessionRequest::QLDBSessionRequest(QLDBSessionRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -245,7 +244,7 @@ QNetworkRequest QLDBSessionRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 QLDBSessionRequestPrivate::QLDBSessionRequestPrivate(const QLDBSessionRequest::Action action, QLDBSessionRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -260,8 +259,8 @@ QLDBSessionRequestPrivate::QLDBSessionRequestPrivate(const QLDBSessionRequest::A
  */
 QLDBSessionRequestPrivate::QLDBSessionRequestPrivate(const QLDBSessionRequestPrivate &other,
                                      QLDBSessionRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

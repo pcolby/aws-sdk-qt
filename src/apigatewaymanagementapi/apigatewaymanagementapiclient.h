@@ -57,12 +57,6 @@ public slots:
     GetConnectionResponse * getConnection(const GetConnectionRequest &request);
     PostToConnectionResponse * postToConnection(const PostToConnectionRequest &request);
 
-protected:
-    /// @cond internal
-    ApiGatewayManagementApiClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ApiGatewayManagementApiClient(ApiGatewayManagementApiClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ApiGatewayManagementApiClient)
     Q_DISABLE_COPY(ApiGatewayManagementApiClient)

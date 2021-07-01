@@ -94,7 +94,8 @@ GetFirewallConfigResponse::GetFirewallConfigResponse(
  */
 const GetFirewallConfigRequest * GetFirewallConfigResponse::request() const
 {
-    return static_cast<const GetFirewallConfigRequest *>(Route53ResolverResponse::request());
+    Q_D(const GetFirewallConfigResponse);
+    return static_cast<const GetFirewallConfigRequest *>(d->request);
 }
 
 /*!

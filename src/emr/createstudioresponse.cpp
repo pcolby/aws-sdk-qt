@@ -58,7 +58,8 @@ CreateStudioResponse::CreateStudioResponse(
  */
 const CreateStudioRequest * CreateStudioResponse::request() const
 {
-    return static_cast<const CreateStudioRequest *>(EmrResponse::request());
+    Q_D(const CreateStudioResponse);
+    return static_cast<const CreateStudioRequest *>(d->request);
 }
 
 /*!

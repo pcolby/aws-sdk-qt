@@ -56,7 +56,8 @@ ImportTerminologyResponse::ImportTerminologyResponse(
  */
 const ImportTerminologyRequest * ImportTerminologyResponse::request() const
 {
-    return static_cast<const ImportTerminologyRequest *>(TranslateResponse::request());
+    Q_D(const ImportTerminologyResponse);
+    return static_cast<const ImportTerminologyRequest *>(d->request);
 }
 
 /*!

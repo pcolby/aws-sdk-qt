@@ -46,7 +46,7 @@ namespace SageMakerFeatureStoreRuntime {
  * Constructs a SageMakerFeatureStoreRuntimeRequest object for SageMakerFeatureStoreRuntime \a action.
  */
 SageMakerFeatureStoreRuntimeRequest::SageMakerFeatureStoreRuntimeRequest(const Action action)
-    : d_ptr(new SageMakerFeatureStoreRuntimeRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SageMakerFeatureStoreRuntimeRequestPrivate(action, this))
 {
 
 }
@@ -55,8 +55,7 @@ SageMakerFeatureStoreRuntimeRequest::SageMakerFeatureStoreRuntimeRequest(const A
  * Constructs a copy of \a other.
  */
 SageMakerFeatureStoreRuntimeRequest::SageMakerFeatureStoreRuntimeRequest(const SageMakerFeatureStoreRuntimeRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new SageMakerFeatureStoreRuntimeRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SageMakerFeatureStoreRuntimeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -79,7 +78,7 @@ SageMakerFeatureStoreRuntimeRequest& SageMakerFeatureStoreRuntimeRequest::operat
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SageMakerFeatureStoreRuntimeRequestPrivate.
  */
-SageMakerFeatureStoreRuntimeRequest::SageMakerFeatureStoreRuntimeRequest(SageMakerFeatureStoreRuntimeRequestPrivate * const d) : d_ptr(d)
+SageMakerFeatureStoreRuntimeRequest::SageMakerFeatureStoreRuntimeRequest(SageMakerFeatureStoreRuntimeRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -248,7 +247,7 @@ QNetworkRequest SageMakerFeatureStoreRuntimeRequest::unsignedRequest(const QUrl 
  * with public implementation \a q.
  */
 SageMakerFeatureStoreRuntimeRequestPrivate::SageMakerFeatureStoreRuntimeRequestPrivate(const SageMakerFeatureStoreRuntimeRequest::Action action, SageMakerFeatureStoreRuntimeRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -263,8 +262,8 @@ SageMakerFeatureStoreRuntimeRequestPrivate::SageMakerFeatureStoreRuntimeRequestP
  */
 SageMakerFeatureStoreRuntimeRequestPrivate::SageMakerFeatureStoreRuntimeRequestPrivate(const SageMakerFeatureStoreRuntimeRequestPrivate &other,
                                      SageMakerFeatureStoreRuntimeRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -56,7 +56,8 @@ GetReusableDelegationSetLimitResponse::GetReusableDelegationSetLimitResponse(
  */
 const GetReusableDelegationSetLimitRequest * GetReusableDelegationSetLimitResponse::request() const
 {
-    return static_cast<const GetReusableDelegationSetLimitRequest *>(Route53Response::request());
+    Q_D(const GetReusableDelegationSetLimitResponse);
+    return static_cast<const GetReusableDelegationSetLimitRequest *>(d->request);
 }
 
 /*!

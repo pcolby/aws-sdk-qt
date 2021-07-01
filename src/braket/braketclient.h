@@ -75,12 +75,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    BraketClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit BraketClient(BraketClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(BraketClient)
     Q_DISABLE_COPY(BraketClient)

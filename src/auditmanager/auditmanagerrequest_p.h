@@ -20,12 +20,15 @@
 #ifndef QTAWS_AUDITMANAGERREQUEST_P_H
 #define QTAWS_AUDITMANAGERREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "auditmanagerrequest.h"
+
 namespace QtAws {
 namespace AuditManager {
 
 class AuditManagerRequest;
 
-class AuditManagerRequestPrivate {
+class AuditManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AuditManagerRequest::Action action; ///< AuditManager action to be performed.
@@ -36,9 +39,6 @@ public:
     AuditManagerRequestPrivate(const AuditManagerRequestPrivate &other, AuditManagerRequest * const q);
 
     static QString toString(const AuditManagerRequest::Action &action);
-
-protected:
-    AuditManagerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AuditManagerRequest)

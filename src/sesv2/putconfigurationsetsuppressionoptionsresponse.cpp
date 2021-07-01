@@ -88,7 +88,8 @@ PutConfigurationSetSuppressionOptionsResponse::PutConfigurationSetSuppressionOpt
  */
 const PutConfigurationSetSuppressionOptionsRequest * PutConfigurationSetSuppressionOptionsResponse::request() const
 {
-    return static_cast<const PutConfigurationSetSuppressionOptionsRequest *>(Sesv2Response::request());
+    Q_D(const PutConfigurationSetSuppressionOptionsResponse);
+    return static_cast<const PutConfigurationSetSuppressionOptionsRequest *>(d->request);
 }
 
 /*!

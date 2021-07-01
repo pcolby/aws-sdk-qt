@@ -73,7 +73,8 @@ DescribeVirtualServiceResponse::DescribeVirtualServiceResponse(
  */
 const DescribeVirtualServiceRequest * DescribeVirtualServiceResponse::request() const
 {
-    return static_cast<const DescribeVirtualServiceRequest *>(AppMeshResponse::request());
+    Q_D(const DescribeVirtualServiceResponse);
+    return static_cast<const DescribeVirtualServiceRequest *>(d->request);
 }
 
 /*!

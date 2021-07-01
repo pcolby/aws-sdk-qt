@@ -82,7 +82,8 @@ RemoveThingFromBillingGroupResponse::RemoveThingFromBillingGroupResponse(
  */
 const RemoveThingFromBillingGroupRequest * RemoveThingFromBillingGroupResponse::request() const
 {
-    return static_cast<const RemoveThingFromBillingGroupRequest *>(IoTResponse::request());
+    Q_D(const RemoveThingFromBillingGroupResponse);
+    return static_cast<const RemoveThingFromBillingGroupRequest *>(d->request);
 }
 
 /*!

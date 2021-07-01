@@ -87,8 +87,7 @@ public:
 
 protected:
     /// @cond internal
-    SSMIncidentsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SSMIncidentsRequest(SSMIncidentsRequestPrivate * const d);
+    SSMIncidentsRequest(SSMIncidentsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

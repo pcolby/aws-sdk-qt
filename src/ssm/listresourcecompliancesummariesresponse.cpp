@@ -98,7 +98,8 @@ ListResourceComplianceSummariesResponse::ListResourceComplianceSummariesResponse
  */
 const ListResourceComplianceSummariesRequest * ListResourceComplianceSummariesResponse::request() const
 {
-    return static_cast<const ListResourceComplianceSummariesRequest *>(SsmResponse::request());
+    Q_D(const ListResourceComplianceSummariesResponse);
+    return static_cast<const ListResourceComplianceSummariesRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ CreateDataSourceFromS3Response::CreateDataSourceFromS3Response(
  */
 const CreateDataSourceFromS3Request * CreateDataSourceFromS3Response::request() const
 {
-    return static_cast<const CreateDataSourceFromS3Request *>(MachineLearningResponse::request());
+    Q_D(const CreateDataSourceFromS3Response);
+    return static_cast<const CreateDataSourceFromS3Request *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ DescribeScheduleResponse::DescribeScheduleResponse(
  */
 const DescribeScheduleRequest * DescribeScheduleResponse::request() const
 {
-    return static_cast<const DescribeScheduleRequest *>(GlueDataBrewResponse::request());
+    Q_D(const DescribeScheduleResponse);
+    return static_cast<const DescribeScheduleRequest *>(d->request);
 }
 
 /*!

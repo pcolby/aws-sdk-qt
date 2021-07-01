@@ -67,7 +67,8 @@ UpdateArchiveRuleResponse::UpdateArchiveRuleResponse(
  */
 const UpdateArchiveRuleRequest * UpdateArchiveRuleResponse::request() const
 {
-    return static_cast<const UpdateArchiveRuleRequest *>(AccessAnalyzerResponse::request());
+    Q_D(const UpdateArchiveRuleResponse);
+    return static_cast<const UpdateArchiveRuleRequest *>(d->request);
 }
 
 /*!

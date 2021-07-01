@@ -56,7 +56,8 @@ CreateClusterResponse::CreateClusterResponse(
  */
 const CreateClusterRequest * CreateClusterResponse::request() const
 {
-    return static_cast<const CreateClusterRequest *>(KafkaResponse::request());
+    Q_D(const CreateClusterResponse);
+    return static_cast<const CreateClusterRequest *>(d->request);
 }
 
 /*!

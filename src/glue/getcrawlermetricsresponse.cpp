@@ -58,7 +58,8 @@ GetCrawlerMetricsResponse::GetCrawlerMetricsResponse(
  */
 const GetCrawlerMetricsRequest * GetCrawlerMetricsResponse::request() const
 {
-    return static_cast<const GetCrawlerMetricsRequest *>(GlueResponse::request());
+    Q_D(const GetCrawlerMetricsResponse);
+    return static_cast<const GetCrawlerMetricsRequest *>(d->request);
 }
 
 /*!

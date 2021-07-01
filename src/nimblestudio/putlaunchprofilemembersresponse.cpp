@@ -55,7 +55,8 @@ PutLaunchProfileMembersResponse::PutLaunchProfileMembersResponse(
  */
 const PutLaunchProfileMembersRequest * PutLaunchProfileMembersResponse::request() const
 {
-    return static_cast<const PutLaunchProfileMembersRequest *>(NimbleStudioResponse::request());
+    Q_D(const PutLaunchProfileMembersResponse);
+    return static_cast<const PutLaunchProfileMembersRequest *>(d->request);
 }
 
 /*!

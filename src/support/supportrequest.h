@@ -72,8 +72,7 @@ public:
 
 protected:
     /// @cond internal
-    SupportRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SupportRequest(SupportRequestPrivate * const d);
+    SupportRequest(SupportRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

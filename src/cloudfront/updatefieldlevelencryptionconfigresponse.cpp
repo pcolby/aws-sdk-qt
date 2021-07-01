@@ -60,7 +60,8 @@ UpdateFieldLevelEncryptionConfigResponse::UpdateFieldLevelEncryptionConfigRespon
  */
 const UpdateFieldLevelEncryptionConfigRequest * UpdateFieldLevelEncryptionConfigResponse::request() const
 {
-    return static_cast<const UpdateFieldLevelEncryptionConfigRequest *>(CloudFrontResponse::request());
+    Q_D(const UpdateFieldLevelEncryptionConfigResponse);
+    return static_cast<const UpdateFieldLevelEncryptionConfigRequest *>(d->request);
 }
 
 /*!

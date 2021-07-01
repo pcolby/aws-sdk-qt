@@ -88,7 +88,8 @@ GetBlacklistReportsResponse::GetBlacklistReportsResponse(
  */
 const GetBlacklistReportsRequest * GetBlacklistReportsResponse::request() const
 {
-    return static_cast<const GetBlacklistReportsRequest *>(Sesv2Response::request());
+    Q_D(const GetBlacklistReportsResponse);
+    return static_cast<const GetBlacklistReportsRequest *>(d->request);
 }
 
 /*!

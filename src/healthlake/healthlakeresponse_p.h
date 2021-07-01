@@ -20,12 +20,14 @@
 #ifndef QTAWS_HEALTHLAKERESPONSE_P_H
 #define QTAWS_HEALTHLAKERESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace HealthLake {
 
 class HealthLakeResponse;
 
-class HealthLakeResponsePrivate {
+class HealthLakeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    HealthLakeResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(HealthLakeResponse)

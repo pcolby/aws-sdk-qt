@@ -70,7 +70,8 @@ CreateArtifactResponse::CreateArtifactResponse(
  */
 const CreateArtifactRequest * CreateArtifactResponse::request() const
 {
-    return static_cast<const CreateArtifactRequest *>(SageMakerResponse::request());
+    Q_D(const CreateArtifactResponse);
+    return static_cast<const CreateArtifactRequest *>(d->request);
 }
 
 /*!

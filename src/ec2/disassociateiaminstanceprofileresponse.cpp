@@ -87,7 +87,8 @@ DisassociateIamInstanceProfileResponse::DisassociateIamInstanceProfileResponse(
  */
 const DisassociateIamInstanceProfileRequest * DisassociateIamInstanceProfileResponse::request() const
 {
-    return static_cast<const DisassociateIamInstanceProfileRequest *>(Ec2Response::request());
+    Q_D(const DisassociateIamInstanceProfileResponse);
+    return static_cast<const DisassociateIamInstanceProfileRequest *>(d->request);
 }
 
 /*!

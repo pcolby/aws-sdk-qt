@@ -93,7 +93,8 @@ DescribeHumanLoopResponse::DescribeHumanLoopResponse(
  */
 const DescribeHumanLoopRequest * DescribeHumanLoopResponse::request() const
 {
-    return static_cast<const DescribeHumanLoopRequest *>(AugmentedAIRuntimeResponse::request());
+    Q_D(const DescribeHumanLoopResponse);
+    return static_cast<const DescribeHumanLoopRequest *>(d->request);
 }
 
 /*!

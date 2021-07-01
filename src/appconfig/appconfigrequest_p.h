@@ -20,12 +20,15 @@
 #ifndef QTAWS_APPCONFIGREQUEST_P_H
 #define QTAWS_APPCONFIGREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "appconfigrequest.h"
+
 namespace QtAws {
 namespace AppConfig {
 
 class AppConfigRequest;
 
-class AppConfigRequestPrivate {
+class AppConfigRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppConfigRequest::Action action; ///< AppConfig action to be performed.
@@ -36,9 +39,6 @@ public:
     AppConfigRequestPrivate(const AppConfigRequestPrivate &other, AppConfigRequest * const q);
 
     static QString toString(const AppConfigRequest::Action &action);
-
-protected:
-    AppConfigRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppConfigRequest)

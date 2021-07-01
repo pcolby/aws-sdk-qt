@@ -59,7 +59,8 @@ ListFailuresForLicenseConfigurationOperationsResponse::ListFailuresForLicenseCon
  */
 const ListFailuresForLicenseConfigurationOperationsRequest * ListFailuresForLicenseConfigurationOperationsResponse::request() const
 {
-    return static_cast<const ListFailuresForLicenseConfigurationOperationsRequest *>(LicenseManagerResponse::request());
+    Q_D(const ListFailuresForLicenseConfigurationOperationsResponse);
+    return static_cast<const ListFailuresForLicenseConfigurationOperationsRequest *>(d->request);
 }
 
 /*!

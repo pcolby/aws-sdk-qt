@@ -74,7 +74,8 @@ SendTaskFailureResponse::SendTaskFailureResponse(
  */
 const SendTaskFailureRequest * SendTaskFailureResponse::request() const
 {
-    return static_cast<const SendTaskFailureRequest *>(SfnResponse::request());
+    Q_D(const SendTaskFailureResponse);
+    return static_cast<const SendTaskFailureRequest *>(d->request);
 }
 
 /*!

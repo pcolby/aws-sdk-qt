@@ -51,12 +51,6 @@ public:
 public slots:
     SendCommandResponse * sendCommand(const SendCommandRequest &request);
 
-protected:
-    /// @cond internal
-    QLDBSessionClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit QLDBSessionClient(QLDBSessionClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(QLDBSessionClient)
     Q_DISABLE_COPY(QLDBSessionClient)

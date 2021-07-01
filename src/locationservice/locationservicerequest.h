@@ -103,8 +103,7 @@ public:
 
 protected:
     /// @cond internal
-    LocationServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit LocationServiceRequest(LocationServiceRequestPrivate * const d);
+    LocationServiceRequest(LocationServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

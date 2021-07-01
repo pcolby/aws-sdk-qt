@@ -55,7 +55,8 @@ ListBotAliasesResponse::ListBotAliasesResponse(
  */
 const ListBotAliasesRequest * ListBotAliasesResponse::request() const
 {
-    return static_cast<const ListBotAliasesRequest *>(LexModelsV2Response::request());
+    Q_D(const ListBotAliasesResponse);
+    return static_cast<const ListBotAliasesRequest *>(d->request);
 }
 
 /*!

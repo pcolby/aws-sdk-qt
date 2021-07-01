@@ -439,7 +439,8 @@ GetRepositoryTriggersResponse::GetRepositoryTriggersResponse(
  */
 const GetRepositoryTriggersRequest * GetRepositoryTriggersResponse::request() const
 {
-    return static_cast<const GetRepositoryTriggersRequest *>(CodeCommitResponse::request());
+    Q_D(const GetRepositoryTriggersResponse);
+    return static_cast<const GetRepositoryTriggersRequest *>(d->request);
 }
 
 /*!

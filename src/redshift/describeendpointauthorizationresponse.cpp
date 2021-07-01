@@ -85,7 +85,8 @@ DescribeEndpointAuthorizationResponse::DescribeEndpointAuthorizationResponse(
  */
 const DescribeEndpointAuthorizationRequest * DescribeEndpointAuthorizationResponse::request() const
 {
-    return static_cast<const DescribeEndpointAuthorizationRequest *>(RedshiftResponse::request());
+    Q_D(const DescribeEndpointAuthorizationResponse);
+    return static_cast<const DescribeEndpointAuthorizationRequest *>(d->request);
 }
 
 /*!

@@ -115,7 +115,8 @@ DescribeRuntimeConfigurationResponse::DescribeRuntimeConfigurationResponse(
  */
 const DescribeRuntimeConfigurationRequest * DescribeRuntimeConfigurationResponse::request() const
 {
-    return static_cast<const DescribeRuntimeConfigurationRequest *>(GameLiftResponse::request());
+    Q_D(const DescribeRuntimeConfigurationResponse);
+    return static_cast<const DescribeRuntimeConfigurationRequest *>(d->request);
 }
 
 /*!

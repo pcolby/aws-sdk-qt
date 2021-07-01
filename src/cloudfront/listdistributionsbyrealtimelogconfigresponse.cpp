@@ -60,7 +60,8 @@ ListDistributionsByRealtimeLogConfigResponse::ListDistributionsByRealtimeLogConf
  */
 const ListDistributionsByRealtimeLogConfigRequest * ListDistributionsByRealtimeLogConfigResponse::request() const
 {
-    return static_cast<const ListDistributionsByRealtimeLogConfigRequest *>(CloudFrontResponse::request());
+    Q_D(const ListDistributionsByRealtimeLogConfigResponse);
+    return static_cast<const ListDistributionsByRealtimeLogConfigRequest *>(d->request);
 }
 
 /*!

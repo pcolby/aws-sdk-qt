@@ -66,7 +66,8 @@ GetSendStatisticsResponse::GetSendStatisticsResponse(
  */
 const GetSendStatisticsRequest * GetSendStatisticsResponse::request() const
 {
-    return static_cast<const GetSendStatisticsRequest *>(SesResponse::request());
+    Q_D(const GetSendStatisticsResponse);
+    return static_cast<const GetSendStatisticsRequest *>(d->request);
 }
 
 /*!

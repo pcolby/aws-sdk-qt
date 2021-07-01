@@ -67,7 +67,8 @@ ListHapgsResponse::ListHapgsResponse(
  */
 const ListHapgsRequest * ListHapgsResponse::request() const
 {
-    return static_cast<const ListHapgsRequest *>(CloudHSMResponse::request());
+    Q_D(const ListHapgsResponse);
+    return static_cast<const ListHapgsRequest *>(d->request);
 }
 
 /*!

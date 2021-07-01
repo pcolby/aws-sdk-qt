@@ -124,16 +124,16 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-01-14"),
-    QStringLiteral("metering.marketplace"),
-    QStringLiteral("AWSMarketplace Metering"),
-    QStringLiteral("aws-marketplace"),
-    parent), d_ptr(new MarketplaceMeteringClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MarketplaceMeteringClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MarketplaceMeteringClient);
+    d->apiVersion = QStringLiteral("2016-01-14");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("metering.marketplace");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWSMarketplace Metering");
+    d->serviceName = QStringLiteral("aws-marketplace");
 }
 
 /*!
@@ -152,16 +152,16 @@ MarketplaceMeteringClient::MarketplaceMeteringClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-01-14"),
-    QStringLiteral("metering.marketplace"),
-    QStringLiteral("AWSMarketplace Metering"),
-    QStringLiteral("aws-marketplace"),
-    parent), d_ptr(new MarketplaceMeteringClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MarketplaceMeteringClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MarketplaceMeteringClient);
+    d->apiVersion = QStringLiteral("2016-01-14");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("metering.marketplace");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWSMarketplace Metering");
+    d->serviceName = QStringLiteral("aws-marketplace");
 }
 
 /*!
@@ -285,9 +285,10 @@ ResolveCustomerResponse * MarketplaceMeteringClient::resolveCustomer(const Resol
 /*!
  * Constructs a MarketplaceMeteringClientPrivate object with public implementation \a q.
  */
-MarketplaceMeteringClientPrivate::MarketplaceMeteringClientPrivate(MarketplaceMeteringClient * const q) : q_ptr(q)
+MarketplaceMeteringClientPrivate::MarketplaceMeteringClientPrivate(MarketplaceMeteringClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MarketplaceMetering

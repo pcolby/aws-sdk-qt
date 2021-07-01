@@ -81,7 +81,8 @@ DeleteImageBuilderResponse::DeleteImageBuilderResponse(
  */
 const DeleteImageBuilderRequest * DeleteImageBuilderResponse::request() const
 {
-    return static_cast<const DeleteImageBuilderRequest *>(AppStreamResponse::request());
+    Q_D(const DeleteImageBuilderResponse);
+    return static_cast<const DeleteImageBuilderRequest *>(d->request);
 }
 
 /*!

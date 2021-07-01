@@ -84,12 +84,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateHostResponse * updateHost(const UpdateHostRequest &request);
 
-protected:
-    /// @cond internal
-    CodeStarconnectionsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CodeStarconnectionsClient(CodeStarconnectionsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(CodeStarconnectionsClient)
     Q_DISABLE_COPY(CodeStarconnectionsClient)

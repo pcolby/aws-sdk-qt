@@ -56,7 +56,8 @@ DeleteStageResponse::DeleteStageResponse(
  */
 const DeleteStageRequest * DeleteStageResponse::request() const
 {
-    return static_cast<const DeleteStageRequest *>(ApiGatewayV2Response::request());
+    Q_D(const DeleteStageResponse);
+    return static_cast<const DeleteStageRequest *>(d->request);
 }
 
 /*!

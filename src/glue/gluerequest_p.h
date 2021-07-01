@@ -20,12 +20,15 @@
 #ifndef QTAWS_GLUEREQUEST_P_H
 #define QTAWS_GLUEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "gluerequest.h"
+
 namespace QtAws {
 namespace Glue {
 
 class GlueRequest;
 
-class GlueRequestPrivate {
+class GlueRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     GlueRequest::Action action; ///< Glue action to be performed.
@@ -36,9 +39,6 @@ public:
     GlueRequestPrivate(const GlueRequestPrivate &other, GlueRequest * const q);
 
     static QString toString(const GlueRequest::Action &action);
-
-protected:
-    GlueRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GlueRequest)

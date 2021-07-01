@@ -69,7 +69,8 @@ DescribeUserGroupsResponse::DescribeUserGroupsResponse(
  */
 const DescribeUserGroupsRequest * DescribeUserGroupsResponse::request() const
 {
-    return static_cast<const DescribeUserGroupsRequest *>(ElastiCacheResponse::request());
+    Q_D(const DescribeUserGroupsResponse);
+    return static_cast<const DescribeUserGroupsRequest *>(d->request);
 }
 
 /*!

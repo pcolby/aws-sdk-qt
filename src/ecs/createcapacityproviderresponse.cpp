@@ -72,7 +72,8 @@ CreateCapacityProviderResponse::CreateCapacityProviderResponse(
  */
 const CreateCapacityProviderRequest * CreateCapacityProviderResponse::request() const
 {
-    return static_cast<const CreateCapacityProviderRequest *>(EcsResponse::request());
+    Q_D(const CreateCapacityProviderResponse);
+    return static_cast<const CreateCapacityProviderRequest *>(d->request);
 }
 
 /*!

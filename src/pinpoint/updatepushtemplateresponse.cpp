@@ -56,7 +56,8 @@ UpdatePushTemplateResponse::UpdatePushTemplateResponse(
  */
 const UpdatePushTemplateRequest * UpdatePushTemplateResponse::request() const
 {
-    return static_cast<const UpdatePushTemplateRequest *>(PinpointResponse::request());
+    Q_D(const UpdatePushTemplateResponse);
+    return static_cast<const UpdatePushTemplateRequest *>(d->request);
 }
 
 /*!

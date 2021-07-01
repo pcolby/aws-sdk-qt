@@ -72,7 +72,8 @@ SubmitTaskStateChangeResponse::SubmitTaskStateChangeResponse(
  */
 const SubmitTaskStateChangeRequest * SubmitTaskStateChangeResponse::request() const
 {
-    return static_cast<const SubmitTaskStateChangeRequest *>(EcsResponse::request());
+    Q_D(const SubmitTaskStateChangeResponse);
+    return static_cast<const SubmitTaskStateChangeRequest *>(d->request);
 }
 
 /*!

@@ -72,7 +72,8 @@ StartDBClusterResponse::StartDBClusterResponse(
  */
 const StartDBClusterRequest * StartDBClusterResponse::request() const
 {
-    return static_cast<const StartDBClusterRequest *>(NeptuneResponse::request());
+    Q_D(const StartDBClusterResponse);
+    return static_cast<const StartDBClusterRequest *>(d->request);
 }
 
 /*!

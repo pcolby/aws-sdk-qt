@@ -66,7 +66,8 @@ GetNamespaceDeletionStatusResponse::GetNamespaceDeletionStatusResponse(
  */
 const GetNamespaceDeletionStatusRequest * GetNamespaceDeletionStatusResponse::request() const
 {
-    return static_cast<const GetNamespaceDeletionStatusRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const GetNamespaceDeletionStatusResponse);
+    return static_cast<const GetNamespaceDeletionStatusRequest *>(d->request);
 }
 
 /*!

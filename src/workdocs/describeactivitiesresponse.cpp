@@ -84,7 +84,8 @@ DescribeActivitiesResponse::DescribeActivitiesResponse(
  */
 const DescribeActivitiesRequest * DescribeActivitiesResponse::request() const
 {
-    return static_cast<const DescribeActivitiesRequest *>(WorkDocsResponse::request());
+    Q_D(const DescribeActivitiesResponse);
+    return static_cast<const DescribeActivitiesRequest *>(d->request);
 }
 
 /*!

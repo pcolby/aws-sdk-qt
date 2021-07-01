@@ -98,7 +98,8 @@ ListChannelMembershipsForAppInstanceUserResponse::ListChannelMembershipsForAppIn
  */
 const ListChannelMembershipsForAppInstanceUserRequest * ListChannelMembershipsForAppInstanceUserResponse::request() const
 {
-    return static_cast<const ListChannelMembershipsForAppInstanceUserRequest *>(ChimeResponse::request());
+    Q_D(const ListChannelMembershipsForAppInstanceUserResponse);
+    return static_cast<const ListChannelMembershipsForAppInstanceUserRequest *>(d->request);
 }
 
 /*!

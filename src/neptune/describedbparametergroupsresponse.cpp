@@ -72,7 +72,8 @@ DescribeDBParameterGroupsResponse::DescribeDBParameterGroupsResponse(
  */
 const DescribeDBParameterGroupsRequest * DescribeDBParameterGroupsResponse::request() const
 {
-    return static_cast<const DescribeDBParameterGroupsRequest *>(NeptuneResponse::request());
+    Q_D(const DescribeDBParameterGroupsResponse);
+    return static_cast<const DescribeDBParameterGroupsRequest *>(d->request);
 }
 
 /*!

@@ -92,7 +92,7 @@ namespace DynamoDB {
  * Constructs a DynamoDBRequest object for DynamoDB \a action.
  */
 DynamoDBRequest::DynamoDBRequest(const Action action)
-    : d_ptr(new DynamoDBRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DynamoDBRequestPrivate(action, this))
 {
 
 }
@@ -101,8 +101,7 @@ DynamoDBRequest::DynamoDBRequest(const Action action)
  * Constructs a copy of \a other.
  */
 DynamoDBRequest::DynamoDBRequest(const DynamoDBRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new DynamoDBRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DynamoDBRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -125,7 +124,7 @@ DynamoDBRequest& DynamoDBRequest::operator=(const DynamoDBRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DynamoDBRequestPrivate.
  */
-DynamoDBRequest::DynamoDBRequest(DynamoDBRequestPrivate * const d) : d_ptr(d)
+DynamoDBRequest::DynamoDBRequest(DynamoDBRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -294,7 +293,7 @@ QNetworkRequest DynamoDBRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DynamoDBRequestPrivate::DynamoDBRequestPrivate(const DynamoDBRequest::Action action, DynamoDBRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -309,8 +308,8 @@ DynamoDBRequestPrivate::DynamoDBRequestPrivate(const DynamoDBRequest::Action act
  */
 DynamoDBRequestPrivate::DynamoDBRequestPrivate(const DynamoDBRequestPrivate &other,
                                      DynamoDBRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

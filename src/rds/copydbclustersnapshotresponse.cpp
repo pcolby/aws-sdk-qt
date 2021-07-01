@@ -119,7 +119,8 @@ CopyDBClusterSnapshotResponse::CopyDBClusterSnapshotResponse(
  */
 const CopyDBClusterSnapshotRequest * CopyDBClusterSnapshotResponse::request() const
 {
-    return static_cast<const CopyDBClusterSnapshotRequest *>(RdsResponse::request());
+    Q_D(const CopyDBClusterSnapshotResponse);
+    return static_cast<const CopyDBClusterSnapshotRequest *>(d->request);
 }
 
 /*!

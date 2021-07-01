@@ -56,7 +56,8 @@ DeletePlaceIndexResponse::DeletePlaceIndexResponse(
  */
 const DeletePlaceIndexRequest * DeletePlaceIndexResponse::request() const
 {
-    return static_cast<const DeletePlaceIndexRequest *>(LocationServiceResponse::request());
+    Q_D(const DeletePlaceIndexResponse);
+    return static_cast<const DeletePlaceIndexRequest *>(d->request);
 }
 
 /*!

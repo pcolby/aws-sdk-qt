@@ -20,20 +20,19 @@
 #ifndef QTAWS_TRANSLATECLIENT_P_H
 #define QTAWS_TRANSLATECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Translate {
 
 class TranslateClient;
 
-class TranslateClientPrivate {
+class TranslateClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit TranslateClientPrivate(TranslateClient * const q);
-
-protected:
-    TranslateClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TranslateClient)

@@ -141,7 +141,8 @@ ListAccountsForParentResponse::ListAccountsForParentResponse(
  */
 const ListAccountsForParentRequest * ListAccountsForParentResponse::request() const
 {
-    return static_cast<const ListAccountsForParentRequest *>(OrganizationsResponse::request());
+    Q_D(const ListAccountsForParentResponse);
+    return static_cast<const ListAccountsForParentRequest *>(d->request);
 }
 
 /*!

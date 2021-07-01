@@ -98,7 +98,8 @@ CreateMeetingDialOutResponse::CreateMeetingDialOutResponse(
  */
 const CreateMeetingDialOutRequest * CreateMeetingDialOutResponse::request() const
 {
-    return static_cast<const CreateMeetingDialOutRequest *>(ChimeResponse::request());
+    Q_D(const CreateMeetingDialOutResponse);
+    return static_cast<const CreateMeetingDialOutRequest *>(d->request);
 }
 
 /*!

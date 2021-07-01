@@ -56,7 +56,8 @@ UpdateApiKeyResponse::UpdateApiKeyResponse(
  */
 const UpdateApiKeyRequest * UpdateApiKeyResponse::request() const
 {
-    return static_cast<const UpdateApiKeyRequest *>(AppSyncResponse::request());
+    Q_D(const UpdateApiKeyResponse);
+    return static_cast<const UpdateApiKeyRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ GetRoleResponse::GetRoleResponse(
  */
 const GetRoleRequest * GetRoleResponse::request() const
 {
-    return static_cast<const GetRoleRequest *>(IamResponse::request());
+    Q_D(const GetRoleResponse);
+    return static_cast<const GetRoleRequest *>(d->request);
 }
 
 /*!

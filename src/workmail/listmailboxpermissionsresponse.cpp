@@ -89,7 +89,8 @@ ListMailboxPermissionsResponse::ListMailboxPermissionsResponse(
  */
 const ListMailboxPermissionsRequest * ListMailboxPermissionsResponse::request() const
 {
-    return static_cast<const ListMailboxPermissionsRequest *>(WorkMailResponse::request());
+    Q_D(const ListMailboxPermissionsResponse);
+    return static_cast<const ListMailboxPermissionsRequest *>(d->request);
 }
 
 /*!

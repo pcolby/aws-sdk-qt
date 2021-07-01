@@ -138,12 +138,6 @@ public slots:
     UpdateConfigurationResponse * updateConfiguration(const UpdateConfigurationRequest &request);
     UpdateMonitoringResponse * updateMonitoring(const UpdateMonitoringRequest &request);
 
-protected:
-    /// @cond internal
-    KafkaClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit KafkaClient(KafkaClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(KafkaClient)
     Q_DISABLE_COPY(KafkaClient)

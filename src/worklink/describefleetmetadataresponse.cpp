@@ -60,7 +60,8 @@ DescribeFleetMetadataResponse::DescribeFleetMetadataResponse(
  */
 const DescribeFleetMetadataRequest * DescribeFleetMetadataResponse::request() const
 {
-    return static_cast<const DescribeFleetMetadataRequest *>(WorkLinkResponse::request());
+    Q_D(const DescribeFleetMetadataResponse);
+    return static_cast<const DescribeFleetMetadataRequest *>(d->request);
 }
 
 /*!

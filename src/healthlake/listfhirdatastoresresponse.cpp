@@ -57,7 +57,8 @@ ListFHIRDatastoresResponse::ListFHIRDatastoresResponse(
  */
 const ListFHIRDatastoresRequest * ListFHIRDatastoresResponse::request() const
 {
-    return static_cast<const ListFHIRDatastoresRequest *>(HealthLakeResponse::request());
+    Q_D(const ListFHIRDatastoresResponse);
+    return static_cast<const ListFHIRDatastoresRequest *>(d->request);
 }
 
 /*!

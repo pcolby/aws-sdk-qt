@@ -60,7 +60,8 @@ DescribeDataSourceResponse::DescribeDataSourceResponse(
  */
 const DescribeDataSourceRequest * DescribeDataSourceResponse::request() const
 {
-    return static_cast<const DescribeDataSourceRequest *>(QuickSightResponse::request());
+    Q_D(const DescribeDataSourceResponse);
+    return static_cast<const DescribeDataSourceRequest *>(d->request);
 }
 
 /*!

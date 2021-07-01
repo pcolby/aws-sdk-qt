@@ -98,7 +98,8 @@ ListControlsResponse::ListControlsResponse(
  */
 const ListControlsRequest * ListControlsResponse::request() const
 {
-    return static_cast<const ListControlsRequest *>(AuditManagerResponse::request());
+    Q_D(const ListControlsResponse);
+    return static_cast<const ListControlsRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ DeleteGeofenceCollectionResponse::DeleteGeofenceCollectionResponse(
  */
 const DeleteGeofenceCollectionRequest * DeleteGeofenceCollectionResponse::request() const
 {
-    return static_cast<const DeleteGeofenceCollectionRequest *>(LocationServiceResponse::request());
+    Q_D(const DeleteGeofenceCollectionResponse);
+    return static_cast<const DeleteGeofenceCollectionRequest *>(d->request);
 }
 
 /*!

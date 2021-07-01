@@ -60,7 +60,8 @@ DescribeAccountSettingsResponse::DescribeAccountSettingsResponse(
  */
 const DescribeAccountSettingsRequest * DescribeAccountSettingsResponse::request() const
 {
-    return static_cast<const DescribeAccountSettingsRequest *>(QuickSightResponse::request());
+    Q_D(const DescribeAccountSettingsResponse);
+    return static_cast<const DescribeAccountSettingsRequest *>(d->request);
 }
 
 /*!

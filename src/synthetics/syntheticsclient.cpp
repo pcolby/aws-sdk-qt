@@ -101,16 +101,16 @@ SyntheticsClient::SyntheticsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-10-11"),
-    QStringLiteral("synthetics"),
-    QStringLiteral("Synthetics"),
-    QStringLiteral("synthetics"),
-    parent), d_ptr(new SyntheticsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new SyntheticsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(SyntheticsClient);
+    d->apiVersion = QStringLiteral("2017-10-11");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("synthetics");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Synthetics");
+    d->serviceName = QStringLiteral("synthetics");
 }
 
 /*!
@@ -129,16 +129,16 @@ SyntheticsClient::SyntheticsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-10-11"),
-    QStringLiteral("synthetics"),
-    QStringLiteral("Synthetics"),
-    QStringLiteral("synthetics"),
-    parent), d_ptr(new SyntheticsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new SyntheticsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(SyntheticsClient);
+    d->apiVersion = QStringLiteral("2017-10-11");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("synthetics");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Synthetics");
+    d->serviceName = QStringLiteral("synthetics");
 }
 
 /*!
@@ -417,9 +417,10 @@ UpdateCanaryResponse * SyntheticsClient::updateCanary(const UpdateCanaryRequest 
 /*!
  * Constructs a SyntheticsClientPrivate object with public implementation \a q.
  */
-SyntheticsClientPrivate::SyntheticsClientPrivate(SyntheticsClient * const q) : q_ptr(q)
+SyntheticsClientPrivate::SyntheticsClientPrivate(SyntheticsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Synthetics

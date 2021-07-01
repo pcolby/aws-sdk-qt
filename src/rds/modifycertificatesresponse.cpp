@@ -119,7 +119,8 @@ ModifyCertificatesResponse::ModifyCertificatesResponse(
  */
 const ModifyCertificatesRequest * ModifyCertificatesResponse::request() const
 {
-    return static_cast<const ModifyCertificatesRequest *>(RdsResponse::request());
+    Q_D(const ModifyCertificatesResponse);
+    return static_cast<const ModifyCertificatesRequest *>(d->request);
 }
 
 /*!

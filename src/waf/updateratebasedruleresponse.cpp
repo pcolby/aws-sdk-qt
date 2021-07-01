@@ -76,7 +76,8 @@ UpdateRateBasedRuleResponse::UpdateRateBasedRuleResponse(
  */
 const UpdateRateBasedRuleRequest * UpdateRateBasedRuleResponse::request() const
 {
-    return static_cast<const UpdateRateBasedRuleRequest *>(WafResponse::request());
+    Q_D(const UpdateRateBasedRuleResponse);
+    return static_cast<const UpdateRateBasedRuleRequest *>(d->request);
 }
 
 /*!

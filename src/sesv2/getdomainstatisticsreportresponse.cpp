@@ -88,7 +88,8 @@ GetDomainStatisticsReportResponse::GetDomainStatisticsReportResponse(
  */
 const GetDomainStatisticsReportRequest * GetDomainStatisticsReportResponse::request() const
 {
-    return static_cast<const GetDomainStatisticsReportRequest *>(Sesv2Response::request());
+    Q_D(const GetDomainStatisticsReportResponse);
+    return static_cast<const GetDomainStatisticsReportRequest *>(d->request);
 }
 
 /*!

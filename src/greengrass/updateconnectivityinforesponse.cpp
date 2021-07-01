@@ -58,7 +58,8 @@ UpdateConnectivityInfoResponse::UpdateConnectivityInfoResponse(
  */
 const UpdateConnectivityInfoRequest * UpdateConnectivityInfoResponse::request() const
 {
-    return static_cast<const UpdateConnectivityInfoRequest *>(GreengrassResponse::request());
+    Q_D(const UpdateConnectivityInfoResponse);
+    return static_cast<const UpdateConnectivityInfoRequest *>(d->request);
 }
 
 /*!

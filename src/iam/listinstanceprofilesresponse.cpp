@@ -62,7 +62,8 @@ ListInstanceProfilesResponse::ListInstanceProfilesResponse(
  */
 const ListInstanceProfilesRequest * ListInstanceProfilesResponse::request() const
 {
-    return static_cast<const ListInstanceProfilesRequest *>(IamResponse::request());
+    Q_D(const ListInstanceProfilesResponse);
+    return static_cast<const ListInstanceProfilesRequest *>(d->request);
 }
 
 /*!

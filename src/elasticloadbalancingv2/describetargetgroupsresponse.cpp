@@ -90,7 +90,8 @@ DescribeTargetGroupsResponse::DescribeTargetGroupsResponse(
  */
 const DescribeTargetGroupsRequest * DescribeTargetGroupsResponse::request() const
 {
-    return static_cast<const DescribeTargetGroupsRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const DescribeTargetGroupsResponse);
+    return static_cast<const DescribeTargetGroupsRequest *>(d->request);
 }
 
 /*!

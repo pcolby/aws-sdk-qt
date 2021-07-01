@@ -79,7 +79,8 @@ CreateQuickConnectResponse::CreateQuickConnectResponse(
  */
 const CreateQuickConnectRequest * CreateQuickConnectResponse::request() const
 {
-    return static_cast<const CreateQuickConnectRequest *>(ConnectResponse::request());
+    Q_D(const CreateQuickConnectResponse);
+    return static_cast<const CreateQuickConnectRequest *>(d->request);
 }
 
 /*!

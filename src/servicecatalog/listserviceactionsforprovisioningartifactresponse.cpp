@@ -61,7 +61,8 @@ ListServiceActionsForProvisioningArtifactResponse::ListServiceActionsForProvisio
  */
 const ListServiceActionsForProvisioningArtifactRequest * ListServiceActionsForProvisioningArtifactResponse::request() const
 {
-    return static_cast<const ListServiceActionsForProvisioningArtifactRequest *>(ServiceCatalogResponse::request());
+    Q_D(const ListServiceActionsForProvisioningArtifactResponse);
+    return static_cast<const ListServiceActionsForProvisioningArtifactRequest *>(d->request);
 }
 
 /*!

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    DeviceFarmResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DeviceFarmResponse(DeviceFarmResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

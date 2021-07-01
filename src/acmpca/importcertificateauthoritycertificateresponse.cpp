@@ -69,7 +69,8 @@ ImportCertificateAuthorityCertificateResponse::ImportCertificateAuthorityCertifi
  */
 const ImportCertificateAuthorityCertificateRequest * ImportCertificateAuthorityCertificateResponse::request() const
 {
-    return static_cast<const ImportCertificateAuthorityCertificateRequest *>(AcmpcaResponse::request());
+    Q_D(const ImportCertificateAuthorityCertificateResponse);
+    return static_cast<const ImportCertificateAuthorityCertificateRequest *>(d->request);
 }
 
 /*!

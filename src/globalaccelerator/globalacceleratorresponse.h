@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    GlobalAcceleratorResponsePrivate * const d_ptr; ///< Internal d-pointer.
     GlobalAcceleratorResponse(GlobalAcceleratorResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

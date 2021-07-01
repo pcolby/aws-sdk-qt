@@ -75,7 +75,8 @@ GetDevicePoolCompatibilityResponse::GetDevicePoolCompatibilityResponse(
  */
 const GetDevicePoolCompatibilityRequest * GetDevicePoolCompatibilityResponse::request() const
 {
-    return static_cast<const GetDevicePoolCompatibilityRequest *>(DeviceFarmResponse::request());
+    Q_D(const GetDevicePoolCompatibilityResponse);
+    return static_cast<const GetDevicePoolCompatibilityRequest *>(d->request);
 }
 
 /*!

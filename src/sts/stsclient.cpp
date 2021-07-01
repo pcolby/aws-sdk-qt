@@ -81,16 +81,16 @@ StsClient::StsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2011-06-15"),
-    QStringLiteral("sts"),
-    QStringLiteral("AWS Security Token Service"),
-    QStringLiteral("sts"),
-    parent), d_ptr(new StsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new StsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(StsClient);
+    d->apiVersion = QStringLiteral("2011-06-15");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("sts");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Security Token Service");
+    d->serviceName = QStringLiteral("sts");
 }
 
 /*!
@@ -109,16 +109,16 @@ StsClient::StsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2011-06-15"),
-    QStringLiteral("sts"),
-    QStringLiteral("AWS Security Token Service"),
-    QStringLiteral("sts"),
-    parent), d_ptr(new StsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new StsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(StsClient);
+    d->apiVersion = QStringLiteral("2011-06-15");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("sts");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Security Token Service");
+    d->serviceName = QStringLiteral("sts");
 }
 
 /*!
@@ -990,9 +990,10 @@ GetSessionTokenResponse * StsClient::getSessionToken(const GetSessionTokenReques
 /*!
  * Constructs a StsClientPrivate object with public implementation \a q.
  */
-StsClientPrivate::StsClientPrivate(StsClient * const q) : q_ptr(q)
+StsClientPrivate::StsClientPrivate(StsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace STS

@@ -78,7 +78,8 @@ TestEventPatternResponse::TestEventPatternResponse(
  */
 const TestEventPatternRequest * TestEventPatternResponse::request() const
 {
-    return static_cast<const TestEventPatternRequest *>(EventBridgeResponse::request());
+    Q_D(const TestEventPatternResponse);
+    return static_cast<const TestEventPatternRequest *>(d->request);
 }
 
 /*!

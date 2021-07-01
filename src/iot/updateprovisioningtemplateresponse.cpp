@@ -82,7 +82,8 @@ UpdateProvisioningTemplateResponse::UpdateProvisioningTemplateResponse(
  */
 const UpdateProvisioningTemplateRequest * UpdateProvisioningTemplateResponse::request() const
 {
-    return static_cast<const UpdateProvisioningTemplateRequest *>(IoTResponse::request());
+    Q_D(const UpdateProvisioningTemplateResponse);
+    return static_cast<const UpdateProvisioningTemplateRequest *>(d->request);
 }
 
 /*!

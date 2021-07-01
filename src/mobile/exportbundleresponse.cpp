@@ -58,7 +58,8 @@ ExportBundleResponse::ExportBundleResponse(
  */
 const ExportBundleRequest * ExportBundleResponse::request() const
 {
-    return static_cast<const ExportBundleRequest *>(MobileResponse::request());
+    Q_D(const ExportBundleResponse);
+    return static_cast<const ExportBundleRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_MARKETPLACECATALOGCLIENT_P_H
 #define QTAWS_MARKETPLACECATALOGCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MarketplaceCatalog {
 
 class MarketplaceCatalogClient;
 
-class MarketplaceCatalogClientPrivate {
+class MarketplaceCatalogClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MarketplaceCatalogClientPrivate(MarketplaceCatalogClient * const q);
-
-protected:
-    MarketplaceCatalogClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MarketplaceCatalogClient)

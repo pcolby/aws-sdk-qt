@@ -66,7 +66,8 @@ ForgetDeviceResponse::ForgetDeviceResponse(
  */
 const ForgetDeviceRequest * ForgetDeviceResponse::request() const
 {
-    return static_cast<const ForgetDeviceRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const ForgetDeviceResponse);
+    return static_cast<const ForgetDeviceRequest *>(d->request);
 }
 
 /*!

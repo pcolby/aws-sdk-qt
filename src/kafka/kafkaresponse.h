@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    KafkaResponsePrivate * const d_ptr; ///< Internal d-pointer.
     KafkaResponse(KafkaResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

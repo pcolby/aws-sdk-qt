@@ -58,7 +58,8 @@ GetBlockPublicAccessConfigurationResponse::GetBlockPublicAccessConfigurationResp
  */
 const GetBlockPublicAccessConfigurationRequest * GetBlockPublicAccessConfigurationResponse::request() const
 {
-    return static_cast<const GetBlockPublicAccessConfigurationRequest *>(EmrResponse::request());
+    Q_D(const GetBlockPublicAccessConfigurationResponse);
+    return static_cast<const GetBlockPublicAccessConfigurationRequest *>(d->request);
 }
 
 /*!

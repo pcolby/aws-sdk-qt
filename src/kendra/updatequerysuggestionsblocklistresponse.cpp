@@ -56,7 +56,8 @@ UpdateQuerySuggestionsBlockListResponse::UpdateQuerySuggestionsBlockListResponse
  */
 const UpdateQuerySuggestionsBlockListRequest * UpdateQuerySuggestionsBlockListResponse::request() const
 {
-    return static_cast<const UpdateQuerySuggestionsBlockListRequest *>(kendraResponse::request());
+    Q_D(const UpdateQuerySuggestionsBlockListResponse);
+    return static_cast<const UpdateQuerySuggestionsBlockListRequest *>(d->request);
 }
 
 /*!

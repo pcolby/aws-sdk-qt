@@ -98,7 +98,8 @@ DescribeDocumentResponse::DescribeDocumentResponse(
  */
 const DescribeDocumentRequest * DescribeDocumentResponse::request() const
 {
-    return static_cast<const DescribeDocumentRequest *>(SsmResponse::request());
+    Q_D(const DescribeDocumentResponse);
+    return static_cast<const DescribeDocumentRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetRouteResponsesResponse::GetRouteResponsesResponse(
  */
 const GetRouteResponsesRequest * GetRouteResponsesResponse::request() const
 {
-    return static_cast<const GetRouteResponsesRequest *>(ApiGatewayV2Response::request());
+    Q_D(const GetRouteResponsesResponse);
+    return static_cast<const GetRouteResponsesRequest *>(d->request);
 }
 
 /*!

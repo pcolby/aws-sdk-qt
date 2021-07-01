@@ -126,7 +126,8 @@ DeleteRegexPatternSetResponse::DeleteRegexPatternSetResponse(
  */
 const DeleteRegexPatternSetRequest * DeleteRegexPatternSetResponse::request() const
 {
-    return static_cast<const DeleteRegexPatternSetRequest *>(Wafv2Response::request());
+    Q_D(const DeleteRegexPatternSetResponse);
+    return static_cast<const DeleteRegexPatternSetRequest *>(d->request);
 }
 
 /*!

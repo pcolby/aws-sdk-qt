@@ -56,7 +56,8 @@ ListSolutionsResponse::ListSolutionsResponse(
  */
 const ListSolutionsRequest * ListSolutionsResponse::request() const
 {
-    return static_cast<const ListSolutionsRequest *>(PersonalizeResponse::request());
+    Q_D(const ListSolutionsResponse);
+    return static_cast<const ListSolutionsRequest *>(d->request);
 }
 
 /*!

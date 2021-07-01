@@ -439,7 +439,8 @@ MergeBranchesByThreeWayResponse::MergeBranchesByThreeWayResponse(
  */
 const MergeBranchesByThreeWayRequest * MergeBranchesByThreeWayResponse::request() const
 {
-    return static_cast<const MergeBranchesByThreeWayRequest *>(CodeCommitResponse::request());
+    Q_D(const MergeBranchesByThreeWayResponse);
+    return static_cast<const MergeBranchesByThreeWayRequest *>(d->request);
 }
 
 /*!

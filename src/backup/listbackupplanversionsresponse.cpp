@@ -59,7 +59,8 @@ ListBackupPlanVersionsResponse::ListBackupPlanVersionsResponse(
  */
 const ListBackupPlanVersionsRequest * ListBackupPlanVersionsResponse::request() const
 {
-    return static_cast<const ListBackupPlanVersionsRequest *>(BackupResponse::request());
+    Q_D(const ListBackupPlanVersionsResponse);
+    return static_cast<const ListBackupPlanVersionsRequest *>(d->request);
 }
 
 /*!

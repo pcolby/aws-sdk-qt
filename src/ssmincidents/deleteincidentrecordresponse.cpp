@@ -65,7 +65,8 @@ DeleteIncidentRecordResponse::DeleteIncidentRecordResponse(
  */
 const DeleteIncidentRecordRequest * DeleteIncidentRecordResponse::request() const
 {
-    return static_cast<const DeleteIncidentRecordRequest *>(SSMIncidentsResponse::request());
+    Q_D(const DeleteIncidentRecordResponse);
+    return static_cast<const DeleteIncidentRecordRequest *>(d->request);
 }
 
 /*!

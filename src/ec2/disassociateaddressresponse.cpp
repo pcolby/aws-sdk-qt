@@ -87,7 +87,8 @@ DisassociateAddressResponse::DisassociateAddressResponse(
  */
 const DisassociateAddressRequest * DisassociateAddressResponse::request() const
 {
-    return static_cast<const DisassociateAddressRequest *>(Ec2Response::request());
+    Q_D(const DisassociateAddressResponse);
+    return static_cast<const DisassociateAddressRequest *>(d->request);
 }
 
 /*!

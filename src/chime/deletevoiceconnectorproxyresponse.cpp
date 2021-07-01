@@ -98,7 +98,8 @@ DeleteVoiceConnectorProxyResponse::DeleteVoiceConnectorProxyResponse(
  */
 const DeleteVoiceConnectorProxyRequest * DeleteVoiceConnectorProxyResponse::request() const
 {
-    return static_cast<const DeleteVoiceConnectorProxyRequest *>(ChimeResponse::request());
+    Q_D(const DeleteVoiceConnectorProxyResponse);
+    return static_cast<const DeleteVoiceConnectorProxyRequest *>(d->request);
 }
 
 /*!

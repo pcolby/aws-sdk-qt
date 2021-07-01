@@ -119,7 +119,8 @@ ModifyGlobalClusterResponse::ModifyGlobalClusterResponse(
  */
 const ModifyGlobalClusterRequest * ModifyGlobalClusterResponse::request() const
 {
-    return static_cast<const ModifyGlobalClusterRequest *>(RdsResponse::request());
+    Q_D(const ModifyGlobalClusterResponse);
+    return static_cast<const ModifyGlobalClusterRequest *>(d->request);
 }
 
 /*!

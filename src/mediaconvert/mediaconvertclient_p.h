@@ -20,20 +20,19 @@
 #ifndef QTAWS_MEDIACONVERTCLIENT_P_H
 #define QTAWS_MEDIACONVERTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MediaConvert {
 
 class MediaConvertClient;
 
-class MediaConvertClientPrivate {
+class MediaConvertClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MediaConvertClientPrivate(MediaConvertClient * const q);
-
-protected:
-    MediaConvertClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaConvertClient)

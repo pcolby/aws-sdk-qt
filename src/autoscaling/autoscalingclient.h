@@ -238,12 +238,6 @@ public slots:
     TerminateInstanceInAutoScalingGroupResponse * terminateInstanceInAutoScalingGroup(const TerminateInstanceInAutoScalingGroupRequest &request);
     UpdateAutoScalingGroupResponse * updateAutoScalingGroup(const UpdateAutoScalingGroupRequest &request);
 
-protected:
-    /// @cond internal
-    AutoScalingClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AutoScalingClient(AutoScalingClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(AutoScalingClient)
     Q_DISABLE_COPY(AutoScalingClient)

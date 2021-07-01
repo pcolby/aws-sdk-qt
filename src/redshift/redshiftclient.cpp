@@ -297,16 +297,16 @@ RedshiftClient::RedshiftClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2012-12-01"),
-    QStringLiteral("redshift"),
-    QStringLiteral("Amazon Redshift"),
-    QStringLiteral("redshift"),
-    parent), d_ptr(new RedshiftClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new RedshiftClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(RedshiftClient);
+    d->apiVersion = QStringLiteral("2012-12-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("redshift");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Redshift");
+    d->serviceName = QStringLiteral("redshift");
 }
 
 /*!
@@ -325,16 +325,16 @@ RedshiftClient::RedshiftClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2012-12-01"),
-    QStringLiteral("redshift"),
-    QStringLiteral("Amazon Redshift"),
-    QStringLiteral("redshift"),
-    parent), d_ptr(new RedshiftClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new RedshiftClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(RedshiftClient);
+    d->apiVersion = QStringLiteral("2012-12-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("redshift");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Redshift");
+    d->serviceName = QStringLiteral("redshift");
 }
 
 /*!
@@ -2273,9 +2273,10 @@ UpdatePartnerStatusResponse * RedshiftClient::updatePartnerStatus(const UpdatePa
 /*!
  * Constructs a RedshiftClientPrivate object with public implementation \a q.
  */
-RedshiftClientPrivate::RedshiftClientPrivate(RedshiftClient * const q) : q_ptr(q)
+RedshiftClientPrivate::RedshiftClientPrivate(RedshiftClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Redshift

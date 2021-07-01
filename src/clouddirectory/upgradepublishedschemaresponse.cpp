@@ -63,7 +63,8 @@ UpgradePublishedSchemaResponse::UpgradePublishedSchemaResponse(
  */
 const UpgradePublishedSchemaRequest * UpgradePublishedSchemaResponse::request() const
 {
-    return static_cast<const UpgradePublishedSchemaRequest *>(CloudDirectoryResponse::request());
+    Q_D(const UpgradePublishedSchemaResponse);
+    return static_cast<const UpgradePublishedSchemaRequest *>(d->request);
 }
 
 /*!

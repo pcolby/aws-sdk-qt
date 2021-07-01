@@ -37,7 +37,7 @@ namespace ECS {
  * Constructs a EcsResponse object with parent \a parent.
  */
 EcsResponse::EcsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new EcsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new EcsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ EcsResponse::EcsResponse(QObject * const parent)
  * implementation that inherits from EcsResponsePrivate.
  */
 EcsResponse::EcsResponse(EcsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void EcsResponse::parseFailure(QIODevice &response)
  * Constructs a EcsResponsePrivate object with public implementation \a q.
  */
 EcsResponsePrivate::EcsResponsePrivate(
-    EcsResponse * const q) : q_ptr(q)
+    EcsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

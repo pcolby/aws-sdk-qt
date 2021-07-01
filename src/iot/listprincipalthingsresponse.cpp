@@ -82,7 +82,8 @@ ListPrincipalThingsResponse::ListPrincipalThingsResponse(
  */
 const ListPrincipalThingsRequest * ListPrincipalThingsResponse::request() const
 {
-    return static_cast<const ListPrincipalThingsRequest *>(IoTResponse::request());
+    Q_D(const ListPrincipalThingsResponse);
+    return static_cast<const ListPrincipalThingsRequest *>(d->request);
 }
 
 /*!

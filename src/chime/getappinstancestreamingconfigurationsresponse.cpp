@@ -98,7 +98,8 @@ GetAppInstanceStreamingConfigurationsResponse::GetAppInstanceStreamingConfigurat
  */
 const GetAppInstanceStreamingConfigurationsRequest * GetAppInstanceStreamingConfigurationsResponse::request() const
 {
-    return static_cast<const GetAppInstanceStreamingConfigurationsRequest *>(ChimeResponse::request());
+    Q_D(const GetAppInstanceStreamingConfigurationsResponse);
+    return static_cast<const GetAppInstanceStreamingConfigurationsRequest *>(d->request);
 }
 
 /*!

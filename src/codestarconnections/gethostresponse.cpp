@@ -140,7 +140,8 @@ GetHostResponse::GetHostResponse(
  */
 const GetHostRequest * GetHostResponse::request() const
 {
-    return static_cast<const GetHostRequest *>(CodeStarconnectionsResponse::request());
+    Q_D(const GetHostResponse);
+    return static_cast<const GetHostRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,14 @@
 #ifndef QTAWS_EFSRESPONSE_P_H
 #define QTAWS_EFSRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace EFS {
 
 class EfsResponse;
 
-class EfsResponsePrivate {
+class EfsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    EfsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EfsResponse)

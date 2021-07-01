@@ -131,7 +131,8 @@ GetRandomPasswordResponse::GetRandomPasswordResponse(
  */
 const GetRandomPasswordRequest * GetRandomPasswordResponse::request() const
 {
-    return static_cast<const GetRandomPasswordRequest *>(SecretsManagerResponse::request());
+    Q_D(const GetRandomPasswordResponse);
+    return static_cast<const GetRandomPasswordRequest *>(d->request);
 }
 
 /*!

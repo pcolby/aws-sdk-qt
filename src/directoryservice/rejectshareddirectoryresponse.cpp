@@ -69,7 +69,8 @@ RejectSharedDirectoryResponse::RejectSharedDirectoryResponse(
  */
 const RejectSharedDirectoryRequest * RejectSharedDirectoryResponse::request() const
 {
-    return static_cast<const RejectSharedDirectoryRequest *>(DirectoryServiceResponse::request());
+    Q_D(const RejectSharedDirectoryResponse);
+    return static_cast<const RejectSharedDirectoryRequest *>(d->request);
 }
 
 /*!

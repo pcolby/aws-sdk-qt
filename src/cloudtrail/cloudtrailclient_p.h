@@ -20,20 +20,19 @@
 #ifndef QTAWS_CLOUDTRAILCLIENT_P_H
 #define QTAWS_CLOUDTRAILCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CloudTrail {
 
 class CloudTrailClient;
 
-class CloudTrailClientPrivate {
+class CloudTrailClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CloudTrailClientPrivate(CloudTrailClient * const q);
-
-protected:
-    CloudTrailClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudTrailClient)

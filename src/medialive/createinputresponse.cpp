@@ -55,7 +55,8 @@ CreateInputResponse::CreateInputResponse(
  */
 const CreateInputRequest * CreateInputResponse::request() const
 {
-    return static_cast<const CreateInputRequest *>(MediaLiveResponse::request());
+    Q_D(const CreateInputResponse);
+    return static_cast<const CreateInputRequest *>(d->request);
 }
 
 /*!

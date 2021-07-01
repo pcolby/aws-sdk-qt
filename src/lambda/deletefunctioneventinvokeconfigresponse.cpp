@@ -66,7 +66,8 @@ DeleteFunctionEventInvokeConfigResponse::DeleteFunctionEventInvokeConfigResponse
  */
 const DeleteFunctionEventInvokeConfigRequest * DeleteFunctionEventInvokeConfigResponse::request() const
 {
-    return static_cast<const DeleteFunctionEventInvokeConfigRequest *>(LambdaResponse::request());
+    Q_D(const DeleteFunctionEventInvokeConfigResponse);
+    return static_cast<const DeleteFunctionEventInvokeConfigRequest *>(d->request);
 }
 
 /*!

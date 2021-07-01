@@ -123,12 +123,6 @@ public slots:
     UpdateAnomalyDetectorResponse * updateAnomalyDetector(const UpdateAnomalyDetectorRequest &request);
     UpdateMetricSetResponse * updateMetricSet(const UpdateMetricSetRequest &request);
 
-protected:
-    /// @cond internal
-    LookoutMetricsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit LookoutMetricsClient(LookoutMetricsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(LookoutMetricsClient)
     Q_DISABLE_COPY(LookoutMetricsClient)

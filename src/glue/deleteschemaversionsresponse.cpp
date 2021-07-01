@@ -58,7 +58,8 @@ DeleteSchemaVersionsResponse::DeleteSchemaVersionsResponse(
  */
 const DeleteSchemaVersionsRequest * DeleteSchemaVersionsResponse::request() const
 {
-    return static_cast<const DeleteSchemaVersionsRequest *>(GlueResponse::request());
+    Q_D(const DeleteSchemaVersionsResponse);
+    return static_cast<const DeleteSchemaVersionsRequest *>(d->request);
 }
 
 /*!

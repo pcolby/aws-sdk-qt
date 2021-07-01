@@ -115,7 +115,8 @@ StartMatchBackfillResponse::StartMatchBackfillResponse(
  */
 const StartMatchBackfillRequest * StartMatchBackfillResponse::request() const
 {
-    return static_cast<const StartMatchBackfillRequest *>(GameLiftResponse::request());
+    Q_D(const StartMatchBackfillResponse);
+    return static_cast<const StartMatchBackfillRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ UpdateDatasetResponse::UpdateDatasetResponse(
  */
 const UpdateDatasetRequest * UpdateDatasetResponse::request() const
 {
-    return static_cast<const UpdateDatasetRequest *>(GlueDataBrewResponse::request());
+    Q_D(const UpdateDatasetResponse);
+    return static_cast<const UpdateDatasetRequest *>(d->request);
 }
 
 /*!

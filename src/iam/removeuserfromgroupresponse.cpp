@@ -62,7 +62,8 @@ RemoveUserFromGroupResponse::RemoveUserFromGroupResponse(
  */
 const RemoveUserFromGroupRequest * RemoveUserFromGroupResponse::request() const
 {
-    return static_cast<const RemoveUserFromGroupRequest *>(IamResponse::request());
+    Q_D(const RemoveUserFromGroupResponse);
+    return static_cast<const RemoveUserFromGroupRequest *>(d->request);
 }
 
 /*!

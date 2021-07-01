@@ -145,7 +145,8 @@ CreateFirewallResponse::CreateFirewallResponse(
  */
 const CreateFirewallRequest * CreateFirewallResponse::request() const
 {
-    return static_cast<const CreateFirewallRequest *>(NetworkFirewallResponse::request());
+    Q_D(const CreateFirewallResponse);
+    return static_cast<const CreateFirewallRequest *>(d->request);
 }
 
 /*!

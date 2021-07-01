@@ -120,16 +120,16 @@ EfsClient::EfsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-02-01"),
-    QStringLiteral("elasticfilesystem"),
-    QStringLiteral("Amazon Elastic File System"),
-    QStringLiteral("elasticfilesystem"),
-    parent), d_ptr(new EfsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new EfsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(EfsClient);
+    d->apiVersion = QStringLiteral("2015-02-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("elasticfilesystem");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Elastic File System");
+    d->serviceName = QStringLiteral("elasticfilesystem");
 }
 
 /*!
@@ -148,16 +148,16 @@ EfsClient::EfsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-02-01"),
-    QStringLiteral("elasticfilesystem"),
-    QStringLiteral("Amazon Elastic File System"),
-    QStringLiteral("elasticfilesystem"),
-    parent), d_ptr(new EfsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new EfsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(EfsClient);
+    d->apiVersion = QStringLiteral("2015-02-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("elasticfilesystem");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Elastic File System");
+    d->serviceName = QStringLiteral("elasticfilesystem");
 }
 
 /*!
@@ -981,9 +981,10 @@ UpdateFileSystemResponse * EfsClient::updateFileSystem(const UpdateFileSystemReq
 /*!
  * Constructs a EfsClientPrivate object with public implementation \a q.
  */
-EfsClientPrivate::EfsClientPrivate(EfsClient * const q) : q_ptr(q)
+EfsClientPrivate::EfsClientPrivate(EfsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace EFS

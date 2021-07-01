@@ -76,7 +76,8 @@ UpdateRuleGroupResponse::UpdateRuleGroupResponse(
  */
 const UpdateRuleGroupRequest * UpdateRuleGroupResponse::request() const
 {
-    return static_cast<const UpdateRuleGroupRequest *>(WafResponse::request());
+    Q_D(const UpdateRuleGroupResponse);
+    return static_cast<const UpdateRuleGroupRequest *>(d->request);
 }
 
 /*!

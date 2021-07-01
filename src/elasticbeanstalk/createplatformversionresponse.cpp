@@ -77,7 +77,8 @@ CreatePlatformVersionResponse::CreatePlatformVersionResponse(
  */
 const CreatePlatformVersionRequest * CreatePlatformVersionResponse::request() const
 {
-    return static_cast<const CreatePlatformVersionRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const CreatePlatformVersionResponse);
+    return static_cast<const CreatePlatformVersionRequest *>(d->request);
 }
 
 /*!

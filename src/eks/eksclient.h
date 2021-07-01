@@ -144,12 +144,6 @@ public slots:
     UpdateNodegroupConfigResponse * updateNodegroupConfig(const UpdateNodegroupConfigRequest &request);
     UpdateNodegroupVersionResponse * updateNodegroupVersion(const UpdateNodegroupVersionRequest &request);
 
-protected:
-    /// @cond internal
-    EksClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EksClient(EksClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(EksClient)
     Q_DISABLE_COPY(EksClient)

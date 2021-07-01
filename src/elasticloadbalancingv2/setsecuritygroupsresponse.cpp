@@ -90,7 +90,8 @@ SetSecurityGroupsResponse::SetSecurityGroupsResponse(
  */
 const SetSecurityGroupsRequest * SetSecurityGroupsResponse::request() const
 {
-    return static_cast<const SetSecurityGroupsRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const SetSecurityGroupsResponse);
+    return static_cast<const SetSecurityGroupsRequest *>(d->request);
 }
 
 /*!

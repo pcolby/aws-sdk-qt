@@ -69,7 +69,8 @@ DescribeRegionsResponse::DescribeRegionsResponse(
  */
 const DescribeRegionsRequest * DescribeRegionsResponse::request() const
 {
-    return static_cast<const DescribeRegionsRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DescribeRegionsResponse);
+    return static_cast<const DescribeRegionsRequest *>(d->request);
 }
 
 /*!

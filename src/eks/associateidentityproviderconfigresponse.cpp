@@ -65,7 +65,8 @@ AssociateIdentityProviderConfigResponse::AssociateIdentityProviderConfigResponse
  */
 const AssociateIdentityProviderConfigRequest * AssociateIdentityProviderConfigResponse::request() const
 {
-    return static_cast<const AssociateIdentityProviderConfigRequest *>(EksResponse::request());
+    Q_D(const AssociateIdentityProviderConfigResponse);
+    return static_cast<const AssociateIdentityProviderConfigRequest *>(d->request);
 }
 
 /*!

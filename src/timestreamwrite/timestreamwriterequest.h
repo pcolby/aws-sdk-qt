@@ -73,8 +73,7 @@ public:
 
 protected:
     /// @cond internal
-    TimestreamWriteRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit TimestreamWriteRequest(TimestreamWriteRequestPrivate * const d);
+    TimestreamWriteRequest(TimestreamWriteRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

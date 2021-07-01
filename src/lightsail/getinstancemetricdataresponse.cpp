@@ -74,7 +74,8 @@ GetInstanceMetricDataResponse::GetInstanceMetricDataResponse(
  */
 const GetInstanceMetricDataRequest * GetInstanceMetricDataResponse::request() const
 {
-    return static_cast<const GetInstanceMetricDataRequest *>(LightsailResponse::request());
+    Q_D(const GetInstanceMetricDataResponse);
+    return static_cast<const GetInstanceMetricDataRequest *>(d->request);
 }
 
 /*!

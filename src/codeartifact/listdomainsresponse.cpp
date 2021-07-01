@@ -293,7 +293,8 @@ ListDomainsResponse::ListDomainsResponse(
  */
 const ListDomainsRequest * ListDomainsResponse::request() const
 {
-    return static_cast<const ListDomainsRequest *>(CodeArtifactResponse::request());
+    Q_D(const ListDomainsResponse);
+    return static_cast<const ListDomainsRequest *>(d->request);
 }
 
 /*!

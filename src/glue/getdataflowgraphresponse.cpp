@@ -58,7 +58,8 @@ GetDataflowGraphResponse::GetDataflowGraphResponse(
  */
 const GetDataflowGraphRequest * GetDataflowGraphResponse::request() const
 {
-    return static_cast<const GetDataflowGraphRequest *>(GlueResponse::request());
+    Q_D(const GetDataflowGraphResponse);
+    return static_cast<const GetDataflowGraphRequest *>(d->request);
 }
 
 /*!

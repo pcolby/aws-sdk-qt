@@ -37,7 +37,7 @@ namespace Personalize {
  * Constructs a PersonalizeResponse object with parent \a parent.
  */
 PersonalizeResponse::PersonalizeResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new PersonalizeResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new PersonalizeResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ PersonalizeResponse::PersonalizeResponse(QObject * const parent)
  * implementation that inherits from PersonalizeResponsePrivate.
  */
 PersonalizeResponse::PersonalizeResponse(PersonalizeResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void PersonalizeResponse::parseFailure(QIODevice &response)
  * Constructs a PersonalizeResponsePrivate object with public implementation \a q.
  */
 PersonalizeResponsePrivate::PersonalizeResponsePrivate(
-    PersonalizeResponse * const q) : q_ptr(q)
+    PersonalizeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

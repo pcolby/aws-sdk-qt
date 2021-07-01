@@ -75,7 +75,8 @@ DescribeConfigurationAggregatorSourcesStatusResponse::DescribeConfigurationAggre
  */
 const DescribeConfigurationAggregatorSourcesStatusRequest * DescribeConfigurationAggregatorSourcesStatusResponse::request() const
 {
-    return static_cast<const DescribeConfigurationAggregatorSourcesStatusRequest *>(ConfigServiceResponse::request());
+    Q_D(const DescribeConfigurationAggregatorSourcesStatusResponse);
+    return static_cast<const DescribeConfigurationAggregatorSourcesStatusRequest *>(d->request);
 }
 
 /*!

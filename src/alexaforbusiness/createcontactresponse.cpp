@@ -62,7 +62,8 @@ CreateContactResponse::CreateContactResponse(
  */
 const CreateContactRequest * CreateContactResponse::request() const
 {
-    return static_cast<const CreateContactRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const CreateContactResponse);
+    return static_cast<const CreateContactRequest *>(d->request);
 }
 
 /*!

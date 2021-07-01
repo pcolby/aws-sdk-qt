@@ -44,7 +44,7 @@ namespace TranscribeStreamingService {
  * Constructs a TranscribeStreamingServiceRequest object for TranscribeStreamingService \a action.
  */
 TranscribeStreamingServiceRequest::TranscribeStreamingServiceRequest(const Action action)
-    : d_ptr(new TranscribeStreamingServiceRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new TranscribeStreamingServiceRequestPrivate(action, this))
 {
 
 }
@@ -53,8 +53,7 @@ TranscribeStreamingServiceRequest::TranscribeStreamingServiceRequest(const Actio
  * Constructs a copy of \a other.
  */
 TranscribeStreamingServiceRequest::TranscribeStreamingServiceRequest(const TranscribeStreamingServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new TranscribeStreamingServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new TranscribeStreamingServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -77,7 +76,7 @@ TranscribeStreamingServiceRequest& TranscribeStreamingServiceRequest::operator=(
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from TranscribeStreamingServiceRequestPrivate.
  */
-TranscribeStreamingServiceRequest::TranscribeStreamingServiceRequest(TranscribeStreamingServiceRequestPrivate * const d) : d_ptr(d)
+TranscribeStreamingServiceRequest::TranscribeStreamingServiceRequest(TranscribeStreamingServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -246,7 +245,7 @@ QNetworkRequest TranscribeStreamingServiceRequest::unsignedRequest(const QUrl &e
  * with public implementation \a q.
  */
 TranscribeStreamingServiceRequestPrivate::TranscribeStreamingServiceRequestPrivate(const TranscribeStreamingServiceRequest::Action action, TranscribeStreamingServiceRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -261,8 +260,8 @@ TranscribeStreamingServiceRequestPrivate::TranscribeStreamingServiceRequestPriva
  */
 TranscribeStreamingServiceRequestPrivate::TranscribeStreamingServiceRequestPrivate(const TranscribeStreamingServiceRequestPrivate &other,
                                      TranscribeStreamingServiceRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

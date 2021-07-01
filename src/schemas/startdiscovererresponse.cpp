@@ -56,7 +56,8 @@ StartDiscovererResponse::StartDiscovererResponse(
  */
 const StartDiscovererRequest * StartDiscovererResponse::request() const
 {
-    return static_cast<const StartDiscovererRequest *>(SchemasResponse::request());
+    Q_D(const StartDiscovererResponse);
+    return static_cast<const StartDiscovererRequest *>(d->request);
 }
 
 /*!

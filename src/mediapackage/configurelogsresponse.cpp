@@ -55,7 +55,8 @@ ConfigureLogsResponse::ConfigureLogsResponse(
  */
 const ConfigureLogsRequest * ConfigureLogsResponse::request() const
 {
-    return static_cast<const ConfigureLogsRequest *>(MediaPackageResponse::request());
+    Q_D(const ConfigureLogsResponse);
+    return static_cast<const ConfigureLogsRequest *>(d->request);
 }
 
 /*!

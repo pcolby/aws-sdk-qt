@@ -20,20 +20,19 @@
 #ifndef QTAWS_FIREHOSECLIENT_P_H
 #define QTAWS_FIREHOSECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Firehose {
 
 class FirehoseClient;
 
-class FirehoseClientPrivate {
+class FirehoseClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit FirehoseClientPrivate(FirehoseClient * const q);
-
-protected:
-    FirehoseClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(FirehoseClient)

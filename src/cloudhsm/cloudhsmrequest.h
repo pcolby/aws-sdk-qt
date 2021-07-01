@@ -78,8 +78,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudHSMRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CloudHSMRequest(CloudHSMRequestPrivate * const d);
+    CloudHSMRequest(CloudHSMRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -20,20 +20,19 @@
 #ifndef QTAWS_MEDIAPACKAGEVODCLIENT_P_H
 #define QTAWS_MEDIAPACKAGEVODCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MediaPackageVod {
 
 class MediaPackageVodClient;
 
-class MediaPackageVodClientPrivate {
+class MediaPackageVodClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MediaPackageVodClientPrivate(MediaPackageVodClient * const q);
-
-protected:
-    MediaPackageVodClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaPackageVodClient)

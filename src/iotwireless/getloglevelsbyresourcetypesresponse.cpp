@@ -56,7 +56,8 @@ GetLogLevelsByResourceTypesResponse::GetLogLevelsByResourceTypesResponse(
  */
 const GetLogLevelsByResourceTypesRequest * GetLogLevelsByResourceTypesResponse::request() const
 {
-    return static_cast<const GetLogLevelsByResourceTypesRequest *>(IoTWirelessResponse::request());
+    Q_D(const GetLogLevelsByResourceTypesResponse);
+    return static_cast<const GetLogLevelsByResourceTypesRequest *>(d->request);
 }
 
 /*!

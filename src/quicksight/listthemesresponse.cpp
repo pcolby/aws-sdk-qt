@@ -60,7 +60,8 @@ ListThemesResponse::ListThemesResponse(
  */
 const ListThemesRequest * ListThemesResponse::request() const
 {
-    return static_cast<const ListThemesRequest *>(QuickSightResponse::request());
+    Q_D(const ListThemesResponse);
+    return static_cast<const ListThemesRequest *>(d->request);
 }
 
 /*!

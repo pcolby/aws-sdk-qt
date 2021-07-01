@@ -58,7 +58,8 @@ DeleteLabelResponse::DeleteLabelResponse(
  */
 const DeleteLabelRequest * DeleteLabelResponse::request() const
 {
-    return static_cast<const DeleteLabelRequest *>(FraudDetectorResponse::request());
+    Q_D(const DeleteLabelResponse);
+    return static_cast<const DeleteLabelRequest *>(d->request);
 }
 
 /*!

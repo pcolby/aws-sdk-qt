@@ -58,7 +58,8 @@ CreateCoreDefinitionVersionResponse::CreateCoreDefinitionVersionResponse(
  */
 const CreateCoreDefinitionVersionRequest * CreateCoreDefinitionVersionResponse::request() const
 {
-    return static_cast<const CreateCoreDefinitionVersionRequest *>(GreengrassResponse::request());
+    Q_D(const CreateCoreDefinitionVersionResponse);
+    return static_cast<const CreateCoreDefinitionVersionRequest *>(d->request);
 }
 
 /*!

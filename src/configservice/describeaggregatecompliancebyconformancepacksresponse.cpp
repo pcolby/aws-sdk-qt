@@ -75,7 +75,8 @@ DescribeAggregateComplianceByConformancePacksResponse::DescribeAggregateComplian
  */
 const DescribeAggregateComplianceByConformancePacksRequest * DescribeAggregateComplianceByConformancePacksResponse::request() const
 {
-    return static_cast<const DescribeAggregateComplianceByConformancePacksRequest *>(ConfigServiceResponse::request());
+    Q_D(const DescribeAggregateComplianceByConformancePacksResponse);
+    return static_cast<const DescribeAggregateComplianceByConformancePacksRequest *>(d->request);
 }
 
 /*!

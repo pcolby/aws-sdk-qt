@@ -56,7 +56,8 @@ DeleteRobotResponse::DeleteRobotResponse(
  */
 const DeleteRobotRequest * DeleteRobotResponse::request() const
 {
-    return static_cast<const DeleteRobotRequest *>(RoboMakerResponse::request());
+    Q_D(const DeleteRobotResponse);
+    return static_cast<const DeleteRobotRequest *>(d->request);
 }
 
 /*!

@@ -94,7 +94,8 @@ UpdateResolverDnssecConfigResponse::UpdateResolverDnssecConfigResponse(
  */
 const UpdateResolverDnssecConfigRequest * UpdateResolverDnssecConfigResponse::request() const
 {
-    return static_cast<const UpdateResolverDnssecConfigRequest *>(Route53ResolverResponse::request());
+    Q_D(const UpdateResolverDnssecConfigResponse);
+    return static_cast<const UpdateResolverDnssecConfigRequest *>(d->request);
 }
 
 /*!

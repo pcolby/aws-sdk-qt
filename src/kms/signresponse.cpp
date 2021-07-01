@@ -154,7 +154,8 @@ SignResponse::SignResponse(
  */
 const SignRequest * SignResponse::request() const
 {
-    return static_cast<const SignRequest *>(KmsResponse::request());
+    Q_D(const SignResponse);
+    return static_cast<const SignRequest *>(d->request);
 }
 
 /*!

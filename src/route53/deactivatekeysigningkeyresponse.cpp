@@ -56,7 +56,8 @@ DeactivateKeySigningKeyResponse::DeactivateKeySigningKeyResponse(
  */
 const DeactivateKeySigningKeyRequest * DeactivateKeySigningKeyResponse::request() const
 {
-    return static_cast<const DeactivateKeySigningKeyRequest *>(Route53Response::request());
+    Q_D(const DeactivateKeySigningKeyResponse);
+    return static_cast<const DeactivateKeySigningKeyRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ ResetPersonalPINResponse::ResetPersonalPINResponse(
  */
 const ResetPersonalPINRequest * ResetPersonalPINResponse::request() const
 {
-    return static_cast<const ResetPersonalPINRequest *>(ChimeResponse::request());
+    Q_D(const ResetPersonalPINResponse);
+    return static_cast<const ResetPersonalPINRequest *>(d->request);
 }
 
 /*!

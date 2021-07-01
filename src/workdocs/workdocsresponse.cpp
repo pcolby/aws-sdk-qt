@@ -37,7 +37,7 @@ namespace WorkDocs {
  * Constructs a WorkDocsResponse object with parent \a parent.
  */
 WorkDocsResponse::WorkDocsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new WorkDocsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new WorkDocsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ WorkDocsResponse::WorkDocsResponse(QObject * const parent)
  * implementation that inherits from WorkDocsResponsePrivate.
  */
 WorkDocsResponse::WorkDocsResponse(WorkDocsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void WorkDocsResponse::parseFailure(QIODevice &response)
  * Constructs a WorkDocsResponsePrivate object with public implementation \a q.
  */
 WorkDocsResponsePrivate::WorkDocsResponsePrivate(
-    WorkDocsResponse * const q) : q_ptr(q)
+    WorkDocsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

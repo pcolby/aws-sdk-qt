@@ -56,7 +56,8 @@ ApplyPendingMaintenanceActionResponse::ApplyPendingMaintenanceActionResponse(
  */
 const ApplyPendingMaintenanceActionRequest * ApplyPendingMaintenanceActionResponse::request() const
 {
-    return static_cast<const ApplyPendingMaintenanceActionRequest *>(DocDBResponse::request());
+    Q_D(const ApplyPendingMaintenanceActionResponse);
+    return static_cast<const ApplyPendingMaintenanceActionRequest *>(d->request);
 }
 
 /*!

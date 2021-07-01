@@ -58,7 +58,8 @@ DeleteInfrastructureConfigurationResponse::DeleteInfrastructureConfigurationResp
  */
 const DeleteInfrastructureConfigurationRequest * DeleteInfrastructureConfigurationResponse::request() const
 {
-    return static_cast<const DeleteInfrastructureConfigurationRequest *>(imagebuilderResponse::request());
+    Q_D(const DeleteInfrastructureConfigurationResponse);
+    return static_cast<const DeleteInfrastructureConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -57,7 +57,8 @@ DescribeBrokerResponse::DescribeBrokerResponse(
  */
 const DescribeBrokerRequest * DescribeBrokerResponse::request() const
 {
-    return static_cast<const DescribeBrokerRequest *>(MqResponse::request());
+    Q_D(const DescribeBrokerResponse);
+    return static_cast<const DescribeBrokerRequest *>(d->request);
 }
 
 /*!

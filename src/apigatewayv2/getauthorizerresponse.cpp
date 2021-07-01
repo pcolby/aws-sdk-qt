@@ -56,7 +56,8 @@ GetAuthorizerResponse::GetAuthorizerResponse(
  */
 const GetAuthorizerRequest * GetAuthorizerResponse::request() const
 {
-    return static_cast<const GetAuthorizerRequest *>(ApiGatewayV2Response::request());
+    Q_D(const GetAuthorizerResponse);
+    return static_cast<const GetAuthorizerRequest *>(d->request);
 }
 
 /*!

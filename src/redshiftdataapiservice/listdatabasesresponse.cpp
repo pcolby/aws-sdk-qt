@@ -63,7 +63,8 @@ ListDatabasesResponse::ListDatabasesResponse(
  */
 const ListDatabasesRequest * ListDatabasesResponse::request() const
 {
-    return static_cast<const ListDatabasesRequest *>(RedshiftDataAPIServiceResponse::request());
+    Q_D(const ListDatabasesResponse);
+    return static_cast<const ListDatabasesRequest *>(d->request);
 }
 
 /*!

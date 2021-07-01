@@ -58,7 +58,8 @@ RegisterWorkspaceDirectoryResponse::RegisterWorkspaceDirectoryResponse(
  */
 const RegisterWorkspaceDirectoryRequest * RegisterWorkspaceDirectoryResponse::request() const
 {
-    return static_cast<const RegisterWorkspaceDirectoryRequest *>(WorkSpacesResponse::request());
+    Q_D(const RegisterWorkspaceDirectoryResponse);
+    return static_cast<const RegisterWorkspaceDirectoryRequest *>(d->request);
 }
 
 /*!

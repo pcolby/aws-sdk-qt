@@ -68,7 +68,8 @@ StopAppReplicationResponse::StopAppReplicationResponse(
  */
 const StopAppReplicationRequest * StopAppReplicationResponse::request() const
 {
-    return static_cast<const StopAppReplicationRequest *>(SmsResponse::request());
+    Q_D(const StopAppReplicationResponse);
+    return static_cast<const StopAppReplicationRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_SSOADMINCLIENT_P_H
 #define QTAWS_SSOADMINCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SSOAdmin {
 
 class SSOAdminClient;
 
-class SSOAdminClientPrivate {
+class SSOAdminClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SSOAdminClientPrivate(SSOAdminClient * const q);
-
-protected:
-    SSOAdminClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SSOAdminClient)

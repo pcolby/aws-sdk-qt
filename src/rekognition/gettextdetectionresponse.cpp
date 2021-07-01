@@ -56,7 +56,8 @@ GetTextDetectionResponse::GetTextDetectionResponse(
  */
 const GetTextDetectionRequest * GetTextDetectionResponse::request() const
 {
-    return static_cast<const GetTextDetectionRequest *>(RekognitionResponse::request());
+    Q_D(const GetTextDetectionResponse);
+    return static_cast<const GetTextDetectionRequest *>(d->request);
 }
 
 /*!

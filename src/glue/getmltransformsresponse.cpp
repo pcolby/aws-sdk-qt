@@ -58,7 +58,8 @@ GetMLTransformsResponse::GetMLTransformsResponse(
  */
 const GetMLTransformsRequest * GetMLTransformsResponse::request() const
 {
-    return static_cast<const GetMLTransformsRequest *>(GlueResponse::request());
+    Q_D(const GetMLTransformsResponse);
+    return static_cast<const GetMLTransformsRequest *>(d->request);
 }
 
 /*!

@@ -87,16 +87,16 @@ FirehoseClient::FirehoseClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-08-04"),
-    QStringLiteral("firehose"),
-    QStringLiteral("Amazon Kinesis Firehose"),
-    QStringLiteral("firehose"),
-    parent), d_ptr(new FirehoseClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new FirehoseClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(FirehoseClient);
+    d->apiVersion = QStringLiteral("2015-08-04");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("firehose");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Firehose");
+    d->serviceName = QStringLiteral("firehose");
 }
 
 /*!
@@ -115,16 +115,16 @@ FirehoseClient::FirehoseClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-08-04"),
-    QStringLiteral("firehose"),
-    QStringLiteral("Amazon Kinesis Firehose"),
-    QStringLiteral("firehose"),
-    parent), d_ptr(new FirehoseClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new FirehoseClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(FirehoseClient);
+    d->apiVersion = QStringLiteral("2015-08-04");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("firehose");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Firehose");
+    d->serviceName = QStringLiteral("firehose");
 }
 
 /*!
@@ -639,9 +639,10 @@ UpdateDestinationResponse * FirehoseClient::updateDestination(const UpdateDestin
 /*!
  * Constructs a FirehoseClientPrivate object with public implementation \a q.
  */
-FirehoseClientPrivate::FirehoseClientPrivate(FirehoseClient * const q) : q_ptr(q)
+FirehoseClientPrivate::FirehoseClientPrivate(FirehoseClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Firehose

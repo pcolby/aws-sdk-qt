@@ -70,7 +70,8 @@ DeleteDeviceFleetResponse::DeleteDeviceFleetResponse(
  */
 const DeleteDeviceFleetRequest * DeleteDeviceFleetResponse::request() const
 {
-    return static_cast<const DeleteDeviceFleetRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteDeviceFleetResponse);
+    return static_cast<const DeleteDeviceFleetRequest *>(d->request);
 }
 
 /*!

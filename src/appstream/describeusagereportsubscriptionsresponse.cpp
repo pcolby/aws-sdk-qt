@@ -81,7 +81,8 @@ DescribeUsageReportSubscriptionsResponse::DescribeUsageReportSubscriptionsRespon
  */
 const DescribeUsageReportSubscriptionsRequest * DescribeUsageReportSubscriptionsResponse::request() const
 {
-    return static_cast<const DescribeUsageReportSubscriptionsRequest *>(AppStreamResponse::request());
+    Q_D(const DescribeUsageReportSubscriptionsResponse);
+    return static_cast<const DescribeUsageReportSubscriptionsRequest *>(d->request);
 }
 
 /*!

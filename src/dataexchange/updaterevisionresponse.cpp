@@ -66,7 +66,8 @@ UpdateRevisionResponse::UpdateRevisionResponse(
  */
 const UpdateRevisionRequest * UpdateRevisionResponse::request() const
 {
-    return static_cast<const UpdateRevisionRequest *>(DataExchangeResponse::request());
+    Q_D(const UpdateRevisionResponse);
+    return static_cast<const UpdateRevisionRequest *>(d->request);
 }
 
 /*!

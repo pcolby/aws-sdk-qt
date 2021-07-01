@@ -56,7 +56,8 @@ GetContentModerationResponse::GetContentModerationResponse(
  */
 const GetContentModerationRequest * GetContentModerationResponse::request() const
 {
-    return static_cast<const GetContentModerationRequest *>(RekognitionResponse::request());
+    Q_D(const GetContentModerationResponse);
+    return static_cast<const GetContentModerationRequest *>(d->request);
 }
 
 /*!

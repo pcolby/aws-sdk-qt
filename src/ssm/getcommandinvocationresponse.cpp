@@ -98,7 +98,8 @@ GetCommandInvocationResponse::GetCommandInvocationResponse(
  */
 const GetCommandInvocationRequest * GetCommandInvocationResponse::request() const
 {
-    return static_cast<const GetCommandInvocationRequest *>(SsmResponse::request());
+    Q_D(const GetCommandInvocationResponse);
+    return static_cast<const GetCommandInvocationRequest *>(d->request);
 }
 
 /*!

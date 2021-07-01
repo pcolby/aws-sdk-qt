@@ -56,7 +56,8 @@ ListStreamProcessorsResponse::ListStreamProcessorsResponse(
  */
 const ListStreamProcessorsRequest * ListStreamProcessorsResponse::request() const
 {
-    return static_cast<const ListStreamProcessorsRequest *>(RekognitionResponse::request());
+    Q_D(const ListStreamProcessorsResponse);
+    return static_cast<const ListStreamProcessorsRequest *>(d->request);
 }
 
 /*!

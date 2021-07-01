@@ -55,7 +55,8 @@ GetBucketIntelligentTieringConfigurationResponse::GetBucketIntelligentTieringCon
  */
 const GetBucketIntelligentTieringConfigurationRequest * GetBucketIntelligentTieringConfigurationResponse::request() const
 {
-    return static_cast<const GetBucketIntelligentTieringConfigurationRequest *>(S3Response::request());
+    Q_D(const GetBucketIntelligentTieringConfigurationResponse);
+    return static_cast<const GetBucketIntelligentTieringConfigurationRequest *>(d->request);
 }
 
 /*!

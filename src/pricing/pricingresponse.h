@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    PricingResponsePrivate * const d_ptr; ///< Internal d-pointer.
     PricingResponse(PricingResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

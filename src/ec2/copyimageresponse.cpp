@@ -87,7 +87,8 @@ CopyImageResponse::CopyImageResponse(
  */
 const CopyImageRequest * CopyImageResponse::request() const
 {
-    return static_cast<const CopyImageRequest *>(Ec2Response::request());
+    Q_D(const CopyImageResponse);
+    return static_cast<const CopyImageRequest *>(d->request);
 }
 
 /*!

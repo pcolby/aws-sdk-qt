@@ -66,7 +66,8 @@ CloneReceiptRuleSetResponse::CloneReceiptRuleSetResponse(
  */
 const CloneReceiptRuleSetRequest * CloneReceiptRuleSetResponse::request() const
 {
-    return static_cast<const CloneReceiptRuleSetRequest *>(SesResponse::request());
+    Q_D(const CloneReceiptRuleSetResponse);
+    return static_cast<const CloneReceiptRuleSetRequest *>(d->request);
 }
 
 /*!

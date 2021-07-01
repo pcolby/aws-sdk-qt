@@ -68,7 +68,8 @@ DetachLoadBalancersResponse::DetachLoadBalancersResponse(
  */
 const DetachLoadBalancersRequest * DetachLoadBalancersResponse::request() const
 {
-    return static_cast<const DetachLoadBalancersRequest *>(AutoScalingResponse::request());
+    Q_D(const DetachLoadBalancersResponse);
+    return static_cast<const DetachLoadBalancersRequest *>(d->request);
 }
 
 /*!

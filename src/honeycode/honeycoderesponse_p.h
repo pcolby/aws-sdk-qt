@@ -20,12 +20,14 @@
 #ifndef QTAWS_HONEYCODERESPONSE_P_H
 #define QTAWS_HONEYCODERESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace Honeycode {
 
 class HoneycodeResponse;
 
-class HoneycodeResponsePrivate {
+class HoneycodeResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    HoneycodeResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(HoneycodeResponse)

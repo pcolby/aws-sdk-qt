@@ -60,7 +60,8 @@ ListCachePoliciesResponse::ListCachePoliciesResponse(
  */
 const ListCachePoliciesRequest * ListCachePoliciesResponse::request() const
 {
-    return static_cast<const ListCachePoliciesRequest *>(CloudFrontResponse::request());
+    Q_D(const ListCachePoliciesResponse);
+    return static_cast<const ListCachePoliciesRequest *>(d->request);
 }
 
 /*!

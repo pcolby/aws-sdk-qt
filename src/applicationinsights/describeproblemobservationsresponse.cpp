@@ -68,7 +68,8 @@ DescribeProblemObservationsResponse::DescribeProblemObservationsResponse(
  */
 const DescribeProblemObservationsRequest * DescribeProblemObservationsResponse::request() const
 {
-    return static_cast<const DescribeProblemObservationsRequest *>(ApplicationInsightsResponse::request());
+    Q_D(const DescribeProblemObservationsResponse);
+    return static_cast<const DescribeProblemObservationsRequest *>(d->request);
 }
 
 /*!

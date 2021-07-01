@@ -20,12 +20,14 @@
 #ifndef QTAWS_SSMCONTACTSRESPONSE_P_H
 #define QTAWS_SSMCONTACTSRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace SSMContacts {
 
 class SSMContactsResponse;
 
-class SSMContactsResponsePrivate {
+class SSMContactsResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    SSMContactsResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SSMContactsResponse)

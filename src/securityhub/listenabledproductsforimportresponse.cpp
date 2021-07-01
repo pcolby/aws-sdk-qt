@@ -103,7 +103,8 @@ ListEnabledProductsForImportResponse::ListEnabledProductsForImportResponse(
  */
 const ListEnabledProductsForImportRequest * ListEnabledProductsForImportResponse::request() const
 {
-    return static_cast<const ListEnabledProductsForImportRequest *>(SecurityHubResponse::request());
+    Q_D(const ListEnabledProductsForImportResponse);
+    return static_cast<const ListEnabledProductsForImportRequest *>(d->request);
 }
 
 /*!

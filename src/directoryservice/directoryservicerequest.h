@@ -120,8 +120,7 @@ public:
 
 protected:
     /// @cond internal
-    DirectoryServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DirectoryServiceRequest(DirectoryServiceRequestPrivate * const d);
+    DirectoryServiceRequest(DirectoryServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

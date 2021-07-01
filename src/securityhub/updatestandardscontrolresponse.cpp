@@ -103,7 +103,8 @@ UpdateStandardsControlResponse::UpdateStandardsControlResponse(
  */
 const UpdateStandardsControlRequest * UpdateStandardsControlResponse::request() const
 {
-    return static_cast<const UpdateStandardsControlRequest *>(SecurityHubResponse::request());
+    Q_D(const UpdateStandardsControlResponse);
+    return static_cast<const UpdateStandardsControlRequest *>(d->request);
 }
 
 /*!

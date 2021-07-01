@@ -159,7 +159,8 @@ DeleteApplicationsResponse::DeleteApplicationsResponse(
  */
 const DeleteApplicationsRequest * DeleteApplicationsResponse::request() const
 {
-    return static_cast<const DeleteApplicationsRequest *>(ApplicationDiscoveryServiceResponse::request());
+    Q_D(const DeleteApplicationsResponse);
+    return static_cast<const DeleteApplicationsRequest *>(d->request);
 }
 
 /*!

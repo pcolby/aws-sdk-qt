@@ -79,7 +79,8 @@ StartContactRecordingResponse::StartContactRecordingResponse(
  */
 const StartContactRecordingRequest * StartContactRecordingResponse::request() const
 {
-    return static_cast<const StartContactRecordingRequest *>(ConnectResponse::request());
+    Q_D(const StartContactRecordingResponse);
+    return static_cast<const StartContactRecordingRequest *>(d->request);
 }
 
 /*!

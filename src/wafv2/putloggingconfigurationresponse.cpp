@@ -126,7 +126,8 @@ PutLoggingConfigurationResponse::PutLoggingConfigurationResponse(
  */
 const PutLoggingConfigurationRequest * PutLoggingConfigurationResponse::request() const
 {
-    return static_cast<const PutLoggingConfigurationRequest *>(Wafv2Response::request());
+    Q_D(const PutLoggingConfigurationResponse);
+    return static_cast<const PutLoggingConfigurationRequest *>(d->request);
 }
 
 /*!

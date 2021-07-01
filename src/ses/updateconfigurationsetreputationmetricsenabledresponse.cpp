@@ -66,7 +66,8 @@ UpdateConfigurationSetReputationMetricsEnabledResponse::UpdateConfigurationSetRe
  */
 const UpdateConfigurationSetReputationMetricsEnabledRequest * UpdateConfigurationSetReputationMetricsEnabledResponse::request() const
 {
-    return static_cast<const UpdateConfigurationSetReputationMetricsEnabledRequest *>(SesResponse::request());
+    Q_D(const UpdateConfigurationSetReputationMetricsEnabledResponse);
+    return static_cast<const UpdateConfigurationSetReputationMetricsEnabledRequest *>(d->request);
 }
 
 /*!

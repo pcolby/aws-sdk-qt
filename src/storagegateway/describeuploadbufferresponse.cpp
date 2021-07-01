@@ -124,7 +124,8 @@ DescribeUploadBufferResponse::DescribeUploadBufferResponse(
  */
 const DescribeUploadBufferRequest * DescribeUploadBufferResponse::request() const
 {
-    return static_cast<const DescribeUploadBufferRequest *>(StorageGatewayResponse::request());
+    Q_D(const DescribeUploadBufferResponse);
+    return static_cast<const DescribeUploadBufferRequest *>(d->request);
 }
 
 /*!

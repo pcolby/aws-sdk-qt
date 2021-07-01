@@ -59,7 +59,8 @@ ListLicenseVersionsResponse::ListLicenseVersionsResponse(
  */
 const ListLicenseVersionsRequest * ListLicenseVersionsResponse::request() const
 {
-    return static_cast<const ListLicenseVersionsRequest *>(LicenseManagerResponse::request());
+    Q_D(const ListLicenseVersionsResponse);
+    return static_cast<const ListLicenseVersionsRequest *>(d->request);
 }
 
 /*!

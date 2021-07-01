@@ -69,7 +69,8 @@ DescribeReservedCacheNodesResponse::DescribeReservedCacheNodesResponse(
  */
 const DescribeReservedCacheNodesRequest * DescribeReservedCacheNodesResponse::request() const
 {
-    return static_cast<const DescribeReservedCacheNodesRequest *>(ElastiCacheResponse::request());
+    Q_D(const DescribeReservedCacheNodesResponse);
+    return static_cast<const DescribeReservedCacheNodesRequest *>(d->request);
 }
 
 /*!

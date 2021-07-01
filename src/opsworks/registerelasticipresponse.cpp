@@ -161,7 +161,8 @@ RegisterElasticIpResponse::RegisterElasticIpResponse(
  */
 const RegisterElasticIpRequest * RegisterElasticIpResponse::request() const
 {
-    return static_cast<const RegisterElasticIpRequest *>(OpsWorksResponse::request());
+    Q_D(const RegisterElasticIpResponse);
+    return static_cast<const RegisterElasticIpRequest *>(d->request);
 }
 
 /*!

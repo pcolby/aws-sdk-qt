@@ -79,7 +79,8 @@ RemoveNotificationChannelResponse::RemoveNotificationChannelResponse(
  */
 const RemoveNotificationChannelRequest * RemoveNotificationChannelResponse::request() const
 {
-    return static_cast<const RemoveNotificationChannelRequest *>(CodeGuruProfilerResponse::request());
+    Q_D(const RemoveNotificationChannelResponse);
+    return static_cast<const RemoveNotificationChannelRequest *>(d->request);
 }
 
 /*!

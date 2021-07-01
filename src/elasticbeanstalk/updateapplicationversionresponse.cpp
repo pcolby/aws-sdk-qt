@@ -77,7 +77,8 @@ UpdateApplicationVersionResponse::UpdateApplicationVersionResponse(
  */
 const UpdateApplicationVersionRequest * UpdateApplicationVersionResponse::request() const
 {
-    return static_cast<const UpdateApplicationVersionRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const UpdateApplicationVersionResponse);
+    return static_cast<const UpdateApplicationVersionRequest *>(d->request);
 }
 
 /*!

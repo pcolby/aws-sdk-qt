@@ -87,7 +87,8 @@ ModifyIdFormatResponse::ModifyIdFormatResponse(
  */
 const ModifyIdFormatRequest * ModifyIdFormatResponse::request() const
 {
-    return static_cast<const ModifyIdFormatRequest *>(Ec2Response::request());
+    Q_D(const ModifyIdFormatResponse);
+    return static_cast<const ModifyIdFormatRequest *>(d->request);
 }
 
 /*!

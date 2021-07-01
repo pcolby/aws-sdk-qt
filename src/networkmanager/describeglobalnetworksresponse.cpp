@@ -62,7 +62,8 @@ DescribeGlobalNetworksResponse::DescribeGlobalNetworksResponse(
  */
 const DescribeGlobalNetworksRequest * DescribeGlobalNetworksResponse::request() const
 {
-    return static_cast<const DescribeGlobalNetworksRequest *>(NetworkManagerResponse::request());
+    Q_D(const DescribeGlobalNetworksResponse);
+    return static_cast<const DescribeGlobalNetworksRequest *>(d->request);
 }
 
 /*!

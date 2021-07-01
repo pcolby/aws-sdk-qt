@@ -57,7 +57,8 @@ DescribeContainerResponse::DescribeContainerResponse(
  */
 const DescribeContainerRequest * DescribeContainerResponse::request() const
 {
-    return static_cast<const DescribeContainerRequest *>(MediaStoreResponse::request());
+    Q_D(const DescribeContainerResponse);
+    return static_cast<const DescribeContainerRequest *>(d->request);
 }
 
 /*!

@@ -66,7 +66,8 @@ AdminLinkProviderForUserResponse::AdminLinkProviderForUserResponse(
  */
 const AdminLinkProviderForUserRequest * AdminLinkProviderForUserResponse::request() const
 {
-    return static_cast<const AdminLinkProviderForUserRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const AdminLinkProviderForUserResponse);
+    return static_cast<const AdminLinkProviderForUserRequest *>(d->request);
 }
 
 /*!

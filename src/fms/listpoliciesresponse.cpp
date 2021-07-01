@@ -67,7 +67,8 @@ ListPoliciesResponse::ListPoliciesResponse(
  */
 const ListPoliciesRequest * ListPoliciesResponse::request() const
 {
-    return static_cast<const ListPoliciesRequest *>(FmsResponse::request());
+    Q_D(const ListPoliciesResponse);
+    return static_cast<const ListPoliciesRequest *>(d->request);
 }
 
 /*!

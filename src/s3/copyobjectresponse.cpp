@@ -55,7 +55,8 @@ CopyObjectResponse::CopyObjectResponse(
  */
 const CopyObjectRequest * CopyObjectResponse::request() const
 {
-    return static_cast<const CopyObjectRequest *>(S3Response::request());
+    Q_D(const CopyObjectResponse);
+    return static_cast<const CopyObjectRequest *>(d->request);
 }
 
 /*!

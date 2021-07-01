@@ -55,7 +55,8 @@ UpdateDataSourceResponse::UpdateDataSourceResponse(
  */
 const UpdateDataSourceRequest * UpdateDataSourceResponse::request() const
 {
-    return static_cast<const UpdateDataSourceRequest *>(MachineLearningResponse::request());
+    Q_D(const UpdateDataSourceResponse);
+    return static_cast<const UpdateDataSourceRequest *>(d->request);
 }
 
 /*!

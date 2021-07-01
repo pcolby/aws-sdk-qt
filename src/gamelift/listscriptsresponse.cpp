@@ -115,7 +115,8 @@ ListScriptsResponse::ListScriptsResponse(
  */
 const ListScriptsRequest * ListScriptsResponse::request() const
 {
-    return static_cast<const ListScriptsRequest *>(GameLiftResponse::request());
+    Q_D(const ListScriptsResponse);
+    return static_cast<const ListScriptsRequest *>(d->request);
 }
 
 /*!

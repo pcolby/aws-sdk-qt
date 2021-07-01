@@ -154,7 +154,8 @@ ListResourceTagsResponse::ListResourceTagsResponse(
  */
 const ListResourceTagsRequest * ListResourceTagsResponse::request() const
 {
-    return static_cast<const ListResourceTagsRequest *>(KmsResponse::request());
+    Q_D(const ListResourceTagsResponse);
+    return static_cast<const ListResourceTagsRequest *>(d->request);
 }
 
 /*!

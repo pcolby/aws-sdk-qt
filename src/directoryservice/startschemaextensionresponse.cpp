@@ -69,7 +69,8 @@ StartSchemaExtensionResponse::StartSchemaExtensionResponse(
  */
 const StartSchemaExtensionRequest * StartSchemaExtensionResponse::request() const
 {
-    return static_cast<const StartSchemaExtensionRequest *>(DirectoryServiceResponse::request());
+    Q_D(const StartSchemaExtensionResponse);
+    return static_cast<const StartSchemaExtensionRequest *>(d->request);
 }
 
 /*!

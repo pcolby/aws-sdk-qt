@@ -60,7 +60,8 @@ GetExportResponse::GetExportResponse(
  */
 const GetExportRequest * GetExportResponse::request() const
 {
-    return static_cast<const GetExportRequest *>(APIGatewayResponse::request());
+    Q_D(const GetExportResponse);
+    return static_cast<const GetExportRequest *>(d->request);
 }
 
 /*!

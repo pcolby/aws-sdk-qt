@@ -98,7 +98,8 @@ StartAssociationsOnceResponse::StartAssociationsOnceResponse(
  */
 const StartAssociationsOnceRequest * StartAssociationsOnceResponse::request() const
 {
-    return static_cast<const StartAssociationsOnceRequest *>(SsmResponse::request());
+    Q_D(const StartAssociationsOnceResponse);
+    return static_cast<const StartAssociationsOnceRequest *>(d->request);
 }
 
 /*!

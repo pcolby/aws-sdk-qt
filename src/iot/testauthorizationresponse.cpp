@@ -82,7 +82,8 @@ TestAuthorizationResponse::TestAuthorizationResponse(
  */
 const TestAuthorizationRequest * TestAuthorizationResponse::request() const
 {
-    return static_cast<const TestAuthorizationRequest *>(IoTResponse::request());
+    Q_D(const TestAuthorizationResponse);
+    return static_cast<const TestAuthorizationRequest *>(d->request);
 }
 
 /*!

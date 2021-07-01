@@ -161,7 +161,8 @@ SetTimeBasedAutoScalingResponse::SetTimeBasedAutoScalingResponse(
  */
 const SetTimeBasedAutoScalingRequest * SetTimeBasedAutoScalingResponse::request() const
 {
-    return static_cast<const SetTimeBasedAutoScalingRequest *>(OpsWorksResponse::request());
+    Q_D(const SetTimeBasedAutoScalingResponse);
+    return static_cast<const SetTimeBasedAutoScalingRequest *>(d->request);
 }
 
 /*!

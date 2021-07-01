@@ -60,7 +60,8 @@ ListWebhooksResponse::ListWebhooksResponse(
  */
 const ListWebhooksRequest * ListWebhooksResponse::request() const
 {
-    return static_cast<const ListWebhooksRequest *>(AmplifyResponse::request());
+    Q_D(const ListWebhooksResponse);
+    return static_cast<const ListWebhooksRequest *>(d->request);
 }
 
 /*!

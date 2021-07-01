@@ -60,7 +60,8 @@ DeregisterInstanceResponse::DeregisterInstanceResponse(
  */
 const DeregisterInstanceRequest * DeregisterInstanceResponse::request() const
 {
-    return static_cast<const DeregisterInstanceRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const DeregisterInstanceResponse);
+    return static_cast<const DeregisterInstanceRequest *>(d->request);
 }
 
 /*!

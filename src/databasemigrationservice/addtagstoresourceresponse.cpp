@@ -66,7 +66,8 @@ AddTagsToResourceResponse::AddTagsToResourceResponse(
  */
 const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
 {
-    return static_cast<const AddTagsToResourceRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const AddTagsToResourceResponse);
+    return static_cast<const AddTagsToResourceRequest *>(d->request);
 }
 
 /*!

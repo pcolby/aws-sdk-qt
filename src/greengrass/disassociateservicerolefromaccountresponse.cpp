@@ -58,7 +58,8 @@ DisassociateServiceRoleFromAccountResponse::DisassociateServiceRoleFromAccountRe
  */
 const DisassociateServiceRoleFromAccountRequest * DisassociateServiceRoleFromAccountResponse::request() const
 {
-    return static_cast<const DisassociateServiceRoleFromAccountRequest *>(GreengrassResponse::request());
+    Q_D(const DisassociateServiceRoleFromAccountResponse);
+    return static_cast<const DisassociateServiceRoleFromAccountRequest *>(d->request);
 }
 
 /*!

@@ -91,7 +91,8 @@ InitiateMultipartUploadResponse::InitiateMultipartUploadResponse(
  */
 const InitiateMultipartUploadRequest * InitiateMultipartUploadResponse::request() const
 {
-    return static_cast<const InitiateMultipartUploadRequest *>(GlacierResponse::request());
+    Q_D(const InitiateMultipartUploadResponse);
+    return static_cast<const InitiateMultipartUploadRequest *>(d->request);
 }
 
 /*!

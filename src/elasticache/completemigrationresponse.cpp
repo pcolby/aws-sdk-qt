@@ -69,7 +69,8 @@ CompleteMigrationResponse::CompleteMigrationResponse(
  */
 const CompleteMigrationRequest * CompleteMigrationResponse::request() const
 {
-    return static_cast<const CompleteMigrationRequest *>(ElastiCacheResponse::request());
+    Q_D(const CompleteMigrationResponse);
+    return static_cast<const CompleteMigrationRequest *>(d->request);
 }
 
 /*!

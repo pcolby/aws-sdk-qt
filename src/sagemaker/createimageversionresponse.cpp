@@ -70,7 +70,8 @@ CreateImageVersionResponse::CreateImageVersionResponse(
  */
 const CreateImageVersionRequest * CreateImageVersionResponse::request() const
 {
-    return static_cast<const CreateImageVersionRequest *>(SageMakerResponse::request());
+    Q_D(const CreateImageVersionResponse);
+    return static_cast<const CreateImageVersionRequest *>(d->request);
 }
 
 /*!

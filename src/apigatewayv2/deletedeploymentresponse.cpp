@@ -56,7 +56,8 @@ DeleteDeploymentResponse::DeleteDeploymentResponse(
  */
 const DeleteDeploymentRequest * DeleteDeploymentResponse::request() const
 {
-    return static_cast<const DeleteDeploymentRequest *>(ApiGatewayV2Response::request());
+    Q_D(const DeleteDeploymentResponse);
+    return static_cast<const DeleteDeploymentRequest *>(d->request);
 }
 
 /*!

@@ -37,7 +37,7 @@ namespace Detective {
  * Constructs a DetectiveResponse object with parent \a parent.
  */
 DetectiveResponse::DetectiveResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DetectiveResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new DetectiveResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ DetectiveResponse::DetectiveResponse(QObject * const parent)
  * implementation that inherits from DetectiveResponsePrivate.
  */
 DetectiveResponse::DetectiveResponse(DetectiveResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void DetectiveResponse::parseFailure(QIODevice &response)
  * Constructs a DetectiveResponsePrivate object with public implementation \a q.
  */
 DetectiveResponsePrivate::DetectiveResponsePrivate(
-    DetectiveResponse * const q) : q_ptr(q)
+    DetectiveResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

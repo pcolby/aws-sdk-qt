@@ -74,7 +74,8 @@ DescribeGlobalTableSettingsResponse::DescribeGlobalTableSettingsResponse(
  */
 const DescribeGlobalTableSettingsRequest * DescribeGlobalTableSettingsResponse::request() const
 {
-    return static_cast<const DescribeGlobalTableSettingsRequest *>(DynamoDBResponse::request());
+    Q_D(const DescribeGlobalTableSettingsResponse);
+    return static_cast<const DescribeGlobalTableSettingsRequest *>(d->request);
 }
 
 /*!

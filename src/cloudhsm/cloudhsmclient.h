@@ -108,12 +108,6 @@ public slots:
     ModifyLunaClientResponse * modifyLunaClient(const ModifyLunaClientRequest &request);
     RemoveTagsFromResourceResponse * removeTagsFromResource(const RemoveTagsFromResourceRequest &request);
 
-protected:
-    /// @cond internal
-    CloudHSMClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CloudHSMClient(CloudHSMClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(CloudHSMClient)
     Q_DISABLE_COPY(CloudHSMClient)

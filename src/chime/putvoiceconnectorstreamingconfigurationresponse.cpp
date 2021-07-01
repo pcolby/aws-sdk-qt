@@ -98,7 +98,8 @@ PutVoiceConnectorStreamingConfigurationResponse::PutVoiceConnectorStreamingConfi
  */
 const PutVoiceConnectorStreamingConfigurationRequest * PutVoiceConnectorStreamingConfigurationResponse::request() const
 {
-    return static_cast<const PutVoiceConnectorStreamingConfigurationRequest *>(ChimeResponse::request());
+    Q_D(const PutVoiceConnectorStreamingConfigurationResponse);
+    return static_cast<const PutVoiceConnectorStreamingConfigurationRequest *>(d->request);
 }
 
 /*!

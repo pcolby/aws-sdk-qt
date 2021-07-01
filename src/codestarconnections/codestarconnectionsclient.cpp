@@ -168,16 +168,16 @@ CodeStarconnectionsClient::CodeStarconnectionsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-12-01"),
-    QStringLiteral("codestar-connections"),
-    QStringLiteral("AWS CodeStar connections"),
-    QStringLiteral("codestar-connections"),
-    parent), d_ptr(new CodeStarconnectionsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CodeStarconnectionsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CodeStarconnectionsClient);
+    d->apiVersion = QStringLiteral("2019-12-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("codestar-connections");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CodeStar connections");
+    d->serviceName = QStringLiteral("codestar-connections");
 }
 
 /*!
@@ -196,16 +196,16 @@ CodeStarconnectionsClient::CodeStarconnectionsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-12-01"),
-    QStringLiteral("codestar-connections"),
-    QStringLiteral("AWS CodeStar connections"),
-    QStringLiteral("codestar-connections"),
-    parent), d_ptr(new CodeStarconnectionsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CodeStarconnectionsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CodeStarconnectionsClient);
+    d->apiVersion = QStringLiteral("2019-12-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("codestar-connections");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CodeStar connections");
+    d->serviceName = QStringLiteral("codestar-connections");
 }
 
 /*!
@@ -388,9 +388,10 @@ UpdateHostResponse * CodeStarconnectionsClient::updateHost(const UpdateHostReque
 /*!
  * Constructs a CodeStarconnectionsClientPrivate object with public implementation \a q.
  */
-CodeStarconnectionsClientPrivate::CodeStarconnectionsClientPrivate(CodeStarconnectionsClient * const q) : q_ptr(q)
+CodeStarconnectionsClientPrivate::CodeStarconnectionsClientPrivate(CodeStarconnectionsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CodeStarconnections

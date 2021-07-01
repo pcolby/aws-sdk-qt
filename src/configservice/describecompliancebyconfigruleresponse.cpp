@@ -75,7 +75,8 @@ DescribeComplianceByConfigRuleResponse::DescribeComplianceByConfigRuleResponse(
  */
 const DescribeComplianceByConfigRuleRequest * DescribeComplianceByConfigRuleResponse::request() const
 {
-    return static_cast<const DescribeComplianceByConfigRuleRequest *>(ConfigServiceResponse::request());
+    Q_D(const DescribeComplianceByConfigRuleResponse);
+    return static_cast<const DescribeComplianceByConfigRuleRequest *>(d->request);
 }
 
 /*!

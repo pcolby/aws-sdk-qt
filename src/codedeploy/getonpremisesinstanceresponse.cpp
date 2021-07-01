@@ -141,7 +141,8 @@ GetOnPremisesInstanceResponse::GetOnPremisesInstanceResponse(
  */
 const GetOnPremisesInstanceRequest * GetOnPremisesInstanceResponse::request() const
 {
-    return static_cast<const GetOnPremisesInstanceRequest *>(CodeDeployResponse::request());
+    Q_D(const GetOnPremisesInstanceResponse);
+    return static_cast<const GetOnPremisesInstanceRequest *>(d->request);
 }
 
 /*!

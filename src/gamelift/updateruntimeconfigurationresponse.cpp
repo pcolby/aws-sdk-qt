@@ -115,7 +115,8 @@ UpdateRuntimeConfigurationResponse::UpdateRuntimeConfigurationResponse(
  */
 const UpdateRuntimeConfigurationRequest * UpdateRuntimeConfigurationResponse::request() const
 {
-    return static_cast<const UpdateRuntimeConfigurationRequest *>(GameLiftResponse::request());
+    Q_D(const UpdateRuntimeConfigurationResponse);
+    return static_cast<const UpdateRuntimeConfigurationRequest *>(d->request);
 }
 
 /*!

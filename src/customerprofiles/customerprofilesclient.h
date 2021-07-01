@@ -138,12 +138,6 @@ public slots:
     UpdateDomainResponse * updateDomain(const UpdateDomainRequest &request);
     UpdateProfileResponse * updateProfile(const UpdateProfileRequest &request);
 
-protected:
-    /// @cond internal
-    CustomerProfilesClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CustomerProfilesClient(CustomerProfilesClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(CustomerProfilesClient)
     Q_DISABLE_COPY(CustomerProfilesClient)

@@ -84,7 +84,8 @@ GetQueryResultsResponse::GetQueryResultsResponse(
  */
 const GetQueryResultsRequest * GetQueryResultsResponse::request() const
 {
-    return static_cast<const GetQueryResultsRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const GetQueryResultsResponse);
+    return static_cast<const GetQueryResultsRequest *>(d->request);
 }
 
 /*!

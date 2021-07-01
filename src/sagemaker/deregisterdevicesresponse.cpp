@@ -70,7 +70,8 @@ DeregisterDevicesResponse::DeregisterDevicesResponse(
  */
 const DeregisterDevicesRequest * DeregisterDevicesResponse::request() const
 {
-    return static_cast<const DeregisterDevicesRequest *>(SageMakerResponse::request());
+    Q_D(const DeregisterDevicesResponse);
+    return static_cast<const DeregisterDevicesRequest *>(d->request);
 }
 
 /*!

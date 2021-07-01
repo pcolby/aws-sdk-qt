@@ -74,7 +74,8 @@ DetachDiskResponse::DetachDiskResponse(
  */
 const DetachDiskRequest * DetachDiskResponse::request() const
 {
-    return static_cast<const DetachDiskRequest *>(LightsailResponse::request());
+    Q_D(const DetachDiskResponse);
+    return static_cast<const DetachDiskRequest *>(d->request);
 }
 
 /*!

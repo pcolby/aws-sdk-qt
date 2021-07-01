@@ -75,7 +75,8 @@ GetBulkPublishDetailsResponse::GetBulkPublishDetailsResponse(
  */
 const GetBulkPublishDetailsRequest * GetBulkPublishDetailsResponse::request() const
 {
-    return static_cast<const GetBulkPublishDetailsRequest *>(CognitoSyncResponse::request());
+    Q_D(const GetBulkPublishDetailsResponse);
+    return static_cast<const GetBulkPublishDetailsRequest *>(d->request);
 }
 
 /*!

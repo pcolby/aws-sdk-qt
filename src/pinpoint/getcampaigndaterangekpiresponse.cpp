@@ -56,7 +56,8 @@ GetCampaignDateRangeKpiResponse::GetCampaignDateRangeKpiResponse(
  */
 const GetCampaignDateRangeKpiRequest * GetCampaignDateRangeKpiResponse::request() const
 {
-    return static_cast<const GetCampaignDateRangeKpiRequest *>(PinpointResponse::request());
+    Q_D(const GetCampaignDateRangeKpiResponse);
+    return static_cast<const GetCampaignDateRangeKpiRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ DeleteApiKeyResponse::DeleteApiKeyResponse(
  */
 const DeleteApiKeyRequest * DeleteApiKeyResponse::request() const
 {
-    return static_cast<const DeleteApiKeyRequest *>(AppSyncResponse::request());
+    Q_D(const DeleteApiKeyResponse);
+    return static_cast<const DeleteApiKeyRequest *>(d->request);
 }
 
 /*!

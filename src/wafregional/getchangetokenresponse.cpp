@@ -78,7 +78,8 @@ GetChangeTokenResponse::GetChangeTokenResponse(
  */
 const GetChangeTokenRequest * GetChangeTokenResponse::request() const
 {
-    return static_cast<const GetChangeTokenRequest *>(WAFRegionalResponse::request());
+    Q_D(const GetChangeTokenResponse);
+    return static_cast<const GetChangeTokenRequest *>(d->request);
 }
 
 /*!

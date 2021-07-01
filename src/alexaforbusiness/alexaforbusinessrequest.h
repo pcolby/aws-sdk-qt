@@ -151,8 +151,7 @@ public:
 
 protected:
     /// @cond internal
-    AlexaForBusinessRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AlexaForBusinessRequest(AlexaForBusinessRequestPrivate * const d);
+    AlexaForBusinessRequest(AlexaForBusinessRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

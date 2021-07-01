@@ -37,7 +37,7 @@ namespace AppMesh {
  * Constructs a AppMeshResponse object with parent \a parent.
  */
 AppMeshResponse::AppMeshResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AppMeshResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new AppMeshResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ AppMeshResponse::AppMeshResponse(QObject * const parent)
  * implementation that inherits from AppMeshResponsePrivate.
  */
 AppMeshResponse::AppMeshResponse(AppMeshResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void AppMeshResponse::parseFailure(QIODevice &response)
  * Constructs a AppMeshResponsePrivate object with public implementation \a q.
  */
 AppMeshResponsePrivate::AppMeshResponsePrivate(
-    AppMeshResponse * const q) : q_ptr(q)
+    AppMeshResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

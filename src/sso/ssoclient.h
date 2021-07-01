@@ -60,12 +60,6 @@ public slots:
     ListAccountsResponse * listAccounts(const ListAccountsRequest &request);
     LogoutResponse * logout(const LogoutRequest &request);
 
-protected:
-    /// @cond internal
-    SsoClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SsoClient(SsoClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SsoClient)
     Q_DISABLE_COPY(SsoClient)

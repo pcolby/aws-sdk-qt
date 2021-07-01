@@ -74,7 +74,8 @@ GetRelationalDatabaseMasterUserPasswordResponse::GetRelationalDatabaseMasterUser
  */
 const GetRelationalDatabaseMasterUserPasswordRequest * GetRelationalDatabaseMasterUserPasswordResponse::request() const
 {
-    return static_cast<const GetRelationalDatabaseMasterUserPasswordRequest *>(LightsailResponse::request());
+    Q_D(const GetRelationalDatabaseMasterUserPasswordResponse);
+    return static_cast<const GetRelationalDatabaseMasterUserPasswordRequest *>(d->request);
 }
 
 /*!

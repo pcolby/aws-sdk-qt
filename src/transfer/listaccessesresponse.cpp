@@ -62,7 +62,8 @@ ListAccessesResponse::ListAccessesResponse(
  */
 const ListAccessesRequest * ListAccessesResponse::request() const
 {
-    return static_cast<const ListAccessesRequest *>(TransferResponse::request());
+    Q_D(const ListAccessesResponse);
+    return static_cast<const ListAccessesRequest *>(d->request);
 }
 
 /*!

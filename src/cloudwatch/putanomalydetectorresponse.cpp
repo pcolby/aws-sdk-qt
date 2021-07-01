@@ -69,7 +69,8 @@ PutAnomalyDetectorResponse::PutAnomalyDetectorResponse(
  */
 const PutAnomalyDetectorRequest * PutAnomalyDetectorResponse::request() const
 {
-    return static_cast<const PutAnomalyDetectorRequest *>(CloudWatchResponse::request());
+    Q_D(const PutAnomalyDetectorResponse);
+    return static_cast<const PutAnomalyDetectorRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ ListOpenIDConnectProviderTagsResponse::ListOpenIDConnectProviderTagsResponse(
  */
 const ListOpenIDConnectProviderTagsRequest * ListOpenIDConnectProviderTagsResponse::request() const
 {
-    return static_cast<const ListOpenIDConnectProviderTagsRequest *>(IamResponse::request());
+    Q_D(const ListOpenIDConnectProviderTagsResponse);
+    return static_cast<const ListOpenIDConnectProviderTagsRequest *>(d->request);
 }
 
 /*!

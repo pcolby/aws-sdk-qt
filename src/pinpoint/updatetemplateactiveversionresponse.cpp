@@ -56,7 +56,8 @@ UpdateTemplateActiveVersionResponse::UpdateTemplateActiveVersionResponse(
  */
 const UpdateTemplateActiveVersionRequest * UpdateTemplateActiveVersionResponse::request() const
 {
-    return static_cast<const UpdateTemplateActiveVersionRequest *>(PinpointResponse::request());
+    Q_D(const UpdateTemplateActiveVersionResponse);
+    return static_cast<const UpdateTemplateActiveVersionRequest *>(d->request);
 }
 
 /*!

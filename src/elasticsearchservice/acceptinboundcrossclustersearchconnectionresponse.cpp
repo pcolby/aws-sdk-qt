@@ -72,7 +72,8 @@ AcceptInboundCrossClusterSearchConnectionResponse::AcceptInboundCrossClusterSear
  */
 const AcceptInboundCrossClusterSearchConnectionRequest * AcceptInboundCrossClusterSearchConnectionResponse::request() const
 {
-    return static_cast<const AcceptInboundCrossClusterSearchConnectionRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const AcceptInboundCrossClusterSearchConnectionResponse);
+    return static_cast<const AcceptInboundCrossClusterSearchConnectionRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_SWFCLIENT_P_H
 #define QTAWS_SWFCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SWF {
 
 class SwfClient;
 
-class SwfClientPrivate {
+class SwfClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SwfClientPrivate(SwfClient * const q);
-
-protected:
-    SwfClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SwfClient)

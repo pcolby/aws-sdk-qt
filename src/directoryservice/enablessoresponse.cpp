@@ -69,7 +69,8 @@ EnableSsoResponse::EnableSsoResponse(
  */
 const EnableSsoRequest * EnableSsoResponse::request() const
 {
-    return static_cast<const EnableSsoRequest *>(DirectoryServiceResponse::request());
+    Q_D(const EnableSsoResponse);
+    return static_cast<const EnableSsoRequest *>(d->request);
 }
 
 /*!

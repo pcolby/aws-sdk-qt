@@ -59,7 +59,8 @@ CreateOutpostResponse::CreateOutpostResponse(
  */
 const CreateOutpostRequest * CreateOutpostResponse::request() const
 {
-    return static_cast<const CreateOutpostRequest *>(OutpostsResponse::request());
+    Q_D(const CreateOutpostResponse);
+    return static_cast<const CreateOutpostRequest *>(d->request);
 }
 
 /*!

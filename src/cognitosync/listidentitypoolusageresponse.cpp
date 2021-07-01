@@ -75,7 +75,8 @@ ListIdentityPoolUsageResponse::ListIdentityPoolUsageResponse(
  */
 const ListIdentityPoolUsageRequest * ListIdentityPoolUsageResponse::request() const
 {
-    return static_cast<const ListIdentityPoolUsageRequest *>(CognitoSyncResponse::request());
+    Q_D(const ListIdentityPoolUsageResponse);
+    return static_cast<const ListIdentityPoolUsageRequest *>(d->request);
 }
 
 /*!

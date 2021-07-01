@@ -74,7 +74,8 @@ TransactWriteItemsResponse::TransactWriteItemsResponse(
  */
 const TransactWriteItemsRequest * TransactWriteItemsResponse::request() const
 {
-    return static_cast<const TransactWriteItemsRequest *>(DynamoDBResponse::request());
+    Q_D(const TransactWriteItemsResponse);
+    return static_cast<const TransactWriteItemsRequest *>(d->request);
 }
 
 /*!

@@ -91,7 +91,8 @@ GetVaultAccessPolicyResponse::GetVaultAccessPolicyResponse(
  */
 const GetVaultAccessPolicyRequest * GetVaultAccessPolicyResponse::request() const
 {
-    return static_cast<const GetVaultAccessPolicyRequest *>(GlacierResponse::request());
+    Q_D(const GetVaultAccessPolicyResponse);
+    return static_cast<const GetVaultAccessPolicyRequest *>(d->request);
 }
 
 /*!

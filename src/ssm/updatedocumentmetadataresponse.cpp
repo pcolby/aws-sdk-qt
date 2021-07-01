@@ -98,7 +98,8 @@ UpdateDocumentMetadataResponse::UpdateDocumentMetadataResponse(
  */
 const UpdateDocumentMetadataRequest * UpdateDocumentMetadataResponse::request() const
 {
-    return static_cast<const UpdateDocumentMetadataRequest *>(SsmResponse::request());
+    Q_D(const UpdateDocumentMetadataResponse);
+    return static_cast<const UpdateDocumentMetadataRequest *>(d->request);
 }
 
 /*!

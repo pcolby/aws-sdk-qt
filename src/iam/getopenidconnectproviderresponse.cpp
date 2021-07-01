@@ -62,7 +62,8 @@ GetOpenIDConnectProviderResponse::GetOpenIDConnectProviderResponse(
  */
 const GetOpenIDConnectProviderRequest * GetOpenIDConnectProviderResponse::request() const
 {
-    return static_cast<const GetOpenIDConnectProviderRequest *>(IamResponse::request());
+    Q_D(const GetOpenIDConnectProviderResponse);
+    return static_cast<const GetOpenIDConnectProviderRequest *>(d->request);
 }
 
 /*!

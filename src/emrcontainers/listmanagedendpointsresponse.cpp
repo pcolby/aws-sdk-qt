@@ -83,7 +83,8 @@ ListManagedEndpointsResponse::ListManagedEndpointsResponse(
  */
 const ListManagedEndpointsRequest * ListManagedEndpointsResponse::request() const
 {
-    return static_cast<const ListManagedEndpointsRequest *>(EMRContainersResponse::request());
+    Q_D(const ListManagedEndpointsResponse);
+    return static_cast<const ListManagedEndpointsRequest *>(d->request);
 }
 
 /*!

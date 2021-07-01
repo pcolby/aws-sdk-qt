@@ -63,7 +63,8 @@ DescribeImageTagsResponse::DescribeImageTagsResponse(
  */
 const DescribeImageTagsRequest * DescribeImageTagsResponse::request() const
 {
-    return static_cast<const DescribeImageTagsRequest *>(ECRPublicResponse::request());
+    Q_D(const DescribeImageTagsResponse);
+    return static_cast<const DescribeImageTagsRequest *>(d->request);
 }
 
 /*!

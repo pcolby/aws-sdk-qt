@@ -20,20 +20,19 @@
 #ifndef QTAWS_ORGANIZATIONSCLIENT_P_H
 #define QTAWS_ORGANIZATIONSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Organizations {
 
 class OrganizationsClient;
 
-class OrganizationsClientPrivate {
+class OrganizationsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit OrganizationsClientPrivate(OrganizationsClient * const q);
-
-protected:
-    OrganizationsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(OrganizationsClient)

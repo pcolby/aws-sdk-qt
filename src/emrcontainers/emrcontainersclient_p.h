@@ -20,20 +20,19 @@
 #ifndef QTAWS_EMRCONTAINERSCLIENT_P_H
 #define QTAWS_EMRCONTAINERSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace EMRContainers {
 
 class EMRContainersClient;
 
-class EMRContainersClientPrivate {
+class EMRContainersClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit EMRContainersClientPrivate(EMRContainersClient * const q);
-
-protected:
-    EMRContainersClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EMRContainersClient)

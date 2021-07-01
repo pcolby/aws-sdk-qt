@@ -75,7 +75,8 @@ PutConfigurationAggregatorResponse::PutConfigurationAggregatorResponse(
  */
 const PutConfigurationAggregatorRequest * PutConfigurationAggregatorResponse::request() const
 {
-    return static_cast<const PutConfigurationAggregatorRequest *>(ConfigServiceResponse::request());
+    Q_D(const PutConfigurationAggregatorResponse);
+    return static_cast<const PutConfigurationAggregatorRequest *>(d->request);
 }
 
 /*!

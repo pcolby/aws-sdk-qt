@@ -119,7 +119,8 @@ ModifyEventSubscriptionResponse::ModifyEventSubscriptionResponse(
  */
 const ModifyEventSubscriptionRequest * ModifyEventSubscriptionResponse::request() const
 {
-    return static_cast<const ModifyEventSubscriptionRequest *>(RdsResponse::request());
+    Q_D(const ModifyEventSubscriptionResponse);
+    return static_cast<const ModifyEventSubscriptionRequest *>(d->request);
 }
 
 /*!

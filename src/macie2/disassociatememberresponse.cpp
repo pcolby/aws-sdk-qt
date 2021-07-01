@@ -60,7 +60,8 @@ DisassociateMemberResponse::DisassociateMemberResponse(
  */
 const DisassociateMemberRequest * DisassociateMemberResponse::request() const
 {
-    return static_cast<const DisassociateMemberRequest *>(Macie2Response::request());
+    Q_D(const DisassociateMemberResponse);
+    return static_cast<const DisassociateMemberRequest *>(d->request);
 }
 
 /*!

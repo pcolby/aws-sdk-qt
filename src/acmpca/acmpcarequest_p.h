@@ -20,12 +20,15 @@
 #ifndef QTAWS_ACMPCAREQUEST_P_H
 #define QTAWS_ACMPCAREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "acmpcarequest.h"
+
 namespace QtAws {
 namespace ACMPCA {
 
 class AcmpcaRequest;
 
-class AcmpcaRequestPrivate {
+class AcmpcaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AcmpcaRequest::Action action; ///< ACMPCA action to be performed.
@@ -36,9 +39,6 @@ public:
     AcmpcaRequestPrivate(const AcmpcaRequestPrivate &other, AcmpcaRequest * const q);
 
     static QString toString(const AcmpcaRequest::Action &action);
-
-protected:
-    AcmpcaRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AcmpcaRequest)

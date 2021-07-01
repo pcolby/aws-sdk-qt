@@ -55,7 +55,8 @@ CreateQualificationTypeResponse::CreateQualificationTypeResponse(
  */
 const CreateQualificationTypeRequest * CreateQualificationTypeResponse::request() const
 {
-    return static_cast<const CreateQualificationTypeRequest *>(MTurkResponse::request());
+    Q_D(const CreateQualificationTypeResponse);
+    return static_cast<const CreateQualificationTypeRequest *>(d->request);
 }
 
 /*!

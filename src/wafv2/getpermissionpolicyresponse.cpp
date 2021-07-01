@@ -126,7 +126,8 @@ GetPermissionPolicyResponse::GetPermissionPolicyResponse(
  */
 const GetPermissionPolicyRequest * GetPermissionPolicyResponse::request() const
 {
-    return static_cast<const GetPermissionPolicyRequest *>(Wafv2Response::request());
+    Q_D(const GetPermissionPolicyResponse);
+    return static_cast<const GetPermissionPolicyRequest *>(d->request);
 }
 
 /*!

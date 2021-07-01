@@ -55,7 +55,8 @@ ProvisionPermissionSetResponse::ProvisionPermissionSetResponse(
  */
 const ProvisionPermissionSetRequest * ProvisionPermissionSetResponse::request() const
 {
-    return static_cast<const ProvisionPermissionSetRequest *>(SSOAdminResponse::request());
+    Q_D(const ProvisionPermissionSetResponse);
+    return static_cast<const ProvisionPermissionSetRequest *>(d->request);
 }
 
 /*!

@@ -81,7 +81,7 @@ namespace kendra {
  * Constructs a kendraRequest object for kendra \a action.
  */
 kendraRequest::kendraRequest(const Action action)
-    : d_ptr(new kendraRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new kendraRequestPrivate(action, this))
 {
 
 }
@@ -90,8 +90,7 @@ kendraRequest::kendraRequest(const Action action)
  * Constructs a copy of \a other.
  */
 kendraRequest::kendraRequest(const kendraRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new kendraRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new kendraRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -114,7 +113,7 @@ kendraRequest& kendraRequest::operator=(const kendraRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from kendraRequestPrivate.
  */
-kendraRequest::kendraRequest(kendraRequestPrivate * const d) : d_ptr(d)
+kendraRequest::kendraRequest(kendraRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -283,7 +282,7 @@ QNetworkRequest kendraRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 kendraRequestPrivate::kendraRequestPrivate(const kendraRequest::Action action, kendraRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -298,8 +297,8 @@ kendraRequestPrivate::kendraRequestPrivate(const kendraRequest::Action action, k
  */
 kendraRequestPrivate::kendraRequestPrivate(const kendraRequestPrivate &other,
                                      kendraRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

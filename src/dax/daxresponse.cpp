@@ -37,7 +37,7 @@ namespace DAX {
  * Constructs a DaxResponse object with parent \a parent.
  */
 DaxResponse::DaxResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DaxResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new DaxResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ DaxResponse::DaxResponse(QObject * const parent)
  * implementation that inherits from DaxResponsePrivate.
  */
 DaxResponse::DaxResponse(DaxResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void DaxResponse::parseFailure(QIODevice &response)
  * Constructs a DaxResponsePrivate object with public implementation \a q.
  */
 DaxResponsePrivate::DaxResponsePrivate(
-    DaxResponse * const q) : q_ptr(q)
+    DaxResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

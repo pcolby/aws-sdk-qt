@@ -439,7 +439,8 @@ ListAssociatedApprovalRuleTemplatesForRepositoryResponse::ListAssociatedApproval
  */
 const ListAssociatedApprovalRuleTemplatesForRepositoryRequest * ListAssociatedApprovalRuleTemplatesForRepositoryResponse::request() const
 {
-    return static_cast<const ListAssociatedApprovalRuleTemplatesForRepositoryRequest *>(CodeCommitResponse::request());
+    Q_D(const ListAssociatedApprovalRuleTemplatesForRepositoryResponse);
+    return static_cast<const ListAssociatedApprovalRuleTemplatesForRepositoryRequest *>(d->request);
 }
 
 /*!

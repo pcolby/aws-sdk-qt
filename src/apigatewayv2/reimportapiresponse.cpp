@@ -56,7 +56,8 @@ ReimportApiResponse::ReimportApiResponse(
  */
 const ReimportApiRequest * ReimportApiResponse::request() const
 {
-    return static_cast<const ReimportApiRequest *>(ApiGatewayV2Response::request());
+    Q_D(const ReimportApiResponse);
+    return static_cast<const ReimportApiRequest *>(d->request);
 }
 
 /*!

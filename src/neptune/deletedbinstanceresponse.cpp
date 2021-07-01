@@ -72,7 +72,8 @@ DeleteDBInstanceResponse::DeleteDBInstanceResponse(
  */
 const DeleteDBInstanceRequest * DeleteDBInstanceResponse::request() const
 {
-    return static_cast<const DeleteDBInstanceRequest *>(NeptuneResponse::request());
+    Q_D(const DeleteDBInstanceResponse);
+    return static_cast<const DeleteDBInstanceRequest *>(d->request);
 }
 
 /*!

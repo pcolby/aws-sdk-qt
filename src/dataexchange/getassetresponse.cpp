@@ -66,7 +66,8 @@ GetAssetResponse::GetAssetResponse(
  */
 const GetAssetRequest * GetAssetResponse::request() const
 {
-    return static_cast<const GetAssetRequest *>(DataExchangeResponse::request());
+    Q_D(const GetAssetResponse);
+    return static_cast<const GetAssetRequest *>(d->request);
 }
 
 /*!

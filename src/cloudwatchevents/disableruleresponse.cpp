@@ -78,7 +78,8 @@ DisableRuleResponse::DisableRuleResponse(
  */
 const DisableRuleRequest * DisableRuleResponse::request() const
 {
-    return static_cast<const DisableRuleRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const DisableRuleResponse);
+    return static_cast<const DisableRuleRequest *>(d->request);
 }
 
 /*!

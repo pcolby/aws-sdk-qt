@@ -55,7 +55,8 @@ DeleteBucketReplicationResponse::DeleteBucketReplicationResponse(
  */
 const DeleteBucketReplicationRequest * DeleteBucketReplicationResponse::request() const
 {
-    return static_cast<const DeleteBucketReplicationRequest *>(S3Response::request());
+    Q_D(const DeleteBucketReplicationResponse);
+    return static_cast<const DeleteBucketReplicationRequest *>(d->request);
 }
 
 /*!

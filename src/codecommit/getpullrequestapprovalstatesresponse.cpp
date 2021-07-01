@@ -439,7 +439,8 @@ GetPullRequestApprovalStatesResponse::GetPullRequestApprovalStatesResponse(
  */
 const GetPullRequestApprovalStatesRequest * GetPullRequestApprovalStatesResponse::request() const
 {
-    return static_cast<const GetPullRequestApprovalStatesRequest *>(CodeCommitResponse::request());
+    Q_D(const GetPullRequestApprovalStatesResponse);
+    return static_cast<const GetPullRequestApprovalStatesRequest *>(d->request);
 }
 
 /*!

@@ -57,7 +57,8 @@ GetCorsPolicyResponse::GetCorsPolicyResponse(
  */
 const GetCorsPolicyRequest * GetCorsPolicyResponse::request() const
 {
-    return static_cast<const GetCorsPolicyRequest *>(MediaStoreResponse::request());
+    Q_D(const GetCorsPolicyResponse);
+    return static_cast<const GetCorsPolicyRequest *>(d->request);
 }
 
 /*!

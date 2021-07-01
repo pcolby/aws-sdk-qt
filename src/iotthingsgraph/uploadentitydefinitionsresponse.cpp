@@ -66,7 +66,8 @@ UploadEntityDefinitionsResponse::UploadEntityDefinitionsResponse(
  */
 const UploadEntityDefinitionsRequest * UploadEntityDefinitionsResponse::request() const
 {
-    return static_cast<const UploadEntityDefinitionsRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const UploadEntityDefinitionsResponse);
+    return static_cast<const UploadEntityDefinitionsRequest *>(d->request);
 }
 
 /*!

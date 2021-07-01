@@ -61,7 +61,8 @@ DeleteTagOptionResponse::DeleteTagOptionResponse(
  */
 const DeleteTagOptionRequest * DeleteTagOptionResponse::request() const
 {
-    return static_cast<const DeleteTagOptionRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DeleteTagOptionResponse);
+    return static_cast<const DeleteTagOptionRequest *>(d->request);
 }
 
 /*!

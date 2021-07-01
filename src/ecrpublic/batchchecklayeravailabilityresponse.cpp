@@ -63,7 +63,8 @@ BatchCheckLayerAvailabilityResponse::BatchCheckLayerAvailabilityResponse(
  */
 const BatchCheckLayerAvailabilityRequest * BatchCheckLayerAvailabilityResponse::request() const
 {
-    return static_cast<const BatchCheckLayerAvailabilityRequest *>(ECRPublicResponse::request());
+    Q_D(const BatchCheckLayerAvailabilityResponse);
+    return static_cast<const BatchCheckLayerAvailabilityRequest *>(d->request);
 }
 
 /*!

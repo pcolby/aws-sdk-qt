@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    AppStreamResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AppStreamResponse(AppStreamResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

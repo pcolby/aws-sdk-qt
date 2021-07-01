@@ -124,7 +124,8 @@ CreateTapeWithBarcodeResponse::CreateTapeWithBarcodeResponse(
  */
 const CreateTapeWithBarcodeRequest * CreateTapeWithBarcodeResponse::request() const
 {
-    return static_cast<const CreateTapeWithBarcodeRequest *>(StorageGatewayResponse::request());
+    Q_D(const CreateTapeWithBarcodeResponse);
+    return static_cast<const CreateTapeWithBarcodeRequest *>(d->request);
 }
 
 /*!

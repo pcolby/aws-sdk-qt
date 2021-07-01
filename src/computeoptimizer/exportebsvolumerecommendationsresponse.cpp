@@ -64,7 +64,8 @@ ExportEBSVolumeRecommendationsResponse::ExportEBSVolumeRecommendationsResponse(
  */
 const ExportEBSVolumeRecommendationsRequest * ExportEBSVolumeRecommendationsResponse::request() const
 {
-    return static_cast<const ExportEBSVolumeRecommendationsRequest *>(ComputeOptimizerResponse::request());
+    Q_D(const ExportEBSVolumeRecommendationsResponse);
+    return static_cast<const ExportEBSVolumeRecommendationsRequest *>(d->request);
 }
 
 /*!

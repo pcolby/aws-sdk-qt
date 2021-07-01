@@ -56,7 +56,8 @@ CreateWorldTemplateResponse::CreateWorldTemplateResponse(
  */
 const CreateWorldTemplateRequest * CreateWorldTemplateResponse::request() const
 {
-    return static_cast<const CreateWorldTemplateRequest *>(RoboMakerResponse::request());
+    Q_D(const CreateWorldTemplateResponse);
+    return static_cast<const CreateWorldTemplateRequest *>(d->request);
 }
 
 /*!

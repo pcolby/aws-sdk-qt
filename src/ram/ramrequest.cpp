@@ -66,7 +66,7 @@ namespace RAM {
  * Constructs a RamRequest object for RAM \a action.
  */
 RamRequest::RamRequest(const Action action)
-    : d_ptr(new RamRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new RamRequestPrivate(action, this))
 {
 
 }
@@ -75,8 +75,7 @@ RamRequest::RamRequest(const Action action)
  * Constructs a copy of \a other.
  */
 RamRequest::RamRequest(const RamRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new RamRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new RamRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -99,7 +98,7 @@ RamRequest& RamRequest::operator=(const RamRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RamRequestPrivate.
  */
-RamRequest::RamRequest(RamRequestPrivate * const d) : d_ptr(d)
+RamRequest::RamRequest(RamRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -268,7 +267,7 @@ QNetworkRequest RamRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 RamRequestPrivate::RamRequestPrivate(const RamRequest::Action action, RamRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -283,8 +282,8 @@ RamRequestPrivate::RamRequestPrivate(const RamRequest::Action action, RamRequest
  */
 RamRequestPrivate::RamRequestPrivate(const RamRequestPrivate &other,
                                      RamRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

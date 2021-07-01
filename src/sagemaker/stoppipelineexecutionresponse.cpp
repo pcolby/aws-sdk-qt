@@ -70,7 +70,8 @@ StopPipelineExecutionResponse::StopPipelineExecutionResponse(
  */
 const StopPipelineExecutionRequest * StopPipelineExecutionResponse::request() const
 {
-    return static_cast<const StopPipelineExecutionRequest *>(SageMakerResponse::request());
+    Q_D(const StopPipelineExecutionResponse);
+    return static_cast<const StopPipelineExecutionRequest *>(d->request);
 }
 
 /*!

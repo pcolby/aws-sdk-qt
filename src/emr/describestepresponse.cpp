@@ -58,7 +58,8 @@ DescribeStepResponse::DescribeStepResponse(
  */
 const DescribeStepRequest * DescribeStepResponse::request() const
 {
-    return static_cast<const DescribeStepRequest *>(EmrResponse::request());
+    Q_D(const DescribeStepResponse);
+    return static_cast<const DescribeStepRequest *>(d->request);
 }
 
 /*!

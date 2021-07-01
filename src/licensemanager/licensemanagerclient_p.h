@@ -20,20 +20,19 @@
 #ifndef QTAWS_LICENSEMANAGERCLIENT_P_H
 #define QTAWS_LICENSEMANAGERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace LicenseManager {
 
 class LicenseManagerClient;
 
-class LicenseManagerClientPrivate {
+class LicenseManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit LicenseManagerClientPrivate(LicenseManagerClient * const q);
-
-protected:
-    LicenseManagerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LicenseManagerClient)

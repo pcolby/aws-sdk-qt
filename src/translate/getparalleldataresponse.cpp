@@ -56,7 +56,8 @@ GetParallelDataResponse::GetParallelDataResponse(
  */
 const GetParallelDataRequest * GetParallelDataResponse::request() const
 {
-    return static_cast<const GetParallelDataRequest *>(TranslateResponse::request());
+    Q_D(const GetParallelDataResponse);
+    return static_cast<const GetParallelDataRequest *>(d->request);
 }
 
 /*!

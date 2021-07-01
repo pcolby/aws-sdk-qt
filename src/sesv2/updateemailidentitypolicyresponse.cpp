@@ -88,7 +88,8 @@ UpdateEmailIdentityPolicyResponse::UpdateEmailIdentityPolicyResponse(
  */
 const UpdateEmailIdentityPolicyRequest * UpdateEmailIdentityPolicyResponse::request() const
 {
-    return static_cast<const UpdateEmailIdentityPolicyRequest *>(Sesv2Response::request());
+    Q_D(const UpdateEmailIdentityPolicyResponse);
+    return static_cast<const UpdateEmailIdentityPolicyRequest *>(d->request);
 }
 
 /*!

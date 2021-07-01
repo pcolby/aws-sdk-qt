@@ -20,20 +20,19 @@
 #ifndef QTAWS_TIMESTREAMWRITECLIENT_P_H
 #define QTAWS_TIMESTREAMWRITECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace TimestreamWrite {
 
 class TimestreamWriteClient;
 
-class TimestreamWriteClientPrivate {
+class TimestreamWriteClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit TimestreamWriteClientPrivate(TimestreamWriteClient * const q);
-
-protected:
-    TimestreamWriteClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TimestreamWriteClient)

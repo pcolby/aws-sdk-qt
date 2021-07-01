@@ -124,7 +124,8 @@ DescribeSMBSettingsResponse::DescribeSMBSettingsResponse(
  */
 const DescribeSMBSettingsRequest * DescribeSMBSettingsResponse::request() const
 {
-    return static_cast<const DescribeSMBSettingsRequest *>(StorageGatewayResponse::request());
+    Q_D(const DescribeSMBSettingsResponse);
+    return static_cast<const DescribeSMBSettingsRequest *>(d->request);
 }
 
 /*!

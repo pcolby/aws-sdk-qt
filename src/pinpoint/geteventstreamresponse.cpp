@@ -56,7 +56,8 @@ GetEventStreamResponse::GetEventStreamResponse(
  */
 const GetEventStreamRequest * GetEventStreamResponse::request() const
 {
-    return static_cast<const GetEventStreamRequest *>(PinpointResponse::request());
+    Q_D(const GetEventStreamResponse);
+    return static_cast<const GetEventStreamRequest *>(d->request);
 }
 
 /*!

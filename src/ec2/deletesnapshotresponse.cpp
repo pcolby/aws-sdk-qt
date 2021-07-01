@@ -87,7 +87,8 @@ DeleteSnapshotResponse::DeleteSnapshotResponse(
  */
 const DeleteSnapshotRequest * DeleteSnapshotResponse::request() const
 {
-    return static_cast<const DeleteSnapshotRequest *>(Ec2Response::request());
+    Q_D(const DeleteSnapshotResponse);
+    return static_cast<const DeleteSnapshotRequest *>(d->request);
 }
 
 /*!

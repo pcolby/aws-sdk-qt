@@ -161,7 +161,8 @@ DeleteInstanceResponse::DeleteInstanceResponse(
  */
 const DeleteInstanceRequest * DeleteInstanceResponse::request() const
 {
-    return static_cast<const DeleteInstanceRequest *>(OpsWorksResponse::request());
+    Q_D(const DeleteInstanceResponse);
+    return static_cast<const DeleteInstanceRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ ListSSHPublicKeysResponse::ListSSHPublicKeysResponse(
  */
 const ListSSHPublicKeysRequest * ListSSHPublicKeysResponse::request() const
 {
-    return static_cast<const ListSSHPublicKeysRequest *>(IamResponse::request());
+    Q_D(const ListSSHPublicKeysResponse);
+    return static_cast<const ListSSHPublicKeysRequest *>(d->request);
 }
 
 /*!

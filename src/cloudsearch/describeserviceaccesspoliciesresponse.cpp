@@ -66,7 +66,8 @@ DescribeServiceAccessPoliciesResponse::DescribeServiceAccessPoliciesResponse(
  */
 const DescribeServiceAccessPoliciesRequest * DescribeServiceAccessPoliciesResponse::request() const
 {
-    return static_cast<const DescribeServiceAccessPoliciesRequest *>(CloudSearchResponse::request());
+    Q_D(const DescribeServiceAccessPoliciesResponse);
+    return static_cast<const DescribeServiceAccessPoliciesRequest *>(d->request);
 }
 
 /*!

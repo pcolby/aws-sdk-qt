@@ -56,7 +56,8 @@ DeleteDestinationResponse::DeleteDestinationResponse(
  */
 const DeleteDestinationRequest * DeleteDestinationResponse::request() const
 {
-    return static_cast<const DeleteDestinationRequest *>(IoTWirelessResponse::request());
+    Q_D(const DeleteDestinationResponse);
+    return static_cast<const DeleteDestinationRequest *>(d->request);
 }
 
 /*!

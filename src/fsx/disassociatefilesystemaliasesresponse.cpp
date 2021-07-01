@@ -57,7 +57,8 @@ DisassociateFileSystemAliasesResponse::DisassociateFileSystemAliasesResponse(
  */
 const DisassociateFileSystemAliasesRequest * DisassociateFileSystemAliasesResponse::request() const
 {
-    return static_cast<const DisassociateFileSystemAliasesRequest *>(FSxResponse::request());
+    Q_D(const DisassociateFileSystemAliasesResponse);
+    return static_cast<const DisassociateFileSystemAliasesRequest *>(d->request);
 }
 
 /*!

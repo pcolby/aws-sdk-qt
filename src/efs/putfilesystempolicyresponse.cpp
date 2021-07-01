@@ -62,7 +62,8 @@ PutFileSystemPolicyResponse::PutFileSystemPolicyResponse(
  */
 const PutFileSystemPolicyRequest * PutFileSystemPolicyResponse::request() const
 {
-    return static_cast<const PutFileSystemPolicyRequest *>(EfsResponse::request());
+    Q_D(const PutFileSystemPolicyResponse);
+    return static_cast<const PutFileSystemPolicyRequest *>(d->request);
 }
 
 /*!

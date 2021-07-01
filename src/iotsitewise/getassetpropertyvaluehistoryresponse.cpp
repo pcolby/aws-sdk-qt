@@ -61,7 +61,8 @@ GetAssetPropertyValueHistoryResponse::GetAssetPropertyValueHistoryResponse(
  */
 const GetAssetPropertyValueHistoryRequest * GetAssetPropertyValueHistoryResponse::request() const
 {
-    return static_cast<const GetAssetPropertyValueHistoryRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const GetAssetPropertyValueHistoryResponse);
+    return static_cast<const GetAssetPropertyValueHistoryRequest *>(d->request);
 }
 
 /*!

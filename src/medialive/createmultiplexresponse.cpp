@@ -55,7 +55,8 @@ CreateMultiplexResponse::CreateMultiplexResponse(
  */
 const CreateMultiplexRequest * CreateMultiplexResponse::request() const
 {
-    return static_cast<const CreateMultiplexRequest *>(MediaLiveResponse::request());
+    Q_D(const CreateMultiplexResponse);
+    return static_cast<const CreateMultiplexRequest *>(d->request);
 }
 
 /*!

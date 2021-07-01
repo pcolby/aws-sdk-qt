@@ -67,7 +67,8 @@ ListPolicyGenerationsResponse::ListPolicyGenerationsResponse(
  */
 const ListPolicyGenerationsRequest * ListPolicyGenerationsResponse::request() const
 {
-    return static_cast<const ListPolicyGenerationsRequest *>(AccessAnalyzerResponse::request());
+    Q_D(const ListPolicyGenerationsResponse);
+    return static_cast<const ListPolicyGenerationsRequest *>(d->request);
 }
 
 /*!

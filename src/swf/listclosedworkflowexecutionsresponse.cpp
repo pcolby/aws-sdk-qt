@@ -71,7 +71,8 @@ ListClosedWorkflowExecutionsResponse::ListClosedWorkflowExecutionsResponse(
  */
 const ListClosedWorkflowExecutionsRequest * ListClosedWorkflowExecutionsResponse::request() const
 {
-    return static_cast<const ListClosedWorkflowExecutionsRequest *>(SwfResponse::request());
+    Q_D(const ListClosedWorkflowExecutionsResponse);
+    return static_cast<const ListClosedWorkflowExecutionsRequest *>(d->request);
 }
 
 /*!

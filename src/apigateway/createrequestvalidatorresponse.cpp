@@ -60,7 +60,8 @@ CreateRequestValidatorResponse::CreateRequestValidatorResponse(
  */
 const CreateRequestValidatorRequest * CreateRequestValidatorResponse::request() const
 {
-    return static_cast<const CreateRequestValidatorRequest *>(APIGatewayResponse::request());
+    Q_D(const CreateRequestValidatorResponse);
+    return static_cast<const CreateRequestValidatorRequest *>(d->request);
 }
 
 /*!

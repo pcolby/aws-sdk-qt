@@ -37,7 +37,7 @@ namespace MediaConnect {
  * Constructs a MediaConnectResponse object with parent \a parent.
  */
 MediaConnectResponse::MediaConnectResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MediaConnectResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new MediaConnectResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ MediaConnectResponse::MediaConnectResponse(QObject * const parent)
  * implementation that inherits from MediaConnectResponsePrivate.
  */
 MediaConnectResponse::MediaConnectResponse(MediaConnectResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void MediaConnectResponse::parseFailure(QIODevice &response)
  * Constructs a MediaConnectResponsePrivate object with public implementation \a q.
  */
 MediaConnectResponsePrivate::MediaConnectResponsePrivate(
-    MediaConnectResponse * const q) : q_ptr(q)
+    MediaConnectResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

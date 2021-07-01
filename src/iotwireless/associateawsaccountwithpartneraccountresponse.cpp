@@ -56,7 +56,8 @@ AssociateAwsAccountWithPartnerAccountResponse::AssociateAwsAccountWithPartnerAcc
  */
 const AssociateAwsAccountWithPartnerAccountRequest * AssociateAwsAccountWithPartnerAccountResponse::request() const
 {
-    return static_cast<const AssociateAwsAccountWithPartnerAccountRequest *>(IoTWirelessResponse::request());
+    Q_D(const AssociateAwsAccountWithPartnerAccountResponse);
+    return static_cast<const AssociateAwsAccountWithPartnerAccountRequest *>(d->request);
 }
 
 /*!

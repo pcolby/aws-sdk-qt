@@ -60,7 +60,8 @@ UpdateServiceResponse::UpdateServiceResponse(
  */
 const UpdateServiceRequest * UpdateServiceResponse::request() const
 {
-    return static_cast<const UpdateServiceRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const UpdateServiceResponse);
+    return static_cast<const UpdateServiceRequest *>(d->request);
 }
 
 /*!

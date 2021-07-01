@@ -37,7 +37,7 @@ namespace IoTAnalytics {
  * Constructs a IoTAnalyticsResponse object with parent \a parent.
  */
 IoTAnalyticsResponse::IoTAnalyticsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTAnalyticsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new IoTAnalyticsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ IoTAnalyticsResponse::IoTAnalyticsResponse(QObject * const parent)
  * implementation that inherits from IoTAnalyticsResponsePrivate.
  */
 IoTAnalyticsResponse::IoTAnalyticsResponse(IoTAnalyticsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTAnalyticsResponse::parseFailure(QIODevice &response)
  * Constructs a IoTAnalyticsResponsePrivate object with public implementation \a q.
  */
 IoTAnalyticsResponsePrivate::IoTAnalyticsResponsePrivate(
-    IoTAnalyticsResponse * const q) : q_ptr(q)
+    IoTAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

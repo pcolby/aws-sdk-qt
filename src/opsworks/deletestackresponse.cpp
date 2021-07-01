@@ -161,7 +161,8 @@ DeleteStackResponse::DeleteStackResponse(
  */
 const DeleteStackRequest * DeleteStackResponse::request() const
 {
-    return static_cast<const DeleteStackRequest *>(OpsWorksResponse::request());
+    Q_D(const DeleteStackResponse);
+    return static_cast<const DeleteStackRequest *>(d->request);
 }
 
 /*!

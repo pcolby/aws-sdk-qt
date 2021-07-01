@@ -56,7 +56,8 @@ GetJobTaggingResponse::GetJobTaggingResponse(
  */
 const GetJobTaggingRequest * GetJobTaggingResponse::request() const
 {
-    return static_cast<const GetJobTaggingRequest *>(S3ControlResponse::request());
+    Q_D(const GetJobTaggingResponse);
+    return static_cast<const GetJobTaggingRequest *>(d->request);
 }
 
 /*!

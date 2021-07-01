@@ -37,7 +37,7 @@ namespace DevOpsGuru {
  * Constructs a DevOpsGuruResponse object with parent \a parent.
  */
 DevOpsGuruResponse::DevOpsGuruResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DevOpsGuruResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new DevOpsGuruResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ DevOpsGuruResponse::DevOpsGuruResponse(QObject * const parent)
  * implementation that inherits from DevOpsGuruResponsePrivate.
  */
 DevOpsGuruResponse::DevOpsGuruResponse(DevOpsGuruResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void DevOpsGuruResponse::parseFailure(QIODevice &response)
  * Constructs a DevOpsGuruResponsePrivate object with public implementation \a q.
  */
 DevOpsGuruResponsePrivate::DevOpsGuruResponsePrivate(
-    DevOpsGuruResponse * const q) : q_ptr(q)
+    DevOpsGuruResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

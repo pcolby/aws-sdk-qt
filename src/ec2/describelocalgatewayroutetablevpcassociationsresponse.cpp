@@ -87,7 +87,8 @@ DescribeLocalGatewayRouteTableVpcAssociationsResponse::DescribeLocalGatewayRoute
  */
 const DescribeLocalGatewayRouteTableVpcAssociationsRequest * DescribeLocalGatewayRouteTableVpcAssociationsResponse::request() const
 {
-    return static_cast<const DescribeLocalGatewayRouteTableVpcAssociationsRequest *>(Ec2Response::request());
+    Q_D(const DescribeLocalGatewayRouteTableVpcAssociationsResponse);
+    return static_cast<const DescribeLocalGatewayRouteTableVpcAssociationsRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ DescribeDataSetResponse::DescribeDataSetResponse(
  */
 const DescribeDataSetRequest * DescribeDataSetResponse::request() const
 {
-    return static_cast<const DescribeDataSetRequest *>(QuickSightResponse::request());
+    Q_D(const DescribeDataSetResponse);
+    return static_cast<const DescribeDataSetRequest *>(d->request);
 }
 
 /*!

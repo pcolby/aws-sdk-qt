@@ -58,7 +58,8 @@ DescribeAlertResponse::DescribeAlertResponse(
  */
 const DescribeAlertRequest * DescribeAlertResponse::request() const
 {
-    return static_cast<const DescribeAlertRequest *>(LookoutMetricsResponse::request());
+    Q_D(const DescribeAlertResponse);
+    return static_cast<const DescribeAlertRequest *>(d->request);
 }
 
 /*!

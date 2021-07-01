@@ -55,7 +55,8 @@ ListObjectsResponse::ListObjectsResponse(
  */
 const ListObjectsRequest * ListObjectsResponse::request() const
 {
-    return static_cast<const ListObjectsRequest *>(S3Response::request());
+    Q_D(const ListObjectsResponse);
+    return static_cast<const ListObjectsRequest *>(d->request);
 }
 
 /*!

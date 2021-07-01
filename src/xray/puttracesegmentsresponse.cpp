@@ -56,7 +56,8 @@ PutTraceSegmentsResponse::PutTraceSegmentsResponse(
  */
 const PutTraceSegmentsRequest * PutTraceSegmentsResponse::request() const
 {
-    return static_cast<const PutTraceSegmentsRequest *>(XRayResponse::request());
+    Q_D(const PutTraceSegmentsResponse);
+    return static_cast<const PutTraceSegmentsRequest *>(d->request);
 }
 
 /*!

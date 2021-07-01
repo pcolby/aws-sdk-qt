@@ -58,7 +58,8 @@ CreateLoggerDefinitionVersionResponse::CreateLoggerDefinitionVersionResponse(
  */
 const CreateLoggerDefinitionVersionRequest * CreateLoggerDefinitionVersionResponse::request() const
 {
-    return static_cast<const CreateLoggerDefinitionVersionRequest *>(GreengrassResponse::request());
+    Q_D(const CreateLoggerDefinitionVersionResponse);
+    return static_cast<const CreateLoggerDefinitionVersionRequest *>(d->request);
 }
 
 /*!

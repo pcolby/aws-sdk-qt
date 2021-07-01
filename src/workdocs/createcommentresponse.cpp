@@ -84,7 +84,8 @@ CreateCommentResponse::CreateCommentResponse(
  */
 const CreateCommentRequest * CreateCommentResponse::request() const
 {
-    return static_cast<const CreateCommentRequest *>(WorkDocsResponse::request());
+    Q_D(const CreateCommentResponse);
+    return static_cast<const CreateCommentRequest *>(d->request);
 }
 
 /*!

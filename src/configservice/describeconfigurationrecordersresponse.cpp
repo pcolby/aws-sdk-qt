@@ -75,7 +75,8 @@ DescribeConfigurationRecordersResponse::DescribeConfigurationRecordersResponse(
  */
 const DescribeConfigurationRecordersRequest * DescribeConfigurationRecordersResponse::request() const
 {
-    return static_cast<const DescribeConfigurationRecordersRequest *>(ConfigServiceResponse::request());
+    Q_D(const DescribeConfigurationRecordersResponse);
+    return static_cast<const DescribeConfigurationRecordersRequest *>(d->request);
 }
 
 /*!

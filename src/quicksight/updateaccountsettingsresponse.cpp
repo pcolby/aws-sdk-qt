@@ -60,7 +60,8 @@ UpdateAccountSettingsResponse::UpdateAccountSettingsResponse(
  */
 const UpdateAccountSettingsRequest * UpdateAccountSettingsResponse::request() const
 {
-    return static_cast<const UpdateAccountSettingsRequest *>(QuickSightResponse::request());
+    Q_D(const UpdateAccountSettingsResponse);
+    return static_cast<const UpdateAccountSettingsRequest *>(d->request);
 }
 
 /*!

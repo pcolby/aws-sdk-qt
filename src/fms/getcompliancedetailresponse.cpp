@@ -67,7 +67,8 @@ GetComplianceDetailResponse::GetComplianceDetailResponse(
  */
 const GetComplianceDetailRequest * GetComplianceDetailResponse::request() const
 {
-    return static_cast<const GetComplianceDetailRequest *>(FmsResponse::request());
+    Q_D(const GetComplianceDetailResponse);
+    return static_cast<const GetComplianceDetailRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ DeleteRealtimeLogConfigResponse::DeleteRealtimeLogConfigResponse(
  */
 const DeleteRealtimeLogConfigRequest * DeleteRealtimeLogConfigResponse::request() const
 {
-    return static_cast<const DeleteRealtimeLogConfigRequest *>(CloudFrontResponse::request());
+    Q_D(const DeleteRealtimeLogConfigResponse);
+    return static_cast<const DeleteRealtimeLogConfigRequest *>(d->request);
 }
 
 /*!

@@ -78,7 +78,8 @@ GetRegexMatchSetResponse::GetRegexMatchSetResponse(
  */
 const GetRegexMatchSetRequest * GetRegexMatchSetResponse::request() const
 {
-    return static_cast<const GetRegexMatchSetRequest *>(WAFRegionalResponse::request());
+    Q_D(const GetRegexMatchSetResponse);
+    return static_cast<const GetRegexMatchSetRequest *>(d->request);
 }
 
 /*!

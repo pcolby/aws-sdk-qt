@@ -82,7 +82,8 @@ AttachSecurityProfileResponse::AttachSecurityProfileResponse(
  */
 const AttachSecurityProfileRequest * AttachSecurityProfileResponse::request() const
 {
-    return static_cast<const AttachSecurityProfileRequest *>(IoTResponse::request());
+    Q_D(const AttachSecurityProfileResponse);
+    return static_cast<const AttachSecurityProfileRequest *>(d->request);
 }
 
 /*!

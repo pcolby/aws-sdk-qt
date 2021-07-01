@@ -75,7 +75,8 @@ CreateSMSSandboxPhoneNumberResponse::CreateSMSSandboxPhoneNumberResponse(
  */
 const CreateSMSSandboxPhoneNumberRequest * CreateSMSSandboxPhoneNumberResponse::request() const
 {
-    return static_cast<const CreateSMSSandboxPhoneNumberRequest *>(SnsResponse::request());
+    Q_D(const CreateSMSSandboxPhoneNumberResponse);
+    return static_cast<const CreateSMSSandboxPhoneNumberRequest *>(d->request);
 }
 
 /*!

@@ -177,7 +177,8 @@ CreateServiceResponse::CreateServiceResponse(
  */
 const CreateServiceRequest * CreateServiceResponse::request() const
 {
-    return static_cast<const CreateServiceRequest *>(ProtonResponse::request());
+    Q_D(const CreateServiceResponse);
+    return static_cast<const CreateServiceRequest *>(d->request);
 }
 
 /*!

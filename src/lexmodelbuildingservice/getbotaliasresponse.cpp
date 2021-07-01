@@ -59,7 +59,8 @@ GetBotAliasResponse::GetBotAliasResponse(
  */
 const GetBotAliasRequest * GetBotAliasResponse::request() const
 {
-    return static_cast<const GetBotAliasRequest *>(LexModelBuildingServiceResponse::request());
+    Q_D(const GetBotAliasResponse);
+    return static_cast<const GetBotAliasRequest *>(d->request);
 }
 
 /*!

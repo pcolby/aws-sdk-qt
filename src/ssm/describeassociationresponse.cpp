@@ -98,7 +98,8 @@ DescribeAssociationResponse::DescribeAssociationResponse(
  */
 const DescribeAssociationRequest * DescribeAssociationResponse::request() const
 {
-    return static_cast<const DescribeAssociationRequest *>(SsmResponse::request());
+    Q_D(const DescribeAssociationResponse);
+    return static_cast<const DescribeAssociationRequest *>(d->request);
 }
 
 /*!

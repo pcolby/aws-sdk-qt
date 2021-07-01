@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    IoTJobsDataPlaneResponsePrivate * const d_ptr; ///< Internal d-pointer.
     IoTJobsDataPlaneResponse(IoTJobsDataPlaneResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

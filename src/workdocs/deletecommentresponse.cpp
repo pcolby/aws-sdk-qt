@@ -84,7 +84,8 @@ DeleteCommentResponse::DeleteCommentResponse(
  */
 const DeleteCommentRequest * DeleteCommentResponse::request() const
 {
-    return static_cast<const DeleteCommentRequest *>(WorkDocsResponse::request());
+    Q_D(const DeleteCommentResponse);
+    return static_cast<const DeleteCommentRequest *>(d->request);
 }
 
 /*!

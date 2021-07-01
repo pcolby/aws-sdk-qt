@@ -60,7 +60,8 @@ DisassociateFromMasterAccountResponse::DisassociateFromMasterAccountResponse(
  */
 const DisassociateFromMasterAccountRequest * DisassociateFromMasterAccountResponse::request() const
 {
-    return static_cast<const DisassociateFromMasterAccountRequest *>(Macie2Response::request());
+    Q_D(const DisassociateFromMasterAccountResponse);
+    return static_cast<const DisassociateFromMasterAccountRequest *>(d->request);
 }
 
 /*!

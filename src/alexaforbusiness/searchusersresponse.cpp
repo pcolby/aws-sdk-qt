@@ -62,7 +62,8 @@ SearchUsersResponse::SearchUsersResponse(
  */
 const SearchUsersRequest * SearchUsersResponse::request() const
 {
-    return static_cast<const SearchUsersRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const SearchUsersResponse);
+    return static_cast<const SearchUsersRequest *>(d->request);
 }
 
 /*!

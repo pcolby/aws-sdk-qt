@@ -93,7 +93,7 @@ namespace Rekognition {
  * Constructs a RekognitionRequest object for Rekognition \a action.
  */
 RekognitionRequest::RekognitionRequest(const Action action)
-    : d_ptr(new RekognitionRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new RekognitionRequestPrivate(action, this))
 {
 
 }
@@ -102,8 +102,7 @@ RekognitionRequest::RekognitionRequest(const Action action)
  * Constructs a copy of \a other.
  */
 RekognitionRequest::RekognitionRequest(const RekognitionRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new RekognitionRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new RekognitionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -126,7 +125,7 @@ RekognitionRequest& RekognitionRequest::operator=(const RekognitionRequest &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from RekognitionRequestPrivate.
  */
-RekognitionRequest::RekognitionRequest(RekognitionRequestPrivate * const d) : d_ptr(d)
+RekognitionRequest::RekognitionRequest(RekognitionRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -295,7 +294,7 @@ QNetworkRequest RekognitionRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 RekognitionRequestPrivate::RekognitionRequestPrivate(const RekognitionRequest::Action action, RekognitionRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -310,8 +309,8 @@ RekognitionRequestPrivate::RekognitionRequestPrivate(const RekognitionRequest::A
  */
 RekognitionRequestPrivate::RekognitionRequestPrivate(const RekognitionRequestPrivate &other,
                                      RekognitionRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -150,12 +150,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UploadLayerPartResponse * uploadLayerPart(const UploadLayerPartRequest &request);
 
-protected:
-    /// @cond internal
-    EcrClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EcrClient(EcrClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(EcrClient)
     Q_DISABLE_COPY(EcrClient)

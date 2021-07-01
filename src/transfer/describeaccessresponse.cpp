@@ -62,7 +62,8 @@ DescribeAccessResponse::DescribeAccessResponse(
  */
 const DescribeAccessRequest * DescribeAccessResponse::request() const
 {
-    return static_cast<const DescribeAccessRequest *>(TransferResponse::request());
+    Q_D(const DescribeAccessResponse);
+    return static_cast<const DescribeAccessRequest *>(d->request);
 }
 
 /*!

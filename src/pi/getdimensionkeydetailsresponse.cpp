@@ -83,7 +83,8 @@ GetDimensionKeyDetailsResponse::GetDimensionKeyDetailsResponse(
  */
 const GetDimensionKeyDetailsRequest * GetDimensionKeyDetailsResponse::request() const
 {
-    return static_cast<const GetDimensionKeyDetailsRequest *>(PiResponse::request());
+    Q_D(const GetDimensionKeyDetailsResponse);
+    return static_cast<const GetDimensionKeyDetailsRequest *>(d->request);
 }
 
 /*!

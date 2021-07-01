@@ -69,7 +69,8 @@ CreateComputerResponse::CreateComputerResponse(
  */
 const CreateComputerRequest * CreateComputerResponse::request() const
 {
-    return static_cast<const CreateComputerRequest *>(DirectoryServiceResponse::request());
+    Q_D(const CreateComputerResponse);
+    return static_cast<const CreateComputerRequest *>(d->request);
 }
 
 /*!

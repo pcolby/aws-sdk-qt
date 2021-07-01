@@ -87,7 +87,8 @@ DeleteLocalGatewayRouteTableVpcAssociationResponse::DeleteLocalGatewayRouteTable
  */
 const DeleteLocalGatewayRouteTableVpcAssociationRequest * DeleteLocalGatewayRouteTableVpcAssociationResponse::request() const
 {
-    return static_cast<const DeleteLocalGatewayRouteTableVpcAssociationRequest *>(Ec2Response::request());
+    Q_D(const DeleteLocalGatewayRouteTableVpcAssociationResponse);
+    return static_cast<const DeleteLocalGatewayRouteTableVpcAssociationRequest *>(d->request);
 }
 
 /*!

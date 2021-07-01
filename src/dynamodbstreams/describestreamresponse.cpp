@@ -61,7 +61,8 @@ DescribeStreamResponse::DescribeStreamResponse(
  */
 const DescribeStreamRequest * DescribeStreamResponse::request() const
 {
-    return static_cast<const DescribeStreamRequest *>(DynamoDBStreamsResponse::request());
+    Q_D(const DescribeStreamResponse);
+    return static_cast<const DescribeStreamRequest *>(d->request);
 }
 
 /*!

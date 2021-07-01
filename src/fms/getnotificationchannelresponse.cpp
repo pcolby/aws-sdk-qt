@@ -67,7 +67,8 @@ GetNotificationChannelResponse::GetNotificationChannelResponse(
  */
 const GetNotificationChannelRequest * GetNotificationChannelResponse::request() const
 {
-    return static_cast<const GetNotificationChannelRequest *>(FmsResponse::request());
+    Q_D(const GetNotificationChannelResponse);
+    return static_cast<const GetNotificationChannelRequest *>(d->request);
 }
 
 /*!

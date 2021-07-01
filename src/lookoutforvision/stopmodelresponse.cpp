@@ -64,7 +64,8 @@ StopModelResponse::StopModelResponse(
  */
 const StopModelRequest * StopModelResponse::request() const
 {
-    return static_cast<const StopModelRequest *>(LookoutforVisionResponse::request());
+    Q_D(const StopModelResponse);
+    return static_cast<const StopModelRequest *>(d->request);
 }
 
 /*!

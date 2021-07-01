@@ -58,7 +58,8 @@ ListDetectorModelsResponse::ListDetectorModelsResponse(
  */
 const ListDetectorModelsRequest * ListDetectorModelsResponse::request() const
 {
-    return static_cast<const ListDetectorModelsRequest *>(IoTEventsResponse::request());
+    Q_D(const ListDetectorModelsResponse);
+    return static_cast<const ListDetectorModelsRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ DeleteAccessLogSettingsResponse::DeleteAccessLogSettingsResponse(
  */
 const DeleteAccessLogSettingsRequest * DeleteAccessLogSettingsResponse::request() const
 {
-    return static_cast<const DeleteAccessLogSettingsRequest *>(ApiGatewayV2Response::request());
+    Q_D(const DeleteAccessLogSettingsResponse);
+    return static_cast<const DeleteAccessLogSettingsRequest *>(d->request);
 }
 
 /*!

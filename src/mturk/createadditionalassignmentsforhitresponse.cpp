@@ -55,7 +55,8 @@ CreateAdditionalAssignmentsForHITResponse::CreateAdditionalAssignmentsForHITResp
  */
 const CreateAdditionalAssignmentsForHITRequest * CreateAdditionalAssignmentsForHITResponse::request() const
 {
-    return static_cast<const CreateAdditionalAssignmentsForHITRequest *>(MTurkResponse::request());
+    Q_D(const CreateAdditionalAssignmentsForHITResponse);
+    return static_cast<const CreateAdditionalAssignmentsForHITRequest *>(d->request);
 }
 
 /*!

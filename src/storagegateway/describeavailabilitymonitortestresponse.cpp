@@ -124,7 +124,8 @@ DescribeAvailabilityMonitorTestResponse::DescribeAvailabilityMonitorTestResponse
  */
 const DescribeAvailabilityMonitorTestRequest * DescribeAvailabilityMonitorTestResponse::request() const
 {
-    return static_cast<const DescribeAvailabilityMonitorTestRequest *>(StorageGatewayResponse::request());
+    Q_D(const DescribeAvailabilityMonitorTestResponse);
+    return static_cast<const DescribeAvailabilityMonitorTestRequest *>(d->request);
 }
 
 /*!

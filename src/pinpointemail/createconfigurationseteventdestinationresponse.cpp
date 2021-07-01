@@ -92,7 +92,8 @@ CreateConfigurationSetEventDestinationResponse::CreateConfigurationSetEventDesti
  */
 const CreateConfigurationSetEventDestinationRequest * CreateConfigurationSetEventDestinationResponse::request() const
 {
-    return static_cast<const CreateConfigurationSetEventDestinationRequest *>(PinpointEmailResponse::request());
+    Q_D(const CreateConfigurationSetEventDestinationResponse);
+    return static_cast<const CreateConfigurationSetEventDestinationRequest *>(d->request);
 }
 
 /*!

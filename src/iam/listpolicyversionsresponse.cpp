@@ -62,7 +62,8 @@ ListPolicyVersionsResponse::ListPolicyVersionsResponse(
  */
 const ListPolicyVersionsRequest * ListPolicyVersionsResponse::request() const
 {
-    return static_cast<const ListPolicyVersionsRequest *>(IamResponse::request());
+    Q_D(const ListPolicyVersionsResponse);
+    return static_cast<const ListPolicyVersionsRequest *>(d->request);
 }
 
 /*!

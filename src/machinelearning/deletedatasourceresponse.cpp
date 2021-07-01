@@ -55,7 +55,8 @@ DeleteDataSourceResponse::DeleteDataSourceResponse(
  */
 const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
 {
-    return static_cast<const DeleteDataSourceRequest *>(MachineLearningResponse::request());
+    Q_D(const DeleteDataSourceResponse);
+    return static_cast<const DeleteDataSourceRequest *>(d->request);
 }
 
 /*!

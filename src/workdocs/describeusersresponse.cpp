@@ -84,7 +84,8 @@ DescribeUsersResponse::DescribeUsersResponse(
  */
 const DescribeUsersRequest * DescribeUsersResponse::request() const
 {
-    return static_cast<const DescribeUsersRequest *>(WorkDocsResponse::request());
+    Q_D(const DescribeUsersResponse);
+    return static_cast<const DescribeUsersRequest *>(d->request);
 }
 
 /*!

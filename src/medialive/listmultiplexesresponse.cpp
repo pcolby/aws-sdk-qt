@@ -55,7 +55,8 @@ ListMultiplexesResponse::ListMultiplexesResponse(
  */
 const ListMultiplexesRequest * ListMultiplexesResponse::request() const
 {
-    return static_cast<const ListMultiplexesRequest *>(MediaLiveResponse::request());
+    Q_D(const ListMultiplexesResponse);
+    return static_cast<const ListMultiplexesRequest *>(d->request);
 }
 
 /*!

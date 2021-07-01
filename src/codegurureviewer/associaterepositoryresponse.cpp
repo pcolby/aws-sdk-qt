@@ -72,7 +72,8 @@ AssociateRepositoryResponse::AssociateRepositoryResponse(
  */
 const AssociateRepositoryRequest * AssociateRepositoryResponse::request() const
 {
-    return static_cast<const AssociateRepositoryRequest *>(CodeGuruReviewerResponse::request());
+    Q_D(const AssociateRepositoryResponse);
+    return static_cast<const AssociateRepositoryRequest *>(d->request);
 }
 
 /*!

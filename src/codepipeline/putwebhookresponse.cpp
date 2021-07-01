@@ -240,7 +240,8 @@ PutWebhookResponse::PutWebhookResponse(
  */
 const PutWebhookRequest * PutWebhookResponse::request() const
 {
-    return static_cast<const PutWebhookRequest *>(CodePipelineResponse::request());
+    Q_D(const PutWebhookResponse);
+    return static_cast<const PutWebhookRequest *>(d->request);
 }
 
 /*!

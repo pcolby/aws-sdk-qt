@@ -85,7 +85,8 @@ DeleteClusterParameterGroupResponse::DeleteClusterParameterGroupResponse(
  */
 const DeleteClusterParameterGroupRequest * DeleteClusterParameterGroupResponse::request() const
 {
-    return static_cast<const DeleteClusterParameterGroupRequest *>(RedshiftResponse::request());
+    Q_D(const DeleteClusterParameterGroupResponse);
+    return static_cast<const DeleteClusterParameterGroupRequest *>(d->request);
 }
 
 /*!

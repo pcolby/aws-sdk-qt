@@ -56,7 +56,8 @@ GetSegmentsResponse::GetSegmentsResponse(
  */
 const GetSegmentsRequest * GetSegmentsResponse::request() const
 {
-    return static_cast<const GetSegmentsRequest *>(PinpointResponse::request());
+    Q_D(const GetSegmentsResponse);
+    return static_cast<const GetSegmentsRequest *>(d->request);
 }
 
 /*!

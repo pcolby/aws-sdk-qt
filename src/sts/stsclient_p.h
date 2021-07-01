@@ -20,20 +20,19 @@
 #ifndef QTAWS_STSCLIENT_P_H
 #define QTAWS_STSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace STS {
 
 class StsClient;
 
-class StsClientPrivate {
+class StsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit StsClientPrivate(StsClient * const q);
-
-protected:
-    StsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(StsClient)

@@ -98,7 +98,8 @@ CreateOpsItemResponse::CreateOpsItemResponse(
  */
 const CreateOpsItemRequest * CreateOpsItemResponse::request() const
 {
-    return static_cast<const CreateOpsItemRequest *>(SsmResponse::request());
+    Q_D(const CreateOpsItemResponse);
+    return static_cast<const CreateOpsItemRequest *>(d->request);
 }
 
 /*!

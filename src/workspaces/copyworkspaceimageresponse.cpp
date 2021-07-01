@@ -58,7 +58,8 @@ CopyWorkspaceImageResponse::CopyWorkspaceImageResponse(
  */
 const CopyWorkspaceImageRequest * CopyWorkspaceImageResponse::request() const
 {
-    return static_cast<const CopyWorkspaceImageRequest *>(WorkSpacesResponse::request());
+    Q_D(const CopyWorkspaceImageResponse);
+    return static_cast<const CopyWorkspaceImageRequest *>(d->request);
 }
 
 /*!

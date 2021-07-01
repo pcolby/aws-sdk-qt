@@ -65,7 +65,8 @@ UpdateRelatedItemsResponse::UpdateRelatedItemsResponse(
  */
 const UpdateRelatedItemsRequest * UpdateRelatedItemsResponse::request() const
 {
-    return static_cast<const UpdateRelatedItemsRequest *>(SSMIncidentsResponse::request());
+    Q_D(const UpdateRelatedItemsResponse);
+    return static_cast<const UpdateRelatedItemsRequest *>(d->request);
 }
 
 /*!

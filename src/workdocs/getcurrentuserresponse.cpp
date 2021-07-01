@@ -84,7 +84,8 @@ GetCurrentUserResponse::GetCurrentUserResponse(
  */
 const GetCurrentUserRequest * GetCurrentUserResponse::request() const
 {
-    return static_cast<const GetCurrentUserRequest *>(WorkDocsResponse::request());
+    Q_D(const GetCurrentUserResponse);
+    return static_cast<const GetCurrentUserRequest *>(d->request);
 }
 
 /*!

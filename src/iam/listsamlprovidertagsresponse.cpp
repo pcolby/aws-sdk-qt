@@ -62,7 +62,8 @@ ListSAMLProviderTagsResponse::ListSAMLProviderTagsResponse(
  */
 const ListSAMLProviderTagsRequest * ListSAMLProviderTagsResponse::request() const
 {
-    return static_cast<const ListSAMLProviderTagsRequest *>(IamResponse::request());
+    Q_D(const ListSAMLProviderTagsResponse);
+    return static_cast<const ListSAMLProviderTagsRequest *>(d->request);
 }
 
 /*!

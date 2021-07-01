@@ -48,7 +48,7 @@ namespace MarketplaceCatalog {
  * Constructs a MarketplaceCatalogRequest object for MarketplaceCatalog \a action.
  */
 MarketplaceCatalogRequest::MarketplaceCatalogRequest(const Action action)
-    : d_ptr(new MarketplaceCatalogRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceCatalogRequestPrivate(action, this))
 {
 
 }
@@ -57,8 +57,7 @@ MarketplaceCatalogRequest::MarketplaceCatalogRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MarketplaceCatalogRequest::MarketplaceCatalogRequest(const MarketplaceCatalogRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new MarketplaceCatalogRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceCatalogRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -81,7 +80,7 @@ MarketplaceCatalogRequest& MarketplaceCatalogRequest::operator=(const Marketplac
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MarketplaceCatalogRequestPrivate.
  */
-MarketplaceCatalogRequest::MarketplaceCatalogRequest(MarketplaceCatalogRequestPrivate * const d) : d_ptr(d)
+MarketplaceCatalogRequest::MarketplaceCatalogRequest(MarketplaceCatalogRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -250,7 +249,7 @@ QNetworkRequest MarketplaceCatalogRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 MarketplaceCatalogRequestPrivate::MarketplaceCatalogRequestPrivate(const MarketplaceCatalogRequest::Action action, MarketplaceCatalogRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -265,8 +264,8 @@ MarketplaceCatalogRequestPrivate::MarketplaceCatalogRequestPrivate(const Marketp
  */
 MarketplaceCatalogRequestPrivate::MarketplaceCatalogRequestPrivate(const MarketplaceCatalogRequestPrivate &other,
                                      MarketplaceCatalogRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

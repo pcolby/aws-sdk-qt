@@ -84,7 +84,8 @@ GetLogRecordResponse::GetLogRecordResponse(
  */
 const GetLogRecordRequest * GetLogRecordResponse::request() const
 {
-    return static_cast<const GetLogRecordRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const GetLogRecordResponse);
+    return static_cast<const GetLogRecordRequest *>(d->request);
 }
 
 /*!

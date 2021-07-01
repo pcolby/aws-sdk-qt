@@ -61,7 +61,8 @@ CreateConstraintResponse::CreateConstraintResponse(
  */
 const CreateConstraintRequest * CreateConstraintResponse::request() const
 {
-    return static_cast<const CreateConstraintRequest *>(ServiceCatalogResponse::request());
+    Q_D(const CreateConstraintResponse);
+    return static_cast<const CreateConstraintRequest *>(d->request);
 }
 
 /*!

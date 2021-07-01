@@ -133,7 +133,8 @@ DescribeCommunicationsResponse::DescribeCommunicationsResponse(
  */
 const DescribeCommunicationsRequest * DescribeCommunicationsResponse::request() const
 {
-    return static_cast<const DescribeCommunicationsRequest *>(SupportResponse::request());
+    Q_D(const DescribeCommunicationsResponse);
+    return static_cast<const DescribeCommunicationsRequest *>(d->request);
 }
 
 /*!

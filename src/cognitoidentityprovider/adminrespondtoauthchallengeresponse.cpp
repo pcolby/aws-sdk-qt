@@ -66,7 +66,8 @@ AdminRespondToAuthChallengeResponse::AdminRespondToAuthChallengeResponse(
  */
 const AdminRespondToAuthChallengeRequest * AdminRespondToAuthChallengeResponse::request() const
 {
-    return static_cast<const AdminRespondToAuthChallengeRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const AdminRespondToAuthChallengeResponse);
+    return static_cast<const AdminRespondToAuthChallengeRequest *>(d->request);
 }
 
 /*!

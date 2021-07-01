@@ -58,7 +58,8 @@ DeleteAlarmModelResponse::DeleteAlarmModelResponse(
  */
 const DeleteAlarmModelRequest * DeleteAlarmModelResponse::request() const
 {
-    return static_cast<const DeleteAlarmModelRequest *>(IoTEventsResponse::request());
+    Q_D(const DeleteAlarmModelResponse);
+    return static_cast<const DeleteAlarmModelRequest *>(d->request);
 }
 
 /*!

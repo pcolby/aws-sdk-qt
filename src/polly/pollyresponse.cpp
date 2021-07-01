@@ -37,7 +37,7 @@ namespace Polly {
  * Constructs a PollyResponse object with parent \a parent.
  */
 PollyResponse::PollyResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new PollyResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new PollyResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ PollyResponse::PollyResponse(QObject * const parent)
  * implementation that inherits from PollyResponsePrivate.
  */
 PollyResponse::PollyResponse(PollyResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void PollyResponse::parseFailure(QIODevice &response)
  * Constructs a PollyResponsePrivate object with public implementation \a q.
  */
 PollyResponsePrivate::PollyResponsePrivate(
-    PollyResponse * const q) : q_ptr(q)
+    PollyResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

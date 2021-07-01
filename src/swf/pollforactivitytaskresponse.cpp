@@ -71,7 +71,8 @@ PollForActivityTaskResponse::PollForActivityTaskResponse(
  */
 const PollForActivityTaskRequest * PollForActivityTaskResponse::request() const
 {
-    return static_cast<const PollForActivityTaskRequest *>(SwfResponse::request());
+    Q_D(const PollForActivityTaskResponse);
+    return static_cast<const PollForActivityTaskRequest *>(d->request);
 }
 
 /*!

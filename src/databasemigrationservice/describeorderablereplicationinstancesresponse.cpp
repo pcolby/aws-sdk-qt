@@ -66,7 +66,8 @@ DescribeOrderableReplicationInstancesResponse::DescribeOrderableReplicationInsta
  */
 const DescribeOrderableReplicationInstancesRequest * DescribeOrderableReplicationInstancesResponse::request() const
 {
-    return static_cast<const DescribeOrderableReplicationInstancesRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const DescribeOrderableReplicationInstancesResponse);
+    return static_cast<const DescribeOrderableReplicationInstancesRequest *>(d->request);
 }
 
 /*!

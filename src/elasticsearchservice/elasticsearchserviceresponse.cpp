@@ -37,7 +37,7 @@ namespace ElasticsearchService {
  * Constructs a ElasticsearchServiceResponse object with parent \a parent.
  */
 ElasticsearchServiceResponse::ElasticsearchServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ElasticsearchServiceResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ElasticsearchServiceResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ElasticsearchServiceResponse::ElasticsearchServiceResponse(QObject * const paren
  * implementation that inherits from ElasticsearchServiceResponsePrivate.
  */
 ElasticsearchServiceResponse::ElasticsearchServiceResponse(ElasticsearchServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
  * Constructs a ElasticsearchServiceResponsePrivate object with public implementation \a q.
  */
 ElasticsearchServiceResponsePrivate::ElasticsearchServiceResponsePrivate(
-    ElasticsearchServiceResponse * const q) : q_ptr(q)
+    ElasticsearchServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -87,7 +87,8 @@ StartInstancesResponse::StartInstancesResponse(
  */
 const StartInstancesRequest * StartInstancesResponse::request() const
 {
-    return static_cast<const StartInstancesRequest *>(Ec2Response::request());
+    Q_D(const StartInstancesResponse);
+    return static_cast<const StartInstancesRequest *>(d->request);
 }
 
 /*!

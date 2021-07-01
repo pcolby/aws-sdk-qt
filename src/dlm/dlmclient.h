@@ -72,12 +72,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateLifecyclePolicyResponse * updateLifecyclePolicy(const UpdateLifecyclePolicyRequest &request);
 
-protected:
-    /// @cond internal
-    DlmClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DlmClient(DlmClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(DlmClient)
     Q_DISABLE_COPY(DlmClient)

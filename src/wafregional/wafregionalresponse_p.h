@@ -20,12 +20,14 @@
 #ifndef QTAWS_WAFREGIONALRESPONSE_P_H
 #define QTAWS_WAFREGIONALRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace WAFRegional {
 
 class WAFRegionalResponse;
 
-class WAFRegionalResponsePrivate {
+class WAFRegionalResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    WAFRegionalResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WAFRegionalResponse)

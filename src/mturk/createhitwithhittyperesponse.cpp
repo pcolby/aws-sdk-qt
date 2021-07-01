@@ -55,7 +55,8 @@ CreateHITWithHITTypeResponse::CreateHITWithHITTypeResponse(
  */
 const CreateHITWithHITTypeRequest * CreateHITWithHITTypeResponse::request() const
 {
-    return static_cast<const CreateHITWithHITTypeRequest *>(MTurkResponse::request());
+    Q_D(const CreateHITWithHITTypeResponse);
+    return static_cast<const CreateHITWithHITTypeRequest *>(d->request);
 }
 
 /*!

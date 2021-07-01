@@ -58,7 +58,8 @@ CancelStepsResponse::CancelStepsResponse(
  */
 const CancelStepsRequest * CancelStepsResponse::request() const
 {
-    return static_cast<const CancelStepsRequest *>(EmrResponse::request());
+    Q_D(const CancelStepsResponse);
+    return static_cast<const CancelStepsRequest *>(d->request);
 }
 
 /*!

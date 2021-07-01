@@ -62,7 +62,8 @@ UploadServerCertificateResponse::UploadServerCertificateResponse(
  */
 const UploadServerCertificateRequest * UploadServerCertificateResponse::request() const
 {
-    return static_cast<const UploadServerCertificateRequest *>(IamResponse::request());
+    Q_D(const UploadServerCertificateResponse);
+    return static_cast<const UploadServerCertificateRequest *>(d->request);
 }
 
 /*!

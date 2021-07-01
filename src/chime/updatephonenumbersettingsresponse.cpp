@@ -98,7 +98,8 @@ UpdatePhoneNumberSettingsResponse::UpdatePhoneNumberSettingsResponse(
  */
 const UpdatePhoneNumberSettingsRequest * UpdatePhoneNumberSettingsResponse::request() const
 {
-    return static_cast<const UpdatePhoneNumberSettingsRequest *>(ChimeResponse::request());
+    Q_D(const UpdatePhoneNumberSettingsResponse);
+    return static_cast<const UpdatePhoneNumberSettingsRequest *>(d->request);
 }
 
 /*!

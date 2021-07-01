@@ -56,7 +56,8 @@ CreateTrackerResponse::CreateTrackerResponse(
  */
 const CreateTrackerRequest * CreateTrackerResponse::request() const
 {
-    return static_cast<const CreateTrackerRequest *>(LocationServiceResponse::request());
+    Q_D(const CreateTrackerResponse);
+    return static_cast<const CreateTrackerRequest *>(d->request);
 }
 
 /*!

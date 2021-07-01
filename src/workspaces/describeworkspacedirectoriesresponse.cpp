@@ -58,7 +58,8 @@ DescribeWorkspaceDirectoriesResponse::DescribeWorkspaceDirectoriesResponse(
  */
 const DescribeWorkspaceDirectoriesRequest * DescribeWorkspaceDirectoriesResponse::request() const
 {
-    return static_cast<const DescribeWorkspaceDirectoriesRequest *>(WorkSpacesResponse::request());
+    Q_D(const DescribeWorkspaceDirectoriesResponse);
+    return static_cast<const DescribeWorkspaceDirectoriesRequest *>(d->request);
 }
 
 /*!

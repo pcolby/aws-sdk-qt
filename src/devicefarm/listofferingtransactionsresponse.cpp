@@ -75,7 +75,8 @@ ListOfferingTransactionsResponse::ListOfferingTransactionsResponse(
  */
 const ListOfferingTransactionsRequest * ListOfferingTransactionsResponse::request() const
 {
-    return static_cast<const ListOfferingTransactionsRequest *>(DeviceFarmResponse::request());
+    Q_D(const ListOfferingTransactionsResponse);
+    return static_cast<const ListOfferingTransactionsRequest *>(d->request);
 }
 
 /*!

@@ -75,7 +75,8 @@ DeleteSMSSandboxPhoneNumberResponse::DeleteSMSSandboxPhoneNumberResponse(
  */
 const DeleteSMSSandboxPhoneNumberRequest * DeleteSMSSandboxPhoneNumberResponse::request() const
 {
-    return static_cast<const DeleteSMSSandboxPhoneNumberRequest *>(SnsResponse::request());
+    Q_D(const DeleteSMSSandboxPhoneNumberResponse);
+    return static_cast<const DeleteSMSSandboxPhoneNumberRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ StartDeviceSyncResponse::StartDeviceSyncResponse(
  */
 const StartDeviceSyncRequest * StartDeviceSyncResponse::request() const
 {
-    return static_cast<const StartDeviceSyncRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const StartDeviceSyncResponse);
+    return static_cast<const StartDeviceSyncRequest *>(d->request);
 }
 
 /*!

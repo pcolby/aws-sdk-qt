@@ -20,20 +20,19 @@
 #ifndef QTAWS_REDSHIFTDATAAPISERVICECLIENT_P_H
 #define QTAWS_REDSHIFTDATAAPISERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace RedshiftDataAPIService {
 
 class RedshiftDataAPIServiceClient;
 
-class RedshiftDataAPIServiceClientPrivate {
+class RedshiftDataAPIServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit RedshiftDataAPIServiceClientPrivate(RedshiftDataAPIServiceClient * const q);
-
-protected:
-    RedshiftDataAPIServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RedshiftDataAPIServiceClient)

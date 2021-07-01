@@ -56,7 +56,8 @@ DescribeSchemaResponse::DescribeSchemaResponse(
  */
 const DescribeSchemaRequest * DescribeSchemaResponse::request() const
 {
-    return static_cast<const DescribeSchemaRequest *>(SchemasResponse::request());
+    Q_D(const DescribeSchemaResponse);
+    return static_cast<const DescribeSchemaRequest *>(d->request);
 }
 
 /*!

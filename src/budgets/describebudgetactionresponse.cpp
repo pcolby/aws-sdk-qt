@@ -116,7 +116,8 @@ DescribeBudgetActionResponse::DescribeBudgetActionResponse(
  */
 const DescribeBudgetActionRequest * DescribeBudgetActionResponse::request() const
 {
-    return static_cast<const DescribeBudgetActionRequest *>(BudgetsResponse::request());
+    Q_D(const DescribeBudgetActionResponse);
+    return static_cast<const DescribeBudgetActionRequest *>(d->request);
 }
 
 /*!

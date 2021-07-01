@@ -61,7 +61,8 @@ DescribeSubscriptionResponse::DescribeSubscriptionResponse(
  */
 const DescribeSubscriptionRequest * DescribeSubscriptionResponse::request() const
 {
-    return static_cast<const DescribeSubscriptionRequest *>(ShieldResponse::request());
+    Q_D(const DescribeSubscriptionResponse);
+    return static_cast<const DescribeSubscriptionRequest *>(d->request);
 }
 
 /*!

@@ -73,16 +73,16 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2012-08-10"),
-    QStringLiteral("streams.dynamodb"),
-    QStringLiteral("Amazon DynamoDB Streams"),
-    QStringLiteral("dynamodb"),
-    parent), d_ptr(new DynamoDBStreamsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new DynamoDBStreamsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(DynamoDBStreamsClient);
+    d->apiVersion = QStringLiteral("2012-08-10");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("streams.dynamodb");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon DynamoDB Streams");
+    d->serviceName = QStringLiteral("dynamodb");
 }
 
 /*!
@@ -101,16 +101,16 @@ DynamoDBStreamsClient::DynamoDBStreamsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2012-08-10"),
-    QStringLiteral("streams.dynamodb"),
-    QStringLiteral("Amazon DynamoDB Streams"),
-    QStringLiteral("dynamodb"),
-    parent), d_ptr(new DynamoDBStreamsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new DynamoDBStreamsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(DynamoDBStreamsClient);
+    d->apiVersion = QStringLiteral("2012-08-10");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("streams.dynamodb");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon DynamoDB Streams");
+    d->serviceName = QStringLiteral("dynamodb");
 }
 
 /*!
@@ -210,9 +210,10 @@ ListStreamsResponse * DynamoDBStreamsClient::listStreams(const ListStreamsReques
 /*!
  * Constructs a DynamoDBStreamsClientPrivate object with public implementation \a q.
  */
-DynamoDBStreamsClientPrivate::DynamoDBStreamsClientPrivate(DynamoDBStreamsClient * const q) : q_ptr(q)
+DynamoDBStreamsClientPrivate::DynamoDBStreamsClientPrivate(DynamoDBStreamsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DynamoDBStreams

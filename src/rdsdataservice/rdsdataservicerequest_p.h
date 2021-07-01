@@ -20,12 +20,15 @@
 #ifndef QTAWS_RDSDATASERVICEREQUEST_P_H
 #define QTAWS_RDSDATASERVICEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "rdsdataservicerequest.h"
+
 namespace QtAws {
 namespace RDSDataService {
 
 class RDSDataServiceRequest;
 
-class RDSDataServiceRequestPrivate {
+class RDSDataServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     RDSDataServiceRequest::Action action; ///< RDSDataService action to be performed.
@@ -36,9 +39,6 @@ public:
     RDSDataServiceRequestPrivate(const RDSDataServiceRequestPrivate &other, RDSDataServiceRequest * const q);
 
     static QString toString(const RDSDataServiceRequest::Action &action);
-
-protected:
-    RDSDataServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(RDSDataServiceRequest)

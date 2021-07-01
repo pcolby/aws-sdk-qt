@@ -62,7 +62,8 @@ ListDeviceEventsResponse::ListDeviceEventsResponse(
  */
 const ListDeviceEventsRequest * ListDeviceEventsResponse::request() const
 {
-    return static_cast<const ListDeviceEventsRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const ListDeviceEventsResponse);
+    return static_cast<const ListDeviceEventsRequest *>(d->request);
 }
 
 /*!

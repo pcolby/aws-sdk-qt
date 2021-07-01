@@ -75,7 +75,8 @@ UpdateDeviceInstanceResponse::UpdateDeviceInstanceResponse(
  */
 const UpdateDeviceInstanceRequest * UpdateDeviceInstanceResponse::request() const
 {
-    return static_cast<const UpdateDeviceInstanceRequest *>(DeviceFarmResponse::request());
+    Q_D(const UpdateDeviceInstanceResponse);
+    return static_cast<const UpdateDeviceInstanceRequest *>(d->request);
 }
 
 /*!

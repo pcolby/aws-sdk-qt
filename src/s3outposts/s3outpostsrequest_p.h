@@ -20,12 +20,15 @@
 #ifndef QTAWS_S3OUTPOSTSREQUEST_P_H
 #define QTAWS_S3OUTPOSTSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "s3outpostsrequest.h"
+
 namespace QtAws {
 namespace S3Outposts {
 
 class S3OutpostsRequest;
 
-class S3OutpostsRequestPrivate {
+class S3OutpostsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     S3OutpostsRequest::Action action; ///< S3Outposts action to be performed.
@@ -36,9 +39,6 @@ public:
     S3OutpostsRequestPrivate(const S3OutpostsRequestPrivate &other, S3OutpostsRequest * const q);
 
     static QString toString(const S3OutpostsRequest::Action &action);
-
-protected:
-    S3OutpostsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(S3OutpostsRequest)

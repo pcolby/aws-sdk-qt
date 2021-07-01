@@ -65,7 +65,8 @@ DescribeAddonResponse::DescribeAddonResponse(
  */
 const DescribeAddonRequest * DescribeAddonResponse::request() const
 {
-    return static_cast<const DescribeAddonRequest *>(EksResponse::request());
+    Q_D(const DescribeAddonResponse);
+    return static_cast<const DescribeAddonRequest *>(d->request);
 }
 
 /*!

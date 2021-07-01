@@ -87,7 +87,8 @@ ImportInstanceResponse::ImportInstanceResponse(
  */
 const ImportInstanceRequest * ImportInstanceResponse::request() const
 {
-    return static_cast<const ImportInstanceRequest *>(Ec2Response::request());
+    Q_D(const ImportInstanceResponse);
+    return static_cast<const ImportInstanceRequest *>(d->request);
 }
 
 /*!

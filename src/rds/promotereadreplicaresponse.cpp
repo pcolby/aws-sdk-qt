@@ -119,7 +119,8 @@ PromoteReadReplicaResponse::PromoteReadReplicaResponse(
  */
 const PromoteReadReplicaRequest * PromoteReadReplicaResponse::request() const
 {
-    return static_cast<const PromoteReadReplicaRequest *>(RdsResponse::request());
+    Q_D(const PromoteReadReplicaResponse);
+    return static_cast<const PromoteReadReplicaRequest *>(d->request);
 }
 
 /*!

@@ -82,7 +82,8 @@ RejectCertificateTransferResponse::RejectCertificateTransferResponse(
  */
 const RejectCertificateTransferRequest * RejectCertificateTransferResponse::request() const
 {
-    return static_cast<const RejectCertificateTransferRequest *>(IoTResponse::request());
+    Q_D(const RejectCertificateTransferResponse);
+    return static_cast<const RejectCertificateTransferRequest *>(d->request);
 }
 
 /*!

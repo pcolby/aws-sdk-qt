@@ -60,7 +60,8 @@ ListEventSubscriptionsResponse::ListEventSubscriptionsResponse(
  */
 const ListEventSubscriptionsRequest * ListEventSubscriptionsResponse::request() const
 {
-    return static_cast<const ListEventSubscriptionsRequest *>(InspectorResponse::request());
+    Q_D(const ListEventSubscriptionsResponse);
+    return static_cast<const ListEventSubscriptionsRequest *>(d->request);
 }
 
 /*!

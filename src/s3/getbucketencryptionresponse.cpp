@@ -55,7 +55,8 @@ GetBucketEncryptionResponse::GetBucketEncryptionResponse(
  */
 const GetBucketEncryptionRequest * GetBucketEncryptionResponse::request() const
 {
-    return static_cast<const GetBucketEncryptionRequest *>(S3Response::request());
+    Q_D(const GetBucketEncryptionResponse);
+    return static_cast<const GetBucketEncryptionRequest *>(d->request);
 }
 
 /*!

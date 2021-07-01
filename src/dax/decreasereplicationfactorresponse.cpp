@@ -59,7 +59,8 @@ DecreaseReplicationFactorResponse::DecreaseReplicationFactorResponse(
  */
 const DecreaseReplicationFactorRequest * DecreaseReplicationFactorResponse::request() const
 {
-    return static_cast<const DecreaseReplicationFactorRequest *>(DaxResponse::request());
+    Q_D(const DecreaseReplicationFactorResponse);
+    return static_cast<const DecreaseReplicationFactorRequest *>(d->request);
 }
 
 /*!

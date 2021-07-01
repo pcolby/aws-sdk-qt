@@ -37,7 +37,7 @@ namespace CostandUsageReportService {
  * Constructs a CostandUsageReportServiceResponse object with parent \a parent.
  */
 CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CostandUsageReportServiceResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CostandUsageReportServiceResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(QObject * c
  * implementation that inherits from CostandUsageReportServiceResponsePrivate.
  */
 CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(CostandUsageReportServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
  * Constructs a CostandUsageReportServiceResponsePrivate object with public implementation \a q.
  */
 CostandUsageReportServiceResponsePrivate::CostandUsageReportServiceResponsePrivate(
-    CostandUsageReportServiceResponse * const q) : q_ptr(q)
+    CostandUsageReportServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

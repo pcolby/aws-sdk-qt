@@ -56,7 +56,8 @@ GetEnvironmentResponse::GetEnvironmentResponse(
  */
 const GetEnvironmentRequest * GetEnvironmentResponse::request() const
 {
-    return static_cast<const GetEnvironmentRequest *>(finspaceResponse::request());
+    Q_D(const GetEnvironmentResponse);
+    return static_cast<const GetEnvironmentRequest *>(d->request);
 }
 
 /*!

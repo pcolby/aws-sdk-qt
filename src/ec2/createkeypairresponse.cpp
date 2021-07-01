@@ -87,7 +87,8 @@ CreateKeyPairResponse::CreateKeyPairResponse(
  */
 const CreateKeyPairRequest * CreateKeyPairResponse::request() const
 {
-    return static_cast<const CreateKeyPairRequest *>(Ec2Response::request());
+    Q_D(const CreateKeyPairResponse);
+    return static_cast<const CreateKeyPairRequest *>(d->request);
 }
 
 /*!

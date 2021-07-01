@@ -62,7 +62,8 @@ PutLifecyclePolicyResponse::PutLifecyclePolicyResponse(
  */
 const PutLifecyclePolicyRequest * PutLifecyclePolicyResponse::request() const
 {
-    return static_cast<const PutLifecyclePolicyRequest *>(EcrResponse::request());
+    Q_D(const PutLifecyclePolicyResponse);
+    return static_cast<const PutLifecyclePolicyRequest *>(d->request);
 }
 
 /*!

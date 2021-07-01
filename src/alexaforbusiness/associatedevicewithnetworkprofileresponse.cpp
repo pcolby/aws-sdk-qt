@@ -62,7 +62,8 @@ AssociateDeviceWithNetworkProfileResponse::AssociateDeviceWithNetworkProfileResp
  */
 const AssociateDeviceWithNetworkProfileRequest * AssociateDeviceWithNetworkProfileResponse::request() const
 {
-    return static_cast<const AssociateDeviceWithNetworkProfileRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const AssociateDeviceWithNetworkProfileResponse);
+    return static_cast<const AssociateDeviceWithNetworkProfileRequest *>(d->request);
 }
 
 /*!

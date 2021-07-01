@@ -58,7 +58,8 @@ DescribeKeyPhrasesDetectionJobResponse::DescribeKeyPhrasesDetectionJobResponse(
  */
 const DescribeKeyPhrasesDetectionJobRequest * DescribeKeyPhrasesDetectionJobResponse::request() const
 {
-    return static_cast<const DescribeKeyPhrasesDetectionJobRequest *>(ComprehendResponse::request());
+    Q_D(const DescribeKeyPhrasesDetectionJobResponse);
+    return static_cast<const DescribeKeyPhrasesDetectionJobRequest *>(d->request);
 }
 
 /*!

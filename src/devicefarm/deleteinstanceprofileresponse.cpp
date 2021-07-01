@@ -75,7 +75,8 @@ DeleteInstanceProfileResponse::DeleteInstanceProfileResponse(
  */
 const DeleteInstanceProfileRequest * DeleteInstanceProfileResponse::request() const
 {
-    return static_cast<const DeleteInstanceProfileRequest *>(DeviceFarmResponse::request());
+    Q_D(const DeleteInstanceProfileResponse);
+    return static_cast<const DeleteInstanceProfileRequest *>(d->request);
 }
 
 /*!

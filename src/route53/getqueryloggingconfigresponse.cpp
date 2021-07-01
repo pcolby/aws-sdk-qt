@@ -56,7 +56,8 @@ GetQueryLoggingConfigResponse::GetQueryLoggingConfigResponse(
  */
 const GetQueryLoggingConfigRequest * GetQueryLoggingConfigResponse::request() const
 {
-    return static_cast<const GetQueryLoggingConfigRequest *>(Route53Response::request());
+    Q_D(const GetQueryLoggingConfigResponse);
+    return static_cast<const GetQueryLoggingConfigRequest *>(d->request);
 }
 
 /*!

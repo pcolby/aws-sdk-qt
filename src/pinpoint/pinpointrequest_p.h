@@ -20,12 +20,15 @@
 #ifndef QTAWS_PINPOINTREQUEST_P_H
 #define QTAWS_PINPOINTREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "pinpointrequest.h"
+
 namespace QtAws {
 namespace Pinpoint {
 
 class PinpointRequest;
 
-class PinpointRequestPrivate {
+class PinpointRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     PinpointRequest::Action action; ///< Pinpoint action to be performed.
@@ -36,9 +39,6 @@ public:
     PinpointRequestPrivate(const PinpointRequestPrivate &other, PinpointRequest * const q);
 
     static QString toString(const PinpointRequest::Action &action);
-
-protected:
-    PinpointRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PinpointRequest)

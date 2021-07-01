@@ -153,12 +153,6 @@ public slots:
     UpdateLinkResponse * updateLink(const UpdateLinkRequest &request);
     UpdateSiteResponse * updateSite(const UpdateSiteRequest &request);
 
-protected:
-    /// @cond internal
-    NetworkManagerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit NetworkManagerClient(NetworkManagerClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(NetworkManagerClient)
     Q_DISABLE_COPY(NetworkManagerClient)

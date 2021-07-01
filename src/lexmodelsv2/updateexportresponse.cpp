@@ -55,7 +55,8 @@ UpdateExportResponse::UpdateExportResponse(
  */
 const UpdateExportRequest * UpdateExportResponse::request() const
 {
-    return static_cast<const UpdateExportRequest *>(LexModelsV2Response::request());
+    Q_D(const UpdateExportResponse);
+    return static_cast<const UpdateExportRequest *>(d->request);
 }
 
 /*!

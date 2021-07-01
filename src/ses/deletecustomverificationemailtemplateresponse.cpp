@@ -66,7 +66,8 @@ DeleteCustomVerificationEmailTemplateResponse::DeleteCustomVerificationEmailTemp
  */
 const DeleteCustomVerificationEmailTemplateRequest * DeleteCustomVerificationEmailTemplateResponse::request() const
 {
-    return static_cast<const DeleteCustomVerificationEmailTemplateRequest *>(SesResponse::request());
+    Q_D(const DeleteCustomVerificationEmailTemplateResponse);
+    return static_cast<const DeleteCustomVerificationEmailTemplateRequest *>(d->request);
 }
 
 /*!

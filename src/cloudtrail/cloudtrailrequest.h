@@ -76,8 +76,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudTrailRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CloudTrailRequest(CloudTrailRequestPrivate * const d);
+    CloudTrailRequest(CloudTrailRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

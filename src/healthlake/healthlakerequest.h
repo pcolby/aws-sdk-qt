@@ -66,8 +66,7 @@ public:
 
 protected:
     /// @cond internal
-    HealthLakeRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit HealthLakeRequest(HealthLakeRequestPrivate * const d);
+    HealthLakeRequest(HealthLakeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

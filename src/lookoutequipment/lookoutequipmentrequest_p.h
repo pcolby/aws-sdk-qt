@@ -20,12 +20,15 @@
 #ifndef QTAWS_LOOKOUTEQUIPMENTREQUEST_P_H
 #define QTAWS_LOOKOUTEQUIPMENTREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "lookoutequipmentrequest.h"
+
 namespace QtAws {
 namespace LookoutEquipment {
 
 class LookoutEquipmentRequest;
 
-class LookoutEquipmentRequestPrivate {
+class LookoutEquipmentRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LookoutEquipmentRequest::Action action; ///< LookoutEquipment action to be performed.
@@ -36,9 +39,6 @@ public:
     LookoutEquipmentRequestPrivate(const LookoutEquipmentRequestPrivate &other, LookoutEquipmentRequest * const q);
 
     static QString toString(const LookoutEquipmentRequest::Action &action);
-
-protected:
-    LookoutEquipmentRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LookoutEquipmentRequest)

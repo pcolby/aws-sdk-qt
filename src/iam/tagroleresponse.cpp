@@ -62,7 +62,8 @@ TagRoleResponse::TagRoleResponse(
  */
 const TagRoleRequest * TagRoleResponse::request() const
 {
-    return static_cast<const TagRoleRequest *>(IamResponse::request());
+    Q_D(const TagRoleResponse);
+    return static_cast<const TagRoleRequest *>(d->request);
 }
 
 /*!

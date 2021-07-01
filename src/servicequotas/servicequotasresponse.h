@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ServiceQuotasResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ServiceQuotasResponse(ServiceQuotasResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

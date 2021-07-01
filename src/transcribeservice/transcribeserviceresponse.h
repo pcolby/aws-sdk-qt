@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    TranscribeServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     TranscribeServiceResponse(TranscribeServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

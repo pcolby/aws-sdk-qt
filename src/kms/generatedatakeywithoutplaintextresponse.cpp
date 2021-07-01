@@ -154,7 +154,8 @@ GenerateDataKeyWithoutPlaintextResponse::GenerateDataKeyWithoutPlaintextResponse
  */
 const GenerateDataKeyWithoutPlaintextRequest * GenerateDataKeyWithoutPlaintextResponse::request() const
 {
-    return static_cast<const GenerateDataKeyWithoutPlaintextRequest *>(KmsResponse::request());
+    Q_D(const GenerateDataKeyWithoutPlaintextResponse);
+    return static_cast<const GenerateDataKeyWithoutPlaintextRequest *>(d->request);
 }
 
 /*!

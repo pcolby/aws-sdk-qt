@@ -20,20 +20,19 @@
 #ifndef QTAWS_LAKEFORMATIONCLIENT_P_H
 #define QTAWS_LAKEFORMATIONCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace LakeFormation {
 
 class LakeFormationClient;
 
-class LakeFormationClientPrivate {
+class LakeFormationClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit LakeFormationClientPrivate(LakeFormationClient * const q);
-
-protected:
-    LakeFormationClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LakeFormationClient)

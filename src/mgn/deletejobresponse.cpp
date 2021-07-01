@@ -56,7 +56,8 @@ DeleteJobResponse::DeleteJobResponse(
  */
 const DeleteJobRequest * DeleteJobResponse::request() const
 {
-    return static_cast<const DeleteJobRequest *>(mgnResponse::request());
+    Q_D(const DeleteJobResponse);
+    return static_cast<const DeleteJobRequest *>(d->request);
 }
 
 /*!

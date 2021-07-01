@@ -79,7 +79,8 @@ BatchGetRecordResponse::BatchGetRecordResponse(
  */
 const BatchGetRecordRequest * BatchGetRecordResponse::request() const
 {
-    return static_cast<const BatchGetRecordRequest *>(SageMakerFeatureStoreRuntimeResponse::request());
+    Q_D(const BatchGetRecordResponse);
+    return static_cast<const BatchGetRecordRequest *>(d->request);
 }
 
 /*!

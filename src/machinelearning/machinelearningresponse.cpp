@@ -37,7 +37,7 @@ namespace MachineLearning {
  * Constructs a MachineLearningResponse object with parent \a parent.
  */
 MachineLearningResponse::MachineLearningResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MachineLearningResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new MachineLearningResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ MachineLearningResponse::MachineLearningResponse(QObject * const parent)
  * implementation that inherits from MachineLearningResponsePrivate.
  */
 MachineLearningResponse::MachineLearningResponse(MachineLearningResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void MachineLearningResponse::parseFailure(QIODevice &response)
  * Constructs a MachineLearningResponsePrivate object with public implementation \a q.
  */
 MachineLearningResponsePrivate::MachineLearningResponsePrivate(
-    MachineLearningResponse * const q) : q_ptr(q)
+    MachineLearningResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

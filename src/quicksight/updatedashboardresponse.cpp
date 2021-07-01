@@ -60,7 +60,8 @@ UpdateDashboardResponse::UpdateDashboardResponse(
  */
 const UpdateDashboardRequest * UpdateDashboardResponse::request() const
 {
-    return static_cast<const UpdateDashboardRequest *>(QuickSightResponse::request());
+    Q_D(const UpdateDashboardResponse);
+    return static_cast<const UpdateDashboardRequest *>(d->request);
 }
 
 /*!

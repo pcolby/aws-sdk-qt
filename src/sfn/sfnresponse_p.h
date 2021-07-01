@@ -20,12 +20,14 @@
 #ifndef QTAWS_SFNRESPONSE_P_H
 #define QTAWS_SFNRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace SFN {
 
 class SfnResponse;
 
-class SfnResponsePrivate {
+class SfnResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    SfnResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SfnResponse)

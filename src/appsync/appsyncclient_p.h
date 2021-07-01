@@ -20,20 +20,19 @@
 #ifndef QTAWS_APPSYNCCLIENT_P_H
 #define QTAWS_APPSYNCCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace AppSync {
 
 class AppSyncClient;
 
-class AppSyncClientPrivate {
+class AppSyncClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit AppSyncClientPrivate(AppSyncClient * const q);
-
-protected:
-    AppSyncClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppSyncClient)

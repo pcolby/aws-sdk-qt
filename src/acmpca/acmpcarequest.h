@@ -81,8 +81,7 @@ public:
 
 protected:
     /// @cond internal
-    AcmpcaRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AcmpcaRequest(AcmpcaRequestPrivate * const d);
+    AcmpcaRequest(AcmpcaRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

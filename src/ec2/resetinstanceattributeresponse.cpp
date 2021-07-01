@@ -87,7 +87,8 @@ ResetInstanceAttributeResponse::ResetInstanceAttributeResponse(
  */
 const ResetInstanceAttributeRequest * ResetInstanceAttributeResponse::request() const
 {
-    return static_cast<const ResetInstanceAttributeRequest *>(Ec2Response::request());
+    Q_D(const ResetInstanceAttributeResponse);
+    return static_cast<const ResetInstanceAttributeRequest *>(d->request);
 }
 
 /*!

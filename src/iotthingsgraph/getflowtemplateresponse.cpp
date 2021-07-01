@@ -66,7 +66,8 @@ GetFlowTemplateResponse::GetFlowTemplateResponse(
  */
 const GetFlowTemplateRequest * GetFlowTemplateResponse::request() const
 {
-    return static_cast<const GetFlowTemplateRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const GetFlowTemplateResponse);
+    return static_cast<const GetFlowTemplateRequest *>(d->request);
 }
 
 /*!

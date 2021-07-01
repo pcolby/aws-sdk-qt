@@ -20,20 +20,19 @@
 #ifndef QTAWS_MIGRATIONHUBCONFIGCLIENT_P_H
 #define QTAWS_MIGRATIONHUBCONFIGCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MigrationHubConfig {
 
 class MigrationHubConfigClient;
 
-class MigrationHubConfigClientPrivate {
+class MigrationHubConfigClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MigrationHubConfigClientPrivate(MigrationHubConfigClient * const q);
-
-protected:
-    MigrationHubConfigClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MigrationHubConfigClient)

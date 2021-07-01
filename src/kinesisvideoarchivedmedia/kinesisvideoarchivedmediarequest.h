@@ -63,8 +63,7 @@ public:
 
 protected:
     /// @cond internal
-    KinesisVideoArchivedMediaRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit KinesisVideoArchivedMediaRequest(KinesisVideoArchivedMediaRequestPrivate * const d);
+    KinesisVideoArchivedMediaRequest(KinesisVideoArchivedMediaRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

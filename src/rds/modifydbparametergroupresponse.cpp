@@ -119,7 +119,8 @@ ModifyDBParameterGroupResponse::ModifyDBParameterGroupResponse(
  */
 const ModifyDBParameterGroupRequest * ModifyDBParameterGroupResponse::request() const
 {
-    return static_cast<const ModifyDBParameterGroupRequest *>(RdsResponse::request());
+    Q_D(const ModifyDBParameterGroupResponse);
+    return static_cast<const ModifyDBParameterGroupRequest *>(d->request);
 }
 
 /*!

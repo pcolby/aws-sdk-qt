@@ -56,7 +56,8 @@ AssociateTrackerConsumerResponse::AssociateTrackerConsumerResponse(
  */
 const AssociateTrackerConsumerRequest * AssociateTrackerConsumerResponse::request() const
 {
-    return static_cast<const AssociateTrackerConsumerRequest *>(LocationServiceResponse::request());
+    Q_D(const AssociateTrackerConsumerResponse);
+    return static_cast<const AssociateTrackerConsumerRequest *>(d->request);
 }
 
 /*!

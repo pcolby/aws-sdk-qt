@@ -56,7 +56,8 @@ UpdateLogLevelsByResourceTypesResponse::UpdateLogLevelsByResourceTypesResponse(
  */
 const UpdateLogLevelsByResourceTypesRequest * UpdateLogLevelsByResourceTypesResponse::request() const
 {
-    return static_cast<const UpdateLogLevelsByResourceTypesRequest *>(IoTWirelessResponse::request());
+    Q_D(const UpdateLogLevelsByResourceTypesResponse);
+    return static_cast<const UpdateLogLevelsByResourceTypesRequest *>(d->request);
 }
 
 /*!

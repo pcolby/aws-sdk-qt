@@ -161,7 +161,8 @@ CreateAppResponse::CreateAppResponse(
  */
 const CreateAppRequest * CreateAppResponse::request() const
 {
-    return static_cast<const CreateAppRequest *>(OpsWorksResponse::request());
+    Q_D(const CreateAppResponse);
+    return static_cast<const CreateAppRequest *>(d->request);
 }
 
 /*!

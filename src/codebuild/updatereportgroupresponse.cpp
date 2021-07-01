@@ -64,7 +64,8 @@ UpdateReportGroupResponse::UpdateReportGroupResponse(
  */
 const UpdateReportGroupRequest * UpdateReportGroupResponse::request() const
 {
-    return static_cast<const UpdateReportGroupRequest *>(CodeBuildResponse::request());
+    Q_D(const UpdateReportGroupResponse);
+    return static_cast<const UpdateReportGroupRequest *>(d->request);
 }
 
 /*!

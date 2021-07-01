@@ -154,16 +154,16 @@ PersonalizeClient::PersonalizeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-05-22"),
-    QStringLiteral("personalize"),
-    QStringLiteral("Amazon Personalize"),
-    QStringLiteral("personalize"),
-    parent), d_ptr(new PersonalizeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new PersonalizeClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(PersonalizeClient);
+    d->apiVersion = QStringLiteral("2018-05-22");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("personalize");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Personalize");
+    d->serviceName = QStringLiteral("personalize");
 }
 
 /*!
@@ -182,16 +182,16 @@ PersonalizeClient::PersonalizeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-05-22"),
-    QStringLiteral("personalize"),
-    QStringLiteral("Amazon Personalize"),
-    QStringLiteral("personalize"),
-    parent), d_ptr(new PersonalizeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new PersonalizeClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(PersonalizeClient);
+    d->apiVersion = QStringLiteral("2018-05-22");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("personalize");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Personalize");
+    d->serviceName = QStringLiteral("personalize");
 }
 
 /*!
@@ -1384,9 +1384,10 @@ UpdateCampaignResponse * PersonalizeClient::updateCampaign(const UpdateCampaignR
 /*!
  * Constructs a PersonalizeClientPrivate object with public implementation \a q.
  */
-PersonalizeClientPrivate::PersonalizeClientPrivate(PersonalizeClient * const q) : q_ptr(q)
+PersonalizeClientPrivate::PersonalizeClientPrivate(PersonalizeClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Personalize

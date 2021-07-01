@@ -70,7 +70,8 @@ DescribeImageResponse::DescribeImageResponse(
  */
 const DescribeImageRequest * DescribeImageResponse::request() const
 {
-    return static_cast<const DescribeImageRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeImageResponse);
+    return static_cast<const DescribeImageRequest *>(d->request);
 }
 
 /*!

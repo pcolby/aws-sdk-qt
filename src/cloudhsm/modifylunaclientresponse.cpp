@@ -67,7 +67,8 @@ ModifyLunaClientResponse::ModifyLunaClientResponse(
  */
 const ModifyLunaClientRequest * ModifyLunaClientResponse::request() const
 {
-    return static_cast<const ModifyLunaClientRequest *>(CloudHSMResponse::request());
+    Q_D(const ModifyLunaClientResponse);
+    return static_cast<const ModifyLunaClientRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetCodeBindingSourceResponse::GetCodeBindingSourceResponse(
  */
 const GetCodeBindingSourceRequest * GetCodeBindingSourceResponse::request() const
 {
-    return static_cast<const GetCodeBindingSourceRequest *>(SchemasResponse::request());
+    Q_D(const GetCodeBindingSourceResponse);
+    return static_cast<const GetCodeBindingSourceRequest *>(d->request);
 }
 
 /*!

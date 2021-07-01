@@ -97,8 +97,7 @@ public:
 
 protected:
     /// @cond internal
-    LexModelBuildingServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit LexModelBuildingServiceRequest(LexModelBuildingServiceRequestPrivate * const d);
+    LexModelBuildingServiceRequest(LexModelBuildingServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -20,12 +20,15 @@
 #ifndef QTAWS_IOTANALYTICSREQUEST_P_H
 #define QTAWS_IOTANALYTICSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "iotanalyticsrequest.h"
+
 namespace QtAws {
 namespace IoTAnalytics {
 
 class IoTAnalyticsRequest;
 
-class IoTAnalyticsRequestPrivate {
+class IoTAnalyticsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTAnalyticsRequest::Action action; ///< IoTAnalytics action to be performed.
@@ -36,9 +39,6 @@ public:
     IoTAnalyticsRequestPrivate(const IoTAnalyticsRequestPrivate &other, IoTAnalyticsRequest * const q);
 
     static QString toString(const IoTAnalyticsRequest::Action &action);
-
-protected:
-    IoTAnalyticsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTAnalyticsRequest)

@@ -62,7 +62,8 @@ GetUserResponse::GetUserResponse(
  */
 const GetUserRequest * GetUserResponse::request() const
 {
-    return static_cast<const GetUserRequest *>(IamResponse::request());
+    Q_D(const GetUserResponse);
+    return static_cast<const GetUserRequest *>(d->request);
 }
 
 /*!

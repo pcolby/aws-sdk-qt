@@ -56,7 +56,8 @@ DescribeJobLogItemsResponse::DescribeJobLogItemsResponse(
  */
 const DescribeJobLogItemsRequest * DescribeJobLogItemsResponse::request() const
 {
-    return static_cast<const DescribeJobLogItemsRequest *>(mgnResponse::request());
+    Q_D(const DescribeJobLogItemsResponse);
+    return static_cast<const DescribeJobLogItemsRequest *>(d->request);
 }
 
 /*!

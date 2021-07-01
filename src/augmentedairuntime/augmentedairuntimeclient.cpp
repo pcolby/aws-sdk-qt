@@ -107,16 +107,16 @@ AugmentedAIRuntimeClient::AugmentedAIRuntimeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-11-07"),
-    QStringLiteral("a2i-runtime.sagemaker"),
-    QStringLiteral("Amazon Augmented AI Runtime"),
-    QStringLiteral("sagemaker"),
-    parent), d_ptr(new AugmentedAIRuntimeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AugmentedAIRuntimeClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AugmentedAIRuntimeClient);
+    d->apiVersion = QStringLiteral("2019-11-07");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("a2i-runtime.sagemaker");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Augmented AI Runtime");
+    d->serviceName = QStringLiteral("sagemaker");
 }
 
 /*!
@@ -135,16 +135,16 @@ AugmentedAIRuntimeClient::AugmentedAIRuntimeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-11-07"),
-    QStringLiteral("a2i-runtime.sagemaker"),
-    QStringLiteral("Amazon Augmented AI Runtime"),
-    QStringLiteral("sagemaker"),
-    parent), d_ptr(new AugmentedAIRuntimeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AugmentedAIRuntimeClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AugmentedAIRuntimeClient);
+    d->apiVersion = QStringLiteral("2019-11-07");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("a2i-runtime.sagemaker");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Augmented AI Runtime");
+    d->serviceName = QStringLiteral("sagemaker");
 }
 
 /*!
@@ -229,9 +229,10 @@ StopHumanLoopResponse * AugmentedAIRuntimeClient::stopHumanLoop(const StopHumanL
 /*!
  * Constructs a AugmentedAIRuntimeClientPrivate object with public implementation \a q.
  */
-AugmentedAIRuntimeClientPrivate::AugmentedAIRuntimeClientPrivate(AugmentedAIRuntimeClient * const q) : q_ptr(q)
+AugmentedAIRuntimeClientPrivate::AugmentedAIRuntimeClientPrivate(AugmentedAIRuntimeClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AugmentedAIRuntime

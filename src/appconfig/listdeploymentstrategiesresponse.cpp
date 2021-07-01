@@ -105,7 +105,8 @@ ListDeploymentStrategiesResponse::ListDeploymentStrategiesResponse(
  */
 const ListDeploymentStrategiesRequest * ListDeploymentStrategiesResponse::request() const
 {
-    return static_cast<const ListDeploymentStrategiesRequest *>(AppConfigResponse::request());
+    Q_D(const ListDeploymentStrategiesResponse);
+    return static_cast<const ListDeploymentStrategiesRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ GetObjectRetentionResponse::GetObjectRetentionResponse(
  */
 const GetObjectRetentionRequest * GetObjectRetentionResponse::request() const
 {
-    return static_cast<const GetObjectRetentionRequest *>(S3Response::request());
+    Q_D(const GetObjectRetentionResponse);
+    return static_cast<const GetObjectRetentionRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ CreateWirelessGatewayTaskResponse::CreateWirelessGatewayTaskResponse(
  */
 const CreateWirelessGatewayTaskRequest * CreateWirelessGatewayTaskResponse::request() const
 {
-    return static_cast<const CreateWirelessGatewayTaskRequest *>(IoTWirelessResponse::request());
+    Q_D(const CreateWirelessGatewayTaskResponse);
+    return static_cast<const CreateWirelessGatewayTaskRequest *>(d->request);
 }
 
 /*!

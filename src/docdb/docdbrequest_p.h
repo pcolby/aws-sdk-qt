@@ -20,12 +20,15 @@
 #ifndef QTAWS_DOCDBREQUEST_P_H
 #define QTAWS_DOCDBREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "docdbrequest.h"
+
 namespace QtAws {
 namespace DocDB {
 
 class DocDBRequest;
 
-class DocDBRequestPrivate {
+class DocDBRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DocDBRequest::Action action; ///< DocDB action to be performed.
@@ -36,9 +39,6 @@ public:
     DocDBRequestPrivate(const DocDBRequestPrivate &other, DocDBRequest * const q);
 
     static QString toString(const DocDBRequest::Action &action);
-
-protected:
-    DocDBRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DocDBRequest)

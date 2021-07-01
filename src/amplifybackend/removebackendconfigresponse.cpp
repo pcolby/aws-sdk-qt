@@ -56,7 +56,8 @@ RemoveBackendConfigResponse::RemoveBackendConfigResponse(
  */
 const RemoveBackendConfigRequest * RemoveBackendConfigResponse::request() const
 {
-    return static_cast<const RemoveBackendConfigRequest *>(AmplifyBackendResponse::request());
+    Q_D(const RemoveBackendConfigResponse);
+    return static_cast<const RemoveBackendConfigRequest *>(d->request);
 }
 
 /*!

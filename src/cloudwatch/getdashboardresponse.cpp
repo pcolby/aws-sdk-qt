@@ -69,7 +69,8 @@ GetDashboardResponse::GetDashboardResponse(
  */
 const GetDashboardRequest * GetDashboardResponse::request() const
 {
-    return static_cast<const GetDashboardRequest *>(CloudWatchResponse::request());
+    Q_D(const GetDashboardResponse);
+    return static_cast<const GetDashboardRequest *>(d->request);
 }
 
 /*!

@@ -72,7 +72,8 @@ DescribeEventsResponse::DescribeEventsResponse(
  */
 const DescribeEventsRequest * DescribeEventsResponse::request() const
 {
-    return static_cast<const DescribeEventsRequest *>(NeptuneResponse::request());
+    Q_D(const DescribeEventsResponse);
+    return static_cast<const DescribeEventsRequest *>(d->request);
 }
 
 /*!

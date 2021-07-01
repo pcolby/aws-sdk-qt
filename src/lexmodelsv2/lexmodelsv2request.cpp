@@ -98,7 +98,7 @@ namespace LexModelsV2 {
  * Constructs a LexModelsV2Request object for LexModelsV2 \a action.
  */
 LexModelsV2Request::LexModelsV2Request(const Action action)
-    : d_ptr(new LexModelsV2RequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new LexModelsV2RequestPrivate(action, this))
 {
 
 }
@@ -107,8 +107,7 @@ LexModelsV2Request::LexModelsV2Request(const Action action)
  * Constructs a copy of \a other.
  */
 LexModelsV2Request::LexModelsV2Request(const LexModelsV2Request &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new LexModelsV2RequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new LexModelsV2RequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -131,7 +130,7 @@ LexModelsV2Request& LexModelsV2Request::operator=(const LexModelsV2Request &othe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LexModelsV2RequestPrivate.
  */
-LexModelsV2Request::LexModelsV2Request(LexModelsV2RequestPrivate * const d) : d_ptr(d)
+LexModelsV2Request::LexModelsV2Request(LexModelsV2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -300,7 +299,7 @@ QNetworkRequest LexModelsV2Request::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 LexModelsV2RequestPrivate::LexModelsV2RequestPrivate(const LexModelsV2Request::Action action, LexModelsV2Request * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -315,8 +314,8 @@ LexModelsV2RequestPrivate::LexModelsV2RequestPrivate(const LexModelsV2Request::A
  */
 LexModelsV2RequestPrivate::LexModelsV2RequestPrivate(const LexModelsV2RequestPrivate &other,
                                      LexModelsV2Request * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

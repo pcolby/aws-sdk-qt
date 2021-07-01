@@ -87,7 +87,8 @@ DescribeLocalGatewayVirtualInterfacesResponse::DescribeLocalGatewayVirtualInterf
  */
 const DescribeLocalGatewayVirtualInterfacesRequest * DescribeLocalGatewayVirtualInterfacesResponse::request() const
 {
-    return static_cast<const DescribeLocalGatewayVirtualInterfacesRequest *>(Ec2Response::request());
+    Q_D(const DescribeLocalGatewayVirtualInterfacesResponse);
+    return static_cast<const DescribeLocalGatewayVirtualInterfacesRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetResourcePolicyResponse::GetResourcePolicyResponse(
  */
 const GetResourcePolicyRequest * GetResourcePolicyResponse::request() const
 {
-    return static_cast<const GetResourcePolicyRequest *>(SchemasResponse::request());
+    Q_D(const GetResourcePolicyResponse);
+    return static_cast<const GetResourcePolicyRequest *>(d->request);
 }
 
 /*!

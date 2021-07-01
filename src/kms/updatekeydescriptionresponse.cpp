@@ -154,7 +154,8 @@ UpdateKeyDescriptionResponse::UpdateKeyDescriptionResponse(
  */
 const UpdateKeyDescriptionRequest * UpdateKeyDescriptionResponse::request() const
 {
-    return static_cast<const UpdateKeyDescriptionRequest *>(KmsResponse::request());
+    Q_D(const UpdateKeyDescriptionResponse);
+    return static_cast<const UpdateKeyDescriptionRequest *>(d->request);
 }
 
 /*!

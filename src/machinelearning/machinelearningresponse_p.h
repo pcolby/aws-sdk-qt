@@ -20,12 +20,14 @@
 #ifndef QTAWS_MACHINELEARNINGRESPONSE_P_H
 #define QTAWS_MACHINELEARNINGRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace MachineLearning {
 
 class MachineLearningResponse;
 
-class MachineLearningResponsePrivate {
+class MachineLearningResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    MachineLearningResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MachineLearningResponse)

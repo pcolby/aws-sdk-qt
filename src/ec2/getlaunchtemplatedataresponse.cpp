@@ -87,7 +87,8 @@ GetLaunchTemplateDataResponse::GetLaunchTemplateDataResponse(
  */
 const GetLaunchTemplateDataRequest * GetLaunchTemplateDataResponse::request() const
 {
-    return static_cast<const GetLaunchTemplateDataRequest *>(Ec2Response::request());
+    Q_D(const GetLaunchTemplateDataResponse);
+    return static_cast<const GetLaunchTemplateDataRequest *>(d->request);
 }
 
 /*!

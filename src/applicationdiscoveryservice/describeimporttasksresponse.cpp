@@ -159,7 +159,8 @@ DescribeImportTasksResponse::DescribeImportTasksResponse(
  */
 const DescribeImportTasksRequest * DescribeImportTasksResponse::request() const
 {
-    return static_cast<const DescribeImportTasksRequest *>(ApplicationDiscoveryServiceResponse::request());
+    Q_D(const DescribeImportTasksResponse);
+    return static_cast<const DescribeImportTasksRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ GetProxySessionResponse::GetProxySessionResponse(
  */
 const GetProxySessionRequest * GetProxySessionResponse::request() const
 {
-    return static_cast<const GetProxySessionRequest *>(ChimeResponse::request());
+    Q_D(const GetProxySessionResponse);
+    return static_cast<const GetProxySessionRequest *>(d->request);
 }
 
 /*!

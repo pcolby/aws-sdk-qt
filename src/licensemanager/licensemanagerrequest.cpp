@@ -87,7 +87,7 @@ namespace LicenseManager {
  * Constructs a LicenseManagerRequest object for LicenseManager \a action.
  */
 LicenseManagerRequest::LicenseManagerRequest(const Action action)
-    : d_ptr(new LicenseManagerRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new LicenseManagerRequestPrivate(action, this))
 {
 
 }
@@ -96,8 +96,7 @@ LicenseManagerRequest::LicenseManagerRequest(const Action action)
  * Constructs a copy of \a other.
  */
 LicenseManagerRequest::LicenseManagerRequest(const LicenseManagerRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new LicenseManagerRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new LicenseManagerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -120,7 +119,7 @@ LicenseManagerRequest& LicenseManagerRequest::operator=(const LicenseManagerRequ
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LicenseManagerRequestPrivate.
  */
-LicenseManagerRequest::LicenseManagerRequest(LicenseManagerRequestPrivate * const d) : d_ptr(d)
+LicenseManagerRequest::LicenseManagerRequest(LicenseManagerRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -289,7 +288,7 @@ QNetworkRequest LicenseManagerRequest::unsignedRequest(const QUrl &endpoint) con
  * with public implementation \a q.
  */
 LicenseManagerRequestPrivate::LicenseManagerRequestPrivate(const LicenseManagerRequest::Action action, LicenseManagerRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -304,8 +303,8 @@ LicenseManagerRequestPrivate::LicenseManagerRequestPrivate(const LicenseManagerR
  */
 LicenseManagerRequestPrivate::LicenseManagerRequestPrivate(const LicenseManagerRequestPrivate &other,
                                      LicenseManagerRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

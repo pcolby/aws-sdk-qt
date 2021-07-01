@@ -160,8 +160,7 @@ public:
 
 protected:
     /// @cond internal
-    ConnectRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ConnectRequest(ConnectRequestPrivate * const d);
+    ConnectRequest(ConnectRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

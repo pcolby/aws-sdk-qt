@@ -91,7 +91,8 @@ ListMultipartUploadsResponse::ListMultipartUploadsResponse(
  */
 const ListMultipartUploadsRequest * ListMultipartUploadsResponse::request() const
 {
-    return static_cast<const ListMultipartUploadsRequest *>(GlacierResponse::request());
+    Q_D(const ListMultipartUploadsResponse);
+    return static_cast<const ListMultipartUploadsRequest *>(d->request);
 }
 
 /*!

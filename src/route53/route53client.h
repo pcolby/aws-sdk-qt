@@ -240,12 +240,6 @@ public slots:
     UpdateTrafficPolicyCommentResponse * updateTrafficPolicyComment(const UpdateTrafficPolicyCommentRequest &request);
     UpdateTrafficPolicyInstanceResponse * updateTrafficPolicyInstance(const UpdateTrafficPolicyInstanceRequest &request);
 
-protected:
-    /// @cond internal
-    Route53ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit Route53Client(Route53ClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(Route53Client)
     Q_DISABLE_COPY(Route53Client)

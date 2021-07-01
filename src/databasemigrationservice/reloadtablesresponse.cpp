@@ -66,7 +66,8 @@ ReloadTablesResponse::ReloadTablesResponse(
  */
 const ReloadTablesRequest * ReloadTablesResponse::request() const
 {
-    return static_cast<const ReloadTablesRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const ReloadTablesResponse);
+    return static_cast<const ReloadTablesRequest *>(d->request);
 }
 
 /*!

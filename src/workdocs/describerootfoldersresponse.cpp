@@ -84,7 +84,8 @@ DescribeRootFoldersResponse::DescribeRootFoldersResponse(
  */
 const DescribeRootFoldersRequest * DescribeRootFoldersResponse::request() const
 {
-    return static_cast<const DescribeRootFoldersRequest *>(WorkDocsResponse::request());
+    Q_D(const DescribeRootFoldersResponse);
+    return static_cast<const DescribeRootFoldersRequest *>(d->request);
 }
 
 /*!

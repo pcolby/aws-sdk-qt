@@ -64,7 +64,8 @@ ListSharedReportGroupsResponse::ListSharedReportGroupsResponse(
  */
 const ListSharedReportGroupsRequest * ListSharedReportGroupsResponse::request() const
 {
-    return static_cast<const ListSharedReportGroupsRequest *>(CodeBuildResponse::request());
+    Q_D(const ListSharedReportGroupsResponse);
+    return static_cast<const ListSharedReportGroupsRequest *>(d->request);
 }
 
 /*!

@@ -68,7 +68,8 @@ EnterStandbyResponse::EnterStandbyResponse(
  */
 const EnterStandbyRequest * EnterStandbyResponse::request() const
 {
-    return static_cast<const EnterStandbyRequest *>(AutoScalingResponse::request());
+    Q_D(const EnterStandbyResponse);
+    return static_cast<const EnterStandbyRequest *>(d->request);
 }
 
 /*!

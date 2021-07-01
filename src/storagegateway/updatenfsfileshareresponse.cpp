@@ -124,7 +124,8 @@ UpdateNFSFileShareResponse::UpdateNFSFileShareResponse(
  */
 const UpdateNFSFileShareRequest * UpdateNFSFileShareResponse::request() const
 {
-    return static_cast<const UpdateNFSFileShareRequest *>(StorageGatewayResponse::request());
+    Q_D(const UpdateNFSFileShareResponse);
+    return static_cast<const UpdateNFSFileShareRequest *>(d->request);
 }
 
 /*!

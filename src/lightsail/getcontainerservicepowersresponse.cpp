@@ -74,7 +74,8 @@ GetContainerServicePowersResponse::GetContainerServicePowersResponse(
  */
 const GetContainerServicePowersRequest * GetContainerServicePowersResponse::request() const
 {
-    return static_cast<const GetContainerServicePowersRequest *>(LightsailResponse::request());
+    Q_D(const GetContainerServicePowersResponse);
+    return static_cast<const GetContainerServicePowersRequest *>(d->request);
 }
 
 /*!

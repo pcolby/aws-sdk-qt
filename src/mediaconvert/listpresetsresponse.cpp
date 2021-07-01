@@ -55,7 +55,8 @@ ListPresetsResponse::ListPresetsResponse(
  */
 const ListPresetsRequest * ListPresetsResponse::request() const
 {
-    return static_cast<const ListPresetsRequest *>(MediaConvertResponse::request());
+    Q_D(const ListPresetsResponse);
+    return static_cast<const ListPresetsRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ DescribeIntentResponse::DescribeIntentResponse(
  */
 const DescribeIntentRequest * DescribeIntentResponse::request() const
 {
-    return static_cast<const DescribeIntentRequest *>(LexModelsV2Response::request());
+    Q_D(const DescribeIntentResponse);
+    return static_cast<const DescribeIntentRequest *>(d->request);
 }
 
 /*!

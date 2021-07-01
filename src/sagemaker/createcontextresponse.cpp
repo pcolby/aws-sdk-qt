@@ -70,7 +70,8 @@ CreateContextResponse::CreateContextResponse(
  */
 const CreateContextRequest * CreateContextResponse::request() const
 {
-    return static_cast<const CreateContextRequest *>(SageMakerResponse::request());
+    Q_D(const CreateContextResponse);
+    return static_cast<const CreateContextRequest *>(d->request);
 }
 
 /*!

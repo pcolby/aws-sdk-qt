@@ -98,7 +98,8 @@ GetMeetingResponse::GetMeetingResponse(
  */
 const GetMeetingRequest * GetMeetingResponse::request() const
 {
-    return static_cast<const GetMeetingRequest *>(ChimeResponse::request());
+    Q_D(const GetMeetingResponse);
+    return static_cast<const GetMeetingRequest *>(d->request);
 }
 
 /*!

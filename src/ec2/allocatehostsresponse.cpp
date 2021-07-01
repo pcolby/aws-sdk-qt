@@ -87,7 +87,8 @@ AllocateHostsResponse::AllocateHostsResponse(
  */
 const AllocateHostsRequest * AllocateHostsResponse::request() const
 {
-    return static_cast<const AllocateHostsRequest *>(Ec2Response::request());
+    Q_D(const AllocateHostsResponse);
+    return static_cast<const AllocateHostsRequest *>(d->request);
 }
 
 /*!

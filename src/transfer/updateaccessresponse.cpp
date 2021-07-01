@@ -62,7 +62,8 @@ UpdateAccessResponse::UpdateAccessResponse(
  */
 const UpdateAccessRequest * UpdateAccessResponse::request() const
 {
-    return static_cast<const UpdateAccessRequest *>(TransferResponse::request());
+    Q_D(const UpdateAccessResponse);
+    return static_cast<const UpdateAccessRequest *>(d->request);
 }
 
 /*!

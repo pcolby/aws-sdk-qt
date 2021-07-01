@@ -119,7 +119,8 @@ FailoverGlobalClusterResponse::FailoverGlobalClusterResponse(
  */
 const FailoverGlobalClusterRequest * FailoverGlobalClusterResponse::request() const
 {
-    return static_cast<const FailoverGlobalClusterRequest *>(RdsResponse::request());
+    Q_D(const FailoverGlobalClusterResponse);
+    return static_cast<const FailoverGlobalClusterRequest *>(d->request);
 }
 
 /*!

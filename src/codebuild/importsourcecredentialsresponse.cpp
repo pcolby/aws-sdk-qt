@@ -64,7 +64,8 @@ ImportSourceCredentialsResponse::ImportSourceCredentialsResponse(
  */
 const ImportSourceCredentialsRequest * ImportSourceCredentialsResponse::request() const
 {
-    return static_cast<const ImportSourceCredentialsRequest *>(CodeBuildResponse::request());
+    Q_D(const ImportSourceCredentialsResponse);
+    return static_cast<const ImportSourceCredentialsRequest *>(d->request);
 }
 
 /*!

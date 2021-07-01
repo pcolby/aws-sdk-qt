@@ -65,7 +65,8 @@ DeleteTimelineEventResponse::DeleteTimelineEventResponse(
  */
 const DeleteTimelineEventRequest * DeleteTimelineEventResponse::request() const
 {
-    return static_cast<const DeleteTimelineEventRequest *>(SSMIncidentsResponse::request());
+    Q_D(const DeleteTimelineEventResponse);
+    return static_cast<const DeleteTimelineEventRequest *>(d->request);
 }
 
 /*!

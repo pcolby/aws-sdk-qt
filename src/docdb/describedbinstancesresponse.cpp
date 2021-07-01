@@ -56,7 +56,8 @@ DescribeDBInstancesResponse::DescribeDBInstancesResponse(
  */
 const DescribeDBInstancesRequest * DescribeDBInstancesResponse::request() const
 {
-    return static_cast<const DescribeDBInstancesRequest *>(DocDBResponse::request());
+    Q_D(const DescribeDBInstancesResponse);
+    return static_cast<const DescribeDBInstancesRequest *>(d->request);
 }
 
 /*!

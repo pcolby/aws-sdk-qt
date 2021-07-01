@@ -56,7 +56,8 @@ ListPlaceIndexesResponse::ListPlaceIndexesResponse(
  */
 const ListPlaceIndexesRequest * ListPlaceIndexesResponse::request() const
 {
-    return static_cast<const ListPlaceIndexesRequest *>(LocationServiceResponse::request());
+    Q_D(const ListPlaceIndexesResponse);
+    return static_cast<const ListPlaceIndexesRequest *>(d->request);
 }
 
 /*!

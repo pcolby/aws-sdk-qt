@@ -98,7 +98,8 @@ DeleteSipMediaApplicationResponse::DeleteSipMediaApplicationResponse(
  */
 const DeleteSipMediaApplicationRequest * DeleteSipMediaApplicationResponse::request() const
 {
-    return static_cast<const DeleteSipMediaApplicationRequest *>(ChimeResponse::request());
+    Q_D(const DeleteSipMediaApplicationResponse);
+    return static_cast<const DeleteSipMediaApplicationRequest *>(d->request);
 }
 
 /*!

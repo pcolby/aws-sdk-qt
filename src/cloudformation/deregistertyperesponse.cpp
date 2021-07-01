@@ -77,7 +77,8 @@ DeregisterTypeResponse::DeregisterTypeResponse(
  */
 const DeregisterTypeRequest * DeregisterTypeResponse::request() const
 {
-    return static_cast<const DeregisterTypeRequest *>(CloudFormationResponse::request());
+    Q_D(const DeregisterTypeResponse);
+    return static_cast<const DeregisterTypeRequest *>(d->request);
 }
 
 /*!

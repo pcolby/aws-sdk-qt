@@ -37,7 +37,7 @@ namespace LocationService {
  * Constructs a LocationServiceResponse object with parent \a parent.
  */
 LocationServiceResponse::LocationServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LocationServiceResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new LocationServiceResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ LocationServiceResponse::LocationServiceResponse(QObject * const parent)
  * implementation that inherits from LocationServiceResponsePrivate.
  */
 LocationServiceResponse::LocationServiceResponse(LocationServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void LocationServiceResponse::parseFailure(QIODevice &response)
  * Constructs a LocationServiceResponsePrivate object with public implementation \a q.
  */
 LocationServiceResponsePrivate::LocationServiceResponsePrivate(
-    LocationServiceResponse * const q) : q_ptr(q)
+    LocationServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

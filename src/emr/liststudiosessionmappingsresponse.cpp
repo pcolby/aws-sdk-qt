@@ -58,7 +58,8 @@ ListStudioSessionMappingsResponse::ListStudioSessionMappingsResponse(
  */
 const ListStudioSessionMappingsRequest * ListStudioSessionMappingsResponse::request() const
 {
-    return static_cast<const ListStudioSessionMappingsRequest *>(EmrResponse::request());
+    Q_D(const ListStudioSessionMappingsResponse);
+    return static_cast<const ListStudioSessionMappingsRequest *>(d->request);
 }
 
 /*!

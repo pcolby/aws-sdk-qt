@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    DevOpsGuruResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DevOpsGuruResponse(DevOpsGuruResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

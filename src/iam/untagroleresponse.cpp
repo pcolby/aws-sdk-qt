@@ -62,7 +62,8 @@ UntagRoleResponse::UntagRoleResponse(
  */
 const UntagRoleRequest * UntagRoleResponse::request() const
 {
-    return static_cast<const UntagRoleRequest *>(IamResponse::request());
+    Q_D(const UntagRoleResponse);
+    return static_cast<const UntagRoleRequest *>(d->request);
 }
 
 /*!

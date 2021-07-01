@@ -66,7 +66,8 @@ ResendConfirmationCodeResponse::ResendConfirmationCodeResponse(
  */
 const ResendConfirmationCodeRequest * ResendConfirmationCodeResponse::request() const
 {
-    return static_cast<const ResendConfirmationCodeRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const ResendConfirmationCodeResponse);
+    return static_cast<const ResendConfirmationCodeRequest *>(d->request);
 }
 
 /*!

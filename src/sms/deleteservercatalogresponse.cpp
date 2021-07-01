@@ -68,7 +68,8 @@ DeleteServerCatalogResponse::DeleteServerCatalogResponse(
  */
 const DeleteServerCatalogRequest * DeleteServerCatalogResponse::request() const
 {
-    return static_cast<const DeleteServerCatalogRequest *>(SmsResponse::request());
+    Q_D(const DeleteServerCatalogResponse);
+    return static_cast<const DeleteServerCatalogRequest *>(d->request);
 }
 
 /*!

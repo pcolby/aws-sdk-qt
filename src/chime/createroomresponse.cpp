@@ -98,7 +98,8 @@ CreateRoomResponse::CreateRoomResponse(
  */
 const CreateRoomRequest * CreateRoomResponse::request() const
 {
-    return static_cast<const CreateRoomRequest *>(ChimeResponse::request());
+    Q_D(const CreateRoomResponse);
+    return static_cast<const CreateRoomRequest *>(d->request);
 }
 
 /*!

@@ -79,7 +79,7 @@ namespace Inspector {
  * Constructs a InspectorRequest object for Inspector \a action.
  */
 InspectorRequest::InspectorRequest(const Action action)
-    : d_ptr(new InspectorRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new InspectorRequestPrivate(action, this))
 {
 
 }
@@ -88,8 +88,7 @@ InspectorRequest::InspectorRequest(const Action action)
  * Constructs a copy of \a other.
  */
 InspectorRequest::InspectorRequest(const InspectorRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new InspectorRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new InspectorRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -112,7 +111,7 @@ InspectorRequest& InspectorRequest::operator=(const InspectorRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from InspectorRequestPrivate.
  */
-InspectorRequest::InspectorRequest(InspectorRequestPrivate * const d) : d_ptr(d)
+InspectorRequest::InspectorRequest(InspectorRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -281,7 +280,7 @@ QNetworkRequest InspectorRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 InspectorRequestPrivate::InspectorRequestPrivate(const InspectorRequest::Action action, InspectorRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -296,8 +295,8 @@ InspectorRequestPrivate::InspectorRequestPrivate(const InspectorRequest::Action 
  */
 InspectorRequestPrivate::InspectorRequestPrivate(const InspectorRequestPrivate &other,
                                      InspectorRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

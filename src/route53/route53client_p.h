@@ -20,20 +20,19 @@
 #ifndef QTAWS_ROUTE53CLIENT_P_H
 #define QTAWS_ROUTE53CLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Route53 {
 
 class Route53Client;
 
-class Route53ClientPrivate {
+class Route53ClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit Route53ClientPrivate(Route53Client * const q);
-
-protected:
-    Route53Client * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Route53Client)

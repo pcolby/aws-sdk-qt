@@ -240,7 +240,8 @@ GetActionTypeResponse::GetActionTypeResponse(
  */
 const GetActionTypeRequest * GetActionTypeResponse::request() const
 {
-    return static_cast<const GetActionTypeRequest *>(CodePipelineResponse::request());
+    Q_D(const GetActionTypeResponse);
+    return static_cast<const GetActionTypeRequest *>(d->request);
 }
 
 /*!

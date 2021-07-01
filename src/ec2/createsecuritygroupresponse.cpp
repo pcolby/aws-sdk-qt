@@ -87,7 +87,8 @@ CreateSecurityGroupResponse::CreateSecurityGroupResponse(
  */
 const CreateSecurityGroupRequest * CreateSecurityGroupResponse::request() const
 {
-    return static_cast<const CreateSecurityGroupRequest *>(Ec2Response::request());
+    Q_D(const CreateSecurityGroupResponse);
+    return static_cast<const CreateSecurityGroupRequest *>(d->request);
 }
 
 /*!

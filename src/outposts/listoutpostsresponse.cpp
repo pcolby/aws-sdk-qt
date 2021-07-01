@@ -59,7 +59,8 @@ ListOutpostsResponse::ListOutpostsResponse(
  */
 const ListOutpostsRequest * ListOutpostsResponse::request() const
 {
-    return static_cast<const ListOutpostsRequest *>(OutpostsResponse::request());
+    Q_D(const ListOutpostsResponse);
+    return static_cast<const ListOutpostsRequest *>(d->request);
 }
 
 /*!

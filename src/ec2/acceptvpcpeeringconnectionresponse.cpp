@@ -87,7 +87,8 @@ AcceptVpcPeeringConnectionResponse::AcceptVpcPeeringConnectionResponse(
  */
 const AcceptVpcPeeringConnectionRequest * AcceptVpcPeeringConnectionResponse::request() const
 {
-    return static_cast<const AcceptVpcPeeringConnectionRequest *>(Ec2Response::request());
+    Q_D(const AcceptVpcPeeringConnectionResponse);
+    return static_cast<const AcceptVpcPeeringConnectionRequest *>(d->request);
 }
 
 /*!

@@ -74,7 +74,8 @@ SendTaskHeartbeatResponse::SendTaskHeartbeatResponse(
  */
 const SendTaskHeartbeatRequest * SendTaskHeartbeatResponse::request() const
 {
-    return static_cast<const SendTaskHeartbeatRequest *>(SfnResponse::request());
+    Q_D(const SendTaskHeartbeatResponse);
+    return static_cast<const SendTaskHeartbeatRequest *>(d->request);
 }
 
 /*!

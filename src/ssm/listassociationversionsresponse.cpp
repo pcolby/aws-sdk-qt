@@ -98,7 +98,8 @@ ListAssociationVersionsResponse::ListAssociationVersionsResponse(
  */
 const ListAssociationVersionsRequest * ListAssociationVersionsResponse::request() const
 {
-    return static_cast<const ListAssociationVersionsRequest *>(SsmResponse::request());
+    Q_D(const ListAssociationVersionsResponse);
+    return static_cast<const ListAssociationVersionsRequest *>(d->request);
 }
 
 /*!

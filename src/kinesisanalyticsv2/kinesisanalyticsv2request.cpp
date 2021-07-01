@@ -73,7 +73,7 @@ namespace KinesisAnalyticsV2 {
  * Constructs a KinesisAnalyticsV2Request object for KinesisAnalyticsV2 \a action.
  */
 KinesisAnalyticsV2Request::KinesisAnalyticsV2Request(const Action action)
-    : d_ptr(new KinesisAnalyticsV2RequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisAnalyticsV2RequestPrivate(action, this))
 {
 
 }
@@ -82,8 +82,7 @@ KinesisAnalyticsV2Request::KinesisAnalyticsV2Request(const Action action)
  * Constructs a copy of \a other.
  */
 KinesisAnalyticsV2Request::KinesisAnalyticsV2Request(const KinesisAnalyticsV2Request &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new KinesisAnalyticsV2RequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new KinesisAnalyticsV2RequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -106,7 +105,7 @@ KinesisAnalyticsV2Request& KinesisAnalyticsV2Request::operator=(const KinesisAna
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from KinesisAnalyticsV2RequestPrivate.
  */
-KinesisAnalyticsV2Request::KinesisAnalyticsV2Request(KinesisAnalyticsV2RequestPrivate * const d) : d_ptr(d)
+KinesisAnalyticsV2Request::KinesisAnalyticsV2Request(KinesisAnalyticsV2RequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -275,7 +274,7 @@ QNetworkRequest KinesisAnalyticsV2Request::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 KinesisAnalyticsV2RequestPrivate::KinesisAnalyticsV2RequestPrivate(const KinesisAnalyticsV2Request::Action action, KinesisAnalyticsV2Request * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -290,8 +289,8 @@ KinesisAnalyticsV2RequestPrivate::KinesisAnalyticsV2RequestPrivate(const Kinesis
  */
 KinesisAnalyticsV2RequestPrivate::KinesisAnalyticsV2RequestPrivate(const KinesisAnalyticsV2RequestPrivate &other,
                                      KinesisAnalyticsV2Request * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

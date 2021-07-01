@@ -20,12 +20,15 @@
 #ifndef QTAWS_DEVOPSGURUREQUEST_P_H
 #define QTAWS_DEVOPSGURUREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "devopsgururequest.h"
+
 namespace QtAws {
 namespace DevOpsGuru {
 
 class DevOpsGuruRequest;
 
-class DevOpsGuruRequestPrivate {
+class DevOpsGuruRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DevOpsGuruRequest::Action action; ///< DevOpsGuru action to be performed.
@@ -36,9 +39,6 @@ public:
     DevOpsGuruRequestPrivate(const DevOpsGuruRequestPrivate &other, DevOpsGuruRequest * const q);
 
     static QString toString(const DevOpsGuruRequest::Action &action);
-
-protected:
-    DevOpsGuruRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DevOpsGuruRequest)

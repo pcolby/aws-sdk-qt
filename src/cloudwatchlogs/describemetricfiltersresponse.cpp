@@ -84,7 +84,8 @@ DescribeMetricFiltersResponse::DescribeMetricFiltersResponse(
  */
 const DescribeMetricFiltersRequest * DescribeMetricFiltersResponse::request() const
 {
-    return static_cast<const DescribeMetricFiltersRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const DescribeMetricFiltersResponse);
+    return static_cast<const DescribeMetricFiltersRequest *>(d->request);
 }
 
 /*!

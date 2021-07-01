@@ -92,7 +92,8 @@ PutDedicatedIpInPoolResponse::PutDedicatedIpInPoolResponse(
  */
 const PutDedicatedIpInPoolRequest * PutDedicatedIpInPoolResponse::request() const
 {
-    return static_cast<const PutDedicatedIpInPoolRequest *>(PinpointEmailResponse::request());
+    Q_D(const PutDedicatedIpInPoolResponse);
+    return static_cast<const PutDedicatedIpInPoolRequest *>(d->request);
 }
 
 /*!

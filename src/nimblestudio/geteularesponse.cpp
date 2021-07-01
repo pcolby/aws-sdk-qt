@@ -55,7 +55,8 @@ GetEulaResponse::GetEulaResponse(
  */
 const GetEulaRequest * GetEulaResponse::request() const
 {
-    return static_cast<const GetEulaRequest *>(NimbleStudioResponse::request());
+    Q_D(const GetEulaResponse);
+    return static_cast<const GetEulaRequest *>(d->request);
 }
 
 /*!

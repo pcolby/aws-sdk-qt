@@ -20,20 +20,19 @@
 #ifndef QTAWS_MOBILECLIENT_P_H
 #define QTAWS_MOBILECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Mobile {
 
 class MobileClient;
 
-class MobileClientPrivate {
+class MobileClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MobileClientPrivate(MobileClient * const q);
-
-protected:
-    MobileClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MobileClient)

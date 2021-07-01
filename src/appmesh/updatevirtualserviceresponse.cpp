@@ -73,7 +73,8 @@ UpdateVirtualServiceResponse::UpdateVirtualServiceResponse(
  */
 const UpdateVirtualServiceRequest * UpdateVirtualServiceResponse::request() const
 {
-    return static_cast<const UpdateVirtualServiceRequest *>(AppMeshResponse::request());
+    Q_D(const UpdateVirtualServiceResponse);
+    return static_cast<const UpdateVirtualServiceRequest *>(d->request);
 }
 
 /*!

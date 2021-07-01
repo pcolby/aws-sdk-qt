@@ -55,7 +55,8 @@ DescribeOriginEndpointResponse::DescribeOriginEndpointResponse(
  */
 const DescribeOriginEndpointRequest * DescribeOriginEndpointResponse::request() const
 {
-    return static_cast<const DescribeOriginEndpointRequest *>(MediaPackageResponse::request());
+    Q_D(const DescribeOriginEndpointResponse);
+    return static_cast<const DescribeOriginEndpointRequest *>(d->request);
 }
 
 /*!

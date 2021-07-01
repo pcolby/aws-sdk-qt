@@ -66,7 +66,8 @@ DefineExpressionResponse::DefineExpressionResponse(
  */
 const DefineExpressionRequest * DefineExpressionResponse::request() const
 {
-    return static_cast<const DefineExpressionRequest *>(CloudSearchResponse::request());
+    Q_D(const DefineExpressionResponse);
+    return static_cast<const DefineExpressionRequest *>(d->request);
 }
 
 /*!

@@ -66,7 +66,8 @@ GetFunctionConcurrencyResponse::GetFunctionConcurrencyResponse(
  */
 const GetFunctionConcurrencyRequest * GetFunctionConcurrencyResponse::request() const
 {
-    return static_cast<const GetFunctionConcurrencyRequest *>(LambdaResponse::request());
+    Q_D(const GetFunctionConcurrencyResponse);
+    return static_cast<const GetFunctionConcurrencyRequest *>(d->request);
 }
 
 /*!

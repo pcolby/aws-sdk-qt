@@ -57,7 +57,8 @@ ListPHIDetectionJobsResponse::ListPHIDetectionJobsResponse(
  */
 const ListPHIDetectionJobsRequest * ListPHIDetectionJobsResponse::request() const
 {
-    return static_cast<const ListPHIDetectionJobsRequest *>(ComprehendMedicalResponse::request());
+    Q_D(const ListPHIDetectionJobsResponse);
+    return static_cast<const ListPHIDetectionJobsRequest *>(d->request);
 }
 
 /*!

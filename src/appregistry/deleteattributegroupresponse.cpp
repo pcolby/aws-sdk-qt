@@ -58,7 +58,8 @@ DeleteAttributeGroupResponse::DeleteAttributeGroupResponse(
  */
 const DeleteAttributeGroupRequest * DeleteAttributeGroupResponse::request() const
 {
-    return static_cast<const DeleteAttributeGroupRequest *>(AppRegistryResponse::request());
+    Q_D(const DeleteAttributeGroupResponse);
+    return static_cast<const DeleteAttributeGroupRequest *>(d->request);
 }
 
 /*!

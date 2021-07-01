@@ -55,7 +55,8 @@ GetPresetResponse::GetPresetResponse(
  */
 const GetPresetRequest * GetPresetResponse::request() const
 {
-    return static_cast<const GetPresetRequest *>(MediaConvertResponse::request());
+    Q_D(const GetPresetResponse);
+    return static_cast<const GetPresetRequest *>(d->request);
 }
 
 /*!

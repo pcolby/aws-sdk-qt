@@ -20,20 +20,19 @@
 #ifndef QTAWS_SAGEMAKERFEATURESTORERUNTIMECLIENT_P_H
 #define QTAWS_SAGEMAKERFEATURESTORERUNTIMECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SageMakerFeatureStoreRuntime {
 
 class SageMakerFeatureStoreRuntimeClient;
 
-class SageMakerFeatureStoreRuntimeClientPrivate {
+class SageMakerFeatureStoreRuntimeClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SageMakerFeatureStoreRuntimeClientPrivate(SageMakerFeatureStoreRuntimeClient * const q);
-
-protected:
-    SageMakerFeatureStoreRuntimeClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SageMakerFeatureStoreRuntimeClient)

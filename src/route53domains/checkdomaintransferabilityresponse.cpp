@@ -56,7 +56,8 @@ CheckDomainTransferabilityResponse::CheckDomainTransferabilityResponse(
  */
 const CheckDomainTransferabilityRequest * CheckDomainTransferabilityResponse::request() const
 {
-    return static_cast<const CheckDomainTransferabilityRequest *>(Route53DomainsResponse::request());
+    Q_D(const CheckDomainTransferabilityResponse);
+    return static_cast<const CheckDomainTransferabilityRequest *>(d->request);
 }
 
 /*!

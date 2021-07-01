@@ -78,7 +78,8 @@ CreateByteMatchSetResponse::CreateByteMatchSetResponse(
  */
 const CreateByteMatchSetRequest * CreateByteMatchSetResponse::request() const
 {
-    return static_cast<const CreateByteMatchSetRequest *>(WAFRegionalResponse::request());
+    Q_D(const CreateByteMatchSetResponse);
+    return static_cast<const CreateByteMatchSetRequest *>(d->request);
 }
 
 /*!

@@ -279,12 +279,6 @@ public slots:
     UpdateRepositoryDescriptionResponse * updateRepositoryDescription(const UpdateRepositoryDescriptionRequest &request);
     UpdateRepositoryNameResponse * updateRepositoryName(const UpdateRepositoryNameRequest &request);
 
-protected:
-    /// @cond internal
-    CodeCommitClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CodeCommitClient(CodeCommitClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(CodeCommitClient)
     Q_DISABLE_COPY(CodeCommitClient)

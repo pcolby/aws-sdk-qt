@@ -58,7 +58,8 @@ ListSentimentDetectionJobsResponse::ListSentimentDetectionJobsResponse(
  */
 const ListSentimentDetectionJobsRequest * ListSentimentDetectionJobsResponse::request() const
 {
-    return static_cast<const ListSentimentDetectionJobsRequest *>(ComprehendResponse::request());
+    Q_D(const ListSentimentDetectionJobsResponse);
+    return static_cast<const ListSentimentDetectionJobsRequest *>(d->request);
 }
 
 /*!

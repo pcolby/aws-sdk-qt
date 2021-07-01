@@ -105,7 +105,8 @@ DeleteDeploymentStrategyResponse::DeleteDeploymentStrategyResponse(
  */
 const DeleteDeploymentStrategyRequest * DeleteDeploymentStrategyResponse::request() const
 {
-    return static_cast<const DeleteDeploymentStrategyRequest *>(AppConfigResponse::request());
+    Q_D(const DeleteDeploymentStrategyResponse);
+    return static_cast<const DeleteDeploymentStrategyRequest *>(d->request);
 }
 
 /*!

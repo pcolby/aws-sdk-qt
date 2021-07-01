@@ -20,20 +20,19 @@
 #ifndef QTAWS_NETWORKFIREWALLCLIENT_P_H
 #define QTAWS_NETWORKFIREWALLCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace NetworkFirewall {
 
 class NetworkFirewallClient;
 
-class NetworkFirewallClientPrivate {
+class NetworkFirewallClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit NetworkFirewallClientPrivate(NetworkFirewallClient * const q);
-
-protected:
-    NetworkFirewallClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(NetworkFirewallClient)

@@ -98,7 +98,8 @@ PutSipMediaApplicationLoggingConfigurationResponse::PutSipMediaApplicationLoggin
  */
 const PutSipMediaApplicationLoggingConfigurationRequest * PutSipMediaApplicationLoggingConfigurationResponse::request() const
 {
-    return static_cast<const PutSipMediaApplicationLoggingConfigurationRequest *>(ChimeResponse::request());
+    Q_D(const PutSipMediaApplicationLoggingConfigurationResponse);
+    return static_cast<const PutSipMediaApplicationLoggingConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -74,7 +74,8 @@ PeerVpcResponse::PeerVpcResponse(
  */
 const PeerVpcRequest * PeerVpcResponse::request() const
 {
-    return static_cast<const PeerVpcRequest *>(LightsailResponse::request());
+    Q_D(const PeerVpcResponse);
+    return static_cast<const PeerVpcRequest *>(d->request);
 }
 
 /*!

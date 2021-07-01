@@ -64,7 +64,8 @@ DetectAnomaliesResponse::DetectAnomaliesResponse(
  */
 const DetectAnomaliesRequest * DetectAnomaliesResponse::request() const
 {
-    return static_cast<const DetectAnomaliesRequest *>(LookoutforVisionResponse::request());
+    Q_D(const DetectAnomaliesResponse);
+    return static_cast<const DetectAnomaliesRequest *>(d->request);
 }
 
 /*!

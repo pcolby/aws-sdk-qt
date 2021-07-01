@@ -60,7 +60,8 @@ UpdateMethodResponseResponse::UpdateMethodResponseResponse(
  */
 const UpdateMethodResponseRequest * UpdateMethodResponseResponse::request() const
 {
-    return static_cast<const UpdateMethodResponseRequest *>(APIGatewayResponse::request());
+    Q_D(const UpdateMethodResponseResponse);
+    return static_cast<const UpdateMethodResponseRequest *>(d->request);
 }
 
 /*!

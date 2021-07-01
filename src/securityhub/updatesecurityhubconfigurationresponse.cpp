@@ -103,7 +103,8 @@ UpdateSecurityHubConfigurationResponse::UpdateSecurityHubConfigurationResponse(
  */
 const UpdateSecurityHubConfigurationRequest * UpdateSecurityHubConfigurationResponse::request() const
 {
-    return static_cast<const UpdateSecurityHubConfigurationRequest *>(SecurityHubResponse::request());
+    Q_D(const UpdateSecurityHubConfigurationResponse);
+    return static_cast<const UpdateSecurityHubConfigurationRequest *>(d->request);
 }
 
 /*!

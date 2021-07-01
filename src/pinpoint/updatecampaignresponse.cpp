@@ -56,7 +56,8 @@ UpdateCampaignResponse::UpdateCampaignResponse(
  */
 const UpdateCampaignRequest * UpdateCampaignResponse::request() const
 {
-    return static_cast<const UpdateCampaignRequest *>(PinpointResponse::request());
+    Q_D(const UpdateCampaignResponse);
+    return static_cast<const UpdateCampaignRequest *>(d->request);
 }
 
 /*!

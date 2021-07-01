@@ -63,7 +63,8 @@ ListTypedLinkFacetNamesResponse::ListTypedLinkFacetNamesResponse(
  */
 const ListTypedLinkFacetNamesRequest * ListTypedLinkFacetNamesResponse::request() const
 {
-    return static_cast<const ListTypedLinkFacetNamesRequest *>(CloudDirectoryResponse::request());
+    Q_D(const ListTypedLinkFacetNamesResponse);
+    return static_cast<const ListTypedLinkFacetNamesRequest *>(d->request);
 }
 
 /*!

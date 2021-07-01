@@ -115,7 +115,8 @@ ClaimGameServerResponse::ClaimGameServerResponse(
  */
 const ClaimGameServerRequest * ClaimGameServerResponse::request() const
 {
-    return static_cast<const ClaimGameServerRequest *>(GameLiftResponse::request());
+    Q_D(const ClaimGameServerResponse);
+    return static_cast<const ClaimGameServerRequest *>(d->request);
 }
 
 /*!

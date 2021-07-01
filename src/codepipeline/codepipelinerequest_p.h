@@ -20,12 +20,15 @@
 #ifndef QTAWS_CODEPIPELINEREQUEST_P_H
 #define QTAWS_CODEPIPELINEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "codepipelinerequest.h"
+
 namespace QtAws {
 namespace CodePipeline {
 
 class CodePipelineRequest;
 
-class CodePipelineRequestPrivate {
+class CodePipelineRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodePipelineRequest::Action action; ///< CodePipeline action to be performed.
@@ -36,9 +39,6 @@ public:
     CodePipelineRequestPrivate(const CodePipelineRequestPrivate &other, CodePipelineRequest * const q);
 
     static QString toString(const CodePipelineRequest::Action &action);
-
-protected:
-    CodePipelineRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodePipelineRequest)

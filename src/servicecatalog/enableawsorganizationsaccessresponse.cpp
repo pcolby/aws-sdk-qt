@@ -61,7 +61,8 @@ EnableAWSOrganizationsAccessResponse::EnableAWSOrganizationsAccessResponse(
  */
 const EnableAWSOrganizationsAccessRequest * EnableAWSOrganizationsAccessResponse::request() const
 {
-    return static_cast<const EnableAWSOrganizationsAccessRequest *>(ServiceCatalogResponse::request());
+    Q_D(const EnableAWSOrganizationsAccessResponse);
+    return static_cast<const EnableAWSOrganizationsAccessRequest *>(d->request);
 }
 
 /*!

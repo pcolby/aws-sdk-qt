@@ -67,7 +67,8 @@ GetReportDefinitionResponse::GetReportDefinitionResponse(
  */
 const GetReportDefinitionRequest * GetReportDefinitionResponse::request() const
 {
-    return static_cast<const GetReportDefinitionRequest *>(ApplicationCostProfilerResponse::request());
+    Q_D(const GetReportDefinitionResponse);
+    return static_cast<const GetReportDefinitionRequest *>(d->request);
 }
 
 /*!

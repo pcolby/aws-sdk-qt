@@ -59,7 +59,8 @@ StartBackupJobResponse::StartBackupJobResponse(
  */
 const StartBackupJobRequest * StartBackupJobResponse::request() const
 {
-    return static_cast<const StartBackupJobRequest *>(BackupResponse::request());
+    Q_D(const StartBackupJobResponse);
+    return static_cast<const StartBackupJobRequest *>(d->request);
 }
 
 /*!

@@ -68,7 +68,8 @@ PutAttributesResponse::PutAttributesResponse(
  */
 const PutAttributesRequest * PutAttributesResponse::request() const
 {
-    return static_cast<const PutAttributesRequest *>(SimpleDBResponse::request());
+    Q_D(const PutAttributesResponse);
+    return static_cast<const PutAttributesRequest *>(d->request);
 }
 
 /*!

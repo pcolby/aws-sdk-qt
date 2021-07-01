@@ -439,7 +439,8 @@ GetMergeConflictsResponse::GetMergeConflictsResponse(
  */
 const GetMergeConflictsRequest * GetMergeConflictsResponse::request() const
 {
-    return static_cast<const GetMergeConflictsRequest *>(CodeCommitResponse::request());
+    Q_D(const GetMergeConflictsResponse);
+    return static_cast<const GetMergeConflictsRequest *>(d->request);
 }
 
 /*!

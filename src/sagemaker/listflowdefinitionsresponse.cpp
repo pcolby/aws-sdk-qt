@@ -70,7 +70,8 @@ ListFlowDefinitionsResponse::ListFlowDefinitionsResponse(
  */
 const ListFlowDefinitionsRequest * ListFlowDefinitionsResponse::request() const
 {
-    return static_cast<const ListFlowDefinitionsRequest *>(SageMakerResponse::request());
+    Q_D(const ListFlowDefinitionsResponse);
+    return static_cast<const ListFlowDefinitionsRequest *>(d->request);
 }
 
 /*!

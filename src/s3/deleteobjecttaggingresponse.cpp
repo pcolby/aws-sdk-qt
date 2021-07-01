@@ -55,7 +55,8 @@ DeleteObjectTaggingResponse::DeleteObjectTaggingResponse(
  */
 const DeleteObjectTaggingRequest * DeleteObjectTaggingResponse::request() const
 {
-    return static_cast<const DeleteObjectTaggingRequest *>(S3Response::request());
+    Q_D(const DeleteObjectTaggingResponse);
+    return static_cast<const DeleteObjectTaggingRequest *>(d->request);
 }
 
 /*!

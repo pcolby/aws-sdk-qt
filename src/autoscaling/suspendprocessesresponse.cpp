@@ -68,7 +68,8 @@ SuspendProcessesResponse::SuspendProcessesResponse(
  */
 const SuspendProcessesRequest * SuspendProcessesResponse::request() const
 {
-    return static_cast<const SuspendProcessesRequest *>(AutoScalingResponse::request());
+    Q_D(const SuspendProcessesResponse);
+    return static_cast<const SuspendProcessesRequest *>(d->request);
 }
 
 /*!

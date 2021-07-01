@@ -87,7 +87,8 @@ DescribeCapacityReservationsResponse::DescribeCapacityReservationsResponse(
  */
 const DescribeCapacityReservationsRequest * DescribeCapacityReservationsResponse::request() const
 {
-    return static_cast<const DescribeCapacityReservationsRequest *>(Ec2Response::request());
+    Q_D(const DescribeCapacityReservationsResponse);
+    return static_cast<const DescribeCapacityReservationsRequest *>(d->request);
 }
 
 /*!

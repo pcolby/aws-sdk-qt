@@ -79,7 +79,8 @@ UpdateContactFlowContentResponse::UpdateContactFlowContentResponse(
  */
 const UpdateContactFlowContentRequest * UpdateContactFlowContentResponse::request() const
 {
-    return static_cast<const UpdateContactFlowContentRequest *>(ConnectResponse::request());
+    Q_D(const UpdateContactFlowContentResponse);
+    return static_cast<const UpdateContactFlowContentRequest *>(d->request);
 }
 
 /*!

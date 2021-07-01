@@ -20,20 +20,19 @@
 #ifndef QTAWS_CLOUDFRONTCLIENT_P_H
 #define QTAWS_CLOUDFRONTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CloudFront {
 
 class CloudFrontClient;
 
-class CloudFrontClientPrivate {
+class CloudFrontClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CloudFrontClientPrivate(CloudFrontClient * const q);
-
-protected:
-    CloudFrontClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudFrontClient)

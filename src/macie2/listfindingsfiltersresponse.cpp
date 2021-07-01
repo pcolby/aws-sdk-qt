@@ -60,7 +60,8 @@ ListFindingsFiltersResponse::ListFindingsFiltersResponse(
  */
 const ListFindingsFiltersRequest * ListFindingsFiltersResponse::request() const
 {
-    return static_cast<const ListFindingsFiltersRequest *>(Macie2Response::request());
+    Q_D(const ListFindingsFiltersResponse);
+    return static_cast<const ListFindingsFiltersRequest *>(d->request);
 }
 
 /*!

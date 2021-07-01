@@ -58,7 +58,8 @@ DeleteDeviceDefinitionResponse::DeleteDeviceDefinitionResponse(
  */
 const DeleteDeviceDefinitionRequest * DeleteDeviceDefinitionResponse::request() const
 {
-    return static_cast<const DeleteDeviceDefinitionRequest *>(GreengrassResponse::request());
+    Q_D(const DeleteDeviceDefinitionResponse);
+    return static_cast<const DeleteDeviceDefinitionRequest *>(d->request);
 }
 
 /*!

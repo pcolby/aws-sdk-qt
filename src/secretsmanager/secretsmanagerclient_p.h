@@ -20,20 +20,19 @@
 #ifndef QTAWS_SECRETSMANAGERCLIENT_P_H
 #define QTAWS_SECRETSMANAGERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SecretsManager {
 
 class SecretsManagerClient;
 
-class SecretsManagerClientPrivate {
+class SecretsManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SecretsManagerClientPrivate(SecretsManagerClient * const q);
-
-protected:
-    SecretsManagerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SecretsManagerClient)

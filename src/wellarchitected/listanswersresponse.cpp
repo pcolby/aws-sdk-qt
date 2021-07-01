@@ -62,7 +62,8 @@ ListAnswersResponse::ListAnswersResponse(
  */
 const ListAnswersRequest * ListAnswersResponse::request() const
 {
-    return static_cast<const ListAnswersRequest *>(WellArchitectedResponse::request());
+    Q_D(const ListAnswersResponse);
+    return static_cast<const ListAnswersRequest *>(d->request);
 }
 
 /*!

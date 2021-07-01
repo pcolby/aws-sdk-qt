@@ -58,7 +58,8 @@ BatchGetPartitionResponse::BatchGetPartitionResponse(
  */
 const BatchGetPartitionRequest * BatchGetPartitionResponse::request() const
 {
-    return static_cast<const BatchGetPartitionRequest *>(GlueResponse::request());
+    Q_D(const BatchGetPartitionResponse);
+    return static_cast<const BatchGetPartitionRequest *>(d->request);
 }
 
 /*!

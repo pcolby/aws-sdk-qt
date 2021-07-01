@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ManagedBlockchainResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ManagedBlockchainResponse(ManagedBlockchainResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -55,7 +55,8 @@ DescribeFlowResponse::DescribeFlowResponse(
  */
 const DescribeFlowRequest * DescribeFlowResponse::request() const
 {
-    return static_cast<const DescribeFlowRequest *>(MediaConnectResponse::request());
+    Q_D(const DescribeFlowResponse);
+    return static_cast<const DescribeFlowRequest *>(d->request);
 }
 
 /*!

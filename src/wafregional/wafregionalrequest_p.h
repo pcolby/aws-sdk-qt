@@ -20,12 +20,15 @@
 #ifndef QTAWS_WAFREGIONALREQUEST_P_H
 #define QTAWS_WAFREGIONALREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "wafregionalrequest.h"
+
 namespace QtAws {
 namespace WAFRegional {
 
 class WAFRegionalRequest;
 
-class WAFRegionalRequestPrivate {
+class WAFRegionalRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     WAFRegionalRequest::Action action; ///< WAFRegional action to be performed.
@@ -36,9 +39,6 @@ public:
     WAFRegionalRequestPrivate(const WAFRegionalRequestPrivate &other, WAFRegionalRequest * const q);
 
     static QString toString(const WAFRegionalRequest::Action &action);
-
-protected:
-    WAFRegionalRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WAFRegionalRequest)

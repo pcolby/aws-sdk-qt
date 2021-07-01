@@ -61,7 +61,8 @@ DeleteServiceActionResponse::DeleteServiceActionResponse(
  */
 const DeleteServiceActionRequest * DeleteServiceActionResponse::request() const
 {
-    return static_cast<const DeleteServiceActionRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DeleteServiceActionResponse);
+    return static_cast<const DeleteServiceActionRequest *>(d->request);
 }
 
 /*!

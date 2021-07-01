@@ -293,7 +293,8 @@ CreateRepositoryResponse::CreateRepositoryResponse(
  */
 const CreateRepositoryRequest * CreateRepositoryResponse::request() const
 {
-    return static_cast<const CreateRepositoryRequest *>(CodeArtifactResponse::request());
+    Q_D(const CreateRepositoryResponse);
+    return static_cast<const CreateRepositoryRequest *>(d->request);
 }
 
 /*!

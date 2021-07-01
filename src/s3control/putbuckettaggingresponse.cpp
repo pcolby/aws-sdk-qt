@@ -56,7 +56,8 @@ PutBucketTaggingResponse::PutBucketTaggingResponse(
  */
 const PutBucketTaggingRequest * PutBucketTaggingResponse::request() const
 {
-    return static_cast<const PutBucketTaggingRequest *>(S3ControlResponse::request());
+    Q_D(const PutBucketTaggingResponse);
+    return static_cast<const PutBucketTaggingRequest *>(d->request);
 }
 
 /*!

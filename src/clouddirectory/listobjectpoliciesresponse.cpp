@@ -63,7 +63,8 @@ ListObjectPoliciesResponse::ListObjectPoliciesResponse(
  */
 const ListObjectPoliciesRequest * ListObjectPoliciesResponse::request() const
 {
-    return static_cast<const ListObjectPoliciesRequest *>(CloudDirectoryResponse::request());
+    Q_D(const ListObjectPoliciesResponse);
+    return static_cast<const ListObjectPoliciesRequest *>(d->request);
 }
 
 /*!

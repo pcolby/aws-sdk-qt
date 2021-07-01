@@ -58,7 +58,8 @@ DisassociateAttributeGroupResponse::DisassociateAttributeGroupResponse(
  */
 const DisassociateAttributeGroupRequest * DisassociateAttributeGroupResponse::request() const
 {
-    return static_cast<const DisassociateAttributeGroupRequest *>(AppRegistryResponse::request());
+    Q_D(const DisassociateAttributeGroupResponse);
+    return static_cast<const DisassociateAttributeGroupRequest *>(d->request);
 }
 
 /*!

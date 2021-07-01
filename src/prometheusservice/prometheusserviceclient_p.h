@@ -20,20 +20,19 @@
 #ifndef QTAWS_PROMETHEUSSERVICECLIENT_P_H
 #define QTAWS_PROMETHEUSSERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace PrometheusService {
 
 class PrometheusServiceClient;
 
-class PrometheusServiceClientPrivate {
+class PrometheusServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit PrometheusServiceClientPrivate(PrometheusServiceClient * const q);
-
-protected:
-    PrometheusServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PrometheusServiceClient)

@@ -58,7 +58,8 @@ ListExperimentTemplatesResponse::ListExperimentTemplatesResponse(
  */
 const ListExperimentTemplatesRequest * ListExperimentTemplatesResponse::request() const
 {
-    return static_cast<const ListExperimentTemplatesRequest *>(FisResponse::request());
+    Q_D(const ListExperimentTemplatesResponse);
+    return static_cast<const ListExperimentTemplatesRequest *>(d->request);
 }
 
 /*!

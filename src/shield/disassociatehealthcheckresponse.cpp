@@ -61,7 +61,8 @@ DisassociateHealthCheckResponse::DisassociateHealthCheckResponse(
  */
 const DisassociateHealthCheckRequest * DisassociateHealthCheckResponse::request() const
 {
-    return static_cast<const DisassociateHealthCheckRequest *>(ShieldResponse::request());
+    Q_D(const DisassociateHealthCheckResponse);
+    return static_cast<const DisassociateHealthCheckRequest *>(d->request);
 }
 
 /*!

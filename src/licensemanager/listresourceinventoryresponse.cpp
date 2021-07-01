@@ -59,7 +59,8 @@ ListResourceInventoryResponse::ListResourceInventoryResponse(
  */
 const ListResourceInventoryRequest * ListResourceInventoryResponse::request() const
 {
-    return static_cast<const ListResourceInventoryRequest *>(LicenseManagerResponse::request());
+    Q_D(const ListResourceInventoryResponse);
+    return static_cast<const ListResourceInventoryRequest *>(d->request);
 }
 
 /*!

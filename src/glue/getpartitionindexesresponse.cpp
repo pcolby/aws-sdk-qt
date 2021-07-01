@@ -58,7 +58,8 @@ GetPartitionIndexesResponse::GetPartitionIndexesResponse(
  */
 const GetPartitionIndexesRequest * GetPartitionIndexesResponse::request() const
 {
-    return static_cast<const GetPartitionIndexesRequest *>(GlueResponse::request());
+    Q_D(const GetPartitionIndexesResponse);
+    return static_cast<const GetPartitionIndexesRequest *>(d->request);
 }
 
 /*!

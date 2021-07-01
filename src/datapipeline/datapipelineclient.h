@@ -105,12 +105,6 @@ public slots:
     SetTaskStatusResponse * setTaskStatus(const SetTaskStatusRequest &request);
     ValidatePipelineDefinitionResponse * validatePipelineDefinition(const ValidatePipelineDefinitionRequest &request);
 
-protected:
-    /// @cond internal
-    DataPipelineClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DataPipelineClient(DataPipelineClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(DataPipelineClient)
     Q_DISABLE_COPY(DataPipelineClient)

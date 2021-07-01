@@ -180,16 +180,16 @@ PinpointEmailClient::PinpointEmailClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-07-26"),
-    QStringLiteral("email"),
-    QStringLiteral("Amazon Pinpoint Email Service"),
-    QStringLiteral("ses"),
-    parent), d_ptr(new PinpointEmailClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new PinpointEmailClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(PinpointEmailClient);
+    d->apiVersion = QStringLiteral("2018-07-26");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("email");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Pinpoint Email Service");
+    d->serviceName = QStringLiteral("ses");
 }
 
 /*!
@@ -208,16 +208,16 @@ PinpointEmailClient::PinpointEmailClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-07-26"),
-    QStringLiteral("email"),
-    QStringLiteral("Amazon Pinpoint Email Service"),
-    QStringLiteral("ses"),
-    parent), d_ptr(new PinpointEmailClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new PinpointEmailClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(PinpointEmailClient);
+    d->apiVersion = QStringLiteral("2018-07-26");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("email");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Pinpoint Email Service");
+    d->serviceName = QStringLiteral("ses");
 }
 
 /*!
@@ -918,9 +918,10 @@ UpdateConfigurationSetEventDestinationResponse * PinpointEmailClient::updateConf
 /*!
  * Constructs a PinpointEmailClientPrivate object with public implementation \a q.
  */
-PinpointEmailClientPrivate::PinpointEmailClientPrivate(PinpointEmailClient * const q) : q_ptr(q)
+PinpointEmailClientPrivate::PinpointEmailClientPrivate(PinpointEmailClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace PinpointEmail

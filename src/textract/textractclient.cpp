@@ -73,16 +73,16 @@ TextractClient::TextractClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-06-27"),
-    QStringLiteral("textract"),
-    QStringLiteral("Amazon Textract"),
-    QStringLiteral("textract"),
-    parent), d_ptr(new TextractClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new TextractClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(TextractClient);
+    d->apiVersion = QStringLiteral("2018-06-27");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("textract");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Textract");
+    d->serviceName = QStringLiteral("textract");
 }
 
 /*!
@@ -101,16 +101,16 @@ TextractClient::TextractClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-06-27"),
-    QStringLiteral("textract"),
-    QStringLiteral("Amazon Textract"),
-    QStringLiteral("textract"),
-    parent), d_ptr(new TextractClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new TextractClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(TextractClient);
+    d->apiVersion = QStringLiteral("2018-06-27");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("textract");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Textract");
+    d->serviceName = QStringLiteral("textract");
 }
 
 /*!
@@ -383,9 +383,10 @@ StartDocumentTextDetectionResponse * TextractClient::startDocumentTextDetection(
 /*!
  * Constructs a TextractClientPrivate object with public implementation \a q.
  */
-TextractClientPrivate::TextractClientPrivate(TextractClient * const q) : q_ptr(q)
+TextractClientPrivate::TextractClientPrivate(TextractClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Textract

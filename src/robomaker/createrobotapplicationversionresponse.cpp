@@ -56,7 +56,8 @@ CreateRobotApplicationVersionResponse::CreateRobotApplicationVersionResponse(
  */
 const CreateRobotApplicationVersionRequest * CreateRobotApplicationVersionResponse::request() const
 {
-    return static_cast<const CreateRobotApplicationVersionRequest *>(RoboMakerResponse::request());
+    Q_D(const CreateRobotApplicationVersionResponse);
+    return static_cast<const CreateRobotApplicationVersionRequest *>(d->request);
 }
 
 /*!

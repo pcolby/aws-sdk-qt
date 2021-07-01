@@ -60,7 +60,8 @@ ListNamespacesResponse::ListNamespacesResponse(
  */
 const ListNamespacesRequest * ListNamespacesResponse::request() const
 {
-    return static_cast<const ListNamespacesRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const ListNamespacesResponse);
+    return static_cast<const ListNamespacesRequest *>(d->request);
 }
 
 /*!

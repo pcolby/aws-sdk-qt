@@ -20,12 +20,15 @@
 #ifndef QTAWS_MEDIAPACKAGEVODREQUEST_P_H
 #define QTAWS_MEDIAPACKAGEVODREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "mediapackagevodrequest.h"
+
 namespace QtAws {
 namespace MediaPackageVod {
 
 class MediaPackageVodRequest;
 
-class MediaPackageVodRequestPrivate {
+class MediaPackageVodRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MediaPackageVodRequest::Action action; ///< MediaPackageVod action to be performed.
@@ -36,9 +39,6 @@ public:
     MediaPackageVodRequestPrivate(const MediaPackageVodRequestPrivate &other, MediaPackageVodRequest * const q);
 
     static QString toString(const MediaPackageVodRequest::Action &action);
-
-protected:
-    MediaPackageVodRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MediaPackageVodRequest)

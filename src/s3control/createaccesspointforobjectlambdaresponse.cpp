@@ -56,7 +56,8 @@ CreateAccessPointForObjectLambdaResponse::CreateAccessPointForObjectLambdaRespon
  */
 const CreateAccessPointForObjectLambdaRequest * CreateAccessPointForObjectLambdaResponse::request() const
 {
-    return static_cast<const CreateAccessPointForObjectLambdaRequest *>(S3ControlResponse::request());
+    Q_D(const CreateAccessPointForObjectLambdaResponse);
+    return static_cast<const CreateAccessPointForObjectLambdaRequest *>(d->request);
 }
 
 /*!

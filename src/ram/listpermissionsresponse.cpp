@@ -64,7 +64,8 @@ ListPermissionsResponse::ListPermissionsResponse(
  */
 const ListPermissionsRequest * ListPermissionsResponse::request() const
 {
-    return static_cast<const ListPermissionsRequest *>(RamResponse::request());
+    Q_D(const ListPermissionsResponse);
+    return static_cast<const ListPermissionsRequest *>(d->request);
 }
 
 /*!

@@ -72,7 +72,8 @@ GetUpgradeStatusResponse::GetUpgradeStatusResponse(
  */
 const GetUpgradeStatusRequest * GetUpgradeStatusResponse::request() const
 {
-    return static_cast<const GetUpgradeStatusRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const GetUpgradeStatusResponse);
+    return static_cast<const GetUpgradeStatusRequest *>(d->request);
 }
 
 /*!

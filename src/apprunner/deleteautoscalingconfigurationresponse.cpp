@@ -86,7 +86,8 @@ DeleteAutoScalingConfigurationResponse::DeleteAutoScalingConfigurationResponse(
  */
 const DeleteAutoScalingConfigurationRequest * DeleteAutoScalingConfigurationResponse::request() const
 {
-    return static_cast<const DeleteAutoScalingConfigurationRequest *>(AppRunnerResponse::request());
+    Q_D(const DeleteAutoScalingConfigurationResponse);
+    return static_cast<const DeleteAutoScalingConfigurationRequest *>(d->request);
 }
 
 /*!

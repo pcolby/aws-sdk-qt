@@ -108,12 +108,6 @@ public slots:
     TagQueueResponse * tagQueue(const TagQueueRequest &request);
     UntagQueueResponse * untagQueue(const UntagQueueRequest &request);
 
-protected:
-    /// @cond internal
-    SqsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SqsClient(SqsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SqsClient)
     Q_DISABLE_COPY(SqsClient)

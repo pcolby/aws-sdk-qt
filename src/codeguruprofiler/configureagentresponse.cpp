@@ -79,7 +79,8 @@ ConfigureAgentResponse::ConfigureAgentResponse(
  */
 const ConfigureAgentRequest * ConfigureAgentResponse::request() const
 {
-    return static_cast<const ConfigureAgentRequest *>(CodeGuruProfilerResponse::request());
+    Q_D(const ConfigureAgentResponse);
+    return static_cast<const ConfigureAgentRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,15 @@
 #ifndef QTAWS_COGNITOSYNCREQUEST_P_H
 #define QTAWS_COGNITOSYNCREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "cognitosyncrequest.h"
+
 namespace QtAws {
 namespace CognitoSync {
 
 class CognitoSyncRequest;
 
-class CognitoSyncRequestPrivate {
+class CognitoSyncRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CognitoSyncRequest::Action action; ///< CognitoSync action to be performed.
@@ -36,9 +39,6 @@ public:
     CognitoSyncRequestPrivate(const CognitoSyncRequestPrivate &other, CognitoSyncRequest * const q);
 
     static QString toString(const CognitoSyncRequest::Action &action);
-
-protected:
-    CognitoSyncRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CognitoSyncRequest)

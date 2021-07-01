@@ -20,20 +20,19 @@
 #ifndef QTAWS_LIGHTSAILCLIENT_P_H
 #define QTAWS_LIGHTSAILCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Lightsail {
 
 class LightsailClient;
 
-class LightsailClientPrivate {
+class LightsailClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit LightsailClientPrivate(LightsailClient * const q);
-
-protected:
-    LightsailClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LightsailClient)

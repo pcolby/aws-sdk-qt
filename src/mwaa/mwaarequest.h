@@ -69,8 +69,7 @@ public:
 
 protected:
     /// @cond internal
-    MwaaRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MwaaRequest(MwaaRequestPrivate * const d);
+    MwaaRequest(MwaaRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

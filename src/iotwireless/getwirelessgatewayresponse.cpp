@@ -56,7 +56,8 @@ GetWirelessGatewayResponse::GetWirelessGatewayResponse(
  */
 const GetWirelessGatewayRequest * GetWirelessGatewayResponse::request() const
 {
-    return static_cast<const GetWirelessGatewayRequest *>(IoTWirelessResponse::request());
+    Q_D(const GetWirelessGatewayResponse);
+    return static_cast<const GetWirelessGatewayRequest *>(d->request);
 }
 
 /*!

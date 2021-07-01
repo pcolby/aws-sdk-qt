@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ComprehendResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ComprehendResponse(ComprehendResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

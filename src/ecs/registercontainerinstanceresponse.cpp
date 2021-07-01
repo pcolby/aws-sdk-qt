@@ -72,7 +72,8 @@ RegisterContainerInstanceResponse::RegisterContainerInstanceResponse(
  */
 const RegisterContainerInstanceRequest * RegisterContainerInstanceResponse::request() const
 {
-    return static_cast<const RegisterContainerInstanceRequest *>(EcsResponse::request());
+    Q_D(const RegisterContainerInstanceResponse);
+    return static_cast<const RegisterContainerInstanceRequest *>(d->request);
 }
 
 /*!

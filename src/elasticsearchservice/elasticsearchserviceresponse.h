@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ElasticsearchServiceResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ElasticsearchServiceResponse(ElasticsearchServiceResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

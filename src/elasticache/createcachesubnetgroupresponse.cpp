@@ -69,7 +69,8 @@ CreateCacheSubnetGroupResponse::CreateCacheSubnetGroupResponse(
  */
 const CreateCacheSubnetGroupRequest * CreateCacheSubnetGroupResponse::request() const
 {
-    return static_cast<const CreateCacheSubnetGroupRequest *>(ElastiCacheResponse::request());
+    Q_D(const CreateCacheSubnetGroupResponse);
+    return static_cast<const CreateCacheSubnetGroupRequest *>(d->request);
 }
 
 /*!

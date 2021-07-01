@@ -56,7 +56,8 @@ InvokeEndpointResponse::InvokeEndpointResponse(
  */
 const InvokeEndpointRequest * InvokeEndpointResponse::request() const
 {
-    return static_cast<const InvokeEndpointRequest *>(SageMakerRuntimeResponse::request());
+    Q_D(const InvokeEndpointResponse);
+    return static_cast<const InvokeEndpointRequest *>(d->request);
 }
 
 /*!

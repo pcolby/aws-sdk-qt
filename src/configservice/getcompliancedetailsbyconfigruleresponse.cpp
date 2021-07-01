@@ -75,7 +75,8 @@ GetComplianceDetailsByConfigRuleResponse::GetComplianceDetailsByConfigRuleRespon
  */
 const GetComplianceDetailsByConfigRuleRequest * GetComplianceDetailsByConfigRuleResponse::request() const
 {
-    return static_cast<const GetComplianceDetailsByConfigRuleRequest *>(ConfigServiceResponse::request());
+    Q_D(const GetComplianceDetailsByConfigRuleResponse);
+    return static_cast<const GetComplianceDetailsByConfigRuleRequest *>(d->request);
 }
 
 /*!

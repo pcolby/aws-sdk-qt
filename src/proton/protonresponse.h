@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ProtonResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ProtonResponse(ProtonResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

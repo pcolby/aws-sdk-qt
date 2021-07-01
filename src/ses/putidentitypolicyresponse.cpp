@@ -66,7 +66,8 @@ PutIdentityPolicyResponse::PutIdentityPolicyResponse(
  */
 const PutIdentityPolicyRequest * PutIdentityPolicyResponse::request() const
 {
-    return static_cast<const PutIdentityPolicyRequest *>(SesResponse::request());
+    Q_D(const PutIdentityPolicyResponse);
+    return static_cast<const PutIdentityPolicyRequest *>(d->request);
 }
 
 /*!

@@ -83,8 +83,7 @@ public:
 
 protected:
     /// @cond internal
-    MediaConvertRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MediaConvertRequest(MediaConvertRequestPrivate * const d);
+    MediaConvertRequest(MediaConvertRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

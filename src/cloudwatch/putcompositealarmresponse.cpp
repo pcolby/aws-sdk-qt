@@ -69,7 +69,8 @@ PutCompositeAlarmResponse::PutCompositeAlarmResponse(
  */
 const PutCompositeAlarmRequest * PutCompositeAlarmResponse::request() const
 {
-    return static_cast<const PutCompositeAlarmRequest *>(CloudWatchResponse::request());
+    Q_D(const PutCompositeAlarmResponse);
+    return static_cast<const PutCompositeAlarmRequest *>(d->request);
 }
 
 /*!

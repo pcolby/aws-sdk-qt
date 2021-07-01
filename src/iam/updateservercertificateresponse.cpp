@@ -62,7 +62,8 @@ UpdateServerCertificateResponse::UpdateServerCertificateResponse(
  */
 const UpdateServerCertificateRequest * UpdateServerCertificateResponse::request() const
 {
-    return static_cast<const UpdateServerCertificateRequest *>(IamResponse::request());
+    Q_D(const UpdateServerCertificateResponse);
+    return static_cast<const UpdateServerCertificateRequest *>(d->request);
 }
 
 /*!

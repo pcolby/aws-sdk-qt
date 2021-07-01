@@ -439,7 +439,8 @@ UpdatePullRequestApprovalRuleContentResponse::UpdatePullRequestApprovalRuleConte
  */
 const UpdatePullRequestApprovalRuleContentRequest * UpdatePullRequestApprovalRuleContentResponse::request() const
 {
-    return static_cast<const UpdatePullRequestApprovalRuleContentRequest *>(CodeCommitResponse::request());
+    Q_D(const UpdatePullRequestApprovalRuleContentResponse);
+    return static_cast<const UpdatePullRequestApprovalRuleContentRequest *>(d->request);
 }
 
 /*!

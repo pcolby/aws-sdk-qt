@@ -84,7 +84,8 @@ DescribeResourcePoliciesResponse::DescribeResourcePoliciesResponse(
  */
 const DescribeResourcePoliciesRequest * DescribeResourcePoliciesResponse::request() const
 {
-    return static_cast<const DescribeResourcePoliciesRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const DescribeResourcePoliciesResponse);
+    return static_cast<const DescribeResourcePoliciesRequest *>(d->request);
 }
 
 /*!

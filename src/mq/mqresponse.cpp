@@ -37,7 +37,7 @@ namespace MQ {
  * Constructs a MqResponse object with parent \a parent.
  */
 MqResponse::MqResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new MqResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new MqResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ MqResponse::MqResponse(QObject * const parent)
  * implementation that inherits from MqResponsePrivate.
  */
 MqResponse::MqResponse(MqResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void MqResponse::parseFailure(QIODevice &response)
  * Constructs a MqResponsePrivate object with public implementation \a q.
  */
 MqResponsePrivate::MqResponsePrivate(
-    MqResponse * const q) : q_ptr(q)
+    MqResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

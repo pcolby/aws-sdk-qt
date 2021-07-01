@@ -87,7 +87,8 @@ DisassociateVpcCidrBlockResponse::DisassociateVpcCidrBlockResponse(
  */
 const DisassociateVpcCidrBlockRequest * DisassociateVpcCidrBlockResponse::request() const
 {
-    return static_cast<const DisassociateVpcCidrBlockRequest *>(Ec2Response::request());
+    Q_D(const DisassociateVpcCidrBlockResponse);
+    return static_cast<const DisassociateVpcCidrBlockRequest *>(d->request);
 }
 
 /*!

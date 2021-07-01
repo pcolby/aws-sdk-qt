@@ -20,12 +20,15 @@
 #ifndef QTAWS_CONNECTCONTACTLENSREQUEST_P_H
 #define QTAWS_CONNECTCONTACTLENSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "connectcontactlensrequest.h"
+
 namespace QtAws {
 namespace ConnectContactLens {
 
 class ConnectContactLensRequest;
 
-class ConnectContactLensRequestPrivate {
+class ConnectContactLensRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ConnectContactLensRequest::Action action; ///< ConnectContactLens action to be performed.
@@ -36,9 +39,6 @@ public:
     ConnectContactLensRequestPrivate(const ConnectContactLensRequestPrivate &other, ConnectContactLensRequest * const q);
 
     static QString toString(const ConnectContactLensRequest::Action &action);
-
-protected:
-    ConnectContactLensRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ConnectContactLensRequest)

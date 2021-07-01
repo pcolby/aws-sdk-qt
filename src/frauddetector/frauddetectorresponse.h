@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    FraudDetectorResponsePrivate * const d_ptr; ///< Internal d-pointer.
     FraudDetectorResponse(FraudDetectorResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

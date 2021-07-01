@@ -58,7 +58,8 @@ AddLFTagsToResourceResponse::AddLFTagsToResourceResponse(
  */
 const AddLFTagsToResourceRequest * AddLFTagsToResourceResponse::request() const
 {
-    return static_cast<const AddLFTagsToResourceRequest *>(LakeFormationResponse::request());
+    Q_D(const AddLFTagsToResourceResponse);
+    return static_cast<const AddLFTagsToResourceRequest *>(d->request);
 }
 
 /*!

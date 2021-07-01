@@ -66,7 +66,8 @@ PutFunctionCodeSigningConfigResponse::PutFunctionCodeSigningConfigResponse(
  */
 const PutFunctionCodeSigningConfigRequest * PutFunctionCodeSigningConfigResponse::request() const
 {
-    return static_cast<const PutFunctionCodeSigningConfigRequest *>(LambdaResponse::request());
+    Q_D(const PutFunctionCodeSigningConfigResponse);
+    return static_cast<const PutFunctionCodeSigningConfigRequest *>(d->request);
 }
 
 /*!

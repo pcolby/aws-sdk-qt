@@ -133,7 +133,8 @@ AddCommunicationToCaseResponse::AddCommunicationToCaseResponse(
  */
 const AddCommunicationToCaseRequest * AddCommunicationToCaseResponse::request() const
 {
-    return static_cast<const AddCommunicationToCaseRequest *>(SupportResponse::request());
+    Q_D(const AddCommunicationToCaseResponse);
+    return static_cast<const AddCommunicationToCaseRequest *>(d->request);
 }
 
 /*!

@@ -119,7 +119,8 @@ RemoveFromGlobalClusterResponse::RemoveFromGlobalClusterResponse(
  */
 const RemoveFromGlobalClusterRequest * RemoveFromGlobalClusterResponse::request() const
 {
-    return static_cast<const RemoveFromGlobalClusterRequest *>(RdsResponse::request());
+    Q_D(const RemoveFromGlobalClusterResponse);
+    return static_cast<const RemoveFromGlobalClusterRequest *>(d->request);
 }
 
 /*!

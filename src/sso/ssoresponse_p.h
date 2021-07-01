@@ -20,12 +20,14 @@
 #ifndef QTAWS_SSORESPONSE_P_H
 #define QTAWS_SSORESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace SSO {
 
 class SsoResponse;
 
-class SsoResponsePrivate {
+class SsoResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    SsoResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SsoResponse)

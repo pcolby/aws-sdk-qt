@@ -56,7 +56,8 @@ DescribeFeatureTransformationResponse::DescribeFeatureTransformationResponse(
  */
 const DescribeFeatureTransformationRequest * DescribeFeatureTransformationResponse::request() const
 {
-    return static_cast<const DescribeFeatureTransformationRequest *>(PersonalizeResponse::request());
+    Q_D(const DescribeFeatureTransformationResponse);
+    return static_cast<const DescribeFeatureTransformationRequest *>(d->request);
 }
 
 /*!

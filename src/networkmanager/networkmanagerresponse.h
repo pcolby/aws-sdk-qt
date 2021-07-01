@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    NetworkManagerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     NetworkManagerResponse(NetworkManagerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

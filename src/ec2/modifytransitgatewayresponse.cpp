@@ -87,7 +87,8 @@ ModifyTransitGatewayResponse::ModifyTransitGatewayResponse(
  */
 const ModifyTransitGatewayRequest * ModifyTransitGatewayResponse::request() const
 {
-    return static_cast<const ModifyTransitGatewayRequest *>(Ec2Response::request());
+    Q_D(const ModifyTransitGatewayResponse);
+    return static_cast<const ModifyTransitGatewayRequest *>(d->request);
 }
 
 /*!

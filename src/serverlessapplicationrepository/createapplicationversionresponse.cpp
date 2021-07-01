@@ -76,7 +76,8 @@ CreateApplicationVersionResponse::CreateApplicationVersionResponse(
  */
 const CreateApplicationVersionRequest * CreateApplicationVersionResponse::request() const
 {
-    return static_cast<const CreateApplicationVersionRequest *>(ServerlessApplicationRepositoryResponse::request());
+    Q_D(const CreateApplicationVersionResponse);
+    return static_cast<const CreateApplicationVersionRequest *>(d->request);
 }
 
 /*!

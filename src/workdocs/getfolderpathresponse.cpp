@@ -84,7 +84,8 @@ GetFolderPathResponse::GetFolderPathResponse(
  */
 const GetFolderPathRequest * GetFolderPathResponse::request() const
 {
-    return static_cast<const GetFolderPathRequest *>(WorkDocsResponse::request());
+    Q_D(const GetFolderPathResponse);
+    return static_cast<const GetFolderPathRequest *>(d->request);
 }
 
 /*!

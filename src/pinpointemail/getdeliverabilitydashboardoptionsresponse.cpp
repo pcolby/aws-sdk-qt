@@ -92,7 +92,8 @@ GetDeliverabilityDashboardOptionsResponse::GetDeliverabilityDashboardOptionsResp
  */
 const GetDeliverabilityDashboardOptionsRequest * GetDeliverabilityDashboardOptionsResponse::request() const
 {
-    return static_cast<const GetDeliverabilityDashboardOptionsRequest *>(PinpointEmailResponse::request());
+    Q_D(const GetDeliverabilityDashboardOptionsResponse);
+    return static_cast<const GetDeliverabilityDashboardOptionsRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ UpdateDatasetGroupResponse::UpdateDatasetGroupResponse(
  */
 const UpdateDatasetGroupRequest * UpdateDatasetGroupResponse::request() const
 {
-    return static_cast<const UpdateDatasetGroupRequest *>(ForecastServiceResponse::request());
+    Q_D(const UpdateDatasetGroupResponse);
+    return static_cast<const UpdateDatasetGroupRequest *>(d->request);
 }
 
 /*!

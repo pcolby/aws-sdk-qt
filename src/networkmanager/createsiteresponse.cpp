@@ -62,7 +62,8 @@ CreateSiteResponse::CreateSiteResponse(
  */
 const CreateSiteRequest * CreateSiteResponse::request() const
 {
-    return static_cast<const CreateSiteRequest *>(NetworkManagerResponse::request());
+    Q_D(const CreateSiteResponse);
+    return static_cast<const CreateSiteRequest *>(d->request);
 }
 
 /*!

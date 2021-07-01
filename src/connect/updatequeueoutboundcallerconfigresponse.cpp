@@ -79,7 +79,8 @@ UpdateQueueOutboundCallerConfigResponse::UpdateQueueOutboundCallerConfigResponse
  */
 const UpdateQueueOutboundCallerConfigRequest * UpdateQueueOutboundCallerConfigResponse::request() const
 {
-    return static_cast<const UpdateQueueOutboundCallerConfigRequest *>(ConnectResponse::request());
+    Q_D(const UpdateQueueOutboundCallerConfigResponse);
+    return static_cast<const UpdateQueueOutboundCallerConfigRequest *>(d->request);
 }
 
 /*!

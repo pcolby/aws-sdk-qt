@@ -58,7 +58,8 @@ DeleteIpGroupResponse::DeleteIpGroupResponse(
  */
 const DeleteIpGroupRequest * DeleteIpGroupResponse::request() const
 {
-    return static_cast<const DeleteIpGroupRequest *>(WorkSpacesResponse::request());
+    Q_D(const DeleteIpGroupResponse);
+    return static_cast<const DeleteIpGroupRequest *>(d->request);
 }
 
 /*!

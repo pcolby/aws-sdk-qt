@@ -77,7 +77,8 @@ CheckDNSAvailabilityResponse::CheckDNSAvailabilityResponse(
  */
 const CheckDNSAvailabilityRequest * CheckDNSAvailabilityResponse::request() const
 {
-    return static_cast<const CheckDNSAvailabilityRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const CheckDNSAvailabilityResponse);
+    return static_cast<const CheckDNSAvailabilityRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetApiMappingsResponse::GetApiMappingsResponse(
  */
 const GetApiMappingsRequest * GetApiMappingsResponse::request() const
 {
-    return static_cast<const GetApiMappingsRequest *>(ApiGatewayV2Response::request());
+    Q_D(const GetApiMappingsResponse);
+    return static_cast<const GetApiMappingsRequest *>(d->request);
 }
 
 /*!

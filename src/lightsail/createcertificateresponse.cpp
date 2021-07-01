@@ -74,7 +74,8 @@ CreateCertificateResponse::CreateCertificateResponse(
  */
 const CreateCertificateRequest * CreateCertificateResponse::request() const
 {
-    return static_cast<const CreateCertificateRequest *>(LightsailResponse::request());
+    Q_D(const CreateCertificateResponse);
+    return static_cast<const CreateCertificateRequest *>(d->request);
 }
 
 /*!

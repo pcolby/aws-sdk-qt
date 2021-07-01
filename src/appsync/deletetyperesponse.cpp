@@ -56,7 +56,8 @@ DeleteTypeResponse::DeleteTypeResponse(
  */
 const DeleteTypeRequest * DeleteTypeResponse::request() const
 {
-    return static_cast<const DeleteTypeRequest *>(AppSyncResponse::request());
+    Q_D(const DeleteTypeResponse);
+    return static_cast<const DeleteTypeRequest *>(d->request);
 }
 
 /*!

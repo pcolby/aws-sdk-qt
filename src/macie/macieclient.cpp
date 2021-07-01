@@ -80,16 +80,16 @@ MacieClient::MacieClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-12-19"),
-    QStringLiteral("macie"),
-    QStringLiteral("Amazon Macie"),
-    QStringLiteral("macie"),
-    parent), d_ptr(new MacieClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MacieClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MacieClient);
+    d->apiVersion = QStringLiteral("2017-12-19");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("macie");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Macie");
+    d->serviceName = QStringLiteral("macie");
 }
 
 /*!
@@ -108,16 +108,16 @@ MacieClient::MacieClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-12-19"),
-    QStringLiteral("macie"),
-    QStringLiteral("Amazon Macie"),
-    QStringLiteral("macie"),
-    parent), d_ptr(new MacieClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MacieClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MacieClient);
+    d->apiVersion = QStringLiteral("2017-12-19");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("macie");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Macie");
+    d->serviceName = QStringLiteral("macie");
 }
 
 /*!
@@ -233,9 +233,10 @@ UpdateS3ResourcesResponse * MacieClient::updateS3Resources(const UpdateS3Resourc
 /*!
  * Constructs a MacieClientPrivate object with public implementation \a q.
  */
-MacieClientPrivate::MacieClientPrivate(MacieClient * const q) : q_ptr(q)
+MacieClientPrivate::MacieClientPrivate(MacieClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Macie

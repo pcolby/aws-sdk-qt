@@ -293,7 +293,8 @@ DeleteDomainPermissionsPolicyResponse::DeleteDomainPermissionsPolicyResponse(
  */
 const DeleteDomainPermissionsPolicyRequest * DeleteDomainPermissionsPolicyResponse::request() const
 {
-    return static_cast<const DeleteDomainPermissionsPolicyRequest *>(CodeArtifactResponse::request());
+    Q_D(const DeleteDomainPermissionsPolicyResponse);
+    return static_cast<const DeleteDomainPermissionsPolicyRequest *>(d->request);
 }
 
 /*!

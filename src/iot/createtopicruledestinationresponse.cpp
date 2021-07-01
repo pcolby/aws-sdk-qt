@@ -82,7 +82,8 @@ CreateTopicRuleDestinationResponse::CreateTopicRuleDestinationResponse(
  */
 const CreateTopicRuleDestinationRequest * CreateTopicRuleDestinationResponse::request() const
 {
-    return static_cast<const CreateTopicRuleDestinationRequest *>(IoTResponse::request());
+    Q_D(const CreateTopicRuleDestinationResponse);
+    return static_cast<const CreateTopicRuleDestinationRequest *>(d->request);
 }
 
 /*!

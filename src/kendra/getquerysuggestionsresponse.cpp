@@ -56,7 +56,8 @@ GetQuerySuggestionsResponse::GetQuerySuggestionsResponse(
  */
 const GetQuerySuggestionsRequest * GetQuerySuggestionsResponse::request() const
 {
-    return static_cast<const GetQuerySuggestionsRequest *>(kendraResponse::request());
+    Q_D(const GetQuerySuggestionsResponse);
+    return static_cast<const GetQuerySuggestionsRequest *>(d->request);
 }
 
 /*!

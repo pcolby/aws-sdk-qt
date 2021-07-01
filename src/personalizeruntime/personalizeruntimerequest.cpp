@@ -44,7 +44,7 @@ namespace PersonalizeRuntime {
  * Constructs a PersonalizeRuntimeRequest object for PersonalizeRuntime \a action.
  */
 PersonalizeRuntimeRequest::PersonalizeRuntimeRequest(const Action action)
-    : d_ptr(new PersonalizeRuntimeRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new PersonalizeRuntimeRequestPrivate(action, this))
 {
 
 }
@@ -53,8 +53,7 @@ PersonalizeRuntimeRequest::PersonalizeRuntimeRequest(const Action action)
  * Constructs a copy of \a other.
  */
 PersonalizeRuntimeRequest::PersonalizeRuntimeRequest(const PersonalizeRuntimeRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new PersonalizeRuntimeRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new PersonalizeRuntimeRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -77,7 +76,7 @@ PersonalizeRuntimeRequest& PersonalizeRuntimeRequest::operator=(const Personaliz
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PersonalizeRuntimeRequestPrivate.
  */
-PersonalizeRuntimeRequest::PersonalizeRuntimeRequest(PersonalizeRuntimeRequestPrivate * const d) : d_ptr(d)
+PersonalizeRuntimeRequest::PersonalizeRuntimeRequest(PersonalizeRuntimeRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -246,7 +245,7 @@ QNetworkRequest PersonalizeRuntimeRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 PersonalizeRuntimeRequestPrivate::PersonalizeRuntimeRequestPrivate(const PersonalizeRuntimeRequest::Action action, PersonalizeRuntimeRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -261,8 +260,8 @@ PersonalizeRuntimeRequestPrivate::PersonalizeRuntimeRequestPrivate(const Persona
  */
 PersonalizeRuntimeRequestPrivate::PersonalizeRuntimeRequestPrivate(const PersonalizeRuntimeRequestPrivate &other,
                                      PersonalizeRuntimeRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

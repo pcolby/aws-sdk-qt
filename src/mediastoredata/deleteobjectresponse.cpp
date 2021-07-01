@@ -57,7 +57,8 @@ DeleteObjectResponse::DeleteObjectResponse(
  */
 const DeleteObjectRequest * DeleteObjectResponse::request() const
 {
-    return static_cast<const DeleteObjectRequest *>(MediaStoreDataResponse::request());
+    Q_D(const DeleteObjectResponse);
+    return static_cast<const DeleteObjectRequest *>(d->request);
 }
 
 /*!

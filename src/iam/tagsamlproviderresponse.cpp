@@ -62,7 +62,8 @@ TagSAMLProviderResponse::TagSAMLProviderResponse(
  */
 const TagSAMLProviderRequest * TagSAMLProviderResponse::request() const
 {
-    return static_cast<const TagSAMLProviderRequest *>(IamResponse::request());
+    Q_D(const TagSAMLProviderResponse);
+    return static_cast<const TagSAMLProviderRequest *>(d->request);
 }
 
 /*!

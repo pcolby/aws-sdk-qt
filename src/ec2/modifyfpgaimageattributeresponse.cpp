@@ -87,7 +87,8 @@ ModifyFpgaImageAttributeResponse::ModifyFpgaImageAttributeResponse(
  */
 const ModifyFpgaImageAttributeRequest * ModifyFpgaImageAttributeResponse::request() const
 {
-    return static_cast<const ModifyFpgaImageAttributeRequest *>(Ec2Response::request());
+    Q_D(const ModifyFpgaImageAttributeResponse);
+    return static_cast<const ModifyFpgaImageAttributeRequest *>(d->request);
 }
 
 /*!

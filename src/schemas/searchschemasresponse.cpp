@@ -56,7 +56,8 @@ SearchSchemasResponse::SearchSchemasResponse(
  */
 const SearchSchemasRequest * SearchSchemasResponse::request() const
 {
-    return static_cast<const SearchSchemasRequest *>(SchemasResponse::request());
+    Q_D(const SearchSchemasResponse);
+    return static_cast<const SearchSchemasRequest *>(d->request);
 }
 
 /*!

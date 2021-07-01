@@ -64,8 +64,7 @@ public:
 
 protected:
     /// @cond internal
-    TextractRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit TextractRequest(TextractRequestPrivate * const d);
+    TextractRequest(TextractRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -61,7 +61,8 @@ UpdateVirtualInterfaceAttributesResponse::UpdateVirtualInterfaceAttributesRespon
  */
 const UpdateVirtualInterfaceAttributesRequest * UpdateVirtualInterfaceAttributesResponse::request() const
 {
-    return static_cast<const UpdateVirtualInterfaceAttributesRequest *>(DirectConnectResponse::request());
+    Q_D(const UpdateVirtualInterfaceAttributesResponse);
+    return static_cast<const UpdateVirtualInterfaceAttributesRequest *>(d->request);
 }
 
 /*!

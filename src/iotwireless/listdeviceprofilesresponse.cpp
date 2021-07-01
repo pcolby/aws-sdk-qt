@@ -56,7 +56,8 @@ ListDeviceProfilesResponse::ListDeviceProfilesResponse(
  */
 const ListDeviceProfilesRequest * ListDeviceProfilesResponse::request() const
 {
-    return static_cast<const ListDeviceProfilesRequest *>(IoTWirelessResponse::request());
+    Q_D(const ListDeviceProfilesResponse);
+    return static_cast<const ListDeviceProfilesRequest *>(d->request);
 }
 
 /*!

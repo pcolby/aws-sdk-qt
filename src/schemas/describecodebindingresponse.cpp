@@ -56,7 +56,8 @@ DescribeCodeBindingResponse::DescribeCodeBindingResponse(
  */
 const DescribeCodeBindingRequest * DescribeCodeBindingResponse::request() const
 {
-    return static_cast<const DescribeCodeBindingRequest *>(SchemasResponse::request());
+    Q_D(const DescribeCodeBindingResponse);
+    return static_cast<const DescribeCodeBindingRequest *>(d->request);
 }
 
 /*!

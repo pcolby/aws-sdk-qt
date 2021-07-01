@@ -72,7 +72,8 @@ DeregisterTaskDefinitionResponse::DeregisterTaskDefinitionResponse(
  */
 const DeregisterTaskDefinitionRequest * DeregisterTaskDefinitionResponse::request() const
 {
-    return static_cast<const DeregisterTaskDefinitionRequest *>(EcsResponse::request());
+    Q_D(const DeregisterTaskDefinitionResponse);
+    return static_cast<const DeregisterTaskDefinitionRequest *>(d->request);
 }
 
 /*!

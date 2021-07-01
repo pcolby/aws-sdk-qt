@@ -56,7 +56,8 @@ DeleteEmailChannelResponse::DeleteEmailChannelResponse(
  */
 const DeleteEmailChannelRequest * DeleteEmailChannelResponse::request() const
 {
-    return static_cast<const DeleteEmailChannelRequest *>(PinpointResponse::request());
+    Q_D(const DeleteEmailChannelResponse);
+    return static_cast<const DeleteEmailChannelRequest *>(d->request);
 }
 
 /*!

@@ -65,7 +65,8 @@ DeleteResponsePlanResponse::DeleteResponsePlanResponse(
  */
 const DeleteResponsePlanRequest * DeleteResponsePlanResponse::request() const
 {
-    return static_cast<const DeleteResponsePlanRequest *>(SSMIncidentsResponse::request());
+    Q_D(const DeleteResponsePlanResponse);
+    return static_cast<const DeleteResponsePlanRequest *>(d->request);
 }
 
 /*!

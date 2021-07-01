@@ -74,7 +74,8 @@ DescribeExportResponse::DescribeExportResponse(
  */
 const DescribeExportRequest * DescribeExportResponse::request() const
 {
-    return static_cast<const DescribeExportRequest *>(DynamoDBResponse::request());
+    Q_D(const DescribeExportResponse);
+    return static_cast<const DescribeExportRequest *>(d->request);
 }
 
 /*!

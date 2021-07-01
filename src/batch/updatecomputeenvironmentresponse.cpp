@@ -68,7 +68,8 @@ UpdateComputeEnvironmentResponse::UpdateComputeEnvironmentResponse(
  */
 const UpdateComputeEnvironmentRequest * UpdateComputeEnvironmentResponse::request() const
 {
-    return static_cast<const UpdateComputeEnvironmentRequest *>(BatchResponse::request());
+    Q_D(const UpdateComputeEnvironmentResponse);
+    return static_cast<const UpdateComputeEnvironmentRequest *>(d->request);
 }
 
 /*!

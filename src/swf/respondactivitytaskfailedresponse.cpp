@@ -71,7 +71,8 @@ RespondActivityTaskFailedResponse::RespondActivityTaskFailedResponse(
  */
 const RespondActivityTaskFailedRequest * RespondActivityTaskFailedResponse::request() const
 {
-    return static_cast<const RespondActivityTaskFailedRequest *>(SwfResponse::request());
+    Q_D(const RespondActivityTaskFailedResponse);
+    return static_cast<const RespondActivityTaskFailedRequest *>(d->request);
 }
 
 /*!

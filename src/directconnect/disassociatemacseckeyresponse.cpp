@@ -61,7 +61,8 @@ DisassociateMacSecKeyResponse::DisassociateMacSecKeyResponse(
  */
 const DisassociateMacSecKeyRequest * DisassociateMacSecKeyResponse::request() const
 {
-    return static_cast<const DisassociateMacSecKeyRequest *>(DirectConnectResponse::request());
+    Q_D(const DisassociateMacSecKeyResponse);
+    return static_cast<const DisassociateMacSecKeyRequest *>(d->request);
 }
 
 /*!

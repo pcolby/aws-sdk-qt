@@ -55,7 +55,8 @@ ListOriginEndpointsResponse::ListOriginEndpointsResponse(
  */
 const ListOriginEndpointsRequest * ListOriginEndpointsResponse::request() const
 {
-    return static_cast<const ListOriginEndpointsRequest *>(MediaPackageResponse::request());
+    Q_D(const ListOriginEndpointsResponse);
+    return static_cast<const ListOriginEndpointsRequest *>(d->request);
 }
 
 /*!

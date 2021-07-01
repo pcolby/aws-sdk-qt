@@ -56,7 +56,8 @@ ListBatchInferenceJobsResponse::ListBatchInferenceJobsResponse(
  */
 const ListBatchInferenceJobsRequest * ListBatchInferenceJobsResponse::request() const
 {
-    return static_cast<const ListBatchInferenceJobsRequest *>(PersonalizeResponse::request());
+    Q_D(const ListBatchInferenceJobsResponse);
+    return static_cast<const ListBatchInferenceJobsRequest *>(d->request);
 }
 
 /*!

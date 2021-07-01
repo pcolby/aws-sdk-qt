@@ -56,7 +56,8 @@ DisableDomainAutoRenewResponse::DisableDomainAutoRenewResponse(
  */
 const DisableDomainAutoRenewRequest * DisableDomainAutoRenewResponse::request() const
 {
-    return static_cast<const DisableDomainAutoRenewRequest *>(Route53DomainsResponse::request());
+    Q_D(const DisableDomainAutoRenewResponse);
+    return static_cast<const DisableDomainAutoRenewRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ UpdateWorkspaceBundleResponse::UpdateWorkspaceBundleResponse(
  */
 const UpdateWorkspaceBundleRequest * UpdateWorkspaceBundleResponse::request() const
 {
-    return static_cast<const UpdateWorkspaceBundleRequest *>(WorkSpacesResponse::request());
+    Q_D(const UpdateWorkspaceBundleResponse);
+    return static_cast<const UpdateWorkspaceBundleRequest *>(d->request);
 }
 
 /*!

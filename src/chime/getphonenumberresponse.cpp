@@ -98,7 +98,8 @@ GetPhoneNumberResponse::GetPhoneNumberResponse(
  */
 const GetPhoneNumberRequest * GetPhoneNumberResponse::request() const
 {
-    return static_cast<const GetPhoneNumberRequest *>(ChimeResponse::request());
+    Q_D(const GetPhoneNumberResponse);
+    return static_cast<const GetPhoneNumberRequest *>(d->request);
 }
 
 /*!

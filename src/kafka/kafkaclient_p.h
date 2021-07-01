@@ -20,20 +20,19 @@
 #ifndef QTAWS_KAFKACLIENT_P_H
 #define QTAWS_KAFKACLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Kafka {
 
 class KafkaClient;
 
-class KafkaClientPrivate {
+class KafkaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit KafkaClientPrivate(KafkaClient * const q);
-
-protected:
-    KafkaClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KafkaClient)

@@ -55,7 +55,8 @@ GrantFlowEntitlementsResponse::GrantFlowEntitlementsResponse(
  */
 const GrantFlowEntitlementsRequest * GrantFlowEntitlementsResponse::request() const
 {
-    return static_cast<const GrantFlowEntitlementsRequest *>(MediaConnectResponse::request());
+    Q_D(const GrantFlowEntitlementsResponse);
+    return static_cast<const GrantFlowEntitlementsRequest *>(d->request);
 }
 
 /*!

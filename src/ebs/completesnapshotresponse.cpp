@@ -77,7 +77,8 @@ CompleteSnapshotResponse::CompleteSnapshotResponse(
  */
 const CompleteSnapshotRequest * CompleteSnapshotResponse::request() const
 {
-    return static_cast<const CompleteSnapshotRequest *>(EbsResponse::request());
+    Q_D(const CompleteSnapshotResponse);
+    return static_cast<const CompleteSnapshotRequest *>(d->request);
 }
 
 /*!

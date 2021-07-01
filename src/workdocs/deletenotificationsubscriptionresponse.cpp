@@ -84,7 +84,8 @@ DeleteNotificationSubscriptionResponse::DeleteNotificationSubscriptionResponse(
  */
 const DeleteNotificationSubscriptionRequest * DeleteNotificationSubscriptionResponse::request() const
 {
-    return static_cast<const DeleteNotificationSubscriptionRequest *>(WorkDocsResponse::request());
+    Q_D(const DeleteNotificationSubscriptionResponse);
+    return static_cast<const DeleteNotificationSubscriptionRequest *>(d->request);
 }
 
 /*!

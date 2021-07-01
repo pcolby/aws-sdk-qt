@@ -66,7 +66,8 @@ ListFunctionEventInvokeConfigsResponse::ListFunctionEventInvokeConfigsResponse(
  */
 const ListFunctionEventInvokeConfigsRequest * ListFunctionEventInvokeConfigsResponse::request() const
 {
-    return static_cast<const ListFunctionEventInvokeConfigsRequest *>(LambdaResponse::request());
+    Q_D(const ListFunctionEventInvokeConfigsResponse);
+    return static_cast<const ListFunctionEventInvokeConfigsRequest *>(d->request);
 }
 
 /*!

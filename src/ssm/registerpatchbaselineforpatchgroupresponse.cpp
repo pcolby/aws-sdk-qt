@@ -98,7 +98,8 @@ RegisterPatchBaselineForPatchGroupResponse::RegisterPatchBaselineForPatchGroupRe
  */
 const RegisterPatchBaselineForPatchGroupRequest * RegisterPatchBaselineForPatchGroupResponse::request() const
 {
-    return static_cast<const RegisterPatchBaselineForPatchGroupRequest *>(SsmResponse::request());
+    Q_D(const RegisterPatchBaselineForPatchGroupResponse);
+    return static_cast<const RegisterPatchBaselineForPatchGroupRequest *>(d->request);
 }
 
 /*!

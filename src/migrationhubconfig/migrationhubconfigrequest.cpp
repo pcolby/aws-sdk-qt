@@ -45,7 +45,7 @@ namespace MigrationHubConfig {
  * Constructs a MigrationHubConfigRequest object for MigrationHubConfig \a action.
  */
 MigrationHubConfigRequest::MigrationHubConfigRequest(const Action action)
-    : d_ptr(new MigrationHubConfigRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MigrationHubConfigRequestPrivate(action, this))
 {
 
 }
@@ -54,8 +54,7 @@ MigrationHubConfigRequest::MigrationHubConfigRequest(const Action action)
  * Constructs a copy of \a other.
  */
 MigrationHubConfigRequest::MigrationHubConfigRequest(const MigrationHubConfigRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new MigrationHubConfigRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MigrationHubConfigRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +77,7 @@ MigrationHubConfigRequest& MigrationHubConfigRequest::operator=(const MigrationH
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MigrationHubConfigRequestPrivate.
  */
-MigrationHubConfigRequest::MigrationHubConfigRequest(MigrationHubConfigRequestPrivate * const d) : d_ptr(d)
+MigrationHubConfigRequest::MigrationHubConfigRequest(MigrationHubConfigRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -247,7 +246,7 @@ QNetworkRequest MigrationHubConfigRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 MigrationHubConfigRequestPrivate::MigrationHubConfigRequestPrivate(const MigrationHubConfigRequest::Action action, MigrationHubConfigRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -262,8 +261,8 @@ MigrationHubConfigRequestPrivate::MigrationHubConfigRequestPrivate(const Migrati
  */
 MigrationHubConfigRequestPrivate::MigrationHubConfigRequestPrivate(const MigrationHubConfigRequestPrivate &other,
                                      MigrationHubConfigRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -72,7 +72,8 @@ DeleteDBClusterEndpointResponse::DeleteDBClusterEndpointResponse(
  */
 const DeleteDBClusterEndpointRequest * DeleteDBClusterEndpointResponse::request() const
 {
-    return static_cast<const DeleteDBClusterEndpointRequest *>(NeptuneResponse::request());
+    Q_D(const DeleteDBClusterEndpointResponse);
+    return static_cast<const DeleteDBClusterEndpointRequest *>(d->request);
 }
 
 /*!

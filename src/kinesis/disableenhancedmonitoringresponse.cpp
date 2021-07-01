@@ -58,7 +58,8 @@ DisableEnhancedMonitoringResponse::DisableEnhancedMonitoringResponse(
  */
 const DisableEnhancedMonitoringRequest * DisableEnhancedMonitoringResponse::request() const
 {
-    return static_cast<const DisableEnhancedMonitoringRequest *>(KinesisResponse::request());
+    Q_D(const DisableEnhancedMonitoringResponse);
+    return static_cast<const DisableEnhancedMonitoringRequest *>(d->request);
 }
 
 /*!

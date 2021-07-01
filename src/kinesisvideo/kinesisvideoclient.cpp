@@ -97,16 +97,16 @@ KinesisVideoClient::KinesisVideoClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-09-30"),
-    QStringLiteral("kinesisvideo"),
-    QStringLiteral("Amazon Kinesis Video Streams"),
-    QStringLiteral("kinesisvideo"),
-    parent), d_ptr(new KinesisVideoClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new KinesisVideoClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(KinesisVideoClient);
+    d->apiVersion = QStringLiteral("2017-09-30");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("kinesisvideo");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Video Streams");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
 
 /*!
@@ -125,16 +125,16 @@ KinesisVideoClient::KinesisVideoClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-09-30"),
-    QStringLiteral("kinesisvideo"),
-    QStringLiteral("Amazon Kinesis Video Streams"),
-    QStringLiteral("kinesisvideo"),
-    parent), d_ptr(new KinesisVideoClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new KinesisVideoClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(KinesisVideoClient);
+    d->apiVersion = QStringLiteral("2017-09-30");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("kinesisvideo");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Kinesis Video Streams");
+    d->serviceName = QStringLiteral("kinesisvideo");
 }
 
 /*!
@@ -539,9 +539,10 @@ UpdateStreamResponse * KinesisVideoClient::updateStream(const UpdateStreamReques
 /*!
  * Constructs a KinesisVideoClientPrivate object with public implementation \a q.
  */
-KinesisVideoClientPrivate::KinesisVideoClientPrivate(KinesisVideoClient * const q) : q_ptr(q)
+KinesisVideoClientPrivate::KinesisVideoClientPrivate(KinesisVideoClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace KinesisVideo

@@ -75,7 +75,8 @@ GetDiscoveredResourceCountsResponse::GetDiscoveredResourceCountsResponse(
  */
 const GetDiscoveredResourceCountsRequest * GetDiscoveredResourceCountsResponse::request() const
 {
-    return static_cast<const GetDiscoveredResourceCountsRequest *>(ConfigServiceResponse::request());
+    Q_D(const GetDiscoveredResourceCountsResponse);
+    return static_cast<const GetDiscoveredResourceCountsRequest *>(d->request);
 }
 
 /*!

@@ -121,7 +121,8 @@ StartMonitoringMemberResponse::StartMonitoringMemberResponse(
  */
 const StartMonitoringMemberRequest * StartMonitoringMemberResponse::request() const
 {
-    return static_cast<const StartMonitoringMemberRequest *>(DetectiveResponse::request());
+    Q_D(const StartMonitoringMemberResponse);
+    return static_cast<const StartMonitoringMemberRequest *>(d->request);
 }
 
 /*!

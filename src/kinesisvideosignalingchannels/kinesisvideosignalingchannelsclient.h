@@ -54,12 +54,6 @@ public slots:
     GetIceServerConfigResponse * getIceServerConfig(const GetIceServerConfigRequest &request);
     SendAlexaOfferToMasterResponse * sendAlexaOfferToMaster(const SendAlexaOfferToMasterRequest &request);
 
-protected:
-    /// @cond internal
-    KinesisVideoSignalingChannelsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit KinesisVideoSignalingChannelsClient(KinesisVideoSignalingChannelsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(KinesisVideoSignalingChannelsClient)
     Q_DISABLE_COPY(KinesisVideoSignalingChannelsClient)

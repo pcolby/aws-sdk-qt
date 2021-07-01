@@ -55,7 +55,7 @@ namespace Health {
  * Constructs a HealthRequest object for Health \a action.
  */
 HealthRequest::HealthRequest(const Action action)
-    : d_ptr(new HealthRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new HealthRequestPrivate(action, this))
 {
 
 }
@@ -64,8 +64,7 @@ HealthRequest::HealthRequest(const Action action)
  * Constructs a copy of \a other.
  */
 HealthRequest::HealthRequest(const HealthRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new HealthRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new HealthRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -88,7 +87,7 @@ HealthRequest& HealthRequest::operator=(const HealthRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from HealthRequestPrivate.
  */
-HealthRequest::HealthRequest(HealthRequestPrivate * const d) : d_ptr(d)
+HealthRequest::HealthRequest(HealthRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -257,7 +256,7 @@ QNetworkRequest HealthRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 HealthRequestPrivate::HealthRequestPrivate(const HealthRequest::Action action, HealthRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -272,8 +271,8 @@ HealthRequestPrivate::HealthRequestPrivate(const HealthRequest::Action action, H
  */
 HealthRequestPrivate::HealthRequestPrivate(const HealthRequestPrivate &other,
                                      HealthRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

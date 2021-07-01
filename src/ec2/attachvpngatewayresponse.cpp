@@ -87,7 +87,8 @@ AttachVpnGatewayResponse::AttachVpnGatewayResponse(
  */
 const AttachVpnGatewayRequest * AttachVpnGatewayResponse::request() const
 {
-    return static_cast<const AttachVpnGatewayRequest *>(Ec2Response::request());
+    Q_D(const AttachVpnGatewayResponse);
+    return static_cast<const AttachVpnGatewayRequest *>(d->request);
 }
 
 /*!

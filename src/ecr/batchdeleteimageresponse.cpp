@@ -62,7 +62,8 @@ BatchDeleteImageResponse::BatchDeleteImageResponse(
  */
 const BatchDeleteImageRequest * BatchDeleteImageResponse::request() const
 {
-    return static_cast<const BatchDeleteImageRequest *>(EcrResponse::request());
+    Q_D(const BatchDeleteImageResponse);
+    return static_cast<const BatchDeleteImageRequest *>(d->request);
 }
 
 /*!

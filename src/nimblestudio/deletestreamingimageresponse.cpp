@@ -55,7 +55,8 @@ DeleteStreamingImageResponse::DeleteStreamingImageResponse(
  */
 const DeleteStreamingImageRequest * DeleteStreamingImageResponse::request() const
 {
-    return static_cast<const DeleteStreamingImageRequest *>(NimbleStudioResponse::request());
+    Q_D(const DeleteStreamingImageResponse);
+    return static_cast<const DeleteStreamingImageRequest *>(d->request);
 }
 
 /*!

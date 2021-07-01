@@ -83,7 +83,8 @@ CreateLoadBalancerListenersResponse::CreateLoadBalancerListenersResponse(
  */
 const CreateLoadBalancerListenersRequest * CreateLoadBalancerListenersResponse::request() const
 {
-    return static_cast<const CreateLoadBalancerListenersRequest *>(ElasticLoadBalancingResponse::request());
+    Q_D(const CreateLoadBalancerListenersResponse);
+    return static_cast<const CreateLoadBalancerListenersRequest *>(d->request);
 }
 
 /*!

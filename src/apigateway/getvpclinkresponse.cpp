@@ -60,7 +60,8 @@ GetVpcLinkResponse::GetVpcLinkResponse(
  */
 const GetVpcLinkRequest * GetVpcLinkResponse::request() const
 {
-    return static_cast<const GetVpcLinkRequest *>(APIGatewayResponse::request());
+    Q_D(const GetVpcLinkResponse);
+    return static_cast<const GetVpcLinkRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ DeleteResolverResponse::DeleteResolverResponse(
  */
 const DeleteResolverRequest * DeleteResolverResponse::request() const
 {
-    return static_cast<const DeleteResolverRequest *>(AppSyncResponse::request());
+    Q_D(const DeleteResolverResponse);
+    return static_cast<const DeleteResolverRequest *>(d->request);
 }
 
 /*!

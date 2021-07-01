@@ -75,7 +75,8 @@ GetDeviceResponse::GetDeviceResponse(
  */
 const GetDeviceRequest * GetDeviceResponse::request() const
 {
-    return static_cast<const GetDeviceRequest *>(DeviceFarmResponse::request());
+    Q_D(const GetDeviceResponse);
+    return static_cast<const GetDeviceRequest *>(d->request);
 }
 
 /*!

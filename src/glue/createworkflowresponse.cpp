@@ -58,7 +58,8 @@ CreateWorkflowResponse::CreateWorkflowResponse(
  */
 const CreateWorkflowRequest * CreateWorkflowResponse::request() const
 {
-    return static_cast<const CreateWorkflowRequest *>(GlueResponse::request());
+    Q_D(const CreateWorkflowResponse);
+    return static_cast<const CreateWorkflowRequest *>(d->request);
 }
 
 /*!

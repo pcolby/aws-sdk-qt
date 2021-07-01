@@ -79,7 +79,8 @@ ListContactFlowsResponse::ListContactFlowsResponse(
  */
 const ListContactFlowsRequest * ListContactFlowsResponse::request() const
 {
-    return static_cast<const ListContactFlowsRequest *>(ConnectResponse::request());
+    Q_D(const ListContactFlowsResponse);
+    return static_cast<const ListContactFlowsRequest *>(d->request);
 }
 
 /*!

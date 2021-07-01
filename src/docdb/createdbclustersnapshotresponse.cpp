@@ -56,7 +56,8 @@ CreateDBClusterSnapshotResponse::CreateDBClusterSnapshotResponse(
  */
 const CreateDBClusterSnapshotRequest * CreateDBClusterSnapshotResponse::request() const
 {
-    return static_cast<const CreateDBClusterSnapshotRequest *>(DocDBResponse::request());
+    Q_D(const CreateDBClusterSnapshotResponse);
+    return static_cast<const CreateDBClusterSnapshotRequest *>(d->request);
 }
 
 /*!

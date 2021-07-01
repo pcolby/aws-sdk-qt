@@ -57,7 +57,8 @@ DescribeInferenceSchedulerResponse::DescribeInferenceSchedulerResponse(
  */
 const DescribeInferenceSchedulerRequest * DescribeInferenceSchedulerResponse::request() const
 {
-    return static_cast<const DescribeInferenceSchedulerRequest *>(LookoutEquipmentResponse::request());
+    Q_D(const DescribeInferenceSchedulerResponse);
+    return static_cast<const DescribeInferenceSchedulerRequest *>(d->request);
 }
 
 /*!

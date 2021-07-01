@@ -87,7 +87,8 @@ DescribeSpotPriceHistoryResponse::DescribeSpotPriceHistoryResponse(
  */
 const DescribeSpotPriceHistoryRequest * DescribeSpotPriceHistoryResponse::request() const
 {
-    return static_cast<const DescribeSpotPriceHistoryRequest *>(Ec2Response::request());
+    Q_D(const DescribeSpotPriceHistoryResponse);
+    return static_cast<const DescribeSpotPriceHistoryRequest *>(d->request);
 }
 
 /*!

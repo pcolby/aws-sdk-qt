@@ -124,7 +124,8 @@ AddCacheResponse::AddCacheResponse(
  */
 const AddCacheRequest * AddCacheResponse::request() const
 {
-    return static_cast<const AddCacheRequest *>(StorageGatewayResponse::request());
+    Q_D(const AddCacheResponse);
+    return static_cast<const AddCacheRequest *>(d->request);
 }
 
 /*!

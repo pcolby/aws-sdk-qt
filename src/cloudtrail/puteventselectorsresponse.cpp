@@ -78,7 +78,8 @@ PutEventSelectorsResponse::PutEventSelectorsResponse(
  */
 const PutEventSelectorsRequest * PutEventSelectorsResponse::request() const
 {
-    return static_cast<const PutEventSelectorsRequest *>(CloudTrailResponse::request());
+    Q_D(const PutEventSelectorsResponse);
+    return static_cast<const PutEventSelectorsRequest *>(d->request);
 }
 
 /*!

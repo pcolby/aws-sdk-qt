@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    SnsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SnsResponse(SnsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

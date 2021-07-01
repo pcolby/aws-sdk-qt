@@ -72,7 +72,8 @@ RebootDBInstanceResponse::RebootDBInstanceResponse(
  */
 const RebootDBInstanceRequest * RebootDBInstanceResponse::request() const
 {
-    return static_cast<const RebootDBInstanceRequest *>(NeptuneResponse::request());
+    Q_D(const RebootDBInstanceResponse);
+    return static_cast<const RebootDBInstanceRequest *>(d->request);
 }
 
 /*!

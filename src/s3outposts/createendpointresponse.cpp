@@ -56,7 +56,8 @@ CreateEndpointResponse::CreateEndpointResponse(
  */
 const CreateEndpointRequest * CreateEndpointResponse::request() const
 {
-    return static_cast<const CreateEndpointRequest *>(S3OutpostsResponse::request());
+    Q_D(const CreateEndpointResponse);
+    return static_cast<const CreateEndpointRequest *>(d->request);
 }
 
 /*!

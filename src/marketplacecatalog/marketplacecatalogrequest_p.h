@@ -20,12 +20,15 @@
 #ifndef QTAWS_MARKETPLACECATALOGREQUEST_P_H
 #define QTAWS_MARKETPLACECATALOGREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "marketplacecatalogrequest.h"
+
 namespace QtAws {
 namespace MarketplaceCatalog {
 
 class MarketplaceCatalogRequest;
 
-class MarketplaceCatalogRequestPrivate {
+class MarketplaceCatalogRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MarketplaceCatalogRequest::Action action; ///< MarketplaceCatalog action to be performed.
@@ -36,9 +39,6 @@ public:
     MarketplaceCatalogRequestPrivate(const MarketplaceCatalogRequestPrivate &other, MarketplaceCatalogRequest * const q);
 
     static QString toString(const MarketplaceCatalogRequest::Action &action);
-
-protected:
-    MarketplaceCatalogRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MarketplaceCatalogRequest)

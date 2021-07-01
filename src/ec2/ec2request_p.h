@@ -20,12 +20,15 @@
 #ifndef QTAWS_EC2REQUEST_P_H
 #define QTAWS_EC2REQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "ec2request.h"
+
 namespace QtAws {
 namespace EC2 {
 
 class Ec2Request;
 
-class Ec2RequestPrivate {
+class Ec2RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     Ec2Request::Action action; ///< EC2 action to be performed.
@@ -36,9 +39,6 @@ public:
     Ec2RequestPrivate(const Ec2RequestPrivate &other, Ec2Request * const q);
 
     static QString toString(const Ec2Request::Action &action);
-
-protected:
-    Ec2Request * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Ec2Request)

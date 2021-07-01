@@ -60,7 +60,8 @@ ListTemplatesResponse::ListTemplatesResponse(
  */
 const ListTemplatesRequest * ListTemplatesResponse::request() const
 {
-    return static_cast<const ListTemplatesRequest *>(QuickSightResponse::request());
+    Q_D(const ListTemplatesResponse);
+    return static_cast<const ListTemplatesRequest *>(d->request);
 }
 
 /*!

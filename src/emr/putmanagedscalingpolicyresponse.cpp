@@ -58,7 +58,8 @@ PutManagedScalingPolicyResponse::PutManagedScalingPolicyResponse(
  */
 const PutManagedScalingPolicyRequest * PutManagedScalingPolicyResponse::request() const
 {
-    return static_cast<const PutManagedScalingPolicyRequest *>(EmrResponse::request());
+    Q_D(const PutManagedScalingPolicyResponse);
+    return static_cast<const PutManagedScalingPolicyRequest *>(d->request);
 }
 
 /*!

@@ -63,7 +63,8 @@ DetachObjectResponse::DetachObjectResponse(
  */
 const DetachObjectRequest * DetachObjectResponse::request() const
 {
-    return static_cast<const DetachObjectRequest *>(CloudDirectoryResponse::request());
+    Q_D(const DetachObjectResponse);
+    return static_cast<const DetachObjectRequest *>(d->request);
 }
 
 /*!

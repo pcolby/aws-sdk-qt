@@ -75,7 +75,8 @@ ListRunsResponse::ListRunsResponse(
  */
 const ListRunsRequest * ListRunsResponse::request() const
 {
-    return static_cast<const ListRunsRequest *>(DeviceFarmResponse::request());
+    Q_D(const ListRunsResponse);
+    return static_cast<const ListRunsRequest *>(d->request);
 }
 
 /*!

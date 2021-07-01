@@ -67,7 +67,8 @@ ListArchiveRulesResponse::ListArchiveRulesResponse(
  */
 const ListArchiveRulesRequest * ListArchiveRulesResponse::request() const
 {
-    return static_cast<const ListArchiveRulesRequest *>(AccessAnalyzerResponse::request());
+    Q_D(const ListArchiveRulesResponse);
+    return static_cast<const ListArchiveRulesRequest *>(d->request);
 }
 
 /*!

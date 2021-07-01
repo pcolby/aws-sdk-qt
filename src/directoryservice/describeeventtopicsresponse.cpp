@@ -69,7 +69,8 @@ DescribeEventTopicsResponse::DescribeEventTopicsResponse(
  */
 const DescribeEventTopicsRequest * DescribeEventTopicsResponse::request() const
 {
-    return static_cast<const DescribeEventTopicsRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DescribeEventTopicsResponse);
+    return static_cast<const DescribeEventTopicsRequest *>(d->request);
 }
 
 /*!

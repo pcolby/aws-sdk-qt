@@ -87,7 +87,8 @@ CreateVpnConnectionRouteResponse::CreateVpnConnectionRouteResponse(
  */
 const CreateVpnConnectionRouteRequest * CreateVpnConnectionRouteResponse::request() const
 {
-    return static_cast<const CreateVpnConnectionRouteRequest *>(Ec2Response::request());
+    Q_D(const CreateVpnConnectionRouteResponse);
+    return static_cast<const CreateVpnConnectionRouteRequest *>(d->request);
 }
 
 /*!

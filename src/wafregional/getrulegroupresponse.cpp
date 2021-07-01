@@ -78,7 +78,8 @@ GetRuleGroupResponse::GetRuleGroupResponse(
  */
 const GetRuleGroupRequest * GetRuleGroupResponse::request() const
 {
-    return static_cast<const GetRuleGroupRequest *>(WAFRegionalResponse::request());
+    Q_D(const GetRuleGroupResponse);
+    return static_cast<const GetRuleGroupRequest *>(d->request);
 }
 
 /*!

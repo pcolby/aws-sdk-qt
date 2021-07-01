@@ -55,7 +55,8 @@ CreateJobTemplateResponse::CreateJobTemplateResponse(
  */
 const CreateJobTemplateRequest * CreateJobTemplateResponse::request() const
 {
-    return static_cast<const CreateJobTemplateRequest *>(MediaConvertResponse::request());
+    Q_D(const CreateJobTemplateResponse);
+    return static_cast<const CreateJobTemplateRequest *>(d->request);
 }
 
 /*!

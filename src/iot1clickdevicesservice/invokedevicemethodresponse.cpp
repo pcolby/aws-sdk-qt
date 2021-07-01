@@ -57,7 +57,8 @@ InvokeDeviceMethodResponse::InvokeDeviceMethodResponse(
  */
 const InvokeDeviceMethodRequest * InvokeDeviceMethodResponse::request() const
 {
-    return static_cast<const InvokeDeviceMethodRequest *>(IoT1ClickDevicesServiceResponse::request());
+    Q_D(const InvokeDeviceMethodResponse);
+    return static_cast<const InvokeDeviceMethodRequest *>(d->request);
 }
 
 /*!

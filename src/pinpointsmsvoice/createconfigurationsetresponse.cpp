@@ -55,7 +55,8 @@ CreateConfigurationSetResponse::CreateConfigurationSetResponse(
  */
 const CreateConfigurationSetRequest * CreateConfigurationSetResponse::request() const
 {
-    return static_cast<const CreateConfigurationSetRequest *>(PinpointSMSVoiceResponse::request());
+    Q_D(const CreateConfigurationSetResponse);
+    return static_cast<const CreateConfigurationSetRequest *>(d->request);
 }
 
 /*!

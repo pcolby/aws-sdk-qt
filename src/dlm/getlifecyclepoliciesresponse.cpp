@@ -65,7 +65,8 @@ GetLifecyclePoliciesResponse::GetLifecyclePoliciesResponse(
  */
 const GetLifecyclePoliciesRequest * GetLifecyclePoliciesResponse::request() const
 {
-    return static_cast<const GetLifecyclePoliciesRequest *>(DlmResponse::request());
+    Q_D(const GetLifecyclePoliciesResponse);
+    return static_cast<const GetLifecyclePoliciesRequest *>(d->request);
 }
 
 /*!

@@ -67,7 +67,8 @@ DeleteReportDefinitionResponse::DeleteReportDefinitionResponse(
  */
 const DeleteReportDefinitionRequest * DeleteReportDefinitionResponse::request() const
 {
-    return static_cast<const DeleteReportDefinitionRequest *>(ApplicationCostProfilerResponse::request());
+    Q_D(const DeleteReportDefinitionResponse);
+    return static_cast<const DeleteReportDefinitionRequest *>(d->request);
 }
 
 /*!

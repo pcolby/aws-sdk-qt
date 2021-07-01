@@ -87,7 +87,8 @@ DeleteNetworkInsightsAnalysisResponse::DeleteNetworkInsightsAnalysisResponse(
  */
 const DeleteNetworkInsightsAnalysisRequest * DeleteNetworkInsightsAnalysisResponse::request() const
 {
-    return static_cast<const DeleteNetworkInsightsAnalysisRequest *>(Ec2Response::request());
+    Q_D(const DeleteNetworkInsightsAnalysisResponse);
+    return static_cast<const DeleteNetworkInsightsAnalysisRequest *>(d->request);
 }
 
 /*!

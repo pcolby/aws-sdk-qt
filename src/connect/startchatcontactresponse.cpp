@@ -79,7 +79,8 @@ StartChatContactResponse::StartChatContactResponse(
  */
 const StartChatContactRequest * StartChatContactResponse::request() const
 {
-    return static_cast<const StartChatContactRequest *>(ConnectResponse::request());
+    Q_D(const StartChatContactResponse);
+    return static_cast<const StartChatContactRequest *>(d->request);
 }
 
 /*!

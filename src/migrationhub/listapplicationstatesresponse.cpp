@@ -62,7 +62,8 @@ ListApplicationStatesResponse::ListApplicationStatesResponse(
  */
 const ListApplicationStatesRequest * ListApplicationStatesResponse::request() const
 {
-    return static_cast<const ListApplicationStatesRequest *>(MigrationHubResponse::request());
+    Q_D(const ListApplicationStatesResponse);
+    return static_cast<const ListApplicationStatesRequest *>(d->request);
 }
 
 /*!

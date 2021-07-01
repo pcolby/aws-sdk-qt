@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    ElasticBeanstalkResponsePrivate * const d_ptr; ///< Internal d-pointer.
     ElasticBeanstalkResponse(ElasticBeanstalkResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -62,7 +62,8 @@ DescribeApplicationStateResponse::DescribeApplicationStateResponse(
  */
 const DescribeApplicationStateRequest * DescribeApplicationStateResponse::request() const
 {
-    return static_cast<const DescribeApplicationStateRequest *>(MigrationHubResponse::request());
+    Q_D(const DescribeApplicationStateResponse);
+    return static_cast<const DescribeApplicationStateRequest *>(d->request);
 }
 
 /*!

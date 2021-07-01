@@ -63,7 +63,8 @@ StartChangeSetResponse::StartChangeSetResponse(
  */
 const StartChangeSetRequest * StartChangeSetResponse::request() const
 {
-    return static_cast<const StartChangeSetRequest *>(MarketplaceCatalogResponse::request());
+    Q_D(const StartChangeSetResponse);
+    return static_cast<const StartChangeSetRequest *>(d->request);
 }
 
 /*!

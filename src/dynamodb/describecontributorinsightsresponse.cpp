@@ -74,7 +74,8 @@ DescribeContributorInsightsResponse::DescribeContributorInsightsResponse(
  */
 const DescribeContributorInsightsRequest * DescribeContributorInsightsResponse::request() const
 {
-    return static_cast<const DescribeContributorInsightsRequest *>(DynamoDBResponse::request());
+    Q_D(const DescribeContributorInsightsResponse);
+    return static_cast<const DescribeContributorInsightsRequest *>(d->request);
 }
 
 /*!

@@ -154,7 +154,8 @@ ReEncryptResponse::ReEncryptResponse(
  */
 const ReEncryptRequest * ReEncryptResponse::request() const
 {
-    return static_cast<const ReEncryptRequest *>(KmsResponse::request());
+    Q_D(const ReEncryptResponse);
+    return static_cast<const ReEncryptRequest *>(d->request);
 }
 
 /*!

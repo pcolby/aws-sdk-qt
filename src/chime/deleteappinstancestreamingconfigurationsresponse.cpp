@@ -98,7 +98,8 @@ DeleteAppInstanceStreamingConfigurationsResponse::DeleteAppInstanceStreamingConf
  */
 const DeleteAppInstanceStreamingConfigurationsRequest * DeleteAppInstanceStreamingConfigurationsResponse::request() const
 {
-    return static_cast<const DeleteAppInstanceStreamingConfigurationsRequest *>(ChimeResponse::request());
+    Q_D(const DeleteAppInstanceStreamingConfigurationsResponse);
+    return static_cast<const DeleteAppInstanceStreamingConfigurationsRequest *>(d->request);
 }
 
 /*!

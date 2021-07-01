@@ -20,12 +20,14 @@
 #ifndef QTAWS_IOTSECURETUNNELINGRESPONSE_P_H
 #define QTAWS_IOTSECURETUNNELINGRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace IoTSecureTunneling {
 
 class IoTSecureTunnelingResponse;
 
-class IoTSecureTunnelingResponsePrivate {
+class IoTSecureTunnelingResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    IoTSecureTunnelingResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTSecureTunnelingResponse)

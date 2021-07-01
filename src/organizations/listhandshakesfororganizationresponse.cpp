@@ -141,7 +141,8 @@ ListHandshakesForOrganizationResponse::ListHandshakesForOrganizationResponse(
  */
 const ListHandshakesForOrganizationRequest * ListHandshakesForOrganizationResponse::request() const
 {
-    return static_cast<const ListHandshakesForOrganizationRequest *>(OrganizationsResponse::request());
+    Q_D(const ListHandshakesForOrganizationResponse);
+    return static_cast<const ListHandshakesForOrganizationRequest *>(d->request);
 }
 
 /*!

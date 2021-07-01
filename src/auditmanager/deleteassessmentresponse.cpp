@@ -98,7 +98,8 @@ DeleteAssessmentResponse::DeleteAssessmentResponse(
  */
 const DeleteAssessmentRequest * DeleteAssessmentResponse::request() const
 {
-    return static_cast<const DeleteAssessmentRequest *>(AuditManagerResponse::request());
+    Q_D(const DeleteAssessmentResponse);
+    return static_cast<const DeleteAssessmentRequest *>(d->request);
 }
 
 /*!

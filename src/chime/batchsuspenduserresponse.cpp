@@ -98,7 +98,8 @@ BatchSuspendUserResponse::BatchSuspendUserResponse(
  */
 const BatchSuspendUserRequest * BatchSuspendUserResponse::request() const
 {
-    return static_cast<const BatchSuspendUserRequest *>(ChimeResponse::request());
+    Q_D(const BatchSuspendUserResponse);
+    return static_cast<const BatchSuspendUserRequest *>(d->request);
 }
 
 /*!

@@ -83,8 +83,7 @@ public:
 
 protected:
     /// @cond internal
-    mgnRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit mgnRequest(mgnRequestPrivate * const d);
+    mgnRequest(mgnRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

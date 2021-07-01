@@ -75,7 +75,8 @@ CreatePipelineResponse::CreatePipelineResponse(
  */
 const CreatePipelineRequest * CreatePipelineResponse::request() const
 {
-    return static_cast<const CreatePipelineRequest *>(IoTAnalyticsResponse::request());
+    Q_D(const CreatePipelineResponse);
+    return static_cast<const CreatePipelineRequest *>(d->request);
 }
 
 /*!

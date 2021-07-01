@@ -56,7 +56,8 @@ GetGeoLocationResponse::GetGeoLocationResponse(
  */
 const GetGeoLocationRequest * GetGeoLocationResponse::request() const
 {
-    return static_cast<const GetGeoLocationRequest *>(Route53Response::request());
+    Q_D(const GetGeoLocationResponse);
+    return static_cast<const GetGeoLocationRequest *>(d->request);
 }
 
 /*!

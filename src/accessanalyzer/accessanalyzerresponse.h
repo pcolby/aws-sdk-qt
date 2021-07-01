@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    AccessAnalyzerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AccessAnalyzerResponse(AccessAnalyzerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

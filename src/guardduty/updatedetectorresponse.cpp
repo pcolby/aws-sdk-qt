@@ -73,7 +73,8 @@ UpdateDetectorResponse::UpdateDetectorResponse(
  */
 const UpdateDetectorRequest * UpdateDetectorResponse::request() const
 {
-    return static_cast<const UpdateDetectorRequest *>(GuardDutyResponse::request());
+    Q_D(const UpdateDetectorResponse);
+    return static_cast<const UpdateDetectorRequest *>(d->request);
 }
 
 /*!

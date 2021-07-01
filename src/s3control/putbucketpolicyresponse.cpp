@@ -56,7 +56,8 @@ PutBucketPolicyResponse::PutBucketPolicyResponse(
  */
 const PutBucketPolicyRequest * PutBucketPolicyResponse::request() const
 {
-    return static_cast<const PutBucketPolicyRequest *>(S3ControlResponse::request());
+    Q_D(const PutBucketPolicyResponse);
+    return static_cast<const PutBucketPolicyRequest *>(d->request);
 }
 
 /*!

@@ -90,12 +90,6 @@ public slots:
     TranslateTextResponse * translateText(const TranslateTextRequest &request);
     UpdateParallelDataResponse * updateParallelData(const UpdateParallelDataRequest &request);
 
-protected:
-    /// @cond internal
-    TranslateClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit TranslateClient(TranslateClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(TranslateClient)
     Q_DISABLE_COPY(TranslateClient)

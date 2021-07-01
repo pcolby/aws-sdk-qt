@@ -82,7 +82,8 @@ ListScheduledAuditsResponse::ListScheduledAuditsResponse(
  */
 const ListScheduledAuditsRequest * ListScheduledAuditsResponse::request() const
 {
-    return static_cast<const ListScheduledAuditsRequest *>(IoTResponse::request());
+    Q_D(const ListScheduledAuditsResponse);
+    return static_cast<const ListScheduledAuditsRequest *>(d->request);
 }
 
 /*!

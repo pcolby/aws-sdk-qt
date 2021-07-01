@@ -81,12 +81,6 @@ public slots:
     ListAlarmsResponse * listAlarms(const ListAlarmsRequest &request);
     ListDetectorsResponse * listDetectors(const ListDetectorsRequest &request);
 
-protected:
-    /// @cond internal
-    IoTEventsDataClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IoTEventsDataClient(IoTEventsDataClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(IoTEventsDataClient)
     Q_DISABLE_COPY(IoTEventsDataClient)

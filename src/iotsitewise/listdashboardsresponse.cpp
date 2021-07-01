@@ -61,7 +61,8 @@ ListDashboardsResponse::ListDashboardsResponse(
  */
 const ListDashboardsRequest * ListDashboardsResponse::request() const
 {
-    return static_cast<const ListDashboardsRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const ListDashboardsResponse);
+    return static_cast<const ListDashboardsRequest *>(d->request);
 }
 
 /*!

@@ -112,7 +112,8 @@ RegisterUsageResponse::RegisterUsageResponse(
  */
 const RegisterUsageRequest * RegisterUsageResponse::request() const
 {
-    return static_cast<const RegisterUsageRequest *>(MarketplaceMeteringResponse::request());
+    Q_D(const RegisterUsageResponse);
+    return static_cast<const RegisterUsageRequest *>(d->request);
 }
 
 /*!

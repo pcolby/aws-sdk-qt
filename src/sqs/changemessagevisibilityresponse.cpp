@@ -126,7 +126,8 @@ ChangeMessageVisibilityResponse::ChangeMessageVisibilityResponse(
  */
 const ChangeMessageVisibilityRequest * ChangeMessageVisibilityResponse::request() const
 {
-    return static_cast<const ChangeMessageVisibilityRequest *>(SqsResponse::request());
+    Q_D(const ChangeMessageVisibilityResponse);
+    return static_cast<const ChangeMessageVisibilityRequest *>(d->request);
 }
 
 /*!

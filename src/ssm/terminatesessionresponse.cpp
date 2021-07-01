@@ -98,7 +98,8 @@ TerminateSessionResponse::TerminateSessionResponse(
  */
 const TerminateSessionRequest * TerminateSessionResponse::request() const
 {
-    return static_cast<const TerminateSessionRequest *>(SsmResponse::request());
+    Q_D(const TerminateSessionResponse);
+    return static_cast<const TerminateSessionRequest *>(d->request);
 }
 
 /*!

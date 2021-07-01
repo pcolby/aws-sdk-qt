@@ -74,7 +74,8 @@ GetAlarmsResponse::GetAlarmsResponse(
  */
 const GetAlarmsRequest * GetAlarmsResponse::request() const
 {
-    return static_cast<const GetAlarmsRequest *>(LightsailResponse::request());
+    Q_D(const GetAlarmsResponse);
+    return static_cast<const GetAlarmsRequest *>(d->request);
 }
 
 /*!

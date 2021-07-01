@@ -74,7 +74,8 @@ GetRelationalDatabaseLogStreamsResponse::GetRelationalDatabaseLogStreamsResponse
  */
 const GetRelationalDatabaseLogStreamsRequest * GetRelationalDatabaseLogStreamsResponse::request() const
 {
-    return static_cast<const GetRelationalDatabaseLogStreamsRequest *>(LightsailResponse::request());
+    Q_D(const GetRelationalDatabaseLogStreamsResponse);
+    return static_cast<const GetRelationalDatabaseLogStreamsRequest *>(d->request);
 }
 
 /*!

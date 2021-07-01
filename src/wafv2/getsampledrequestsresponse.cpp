@@ -126,7 +126,8 @@ GetSampledRequestsResponse::GetSampledRequestsResponse(
  */
 const GetSampledRequestsRequest * GetSampledRequestsResponse::request() const
 {
-    return static_cast<const GetSampledRequestsRequest *>(Wafv2Response::request());
+    Q_D(const GetSampledRequestsResponse);
+    return static_cast<const GetSampledRequestsRequest *>(d->request);
 }
 
 /*!

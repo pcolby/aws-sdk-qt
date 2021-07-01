@@ -58,7 +58,8 @@ CreateConnectorDefinitionResponse::CreateConnectorDefinitionResponse(
  */
 const CreateConnectorDefinitionRequest * CreateConnectorDefinitionResponse::request() const
 {
-    return static_cast<const CreateConnectorDefinitionRequest *>(GreengrassResponse::request());
+    Q_D(const CreateConnectorDefinitionResponse);
+    return static_cast<const CreateConnectorDefinitionRequest *>(d->request);
 }
 
 /*!

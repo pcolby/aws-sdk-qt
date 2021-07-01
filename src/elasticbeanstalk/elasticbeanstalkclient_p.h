@@ -20,20 +20,19 @@
 #ifndef QTAWS_ELASTICBEANSTALKCLIENT_P_H
 #define QTAWS_ELASTICBEANSTALKCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ElasticBeanstalk {
 
 class ElasticBeanstalkClient;
 
-class ElasticBeanstalkClientPrivate {
+class ElasticBeanstalkClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ElasticBeanstalkClientPrivate(ElasticBeanstalkClient * const q);
-
-protected:
-    ElasticBeanstalkClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticBeanstalkClient)

@@ -138,16 +138,16 @@ AmplifyClient::AmplifyClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("amplify"),
-    QStringLiteral("AWS Amplify"),
-    QStringLiteral("amplify"),
-    parent), d_ptr(new AmplifyClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AmplifyClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AmplifyClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("amplify");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Amplify");
+    d->serviceName = QStringLiteral("amplify");
 }
 
 /*!
@@ -166,16 +166,16 @@ AmplifyClient::AmplifyClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("amplify"),
-    QStringLiteral("AWS Amplify"),
-    QStringLiteral("amplify"),
-    parent), d_ptr(new AmplifyClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AmplifyClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AmplifyClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("amplify");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Amplify");
+    d->serviceName = QStringLiteral("amplify");
 }
 
 /*!
@@ -671,9 +671,10 @@ UpdateWebhookResponse * AmplifyClient::updateWebhook(const UpdateWebhookRequest 
 /*!
  * Constructs a AmplifyClientPrivate object with public implementation \a q.
  */
-AmplifyClientPrivate::AmplifyClientPrivate(AmplifyClient * const q) : q_ptr(q)
+AmplifyClientPrivate::AmplifyClientPrivate(AmplifyClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Amplify

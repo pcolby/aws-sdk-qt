@@ -161,7 +161,8 @@ DescribeLoadBasedAutoScalingResponse::DescribeLoadBasedAutoScalingResponse(
  */
 const DescribeLoadBasedAutoScalingRequest * DescribeLoadBasedAutoScalingResponse::request() const
 {
-    return static_cast<const DescribeLoadBasedAutoScalingRequest *>(OpsWorksResponse::request());
+    Q_D(const DescribeLoadBasedAutoScalingResponse);
+    return static_cast<const DescribeLoadBasedAutoScalingRequest *>(d->request);
 }
 
 /*!

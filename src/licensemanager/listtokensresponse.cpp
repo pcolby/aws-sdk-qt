@@ -59,7 +59,8 @@ ListTokensResponse::ListTokensResponse(
  */
 const ListTokensRequest * ListTokensResponse::request() const
 {
-    return static_cast<const ListTokensRequest *>(LicenseManagerResponse::request());
+    Q_D(const ListTokensResponse);
+    return static_cast<const ListTokensRequest *>(d->request);
 }
 
 /*!

@@ -81,16 +81,16 @@ IoTFleetHubClient::IoTFleetHubClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-11-03"),
-    QStringLiteral("api.fleethub.iot"),
-    QStringLiteral("AWS IoT Fleet Hub"),
-    QStringLiteral("iotfleethub"),
-    parent), d_ptr(new IoTFleetHubClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoTFleetHubClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoTFleetHubClient);
+    d->apiVersion = QStringLiteral("2020-11-03");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("api.fleethub.iot");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS IoT Fleet Hub");
+    d->serviceName = QStringLiteral("iotfleethub");
 }
 
 /*!
@@ -109,16 +109,16 @@ IoTFleetHubClient::IoTFleetHubClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-11-03"),
-    QStringLiteral("api.fleethub.iot"),
-    QStringLiteral("AWS IoT Fleet Hub"),
-    QStringLiteral("iotfleethub"),
-    parent), d_ptr(new IoTFleetHubClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoTFleetHubClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoTFleetHubClient);
+    d->apiVersion = QStringLiteral("2020-11-03");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("api.fleethub.iot");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS IoT Fleet Hub");
+    d->serviceName = QStringLiteral("iotfleethub");
 }
 
 /*!
@@ -269,9 +269,10 @@ UpdateApplicationResponse * IoTFleetHubClient::updateApplication(const UpdateApp
 /*!
  * Constructs a IoTFleetHubClientPrivate object with public implementation \a q.
  */
-IoTFleetHubClientPrivate::IoTFleetHubClientPrivate(IoTFleetHubClient * const q) : q_ptr(q)
+IoTFleetHubClientPrivate::IoTFleetHubClientPrivate(IoTFleetHubClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IoTFleetHub

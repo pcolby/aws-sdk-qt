@@ -62,7 +62,8 @@ ResetServiceSpecificCredentialResponse::ResetServiceSpecificCredentialResponse(
  */
 const ResetServiceSpecificCredentialRequest * ResetServiceSpecificCredentialResponse::request() const
 {
-    return static_cast<const ResetServiceSpecificCredentialRequest *>(IamResponse::request());
+    Q_D(const ResetServiceSpecificCredentialResponse);
+    return static_cast<const ResetServiceSpecificCredentialRequest *>(d->request);
 }
 
 /*!

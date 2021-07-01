@@ -98,7 +98,8 @@ CreateActivationResponse::CreateActivationResponse(
  */
 const CreateActivationRequest * CreateActivationResponse::request() const
 {
-    return static_cast<const CreateActivationRequest *>(SsmResponse::request());
+    Q_D(const CreateActivationResponse);
+    return static_cast<const CreateActivationRequest *>(d->request);
 }
 
 /*!

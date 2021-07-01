@@ -78,16 +78,16 @@ CloudSearchDomainClient::CloudSearchDomainClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2013-01-01"),
-    QStringLiteral("cloudsearchdomain"),
-    QStringLiteral("Amazon CloudSearch Domain"),
-    QStringLiteral("cloudsearch"),
-    parent), d_ptr(new CloudSearchDomainClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudSearchDomainClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudSearchDomainClient);
+    d->apiVersion = QStringLiteral("2013-01-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudsearchdomain");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudSearch Domain");
+    d->serviceName = QStringLiteral("cloudsearch");
 }
 
 /*!
@@ -106,16 +106,16 @@ CloudSearchDomainClient::CloudSearchDomainClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2013-01-01"),
-    QStringLiteral("cloudsearchdomain"),
-    QStringLiteral("Amazon CloudSearch Domain"),
-    QStringLiteral("cloudsearch"),
-    parent), d_ptr(new CloudSearchDomainClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudSearchDomainClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudSearchDomainClient);
+    d->apiVersion = QStringLiteral("2013-01-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudsearchdomain");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudSearch Domain");
+    d->serviceName = QStringLiteral("cloudsearch");
 }
 
 /*!
@@ -224,9 +224,10 @@ UploadDocumentsResponse * CloudSearchDomainClient::uploadDocuments(const UploadD
 /*!
  * Constructs a CloudSearchDomainClientPrivate object with public implementation \a q.
  */
-CloudSearchDomainClientPrivate::CloudSearchDomainClientPrivate(CloudSearchDomainClient * const q) : q_ptr(q)
+CloudSearchDomainClientPrivate::CloudSearchDomainClientPrivate(CloudSearchDomainClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudSearchDomain

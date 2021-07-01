@@ -75,7 +75,8 @@ CreateAnomalyMonitorResponse::CreateAnomalyMonitorResponse(
  */
 const CreateAnomalyMonitorRequest * CreateAnomalyMonitorResponse::request() const
 {
-    return static_cast<const CreateAnomalyMonitorRequest *>(CostExplorerResponse::request());
+    Q_D(const CreateAnomalyMonitorResponse);
+    return static_cast<const CreateAnomalyMonitorRequest *>(d->request);
 }
 
 /*!

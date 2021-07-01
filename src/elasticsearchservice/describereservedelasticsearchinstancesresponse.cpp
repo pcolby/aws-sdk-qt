@@ -72,7 +72,8 @@ DescribeReservedElasticsearchInstancesResponse::DescribeReservedElasticsearchIns
  */
 const DescribeReservedElasticsearchInstancesRequest * DescribeReservedElasticsearchInstancesResponse::request() const
 {
-    return static_cast<const DescribeReservedElasticsearchInstancesRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const DescribeReservedElasticsearchInstancesResponse);
+    return static_cast<const DescribeReservedElasticsearchInstancesRequest *>(d->request);
 }
 
 /*!

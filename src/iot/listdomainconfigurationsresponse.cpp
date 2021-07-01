@@ -82,7 +82,8 @@ ListDomainConfigurationsResponse::ListDomainConfigurationsResponse(
  */
 const ListDomainConfigurationsRequest * ListDomainConfigurationsResponse::request() const
 {
-    return static_cast<const ListDomainConfigurationsRequest *>(IoTResponse::request());
+    Q_D(const ListDomainConfigurationsResponse);
+    return static_cast<const ListDomainConfigurationsRequest *>(d->request);
 }
 
 /*!

@@ -161,7 +161,8 @@ StopInstanceResponse::StopInstanceResponse(
  */
 const StopInstanceRequest * StopInstanceResponse::request() const
 {
-    return static_cast<const StopInstanceRequest *>(OpsWorksResponse::request());
+    Q_D(const StopInstanceResponse);
+    return static_cast<const StopInstanceRequest *>(d->request);
 }
 
 /*!

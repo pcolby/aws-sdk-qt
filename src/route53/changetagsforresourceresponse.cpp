@@ -56,7 +56,8 @@ ChangeTagsForResourceResponse::ChangeTagsForResourceResponse(
  */
 const ChangeTagsForResourceRequest * ChangeTagsForResourceResponse::request() const
 {
-    return static_cast<const ChangeTagsForResourceRequest *>(Route53Response::request());
+    Q_D(const ChangeTagsForResourceResponse);
+    return static_cast<const ChangeTagsForResourceRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetModelResponse::GetModelResponse(
  */
 const GetModelRequest * GetModelResponse::request() const
 {
-    return static_cast<const GetModelRequest *>(ApiGatewayV2Response::request());
+    Q_D(const GetModelResponse);
+    return static_cast<const GetModelRequest *>(d->request);
 }
 
 /*!

@@ -203,16 +203,16 @@ ElastiCacheClient::ElastiCacheClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-02-02"),
-    QStringLiteral("elasticache"),
-    QStringLiteral("Amazon ElastiCache"),
-    QStringLiteral("elasticache"),
-    parent), d_ptr(new ElastiCacheClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ElastiCacheClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ElastiCacheClient);
+    d->apiVersion = QStringLiteral("2015-02-02");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("elasticache");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon ElastiCache");
+    d->serviceName = QStringLiteral("elasticache");
 }
 
 /*!
@@ -231,16 +231,16 @@ ElastiCacheClient::ElastiCacheClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-02-02"),
-    QStringLiteral("elasticache"),
-    QStringLiteral("Amazon ElastiCache"),
-    QStringLiteral("elasticache"),
-    parent), d_ptr(new ElastiCacheClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ElastiCacheClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ElastiCacheClient);
+    d->apiVersion = QStringLiteral("2015-02-02");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("elasticache");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon ElastiCache");
+    d->serviceName = QStringLiteral("elasticache");
 }
 
 /*!
@@ -1586,9 +1586,10 @@ TestFailoverResponse * ElastiCacheClient::testFailover(const TestFailoverRequest
 /*!
  * Constructs a ElastiCacheClientPrivate object with public implementation \a q.
  */
-ElastiCacheClientPrivate::ElastiCacheClientPrivate(ElastiCacheClient * const q) : q_ptr(q)
+ElastiCacheClientPrivate::ElastiCacheClientPrivate(ElastiCacheClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ElastiCache

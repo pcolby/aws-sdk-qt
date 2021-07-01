@@ -94,7 +94,8 @@ DeleteResolverEndpointResponse::DeleteResolverEndpointResponse(
  */
 const DeleteResolverEndpointRequest * DeleteResolverEndpointResponse::request() const
 {
-    return static_cast<const DeleteResolverEndpointRequest *>(Route53ResolverResponse::request());
+    Q_D(const DeleteResolverEndpointResponse);
+    return static_cast<const DeleteResolverEndpointRequest *>(d->request);
 }
 
 /*!

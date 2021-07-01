@@ -239,16 +239,16 @@ CodeDeployClient::CodeDeployClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-10-06"),
-    QStringLiteral("codedeploy"),
-    QStringLiteral("AWS CodeDeploy"),
-    QStringLiteral("codedeploy"),
-    parent), d_ptr(new CodeDeployClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CodeDeployClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CodeDeployClient);
+    d->apiVersion = QStringLiteral("2014-10-06");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("codedeploy");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CodeDeploy");
+    d->serviceName = QStringLiteral("codedeploy");
 }
 
 /*!
@@ -267,16 +267,16 @@ CodeDeployClient::CodeDeployClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-10-06"),
-    QStringLiteral("codedeploy"),
-    QStringLiteral("AWS CodeDeploy"),
-    QStringLiteral("codedeploy"),
-    parent), d_ptr(new CodeDeployClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CodeDeployClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CodeDeployClient);
+    d->apiVersion = QStringLiteral("2014-10-06");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("codedeploy");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CodeDeploy");
+    d->serviceName = QStringLiteral("codedeploy");
 }
 
 /*!
@@ -977,9 +977,10 @@ UpdateDeploymentGroupResponse * CodeDeployClient::updateDeploymentGroup(const Up
 /*!
  * Constructs a CodeDeployClientPrivate object with public implementation \a q.
  */
-CodeDeployClientPrivate::CodeDeployClientPrivate(CodeDeployClient * const q) : q_ptr(q)
+CodeDeployClientPrivate::CodeDeployClientPrivate(CodeDeployClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CodeDeploy

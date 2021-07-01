@@ -82,7 +82,8 @@ DeleteCustomMetricResponse::DeleteCustomMetricResponse(
  */
 const DeleteCustomMetricRequest * DeleteCustomMetricResponse::request() const
 {
-    return static_cast<const DeleteCustomMetricRequest *>(IoTResponse::request());
+    Q_D(const DeleteCustomMetricResponse);
+    return static_cast<const DeleteCustomMetricRequest *>(d->request);
 }
 
 /*!

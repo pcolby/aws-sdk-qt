@@ -37,7 +37,7 @@ namespace DatabaseMigrationService {
  * Constructs a DatabaseMigrationServiceResponse object with parent \a parent.
  */
 DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DatabaseMigrationServiceResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new DatabaseMigrationServiceResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(QObject * con
  * implementation that inherits from DatabaseMigrationServiceResponsePrivate.
  */
 DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(DatabaseMigrationServiceResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
  * Constructs a DatabaseMigrationServiceResponsePrivate object with public implementation \a q.
  */
 DatabaseMigrationServiceResponsePrivate::DatabaseMigrationServiceResponsePrivate(
-    DatabaseMigrationServiceResponse * const q) : q_ptr(q)
+    DatabaseMigrationServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

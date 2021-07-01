@@ -159,7 +159,8 @@ StartContinuousExportResponse::StartContinuousExportResponse(
  */
 const StartContinuousExportRequest * StartContinuousExportResponse::request() const
 {
-    return static_cast<const StartContinuousExportRequest *>(ApplicationDiscoveryServiceResponse::request());
+    Q_D(const StartContinuousExportResponse);
+    return static_cast<const StartContinuousExportRequest *>(d->request);
 }
 
 /*!

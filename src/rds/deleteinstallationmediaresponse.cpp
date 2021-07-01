@@ -119,7 +119,8 @@ DeleteInstallationMediaResponse::DeleteInstallationMediaResponse(
  */
 const DeleteInstallationMediaRequest * DeleteInstallationMediaResponse::request() const
 {
-    return static_cast<const DeleteInstallationMediaRequest *>(RdsResponse::request());
+    Q_D(const DeleteInstallationMediaResponse);
+    return static_cast<const DeleteInstallationMediaRequest *>(d->request);
 }
 
 /*!

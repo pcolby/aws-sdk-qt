@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    AthenaResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AthenaResponse(AthenaResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

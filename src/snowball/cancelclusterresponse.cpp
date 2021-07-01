@@ -61,7 +61,8 @@ CancelClusterResponse::CancelClusterResponse(
  */
 const CancelClusterRequest * CancelClusterResponse::request() const
 {
-    return static_cast<const CancelClusterRequest *>(SnowballResponse::request());
+    Q_D(const CancelClusterResponse);
+    return static_cast<const CancelClusterRequest *>(d->request);
 }
 
 /*!

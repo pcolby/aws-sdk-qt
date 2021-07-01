@@ -94,7 +94,8 @@ GetResolverQueryLogConfigAssociationResponse::GetResolverQueryLogConfigAssociati
  */
 const GetResolverQueryLogConfigAssociationRequest * GetResolverQueryLogConfigAssociationResponse::request() const
 {
-    return static_cast<const GetResolverQueryLogConfigAssociationRequest *>(Route53ResolverResponse::request());
+    Q_D(const GetResolverQueryLogConfigAssociationResponse);
+    return static_cast<const GetResolverQueryLogConfigAssociationRequest *>(d->request);
 }
 
 /*!

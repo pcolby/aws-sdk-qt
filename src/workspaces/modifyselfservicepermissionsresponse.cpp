@@ -58,7 +58,8 @@ ModifySelfservicePermissionsResponse::ModifySelfservicePermissionsResponse(
  */
 const ModifySelfservicePermissionsRequest * ModifySelfservicePermissionsResponse::request() const
 {
-    return static_cast<const ModifySelfservicePermissionsRequest *>(WorkSpacesResponse::request());
+    Q_D(const ModifySelfservicePermissionsResponse);
+    return static_cast<const ModifySelfservicePermissionsRequest *>(d->request);
 }
 
 /*!

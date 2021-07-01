@@ -55,7 +55,8 @@ UpdatePresetResponse::UpdatePresetResponse(
  */
 const UpdatePresetRequest * UpdatePresetResponse::request() const
 {
-    return static_cast<const UpdatePresetRequest *>(MediaConvertResponse::request());
+    Q_D(const UpdatePresetResponse);
+    return static_cast<const UpdatePresetRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_ELASTICTRANSCODERCLIENT_P_H
 #define QTAWS_ELASTICTRANSCODERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ElasticTranscoder {
 
 class ElasticTranscoderClient;
 
-class ElasticTranscoderClientPrivate {
+class ElasticTranscoderClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ElasticTranscoderClientPrivate(ElasticTranscoderClient * const q);
-
-protected:
-    ElasticTranscoderClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticTranscoderClient)

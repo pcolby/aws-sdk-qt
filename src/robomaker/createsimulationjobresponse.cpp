@@ -56,7 +56,8 @@ CreateSimulationJobResponse::CreateSimulationJobResponse(
  */
 const CreateSimulationJobRequest * CreateSimulationJobResponse::request() const
 {
-    return static_cast<const CreateSimulationJobRequest *>(RoboMakerResponse::request());
+    Q_D(const CreateSimulationJobResponse);
+    return static_cast<const CreateSimulationJobRequest *>(d->request);
 }
 
 /*!

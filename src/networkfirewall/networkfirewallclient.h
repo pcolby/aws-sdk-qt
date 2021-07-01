@@ -135,12 +135,6 @@ public slots:
     UpdateRuleGroupResponse * updateRuleGroup(const UpdateRuleGroupRequest &request);
     UpdateSubnetChangeProtectionResponse * updateSubnetChangeProtection(const UpdateSubnetChangeProtectionRequest &request);
 
-protected:
-    /// @cond internal
-    NetworkFirewallClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit NetworkFirewallClient(NetworkFirewallClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(NetworkFirewallClient)
     Q_DISABLE_COPY(NetworkFirewallClient)

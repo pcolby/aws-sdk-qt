@@ -63,7 +63,8 @@ CreateSchemaResponse::CreateSchemaResponse(
  */
 const CreateSchemaRequest * CreateSchemaResponse::request() const
 {
-    return static_cast<const CreateSchemaRequest *>(CloudDirectoryResponse::request());
+    Q_D(const CreateSchemaResponse);
+    return static_cast<const CreateSchemaRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ CreateUsagePlanResponse::CreateUsagePlanResponse(
  */
 const CreateUsagePlanRequest * CreateUsagePlanResponse::request() const
 {
-    return static_cast<const CreateUsagePlanRequest *>(APIGatewayResponse::request());
+    Q_D(const CreateUsagePlanResponse);
+    return static_cast<const CreateUsagePlanRequest *>(d->request);
 }
 
 /*!

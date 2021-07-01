@@ -56,7 +56,8 @@ DeleteBucketLifecycleConfigurationResponse::DeleteBucketLifecycleConfigurationRe
  */
 const DeleteBucketLifecycleConfigurationRequest * DeleteBucketLifecycleConfigurationResponse::request() const
 {
-    return static_cast<const DeleteBucketLifecycleConfigurationRequest *>(S3ControlResponse::request());
+    Q_D(const DeleteBucketLifecycleConfigurationResponse);
+    return static_cast<const DeleteBucketLifecycleConfigurationRequest *>(d->request);
 }
 
 /*!

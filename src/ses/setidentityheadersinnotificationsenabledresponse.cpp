@@ -66,7 +66,8 @@ SetIdentityHeadersInNotificationsEnabledResponse::SetIdentityHeadersInNotificati
  */
 const SetIdentityHeadersInNotificationsEnabledRequest * SetIdentityHeadersInNotificationsEnabledResponse::request() const
 {
-    return static_cast<const SetIdentityHeadersInNotificationsEnabledRequest *>(SesResponse::request());
+    Q_D(const SetIdentityHeadersInNotificationsEnabledResponse);
+    return static_cast<const SetIdentityHeadersInNotificationsEnabledRequest *>(d->request);
 }
 
 /*!

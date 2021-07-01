@@ -136,16 +136,16 @@ NetworkManagerClient::NetworkManagerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-07-05"),
-    QStringLiteral("networkmanager"),
-    QStringLiteral("AWS Network Manager"),
-    QStringLiteral("networkmanager"),
-    parent), d_ptr(new NetworkManagerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new NetworkManagerClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(NetworkManagerClient);
+    d->apiVersion = QStringLiteral("2019-07-05");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("networkmanager");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Network Manager");
+    d->serviceName = QStringLiteral("networkmanager");
 }
 
 /*!
@@ -164,16 +164,16 @@ NetworkManagerClient::NetworkManagerClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-07-05"),
-    QStringLiteral("networkmanager"),
-    QStringLiteral("AWS Network Manager"),
-    QStringLiteral("networkmanager"),
-    parent), d_ptr(new NetworkManagerClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new NetworkManagerClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(NetworkManagerClient);
+    d->apiVersion = QStringLiteral("2019-07-05");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("networkmanager");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Network Manager");
+    d->serviceName = QStringLiteral("networkmanager");
 }
 
 /*!
@@ -681,9 +681,10 @@ UpdateSiteResponse * NetworkManagerClient::updateSite(const UpdateSiteRequest &r
 /*!
  * Constructs a NetworkManagerClientPrivate object with public implementation \a q.
  */
-NetworkManagerClientPrivate::NetworkManagerClientPrivate(NetworkManagerClient * const q) : q_ptr(q)
+NetworkManagerClientPrivate::NetworkManagerClientPrivate(NetworkManagerClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace NetworkManager

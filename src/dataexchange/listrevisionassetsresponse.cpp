@@ -66,7 +66,8 @@ ListRevisionAssetsResponse::ListRevisionAssetsResponse(
  */
 const ListRevisionAssetsRequest * ListRevisionAssetsResponse::request() const
 {
-    return static_cast<const ListRevisionAssetsRequest *>(DataExchangeResponse::request());
+    Q_D(const ListRevisionAssetsResponse);
+    return static_cast<const ListRevisionAssetsRequest *>(d->request);
 }
 
 /*!

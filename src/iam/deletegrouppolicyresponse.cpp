@@ -62,7 +62,8 @@ DeleteGroupPolicyResponse::DeleteGroupPolicyResponse(
  */
 const DeleteGroupPolicyRequest * DeleteGroupPolicyResponse::request() const
 {
-    return static_cast<const DeleteGroupPolicyRequest *>(IamResponse::request());
+    Q_D(const DeleteGroupPolicyResponse);
+    return static_cast<const DeleteGroupPolicyRequest *>(d->request);
 }
 
 /*!

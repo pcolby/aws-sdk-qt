@@ -98,7 +98,8 @@ UpdateAssessmentControlResponse::UpdateAssessmentControlResponse(
  */
 const UpdateAssessmentControlRequest * UpdateAssessmentControlResponse::request() const
 {
-    return static_cast<const UpdateAssessmentControlRequest *>(AuditManagerResponse::request());
+    Q_D(const UpdateAssessmentControlResponse);
+    return static_cast<const UpdateAssessmentControlRequest *>(d->request);
 }
 
 /*!

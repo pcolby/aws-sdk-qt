@@ -63,7 +63,8 @@ AddFacetToObjectResponse::AddFacetToObjectResponse(
  */
 const AddFacetToObjectRequest * AddFacetToObjectResponse::request() const
 {
-    return static_cast<const AddFacetToObjectRequest *>(CloudDirectoryResponse::request());
+    Q_D(const AddFacetToObjectResponse);
+    return static_cast<const AddFacetToObjectRequest *>(d->request);
 }
 
 /*!

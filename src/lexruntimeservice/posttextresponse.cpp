@@ -62,7 +62,8 @@ PostTextResponse::PostTextResponse(
  */
 const PostTextRequest * PostTextResponse::request() const
 {
-    return static_cast<const PostTextRequest *>(LexRuntimeServiceResponse::request());
+    Q_D(const PostTextResponse);
+    return static_cast<const PostTextRequest *>(d->request);
 }
 
 /*!

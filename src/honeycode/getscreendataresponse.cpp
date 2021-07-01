@@ -58,7 +58,8 @@ GetScreenDataResponse::GetScreenDataResponse(
  */
 const GetScreenDataRequest * GetScreenDataResponse::request() const
 {
-    return static_cast<const GetScreenDataRequest *>(HoneycodeResponse::request());
+    Q_D(const GetScreenDataResponse);
+    return static_cast<const GetScreenDataRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ BatchDeletePhoneNumberResponse::BatchDeletePhoneNumberResponse(
  */
 const BatchDeletePhoneNumberRequest * BatchDeletePhoneNumberResponse::request() const
 {
-    return static_cast<const BatchDeletePhoneNumberRequest *>(ChimeResponse::request());
+    Q_D(const BatchDeletePhoneNumberResponse);
+    return static_cast<const BatchDeletePhoneNumberRequest *>(d->request);
 }
 
 /*!

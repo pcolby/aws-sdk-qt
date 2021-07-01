@@ -61,7 +61,8 @@ DescribeGatewayResponse::DescribeGatewayResponse(
  */
 const DescribeGatewayRequest * DescribeGatewayResponse::request() const
 {
-    return static_cast<const DescribeGatewayRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const DescribeGatewayResponse);
+    return static_cast<const DescribeGatewayRequest *>(d->request);
 }
 
 /*!

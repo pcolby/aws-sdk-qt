@@ -37,7 +37,7 @@ namespace KinesisVideoArchivedMedia {
  * Constructs a KinesisVideoArchivedMediaResponse object with parent \a parent.
  */
 KinesisVideoArchivedMediaResponse::KinesisVideoArchivedMediaResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new KinesisVideoArchivedMediaResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new KinesisVideoArchivedMediaResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ KinesisVideoArchivedMediaResponse::KinesisVideoArchivedMediaResponse(QObject * c
  * implementation that inherits from KinesisVideoArchivedMediaResponsePrivate.
  */
 KinesisVideoArchivedMediaResponse::KinesisVideoArchivedMediaResponse(KinesisVideoArchivedMediaResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void KinesisVideoArchivedMediaResponse::parseFailure(QIODevice &response)
  * Constructs a KinesisVideoArchivedMediaResponsePrivate object with public implementation \a q.
  */
 KinesisVideoArchivedMediaResponsePrivate::KinesisVideoArchivedMediaResponsePrivate(
-    KinesisVideoArchivedMediaResponse * const q) : q_ptr(q)
+    KinesisVideoArchivedMediaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -55,7 +55,8 @@ UpdateBotResponse::UpdateBotResponse(
  */
 const UpdateBotRequest * UpdateBotResponse::request() const
 {
-    return static_cast<const UpdateBotRequest *>(LexModelsV2Response::request());
+    Q_D(const UpdateBotResponse);
+    return static_cast<const UpdateBotRequest *>(d->request);
 }
 
 /*!

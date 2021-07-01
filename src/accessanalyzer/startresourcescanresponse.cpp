@@ -67,7 +67,8 @@ StartResourceScanResponse::StartResourceScanResponse(
  */
 const StartResourceScanRequest * StartResourceScanResponse::request() const
 {
-    return static_cast<const StartResourceScanRequest *>(AccessAnalyzerResponse::request());
+    Q_D(const StartResourceScanResponse);
+    return static_cast<const StartResourceScanRequest *>(d->request);
 }
 
 /*!

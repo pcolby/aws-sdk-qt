@@ -140,16 +140,16 @@ AppflowClient::AppflowClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-08-23"),
-    QStringLiteral("appflow"),
-    QStringLiteral("Amazon Appflow"),
-    QStringLiteral("appflow"),
-    parent), d_ptr(new AppflowClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AppflowClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AppflowClient);
+    d->apiVersion = QStringLiteral("2020-08-23");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("appflow");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Appflow");
+    d->serviceName = QStringLiteral("appflow");
 }
 
 /*!
@@ -168,16 +168,16 @@ AppflowClient::AppflowClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-08-23"),
-    QStringLiteral("appflow"),
-    QStringLiteral("Amazon Appflow"),
-    QStringLiteral("appflow"),
-    parent), d_ptr(new AppflowClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AppflowClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AppflowClient);
+    d->apiVersion = QStringLiteral("2020-08-23");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("appflow");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Appflow");
+    d->serviceName = QStringLiteral("appflow");
 }
 
 /*!
@@ -444,9 +444,10 @@ UpdateFlowResponse * AppflowClient::updateFlow(const UpdateFlowRequest &request)
 /*!
  * Constructs a AppflowClientPrivate object with public implementation \a q.
  */
-AppflowClientPrivate::AppflowClientPrivate(AppflowClient * const q) : q_ptr(q)
+AppflowClientPrivate::AppflowClientPrivate(AppflowClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Appflow

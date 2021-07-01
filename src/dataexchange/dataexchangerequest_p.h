@@ -20,12 +20,15 @@
 #ifndef QTAWS_DATAEXCHANGEREQUEST_P_H
 #define QTAWS_DATAEXCHANGEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "dataexchangerequest.h"
+
 namespace QtAws {
 namespace DataExchange {
 
 class DataExchangeRequest;
 
-class DataExchangeRequestPrivate {
+class DataExchangeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DataExchangeRequest::Action action; ///< DataExchange action to be performed.
@@ -36,9 +39,6 @@ public:
     DataExchangeRequestPrivate(const DataExchangeRequestPrivate &other, DataExchangeRequest * const q);
 
     static QString toString(const DataExchangeRequest::Action &action);
-
-protected:
-    DataExchangeRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DataExchangeRequest)

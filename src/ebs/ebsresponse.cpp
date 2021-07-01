@@ -37,7 +37,7 @@ namespace EBS {
  * Constructs a EbsResponse object with parent \a parent.
  */
 EbsResponse::EbsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new EbsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new EbsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ EbsResponse::EbsResponse(QObject * const parent)
  * implementation that inherits from EbsResponsePrivate.
  */
 EbsResponse::EbsResponse(EbsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void EbsResponse::parseFailure(QIODevice &response)
  * Constructs a EbsResponsePrivate object with public implementation \a q.
  */
 EbsResponsePrivate::EbsResponsePrivate(
-    EbsResponse * const q) : q_ptr(q)
+    EbsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

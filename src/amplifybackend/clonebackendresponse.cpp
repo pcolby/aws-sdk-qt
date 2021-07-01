@@ -56,7 +56,8 @@ CloneBackendResponse::CloneBackendResponse(
  */
 const CloneBackendRequest * CloneBackendResponse::request() const
 {
-    return static_cast<const CloneBackendRequest *>(AmplifyBackendResponse::request());
+    Q_D(const CloneBackendResponse);
+    return static_cast<const CloneBackendRequest *>(d->request);
 }
 
 /*!

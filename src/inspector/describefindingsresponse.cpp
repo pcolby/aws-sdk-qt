@@ -60,7 +60,8 @@ DescribeFindingsResponse::DescribeFindingsResponse(
  */
 const DescribeFindingsRequest * DescribeFindingsResponse::request() const
 {
-    return static_cast<const DescribeFindingsRequest *>(InspectorResponse::request());
+    Q_D(const DescribeFindingsResponse);
+    return static_cast<const DescribeFindingsRequest *>(d->request);
 }
 
 /*!

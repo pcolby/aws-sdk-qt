@@ -20,20 +20,19 @@
 #ifndef QTAWS_IOTDATAPLANECLIENT_P_H
 #define QTAWS_IOTDATAPLANECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace IoTDataPlane {
 
 class IoTDataPlaneClient;
 
-class IoTDataPlaneClientPrivate {
+class IoTDataPlaneClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit IoTDataPlaneClientPrivate(IoTDataPlaneClient * const q);
-
-protected:
-    IoTDataPlaneClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTDataPlaneClient)

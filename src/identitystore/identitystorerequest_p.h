@@ -20,12 +20,15 @@
 #ifndef QTAWS_IDENTITYSTOREREQUEST_P_H
 #define QTAWS_IDENTITYSTOREREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "identitystorerequest.h"
+
 namespace QtAws {
 namespace IdentityStore {
 
 class IdentityStoreRequest;
 
-class IdentityStoreRequestPrivate {
+class IdentityStoreRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IdentityStoreRequest::Action action; ///< IdentityStore action to be performed.
@@ -36,9 +39,6 @@ public:
     IdentityStoreRequestPrivate(const IdentityStoreRequestPrivate &other, IdentityStoreRequest * const q);
 
     static QString toString(const IdentityStoreRequest::Action &action);
-
-protected:
-    IdentityStoreRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IdentityStoreRequest)

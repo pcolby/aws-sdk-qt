@@ -62,7 +62,8 @@ DescribeSecurityPolicyResponse::DescribeSecurityPolicyResponse(
  */
 const DescribeSecurityPolicyRequest * DescribeSecurityPolicyResponse::request() const
 {
-    return static_cast<const DescribeSecurityPolicyRequest *>(TransferResponse::request());
+    Q_D(const DescribeSecurityPolicyResponse);
+    return static_cast<const DescribeSecurityPolicyRequest *>(d->request);
 }
 
 /*!

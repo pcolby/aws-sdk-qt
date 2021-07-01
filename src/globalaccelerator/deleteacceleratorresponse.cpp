@@ -218,7 +218,8 @@ DeleteAcceleratorResponse::DeleteAcceleratorResponse(
  */
 const DeleteAcceleratorRequest * DeleteAcceleratorResponse::request() const
 {
-    return static_cast<const DeleteAcceleratorRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const DeleteAcceleratorResponse);
+    return static_cast<const DeleteAcceleratorRequest *>(d->request);
 }
 
 /*!

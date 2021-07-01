@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    S3OutpostsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     S3OutpostsResponse(S3OutpostsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

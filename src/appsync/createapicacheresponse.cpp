@@ -56,7 +56,8 @@ CreateApiCacheResponse::CreateApiCacheResponse(
  */
 const CreateApiCacheRequest * CreateApiCacheResponse::request() const
 {
-    return static_cast<const CreateApiCacheRequest *>(AppSyncResponse::request());
+    Q_D(const CreateApiCacheResponse);
+    return static_cast<const CreateApiCacheRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ UpdateSlotResponse::UpdateSlotResponse(
  */
 const UpdateSlotRequest * UpdateSlotResponse::request() const
 {
-    return static_cast<const UpdateSlotRequest *>(LexModelsV2Response::request());
+    Q_D(const UpdateSlotResponse);
+    return static_cast<const UpdateSlotRequest *>(d->request);
 }
 
 /*!

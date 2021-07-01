@@ -71,7 +71,7 @@ namespace NetworkFirewall {
  * Constructs a NetworkFirewallRequest object for NetworkFirewall \a action.
  */
 NetworkFirewallRequest::NetworkFirewallRequest(const Action action)
-    : d_ptr(new NetworkFirewallRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new NetworkFirewallRequestPrivate(action, this))
 {
 
 }
@@ -80,8 +80,7 @@ NetworkFirewallRequest::NetworkFirewallRequest(const Action action)
  * Constructs a copy of \a other.
  */
 NetworkFirewallRequest::NetworkFirewallRequest(const NetworkFirewallRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new NetworkFirewallRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new NetworkFirewallRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -104,7 +103,7 @@ NetworkFirewallRequest& NetworkFirewallRequest::operator=(const NetworkFirewallR
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from NetworkFirewallRequestPrivate.
  */
-NetworkFirewallRequest::NetworkFirewallRequest(NetworkFirewallRequestPrivate * const d) : d_ptr(d)
+NetworkFirewallRequest::NetworkFirewallRequest(NetworkFirewallRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -273,7 +272,7 @@ QNetworkRequest NetworkFirewallRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 NetworkFirewallRequestPrivate::NetworkFirewallRequestPrivate(const NetworkFirewallRequest::Action action, NetworkFirewallRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -288,8 +287,8 @@ NetworkFirewallRequestPrivate::NetworkFirewallRequestPrivate(const NetworkFirewa
  */
 NetworkFirewallRequestPrivate::NetworkFirewallRequestPrivate(const NetworkFirewallRequestPrivate &other,
                                      NetworkFirewallRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

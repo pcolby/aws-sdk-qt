@@ -87,7 +87,8 @@ RunScheduledInstancesResponse::RunScheduledInstancesResponse(
  */
 const RunScheduledInstancesRequest * RunScheduledInstancesResponse::request() const
 {
-    return static_cast<const RunScheduledInstancesRequest *>(Ec2Response::request());
+    Q_D(const RunScheduledInstancesResponse);
+    return static_cast<const RunScheduledInstancesRequest *>(d->request);
 }
 
 /*!

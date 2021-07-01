@@ -55,7 +55,8 @@ SendActivationCodeResponse::SendActivationCodeResponse(
  */
 const SendActivationCodeRequest * SendActivationCodeResponse::request() const
 {
-    return static_cast<const SendActivationCodeRequest *>(SSMContactsResponse::request());
+    Q_D(const SendActivationCodeResponse);
+    return static_cast<const SendActivationCodeRequest *>(d->request);
 }
 
 /*!

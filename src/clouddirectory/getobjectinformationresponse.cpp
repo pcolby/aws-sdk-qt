@@ -63,7 +63,8 @@ GetObjectInformationResponse::GetObjectInformationResponse(
  */
 const GetObjectInformationRequest * GetObjectInformationResponse::request() const
 {
-    return static_cast<const GetObjectInformationRequest *>(CloudDirectoryResponse::request());
+    Q_D(const GetObjectInformationResponse);
+    return static_cast<const GetObjectInformationRequest *>(d->request);
 }
 
 /*!

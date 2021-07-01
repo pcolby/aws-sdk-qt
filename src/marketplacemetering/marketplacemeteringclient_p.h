@@ -20,20 +20,19 @@
 #ifndef QTAWS_MARKETPLACEMETERINGCLIENT_P_H
 #define QTAWS_MARKETPLACEMETERINGCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MarketplaceMetering {
 
 class MarketplaceMeteringClient;
 
-class MarketplaceMeteringClientPrivate {
+class MarketplaceMeteringClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MarketplaceMeteringClientPrivate(MarketplaceMeteringClient * const q);
-
-protected:
-    MarketplaceMeteringClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MarketplaceMeteringClient)

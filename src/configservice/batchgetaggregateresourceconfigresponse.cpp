@@ -75,7 +75,8 @@ BatchGetAggregateResourceConfigResponse::BatchGetAggregateResourceConfigResponse
  */
 const BatchGetAggregateResourceConfigRequest * BatchGetAggregateResourceConfigResponse::request() const
 {
-    return static_cast<const BatchGetAggregateResourceConfigRequest *>(ConfigServiceResponse::request());
+    Q_D(const BatchGetAggregateResourceConfigResponse);
+    return static_cast<const BatchGetAggregateResourceConfigRequest *>(d->request);
 }
 
 /*!

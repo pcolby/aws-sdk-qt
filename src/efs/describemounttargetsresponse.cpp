@@ -62,7 +62,8 @@ DescribeMountTargetsResponse::DescribeMountTargetsResponse(
  */
 const DescribeMountTargetsRequest * DescribeMountTargetsResponse::request() const
 {
-    return static_cast<const DescribeMountTargetsRequest *>(EfsResponse::request());
+    Q_D(const DescribeMountTargetsResponse);
+    return static_cast<const DescribeMountTargetsRequest *>(d->request);
 }
 
 /*!

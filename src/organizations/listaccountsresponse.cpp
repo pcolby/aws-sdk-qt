@@ -141,7 +141,8 @@ ListAccountsResponse::ListAccountsResponse(
  */
 const ListAccountsRequest * ListAccountsResponse::request() const
 {
-    return static_cast<const ListAccountsRequest *>(OrganizationsResponse::request());
+    Q_D(const ListAccountsResponse);
+    return static_cast<const ListAccountsRequest *>(d->request);
 }
 
 /*!

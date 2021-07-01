@@ -20,20 +20,19 @@
 #ifndef QTAWS_IMAGEBUILDERCLIENT_P_H
 #define QTAWS_IMAGEBUILDERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace imagebuilder {
 
 class imagebuilderClient;
 
-class imagebuilderClientPrivate {
+class imagebuilderClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit imagebuilderClientPrivate(imagebuilderClient * const q);
-
-protected:
-    imagebuilderClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(imagebuilderClient)

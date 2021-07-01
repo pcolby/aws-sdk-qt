@@ -82,7 +82,8 @@ StartThingRegistrationTaskResponse::StartThingRegistrationTaskResponse(
  */
 const StartThingRegistrationTaskRequest * StartThingRegistrationTaskResponse::request() const
 {
-    return static_cast<const StartThingRegistrationTaskRequest *>(IoTResponse::request());
+    Q_D(const StartThingRegistrationTaskResponse);
+    return static_cast<const StartThingRegistrationTaskRequest *>(d->request);
 }
 
 /*!

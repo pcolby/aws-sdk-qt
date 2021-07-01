@@ -72,7 +72,8 @@ CreateNetworkResponse::CreateNetworkResponse(
  */
 const CreateNetworkRequest * CreateNetworkResponse::request() const
 {
-    return static_cast<const CreateNetworkRequest *>(ManagedBlockchainResponse::request());
+    Q_D(const CreateNetworkResponse);
+    return static_cast<const CreateNetworkRequest *>(d->request);
 }
 
 /*!

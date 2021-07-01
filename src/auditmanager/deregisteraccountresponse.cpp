@@ -98,7 +98,8 @@ DeregisterAccountResponse::DeregisterAccountResponse(
  */
 const DeregisterAccountRequest * DeregisterAccountResponse::request() const
 {
-    return static_cast<const DeregisterAccountRequest *>(AuditManagerResponse::request());
+    Q_D(const DeregisterAccountResponse);
+    return static_cast<const DeregisterAccountRequest *>(d->request);
 }
 
 /*!

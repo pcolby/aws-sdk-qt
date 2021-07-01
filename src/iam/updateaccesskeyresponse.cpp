@@ -62,7 +62,8 @@ UpdateAccessKeyResponse::UpdateAccessKeyResponse(
  */
 const UpdateAccessKeyRequest * UpdateAccessKeyResponse::request() const
 {
-    return static_cast<const UpdateAccessKeyRequest *>(IamResponse::request());
+    Q_D(const UpdateAccessKeyResponse);
+    return static_cast<const UpdateAccessKeyRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ DeleteFunctionResponse::DeleteFunctionResponse(
  */
 const DeleteFunctionRequest * DeleteFunctionResponse::request() const
 {
-    return static_cast<const DeleteFunctionRequest *>(CloudFrontResponse::request());
+    Q_D(const DeleteFunctionResponse);
+    return static_cast<const DeleteFunctionRequest *>(d->request);
 }
 
 /*!

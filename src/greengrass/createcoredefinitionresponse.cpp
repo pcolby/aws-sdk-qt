@@ -58,7 +58,8 @@ CreateCoreDefinitionResponse::CreateCoreDefinitionResponse(
  */
 const CreateCoreDefinitionRequest * CreateCoreDefinitionResponse::request() const
 {
-    return static_cast<const CreateCoreDefinitionRequest *>(GreengrassResponse::request());
+    Q_D(const CreateCoreDefinitionResponse);
+    return static_cast<const CreateCoreDefinitionRequest *>(d->request);
 }
 
 /*!

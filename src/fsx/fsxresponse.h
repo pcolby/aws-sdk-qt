@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    FSxResponsePrivate * const d_ptr; ///< Internal d-pointer.
     FSxResponse(FSxResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

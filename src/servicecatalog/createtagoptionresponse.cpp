@@ -61,7 +61,8 @@ CreateTagOptionResponse::CreateTagOptionResponse(
  */
 const CreateTagOptionRequest * CreateTagOptionResponse::request() const
 {
-    return static_cast<const CreateTagOptionRequest *>(ServiceCatalogResponse::request());
+    Q_D(const CreateTagOptionResponse);
+    return static_cast<const CreateTagOptionRequest *>(d->request);
 }
 
 /*!

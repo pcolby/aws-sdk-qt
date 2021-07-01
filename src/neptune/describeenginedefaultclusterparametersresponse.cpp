@@ -72,7 +72,8 @@ DescribeEngineDefaultClusterParametersResponse::DescribeEngineDefaultClusterPara
  */
 const DescribeEngineDefaultClusterParametersRequest * DescribeEngineDefaultClusterParametersResponse::request() const
 {
-    return static_cast<const DescribeEngineDefaultClusterParametersRequest *>(NeptuneResponse::request());
+    Q_D(const DescribeEngineDefaultClusterParametersResponse);
+    return static_cast<const DescribeEngineDefaultClusterParametersRequest *>(d->request);
 }
 
 /*!

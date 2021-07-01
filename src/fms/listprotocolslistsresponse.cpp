@@ -67,7 +67,8 @@ ListProtocolsListsResponse::ListProtocolsListsResponse(
  */
 const ListProtocolsListsRequest * ListProtocolsListsResponse::request() const
 {
-    return static_cast<const ListProtocolsListsRequest *>(FmsResponse::request());
+    Q_D(const ListProtocolsListsResponse);
+    return static_cast<const ListProtocolsListsRequest *>(d->request);
 }
 
 /*!

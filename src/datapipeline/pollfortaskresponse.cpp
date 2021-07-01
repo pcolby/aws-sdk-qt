@@ -73,7 +73,8 @@ PollForTaskResponse::PollForTaskResponse(
  */
 const PollForTaskRequest * PollForTaskResponse::request() const
 {
-    return static_cast<const PollForTaskRequest *>(DataPipelineResponse::request());
+    Q_D(const PollForTaskResponse);
+    return static_cast<const PollForTaskRequest *>(d->request);
 }
 
 /*!

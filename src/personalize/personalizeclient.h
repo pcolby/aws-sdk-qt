@@ -189,12 +189,6 @@ public slots:
     StopSolutionVersionCreationResponse * stopSolutionVersionCreation(const StopSolutionVersionCreationRequest &request);
     UpdateCampaignResponse * updateCampaign(const UpdateCampaignRequest &request);
 
-protected:
-    /// @cond internal
-    PersonalizeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit PersonalizeClient(PersonalizeClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(PersonalizeClient)
     Q_DISABLE_COPY(PersonalizeClient)

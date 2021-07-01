@@ -37,7 +37,7 @@ namespace DataExchange {
  * Constructs a DataExchangeResponse object with parent \a parent.
  */
 DataExchangeResponse::DataExchangeResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DataExchangeResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new DataExchangeResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ DataExchangeResponse::DataExchangeResponse(QObject * const parent)
  * implementation that inherits from DataExchangeResponsePrivate.
  */
 DataExchangeResponse::DataExchangeResponse(DataExchangeResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void DataExchangeResponse::parseFailure(QIODevice &response)
  * Constructs a DataExchangeResponsePrivate object with public implementation \a q.
  */
 DataExchangeResponsePrivate::DataExchangeResponsePrivate(
-    DataExchangeResponse * const q) : q_ptr(q)
+    DataExchangeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

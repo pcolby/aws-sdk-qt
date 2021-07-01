@@ -60,7 +60,8 @@ DeleteNamespaceResponse::DeleteNamespaceResponse(
  */
 const DeleteNamespaceRequest * DeleteNamespaceResponse::request() const
 {
-    return static_cast<const DeleteNamespaceRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const DeleteNamespaceResponse);
+    return static_cast<const DeleteNamespaceRequest *>(d->request);
 }
 
 /*!

@@ -177,7 +177,8 @@ GetAccountSettingsResponse::GetAccountSettingsResponse(
  */
 const GetAccountSettingsRequest * GetAccountSettingsResponse::request() const
 {
-    return static_cast<const GetAccountSettingsRequest *>(ProtonResponse::request());
+    Q_D(const GetAccountSettingsResponse);
+    return static_cast<const GetAccountSettingsRequest *>(d->request);
 }
 
 /*!

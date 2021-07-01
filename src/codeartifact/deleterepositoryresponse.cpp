@@ -293,7 +293,8 @@ DeleteRepositoryResponse::DeleteRepositoryResponse(
  */
 const DeleteRepositoryRequest * DeleteRepositoryResponse::request() const
 {
-    return static_cast<const DeleteRepositoryRequest *>(CodeArtifactResponse::request());
+    Q_D(const DeleteRepositoryResponse);
+    return static_cast<const DeleteRepositoryRequest *>(d->request);
 }
 
 /*!

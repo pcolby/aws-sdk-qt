@@ -87,7 +87,8 @@ ModifyInstanceCreditSpecificationResponse::ModifyInstanceCreditSpecificationResp
  */
 const ModifyInstanceCreditSpecificationRequest * ModifyInstanceCreditSpecificationResponse::request() const
 {
-    return static_cast<const ModifyInstanceCreditSpecificationRequest *>(Ec2Response::request());
+    Q_D(const ModifyInstanceCreditSpecificationResponse);
+    return static_cast<const ModifyInstanceCreditSpecificationRequest *>(d->request);
 }
 
 /*!

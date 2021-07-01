@@ -54,12 +54,6 @@ public slots:
     GenerateDataSetResponse * generateDataSet(const GenerateDataSetRequest &request);
     StartSupportDataExportResponse * startSupportDataExport(const StartSupportDataExportRequest &request);
 
-protected:
-    /// @cond internal
-    MarketplaceCommerceAnalyticsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MarketplaceCommerceAnalyticsClient(MarketplaceCommerceAnalyticsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MarketplaceCommerceAnalyticsClient)
     Q_DISABLE_COPY(MarketplaceCommerceAnalyticsClient)

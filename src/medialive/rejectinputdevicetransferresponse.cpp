@@ -55,7 +55,8 @@ RejectInputDeviceTransferResponse::RejectInputDeviceTransferResponse(
  */
 const RejectInputDeviceTransferRequest * RejectInputDeviceTransferResponse::request() const
 {
-    return static_cast<const RejectInputDeviceTransferRequest *>(MediaLiveResponse::request());
+    Q_D(const RejectInputDeviceTransferResponse);
+    return static_cast<const RejectInputDeviceTransferRequest *>(d->request);
 }
 
 /*!

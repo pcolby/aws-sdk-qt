@@ -67,7 +67,8 @@ DeleteNotificationChannelResponse::DeleteNotificationChannelResponse(
  */
 const DeleteNotificationChannelRequest * DeleteNotificationChannelResponse::request() const
 {
-    return static_cast<const DeleteNotificationChannelRequest *>(FmsResponse::request());
+    Q_D(const DeleteNotificationChannelResponse);
+    return static_cast<const DeleteNotificationChannelRequest *>(d->request);
 }
 
 /*!

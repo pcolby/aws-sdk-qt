@@ -124,8 +124,7 @@ public:
 
 protected:
     /// @cond internal
-    CloudDirectoryRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CloudDirectoryRequest(CloudDirectoryRequestPrivate * const d);
+    CloudDirectoryRequest(CloudDirectoryRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

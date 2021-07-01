@@ -20,12 +20,15 @@
 #ifndef QTAWS_SSMCONTACTSREQUEST_P_H
 #define QTAWS_SSMCONTACTSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "ssmcontactsrequest.h"
+
 namespace QtAws {
 namespace SSMContacts {
 
 class SSMContactsRequest;
 
-class SSMContactsRequestPrivate {
+class SSMContactsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SSMContactsRequest::Action action; ///< SSMContacts action to be performed.
@@ -36,9 +39,6 @@ public:
     SSMContactsRequestPrivate(const SSMContactsRequestPrivate &other, SSMContactsRequest * const q);
 
     static QString toString(const SSMContactsRequest::Action &action);
-
-protected:
-    SSMContactsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SSMContactsRequest)

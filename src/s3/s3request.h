@@ -154,8 +154,7 @@ public:
 
 protected:
     /// @cond internal
-    S3RequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit S3Request(S3RequestPrivate * const d);
+    S3Request(S3RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

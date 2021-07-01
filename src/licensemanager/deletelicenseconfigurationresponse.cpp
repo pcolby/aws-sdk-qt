@@ -59,7 +59,8 @@ DeleteLicenseConfigurationResponse::DeleteLicenseConfigurationResponse(
  */
 const DeleteLicenseConfigurationRequest * DeleteLicenseConfigurationResponse::request() const
 {
-    return static_cast<const DeleteLicenseConfigurationRequest *>(LicenseManagerResponse::request());
+    Q_D(const DeleteLicenseConfigurationResponse);
+    return static_cast<const DeleteLicenseConfigurationRequest *>(d->request);
 }
 
 /*!

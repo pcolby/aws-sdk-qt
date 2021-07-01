@@ -119,7 +119,8 @@ ModifyDBClusterEndpointResponse::ModifyDBClusterEndpointResponse(
  */
 const ModifyDBClusterEndpointRequest * ModifyDBClusterEndpointResponse::request() const
 {
-    return static_cast<const ModifyDBClusterEndpointRequest *>(RdsResponse::request());
+    Q_D(const ModifyDBClusterEndpointResponse);
+    return static_cast<const ModifyDBClusterEndpointRequest *>(d->request);
 }
 
 /*!

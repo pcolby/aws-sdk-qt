@@ -58,7 +58,8 @@ ListNotebookExecutionsResponse::ListNotebookExecutionsResponse(
  */
 const ListNotebookExecutionsRequest * ListNotebookExecutionsResponse::request() const
 {
-    return static_cast<const ListNotebookExecutionsRequest *>(EmrResponse::request());
+    Q_D(const ListNotebookExecutionsResponse);
+    return static_cast<const ListNotebookExecutionsRequest *>(d->request);
 }
 
 /*!

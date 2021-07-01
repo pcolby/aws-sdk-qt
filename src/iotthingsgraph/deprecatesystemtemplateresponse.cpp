@@ -66,7 +66,8 @@ DeprecateSystemTemplateResponse::DeprecateSystemTemplateResponse(
  */
 const DeprecateSystemTemplateRequest * DeprecateSystemTemplateResponse::request() const
 {
-    return static_cast<const DeprecateSystemTemplateRequest *>(IoTThingsGraphResponse::request());
+    Q_D(const DeprecateSystemTemplateResponse);
+    return static_cast<const DeprecateSystemTemplateRequest *>(d->request);
 }
 
 /*!

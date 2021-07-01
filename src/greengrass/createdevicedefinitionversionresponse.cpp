@@ -58,7 +58,8 @@ CreateDeviceDefinitionVersionResponse::CreateDeviceDefinitionVersionResponse(
  */
 const CreateDeviceDefinitionVersionRequest * CreateDeviceDefinitionVersionResponse::request() const
 {
-    return static_cast<const CreateDeviceDefinitionVersionRequest *>(GreengrassResponse::request());
+    Q_D(const CreateDeviceDefinitionVersionResponse);
+    return static_cast<const CreateDeviceDefinitionVersionRequest *>(d->request);
 }
 
 /*!

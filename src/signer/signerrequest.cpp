@@ -59,7 +59,7 @@ namespace signer {
  * Constructs a signerRequest object for signer \a action.
  */
 signerRequest::signerRequest(const Action action)
-    : d_ptr(new signerRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new signerRequestPrivate(action, this))
 {
 
 }
@@ -68,8 +68,7 @@ signerRequest::signerRequest(const Action action)
  * Constructs a copy of \a other.
  */
 signerRequest::signerRequest(const signerRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new signerRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new signerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -92,7 +91,7 @@ signerRequest& signerRequest::operator=(const signerRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from signerRequestPrivate.
  */
-signerRequest::signerRequest(signerRequestPrivate * const d) : d_ptr(d)
+signerRequest::signerRequest(signerRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -261,7 +260,7 @@ QNetworkRequest signerRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 signerRequestPrivate::signerRequestPrivate(const signerRequest::Action action, signerRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -276,8 +275,8 @@ signerRequestPrivate::signerRequestPrivate(const signerRequest::Action action, s
  */
 signerRequestPrivate::signerRequestPrivate(const signerRequestPrivate &other,
                                      signerRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

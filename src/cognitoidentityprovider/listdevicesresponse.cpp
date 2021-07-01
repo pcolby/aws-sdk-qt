@@ -66,7 +66,8 @@ ListDevicesResponse::ListDevicesResponse(
  */
 const ListDevicesRequest * ListDevicesResponse::request() const
 {
-    return static_cast<const ListDevicesRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const ListDevicesResponse);
+    return static_cast<const ListDevicesRequest *>(d->request);
 }
 
 /*!

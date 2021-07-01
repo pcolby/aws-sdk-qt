@@ -70,7 +70,8 @@ DeleteHumanTaskUiResponse::DeleteHumanTaskUiResponse(
  */
 const DeleteHumanTaskUiRequest * DeleteHumanTaskUiResponse::request() const
 {
-    return static_cast<const DeleteHumanTaskUiRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteHumanTaskUiResponse);
+    return static_cast<const DeleteHumanTaskUiRequest *>(d->request);
 }
 
 /*!

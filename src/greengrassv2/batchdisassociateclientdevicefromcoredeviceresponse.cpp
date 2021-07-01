@@ -72,7 +72,8 @@ BatchDisassociateClientDeviceFromCoreDeviceResponse::BatchDisassociateClientDevi
  */
 const BatchDisassociateClientDeviceFromCoreDeviceRequest * BatchDisassociateClientDeviceFromCoreDeviceResponse::request() const
 {
-    return static_cast<const BatchDisassociateClientDeviceFromCoreDeviceRequest *>(GreengrassV2Response::request());
+    Q_D(const BatchDisassociateClientDeviceFromCoreDeviceResponse);
+    return static_cast<const BatchDisassociateClientDeviceFromCoreDeviceRequest *>(d->request);
 }
 
 /*!

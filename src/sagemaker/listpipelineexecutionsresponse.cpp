@@ -70,7 +70,8 @@ ListPipelineExecutionsResponse::ListPipelineExecutionsResponse(
  */
 const ListPipelineExecutionsRequest * ListPipelineExecutionsResponse::request() const
 {
-    return static_cast<const ListPipelineExecutionsRequest *>(SageMakerResponse::request());
+    Q_D(const ListPipelineExecutionsResponse);
+    return static_cast<const ListPipelineExecutionsRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetExportJobsResponse::GetExportJobsResponse(
  */
 const GetExportJobsRequest * GetExportJobsResponse::request() const
 {
-    return static_cast<const GetExportJobsRequest *>(PinpointResponse::request());
+    Q_D(const GetExportJobsResponse);
+    return static_cast<const GetExportJobsRequest *>(d->request);
 }
 
 /*!

@@ -77,7 +77,8 @@ ValidateConfigurationSettingsResponse::ValidateConfigurationSettingsResponse(
  */
 const ValidateConfigurationSettingsRequest * ValidateConfigurationSettingsResponse::request() const
 {
-    return static_cast<const ValidateConfigurationSettingsRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const ValidateConfigurationSettingsResponse);
+    return static_cast<const ValidateConfigurationSettingsRequest *>(d->request);
 }
 
 /*!

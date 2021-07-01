@@ -20,12 +20,15 @@
 #ifndef QTAWS_APPLICATIONCOSTPROFILERREQUEST_P_H
 #define QTAWS_APPLICATIONCOSTPROFILERREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "applicationcostprofilerrequest.h"
+
 namespace QtAws {
 namespace ApplicationCostProfiler {
 
 class ApplicationCostProfilerRequest;
 
-class ApplicationCostProfilerRequestPrivate {
+class ApplicationCostProfilerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ApplicationCostProfilerRequest::Action action; ///< ApplicationCostProfiler action to be performed.
@@ -36,9 +39,6 @@ public:
     ApplicationCostProfilerRequestPrivate(const ApplicationCostProfilerRequestPrivate &other, ApplicationCostProfilerRequest * const q);
 
     static QString toString(const ApplicationCostProfilerRequest::Action &action);
-
-protected:
-    ApplicationCostProfilerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApplicationCostProfilerRequest)

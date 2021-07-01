@@ -79,7 +79,8 @@ RemovePermissionResponse::RemovePermissionResponse(
  */
 const RemovePermissionRequest * RemovePermissionResponse::request() const
 {
-    return static_cast<const RemovePermissionRequest *>(CodeGuruProfilerResponse::request());
+    Q_D(const RemovePermissionResponse);
+    return static_cast<const RemovePermissionRequest *>(d->request);
 }
 
 /*!

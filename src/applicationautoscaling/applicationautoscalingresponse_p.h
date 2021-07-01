@@ -20,12 +20,14 @@
 #ifndef QTAWS_APPLICATIONAUTOSCALINGRESPONSE_P_H
 #define QTAWS_APPLICATIONAUTOSCALINGRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace ApplicationAutoScaling {
 
 class ApplicationAutoScalingResponse;
 
-class ApplicationAutoScalingResponsePrivate {
+class ApplicationAutoScalingResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    ApplicationAutoScalingResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ApplicationAutoScalingResponse)

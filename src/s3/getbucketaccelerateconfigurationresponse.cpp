@@ -55,7 +55,8 @@ GetBucketAccelerateConfigurationResponse::GetBucketAccelerateConfigurationRespon
  */
 const GetBucketAccelerateConfigurationRequest * GetBucketAccelerateConfigurationResponse::request() const
 {
-    return static_cast<const GetBucketAccelerateConfigurationRequest *>(S3Response::request());
+    Q_D(const GetBucketAccelerateConfigurationResponse);
+    return static_cast<const GetBucketAccelerateConfigurationRequest *>(d->request);
 }
 
 /*!

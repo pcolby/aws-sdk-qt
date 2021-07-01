@@ -70,7 +70,8 @@ StopCompilationJobResponse::StopCompilationJobResponse(
  */
 const StopCompilationJobRequest * StopCompilationJobResponse::request() const
 {
-    return static_cast<const StopCompilationJobRequest *>(SageMakerResponse::request());
+    Q_D(const StopCompilationJobResponse);
+    return static_cast<const StopCompilationJobRequest *>(d->request);
 }
 
 /*!

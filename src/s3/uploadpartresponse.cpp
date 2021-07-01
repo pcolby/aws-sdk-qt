@@ -55,7 +55,8 @@ UploadPartResponse::UploadPartResponse(
  */
 const UploadPartRequest * UploadPartResponse::request() const
 {
-    return static_cast<const UploadPartRequest *>(S3Response::request());
+    Q_D(const UploadPartResponse);
+    return static_cast<const UploadPartRequest *>(d->request);
 }
 
 /*!

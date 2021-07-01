@@ -62,7 +62,8 @@ GetNetworkProfileResponse::GetNetworkProfileResponse(
  */
 const GetNetworkProfileRequest * GetNetworkProfileResponse::request() const
 {
-    return static_cast<const GetNetworkProfileRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const GetNetworkProfileResponse);
+    return static_cast<const GetNetworkProfileRequest *>(d->request);
 }
 
 /*!

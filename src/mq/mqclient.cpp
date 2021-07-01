@@ -105,16 +105,16 @@ MqClient::MqClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-11-27"),
-    QStringLiteral("mq"),
-    QStringLiteral("AmazonMQ"),
-    QStringLiteral("mq"),
-    parent), d_ptr(new MqClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MqClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MqClient);
+    d->apiVersion = QStringLiteral("2017-11-27");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mq");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AmazonMQ");
+    d->serviceName = QStringLiteral("mq");
 }
 
 /*!
@@ -133,16 +133,16 @@ MqClient::MqClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-11-27"),
-    QStringLiteral("mq"),
-    QStringLiteral("AmazonMQ"),
-    QStringLiteral("mq"),
-    parent), d_ptr(new MqClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MqClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MqClient);
+    d->apiVersion = QStringLiteral("2017-11-27");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mq");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AmazonMQ");
+    d->serviceName = QStringLiteral("mq");
 }
 
 /*!
@@ -422,9 +422,10 @@ UpdateUserResponse * MqClient::updateUser(const UpdateUserRequest &request)
 /*!
  * Constructs a MqClientPrivate object with public implementation \a q.
  */
-MqClientPrivate::MqClientPrivate(MqClient * const q) : q_ptr(q)
+MqClientPrivate::MqClientPrivate(MqClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MQ

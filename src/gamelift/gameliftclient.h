@@ -333,12 +333,6 @@ public slots:
     UpdateScriptResponse * updateScript(const UpdateScriptRequest &request);
     ValidateMatchmakingRuleSetResponse * validateMatchmakingRuleSet(const ValidateMatchmakingRuleSetRequest &request);
 
-protected:
-    /// @cond internal
-    GameLiftClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit GameLiftClient(GameLiftClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(GameLiftClient)
     Q_DISABLE_COPY(GameLiftClient)

@@ -20,20 +20,19 @@
 #ifndef QTAWS_CODEGURUREVIEWERCLIENT_P_H
 #define QTAWS_CODEGURUREVIEWERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CodeGuruReviewer {
 
 class CodeGuruReviewerClient;
 
-class CodeGuruReviewerClientPrivate {
+class CodeGuruReviewerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CodeGuruReviewerClientPrivate(CodeGuruReviewerClient * const q);
-
-protected:
-    CodeGuruReviewerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeGuruReviewerClient)

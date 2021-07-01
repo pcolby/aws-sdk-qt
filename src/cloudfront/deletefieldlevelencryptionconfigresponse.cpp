@@ -60,7 +60,8 @@ DeleteFieldLevelEncryptionConfigResponse::DeleteFieldLevelEncryptionConfigRespon
  */
 const DeleteFieldLevelEncryptionConfigRequest * DeleteFieldLevelEncryptionConfigResponse::request() const
 {
-    return static_cast<const DeleteFieldLevelEncryptionConfigRequest *>(CloudFrontResponse::request());
+    Q_D(const DeleteFieldLevelEncryptionConfigResponse);
+    return static_cast<const DeleteFieldLevelEncryptionConfigRequest *>(d->request);
 }
 
 /*!

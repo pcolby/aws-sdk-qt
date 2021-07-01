@@ -119,7 +119,8 @@ DescribeDBClusterBacktracksResponse::DescribeDBClusterBacktracksResponse(
  */
 const DescribeDBClusterBacktracksRequest * DescribeDBClusterBacktracksResponse::request() const
 {
-    return static_cast<const DescribeDBClusterBacktracksRequest *>(RdsResponse::request());
+    Q_D(const DescribeDBClusterBacktracksResponse);
+    return static_cast<const DescribeDBClusterBacktracksRequest *>(d->request);
 }
 
 /*!

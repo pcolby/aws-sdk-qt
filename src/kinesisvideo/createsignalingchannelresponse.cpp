@@ -55,7 +55,8 @@ CreateSignalingChannelResponse::CreateSignalingChannelResponse(
  */
 const CreateSignalingChannelRequest * CreateSignalingChannelResponse::request() const
 {
-    return static_cast<const CreateSignalingChannelRequest *>(KinesisVideoResponse::request());
+    Q_D(const CreateSignalingChannelResponse);
+    return static_cast<const CreateSignalingChannelRequest *>(d->request);
 }
 
 /*!

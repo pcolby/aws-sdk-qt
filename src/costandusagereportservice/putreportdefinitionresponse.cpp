@@ -72,7 +72,8 @@ PutReportDefinitionResponse::PutReportDefinitionResponse(
  */
 const PutReportDefinitionRequest * PutReportDefinitionResponse::request() const
 {
-    return static_cast<const PutReportDefinitionRequest *>(CostandUsageReportServiceResponse::request());
+    Q_D(const PutReportDefinitionResponse);
+    return static_cast<const PutReportDefinitionRequest *>(d->request);
 }
 
 /*!

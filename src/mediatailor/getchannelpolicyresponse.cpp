@@ -66,7 +66,8 @@ GetChannelPolicyResponse::GetChannelPolicyResponse(
  */
 const GetChannelPolicyRequest * GetChannelPolicyResponse::request() const
 {
-    return static_cast<const GetChannelPolicyRequest *>(MediaTailorResponse::request());
+    Q_D(const GetChannelPolicyResponse);
+    return static_cast<const GetChannelPolicyRequest *>(d->request);
 }
 
 /*!

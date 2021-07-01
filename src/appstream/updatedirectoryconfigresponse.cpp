@@ -81,7 +81,8 @@ UpdateDirectoryConfigResponse::UpdateDirectoryConfigResponse(
  */
 const UpdateDirectoryConfigRequest * UpdateDirectoryConfigResponse::request() const
 {
-    return static_cast<const UpdateDirectoryConfigRequest *>(AppStreamResponse::request());
+    Q_D(const UpdateDirectoryConfigResponse);
+    return static_cast<const UpdateDirectoryConfigRequest *>(d->request);
 }
 
 /*!

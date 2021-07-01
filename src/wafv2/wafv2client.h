@@ -168,12 +168,6 @@ public slots:
     UpdateRuleGroupResponse * updateRuleGroup(const UpdateRuleGroupRequest &request);
     UpdateWebACLResponse * updateWebACL(const UpdateWebACLRequest &request);
 
-protected:
-    /// @cond internal
-    Wafv2ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit Wafv2Client(Wafv2ClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(Wafv2Client)
     Q_DISABLE_COPY(Wafv2Client)

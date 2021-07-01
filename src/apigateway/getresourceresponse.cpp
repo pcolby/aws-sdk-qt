@@ -60,7 +60,8 @@ GetResourceResponse::GetResourceResponse(
  */
 const GetResourceRequest * GetResourceResponse::request() const
 {
-    return static_cast<const GetResourceRequest *>(APIGatewayResponse::request());
+    Q_D(const GetResourceResponse);
+    return static_cast<const GetResourceRequest *>(d->request);
 }
 
 /*!

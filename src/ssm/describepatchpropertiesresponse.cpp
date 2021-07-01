@@ -98,7 +98,8 @@ DescribePatchPropertiesResponse::DescribePatchPropertiesResponse(
  */
 const DescribePatchPropertiesRequest * DescribePatchPropertiesResponse::request() const
 {
-    return static_cast<const DescribePatchPropertiesRequest *>(SsmResponse::request());
+    Q_D(const DescribePatchPropertiesResponse);
+    return static_cast<const DescribePatchPropertiesRequest *>(d->request);
 }
 
 /*!

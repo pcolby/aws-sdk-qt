@@ -56,7 +56,8 @@ ActivateKeySigningKeyResponse::ActivateKeySigningKeyResponse(
  */
 const ActivateKeySigningKeyRequest * ActivateKeySigningKeyResponse::request() const
 {
-    return static_cast<const ActivateKeySigningKeyRequest *>(Route53Response::request());
+    Q_D(const ActivateKeySigningKeyResponse);
+    return static_cast<const ActivateKeySigningKeyRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ BatchGetJobsResponse::BatchGetJobsResponse(
  */
 const BatchGetJobsRequest * BatchGetJobsResponse::request() const
 {
-    return static_cast<const BatchGetJobsRequest *>(GlueResponse::request());
+    Q_D(const BatchGetJobsResponse);
+    return static_cast<const BatchGetJobsRequest *>(d->request);
 }
 
 /*!

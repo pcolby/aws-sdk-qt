@@ -20,20 +20,19 @@
 #ifndef QTAWS_SAGEMAKEREDGEMANAGERCLIENT_P_H
 #define QTAWS_SAGEMAKEREDGEMANAGERCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SagemakerEdgeManager {
 
 class SagemakerEdgeManagerClient;
 
-class SagemakerEdgeManagerClientPrivate {
+class SagemakerEdgeManagerClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SagemakerEdgeManagerClientPrivate(SagemakerEdgeManagerClient * const q);
-
-protected:
-    SagemakerEdgeManagerClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SagemakerEdgeManagerClient)

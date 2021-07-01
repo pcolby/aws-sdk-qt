@@ -114,16 +114,16 @@ DataExchangeClient::DataExchangeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("dataexchange"),
-    QStringLiteral("AWS Data Exchange"),
-    QStringLiteral("dataexchange"),
-    parent), d_ptr(new DataExchangeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new DataExchangeClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(DataExchangeClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("dataexchange");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Data Exchange");
+    d->serviceName = QStringLiteral("dataexchange");
 }
 
 /*!
@@ -142,16 +142,16 @@ DataExchangeClient::DataExchangeClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("dataexchange"),
-    QStringLiteral("AWS Data Exchange"),
-    QStringLiteral("dataexchange"),
-    parent), d_ptr(new DataExchangeClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new DataExchangeClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(DataExchangeClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("dataexchange");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Data Exchange");
+    d->serviceName = QStringLiteral("dataexchange");
 }
 
 /*!
@@ -453,9 +453,10 @@ UpdateRevisionResponse * DataExchangeClient::updateRevision(const UpdateRevision
 /*!
  * Constructs a DataExchangeClientPrivate object with public implementation \a q.
  */
-DataExchangeClientPrivate::DataExchangeClientPrivate(DataExchangeClient * const q) : q_ptr(q)
+DataExchangeClientPrivate::DataExchangeClientPrivate(DataExchangeClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace DataExchange

@@ -59,7 +59,8 @@ ListAssociationsForLicenseConfigurationResponse::ListAssociationsForLicenseConfi
  */
 const ListAssociationsForLicenseConfigurationRequest * ListAssociationsForLicenseConfigurationResponse::request() const
 {
-    return static_cast<const ListAssociationsForLicenseConfigurationRequest *>(LicenseManagerResponse::request());
+    Q_D(const ListAssociationsForLicenseConfigurationResponse);
+    return static_cast<const ListAssociationsForLicenseConfigurationRequest *>(d->request);
 }
 
 /*!

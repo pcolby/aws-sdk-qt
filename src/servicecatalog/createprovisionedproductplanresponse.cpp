@@ -61,7 +61,8 @@ CreateProvisionedProductPlanResponse::CreateProvisionedProductPlanResponse(
  */
 const CreateProvisionedProductPlanRequest * CreateProvisionedProductPlanResponse::request() const
 {
-    return static_cast<const CreateProvisionedProductPlanRequest *>(ServiceCatalogResponse::request());
+    Q_D(const CreateProvisionedProductPlanResponse);
+    return static_cast<const CreateProvisionedProductPlanRequest *>(d->request);
 }
 
 /*!

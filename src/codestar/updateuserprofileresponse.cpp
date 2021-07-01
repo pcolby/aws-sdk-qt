@@ -143,7 +143,8 @@ UpdateUserProfileResponse::UpdateUserProfileResponse(
  */
 const UpdateUserProfileRequest * UpdateUserProfileResponse::request() const
 {
-    return static_cast<const UpdateUserProfileRequest *>(CodeStarResponse::request());
+    Q_D(const UpdateUserProfileResponse);
+    return static_cast<const UpdateUserProfileRequest *>(d->request);
 }
 
 /*!

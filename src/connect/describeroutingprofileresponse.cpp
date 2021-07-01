@@ -79,7 +79,8 @@ DescribeRoutingProfileResponse::DescribeRoutingProfileResponse(
  */
 const DescribeRoutingProfileRequest * DescribeRoutingProfileResponse::request() const
 {
-    return static_cast<const DescribeRoutingProfileRequest *>(ConnectResponse::request());
+    Q_D(const DescribeRoutingProfileResponse);
+    return static_cast<const DescribeRoutingProfileRequest *>(d->request);
 }
 
 /*!

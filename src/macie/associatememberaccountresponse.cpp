@@ -62,7 +62,8 @@ AssociateMemberAccountResponse::AssociateMemberAccountResponse(
  */
 const AssociateMemberAccountRequest * AssociateMemberAccountResponse::request() const
 {
-    return static_cast<const AssociateMemberAccountRequest *>(MacieResponse::request());
+    Q_D(const AssociateMemberAccountResponse);
+    return static_cast<const AssociateMemberAccountRequest *>(d->request);
 }
 
 /*!

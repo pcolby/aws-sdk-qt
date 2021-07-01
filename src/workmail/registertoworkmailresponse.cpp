@@ -89,7 +89,8 @@ RegisterToWorkMailResponse::RegisterToWorkMailResponse(
  */
 const RegisterToWorkMailRequest * RegisterToWorkMailResponse::request() const
 {
-    return static_cast<const RegisterToWorkMailRequest *>(WorkMailResponse::request());
+    Q_D(const RegisterToWorkMailResponse);
+    return static_cast<const RegisterToWorkMailRequest *>(d->request);
 }
 
 /*!

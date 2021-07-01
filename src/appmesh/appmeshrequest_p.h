@@ -20,12 +20,15 @@
 #ifndef QTAWS_APPMESHREQUEST_P_H
 #define QTAWS_APPMESHREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "appmeshrequest.h"
+
 namespace QtAws {
 namespace AppMesh {
 
 class AppMeshRequest;
 
-class AppMeshRequestPrivate {
+class AppMeshRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AppMeshRequest::Action action; ///< AppMesh action to be performed.
@@ -36,9 +39,6 @@ public:
     AppMeshRequestPrivate(const AppMeshRequestPrivate &other, AppMeshRequest * const q);
 
     static QString toString(const AppMeshRequest::Action &action);
-
-protected:
-    AppMeshRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppMeshRequest)

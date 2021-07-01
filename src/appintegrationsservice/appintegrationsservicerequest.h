@@ -67,8 +67,7 @@ public:
 
 protected:
     /// @cond internal
-    AppIntegrationsServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AppIntegrationsServiceRequest(AppIntegrationsServiceRequestPrivate * const d);
+    AppIntegrationsServiceRequest(AppIntegrationsServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

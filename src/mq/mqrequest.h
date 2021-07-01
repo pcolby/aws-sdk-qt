@@ -80,8 +80,7 @@ public:
 
 protected:
     /// @cond internal
-    MqRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MqRequest(MqRequestPrivate * const d);
+    MqRequest(MqRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

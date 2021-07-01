@@ -56,7 +56,8 @@ DeleteKeySigningKeyResponse::DeleteKeySigningKeyResponse(
  */
 const DeleteKeySigningKeyRequest * DeleteKeySigningKeyResponse::request() const
 {
-    return static_cast<const DeleteKeySigningKeyRequest *>(Route53Response::request());
+    Q_D(const DeleteKeySigningKeyResponse);
+    return static_cast<const DeleteKeySigningKeyRequest *>(d->request);
 }
 
 /*!

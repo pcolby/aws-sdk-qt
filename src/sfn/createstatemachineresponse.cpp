@@ -74,7 +74,8 @@ CreateStateMachineResponse::CreateStateMachineResponse(
  */
 const CreateStateMachineRequest * CreateStateMachineResponse::request() const
 {
-    return static_cast<const CreateStateMachineRequest *>(SfnResponse::request());
+    Q_D(const CreateStateMachineResponse);
+    return static_cast<const CreateStateMachineRequest *>(d->request);
 }
 
 /*!

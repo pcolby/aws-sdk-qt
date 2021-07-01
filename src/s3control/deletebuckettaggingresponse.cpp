@@ -56,7 +56,8 @@ DeleteBucketTaggingResponse::DeleteBucketTaggingResponse(
  */
 const DeleteBucketTaggingRequest * DeleteBucketTaggingResponse::request() const
 {
-    return static_cast<const DeleteBucketTaggingRequest *>(S3ControlResponse::request());
+    Q_D(const DeleteBucketTaggingResponse);
+    return static_cast<const DeleteBucketTaggingRequest *>(d->request);
 }
 
 /*!

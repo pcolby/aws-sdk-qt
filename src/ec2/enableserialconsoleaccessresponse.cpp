@@ -87,7 +87,8 @@ EnableSerialConsoleAccessResponse::EnableSerialConsoleAccessResponse(
  */
 const EnableSerialConsoleAccessRequest * EnableSerialConsoleAccessResponse::request() const
 {
-    return static_cast<const EnableSerialConsoleAccessRequest *>(Ec2Response::request());
+    Q_D(const EnableSerialConsoleAccessResponse);
+    return static_cast<const EnableSerialConsoleAccessRequest *>(d->request);
 }
 
 /*!

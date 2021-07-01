@@ -64,7 +64,8 @@ RetryBuildResponse::RetryBuildResponse(
  */
 const RetryBuildRequest * RetryBuildResponse::request() const
 {
-    return static_cast<const RetryBuildRequest *>(CodeBuildResponse::request());
+    Q_D(const RetryBuildResponse);
+    return static_cast<const RetryBuildRequest *>(d->request);
 }
 
 /*!

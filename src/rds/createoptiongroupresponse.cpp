@@ -119,7 +119,8 @@ CreateOptionGroupResponse::CreateOptionGroupResponse(
  */
 const CreateOptionGroupRequest * CreateOptionGroupResponse::request() const
 {
-    return static_cast<const CreateOptionGroupRequest *>(RdsResponse::request());
+    Q_D(const CreateOptionGroupResponse);
+    return static_cast<const CreateOptionGroupRequest *>(d->request);
 }
 
 /*!

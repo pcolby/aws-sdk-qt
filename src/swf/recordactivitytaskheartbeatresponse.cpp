@@ -71,7 +71,8 @@ RecordActivityTaskHeartbeatResponse::RecordActivityTaskHeartbeatResponse(
  */
 const RecordActivityTaskHeartbeatRequest * RecordActivityTaskHeartbeatResponse::request() const
 {
-    return static_cast<const RecordActivityTaskHeartbeatRequest *>(SwfResponse::request());
+    Q_D(const RecordActivityTaskHeartbeatResponse);
+    return static_cast<const RecordActivityTaskHeartbeatRequest *>(d->request);
 }
 
 /*!

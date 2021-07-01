@@ -56,7 +56,8 @@ ListTemplateVersionsResponse::ListTemplateVersionsResponse(
  */
 const ListTemplateVersionsRequest * ListTemplateVersionsResponse::request() const
 {
-    return static_cast<const ListTemplateVersionsRequest *>(PinpointResponse::request());
+    Q_D(const ListTemplateVersionsResponse);
+    return static_cast<const ListTemplateVersionsRequest *>(d->request);
 }
 
 /*!

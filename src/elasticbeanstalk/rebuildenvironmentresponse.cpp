@@ -77,7 +77,8 @@ RebuildEnvironmentResponse::RebuildEnvironmentResponse(
  */
 const RebuildEnvironmentRequest * RebuildEnvironmentResponse::request() const
 {
-    return static_cast<const RebuildEnvironmentRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const RebuildEnvironmentResponse);
+    return static_cast<const RebuildEnvironmentRequest *>(d->request);
 }
 
 /*!

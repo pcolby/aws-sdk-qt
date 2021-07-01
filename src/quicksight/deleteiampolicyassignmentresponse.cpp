@@ -60,7 +60,8 @@ DeleteIAMPolicyAssignmentResponse::DeleteIAMPolicyAssignmentResponse(
  */
 const DeleteIAMPolicyAssignmentRequest * DeleteIAMPolicyAssignmentResponse::request() const
 {
-    return static_cast<const DeleteIAMPolicyAssignmentRequest *>(QuickSightResponse::request());
+    Q_D(const DeleteIAMPolicyAssignmentResponse);
+    return static_cast<const DeleteIAMPolicyAssignmentRequest *>(d->request);
 }
 
 /*!

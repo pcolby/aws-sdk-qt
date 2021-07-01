@@ -66,7 +66,8 @@ SetIdentityDkimEnabledResponse::SetIdentityDkimEnabledResponse(
  */
 const SetIdentityDkimEnabledRequest * SetIdentityDkimEnabledResponse::request() const
 {
-    return static_cast<const SetIdentityDkimEnabledRequest *>(SesResponse::request());
+    Q_D(const SetIdentityDkimEnabledResponse);
+    return static_cast<const SetIdentityDkimEnabledRequest *>(d->request);
 }
 
 /*!

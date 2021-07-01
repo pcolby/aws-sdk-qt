@@ -98,7 +98,8 @@ DescribeActivationsResponse::DescribeActivationsResponse(
  */
 const DescribeActivationsRequest * DescribeActivationsResponse::request() const
 {
-    return static_cast<const DescribeActivationsRequest *>(SsmResponse::request());
+    Q_D(const DescribeActivationsResponse);
+    return static_cast<const DescribeActivationsRequest *>(d->request);
 }
 
 /*!

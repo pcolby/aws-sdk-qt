@@ -72,7 +72,8 @@ RegisterTaskDefinitionResponse::RegisterTaskDefinitionResponse(
  */
 const RegisterTaskDefinitionRequest * RegisterTaskDefinitionResponse::request() const
 {
-    return static_cast<const RegisterTaskDefinitionRequest *>(EcsResponse::request());
+    Q_D(const RegisterTaskDefinitionResponse);
+    return static_cast<const RegisterTaskDefinitionRequest *>(d->request);
 }
 
 /*!

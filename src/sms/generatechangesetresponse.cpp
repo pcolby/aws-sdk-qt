@@ -68,7 +68,8 @@ GenerateChangeSetResponse::GenerateChangeSetResponse(
  */
 const GenerateChangeSetRequest * GenerateChangeSetResponse::request() const
 {
-    return static_cast<const GenerateChangeSetRequest *>(SmsResponse::request());
+    Q_D(const GenerateChangeSetResponse);
+    return static_cast<const GenerateChangeSetRequest *>(d->request);
 }
 
 /*!

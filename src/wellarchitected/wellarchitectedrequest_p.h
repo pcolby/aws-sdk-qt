@@ -20,12 +20,15 @@
 #ifndef QTAWS_WELLARCHITECTEDREQUEST_P_H
 #define QTAWS_WELLARCHITECTEDREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "wellarchitectedrequest.h"
+
 namespace QtAws {
 namespace WellArchitected {
 
 class WellArchitectedRequest;
 
-class WellArchitectedRequestPrivate {
+class WellArchitectedRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     WellArchitectedRequest::Action action; ///< WellArchitected action to be performed.
@@ -36,9 +39,6 @@ public:
     WellArchitectedRequestPrivate(const WellArchitectedRequestPrivate &other, WellArchitectedRequest * const q);
 
     static QString toString(const WellArchitectedRequest::Action &action);
-
-protected:
-    WellArchitectedRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(WellArchitectedRequest)

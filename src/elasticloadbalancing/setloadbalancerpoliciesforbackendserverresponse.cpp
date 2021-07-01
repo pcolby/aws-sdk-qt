@@ -83,7 +83,8 @@ SetLoadBalancerPoliciesForBackendServerResponse::SetLoadBalancerPoliciesForBacke
  */
 const SetLoadBalancerPoliciesForBackendServerRequest * SetLoadBalancerPoliciesForBackendServerResponse::request() const
 {
-    return static_cast<const SetLoadBalancerPoliciesForBackendServerRequest *>(ElasticLoadBalancingResponse::request());
+    Q_D(const SetLoadBalancerPoliciesForBackendServerResponse);
+    return static_cast<const SetLoadBalancerPoliciesForBackendServerRequest *>(d->request);
 }
 
 /*!

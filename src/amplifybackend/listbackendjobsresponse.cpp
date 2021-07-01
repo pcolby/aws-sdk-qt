@@ -56,7 +56,8 @@ ListBackendJobsResponse::ListBackendJobsResponse(
  */
 const ListBackendJobsRequest * ListBackendJobsResponse::request() const
 {
-    return static_cast<const ListBackendJobsRequest *>(AmplifyBackendResponse::request());
+    Q_D(const ListBackendJobsResponse);
+    return static_cast<const ListBackendJobsRequest *>(d->request);
 }
 
 /*!

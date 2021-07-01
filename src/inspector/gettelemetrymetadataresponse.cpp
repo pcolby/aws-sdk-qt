@@ -60,7 +60,8 @@ GetTelemetryMetadataResponse::GetTelemetryMetadataResponse(
  */
 const GetTelemetryMetadataRequest * GetTelemetryMetadataResponse::request() const
 {
-    return static_cast<const GetTelemetryMetadataRequest *>(InspectorResponse::request());
+    Q_D(const GetTelemetryMetadataResponse);
+    return static_cast<const GetTelemetryMetadataRequest *>(d->request);
 }
 
 /*!

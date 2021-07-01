@@ -87,16 +87,16 @@ SsoClient::SsoClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-06-10"),
-    QStringLiteral("portal.sso"),
-    QStringLiteral("AWS Single Sign-On"),
-    QStringLiteral("awsssoportal"),
-    parent), d_ptr(new SsoClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new SsoClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(SsoClient);
+    d->apiVersion = QStringLiteral("2019-06-10");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("portal.sso");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Single Sign-On");
+    d->serviceName = QStringLiteral("awsssoportal");
 }
 
 /*!
@@ -115,16 +115,16 @@ SsoClient::SsoClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-06-10"),
-    QStringLiteral("portal.sso"),
-    QStringLiteral("AWS Single Sign-On"),
-    QStringLiteral("awsssoportal"),
-    parent), d_ptr(new SsoClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new SsoClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(SsoClient);
+    d->apiVersion = QStringLiteral("2019-06-10");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("portal.sso");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Single Sign-On");
+    d->serviceName = QStringLiteral("awsssoportal");
 }
 
 /*!
@@ -194,9 +194,10 @@ LogoutResponse * SsoClient::logout(const LogoutRequest &request)
 /*!
  * Constructs a SsoClientPrivate object with public implementation \a q.
  */
-SsoClientPrivate::SsoClientPrivate(SsoClient * const q) : q_ptr(q)
+SsoClientPrivate::SsoClientPrivate(SsoClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SSO

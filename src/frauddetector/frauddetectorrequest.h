@@ -115,8 +115,7 @@ public:
 
 protected:
     /// @cond internal
-    FraudDetectorRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit FraudDetectorRequest(FraudDetectorRequestPrivate * const d);
+    FraudDetectorRequest(FraudDetectorRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

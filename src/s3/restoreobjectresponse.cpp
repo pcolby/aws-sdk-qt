@@ -55,7 +55,8 @@ RestoreObjectResponse::RestoreObjectResponse(
  */
 const RestoreObjectRequest * RestoreObjectResponse::request() const
 {
-    return static_cast<const RestoreObjectRequest *>(S3Response::request());
+    Q_D(const RestoreObjectResponse);
+    return static_cast<const RestoreObjectRequest *>(d->request);
 }
 
 /*!

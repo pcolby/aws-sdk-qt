@@ -66,12 +66,6 @@ public slots:
     PutReportDefinitionResponse * putReportDefinition(const PutReportDefinitionRequest &request);
     UpdateReportDefinitionResponse * updateReportDefinition(const UpdateReportDefinitionRequest &request);
 
-protected:
-    /// @cond internal
-    ApplicationCostProfilerClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ApplicationCostProfilerClient(ApplicationCostProfilerClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ApplicationCostProfilerClient)
     Q_DISABLE_COPY(ApplicationCostProfilerClient)

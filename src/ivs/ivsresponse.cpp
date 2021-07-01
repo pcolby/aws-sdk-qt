@@ -37,7 +37,7 @@ namespace IVS {
  * Constructs a IvsResponse object with parent \a parent.
  */
 IvsResponse::IvsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IvsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new IvsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ IvsResponse::IvsResponse(QObject * const parent)
  * implementation that inherits from IvsResponsePrivate.
  */
 IvsResponse::IvsResponse(IvsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void IvsResponse::parseFailure(QIODevice &response)
  * Constructs a IvsResponsePrivate object with public implementation \a q.
  */
 IvsResponsePrivate::IvsResponsePrivate(
-    IvsResponse * const q) : q_ptr(q)
+    IvsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -63,7 +63,8 @@ CreateDatabaseResponse::CreateDatabaseResponse(
  */
 const CreateDatabaseRequest * CreateDatabaseResponse::request() const
 {
-    return static_cast<const CreateDatabaseRequest *>(TimestreamWriteResponse::request());
+    Q_D(const CreateDatabaseResponse);
+    return static_cast<const CreateDatabaseRequest *>(d->request);
 }
 
 /*!

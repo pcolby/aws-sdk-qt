@@ -59,7 +59,8 @@ GetBackupPlanFromTemplateResponse::GetBackupPlanFromTemplateResponse(
  */
 const GetBackupPlanFromTemplateRequest * GetBackupPlanFromTemplateResponse::request() const
 {
-    return static_cast<const GetBackupPlanFromTemplateRequest *>(BackupResponse::request());
+    Q_D(const GetBackupPlanFromTemplateResponse);
+    return static_cast<const GetBackupPlanFromTemplateRequest *>(d->request);
 }
 
 /*!

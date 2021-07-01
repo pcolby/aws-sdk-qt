@@ -79,7 +79,8 @@ UpdateRoutingProfileDefaultOutboundQueueResponse::UpdateRoutingProfileDefaultOut
  */
 const UpdateRoutingProfileDefaultOutboundQueueRequest * UpdateRoutingProfileDefaultOutboundQueueResponse::request() const
 {
-    return static_cast<const UpdateRoutingProfileDefaultOutboundQueueRequest *>(ConnectResponse::request());
+    Q_D(const UpdateRoutingProfileDefaultOutboundQueueResponse);
+    return static_cast<const UpdateRoutingProfileDefaultOutboundQueueRequest *>(d->request);
 }
 
 /*!

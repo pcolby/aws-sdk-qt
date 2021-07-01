@@ -58,7 +58,8 @@ ListAnomalyGroupSummariesResponse::ListAnomalyGroupSummariesResponse(
  */
 const ListAnomalyGroupSummariesRequest * ListAnomalyGroupSummariesResponse::request() const
 {
-    return static_cast<const ListAnomalyGroupSummariesRequest *>(LookoutMetricsResponse::request());
+    Q_D(const ListAnomalyGroupSummariesResponse);
+    return static_cast<const ListAnomalyGroupSummariesRequest *>(d->request);
 }
 
 /*!

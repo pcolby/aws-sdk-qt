@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    KmsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     KmsResponse(KmsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

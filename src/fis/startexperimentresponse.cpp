@@ -58,7 +58,8 @@ StartExperimentResponse::StartExperimentResponse(
  */
 const StartExperimentRequest * StartExperimentResponse::request() const
 {
-    return static_cast<const StartExperimentRequest *>(FisResponse::request());
+    Q_D(const StartExperimentResponse);
+    return static_cast<const StartExperimentRequest *>(d->request);
 }
 
 /*!

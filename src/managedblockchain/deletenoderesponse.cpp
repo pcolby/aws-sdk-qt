@@ -72,7 +72,8 @@ DeleteNodeResponse::DeleteNodeResponse(
  */
 const DeleteNodeRequest * DeleteNodeResponse::request() const
 {
-    return static_cast<const DeleteNodeRequest *>(ManagedBlockchainResponse::request());
+    Q_D(const DeleteNodeResponse);
+    return static_cast<const DeleteNodeRequest *>(d->request);
 }
 
 /*!

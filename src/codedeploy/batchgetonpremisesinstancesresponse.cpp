@@ -141,7 +141,8 @@ BatchGetOnPremisesInstancesResponse::BatchGetOnPremisesInstancesResponse(
  */
 const BatchGetOnPremisesInstancesRequest * BatchGetOnPremisesInstancesResponse::request() const
 {
-    return static_cast<const BatchGetOnPremisesInstancesRequest *>(CodeDeployResponse::request());
+    Q_D(const BatchGetOnPremisesInstancesResponse);
+    return static_cast<const BatchGetOnPremisesInstancesRequest *>(d->request);
 }
 
 /*!

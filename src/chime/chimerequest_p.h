@@ -20,12 +20,15 @@
 #ifndef QTAWS_CHIMEREQUEST_P_H
 #define QTAWS_CHIMEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "chimerequest.h"
+
 namespace QtAws {
 namespace Chime {
 
 class ChimeRequest;
 
-class ChimeRequestPrivate {
+class ChimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ChimeRequest::Action action; ///< Chime action to be performed.
@@ -36,9 +39,6 @@ public:
     ChimeRequestPrivate(const ChimeRequestPrivate &other, ChimeRequest * const q);
 
     static QString toString(const ChimeRequest::Action &action);
-
-protected:
-    ChimeRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ChimeRequest)

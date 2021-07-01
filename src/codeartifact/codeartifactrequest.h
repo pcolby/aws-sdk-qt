@@ -92,8 +92,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeArtifactRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CodeArtifactRequest(CodeArtifactRequestPrivate * const d);
+    CodeArtifactRequest(CodeArtifactRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

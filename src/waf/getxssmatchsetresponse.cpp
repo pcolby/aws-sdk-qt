@@ -76,7 +76,8 @@ GetXssMatchSetResponse::GetXssMatchSetResponse(
  */
 const GetXssMatchSetRequest * GetXssMatchSetResponse::request() const
 {
-    return static_cast<const GetXssMatchSetRequest *>(WafResponse::request());
+    Q_D(const GetXssMatchSetResponse);
+    return static_cast<const GetXssMatchSetRequest *>(d->request);
 }
 
 /*!

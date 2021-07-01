@@ -78,7 +78,8 @@ DeauthorizeConnectionResponse::DeauthorizeConnectionResponse(
  */
 const DeauthorizeConnectionRequest * DeauthorizeConnectionResponse::request() const
 {
-    return static_cast<const DeauthorizeConnectionRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const DeauthorizeConnectionResponse);
+    return static_cast<const DeauthorizeConnectionRequest *>(d->request);
 }
 
 /*!

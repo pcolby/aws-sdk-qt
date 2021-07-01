@@ -204,12 +204,6 @@ public slots:
     UpdateServicePrimaryTaskSetResponse * updateServicePrimaryTaskSet(const UpdateServicePrimaryTaskSetRequest &request);
     UpdateTaskSetResponse * updateTaskSet(const UpdateTaskSetRequest &request);
 
-protected:
-    /// @cond internal
-    EcsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EcsClient(EcsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(EcsClient)
     Q_DISABLE_COPY(EcsClient)

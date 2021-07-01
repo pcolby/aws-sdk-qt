@@ -87,7 +87,8 @@ DescribeTransitGatewayVpcAttachmentsResponse::DescribeTransitGatewayVpcAttachmen
  */
 const DescribeTransitGatewayVpcAttachmentsRequest * DescribeTransitGatewayVpcAttachmentsResponse::request() const
 {
-    return static_cast<const DescribeTransitGatewayVpcAttachmentsRequest *>(Ec2Response::request());
+    Q_D(const DescribeTransitGatewayVpcAttachmentsResponse);
+    return static_cast<const DescribeTransitGatewayVpcAttachmentsRequest *>(d->request);
 }
 
 /*!

@@ -70,7 +70,8 @@ CreateTrialResponse::CreateTrialResponse(
  */
 const CreateTrialRequest * CreateTrialResponse::request() const
 {
-    return static_cast<const CreateTrialRequest *>(SageMakerResponse::request());
+    Q_D(const CreateTrialResponse);
+    return static_cast<const CreateTrialRequest *>(d->request);
 }
 
 /*!

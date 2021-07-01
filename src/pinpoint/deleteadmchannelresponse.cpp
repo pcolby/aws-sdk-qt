@@ -56,7 +56,8 @@ DeleteAdmChannelResponse::DeleteAdmChannelResponse(
  */
 const DeleteAdmChannelRequest * DeleteAdmChannelResponse::request() const
 {
-    return static_cast<const DeleteAdmChannelRequest *>(PinpointResponse::request());
+    Q_D(const DeleteAdmChannelResponse);
+    return static_cast<const DeleteAdmChannelRequest *>(d->request);
 }
 
 /*!

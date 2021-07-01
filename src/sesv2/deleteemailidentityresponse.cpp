@@ -88,7 +88,8 @@ DeleteEmailIdentityResponse::DeleteEmailIdentityResponse(
  */
 const DeleteEmailIdentityRequest * DeleteEmailIdentityResponse::request() const
 {
-    return static_cast<const DeleteEmailIdentityRequest *>(Sesv2Response::request());
+    Q_D(const DeleteEmailIdentityResponse);
+    return static_cast<const DeleteEmailIdentityRequest *>(d->request);
 }
 
 /*!

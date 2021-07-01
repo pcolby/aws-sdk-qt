@@ -56,7 +56,8 @@ DescribeFaqResponse::DescribeFaqResponse(
  */
 const DescribeFaqRequest * DescribeFaqResponse::request() const
 {
-    return static_cast<const DescribeFaqRequest *>(kendraResponse::request());
+    Q_D(const DescribeFaqResponse);
+    return static_cast<const DescribeFaqRequest *>(d->request);
 }
 
 /*!

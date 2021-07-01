@@ -60,7 +60,8 @@ ListClassificationJobsResponse::ListClassificationJobsResponse(
  */
 const ListClassificationJobsRequest * ListClassificationJobsResponse::request() const
 {
-    return static_cast<const ListClassificationJobsRequest *>(Macie2Response::request());
+    Q_D(const ListClassificationJobsResponse);
+    return static_cast<const ListClassificationJobsRequest *>(d->request);
 }
 
 /*!

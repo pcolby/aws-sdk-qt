@@ -58,7 +58,8 @@ SearchDatabasesByLFTagsResponse::SearchDatabasesByLFTagsResponse(
  */
 const SearchDatabasesByLFTagsRequest * SearchDatabasesByLFTagsResponse::request() const
 {
-    return static_cast<const SearchDatabasesByLFTagsRequest *>(LakeFormationResponse::request());
+    Q_D(const SearchDatabasesByLFTagsResponse);
+    return static_cast<const SearchDatabasesByLFTagsRequest *>(d->request);
 }
 
 /*!

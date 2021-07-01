@@ -20,12 +20,15 @@
 #ifndef QTAWS_IOTDEVICEADVISORREQUEST_P_H
 #define QTAWS_IOTDEVICEADVISORREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "iotdeviceadvisorrequest.h"
+
 namespace QtAws {
 namespace IoTDeviceAdvisor {
 
 class IoTDeviceAdvisorRequest;
 
-class IoTDeviceAdvisorRequestPrivate {
+class IoTDeviceAdvisorRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTDeviceAdvisorRequest::Action action; ///< IoTDeviceAdvisor action to be performed.
@@ -36,9 +39,6 @@ public:
     IoTDeviceAdvisorRequestPrivate(const IoTDeviceAdvisorRequestPrivate &other, IoTDeviceAdvisorRequest * const q);
 
     static QString toString(const IoTDeviceAdvisorRequest::Action &action);
-
-protected:
-    IoTDeviceAdvisorRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTDeviceAdvisorRequest)

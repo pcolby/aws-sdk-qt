@@ -63,7 +63,8 @@ ExecuteStatementResponse::ExecuteStatementResponse(
  */
 const ExecuteStatementRequest * ExecuteStatementResponse::request() const
 {
-    return static_cast<const ExecuteStatementRequest *>(RedshiftDataAPIServiceResponse::request());
+    Q_D(const ExecuteStatementResponse);
+    return static_cast<const ExecuteStatementRequest *>(d->request);
 }
 
 /*!

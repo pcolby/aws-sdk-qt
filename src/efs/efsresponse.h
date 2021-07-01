@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    EfsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     EfsResponse(EfsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

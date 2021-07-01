@@ -115,7 +115,8 @@ CreateScriptResponse::CreateScriptResponse(
  */
 const CreateScriptRequest * CreateScriptResponse::request() const
 {
-    return static_cast<const CreateScriptRequest *>(GameLiftResponse::request());
+    Q_D(const CreateScriptResponse);
+    return static_cast<const CreateScriptRequest *>(d->request);
 }
 
 /*!

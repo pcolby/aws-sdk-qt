@@ -177,7 +177,8 @@ DeleteServiceTemplateVersionResponse::DeleteServiceTemplateVersionResponse(
  */
 const DeleteServiceTemplateVersionRequest * DeleteServiceTemplateVersionResponse::request() const
 {
-    return static_cast<const DeleteServiceTemplateVersionRequest *>(ProtonResponse::request());
+    Q_D(const DeleteServiceTemplateVersionResponse);
+    return static_cast<const DeleteServiceTemplateVersionRequest *>(d->request);
 }
 
 /*!

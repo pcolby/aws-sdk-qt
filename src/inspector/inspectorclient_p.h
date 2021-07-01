@@ -20,20 +20,19 @@
 #ifndef QTAWS_INSPECTORCLIENT_P_H
 #define QTAWS_INSPECTORCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Inspector {
 
 class InspectorClient;
 
-class InspectorClientPrivate {
+class InspectorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit InspectorClientPrivate(InspectorClient * const q);
-
-protected:
-    InspectorClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(InspectorClient)

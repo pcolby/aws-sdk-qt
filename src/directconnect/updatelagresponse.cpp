@@ -61,7 +61,8 @@ UpdateLagResponse::UpdateLagResponse(
  */
 const UpdateLagRequest * UpdateLagResponse::request() const
 {
-    return static_cast<const UpdateLagRequest *>(DirectConnectResponse::request());
+    Q_D(const UpdateLagResponse);
+    return static_cast<const UpdateLagRequest *>(d->request);
 }
 
 /*!

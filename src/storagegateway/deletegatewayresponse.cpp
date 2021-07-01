@@ -124,7 +124,8 @@ DeleteGatewayResponse::DeleteGatewayResponse(
  */
 const DeleteGatewayRequest * DeleteGatewayResponse::request() const
 {
-    return static_cast<const DeleteGatewayRequest *>(StorageGatewayResponse::request());
+    Q_D(const DeleteGatewayResponse);
+    return static_cast<const DeleteGatewayRequest *>(d->request);
 }
 
 /*!

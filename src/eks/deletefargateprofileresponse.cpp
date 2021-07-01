@@ -65,7 +65,8 @@ DeleteFargateProfileResponse::DeleteFargateProfileResponse(
  */
 const DeleteFargateProfileRequest * DeleteFargateProfileResponse::request() const
 {
-    return static_cast<const DeleteFargateProfileRequest *>(EksResponse::request());
+    Q_D(const DeleteFargateProfileResponse);
+    return static_cast<const DeleteFargateProfileRequest *>(d->request);
 }
 
 /*!

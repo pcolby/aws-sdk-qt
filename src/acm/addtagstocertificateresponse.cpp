@@ -60,7 +60,8 @@ AddTagsToCertificateResponse::AddTagsToCertificateResponse(
  */
 const AddTagsToCertificateRequest * AddTagsToCertificateResponse::request() const
 {
-    return static_cast<const AddTagsToCertificateRequest *>(AcmResponse::request());
+    Q_D(const AddTagsToCertificateResponse);
+    return static_cast<const AddTagsToCertificateRequest *>(d->request);
 }
 
 /*!

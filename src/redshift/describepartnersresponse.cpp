@@ -85,7 +85,8 @@ DescribePartnersResponse::DescribePartnersResponse(
  */
 const DescribePartnersRequest * DescribePartnersResponse::request() const
 {
-    return static_cast<const DescribePartnersRequest *>(RedshiftResponse::request());
+    Q_D(const DescribePartnersResponse);
+    return static_cast<const DescribePartnersRequest *>(d->request);
 }
 
 /*!

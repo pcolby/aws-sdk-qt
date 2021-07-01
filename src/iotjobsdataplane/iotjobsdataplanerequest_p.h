@@ -20,12 +20,15 @@
 #ifndef QTAWS_IOTJOBSDATAPLANEREQUEST_P_H
 #define QTAWS_IOTJOBSDATAPLANEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "iotjobsdataplanerequest.h"
+
 namespace QtAws {
 namespace IoTJobsDataPlane {
 
 class IoTJobsDataPlaneRequest;
 
-class IoTJobsDataPlaneRequestPrivate {
+class IoTJobsDataPlaneRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoTJobsDataPlaneRequest::Action action; ///< IoTJobsDataPlane action to be performed.
@@ -36,9 +39,6 @@ public:
     IoTJobsDataPlaneRequestPrivate(const IoTJobsDataPlaneRequestPrivate &other, IoTJobsDataPlaneRequest * const q);
 
     static QString toString(const IoTJobsDataPlaneRequest::Action &action);
-
-protected:
-    IoTJobsDataPlaneRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTJobsDataPlaneRequest)

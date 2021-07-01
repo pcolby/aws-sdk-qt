@@ -62,7 +62,8 @@ DetachUserPolicyResponse::DetachUserPolicyResponse(
  */
 const DetachUserPolicyRequest * DetachUserPolicyResponse::request() const
 {
-    return static_cast<const DetachUserPolicyRequest *>(IamResponse::request());
+    Q_D(const DetachUserPolicyResponse);
+    return static_cast<const DetachUserPolicyRequest *>(d->request);
 }
 
 /*!

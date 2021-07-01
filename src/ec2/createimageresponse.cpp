@@ -87,7 +87,8 @@ CreateImageResponse::CreateImageResponse(
  */
 const CreateImageRequest * CreateImageResponse::request() const
 {
-    return static_cast<const CreateImageRequest *>(Ec2Response::request());
+    Q_D(const CreateImageResponse);
+    return static_cast<const CreateImageRequest *>(d->request);
 }
 
 /*!

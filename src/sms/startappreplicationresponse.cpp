@@ -68,7 +68,8 @@ StartAppReplicationResponse::StartAppReplicationResponse(
  */
 const StartAppReplicationRequest * StartAppReplicationResponse::request() const
 {
-    return static_cast<const StartAppReplicationRequest *>(SmsResponse::request());
+    Q_D(const StartAppReplicationResponse);
+    return static_cast<const StartAppReplicationRequest *>(d->request);
 }
 
 /*!

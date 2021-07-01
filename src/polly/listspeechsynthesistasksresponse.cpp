@@ -62,7 +62,8 @@ ListSpeechSynthesisTasksResponse::ListSpeechSynthesisTasksResponse(
  */
 const ListSpeechSynthesisTasksRequest * ListSpeechSynthesisTasksResponse::request() const
 {
-    return static_cast<const ListSpeechSynthesisTasksRequest *>(PollyResponse::request());
+    Q_D(const ListSpeechSynthesisTasksResponse);
+    return static_cast<const ListSpeechSynthesisTasksRequest *>(d->request);
 }
 
 /*!

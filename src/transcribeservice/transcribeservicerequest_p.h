@@ -20,12 +20,15 @@
 #ifndef QTAWS_TRANSCRIBESERVICEREQUEST_P_H
 #define QTAWS_TRANSCRIBESERVICEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "transcribeservicerequest.h"
+
 namespace QtAws {
 namespace TranscribeService {
 
 class TranscribeServiceRequest;
 
-class TranscribeServiceRequestPrivate {
+class TranscribeServiceRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     TranscribeServiceRequest::Action action; ///< TranscribeService action to be performed.
@@ -36,9 +39,6 @@ public:
     TranscribeServiceRequestPrivate(const TranscribeServiceRequestPrivate &other, TranscribeServiceRequest * const q);
 
     static QString toString(const TranscribeServiceRequest::Action &action);
-
-protected:
-    TranscribeServiceRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(TranscribeServiceRequest)

@@ -60,12 +60,6 @@ public slots:
     RegisterUsageResponse * registerUsage(const RegisterUsageRequest &request);
     ResolveCustomerResponse * resolveCustomer(const ResolveCustomerRequest &request);
 
-protected:
-    /// @cond internal
-    MarketplaceMeteringClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MarketplaceMeteringClient(MarketplaceMeteringClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(MarketplaceMeteringClient)
     Q_DISABLE_COPY(MarketplaceMeteringClient)

@@ -58,7 +58,8 @@ DeleteConnectionResponse::DeleteConnectionResponse(
  */
 const DeleteConnectionRequest * DeleteConnectionResponse::request() const
 {
-    return static_cast<const DeleteConnectionRequest *>(GlueResponse::request());
+    Q_D(const DeleteConnectionResponse);
+    return static_cast<const DeleteConnectionRequest *>(d->request);
 }
 
 /*!

@@ -70,7 +70,8 @@ DeleteImageResponse::DeleteImageResponse(
  */
 const DeleteImageRequest * DeleteImageResponse::request() const
 {
-    return static_cast<const DeleteImageRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteImageResponse);
+    return static_cast<const DeleteImageRequest *>(d->request);
 }
 
 /*!

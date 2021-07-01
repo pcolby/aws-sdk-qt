@@ -55,7 +55,8 @@ GetSignalingChannelEndpointResponse::GetSignalingChannelEndpointResponse(
  */
 const GetSignalingChannelEndpointRequest * GetSignalingChannelEndpointResponse::request() const
 {
-    return static_cast<const GetSignalingChannelEndpointRequest *>(KinesisVideoResponse::request());
+    Q_D(const GetSignalingChannelEndpointResponse);
+    return static_cast<const GetSignalingChannelEndpointRequest *>(d->request);
 }
 
 /*!

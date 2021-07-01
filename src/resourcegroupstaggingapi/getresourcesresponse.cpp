@@ -55,7 +55,8 @@ GetResourcesResponse::GetResourcesResponse(
  */
 const GetResourcesRequest * GetResourcesResponse::request() const
 {
-    return static_cast<const GetResourcesRequest *>(ResourceGroupsTaggingAPIResponse::request());
+    Q_D(const GetResourcesResponse);
+    return static_cast<const GetResourcesRequest *>(d->request);
 }
 
 /*!

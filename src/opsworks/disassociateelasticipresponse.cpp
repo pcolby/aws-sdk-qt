@@ -161,7 +161,8 @@ DisassociateElasticIpResponse::DisassociateElasticIpResponse(
  */
 const DisassociateElasticIpRequest * DisassociateElasticIpResponse::request() const
 {
-    return static_cast<const DisassociateElasticIpRequest *>(OpsWorksResponse::request());
+    Q_D(const DisassociateElasticIpResponse);
+    return static_cast<const DisassociateElasticIpRequest *>(d->request);
 }
 
 /*!

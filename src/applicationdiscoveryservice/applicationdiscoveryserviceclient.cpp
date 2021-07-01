@@ -213,16 +213,16 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-11-01"),
-    QStringLiteral("discovery"),
-    QStringLiteral("AWS Application Discovery Service"),
-    QStringLiteral("discovery"),
-    parent), d_ptr(new ApplicationDiscoveryServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ApplicationDiscoveryServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ApplicationDiscoveryServiceClient);
+    d->apiVersion = QStringLiteral("2015-11-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("discovery");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Application Discovery Service");
+    d->serviceName = QStringLiteral("discovery");
 }
 
 /*!
@@ -241,16 +241,16 @@ ApplicationDiscoveryServiceClient::ApplicationDiscoveryServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-11-01"),
-    QStringLiteral("discovery"),
-    QStringLiteral("AWS Application Discovery Service"),
-    QStringLiteral("discovery"),
-    parent), d_ptr(new ApplicationDiscoveryServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ApplicationDiscoveryServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ApplicationDiscoveryServiceClient);
+    d->apiVersion = QStringLiteral("2015-11-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("discovery");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Application Discovery Service");
+    d->serviceName = QStringLiteral("discovery");
 }
 
 /*!
@@ -725,9 +725,10 @@ UpdateApplicationResponse * ApplicationDiscoveryServiceClient::updateApplication
 /*!
  * Constructs a ApplicationDiscoveryServiceClientPrivate object with public implementation \a q.
  */
-ApplicationDiscoveryServiceClientPrivate::ApplicationDiscoveryServiceClientPrivate(ApplicationDiscoveryServiceClient * const q) : q_ptr(q)
+ApplicationDiscoveryServiceClientPrivate::ApplicationDiscoveryServiceClientPrivate(ApplicationDiscoveryServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ApplicationDiscoveryService

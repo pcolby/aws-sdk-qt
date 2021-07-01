@@ -58,7 +58,8 @@ DescribeAccountModificationsResponse::DescribeAccountModificationsResponse(
  */
 const DescribeAccountModificationsRequest * DescribeAccountModificationsResponse::request() const
 {
-    return static_cast<const DescribeAccountModificationsRequest *>(WorkSpacesResponse::request());
+    Q_D(const DescribeAccountModificationsResponse);
+    return static_cast<const DescribeAccountModificationsRequest *>(d->request);
 }
 
 /*!

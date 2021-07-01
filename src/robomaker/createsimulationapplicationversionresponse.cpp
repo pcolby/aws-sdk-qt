@@ -56,7 +56,8 @@ CreateSimulationApplicationVersionResponse::CreateSimulationApplicationVersionRe
  */
 const CreateSimulationApplicationVersionRequest * CreateSimulationApplicationVersionResponse::request() const
 {
-    return static_cast<const CreateSimulationApplicationVersionRequest *>(RoboMakerResponse::request());
+    Q_D(const CreateSimulationApplicationVersionResponse);
+    return static_cast<const CreateSimulationApplicationVersionRequest *>(d->request);
 }
 
 /*!

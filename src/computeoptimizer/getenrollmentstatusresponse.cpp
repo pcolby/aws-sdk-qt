@@ -64,7 +64,8 @@ GetEnrollmentStatusResponse::GetEnrollmentStatusResponse(
  */
 const GetEnrollmentStatusRequest * GetEnrollmentStatusResponse::request() const
 {
-    return static_cast<const GetEnrollmentStatusRequest *>(ComputeOptimizerResponse::request());
+    Q_D(const GetEnrollmentStatusResponse);
+    return static_cast<const GetEnrollmentStatusRequest *>(d->request);
 }
 
 /*!

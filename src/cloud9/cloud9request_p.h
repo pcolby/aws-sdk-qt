@@ -20,12 +20,15 @@
 #ifndef QTAWS_CLOUD9REQUEST_P_H
 #define QTAWS_CLOUD9REQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "cloud9request.h"
+
 namespace QtAws {
 namespace Cloud9 {
 
 class Cloud9Request;
 
-class Cloud9RequestPrivate {
+class Cloud9RequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     Cloud9Request::Action action; ///< Cloud9 action to be performed.
@@ -36,9 +39,6 @@ public:
     Cloud9RequestPrivate(const Cloud9RequestPrivate &other, Cloud9Request * const q);
 
     static QString toString(const Cloud9Request::Action &action);
-
-protected:
-    Cloud9Request * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Cloud9Request)

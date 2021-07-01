@@ -119,7 +119,8 @@ DescribeDBInstanceAutomatedBackupsResponse::DescribeDBInstanceAutomatedBackupsRe
  */
 const DescribeDBInstanceAutomatedBackupsRequest * DescribeDBInstanceAutomatedBackupsResponse::request() const
 {
-    return static_cast<const DescribeDBInstanceAutomatedBackupsRequest *>(RdsResponse::request());
+    Q_D(const DescribeDBInstanceAutomatedBackupsResponse);
+    return static_cast<const DescribeDBInstanceAutomatedBackupsRequest *>(d->request);
 }
 
 /*!

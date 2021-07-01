@@ -57,7 +57,8 @@ CreateConfigurationResponse::CreateConfigurationResponse(
  */
 const CreateConfigurationRequest * CreateConfigurationResponse::request() const
 {
-    return static_cast<const CreateConfigurationRequest *>(MqResponse::request());
+    Q_D(const CreateConfigurationResponse);
+    return static_cast<const CreateConfigurationRequest *>(d->request);
 }
 
 /*!

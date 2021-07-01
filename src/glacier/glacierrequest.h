@@ -91,8 +91,7 @@ public:
 
 protected:
     /// @cond internal
-    GlacierRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit GlacierRequest(GlacierRequestPrivate * const d);
+    GlacierRequest(GlacierRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -62,7 +62,8 @@ DescribeMigrationTaskResponse::DescribeMigrationTaskResponse(
  */
 const DescribeMigrationTaskRequest * DescribeMigrationTaskResponse::request() const
 {
-    return static_cast<const DescribeMigrationTaskRequest *>(MigrationHubResponse::request());
+    Q_D(const DescribeMigrationTaskResponse);
+    return static_cast<const DescribeMigrationTaskRequest *>(d->request);
 }
 
 /*!

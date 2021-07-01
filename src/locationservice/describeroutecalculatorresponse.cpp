@@ -56,7 +56,8 @@ DescribeRouteCalculatorResponse::DescribeRouteCalculatorResponse(
  */
 const DescribeRouteCalculatorRequest * DescribeRouteCalculatorResponse::request() const
 {
-    return static_cast<const DescribeRouteCalculatorRequest *>(LocationServiceResponse::request());
+    Q_D(const DescribeRouteCalculatorResponse);
+    return static_cast<const DescribeRouteCalculatorRequest *>(d->request);
 }
 
 /*!

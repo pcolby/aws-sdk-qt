@@ -129,7 +129,8 @@ SubscribeResponse::SubscribeResponse(
  */
 const SubscribeRequest * SubscribeResponse::request() const
 {
-    return static_cast<const SubscribeRequest *>(CodeStarNotificationsResponse::request());
+    Q_D(const SubscribeResponse);
+    return static_cast<const SubscribeRequest *>(d->request);
 }
 
 /*!

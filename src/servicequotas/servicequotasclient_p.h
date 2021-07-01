@@ -20,20 +20,19 @@
 #ifndef QTAWS_SERVICEQUOTASCLIENT_P_H
 #define QTAWS_SERVICEQUOTASCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ServiceQuotas {
 
 class ServiceQuotasClient;
 
-class ServiceQuotasClientPrivate {
+class ServiceQuotasClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ServiceQuotasClientPrivate(ServiceQuotasClient * const q);
-
-protected:
-    ServiceQuotasClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ServiceQuotasClient)

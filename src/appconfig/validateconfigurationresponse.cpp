@@ -105,7 +105,8 @@ ValidateConfigurationResponse::ValidateConfigurationResponse(
  */
 const ValidateConfigurationRequest * ValidateConfigurationResponse::request() const
 {
-    return static_cast<const ValidateConfigurationRequest *>(AppConfigResponse::request());
+    Q_D(const ValidateConfigurationResponse);
+    return static_cast<const ValidateConfigurationRequest *>(d->request);
 }
 
 /*!

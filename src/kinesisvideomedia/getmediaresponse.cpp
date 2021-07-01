@@ -55,7 +55,8 @@ GetMediaResponse::GetMediaResponse(
  */
 const GetMediaRequest * GetMediaResponse::request() const
 {
-    return static_cast<const GetMediaRequest *>(KinesisVideoMediaResponse::request());
+    Q_D(const GetMediaResponse);
+    return static_cast<const GetMediaRequest *>(d->request);
 }
 
 /*!

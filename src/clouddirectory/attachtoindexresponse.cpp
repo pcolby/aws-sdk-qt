@@ -63,7 +63,8 @@ AttachToIndexResponse::AttachToIndexResponse(
  */
 const AttachToIndexRequest * AttachToIndexResponse::request() const
 {
-    return static_cast<const AttachToIndexRequest *>(CloudDirectoryResponse::request());
+    Q_D(const AttachToIndexResponse);
+    return static_cast<const AttachToIndexRequest *>(d->request);
 }
 
 /*!

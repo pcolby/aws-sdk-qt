@@ -98,7 +98,8 @@ DeleteAttendeeResponse::DeleteAttendeeResponse(
  */
 const DeleteAttendeeRequest * DeleteAttendeeResponse::request() const
 {
-    return static_cast<const DeleteAttendeeRequest *>(ChimeResponse::request());
+    Q_D(const DeleteAttendeeResponse);
+    return static_cast<const DeleteAttendeeRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ GetVoiceConnectorStreamingConfigurationResponse::GetVoiceConnectorStreamingConfi
  */
 const GetVoiceConnectorStreamingConfigurationRequest * GetVoiceConnectorStreamingConfigurationResponse::request() const
 {
-    return static_cast<const GetVoiceConnectorStreamingConfigurationRequest *>(ChimeResponse::request());
+    Q_D(const GetVoiceConnectorStreamingConfigurationResponse);
+    return static_cast<const GetVoiceConnectorStreamingConfigurationRequest *>(d->request);
 }
 
 /*!

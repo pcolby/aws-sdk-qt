@@ -161,7 +161,8 @@ DescribeElasticLoadBalancersResponse::DescribeElasticLoadBalancersResponse(
  */
 const DescribeElasticLoadBalancersRequest * DescribeElasticLoadBalancersResponse::request() const
 {
-    return static_cast<const DescribeElasticLoadBalancersRequest *>(OpsWorksResponse::request());
+    Q_D(const DescribeElasticLoadBalancersResponse);
+    return static_cast<const DescribeElasticLoadBalancersRequest *>(d->request);
 }
 
 /*!

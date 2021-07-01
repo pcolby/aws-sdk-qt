@@ -62,7 +62,8 @@ SimulatePrincipalPolicyResponse::SimulatePrincipalPolicyResponse(
  */
 const SimulatePrincipalPolicyRequest * SimulatePrincipalPolicyResponse::request() const
 {
-    return static_cast<const SimulatePrincipalPolicyRequest *>(IamResponse::request());
+    Q_D(const SimulatePrincipalPolicyResponse);
+    return static_cast<const SimulatePrincipalPolicyRequest *>(d->request);
 }
 
 /*!

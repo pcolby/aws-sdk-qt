@@ -37,7 +37,7 @@ namespace Lambda {
  * Constructs a LambdaResponse object with parent \a parent.
  */
 LambdaResponse::LambdaResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LambdaResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new LambdaResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ LambdaResponse::LambdaResponse(QObject * const parent)
  * implementation that inherits from LambdaResponsePrivate.
  */
 LambdaResponse::LambdaResponse(LambdaResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void LambdaResponse::parseFailure(QIODevice &response)
  * Constructs a LambdaResponsePrivate object with public implementation \a q.
  */
 LambdaResponsePrivate::LambdaResponsePrivate(
-    LambdaResponse * const q) : q_ptr(q)
+    LambdaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

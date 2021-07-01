@@ -98,7 +98,8 @@ ListBotsResponse::ListBotsResponse(
  */
 const ListBotsRequest * ListBotsResponse::request() const
 {
-    return static_cast<const ListBotsRequest *>(ChimeResponse::request());
+    Q_D(const ListBotsResponse);
+    return static_cast<const ListBotsRequest *>(d->request);
 }
 
 /*!

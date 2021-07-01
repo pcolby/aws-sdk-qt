@@ -99,7 +99,8 @@ ListGroupResourcesResponse::ListGroupResourcesResponse(
  */
 const ListGroupResourcesRequest * ListGroupResourcesResponse::request() const
 {
-    return static_cast<const ListGroupResourcesRequest *>(ResourceGroupsResponse::request());
+    Q_D(const ListGroupResourcesResponse);
+    return static_cast<const ListGroupResourcesRequest *>(d->request);
 }
 
 /*!

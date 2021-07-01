@@ -58,7 +58,8 @@ DeleteLFTagResponse::DeleteLFTagResponse(
  */
 const DeleteLFTagRequest * DeleteLFTagResponse::request() const
 {
-    return static_cast<const DeleteLFTagRequest *>(LakeFormationResponse::request());
+    Q_D(const DeleteLFTagResponse);
+    return static_cast<const DeleteLFTagRequest *>(d->request);
 }
 
 /*!

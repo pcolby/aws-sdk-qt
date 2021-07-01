@@ -72,7 +72,8 @@ ListComponentVersionsResponse::ListComponentVersionsResponse(
  */
 const ListComponentVersionsRequest * ListComponentVersionsResponse::request() const
 {
-    return static_cast<const ListComponentVersionsRequest *>(GreengrassV2Response::request());
+    Q_D(const ListComponentVersionsResponse);
+    return static_cast<const ListComponentVersionsRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_GROUNDSTATIONCLIENT_P_H
 #define QTAWS_GROUNDSTATIONCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace GroundStation {
 
 class GroundStationClient;
 
-class GroundStationClientPrivate {
+class GroundStationClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit GroundStationClientPrivate(GroundStationClient * const q);
-
-protected:
-    GroundStationClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GroundStationClient)

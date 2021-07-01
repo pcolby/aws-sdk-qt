@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    RedshiftResponsePrivate * const d_ptr; ///< Internal d-pointer.
     RedshiftResponse(RedshiftResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

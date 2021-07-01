@@ -55,7 +55,8 @@ DeleteTagsResponse::DeleteTagsResponse(
  */
 const DeleteTagsRequest * DeleteTagsResponse::request() const
 {
-    return static_cast<const DeleteTagsRequest *>(MachineLearningResponse::request());
+    Q_D(const DeleteTagsResponse);
+    return static_cast<const DeleteTagsRequest *>(d->request);
 }
 
 /*!

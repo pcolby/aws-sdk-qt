@@ -87,7 +87,8 @@ DetachVpnGatewayResponse::DetachVpnGatewayResponse(
  */
 const DetachVpnGatewayRequest * DetachVpnGatewayResponse::request() const
 {
-    return static_cast<const DetachVpnGatewayRequest *>(Ec2Response::request());
+    Q_D(const DetachVpnGatewayResponse);
+    return static_cast<const DetachVpnGatewayRequest *>(d->request);
 }
 
 /*!

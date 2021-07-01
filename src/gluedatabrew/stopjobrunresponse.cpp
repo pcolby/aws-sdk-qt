@@ -58,7 +58,8 @@ StopJobRunResponse::StopJobRunResponse(
  */
 const StopJobRunRequest * StopJobRunResponse::request() const
 {
-    return static_cast<const StopJobRunRequest *>(GlueDataBrewResponse::request());
+    Q_D(const StopJobRunResponse);
+    return static_cast<const StopJobRunRequest *>(d->request);
 }
 
 /*!

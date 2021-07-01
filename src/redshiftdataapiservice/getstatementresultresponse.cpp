@@ -63,7 +63,8 @@ GetStatementResultResponse::GetStatementResultResponse(
  */
 const GetStatementResultRequest * GetStatementResultResponse::request() const
 {
-    return static_cast<const GetStatementResultRequest *>(RedshiftDataAPIServiceResponse::request());
+    Q_D(const GetStatementResultResponse);
+    return static_cast<const GetStatementResultRequest *>(d->request);
 }
 
 /*!

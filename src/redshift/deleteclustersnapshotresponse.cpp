@@ -85,7 +85,8 @@ DeleteClusterSnapshotResponse::DeleteClusterSnapshotResponse(
  */
 const DeleteClusterSnapshotRequest * DeleteClusterSnapshotResponse::request() const
 {
-    return static_cast<const DeleteClusterSnapshotRequest *>(RedshiftResponse::request());
+    Q_D(const DeleteClusterSnapshotResponse);
+    return static_cast<const DeleteClusterSnapshotRequest *>(d->request);
 }
 
 /*!

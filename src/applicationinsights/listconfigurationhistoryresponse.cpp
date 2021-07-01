@@ -68,7 +68,8 @@ ListConfigurationHistoryResponse::ListConfigurationHistoryResponse(
  */
 const ListConfigurationHistoryRequest * ListConfigurationHistoryResponse::request() const
 {
-    return static_cast<const ListConfigurationHistoryRequest *>(ApplicationInsightsResponse::request());
+    Q_D(const ListConfigurationHistoryResponse);
+    return static_cast<const ListConfigurationHistoryRequest *>(d->request);
 }
 
 /*!

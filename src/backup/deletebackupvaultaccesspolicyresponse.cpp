@@ -59,7 +59,8 @@ DeleteBackupVaultAccessPolicyResponse::DeleteBackupVaultAccessPolicyResponse(
  */
 const DeleteBackupVaultAccessPolicyRequest * DeleteBackupVaultAccessPolicyResponse::request() const
 {
-    return static_cast<const DeleteBackupVaultAccessPolicyRequest *>(BackupResponse::request());
+    Q_D(const DeleteBackupVaultAccessPolicyResponse);
+    return static_cast<const DeleteBackupVaultAccessPolicyRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ ImportCertificateResponse::ImportCertificateResponse(
  */
 const ImportCertificateRequest * ImportCertificateResponse::request() const
 {
-    return static_cast<const ImportCertificateRequest *>(AcmResponse::request());
+    Q_D(const ImportCertificateResponse);
+    return static_cast<const ImportCertificateRequest *>(d->request);
 }
 
 /*!

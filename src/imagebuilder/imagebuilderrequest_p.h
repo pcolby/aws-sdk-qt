@@ -20,12 +20,15 @@
 #ifndef QTAWS_IMAGEBUILDERREQUEST_P_H
 #define QTAWS_IMAGEBUILDERREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "imagebuilderrequest.h"
+
 namespace QtAws {
 namespace imagebuilder {
 
 class imagebuilderRequest;
 
-class imagebuilderRequestPrivate {
+class imagebuilderRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     imagebuilderRequest::Action action; ///< imagebuilder action to be performed.
@@ -36,9 +39,6 @@ public:
     imagebuilderRequestPrivate(const imagebuilderRequestPrivate &other, imagebuilderRequest * const q);
 
     static QString toString(const imagebuilderRequest::Action &action);
-
-protected:
-    imagebuilderRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(imagebuilderRequest)

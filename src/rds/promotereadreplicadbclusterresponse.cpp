@@ -119,7 +119,8 @@ PromoteReadReplicaDBClusterResponse::PromoteReadReplicaDBClusterResponse(
  */
 const PromoteReadReplicaDBClusterRequest * PromoteReadReplicaDBClusterResponse::request() const
 {
-    return static_cast<const PromoteReadReplicaDBClusterRequest *>(RdsResponse::request());
+    Q_D(const PromoteReadReplicaDBClusterResponse);
+    return static_cast<const PromoteReadReplicaDBClusterRequest *>(d->request);
 }
 
 /*!

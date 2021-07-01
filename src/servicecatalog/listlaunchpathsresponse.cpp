@@ -61,7 +61,8 @@ ListLaunchPathsResponse::ListLaunchPathsResponse(
  */
 const ListLaunchPathsRequest * ListLaunchPathsResponse::request() const
 {
-    return static_cast<const ListLaunchPathsRequest *>(ServiceCatalogResponse::request());
+    Q_D(const ListLaunchPathsResponse);
+    return static_cast<const ListLaunchPathsRequest *>(d->request);
 }
 
 /*!

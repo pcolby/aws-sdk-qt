@@ -58,7 +58,8 @@ DeleteDetectorModelResponse::DeleteDetectorModelResponse(
  */
 const DeleteDetectorModelRequest * DeleteDetectorModelResponse::request() const
 {
-    return static_cast<const DeleteDetectorModelRequest *>(IoTEventsResponse::request());
+    Q_D(const DeleteDetectorModelResponse);
+    return static_cast<const DeleteDetectorModelRequest *>(d->request);
 }
 
 /*!

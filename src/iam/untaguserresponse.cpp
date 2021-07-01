@@ -62,7 +62,8 @@ UntagUserResponse::UntagUserResponse(
  */
 const UntagUserRequest * UntagUserResponse::request() const
 {
-    return static_cast<const UntagUserRequest *>(IamResponse::request());
+    Q_D(const UntagUserResponse);
+    return static_cast<const UntagUserRequest *>(d->request);
 }
 
 /*!

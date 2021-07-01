@@ -72,7 +72,8 @@ GetComponentResponse::GetComponentResponse(
  */
 const GetComponentRequest * GetComponentResponse::request() const
 {
-    return static_cast<const GetComponentRequest *>(GreengrassV2Response::request());
+    Q_D(const GetComponentResponse);
+    return static_cast<const GetComponentRequest *>(d->request);
 }
 
 /*!

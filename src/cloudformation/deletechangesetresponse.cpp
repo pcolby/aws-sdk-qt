@@ -77,7 +77,8 @@ DeleteChangeSetResponse::DeleteChangeSetResponse(
  */
 const DeleteChangeSetRequest * DeleteChangeSetResponse::request() const
 {
-    return static_cast<const DeleteChangeSetRequest *>(CloudFormationResponse::request());
+    Q_D(const DeleteChangeSetResponse);
+    return static_cast<const DeleteChangeSetRequest *>(d->request);
 }
 
 /*!

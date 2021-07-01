@@ -56,7 +56,8 @@ ListTagsForDomainResponse::ListTagsForDomainResponse(
  */
 const ListTagsForDomainRequest * ListTagsForDomainResponse::request() const
 {
-    return static_cast<const ListTagsForDomainRequest *>(Route53DomainsResponse::request());
+    Q_D(const ListTagsForDomainResponse);
+    return static_cast<const ListTagsForDomainRequest *>(d->request);
 }
 
 /*!

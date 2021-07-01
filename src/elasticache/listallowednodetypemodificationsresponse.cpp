@@ -69,7 +69,8 @@ ListAllowedNodeTypeModificationsResponse::ListAllowedNodeTypeModificationsRespon
  */
 const ListAllowedNodeTypeModificationsRequest * ListAllowedNodeTypeModificationsResponse::request() const
 {
-    return static_cast<const ListAllowedNodeTypeModificationsRequest *>(ElastiCacheResponse::request());
+    Q_D(const ListAllowedNodeTypeModificationsResponse);
+    return static_cast<const ListAllowedNodeTypeModificationsRequest *>(d->request);
 }
 
 /*!

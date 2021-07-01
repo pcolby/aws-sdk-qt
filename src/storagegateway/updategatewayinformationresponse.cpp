@@ -124,7 +124,8 @@ UpdateGatewayInformationResponse::UpdateGatewayInformationResponse(
  */
 const UpdateGatewayInformationRequest * UpdateGatewayInformationResponse::request() const
 {
-    return static_cast<const UpdateGatewayInformationRequest *>(StorageGatewayResponse::request());
+    Q_D(const UpdateGatewayInformationResponse);
+    return static_cast<const UpdateGatewayInformationRequest *>(d->request);
 }
 
 /*!

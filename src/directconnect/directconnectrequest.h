@@ -117,8 +117,7 @@ public:
 
 protected:
     /// @cond internal
-    DirectConnectRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DirectConnectRequest(DirectConnectRequestPrivate * const d);
+    DirectConnectRequest(DirectConnectRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

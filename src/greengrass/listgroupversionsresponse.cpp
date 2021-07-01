@@ -58,7 +58,8 @@ ListGroupVersionsResponse::ListGroupVersionsResponse(
  */
 const ListGroupVersionsRequest * ListGroupVersionsResponse::request() const
 {
-    return static_cast<const ListGroupVersionsRequest *>(GreengrassResponse::request());
+    Q_D(const ListGroupVersionsResponse);
+    return static_cast<const ListGroupVersionsRequest *>(d->request);
 }
 
 /*!

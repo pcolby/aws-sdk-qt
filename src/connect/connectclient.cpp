@@ -287,16 +287,16 @@ ConnectClient::ConnectClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-08-08"),
-    QStringLiteral("connect"),
-    QStringLiteral("Amazon Connect Service"),
-    QStringLiteral("connect"),
-    parent), d_ptr(new ConnectClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ConnectClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ConnectClient);
+    d->apiVersion = QStringLiteral("2017-08-08");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("connect");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Connect Service");
+    d->serviceName = QStringLiteral("connect");
 }
 
 /*!
@@ -315,16 +315,16 @@ ConnectClient::ConnectClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-08-08"),
-    QStringLiteral("connect"),
-    QStringLiteral("Amazon Connect Service"),
-    QStringLiteral("connect"),
-    parent), d_ptr(new ConnectClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ConnectClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ConnectClient);
+    d->apiVersion = QStringLiteral("2017-08-08");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("connect");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Connect Service");
+    d->serviceName = QStringLiteral("connect");
 }
 
 /*!
@@ -2108,9 +2108,10 @@ UpdateUserSecurityProfilesResponse * ConnectClient::updateUserSecurityProfiles(c
 /*!
  * Constructs a ConnectClientPrivate object with public implementation \a q.
  */
-ConnectClientPrivate::ConnectClientPrivate(ConnectClient * const q) : q_ptr(q)
+ConnectClientPrivate::ConnectClientPrivate(ConnectClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Connect

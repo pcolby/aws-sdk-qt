@@ -2,12 +2,15 @@
 #ifndef QTAWS_{{ClassName|upper}}_P_H
 #define QTAWS_{{ClassName|upper}}_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "{{ClassName|lower}}.h"
+
 namespace QtAws {
 namespace {{NameSpaceName}} {
 
 class {{ClassName}};
 
-class {{ClassName}}Private {
+class {{ClassName}}Private : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     {{ClassName}}::Action action; ///< {{ServiceName}} action to be performed.
@@ -18,9 +21,6 @@ public:
     {{ClassName}}Private(const {{ClassName}}Private &other, {{ClassName}} * const q);
 
     static QString toString(const {{ClassName}}::Action &action);
-
-protected:
-    {{ClassName}} * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC({{ClassName}})

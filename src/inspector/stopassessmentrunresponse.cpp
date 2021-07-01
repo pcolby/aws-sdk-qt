@@ -60,7 +60,8 @@ StopAssessmentRunResponse::StopAssessmentRunResponse(
  */
 const StopAssessmentRunRequest * StopAssessmentRunResponse::request() const
 {
-    return static_cast<const StopAssessmentRunRequest *>(InspectorResponse::request());
+    Q_D(const StopAssessmentRunResponse);
+    return static_cast<const StopAssessmentRunRequest *>(d->request);
 }
 
 /*!

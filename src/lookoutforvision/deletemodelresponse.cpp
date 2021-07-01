@@ -64,7 +64,8 @@ DeleteModelResponse::DeleteModelResponse(
  */
 const DeleteModelRequest * DeleteModelResponse::request() const
 {
-    return static_cast<const DeleteModelRequest *>(LookoutforVisionResponse::request());
+    Q_D(const DeleteModelResponse);
+    return static_cast<const DeleteModelRequest *>(d->request);
 }
 
 /*!

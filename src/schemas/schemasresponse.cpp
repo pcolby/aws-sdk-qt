@@ -37,7 +37,7 @@ namespace Schemas {
  * Constructs a SchemasResponse object with parent \a parent.
  */
 SchemasResponse::SchemasResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SchemasResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SchemasResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SchemasResponse::SchemasResponse(QObject * const parent)
  * implementation that inherits from SchemasResponsePrivate.
  */
 SchemasResponse::SchemasResponse(SchemasResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SchemasResponse::parseFailure(QIODevice &response)
  * Constructs a SchemasResponsePrivate object with public implementation \a q.
  */
 SchemasResponsePrivate::SchemasResponsePrivate(
-    SchemasResponse * const q) : q_ptr(q)
+    SchemasResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

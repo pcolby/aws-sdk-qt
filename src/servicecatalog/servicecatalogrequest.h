@@ -145,8 +145,7 @@ public:
 
 protected:
     /// @cond internal
-    ServiceCatalogRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ServiceCatalogRequest(ServiceCatalogRequestPrivate * const d);
+    ServiceCatalogRequest(ServiceCatalogRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

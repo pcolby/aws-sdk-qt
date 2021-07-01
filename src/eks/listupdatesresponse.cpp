@@ -65,7 +65,8 @@ ListUpdatesResponse::ListUpdatesResponse(
  */
 const ListUpdatesRequest * ListUpdatesResponse::request() const
 {
-    return static_cast<const ListUpdatesRequest *>(EksResponse::request());
+    Q_D(const ListUpdatesResponse);
+    return static_cast<const ListUpdatesRequest *>(d->request);
 }
 
 /*!

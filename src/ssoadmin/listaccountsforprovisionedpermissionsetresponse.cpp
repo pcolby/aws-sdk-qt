@@ -55,7 +55,8 @@ ListAccountsForProvisionedPermissionSetResponse::ListAccountsForProvisionedPermi
  */
 const ListAccountsForProvisionedPermissionSetRequest * ListAccountsForProvisionedPermissionSetResponse::request() const
 {
-    return static_cast<const ListAccountsForProvisionedPermissionSetRequest *>(SSOAdminResponse::request());
+    Q_D(const ListAccountsForProvisionedPermissionSetResponse);
+    return static_cast<const ListAccountsForProvisionedPermissionSetRequest *>(d->request);
 }
 
 /*!

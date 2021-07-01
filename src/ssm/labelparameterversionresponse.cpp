@@ -98,7 +98,8 @@ LabelParameterVersionResponse::LabelParameterVersionResponse(
  */
 const LabelParameterVersionRequest * LabelParameterVersionResponse::request() const
 {
-    return static_cast<const LabelParameterVersionRequest *>(SsmResponse::request());
+    Q_D(const LabelParameterVersionResponse);
+    return static_cast<const LabelParameterVersionRequest *>(d->request);
 }
 
 /*!

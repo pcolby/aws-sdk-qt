@@ -20,12 +20,15 @@
 #ifndef QTAWS_SNOWBALLREQUEST_P_H
 #define QTAWS_SNOWBALLREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "snowballrequest.h"
+
 namespace QtAws {
 namespace Snowball {
 
 class SnowballRequest;
 
-class SnowballRequestPrivate {
+class SnowballRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SnowballRequest::Action action; ///< Snowball action to be performed.
@@ -36,9 +39,6 @@ public:
     SnowballRequestPrivate(const SnowballRequestPrivate &other, SnowballRequest * const q);
 
     static QString toString(const SnowballRequest::Action &action);
-
-protected:
-    SnowballRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SnowballRequest)

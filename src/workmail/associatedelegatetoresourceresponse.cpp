@@ -89,7 +89,8 @@ AssociateDelegateToResourceResponse::AssociateDelegateToResourceResponse(
  */
 const AssociateDelegateToResourceRequest * AssociateDelegateToResourceResponse::request() const
 {
-    return static_cast<const AssociateDelegateToResourceRequest *>(WorkMailResponse::request());
+    Q_D(const AssociateDelegateToResourceResponse);
+    return static_cast<const AssociateDelegateToResourceRequest *>(d->request);
 }
 
 /*!

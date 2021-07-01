@@ -82,7 +82,8 @@ DescribeThingRegistrationTaskResponse::DescribeThingRegistrationTaskResponse(
  */
 const DescribeThingRegistrationTaskRequest * DescribeThingRegistrationTaskResponse::request() const
 {
-    return static_cast<const DescribeThingRegistrationTaskRequest *>(IoTResponse::request());
+    Q_D(const DescribeThingRegistrationTaskResponse);
+    return static_cast<const DescribeThingRegistrationTaskRequest *>(d->request);
 }
 
 /*!

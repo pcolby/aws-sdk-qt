@@ -73,7 +73,8 @@ DeleteDataCatalogResponse::DeleteDataCatalogResponse(
  */
 const DeleteDataCatalogRequest * DeleteDataCatalogResponse::request() const
 {
-    return static_cast<const DeleteDataCatalogRequest *>(AthenaResponse::request());
+    Q_D(const DeleteDataCatalogResponse);
+    return static_cast<const DeleteDataCatalogRequest *>(d->request);
 }
 
 /*!

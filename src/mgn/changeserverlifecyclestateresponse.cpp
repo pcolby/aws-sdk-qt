@@ -56,7 +56,8 @@ ChangeServerLifeCycleStateResponse::ChangeServerLifeCycleStateResponse(
  */
 const ChangeServerLifeCycleStateRequest * ChangeServerLifeCycleStateResponse::request() const
 {
-    return static_cast<const ChangeServerLifeCycleStateRequest *>(mgnResponse::request());
+    Q_D(const ChangeServerLifeCycleStateResponse);
+    return static_cast<const ChangeServerLifeCycleStateRequest *>(d->request);
 }
 
 /*!

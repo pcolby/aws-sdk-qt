@@ -37,7 +37,7 @@ namespace CloudDirectory {
  * Constructs a CloudDirectoryResponse object with parent \a parent.
  */
 CloudDirectoryResponse::CloudDirectoryResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CloudDirectoryResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CloudDirectoryResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CloudDirectoryResponse::CloudDirectoryResponse(QObject * const parent)
  * implementation that inherits from CloudDirectoryResponsePrivate.
  */
 CloudDirectoryResponse::CloudDirectoryResponse(CloudDirectoryResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CloudDirectoryResponse::parseFailure(QIODevice &response)
  * Constructs a CloudDirectoryResponsePrivate object with public implementation \a q.
  */
 CloudDirectoryResponsePrivate::CloudDirectoryResponsePrivate(
-    CloudDirectoryResponse * const q) : q_ptr(q)
+    CloudDirectoryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

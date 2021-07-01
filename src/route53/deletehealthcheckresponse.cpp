@@ -56,7 +56,8 @@ DeleteHealthCheckResponse::DeleteHealthCheckResponse(
  */
 const DeleteHealthCheckRequest * DeleteHealthCheckResponse::request() const
 {
-    return static_cast<const DeleteHealthCheckRequest *>(Route53Response::request());
+    Q_D(const DeleteHealthCheckResponse);
+    return static_cast<const DeleteHealthCheckRequest *>(d->request);
 }
 
 /*!

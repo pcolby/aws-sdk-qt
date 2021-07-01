@@ -75,7 +75,8 @@ DeleteRunResponse::DeleteRunResponse(
  */
 const DeleteRunRequest * DeleteRunResponse::request() const
 {
-    return static_cast<const DeleteRunRequest *>(DeviceFarmResponse::request());
+    Q_D(const DeleteRunResponse);
+    return static_cast<const DeleteRunRequest *>(d->request);
 }
 
 /*!

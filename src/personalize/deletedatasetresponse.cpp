@@ -56,7 +56,8 @@ DeleteDatasetResponse::DeleteDatasetResponse(
  */
 const DeleteDatasetRequest * DeleteDatasetResponse::request() const
 {
-    return static_cast<const DeleteDatasetRequest *>(PersonalizeResponse::request());
+    Q_D(const DeleteDatasetResponse);
+    return static_cast<const DeleteDatasetRequest *>(d->request);
 }
 
 /*!

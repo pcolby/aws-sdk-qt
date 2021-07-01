@@ -56,7 +56,8 @@ GetInsightImpactGraphResponse::GetInsightImpactGraphResponse(
  */
 const GetInsightImpactGraphRequest * GetInsightImpactGraphResponse::request() const
 {
-    return static_cast<const GetInsightImpactGraphRequest *>(XRayResponse::request());
+    Q_D(const GetInsightImpactGraphResponse);
+    return static_cast<const GetInsightImpactGraphRequest *>(d->request);
 }
 
 /*!

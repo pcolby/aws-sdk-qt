@@ -20,12 +20,15 @@
 #ifndef QTAWS_SECURITYHUBREQUEST_P_H
 #define QTAWS_SECURITYHUBREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "securityhubrequest.h"
+
 namespace QtAws {
 namespace SecurityHub {
 
 class SecurityHubRequest;
 
-class SecurityHubRequestPrivate {
+class SecurityHubRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SecurityHubRequest::Action action; ///< SecurityHub action to be performed.
@@ -36,9 +39,6 @@ public:
     SecurityHubRequestPrivate(const SecurityHubRequestPrivate &other, SecurityHubRequest * const q);
 
     static QString toString(const SecurityHubRequest::Action &action);
-
-protected:
-    SecurityHubRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SecurityHubRequest)

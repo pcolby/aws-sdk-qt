@@ -408,12 +408,6 @@ public slots:
     UpdateUsagePlanResponse * updateUsagePlan(const UpdateUsagePlanRequest &request);
     UpdateVpcLinkResponse * updateVpcLink(const UpdateVpcLinkRequest &request);
 
-protected:
-    /// @cond internal
-    APIGatewayClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit APIGatewayClient(APIGatewayClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(APIGatewayClient)
     Q_DISABLE_COPY(APIGatewayClient)

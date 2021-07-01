@@ -91,7 +91,8 @@ ListJobsResponse::ListJobsResponse(
  */
 const ListJobsRequest * ListJobsResponse::request() const
 {
-    return static_cast<const ListJobsRequest *>(GlacierResponse::request());
+    Q_D(const ListJobsResponse);
+    return static_cast<const ListJobsRequest *>(d->request);
 }
 
 /*!

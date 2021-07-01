@@ -88,7 +88,8 @@ PutEmailIdentityMailFromAttributesResponse::PutEmailIdentityMailFromAttributesRe
  */
 const PutEmailIdentityMailFromAttributesRequest * PutEmailIdentityMailFromAttributesResponse::request() const
 {
-    return static_cast<const PutEmailIdentityMailFromAttributesRequest *>(Sesv2Response::request());
+    Q_D(const PutEmailIdentityMailFromAttributesResponse);
+    return static_cast<const PutEmailIdentityMailFromAttributesRequest *>(d->request);
 }
 
 /*!

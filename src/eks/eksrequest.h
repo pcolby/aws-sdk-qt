@@ -90,8 +90,7 @@ public:
 
 protected:
     /// @cond internal
-    EksRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EksRequest(EksRequestPrivate * const d);
+    EksRequest(EksRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

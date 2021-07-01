@@ -82,7 +82,8 @@ UpdateThingResponse::UpdateThingResponse(
  */
 const UpdateThingRequest * UpdateThingResponse::request() const
 {
-    return static_cast<const UpdateThingRequest *>(IoTResponse::request());
+    Q_D(const UpdateThingResponse);
+    return static_cast<const UpdateThingRequest *>(d->request);
 }
 
 /*!

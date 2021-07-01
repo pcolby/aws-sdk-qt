@@ -73,7 +73,8 @@ DeleteVirtualRouterResponse::DeleteVirtualRouterResponse(
  */
 const DeleteVirtualRouterRequest * DeleteVirtualRouterResponse::request() const
 {
-    return static_cast<const DeleteVirtualRouterRequest *>(AppMeshResponse::request());
+    Q_D(const DeleteVirtualRouterResponse);
+    return static_cast<const DeleteVirtualRouterRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ StopDiscovererResponse::StopDiscovererResponse(
  */
 const StopDiscovererRequest * StopDiscovererResponse::request() const
 {
-    return static_cast<const StopDiscovererRequest *>(SchemasResponse::request());
+    Q_D(const StopDiscovererResponse);
+    return static_cast<const StopDiscovererRequest *>(d->request);
 }
 
 /*!

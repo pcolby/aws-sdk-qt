@@ -56,7 +56,8 @@ DeleteEventTrackerResponse::DeleteEventTrackerResponse(
  */
 const DeleteEventTrackerRequest * DeleteEventTrackerResponse::request() const
 {
-    return static_cast<const DeleteEventTrackerRequest *>(PersonalizeResponse::request());
+    Q_D(const DeleteEventTrackerResponse);
+    return static_cast<const DeleteEventTrackerRequest *>(d->request);
 }
 
 /*!

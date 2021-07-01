@@ -20,12 +20,15 @@
 #ifndef QTAWS_NIMBLESTUDIOREQUEST_P_H
 #define QTAWS_NIMBLESTUDIOREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "nimblestudiorequest.h"
+
 namespace QtAws {
 namespace NimbleStudio {
 
 class NimbleStudioRequest;
 
-class NimbleStudioRequestPrivate {
+class NimbleStudioRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     NimbleStudioRequest::Action action; ///< NimbleStudio action to be performed.
@@ -36,9 +39,6 @@ public:
     NimbleStudioRequestPrivate(const NimbleStudioRequestPrivate &other, NimbleStudioRequest * const q);
 
     static QString toString(const NimbleStudioRequest::Action &action);
-
-protected:
-    NimbleStudioRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(NimbleStudioRequest)

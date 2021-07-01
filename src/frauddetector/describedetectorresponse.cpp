@@ -58,7 +58,8 @@ DescribeDetectorResponse::DescribeDetectorResponse(
  */
 const DescribeDetectorRequest * DescribeDetectorResponse::request() const
 {
-    return static_cast<const DescribeDetectorRequest *>(FraudDetectorResponse::request());
+    Q_D(const DescribeDetectorResponse);
+    return static_cast<const DescribeDetectorRequest *>(d->request);
 }
 
 /*!

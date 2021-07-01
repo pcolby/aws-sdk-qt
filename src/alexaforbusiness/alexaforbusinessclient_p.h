@@ -20,20 +20,19 @@
 #ifndef QTAWS_ALEXAFORBUSINESSCLIENT_P_H
 #define QTAWS_ALEXAFORBUSINESSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace AlexaForBusiness {
 
 class AlexaForBusinessClient;
 
-class AlexaForBusinessClientPrivate {
+class AlexaForBusinessClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit AlexaForBusinessClientPrivate(AlexaForBusinessClient * const q);
-
-protected:
-    AlexaForBusinessClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AlexaForBusinessClient)

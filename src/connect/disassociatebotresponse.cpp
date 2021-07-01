@@ -79,7 +79,8 @@ DisassociateBotResponse::DisassociateBotResponse(
  */
 const DisassociateBotRequest * DisassociateBotResponse::request() const
 {
-    return static_cast<const DisassociateBotRequest *>(ConnectResponse::request());
+    Q_D(const DisassociateBotResponse);
+    return static_cast<const DisassociateBotRequest *>(d->request);
 }
 
 /*!

@@ -240,7 +240,8 @@ ListWebhooksResponse::ListWebhooksResponse(
  */
 const ListWebhooksRequest * ListWebhooksResponse::request() const
 {
-    return static_cast<const ListWebhooksRequest *>(CodePipelineResponse::request());
+    Q_D(const ListWebhooksResponse);
+    return static_cast<const ListWebhooksRequest *>(d->request);
 }
 
 /*!

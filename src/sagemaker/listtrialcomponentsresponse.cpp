@@ -70,7 +70,8 @@ ListTrialComponentsResponse::ListTrialComponentsResponse(
  */
 const ListTrialComponentsRequest * ListTrialComponentsResponse::request() const
 {
-    return static_cast<const ListTrialComponentsRequest *>(SageMakerResponse::request());
+    Q_D(const ListTrialComponentsResponse);
+    return static_cast<const ListTrialComponentsRequest *>(d->request);
 }
 
 /*!

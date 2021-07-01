@@ -56,7 +56,8 @@ UpdateReplicationConfigurationTemplateResponse::UpdateReplicationConfigurationTe
  */
 const UpdateReplicationConfigurationTemplateRequest * UpdateReplicationConfigurationTemplateResponse::request() const
 {
-    return static_cast<const UpdateReplicationConfigurationTemplateRequest *>(mgnResponse::request());
+    Q_D(const UpdateReplicationConfigurationTemplateResponse);
+    return static_cast<const UpdateReplicationConfigurationTemplateRequest *>(d->request);
 }
 
 /*!

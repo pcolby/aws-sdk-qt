@@ -84,7 +84,8 @@ AssociateKmsKeyResponse::AssociateKmsKeyResponse(
  */
 const AssociateKmsKeyRequest * AssociateKmsKeyResponse::request() const
 {
-    return static_cast<const AssociateKmsKeyRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const AssociateKmsKeyResponse);
+    return static_cast<const AssociateKmsKeyRequest *>(d->request);
 }
 
 /*!

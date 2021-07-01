@@ -70,7 +70,8 @@ ListLabelingJobsResponse::ListLabelingJobsResponse(
  */
 const ListLabelingJobsRequest * ListLabelingJobsResponse::request() const
 {
-    return static_cast<const ListLabelingJobsRequest *>(SageMakerResponse::request());
+    Q_D(const ListLabelingJobsResponse);
+    return static_cast<const ListLabelingJobsRequest *>(d->request);
 }
 
 /*!

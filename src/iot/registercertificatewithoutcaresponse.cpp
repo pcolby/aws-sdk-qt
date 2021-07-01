@@ -82,7 +82,8 @@ RegisterCertificateWithoutCAResponse::RegisterCertificateWithoutCAResponse(
  */
 const RegisterCertificateWithoutCARequest * RegisterCertificateWithoutCAResponse::request() const
 {
-    return static_cast<const RegisterCertificateWithoutCARequest *>(IoTResponse::request());
+    Q_D(const RegisterCertificateWithoutCAResponse);
+    return static_cast<const RegisterCertificateWithoutCARequest *>(d->request);
 }
 
 /*!

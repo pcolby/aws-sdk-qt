@@ -75,7 +75,8 @@ PutRemediationConfigurationsResponse::PutRemediationConfigurationsResponse(
  */
 const PutRemediationConfigurationsRequest * PutRemediationConfigurationsResponse::request() const
 {
-    return static_cast<const PutRemediationConfigurationsRequest *>(ConfigServiceResponse::request());
+    Q_D(const PutRemediationConfigurationsResponse);
+    return static_cast<const PutRemediationConfigurationsRequest *>(d->request);
 }
 
 /*!

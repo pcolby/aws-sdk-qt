@@ -55,7 +55,8 @@ TagStreamResponse::TagStreamResponse(
  */
 const TagStreamRequest * TagStreamResponse::request() const
 {
-    return static_cast<const TagStreamRequest *>(KinesisVideoResponse::request());
+    Q_D(const TagStreamResponse);
+    return static_cast<const TagStreamRequest *>(d->request);
 }
 
 /*!

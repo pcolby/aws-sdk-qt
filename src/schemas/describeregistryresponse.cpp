@@ -56,7 +56,8 @@ DescribeRegistryResponse::DescribeRegistryResponse(
  */
 const DescribeRegistryRequest * DescribeRegistryResponse::request() const
 {
-    return static_cast<const DescribeRegistryRequest *>(SchemasResponse::request());
+    Q_D(const DescribeRegistryResponse);
+    return static_cast<const DescribeRegistryRequest *>(d->request);
 }
 
 /*!

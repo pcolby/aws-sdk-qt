@@ -60,7 +60,8 @@ CreatePrivateDnsNamespaceResponse::CreatePrivateDnsNamespaceResponse(
  */
 const CreatePrivateDnsNamespaceRequest * CreatePrivateDnsNamespaceResponse::request() const
 {
-    return static_cast<const CreatePrivateDnsNamespaceRequest *>(ServiceDiscoveryResponse::request());
+    Q_D(const CreatePrivateDnsNamespaceResponse);
+    return static_cast<const CreatePrivateDnsNamespaceRequest *>(d->request);
 }
 
 /*!

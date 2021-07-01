@@ -87,7 +87,8 @@ ProvisionByoipCidrResponse::ProvisionByoipCidrResponse(
  */
 const ProvisionByoipCidrRequest * ProvisionByoipCidrResponse::request() const
 {
-    return static_cast<const ProvisionByoipCidrRequest *>(Ec2Response::request());
+    Q_D(const ProvisionByoipCidrResponse);
+    return static_cast<const ProvisionByoipCidrRequest *>(d->request);
 }
 
 /*!

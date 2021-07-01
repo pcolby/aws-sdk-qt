@@ -58,7 +58,8 @@ CreateApplicationPresignedUrlResponse::CreateApplicationPresignedUrlResponse(
  */
 const CreateApplicationPresignedUrlRequest * CreateApplicationPresignedUrlResponse::request() const
 {
-    return static_cast<const CreateApplicationPresignedUrlRequest *>(KinesisAnalyticsV2Response::request());
+    Q_D(const CreateApplicationPresignedUrlResponse);
+    return static_cast<const CreateApplicationPresignedUrlRequest *>(d->request);
 }
 
 /*!

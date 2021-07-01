@@ -87,7 +87,8 @@ RequestSpotFleetResponse::RequestSpotFleetResponse(
  */
 const RequestSpotFleetRequest * RequestSpotFleetResponse::request() const
 {
-    return static_cast<const RequestSpotFleetRequest *>(Ec2Response::request());
+    Q_D(const RequestSpotFleetResponse);
+    return static_cast<const RequestSpotFleetRequest *>(d->request);
 }
 
 /*!

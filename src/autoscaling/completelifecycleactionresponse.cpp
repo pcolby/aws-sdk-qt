@@ -68,7 +68,8 @@ CompleteLifecycleActionResponse::CompleteLifecycleActionResponse(
  */
 const CompleteLifecycleActionRequest * CompleteLifecycleActionResponse::request() const
 {
-    return static_cast<const CompleteLifecycleActionRequest *>(AutoScalingResponse::request());
+    Q_D(const CompleteLifecycleActionResponse);
+    return static_cast<const CompleteLifecycleActionRequest *>(d->request);
 }
 
 /*!

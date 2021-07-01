@@ -20,12 +20,14 @@
 #ifndef QTAWS_IOT1CLICKDEVICESSERVICERESPONSE_P_H
 #define QTAWS_IOT1CLICKDEVICESSERVICERESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace IoT1ClickDevicesService {
 
 class IoT1ClickDevicesServiceResponse;
 
-class IoT1ClickDevicesServiceResponsePrivate {
+class IoT1ClickDevicesServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    IoT1ClickDevicesServiceResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoT1ClickDevicesServiceResponse)

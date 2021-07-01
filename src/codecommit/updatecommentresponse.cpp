@@ -439,7 +439,8 @@ UpdateCommentResponse::UpdateCommentResponse(
  */
 const UpdateCommentRequest * UpdateCommentResponse::request() const
 {
-    return static_cast<const UpdateCommentRequest *>(CodeCommitResponse::request());
+    Q_D(const UpdateCommentResponse);
+    return static_cast<const UpdateCommentRequest *>(d->request);
 }
 
 /*!

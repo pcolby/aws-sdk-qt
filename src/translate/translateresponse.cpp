@@ -37,7 +37,7 @@ namespace Translate {
  * Constructs a TranslateResponse object with parent \a parent.
  */
 TranslateResponse::TranslateResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new TranslateResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new TranslateResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ TranslateResponse::TranslateResponse(QObject * const parent)
  * implementation that inherits from TranslateResponsePrivate.
  */
 TranslateResponse::TranslateResponse(TranslateResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void TranslateResponse::parseFailure(QIODevice &response)
  * Constructs a TranslateResponsePrivate object with public implementation \a q.
  */
 TranslateResponsePrivate::TranslateResponsePrivate(
-    TranslateResponse * const q) : q_ptr(q)
+    TranslateResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

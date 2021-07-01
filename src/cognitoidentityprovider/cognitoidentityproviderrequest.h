@@ -159,8 +159,7 @@ public:
 
 protected:
     /// @cond internal
-    CognitoIdentityProviderRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CognitoIdentityProviderRequest(CognitoIdentityProviderRequestPrivate * const d);
+    CognitoIdentityProviderRequest(CognitoIdentityProviderRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

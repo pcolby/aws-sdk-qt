@@ -56,7 +56,8 @@ StartTranscriptionJobResponse::StartTranscriptionJobResponse(
  */
 const StartTranscriptionJobRequest * StartTranscriptionJobResponse::request() const
 {
-    return static_cast<const StartTranscriptionJobRequest *>(TranscribeServiceResponse::request());
+    Q_D(const StartTranscriptionJobResponse);
+    return static_cast<const StartTranscriptionJobRequest *>(d->request);
 }
 
 /*!

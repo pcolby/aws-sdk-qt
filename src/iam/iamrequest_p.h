@@ -20,12 +20,15 @@
 #ifndef QTAWS_IAMREQUEST_P_H
 #define QTAWS_IAMREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "iamrequest.h"
+
 namespace QtAws {
 namespace IAM {
 
 class IamRequest;
 
-class IamRequestPrivate {
+class IamRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IamRequest::Action action; ///< IAM action to be performed.
@@ -36,9 +39,6 @@ public:
     IamRequestPrivate(const IamRequestPrivate &other, IamRequest * const q);
 
     static QString toString(const IamRequest::Action &action);
-
-protected:
-    IamRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IamRequest)

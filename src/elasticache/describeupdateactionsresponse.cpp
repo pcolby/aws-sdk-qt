@@ -69,7 +69,8 @@ DescribeUpdateActionsResponse::DescribeUpdateActionsResponse(
  */
 const DescribeUpdateActionsRequest * DescribeUpdateActionsResponse::request() const
 {
-    return static_cast<const DescribeUpdateActionsRequest *>(ElastiCacheResponse::request());
+    Q_D(const DescribeUpdateActionsResponse);
+    return static_cast<const DescribeUpdateActionsRequest *>(d->request);
 }
 
 /*!

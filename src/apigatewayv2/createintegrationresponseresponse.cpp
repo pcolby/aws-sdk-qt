@@ -56,7 +56,8 @@ CreateIntegrationResponseResponse::CreateIntegrationResponseResponse(
  */
 const CreateIntegrationResponseRequest * CreateIntegrationResponseResponse::request() const
 {
-    return static_cast<const CreateIntegrationResponseRequest *>(ApiGatewayV2Response::request());
+    Q_D(const CreateIntegrationResponseResponse);
+    return static_cast<const CreateIntegrationResponseRequest *>(d->request);
 }
 
 /*!

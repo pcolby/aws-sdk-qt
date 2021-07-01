@@ -73,7 +73,8 @@ CreateMembersResponse::CreateMembersResponse(
  */
 const CreateMembersRequest * CreateMembersResponse::request() const
 {
-    return static_cast<const CreateMembersRequest *>(GuardDutyResponse::request());
+    Q_D(const CreateMembersResponse);
+    return static_cast<const CreateMembersRequest *>(d->request);
 }
 
 /*!

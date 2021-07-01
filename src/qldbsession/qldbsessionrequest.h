@@ -59,8 +59,7 @@ public:
 
 protected:
     /// @cond internal
-    QLDBSessionRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit QLDBSessionRequest(QLDBSessionRequestPrivate * const d);
+    QLDBSessionRequest(QLDBSessionRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

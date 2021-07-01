@@ -78,7 +78,8 @@ GetInsightSelectorsResponse::GetInsightSelectorsResponse(
  */
 const GetInsightSelectorsRequest * GetInsightSelectorsResponse::request() const
 {
-    return static_cast<const GetInsightSelectorsRequest *>(CloudTrailResponse::request());
+    Q_D(const GetInsightSelectorsResponse);
+    return static_cast<const GetInsightSelectorsRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ GetSamplingTargetsResponse::GetSamplingTargetsResponse(
  */
 const GetSamplingTargetsRequest * GetSamplingTargetsResponse::request() const
 {
-    return static_cast<const GetSamplingTargetsRequest *>(XRayResponse::request());
+    Q_D(const GetSamplingTargetsResponse);
+    return static_cast<const GetSamplingTargetsRequest *>(d->request);
 }
 
 /*!

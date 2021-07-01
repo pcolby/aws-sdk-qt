@@ -87,7 +87,8 @@ ModifyHostsResponse::ModifyHostsResponse(
  */
 const ModifyHostsRequest * ModifyHostsResponse::request() const
 {
-    return static_cast<const ModifyHostsRequest *>(Ec2Response::request());
+    Q_D(const ModifyHostsResponse);
+    return static_cast<const ModifyHostsRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ ListTemplateVersionsResponse::ListTemplateVersionsResponse(
  */
 const ListTemplateVersionsRequest * ListTemplateVersionsResponse::request() const
 {
-    return static_cast<const ListTemplateVersionsRequest *>(QuickSightResponse::request());
+    Q_D(const ListTemplateVersionsResponse);
+    return static_cast<const ListTemplateVersionsRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_HEALTHCLIENT_P_H
 #define QTAWS_HEALTHCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Health {
 
 class HealthClient;
 
-class HealthClientPrivate {
+class HealthClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit HealthClientPrivate(HealthClient * const q);
-
-protected:
-    HealthClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(HealthClient)

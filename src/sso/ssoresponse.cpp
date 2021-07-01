@@ -37,7 +37,7 @@ namespace SSO {
  * Constructs a SsoResponse object with parent \a parent.
  */
 SsoResponse::SsoResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SsoResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SsoResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SsoResponse::SsoResponse(QObject * const parent)
  * implementation that inherits from SsoResponsePrivate.
  */
 SsoResponse::SsoResponse(SsoResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SsoResponse::parseFailure(QIODevice &response)
  * Constructs a SsoResponsePrivate object with public implementation \a q.
  */
 SsoResponsePrivate::SsoResponsePrivate(
-    SsoResponse * const q) : q_ptr(q)
+    SsoResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

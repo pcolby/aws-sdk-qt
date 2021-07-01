@@ -78,7 +78,8 @@ GetTrailResponse::GetTrailResponse(
  */
 const GetTrailRequest * GetTrailResponse::request() const
 {
-    return static_cast<const GetTrailRequest *>(CloudTrailResponse::request());
+    Q_D(const GetTrailResponse);
+    return static_cast<const GetTrailRequest *>(d->request);
 }
 
 /*!

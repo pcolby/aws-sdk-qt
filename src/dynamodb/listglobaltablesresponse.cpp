@@ -74,7 +74,8 @@ ListGlobalTablesResponse::ListGlobalTablesResponse(
  */
 const ListGlobalTablesRequest * ListGlobalTablesResponse::request() const
 {
-    return static_cast<const ListGlobalTablesRequest *>(DynamoDBResponse::request());
+    Q_D(const ListGlobalTablesResponse);
+    return static_cast<const ListGlobalTablesRequest *>(d->request);
 }
 
 /*!

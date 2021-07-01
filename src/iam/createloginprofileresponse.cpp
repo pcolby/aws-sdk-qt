@@ -62,7 +62,8 @@ CreateLoginProfileResponse::CreateLoginProfileResponse(
  */
 const CreateLoginProfileRequest * CreateLoginProfileResponse::request() const
 {
-    return static_cast<const CreateLoginProfileRequest *>(IamResponse::request());
+    Q_D(const CreateLoginProfileResponse);
+    return static_cast<const CreateLoginProfileRequest *>(d->request);
 }
 
 /*!

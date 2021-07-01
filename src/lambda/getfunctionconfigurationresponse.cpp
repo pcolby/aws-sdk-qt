@@ -66,7 +66,8 @@ GetFunctionConfigurationResponse::GetFunctionConfigurationResponse(
  */
 const GetFunctionConfigurationRequest * GetFunctionConfigurationResponse::request() const
 {
-    return static_cast<const GetFunctionConfigurationRequest *>(LambdaResponse::request());
+    Q_D(const GetFunctionConfigurationResponse);
+    return static_cast<const GetFunctionConfigurationRequest *>(d->request);
 }
 
 /*!

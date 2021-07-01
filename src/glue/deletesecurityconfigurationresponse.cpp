@@ -58,7 +58,8 @@ DeleteSecurityConfigurationResponse::DeleteSecurityConfigurationResponse(
  */
 const DeleteSecurityConfigurationRequest * DeleteSecurityConfigurationResponse::request() const
 {
-    return static_cast<const DeleteSecurityConfigurationRequest *>(GlueResponse::request());
+    Q_D(const DeleteSecurityConfigurationResponse);
+    return static_cast<const DeleteSecurityConfigurationRequest *>(d->request);
 }
 
 /*!

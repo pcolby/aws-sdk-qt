@@ -161,7 +161,8 @@ DescribePermissionsResponse::DescribePermissionsResponse(
  */
 const DescribePermissionsRequest * DescribePermissionsResponse::request() const
 {
-    return static_cast<const DescribePermissionsRequest *>(OpsWorksResponse::request());
+    Q_D(const DescribePermissionsResponse);
+    return static_cast<const DescribePermissionsRequest *>(d->request);
 }
 
 /*!

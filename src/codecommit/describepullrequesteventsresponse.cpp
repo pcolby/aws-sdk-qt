@@ -439,7 +439,8 @@ DescribePullRequestEventsResponse::DescribePullRequestEventsResponse(
  */
 const DescribePullRequestEventsRequest * DescribePullRequestEventsResponse::request() const
 {
-    return static_cast<const DescribePullRequestEventsRequest *>(CodeCommitResponse::request());
+    Q_D(const DescribePullRequestEventsResponse);
+    return static_cast<const DescribePullRequestEventsRequest *>(d->request);
 }
 
 /*!

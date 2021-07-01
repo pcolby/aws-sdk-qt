@@ -73,7 +73,8 @@ ListRoutesResponse::ListRoutesResponse(
  */
 const ListRoutesRequest * ListRoutesResponse::request() const
 {
-    return static_cast<const ListRoutesRequest *>(AppMeshResponse::request());
+    Q_D(const ListRoutesResponse);
+    return static_cast<const ListRoutesRequest *>(d->request);
 }
 
 /*!

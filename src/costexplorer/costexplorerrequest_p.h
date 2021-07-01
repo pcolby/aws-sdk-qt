@@ -20,12 +20,15 @@
 #ifndef QTAWS_COSTEXPLORERREQUEST_P_H
 #define QTAWS_COSTEXPLORERREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "costexplorerrequest.h"
+
 namespace QtAws {
 namespace CostExplorer {
 
 class CostExplorerRequest;
 
-class CostExplorerRequestPrivate {
+class CostExplorerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CostExplorerRequest::Action action; ///< CostExplorer action to be performed.
@@ -36,9 +39,6 @@ public:
     CostExplorerRequestPrivate(const CostExplorerRequestPrivate &other, CostExplorerRequest * const q);
 
     static QString toString(const CostExplorerRequest::Action &action);
-
-protected:
-    CostExplorerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CostExplorerRequest)

@@ -69,7 +69,8 @@ ListIpRoutesResponse::ListIpRoutesResponse(
  */
 const ListIpRoutesRequest * ListIpRoutesResponse::request() const
 {
-    return static_cast<const ListIpRoutesRequest *>(DirectoryServiceResponse::request());
+    Q_D(const ListIpRoutesResponse);
+    return static_cast<const ListIpRoutesRequest *>(d->request);
 }
 
 /*!

@@ -119,7 +119,8 @@ DescribeCertificatesResponse::DescribeCertificatesResponse(
  */
 const DescribeCertificatesRequest * DescribeCertificatesResponse::request() const
 {
-    return static_cast<const DescribeCertificatesRequest *>(RdsResponse::request());
+    Q_D(const DescribeCertificatesResponse);
+    return static_cast<const DescribeCertificatesRequest *>(d->request);
 }
 
 /*!

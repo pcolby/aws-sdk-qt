@@ -94,7 +94,8 @@ AssociateResolverEndpointIpAddressResponse::AssociateResolverEndpointIpAddressRe
  */
 const AssociateResolverEndpointIpAddressRequest * AssociateResolverEndpointIpAddressResponse::request() const
 {
-    return static_cast<const AssociateResolverEndpointIpAddressRequest *>(Route53ResolverResponse::request());
+    Q_D(const AssociateResolverEndpointIpAddressResponse);
+    return static_cast<const AssociateResolverEndpointIpAddressRequest *>(d->request);
 }
 
 /*!

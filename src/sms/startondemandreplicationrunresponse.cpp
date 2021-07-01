@@ -68,7 +68,8 @@ StartOnDemandReplicationRunResponse::StartOnDemandReplicationRunResponse(
  */
 const StartOnDemandReplicationRunRequest * StartOnDemandReplicationRunResponse::request() const
 {
-    return static_cast<const StartOnDemandReplicationRunRequest *>(SmsResponse::request());
+    Q_D(const StartOnDemandReplicationRunResponse);
+    return static_cast<const StartOnDemandReplicationRunRequest *>(d->request);
 }
 
 /*!

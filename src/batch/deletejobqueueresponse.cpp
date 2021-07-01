@@ -68,7 +68,8 @@ DeleteJobQueueResponse::DeleteJobQueueResponse(
  */
 const DeleteJobQueueRequest * DeleteJobQueueResponse::request() const
 {
-    return static_cast<const DeleteJobQueueRequest *>(BatchResponse::request());
+    Q_D(const DeleteJobQueueResponse);
+    return static_cast<const DeleteJobQueueRequest *>(d->request);
 }
 
 /*!

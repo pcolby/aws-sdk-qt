@@ -62,7 +62,8 @@ DescribeAccountPreferencesResponse::DescribeAccountPreferencesResponse(
  */
 const DescribeAccountPreferencesRequest * DescribeAccountPreferencesResponse::request() const
 {
-    return static_cast<const DescribeAccountPreferencesRequest *>(EfsResponse::request());
+    Q_D(const DescribeAccountPreferencesResponse);
+    return static_cast<const DescribeAccountPreferencesRequest *>(d->request);
 }
 
 /*!

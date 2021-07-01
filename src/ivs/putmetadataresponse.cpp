@@ -385,7 +385,8 @@ PutMetadataResponse::PutMetadataResponse(
  */
 const PutMetadataRequest * PutMetadataResponse::request() const
 {
-    return static_cast<const PutMetadataRequest *>(IvsResponse::request());
+    Q_D(const PutMetadataResponse);
+    return static_cast<const PutMetadataRequest *>(d->request);
 }
 
 /*!

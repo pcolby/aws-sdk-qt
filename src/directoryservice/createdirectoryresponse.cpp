@@ -69,7 +69,8 @@ CreateDirectoryResponse::CreateDirectoryResponse(
  */
 const CreateDirectoryRequest * CreateDirectoryResponse::request() const
 {
-    return static_cast<const CreateDirectoryRequest *>(DirectoryServiceResponse::request());
+    Q_D(const CreateDirectoryResponse);
+    return static_cast<const CreateDirectoryRequest *>(d->request);
 }
 
 /*!

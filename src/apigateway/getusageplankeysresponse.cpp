@@ -60,7 +60,8 @@ GetUsagePlanKeysResponse::GetUsagePlanKeysResponse(
  */
 const GetUsagePlanKeysRequest * GetUsagePlanKeysResponse::request() const
 {
-    return static_cast<const GetUsagePlanKeysRequest *>(APIGatewayResponse::request());
+    Q_D(const GetUsagePlanKeysResponse);
+    return static_cast<const GetUsagePlanKeysRequest *>(d->request);
 }
 
 /*!

@@ -61,7 +61,8 @@ GetAssetPropertyAggregatesResponse::GetAssetPropertyAggregatesResponse(
  */
 const GetAssetPropertyAggregatesRequest * GetAssetPropertyAggregatesResponse::request() const
 {
-    return static_cast<const GetAssetPropertyAggregatesRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const GetAssetPropertyAggregatesResponse);
+    return static_cast<const GetAssetPropertyAggregatesRequest *>(d->request);
 }
 
 /*!

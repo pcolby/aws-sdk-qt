@@ -37,7 +37,7 @@ namespace LexRuntimeV2 {
  * Constructs a LexRuntimeV2Response object with parent \a parent.
  */
 LexRuntimeV2Response::LexRuntimeV2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LexRuntimeV2ResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new LexRuntimeV2ResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ LexRuntimeV2Response::LexRuntimeV2Response(QObject * const parent)
  * implementation that inherits from LexRuntimeV2ResponsePrivate.
  */
 LexRuntimeV2Response::LexRuntimeV2Response(LexRuntimeV2ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void LexRuntimeV2Response::parseFailure(QIODevice &response)
  * Constructs a LexRuntimeV2ResponsePrivate object with public implementation \a q.
  */
 LexRuntimeV2ResponsePrivate::LexRuntimeV2ResponsePrivate(
-    LexRuntimeV2Response * const q) : q_ptr(q)
+    LexRuntimeV2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

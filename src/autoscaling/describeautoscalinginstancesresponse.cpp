@@ -68,7 +68,8 @@ DescribeAutoScalingInstancesResponse::DescribeAutoScalingInstancesResponse(
  */
 const DescribeAutoScalingInstancesRequest * DescribeAutoScalingInstancesResponse::request() const
 {
-    return static_cast<const DescribeAutoScalingInstancesRequest *>(AutoScalingResponse::request());
+    Q_D(const DescribeAutoScalingInstancesResponse);
+    return static_cast<const DescribeAutoScalingInstancesRequest *>(d->request);
 }
 
 /*!

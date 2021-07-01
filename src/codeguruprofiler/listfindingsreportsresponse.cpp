@@ -79,7 +79,8 @@ ListFindingsReportsResponse::ListFindingsReportsResponse(
  */
 const ListFindingsReportsRequest * ListFindingsReportsResponse::request() const
 {
-    return static_cast<const ListFindingsReportsRequest *>(CodeGuruProfilerResponse::request());
+    Q_D(const ListFindingsReportsResponse);
+    return static_cast<const ListFindingsReportsRequest *>(d->request);
 }
 
 /*!

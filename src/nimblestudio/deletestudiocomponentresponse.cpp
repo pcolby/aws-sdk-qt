@@ -55,7 +55,8 @@ DeleteStudioComponentResponse::DeleteStudioComponentResponse(
  */
 const DeleteStudioComponentRequest * DeleteStudioComponentResponse::request() const
 {
-    return static_cast<const DeleteStudioComponentRequest *>(NimbleStudioResponse::request());
+    Q_D(const DeleteStudioComponentResponse);
+    return static_cast<const DeleteStudioComponentRequest *>(d->request);
 }
 
 /*!

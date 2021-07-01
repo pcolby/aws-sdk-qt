@@ -20,20 +20,19 @@
 #ifndef QTAWS_IOTEVENTSCLIENT_P_H
 #define QTAWS_IOTEVENTSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace IoTEvents {
 
 class IoTEventsClient;
 
-class IoTEventsClientPrivate {
+class IoTEventsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit IoTEventsClientPrivate(IoTEventsClient * const q);
-
-protected:
-    IoTEventsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTEventsClient)

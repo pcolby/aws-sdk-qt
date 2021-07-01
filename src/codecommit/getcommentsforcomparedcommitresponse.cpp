@@ -439,7 +439,8 @@ GetCommentsForComparedCommitResponse::GetCommentsForComparedCommitResponse(
  */
 const GetCommentsForComparedCommitRequest * GetCommentsForComparedCommitResponse::request() const
 {
-    return static_cast<const GetCommentsForComparedCommitRequest *>(CodeCommitResponse::request());
+    Q_D(const GetCommentsForComparedCommitResponse);
+    return static_cast<const GetCommentsForComparedCommitRequest *>(d->request);
 }
 
 /*!

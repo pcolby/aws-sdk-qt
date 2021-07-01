@@ -87,7 +87,8 @@ ExportImageResponse::ExportImageResponse(
  */
 const ExportImageRequest * ExportImageResponse::request() const
 {
-    return static_cast<const ExportImageRequest *>(Ec2Response::request());
+    Q_D(const ExportImageResponse);
+    return static_cast<const ExportImageRequest *>(d->request);
 }
 
 /*!

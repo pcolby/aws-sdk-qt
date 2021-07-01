@@ -56,7 +56,8 @@ UpdateLaunchConfigurationResponse::UpdateLaunchConfigurationResponse(
  */
 const UpdateLaunchConfigurationRequest * UpdateLaunchConfigurationResponse::request() const
 {
-    return static_cast<const UpdateLaunchConfigurationRequest *>(mgnResponse::request());
+    Q_D(const UpdateLaunchConfigurationResponse);
+    return static_cast<const UpdateLaunchConfigurationRequest *>(d->request);
 }
 
 /*!

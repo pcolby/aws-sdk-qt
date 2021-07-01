@@ -84,7 +84,8 @@ PutLogEventsResponse::PutLogEventsResponse(
  */
 const PutLogEventsRequest * PutLogEventsResponse::request() const
 {
-    return static_cast<const PutLogEventsRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const PutLogEventsResponse);
+    return static_cast<const PutLogEventsRequest *>(d->request);
 }
 
 /*!

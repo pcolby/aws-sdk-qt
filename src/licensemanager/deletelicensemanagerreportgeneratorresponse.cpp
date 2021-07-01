@@ -59,7 +59,8 @@ DeleteLicenseManagerReportGeneratorResponse::DeleteLicenseManagerReportGenerator
  */
 const DeleteLicenseManagerReportGeneratorRequest * DeleteLicenseManagerReportGeneratorResponse::request() const
 {
-    return static_cast<const DeleteLicenseManagerReportGeneratorRequest *>(LicenseManagerResponse::request());
+    Q_D(const DeleteLicenseManagerReportGeneratorResponse);
+    return static_cast<const DeleteLicenseManagerReportGeneratorRequest *>(d->request);
 }
 
 /*!

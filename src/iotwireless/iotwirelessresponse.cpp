@@ -37,7 +37,7 @@ namespace IoTWireless {
  * Constructs a IoTWirelessResponse object with parent \a parent.
  */
 IoTWirelessResponse::IoTWirelessResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new IoTWirelessResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new IoTWirelessResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ IoTWirelessResponse::IoTWirelessResponse(QObject * const parent)
  * implementation that inherits from IoTWirelessResponsePrivate.
  */
 IoTWirelessResponse::IoTWirelessResponse(IoTWirelessResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void IoTWirelessResponse::parseFailure(QIODevice &response)
  * Constructs a IoTWirelessResponsePrivate object with public implementation \a q.
  */
 IoTWirelessResponsePrivate::IoTWirelessResponsePrivate(
-    IoTWirelessResponse * const q) : q_ptr(q)
+    IoTWirelessResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

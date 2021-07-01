@@ -60,7 +60,8 @@ CreateFunctionResponse::CreateFunctionResponse(
  */
 const CreateFunctionRequest * CreateFunctionResponse::request() const
 {
-    return static_cast<const CreateFunctionRequest *>(CloudFrontResponse::request());
+    Q_D(const CreateFunctionResponse);
+    return static_cast<const CreateFunctionRequest *>(d->request);
 }
 
 /*!

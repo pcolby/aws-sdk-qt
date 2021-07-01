@@ -20,12 +20,15 @@
 #ifndef QTAWS_SERVICEQUOTASREQUEST_P_H
 #define QTAWS_SERVICEQUOTASREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "servicequotasrequest.h"
+
 namespace QtAws {
 namespace ServiceQuotas {
 
 class ServiceQuotasRequest;
 
-class ServiceQuotasRequestPrivate {
+class ServiceQuotasRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ServiceQuotasRequest::Action action; ///< ServiceQuotas action to be performed.
@@ -36,9 +39,6 @@ public:
     ServiceQuotasRequestPrivate(const ServiceQuotasRequestPrivate &other, ServiceQuotasRequest * const q);
 
     static QString toString(const ServiceQuotasRequest::Action &action);
-
-protected:
-    ServiceQuotasRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ServiceQuotasRequest)

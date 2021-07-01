@@ -70,7 +70,8 @@ DeleteActionResponse::DeleteActionResponse(
  */
 const DeleteActionRequest * DeleteActionResponse::request() const
 {
-    return static_cast<const DeleteActionRequest *>(SageMakerResponse::request());
+    Q_D(const DeleteActionResponse);
+    return static_cast<const DeleteActionRequest *>(d->request);
 }
 
 /*!

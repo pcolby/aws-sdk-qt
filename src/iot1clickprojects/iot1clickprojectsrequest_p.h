@@ -20,12 +20,15 @@
 #ifndef QTAWS_IOT1CLICKPROJECTSREQUEST_P_H
 #define QTAWS_IOT1CLICKPROJECTSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "iot1clickprojectsrequest.h"
+
 namespace QtAws {
 namespace IoT1ClickProjects {
 
 class IoT1ClickProjectsRequest;
 
-class IoT1ClickProjectsRequestPrivate {
+class IoT1ClickProjectsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     IoT1ClickProjectsRequest::Action action; ///< IoT1ClickProjects action to be performed.
@@ -36,9 +39,6 @@ public:
     IoT1ClickProjectsRequestPrivate(const IoT1ClickProjectsRequestPrivate &other, IoT1ClickProjectsRequest * const q);
 
     static QString toString(const IoT1ClickProjectsRequest::Action &action);
-
-protected:
-    IoT1ClickProjectsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoT1ClickProjectsRequest)

@@ -89,7 +89,8 @@ ListAliasesResponse::ListAliasesResponse(
  */
 const ListAliasesRequest * ListAliasesResponse::request() const
 {
-    return static_cast<const ListAliasesRequest *>(WorkMailResponse::request());
+    Q_D(const ListAliasesResponse);
+    return static_cast<const ListAliasesRequest *>(d->request);
 }
 
 /*!

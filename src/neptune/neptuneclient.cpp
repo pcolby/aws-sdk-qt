@@ -202,16 +202,16 @@ NeptuneClient::NeptuneClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-10-31"),
-    QStringLiteral("rds"),
-    QStringLiteral("Amazon Neptune"),
-    QStringLiteral("rds"),
-    parent), d_ptr(new NeptuneClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new NeptuneClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(NeptuneClient);
+    d->apiVersion = QStringLiteral("2014-10-31");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("rds");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Neptune");
+    d->serviceName = QStringLiteral("rds");
 }
 
 /*!
@@ -230,16 +230,16 @@ NeptuneClient::NeptuneClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-10-31"),
-    QStringLiteral("rds"),
-    QStringLiteral("Amazon Neptune"),
-    QStringLiteral("rds"),
-    parent), d_ptr(new NeptuneClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new NeptuneClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(NeptuneClient);
+    d->apiVersion = QStringLiteral("2014-10-31");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("rds");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Neptune");
+    d->serviceName = QStringLiteral("rds");
 }
 
 /*!
@@ -1341,9 +1341,10 @@ StopDBClusterResponse * NeptuneClient::stopDBCluster(const StopDBClusterRequest 
 /*!
  * Constructs a NeptuneClientPrivate object with public implementation \a q.
  */
-NeptuneClientPrivate::NeptuneClientPrivate(NeptuneClient * const q) : q_ptr(q)
+NeptuneClientPrivate::NeptuneClientPrivate(NeptuneClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Neptune

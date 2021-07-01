@@ -20,12 +20,15 @@
 #ifndef QTAWS_CODESTARNOTIFICATIONSREQUEST_P_H
 #define QTAWS_CODESTARNOTIFICATIONSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "codestarnotificationsrequest.h"
+
 namespace QtAws {
 namespace CodeStarNotifications {
 
 class CodeStarNotificationsRequest;
 
-class CodeStarNotificationsRequestPrivate {
+class CodeStarNotificationsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     CodeStarNotificationsRequest::Action action; ///< CodeStarNotifications action to be performed.
@@ -36,9 +39,6 @@ public:
     CodeStarNotificationsRequestPrivate(const CodeStarNotificationsRequestPrivate &other, CodeStarNotificationsRequest * const q);
 
     static QString toString(const CodeStarNotificationsRequest::Action &action);
-
-protected:
-    CodeStarNotificationsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeStarNotificationsRequest)

@@ -84,7 +84,8 @@ CreateFolderResponse::CreateFolderResponse(
  */
 const CreateFolderRequest * CreateFolderResponse::request() const
 {
-    return static_cast<const CreateFolderRequest *>(WorkDocsResponse::request());
+    Q_D(const CreateFolderResponse);
+    return static_cast<const CreateFolderRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ DeleteMissionProfileResponse::DeleteMissionProfileResponse(
  */
 const DeleteMissionProfileRequest * DeleteMissionProfileResponse::request() const
 {
-    return static_cast<const DeleteMissionProfileRequest *>(GroundStationResponse::request());
+    Q_D(const DeleteMissionProfileResponse);
+    return static_cast<const DeleteMissionProfileRequest *>(d->request);
 }
 
 /*!

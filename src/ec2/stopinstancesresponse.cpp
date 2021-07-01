@@ -87,7 +87,8 @@ StopInstancesResponse::StopInstancesResponse(
  */
 const StopInstancesRequest * StopInstancesResponse::request() const
 {
-    return static_cast<const StopInstancesRequest *>(Ec2Response::request());
+    Q_D(const StopInstancesResponse);
+    return static_cast<const StopInstancesRequest *>(d->request);
 }
 
 /*!

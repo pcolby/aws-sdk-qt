@@ -49,7 +49,7 @@ namespace IoTSecureTunneling {
  * Constructs a IoTSecureTunnelingRequest object for IoTSecureTunneling \a action.
  */
 IoTSecureTunnelingRequest::IoTSecureTunnelingRequest(const Action action)
-    : d_ptr(new IoTSecureTunnelingRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new IoTSecureTunnelingRequestPrivate(action, this))
 {
 
 }
@@ -58,8 +58,7 @@ IoTSecureTunnelingRequest::IoTSecureTunnelingRequest(const Action action)
  * Constructs a copy of \a other.
  */
 IoTSecureTunnelingRequest::IoTSecureTunnelingRequest(const IoTSecureTunnelingRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new IoTSecureTunnelingRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new IoTSecureTunnelingRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -82,7 +81,7 @@ IoTSecureTunnelingRequest& IoTSecureTunnelingRequest::operator=(const IoTSecureT
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from IoTSecureTunnelingRequestPrivate.
  */
-IoTSecureTunnelingRequest::IoTSecureTunnelingRequest(IoTSecureTunnelingRequestPrivate * const d) : d_ptr(d)
+IoTSecureTunnelingRequest::IoTSecureTunnelingRequest(IoTSecureTunnelingRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -251,7 +250,7 @@ QNetworkRequest IoTSecureTunnelingRequest::unsignedRequest(const QUrl &endpoint)
  * with public implementation \a q.
  */
 IoTSecureTunnelingRequestPrivate::IoTSecureTunnelingRequestPrivate(const IoTSecureTunnelingRequest::Action action, IoTSecureTunnelingRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -266,8 +265,8 @@ IoTSecureTunnelingRequestPrivate::IoTSecureTunnelingRequestPrivate(const IoTSecu
  */
 IoTSecureTunnelingRequestPrivate::IoTSecureTunnelingRequestPrivate(const IoTSecureTunnelingRequestPrivate &other,
                                      IoTSecureTunnelingRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

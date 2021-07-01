@@ -62,7 +62,8 @@ DeleteRepositoryPolicyResponse::DeleteRepositoryPolicyResponse(
  */
 const DeleteRepositoryPolicyRequest * DeleteRepositoryPolicyResponse::request() const
 {
-    return static_cast<const DeleteRepositoryPolicyRequest *>(EcrResponse::request());
+    Q_D(const DeleteRepositoryPolicyResponse);
+    return static_cast<const DeleteRepositoryPolicyRequest *>(d->request);
 }
 
 /*!

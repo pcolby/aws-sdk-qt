@@ -78,7 +78,8 @@ DescribeArchiveResponse::DescribeArchiveResponse(
  */
 const DescribeArchiveRequest * DescribeArchiveResponse::request() const
 {
-    return static_cast<const DescribeArchiveRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const DescribeArchiveResponse);
+    return static_cast<const DescribeArchiveRequest *>(d->request);
 }
 
 /*!

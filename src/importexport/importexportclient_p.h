@@ -20,20 +20,19 @@
 #ifndef QTAWS_IMPORTEXPORTCLIENT_P_H
 #define QTAWS_IMPORTEXPORTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ImportExport {
 
 class ImportExportClient;
 
-class ImportExportClientPrivate {
+class ImportExportClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ImportExportClientPrivate(ImportExportClient * const q);
-
-protected:
-    ImportExportClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ImportExportClient)

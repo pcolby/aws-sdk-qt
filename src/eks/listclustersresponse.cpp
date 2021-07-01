@@ -65,7 +65,8 @@ ListClustersResponse::ListClustersResponse(
  */
 const ListClustersRequest * ListClustersResponse::request() const
 {
-    return static_cast<const ListClustersRequest *>(EksResponse::request());
+    Q_D(const ListClustersResponse);
+    return static_cast<const ListClustersRequest *>(d->request);
 }
 
 /*!

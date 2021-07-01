@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    Route53DomainsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     Route53DomainsResponse(Route53DomainsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -37,7 +37,7 @@ namespace LookoutEquipment {
  * Constructs a LookoutEquipmentResponse object with parent \a parent.
  */
 LookoutEquipmentResponse::LookoutEquipmentResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LookoutEquipmentResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new LookoutEquipmentResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ LookoutEquipmentResponse::LookoutEquipmentResponse(QObject * const parent)
  * implementation that inherits from LookoutEquipmentResponsePrivate.
  */
 LookoutEquipmentResponse::LookoutEquipmentResponse(LookoutEquipmentResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void LookoutEquipmentResponse::parseFailure(QIODevice &response)
  * Constructs a LookoutEquipmentResponsePrivate object with public implementation \a q.
  */
 LookoutEquipmentResponsePrivate::LookoutEquipmentResponsePrivate(
-    LookoutEquipmentResponse * const q) : q_ptr(q)
+    LookoutEquipmentResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

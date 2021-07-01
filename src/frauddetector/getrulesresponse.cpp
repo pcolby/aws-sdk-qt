@@ -58,7 +58,8 @@ GetRulesResponse::GetRulesResponse(
  */
 const GetRulesRequest * GetRulesResponse::request() const
 {
-    return static_cast<const GetRulesRequest *>(FraudDetectorResponse::request());
+    Q_D(const GetRulesResponse);
+    return static_cast<const GetRulesRequest *>(d->request);
 }
 
 /*!

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    CloudHSMResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CloudHSMResponse(CloudHSMResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -55,7 +55,8 @@ AcceptEulasResponse::AcceptEulasResponse(
  */
 const AcceptEulasRequest * AcceptEulasResponse::request() const
 {
-    return static_cast<const AcceptEulasRequest *>(NimbleStudioResponse::request());
+    Q_D(const AcceptEulasResponse);
+    return static_cast<const AcceptEulasRequest *>(d->request);
 }
 
 /*!

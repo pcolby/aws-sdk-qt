@@ -74,7 +74,8 @@ StopExecutionResponse::StopExecutionResponse(
  */
 const StopExecutionRequest * StopExecutionResponse::request() const
 {
-    return static_cast<const StopExecutionRequest *>(SfnResponse::request());
+    Q_D(const StopExecutionResponse);
+    return static_cast<const StopExecutionRequest *>(d->request);
 }
 
 /*!

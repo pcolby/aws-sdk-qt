@@ -58,7 +58,8 @@ GetImageResponse::GetImageResponse(
  */
 const GetImageRequest * GetImageResponse::request() const
 {
-    return static_cast<const GetImageRequest *>(imagebuilderResponse::request());
+    Q_D(const GetImageResponse);
+    return static_cast<const GetImageRequest *>(d->request);
 }
 
 /*!

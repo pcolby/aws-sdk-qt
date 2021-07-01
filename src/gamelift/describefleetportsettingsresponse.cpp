@@ -115,7 +115,8 @@ DescribeFleetPortSettingsResponse::DescribeFleetPortSettingsResponse(
  */
 const DescribeFleetPortSettingsRequest * DescribeFleetPortSettingsResponse::request() const
 {
-    return static_cast<const DescribeFleetPortSettingsRequest *>(GameLiftResponse::request());
+    Q_D(const DescribeFleetPortSettingsResponse);
+    return static_cast<const DescribeFleetPortSettingsRequest *>(d->request);
 }
 
 /*!

@@ -72,7 +72,8 @@ SubmitContainerStateChangeResponse::SubmitContainerStateChangeResponse(
  */
 const SubmitContainerStateChangeRequest * SubmitContainerStateChangeResponse::request() const
 {
-    return static_cast<const SubmitContainerStateChangeRequest *>(EcsResponse::request());
+    Q_D(const SubmitContainerStateChangeResponse);
+    return static_cast<const SubmitContainerStateChangeRequest *>(d->request);
 }
 
 /*!

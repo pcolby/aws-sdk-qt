@@ -98,7 +98,8 @@ DeleteDocumentResponse::DeleteDocumentResponse(
  */
 const DeleteDocumentRequest * DeleteDocumentResponse::request() const
 {
-    return static_cast<const DeleteDocumentRequest *>(SsmResponse::request());
+    Q_D(const DeleteDocumentResponse);
+    return static_cast<const DeleteDocumentRequest *>(d->request);
 }
 
 /*!

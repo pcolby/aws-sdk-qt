@@ -69,7 +69,8 @@ DescribeCertificateResponse::DescribeCertificateResponse(
  */
 const DescribeCertificateRequest * DescribeCertificateResponse::request() const
 {
-    return static_cast<const DescribeCertificateRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DescribeCertificateResponse);
+    return static_cast<const DescribeCertificateRequest *>(d->request);
 }
 
 /*!

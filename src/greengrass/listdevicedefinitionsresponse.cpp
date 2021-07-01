@@ -58,7 +58,8 @@ ListDeviceDefinitionsResponse::ListDeviceDefinitionsResponse(
  */
 const ListDeviceDefinitionsRequest * ListDeviceDefinitionsResponse::request() const
 {
-    return static_cast<const ListDeviceDefinitionsRequest *>(GreengrassResponse::request());
+    Q_D(const ListDeviceDefinitionsResponse);
+    return static_cast<const ListDeviceDefinitionsRequest *>(d->request);
 }
 
 /*!

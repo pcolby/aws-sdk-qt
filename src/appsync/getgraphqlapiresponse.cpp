@@ -56,7 +56,8 @@ GetGraphqlApiResponse::GetGraphqlApiResponse(
  */
 const GetGraphqlApiRequest * GetGraphqlApiResponse::request() const
 {
-    return static_cast<const GetGraphqlApiRequest *>(AppSyncResponse::request());
+    Q_D(const GetGraphqlApiResponse);
+    return static_cast<const GetGraphqlApiRequest *>(d->request);
 }
 
 /*!

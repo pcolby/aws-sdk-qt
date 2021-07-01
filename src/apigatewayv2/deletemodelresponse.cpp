@@ -56,7 +56,8 @@ DeleteModelResponse::DeleteModelResponse(
  */
 const DeleteModelRequest * DeleteModelResponse::request() const
 {
-    return static_cast<const DeleteModelRequest *>(ApiGatewayV2Response::request());
+    Q_D(const DeleteModelResponse);
+    return static_cast<const DeleteModelRequest *>(d->request);
 }
 
 /*!

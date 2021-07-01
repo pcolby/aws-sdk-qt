@@ -37,7 +37,7 @@ namespace CodeStarNotifications {
  * Constructs a CodeStarNotificationsResponse object with parent \a parent.
  */
 CodeStarNotificationsResponse::CodeStarNotificationsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CodeStarNotificationsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CodeStarNotificationsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CodeStarNotificationsResponse::CodeStarNotificationsResponse(QObject * const par
  * implementation that inherits from CodeStarNotificationsResponsePrivate.
  */
 CodeStarNotificationsResponse::CodeStarNotificationsResponse(CodeStarNotificationsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CodeStarNotificationsResponse::parseFailure(QIODevice &response)
  * Constructs a CodeStarNotificationsResponsePrivate object with public implementation \a q.
  */
 CodeStarNotificationsResponsePrivate::CodeStarNotificationsResponsePrivate(
-    CodeStarNotificationsResponse * const q) : q_ptr(q)
+    CodeStarNotificationsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

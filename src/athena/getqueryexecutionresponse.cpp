@@ -73,7 +73,8 @@ GetQueryExecutionResponse::GetQueryExecutionResponse(
  */
 const GetQueryExecutionRequest * GetQueryExecutionResponse::request() const
 {
-    return static_cast<const GetQueryExecutionRequest *>(AthenaResponse::request());
+    Q_D(const GetQueryExecutionResponse);
+    return static_cast<const GetQueryExecutionRequest *>(d->request);
 }
 
 /*!

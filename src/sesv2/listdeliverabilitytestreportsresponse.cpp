@@ -88,7 +88,8 @@ ListDeliverabilityTestReportsResponse::ListDeliverabilityTestReportsResponse(
  */
 const ListDeliverabilityTestReportsRequest * ListDeliverabilityTestReportsResponse::request() const
 {
-    return static_cast<const ListDeliverabilityTestReportsRequest *>(Sesv2Response::request());
+    Q_D(const ListDeliverabilityTestReportsResponse);
+    return static_cast<const ListDeliverabilityTestReportsRequest *>(d->request);
 }
 
 /*!

@@ -83,7 +83,8 @@ ListVirtualClustersResponse::ListVirtualClustersResponse(
  */
 const ListVirtualClustersRequest * ListVirtualClustersResponse::request() const
 {
-    return static_cast<const ListVirtualClustersRequest *>(EMRContainersResponse::request());
+    Q_D(const ListVirtualClustersResponse);
+    return static_cast<const ListVirtualClustersRequest *>(d->request);
 }
 
 /*!

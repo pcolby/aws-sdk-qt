@@ -439,7 +439,8 @@ BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse::BatchDisassociate
  */
 const BatchDisassociateApprovalRuleTemplateFromRepositoriesRequest * BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse::request() const
 {
-    return static_cast<const BatchDisassociateApprovalRuleTemplateFromRepositoriesRequest *>(CodeCommitResponse::request());
+    Q_D(const BatchDisassociateApprovalRuleTemplateFromRepositoriesResponse);
+    return static_cast<const BatchDisassociateApprovalRuleTemplateFromRepositoriesRequest *>(d->request);
 }
 
 /*!

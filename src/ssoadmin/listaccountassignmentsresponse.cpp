@@ -55,7 +55,8 @@ ListAccountAssignmentsResponse::ListAccountAssignmentsResponse(
  */
 const ListAccountAssignmentsRequest * ListAccountAssignmentsResponse::request() const
 {
-    return static_cast<const ListAccountAssignmentsRequest *>(SSOAdminResponse::request());
+    Q_D(const ListAccountAssignmentsResponse);
+    return static_cast<const ListAccountAssignmentsRequest *>(d->request);
 }
 
 /*!

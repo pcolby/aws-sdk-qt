@@ -56,7 +56,8 @@ RejectDomainTransferFromAnotherAwsAccountResponse::RejectDomainTransferFromAnoth
  */
 const RejectDomainTransferFromAnotherAwsAccountRequest * RejectDomainTransferFromAnotherAwsAccountResponse::request() const
 {
-    return static_cast<const RejectDomainTransferFromAnotherAwsAccountRequest *>(Route53DomainsResponse::request());
+    Q_D(const RejectDomainTransferFromAnotherAwsAccountResponse);
+    return static_cast<const RejectDomainTransferFromAnotherAwsAccountRequest *>(d->request);
 }
 
 /*!

@@ -135,16 +135,16 @@ CustomerProfilesClient::CustomerProfilesClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-08-15"),
-    QStringLiteral("profile"),
-    QStringLiteral("Amazon Connect Customer Profiles"),
-    QStringLiteral("profile"),
-    parent), d_ptr(new CustomerProfilesClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CustomerProfilesClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CustomerProfilesClient);
+    d->apiVersion = QStringLiteral("2020-08-15");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("profile");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Connect Customer Profiles");
+    d->serviceName = QStringLiteral("profile");
 }
 
 /*!
@@ -163,16 +163,16 @@ CustomerProfilesClient::CustomerProfilesClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-08-15"),
-    QStringLiteral("profile"),
-    QStringLiteral("Amazon Connect Customer Profiles"),
-    QStringLiteral("profile"),
-    parent), d_ptr(new CustomerProfilesClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CustomerProfilesClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CustomerProfilesClient);
+    d->apiVersion = QStringLiteral("2020-08-15");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("profile");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Connect Customer Profiles");
+    d->serviceName = QStringLiteral("profile");
 }
 
 /*!
@@ -733,9 +733,10 @@ UpdateProfileResponse * CustomerProfilesClient::updateProfile(const UpdateProfil
 /*!
  * Constructs a CustomerProfilesClientPrivate object with public implementation \a q.
  */
-CustomerProfilesClientPrivate::CustomerProfilesClientPrivate(CustomerProfilesClient * const q) : q_ptr(q)
+CustomerProfilesClientPrivate::CustomerProfilesClientPrivate(CustomerProfilesClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CustomerProfiles

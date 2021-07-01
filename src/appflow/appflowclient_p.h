@@ -20,20 +20,19 @@
 #ifndef QTAWS_APPFLOWCLIENT_P_H
 #define QTAWS_APPFLOWCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace Appflow {
 
 class AppflowClient;
 
-class AppflowClientPrivate {
+class AppflowClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit AppflowClientPrivate(AppflowClient * const q);
-
-protected:
-    AppflowClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AppflowClient)

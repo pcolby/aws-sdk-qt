@@ -62,7 +62,8 @@ DeleteFileSystemPolicyResponse::DeleteFileSystemPolicyResponse(
  */
 const DeleteFileSystemPolicyRequest * DeleteFileSystemPolicyResponse::request() const
 {
-    return static_cast<const DeleteFileSystemPolicyRequest *>(EfsResponse::request());
+    Q_D(const DeleteFileSystemPolicyResponse);
+    return static_cast<const DeleteFileSystemPolicyRequest *>(d->request);
 }
 
 /*!

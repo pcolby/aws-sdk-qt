@@ -20,20 +20,19 @@
 #ifndef QTAWS_PERSONALIZEEVENTSCLIENT_P_H
 #define QTAWS_PERSONALIZEEVENTSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace PersonalizeEvents {
 
 class PersonalizeEventsClient;
 
-class PersonalizeEventsClientPrivate {
+class PersonalizeEventsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit PersonalizeEventsClientPrivate(PersonalizeEventsClient * const q);
-
-protected:
-    PersonalizeEventsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(PersonalizeEventsClient)

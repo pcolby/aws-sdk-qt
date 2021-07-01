@@ -87,7 +87,8 @@ DescribeVpcClassicLinkDnsSupportResponse::DescribeVpcClassicLinkDnsSupportRespon
  */
 const DescribeVpcClassicLinkDnsSupportRequest * DescribeVpcClassicLinkDnsSupportResponse::request() const
 {
-    return static_cast<const DescribeVpcClassicLinkDnsSupportRequest *>(Ec2Response::request());
+    Q_D(const DescribeVpcClassicLinkDnsSupportResponse);
+    return static_cast<const DescribeVpcClassicLinkDnsSupportRequest *>(d->request);
 }
 
 /*!

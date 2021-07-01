@@ -98,7 +98,8 @@ GetParameterResponse::GetParameterResponse(
  */
 const GetParameterRequest * GetParameterResponse::request() const
 {
-    return static_cast<const GetParameterRequest *>(SsmResponse::request());
+    Q_D(const GetParameterResponse);
+    return static_cast<const GetParameterRequest *>(d->request);
 }
 
 /*!

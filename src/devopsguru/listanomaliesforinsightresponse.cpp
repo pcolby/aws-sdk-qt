@@ -74,7 +74,8 @@ ListAnomaliesForInsightResponse::ListAnomaliesForInsightResponse(
  */
 const ListAnomaliesForInsightRequest * ListAnomaliesForInsightResponse::request() const
 {
-    return static_cast<const ListAnomaliesForInsightRequest *>(DevOpsGuruResponse::request());
+    Q_D(const ListAnomaliesForInsightResponse);
+    return static_cast<const ListAnomaliesForInsightRequest *>(d->request);
 }
 
 /*!

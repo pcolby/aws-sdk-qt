@@ -90,7 +90,8 @@ RegisterTargetsResponse::RegisterTargetsResponse(
  */
 const RegisterTargetsRequest * RegisterTargetsResponse::request() const
 {
-    return static_cast<const RegisterTargetsRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const RegisterTargetsResponse);
+    return static_cast<const RegisterTargetsRequest *>(d->request);
 }
 
 /*!

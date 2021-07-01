@@ -98,7 +98,8 @@ GetBotResponse::GetBotResponse(
  */
 const GetBotRequest * GetBotResponse::request() const
 {
-    return static_cast<const GetBotRequest *>(ChimeResponse::request());
+    Q_D(const GetBotResponse);
+    return static_cast<const GetBotRequest *>(d->request);
 }
 
 /*!

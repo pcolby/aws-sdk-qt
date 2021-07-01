@@ -64,7 +64,8 @@ DeleteSourceCredentialsResponse::DeleteSourceCredentialsResponse(
  */
 const DeleteSourceCredentialsRequest * DeleteSourceCredentialsResponse::request() const
 {
-    return static_cast<const DeleteSourceCredentialsRequest *>(CodeBuildResponse::request());
+    Q_D(const DeleteSourceCredentialsResponse);
+    return static_cast<const DeleteSourceCredentialsRequest *>(d->request);
 }
 
 /*!

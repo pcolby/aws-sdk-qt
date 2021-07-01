@@ -56,7 +56,8 @@ StartSimulationJobBatchResponse::StartSimulationJobBatchResponse(
  */
 const StartSimulationJobBatchRequest * StartSimulationJobBatchResponse::request() const
 {
-    return static_cast<const StartSimulationJobBatchRequest *>(RoboMakerResponse::request());
+    Q_D(const StartSimulationJobBatchResponse);
+    return static_cast<const StartSimulationJobBatchRequest *>(d->request);
 }
 
 /*!

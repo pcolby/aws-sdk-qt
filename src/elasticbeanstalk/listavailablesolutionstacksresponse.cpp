@@ -77,7 +77,8 @@ ListAvailableSolutionStacksResponse::ListAvailableSolutionStacksResponse(
  */
 const ListAvailableSolutionStacksRequest * ListAvailableSolutionStacksResponse::request() const
 {
-    return static_cast<const ListAvailableSolutionStacksRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const ListAvailableSolutionStacksResponse);
+    return static_cast<const ListAvailableSolutionStacksRequest *>(d->request);
 }
 
 /*!

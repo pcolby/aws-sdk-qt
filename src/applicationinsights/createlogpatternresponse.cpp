@@ -68,7 +68,8 @@ CreateLogPatternResponse::CreateLogPatternResponse(
  */
 const CreateLogPatternRequest * CreateLogPatternResponse::request() const
 {
-    return static_cast<const CreateLogPatternRequest *>(ApplicationInsightsResponse::request());
+    Q_D(const CreateLogPatternResponse);
+    return static_cast<const CreateLogPatternRequest *>(d->request);
 }
 
 /*!

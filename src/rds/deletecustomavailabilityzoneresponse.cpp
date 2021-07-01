@@ -119,7 +119,8 @@ DeleteCustomAvailabilityZoneResponse::DeleteCustomAvailabilityZoneResponse(
  */
 const DeleteCustomAvailabilityZoneRequest * DeleteCustomAvailabilityZoneResponse::request() const
 {
-    return static_cast<const DeleteCustomAvailabilityZoneRequest *>(RdsResponse::request());
+    Q_D(const DeleteCustomAvailabilityZoneResponse);
+    return static_cast<const DeleteCustomAvailabilityZoneRequest *>(d->request);
 }
 
 /*!

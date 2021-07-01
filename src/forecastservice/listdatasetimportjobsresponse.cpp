@@ -56,7 +56,8 @@ ListDatasetImportJobsResponse::ListDatasetImportJobsResponse(
  */
 const ListDatasetImportJobsRequest * ListDatasetImportJobsResponse::request() const
 {
-    return static_cast<const ListDatasetImportJobsRequest *>(ForecastServiceResponse::request());
+    Q_D(const ListDatasetImportJobsResponse);
+    return static_cast<const ListDatasetImportJobsRequest *>(d->request);
 }
 
 /*!

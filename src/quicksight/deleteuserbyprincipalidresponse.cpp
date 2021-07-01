@@ -60,7 +60,8 @@ DeleteUserByPrincipalIdResponse::DeleteUserByPrincipalIdResponse(
  */
 const DeleteUserByPrincipalIdRequest * DeleteUserByPrincipalIdResponse::request() const
 {
-    return static_cast<const DeleteUserByPrincipalIdRequest *>(QuickSightResponse::request());
+    Q_D(const DeleteUserByPrincipalIdResponse);
+    return static_cast<const DeleteUserByPrincipalIdRequest *>(d->request);
 }
 
 /*!

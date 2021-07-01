@@ -64,7 +64,8 @@ DescribeModelResponse::DescribeModelResponse(
  */
 const DescribeModelRequest * DescribeModelResponse::request() const
 {
-    return static_cast<const DescribeModelRequest *>(LookoutforVisionResponse::request());
+    Q_D(const DescribeModelResponse);
+    return static_cast<const DescribeModelRequest *>(d->request);
 }
 
 /*!

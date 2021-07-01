@@ -66,7 +66,8 @@ ListIdentitiesResponse::ListIdentitiesResponse(
  */
 const ListIdentitiesRequest * ListIdentitiesResponse::request() const
 {
-    return static_cast<const ListIdentitiesRequest *>(SesResponse::request());
+    Q_D(const ListIdentitiesResponse);
+    return static_cast<const ListIdentitiesRequest *>(d->request);
 }
 
 /*!

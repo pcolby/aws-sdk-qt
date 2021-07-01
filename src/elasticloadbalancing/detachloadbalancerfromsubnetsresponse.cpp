@@ -83,7 +83,8 @@ DetachLoadBalancerFromSubnetsResponse::DetachLoadBalancerFromSubnetsResponse(
  */
 const DetachLoadBalancerFromSubnetsRequest * DetachLoadBalancerFromSubnetsResponse::request() const
 {
-    return static_cast<const DetachLoadBalancerFromSubnetsRequest *>(ElasticLoadBalancingResponse::request());
+    Q_D(const DetachLoadBalancerFromSubnetsResponse);
+    return static_cast<const DetachLoadBalancerFromSubnetsRequest *>(d->request);
 }
 
 /*!

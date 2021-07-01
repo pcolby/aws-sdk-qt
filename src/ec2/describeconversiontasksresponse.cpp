@@ -87,7 +87,8 @@ DescribeConversionTasksResponse::DescribeConversionTasksResponse(
  */
 const DescribeConversionTasksRequest * DescribeConversionTasksResponse::request() const
 {
-    return static_cast<const DescribeConversionTasksRequest *>(Ec2Response::request());
+    Q_D(const DescribeConversionTasksResponse);
+    return static_cast<const DescribeConversionTasksRequest *>(d->request);
 }
 
 /*!

@@ -70,7 +70,8 @@ StopAutoMLJobResponse::StopAutoMLJobResponse(
  */
 const StopAutoMLJobRequest * StopAutoMLJobResponse::request() const
 {
-    return static_cast<const StopAutoMLJobRequest *>(SageMakerResponse::request());
+    Q_D(const StopAutoMLJobResponse);
+    return static_cast<const StopAutoMLJobRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ RestoreAnalysisResponse::RestoreAnalysisResponse(
  */
 const RestoreAnalysisRequest * RestoreAnalysisResponse::request() const
 {
-    return static_cast<const RestoreAnalysisRequest *>(QuickSightResponse::request());
+    Q_D(const RestoreAnalysisResponse);
+    return static_cast<const RestoreAnalysisRequest *>(d->request);
 }
 
 /*!

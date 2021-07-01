@@ -85,7 +85,8 @@ RestoreFromClusterSnapshotResponse::RestoreFromClusterSnapshotResponse(
  */
 const RestoreFromClusterSnapshotRequest * RestoreFromClusterSnapshotResponse::request() const
 {
-    return static_cast<const RestoreFromClusterSnapshotRequest *>(RedshiftResponse::request());
+    Q_D(const RestoreFromClusterSnapshotResponse);
+    return static_cast<const RestoreFromClusterSnapshotRequest *>(d->request);
 }
 
 /*!

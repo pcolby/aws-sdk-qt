@@ -56,7 +56,8 @@ CheckDomainAvailabilityResponse::CheckDomainAvailabilityResponse(
  */
 const CheckDomainAvailabilityRequest * CheckDomainAvailabilityResponse::request() const
 {
-    return static_cast<const CheckDomainAvailabilityRequest *>(Route53DomainsResponse::request());
+    Q_D(const CheckDomainAvailabilityResponse);
+    return static_cast<const CheckDomainAvailabilityRequest *>(d->request);
 }
 
 /*!

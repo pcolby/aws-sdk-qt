@@ -85,7 +85,8 @@ ModifyAquaConfigurationResponse::ModifyAquaConfigurationResponse(
  */
 const ModifyAquaConfigurationRequest * ModifyAquaConfigurationResponse::request() const
 {
-    return static_cast<const ModifyAquaConfigurationRequest *>(RedshiftResponse::request());
+    Q_D(const ModifyAquaConfigurationResponse);
+    return static_cast<const ModifyAquaConfigurationRequest *>(d->request);
 }
 
 /*!

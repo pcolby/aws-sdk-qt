@@ -116,7 +116,8 @@ DescribeBudgetsResponse::DescribeBudgetsResponse(
  */
 const DescribeBudgetsRequest * DescribeBudgetsResponse::request() const
 {
-    return static_cast<const DescribeBudgetsRequest *>(BudgetsResponse::request());
+    Q_D(const DescribeBudgetsResponse);
+    return static_cast<const DescribeBudgetsRequest *>(d->request);
 }
 
 /*!

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    IoTWirelessResponsePrivate * const d_ptr; ///< Internal d-pointer.
     IoTWirelessResponse(IoTWirelessResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

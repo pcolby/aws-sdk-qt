@@ -105,12 +105,6 @@ public slots:
     UpdateComputeEnvironmentResponse * updateComputeEnvironment(const UpdateComputeEnvironmentRequest &request);
     UpdateJobQueueResponse * updateJobQueue(const UpdateJobQueueRequest &request);
 
-protected:
-    /// @cond internal
-    BatchClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit BatchClient(BatchClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(BatchClient)
     Q_DISABLE_COPY(BatchClient)

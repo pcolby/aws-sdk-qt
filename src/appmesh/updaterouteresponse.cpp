@@ -73,7 +73,8 @@ UpdateRouteResponse::UpdateRouteResponse(
  */
 const UpdateRouteRequest * UpdateRouteResponse::request() const
 {
-    return static_cast<const UpdateRouteRequest *>(AppMeshResponse::request());
+    Q_D(const UpdateRouteResponse);
+    return static_cast<const UpdateRouteRequest *>(d->request);
 }
 
 /*!

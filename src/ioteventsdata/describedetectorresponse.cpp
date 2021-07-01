@@ -64,7 +64,8 @@ DescribeDetectorResponse::DescribeDetectorResponse(
  */
 const DescribeDetectorRequest * DescribeDetectorResponse::request() const
 {
-    return static_cast<const DescribeDetectorRequest *>(IoTEventsDataResponse::request());
+    Q_D(const DescribeDetectorResponse);
+    return static_cast<const DescribeDetectorRequest *>(d->request);
 }
 
 /*!

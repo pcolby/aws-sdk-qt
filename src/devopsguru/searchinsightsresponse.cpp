@@ -74,7 +74,8 @@ SearchInsightsResponse::SearchInsightsResponse(
  */
 const SearchInsightsRequest * SearchInsightsResponse::request() const
 {
-    return static_cast<const SearchInsightsRequest *>(DevOpsGuruResponse::request());
+    Q_D(const SearchInsightsResponse);
+    return static_cast<const SearchInsightsRequest *>(d->request);
 }
 
 /*!

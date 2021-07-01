@@ -69,7 +69,8 @@ DeletePermissionResponse::DeletePermissionResponse(
  */
 const DeletePermissionRequest * DeletePermissionResponse::request() const
 {
-    return static_cast<const DeletePermissionRequest *>(AcmpcaResponse::request());
+    Q_D(const DeletePermissionResponse);
+    return static_cast<const DeletePermissionRequest *>(d->request);
 }
 
 /*!

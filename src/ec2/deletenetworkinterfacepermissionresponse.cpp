@@ -87,7 +87,8 @@ DeleteNetworkInterfacePermissionResponse::DeleteNetworkInterfacePermissionRespon
  */
 const DeleteNetworkInterfacePermissionRequest * DeleteNetworkInterfacePermissionResponse::request() const
 {
-    return static_cast<const DeleteNetworkInterfacePermissionRequest *>(Ec2Response::request());
+    Q_D(const DeleteNetworkInterfacePermissionResponse);
+    return static_cast<const DeleteNetworkInterfacePermissionRequest *>(d->request);
 }
 
 /*!

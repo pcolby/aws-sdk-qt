@@ -87,7 +87,8 @@ ModifyVolumeResponse::ModifyVolumeResponse(
  */
 const ModifyVolumeRequest * ModifyVolumeResponse::request() const
 {
-    return static_cast<const ModifyVolumeRequest *>(Ec2Response::request());
+    Q_D(const ModifyVolumeResponse);
+    return static_cast<const ModifyVolumeRequest *>(d->request);
 }
 
 /*!

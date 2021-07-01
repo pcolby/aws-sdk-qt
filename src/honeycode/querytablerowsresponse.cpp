@@ -58,7 +58,8 @@ QueryTableRowsResponse::QueryTableRowsResponse(
  */
 const QueryTableRowsRequest * QueryTableRowsResponse::request() const
 {
-    return static_cast<const QueryTableRowsRequest *>(HoneycodeResponse::request());
+    Q_D(const QueryTableRowsResponse);
+    return static_cast<const QueryTableRowsRequest *>(d->request);
 }
 
 /*!

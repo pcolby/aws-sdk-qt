@@ -64,7 +64,8 @@ DeleteProjectResponse::DeleteProjectResponse(
  */
 const DeleteProjectRequest * DeleteProjectResponse::request() const
 {
-    return static_cast<const DeleteProjectRequest *>(LookoutforVisionResponse::request());
+    Q_D(const DeleteProjectResponse);
+    return static_cast<const DeleteProjectRequest *>(d->request);
 }
 
 /*!

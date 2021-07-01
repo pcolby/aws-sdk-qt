@@ -58,7 +58,8 @@ CancelMLTaskRunResponse::CancelMLTaskRunResponse(
  */
 const CancelMLTaskRunRequest * CancelMLTaskRunResponse::request() const
 {
-    return static_cast<const CancelMLTaskRunRequest *>(GlueResponse::request());
+    Q_D(const CancelMLTaskRunResponse);
+    return static_cast<const CancelMLTaskRunRequest *>(d->request);
 }
 
 /*!

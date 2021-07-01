@@ -60,7 +60,8 @@ DescribeNamespaceResponse::DescribeNamespaceResponse(
  */
 const DescribeNamespaceRequest * DescribeNamespaceResponse::request() const
 {
-    return static_cast<const DescribeNamespaceRequest *>(QuickSightResponse::request());
+    Q_D(const DescribeNamespaceResponse);
+    return static_cast<const DescribeNamespaceRequest *>(d->request);
 }
 
 /*!

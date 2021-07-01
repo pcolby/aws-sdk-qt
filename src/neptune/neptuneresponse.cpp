@@ -37,7 +37,7 @@ namespace Neptune {
  * Constructs a NeptuneResponse object with parent \a parent.
  */
 NeptuneResponse::NeptuneResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new NeptuneResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new NeptuneResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ NeptuneResponse::NeptuneResponse(QObject * const parent)
  * implementation that inherits from NeptuneResponsePrivate.
  */
 NeptuneResponse::NeptuneResponse(NeptuneResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void NeptuneResponse::parseFailure(QIODevice &response)
  * Constructs a NeptuneResponsePrivate object with public implementation \a q.
  */
 NeptuneResponsePrivate::NeptuneResponsePrivate(
-    NeptuneResponse * const q) : q_ptr(q)
+    NeptuneResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

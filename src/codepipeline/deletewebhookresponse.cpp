@@ -240,7 +240,8 @@ DeleteWebhookResponse::DeleteWebhookResponse(
  */
 const DeleteWebhookRequest * DeleteWebhookResponse::request() const
 {
-    return static_cast<const DeleteWebhookRequest *>(CodePipelineResponse::request());
+    Q_D(const DeleteWebhookResponse);
+    return static_cast<const DeleteWebhookRequest *>(d->request);
 }
 
 /*!

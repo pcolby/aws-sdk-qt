@@ -56,7 +56,8 @@ CreateLanguageModelResponse::CreateLanguageModelResponse(
  */
 const CreateLanguageModelRequest * CreateLanguageModelResponse::request() const
 {
-    return static_cast<const CreateLanguageModelRequest *>(TranscribeServiceResponse::request());
+    Q_D(const CreateLanguageModelResponse);
+    return static_cast<const CreateLanguageModelRequest *>(d->request);
 }
 
 /*!

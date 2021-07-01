@@ -70,7 +70,8 @@ CreatePresignedNotebookInstanceUrlResponse::CreatePresignedNotebookInstanceUrlRe
  */
 const CreatePresignedNotebookInstanceUrlRequest * CreatePresignedNotebookInstanceUrlResponse::request() const
 {
-    return static_cast<const CreatePresignedNotebookInstanceUrlRequest *>(SageMakerResponse::request());
+    Q_D(const CreatePresignedNotebookInstanceUrlResponse);
+    return static_cast<const CreatePresignedNotebookInstanceUrlRequest *>(d->request);
 }
 
 /*!

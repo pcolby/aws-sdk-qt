@@ -68,7 +68,8 @@ SelectResponse::SelectResponse(
  */
 const SelectRequest * SelectResponse::request() const
 {
-    return static_cast<const SelectRequest *>(SimpleDBResponse::request());
+    Q_D(const SelectResponse);
+    return static_cast<const SelectRequest *>(d->request);
 }
 
 /*!

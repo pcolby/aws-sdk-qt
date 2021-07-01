@@ -64,8 +64,7 @@ public:
 
 protected:
     /// @cond internal
-    RDSDataServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit RDSDataServiceRequest(RDSDataServiceRequestPrivate * const d);
+    RDSDataServiceRequest(RDSDataServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

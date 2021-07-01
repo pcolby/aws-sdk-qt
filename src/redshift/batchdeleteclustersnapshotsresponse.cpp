@@ -85,7 +85,8 @@ BatchDeleteClusterSnapshotsResponse::BatchDeleteClusterSnapshotsResponse(
  */
 const BatchDeleteClusterSnapshotsRequest * BatchDeleteClusterSnapshotsResponse::request() const
 {
-    return static_cast<const BatchDeleteClusterSnapshotsRequest *>(RedshiftResponse::request());
+    Q_D(const BatchDeleteClusterSnapshotsResponse);
+    return static_cast<const BatchDeleteClusterSnapshotsRequest *>(d->request);
 }
 
 /*!

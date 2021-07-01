@@ -76,7 +76,8 @@ DeleteGeoMatchSetResponse::DeleteGeoMatchSetResponse(
  */
 const DeleteGeoMatchSetRequest * DeleteGeoMatchSetResponse::request() const
 {
-    return static_cast<const DeleteGeoMatchSetRequest *>(WafResponse::request());
+    Q_D(const DeleteGeoMatchSetResponse);
+    return static_cast<const DeleteGeoMatchSetRequest *>(d->request);
 }
 
 /*!

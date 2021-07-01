@@ -74,7 +74,8 @@ GetThingShadowResponse::GetThingShadowResponse(
  */
 const GetThingShadowRequest * GetThingShadowResponse::request() const
 {
-    return static_cast<const GetThingShadowRequest *>(IoTDataPlaneResponse::request());
+    Q_D(const GetThingShadowResponse);
+    return static_cast<const GetThingShadowRequest *>(d->request);
 }
 
 /*!

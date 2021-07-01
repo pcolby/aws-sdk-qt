@@ -118,16 +118,16 @@ CloudTrailClient::CloudTrailClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2013-11-01"),
-    QStringLiteral("cloudtrail"),
-    QStringLiteral("AWS CloudTrail"),
-    QStringLiteral("cloudtrail"),
-    parent), d_ptr(new CloudTrailClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudTrailClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudTrailClient);
+    d->apiVersion = QStringLiteral("2013-11-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudtrail");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CloudTrail");
+    d->serviceName = QStringLiteral("cloudtrail");
 }
 
 /*!
@@ -146,16 +146,16 @@ CloudTrailClient::CloudTrailClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2013-11-01"),
-    QStringLiteral("cloudtrail"),
-    QStringLiteral("AWS CloudTrail"),
-    QStringLiteral("cloudtrail"),
-    parent), d_ptr(new CloudTrailClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudTrailClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudTrailClient);
+    d->apiVersion = QStringLiteral("2013-11-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudtrail");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CloudTrail");
+    d->serviceName = QStringLiteral("cloudtrail");
 }
 
 /*!
@@ -574,9 +574,10 @@ UpdateTrailResponse * CloudTrailClient::updateTrail(const UpdateTrailRequest &re
 /*!
  * Constructs a CloudTrailClientPrivate object with public implementation \a q.
  */
-CloudTrailClientPrivate::CloudTrailClientPrivate(CloudTrailClient * const q) : q_ptr(q)
+CloudTrailClientPrivate::CloudTrailClientPrivate(CloudTrailClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudTrail

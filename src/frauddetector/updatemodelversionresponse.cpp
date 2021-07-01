@@ -58,7 +58,8 @@ UpdateModelVersionResponse::UpdateModelVersionResponse(
  */
 const UpdateModelVersionRequest * UpdateModelVersionResponse::request() const
 {
-    return static_cast<const UpdateModelVersionRequest *>(FraudDetectorResponse::request());
+    Q_D(const UpdateModelVersionResponse);
+    return static_cast<const UpdateModelVersionRequest *>(d->request);
 }
 
 /*!

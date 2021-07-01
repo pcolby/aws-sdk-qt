@@ -119,7 +119,8 @@ StartDBInstanceResponse::StartDBInstanceResponse(
  */
 const StartDBInstanceRequest * StartDBInstanceResponse::request() const
 {
-    return static_cast<const StartDBInstanceRequest *>(RdsResponse::request());
+    Q_D(const StartDBInstanceResponse);
+    return static_cast<const StartDBInstanceRequest *>(d->request);
 }
 
 /*!

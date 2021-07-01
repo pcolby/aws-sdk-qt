@@ -126,7 +126,8 @@ UpdateRegexPatternSetResponse::UpdateRegexPatternSetResponse(
  */
 const UpdateRegexPatternSetRequest * UpdateRegexPatternSetResponse::request() const
 {
-    return static_cast<const UpdateRegexPatternSetRequest *>(Wafv2Response::request());
+    Q_D(const UpdateRegexPatternSetResponse);
+    return static_cast<const UpdateRegexPatternSetRequest *>(d->request);
 }
 
 /*!

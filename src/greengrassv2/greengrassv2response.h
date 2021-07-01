@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    GreengrassV2ResponsePrivate * const d_ptr; ///< Internal d-pointer.
     GreengrassV2Response(GreengrassV2ResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

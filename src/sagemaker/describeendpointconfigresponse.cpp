@@ -70,7 +70,8 @@ DescribeEndpointConfigResponse::DescribeEndpointConfigResponse(
  */
 const DescribeEndpointConfigRequest * DescribeEndpointConfigResponse::request() const
 {
-    return static_cast<const DescribeEndpointConfigRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeEndpointConfigResponse);
+    return static_cast<const DescribeEndpointConfigRequest *>(d->request);
 }
 
 /*!

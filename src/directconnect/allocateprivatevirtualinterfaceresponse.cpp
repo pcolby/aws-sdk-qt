@@ -61,7 +61,8 @@ AllocatePrivateVirtualInterfaceResponse::AllocatePrivateVirtualInterfaceResponse
  */
 const AllocatePrivateVirtualInterfaceRequest * AllocatePrivateVirtualInterfaceResponse::request() const
 {
-    return static_cast<const AllocatePrivateVirtualInterfaceRequest *>(DirectConnectResponse::request());
+    Q_D(const AllocatePrivateVirtualInterfaceResponse);
+    return static_cast<const AllocatePrivateVirtualInterfaceRequest *>(d->request);
 }
 
 /*!

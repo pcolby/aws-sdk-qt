@@ -61,7 +61,8 @@ DisassociateDRTLogBucketResponse::DisassociateDRTLogBucketResponse(
  */
 const DisassociateDRTLogBucketRequest * DisassociateDRTLogBucketResponse::request() const
 {
-    return static_cast<const DisassociateDRTLogBucketRequest *>(ShieldResponse::request());
+    Q_D(const DisassociateDRTLogBucketResponse);
+    return static_cast<const DisassociateDRTLogBucketRequest *>(d->request);
 }
 
 /*!

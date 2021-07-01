@@ -83,7 +83,8 @@ CreateLoadBalancerPolicyResponse::CreateLoadBalancerPolicyResponse(
  */
 const CreateLoadBalancerPolicyRequest * CreateLoadBalancerPolicyResponse::request() const
 {
-    return static_cast<const CreateLoadBalancerPolicyRequest *>(ElasticLoadBalancingResponse::request());
+    Q_D(const CreateLoadBalancerPolicyResponse);
+    return static_cast<const CreateLoadBalancerPolicyRequest *>(d->request);
 }
 
 /*!

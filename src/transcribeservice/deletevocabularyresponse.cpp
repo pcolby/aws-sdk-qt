@@ -56,7 +56,8 @@ DeleteVocabularyResponse::DeleteVocabularyResponse(
  */
 const DeleteVocabularyRequest * DeleteVocabularyResponse::request() const
 {
-    return static_cast<const DeleteVocabularyRequest *>(TranscribeServiceResponse::request());
+    Q_D(const DeleteVocabularyResponse);
+    return static_cast<const DeleteVocabularyRequest *>(d->request);
 }
 
 /*!

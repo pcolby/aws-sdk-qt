@@ -58,7 +58,8 @@ ListJobsByPipelineResponse::ListJobsByPipelineResponse(
  */
 const ListJobsByPipelineRequest * ListJobsByPipelineResponse::request() const
 {
-    return static_cast<const ListJobsByPipelineRequest *>(ElasticTranscoderResponse::request());
+    Q_D(const ListJobsByPipelineResponse);
+    return static_cast<const ListJobsByPipelineRequest *>(d->request);
 }
 
 /*!

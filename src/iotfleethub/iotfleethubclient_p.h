@@ -20,20 +20,19 @@
 #ifndef QTAWS_IOTFLEETHUBCLIENT_P_H
 #define QTAWS_IOTFLEETHUBCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace IoTFleetHub {
 
 class IoTFleetHubClient;
 
-class IoTFleetHubClientPrivate {
+class IoTFleetHubClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit IoTFleetHubClientPrivate(IoTFleetHubClient * const q);
-
-protected:
-    IoTFleetHubClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(IoTFleetHubClient)

@@ -58,7 +58,8 @@ DescribeConnectionAliasesResponse::DescribeConnectionAliasesResponse(
  */
 const DescribeConnectionAliasesRequest * DescribeConnectionAliasesResponse::request() const
 {
-    return static_cast<const DescribeConnectionAliasesRequest *>(WorkSpacesResponse::request());
+    Q_D(const DescribeConnectionAliasesResponse);
+    return static_cast<const DescribeConnectionAliasesRequest *>(d->request);
 }
 
 /*!

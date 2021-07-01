@@ -55,7 +55,8 @@ PutStudioMembersResponse::PutStudioMembersResponse(
  */
 const PutStudioMembersRequest * PutStudioMembersResponse::request() const
 {
-    return static_cast<const PutStudioMembersRequest *>(NimbleStudioResponse::request());
+    Q_D(const PutStudioMembersResponse);
+    return static_cast<const PutStudioMembersRequest *>(d->request);
 }
 
 /*!

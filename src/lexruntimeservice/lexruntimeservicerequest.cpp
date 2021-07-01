@@ -47,7 +47,7 @@ namespace LexRuntimeService {
  * Constructs a LexRuntimeServiceRequest object for LexRuntimeService \a action.
  */
 LexRuntimeServiceRequest::LexRuntimeServiceRequest(const Action action)
-    : d_ptr(new LexRuntimeServiceRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new LexRuntimeServiceRequestPrivate(action, this))
 {
 
 }
@@ -56,8 +56,7 @@ LexRuntimeServiceRequest::LexRuntimeServiceRequest(const Action action)
  * Constructs a copy of \a other.
  */
 LexRuntimeServiceRequest::LexRuntimeServiceRequest(const LexRuntimeServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new LexRuntimeServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new LexRuntimeServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -80,7 +79,7 @@ LexRuntimeServiceRequest& LexRuntimeServiceRequest::operator=(const LexRuntimeSe
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LexRuntimeServiceRequestPrivate.
  */
-LexRuntimeServiceRequest::LexRuntimeServiceRequest(LexRuntimeServiceRequestPrivate * const d) : d_ptr(d)
+LexRuntimeServiceRequest::LexRuntimeServiceRequest(LexRuntimeServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -249,7 +248,7 @@ QNetworkRequest LexRuntimeServiceRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 LexRuntimeServiceRequestPrivate::LexRuntimeServiceRequestPrivate(const LexRuntimeServiceRequest::Action action, LexRuntimeServiceRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -264,8 +263,8 @@ LexRuntimeServiceRequestPrivate::LexRuntimeServiceRequestPrivate(const LexRuntim
  */
 LexRuntimeServiceRequestPrivate::LexRuntimeServiceRequestPrivate(const LexRuntimeServiceRequestPrivate &other,
                                      LexRuntimeServiceRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -92,7 +92,8 @@ GetAccountResponse::GetAccountResponse(
  */
 const GetAccountRequest * GetAccountResponse::request() const
 {
-    return static_cast<const GetAccountRequest *>(PinpointEmailResponse::request());
+    Q_D(const GetAccountResponse);
+    return static_cast<const GetAccountRequest *>(d->request);
 }
 
 /*!

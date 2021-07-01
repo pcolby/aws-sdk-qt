@@ -66,7 +66,8 @@ RemoveLayerVersionPermissionResponse::RemoveLayerVersionPermissionResponse(
  */
 const RemoveLayerVersionPermissionRequest * RemoveLayerVersionPermissionResponse::request() const
 {
-    return static_cast<const RemoveLayerVersionPermissionRequest *>(LambdaResponse::request());
+    Q_D(const RemoveLayerVersionPermissionResponse);
+    return static_cast<const RemoveLayerVersionPermissionRequest *>(d->request);
 }
 
 /*!

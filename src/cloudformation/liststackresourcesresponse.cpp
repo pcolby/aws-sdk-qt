@@ -77,7 +77,8 @@ ListStackResourcesResponse::ListStackResourcesResponse(
  */
 const ListStackResourcesRequest * ListStackResourcesResponse::request() const
 {
-    return static_cast<const ListStackResourcesRequest *>(CloudFormationResponse::request());
+    Q_D(const ListStackResourcesResponse);
+    return static_cast<const ListStackResourcesRequest *>(d->request);
 }
 
 /*!

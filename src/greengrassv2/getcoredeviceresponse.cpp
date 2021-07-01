@@ -72,7 +72,8 @@ GetCoreDeviceResponse::GetCoreDeviceResponse(
  */
 const GetCoreDeviceRequest * GetCoreDeviceResponse::request() const
 {
-    return static_cast<const GetCoreDeviceRequest *>(GreengrassV2Response::request());
+    Q_D(const GetCoreDeviceResponse);
+    return static_cast<const GetCoreDeviceRequest *>(d->request);
 }
 
 /*!

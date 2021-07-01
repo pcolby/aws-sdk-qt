@@ -82,7 +82,8 @@ DeleteMitigationActionResponse::DeleteMitigationActionResponse(
  */
 const DeleteMitigationActionRequest * DeleteMitigationActionResponse::request() const
 {
-    return static_cast<const DeleteMitigationActionRequest *>(IoTResponse::request());
+    Q_D(const DeleteMitigationActionResponse);
+    return static_cast<const DeleteMitigationActionRequest *>(d->request);
 }
 
 /*!

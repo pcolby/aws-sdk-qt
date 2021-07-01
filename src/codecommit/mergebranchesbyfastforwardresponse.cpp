@@ -439,7 +439,8 @@ MergeBranchesByFastForwardResponse::MergeBranchesByFastForwardResponse(
  */
 const MergeBranchesByFastForwardRequest * MergeBranchesByFastForwardResponse::request() const
 {
-    return static_cast<const MergeBranchesByFastForwardRequest *>(CodeCommitResponse::request());
+    Q_D(const MergeBranchesByFastForwardResponse);
+    return static_cast<const MergeBranchesByFastForwardRequest *>(d->request);
 }
 
 /*!

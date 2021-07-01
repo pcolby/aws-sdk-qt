@@ -87,7 +87,8 @@ RevokeClientVpnIngressResponse::RevokeClientVpnIngressResponse(
  */
 const RevokeClientVpnIngressRequest * RevokeClientVpnIngressResponse::request() const
 {
-    return static_cast<const RevokeClientVpnIngressRequest *>(Ec2Response::request());
+    Q_D(const RevokeClientVpnIngressResponse);
+    return static_cast<const RevokeClientVpnIngressRequest *>(d->request);
 }
 
 /*!

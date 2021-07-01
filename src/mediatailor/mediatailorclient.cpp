@@ -132,16 +132,16 @@ MediaTailorClient::MediaTailorClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-04-23"),
-    QStringLiteral("api.mediatailor"),
-    QStringLiteral("AWS MediaTailor"),
-    QStringLiteral("mediatailor"),
-    parent), d_ptr(new MediaTailorClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MediaTailorClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MediaTailorClient);
+    d->apiVersion = QStringLiteral("2018-04-23");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("api.mediatailor");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS MediaTailor");
+    d->serviceName = QStringLiteral("mediatailor");
 }
 
 /*!
@@ -160,16 +160,16 @@ MediaTailorClient::MediaTailorClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-04-23"),
-    QStringLiteral("api.mediatailor"),
-    QStringLiteral("AWS MediaTailor"),
-    QStringLiteral("mediatailor"),
-    parent), d_ptr(new MediaTailorClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MediaTailorClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MediaTailorClient);
+    d->apiVersion = QStringLiteral("2018-04-23");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("api.mediatailor");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS MediaTailor");
+    d->serviceName = QStringLiteral("mediatailor");
 }
 
 /*!
@@ -589,9 +589,10 @@ UpdateVodSourceResponse * MediaTailorClient::updateVodSource(const UpdateVodSour
 /*!
  * Constructs a MediaTailorClientPrivate object with public implementation \a q.
  */
-MediaTailorClientPrivate::MediaTailorClientPrivate(MediaTailorClient * const q) : q_ptr(q)
+MediaTailorClientPrivate::MediaTailorClientPrivate(MediaTailorClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MediaTailor

@@ -58,7 +58,8 @@ GetDatabasesResponse::GetDatabasesResponse(
  */
 const GetDatabasesRequest * GetDatabasesResponse::request() const
 {
-    return static_cast<const GetDatabasesRequest *>(GlueResponse::request());
+    Q_D(const GetDatabasesResponse);
+    return static_cast<const GetDatabasesRequest *>(d->request);
 }
 
 /*!

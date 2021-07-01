@@ -85,7 +85,8 @@ DescribeEndpointAccessResponse::DescribeEndpointAccessResponse(
  */
 const DescribeEndpointAccessRequest * DescribeEndpointAccessResponse::request() const
 {
-    return static_cast<const DescribeEndpointAccessRequest *>(RedshiftResponse::request());
+    Q_D(const DescribeEndpointAccessResponse);
+    return static_cast<const DescribeEndpointAccessRequest *>(d->request);
 }
 
 /*!

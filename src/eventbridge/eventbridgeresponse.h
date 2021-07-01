@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    EventBridgeResponsePrivate * const d_ptr; ///< Internal d-pointer.
     EventBridgeResponse(EventBridgeResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

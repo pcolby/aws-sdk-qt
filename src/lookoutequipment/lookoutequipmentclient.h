@@ -114,12 +114,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateInferenceSchedulerResponse * updateInferenceScheduler(const UpdateInferenceSchedulerRequest &request);
 
-protected:
-    /// @cond internal
-    LookoutEquipmentClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit LookoutEquipmentClient(LookoutEquipmentClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(LookoutEquipmentClient)
     Q_DISABLE_COPY(LookoutEquipmentClient)

@@ -87,7 +87,8 @@ CreateStoreImageTaskResponse::CreateStoreImageTaskResponse(
  */
 const CreateStoreImageTaskRequest * CreateStoreImageTaskResponse::request() const
 {
-    return static_cast<const CreateStoreImageTaskRequest *>(Ec2Response::request());
+    Q_D(const CreateStoreImageTaskResponse);
+    return static_cast<const CreateStoreImageTaskRequest *>(d->request);
 }
 
 /*!

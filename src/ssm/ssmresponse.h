@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    SsmResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SsmResponse(SsmResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -56,7 +56,8 @@ ListSolutionVersionsResponse::ListSolutionVersionsResponse(
  */
 const ListSolutionVersionsRequest * ListSolutionVersionsResponse::request() const
 {
-    return static_cast<const ListSolutionVersionsRequest *>(PersonalizeResponse::request());
+    Q_D(const ListSolutionVersionsResponse);
+    return static_cast<const ListSolutionVersionsRequest *>(d->request);
 }
 
 /*!

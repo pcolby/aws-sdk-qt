@@ -69,7 +69,8 @@ ModifyCacheSubnetGroupResponse::ModifyCacheSubnetGroupResponse(
  */
 const ModifyCacheSubnetGroupRequest * ModifyCacheSubnetGroupResponse::request() const
 {
-    return static_cast<const ModifyCacheSubnetGroupRequest *>(ElastiCacheResponse::request());
+    Q_D(const ModifyCacheSubnetGroupResponse);
+    return static_cast<const ModifyCacheSubnetGroupRequest *>(d->request);
 }
 
 /*!

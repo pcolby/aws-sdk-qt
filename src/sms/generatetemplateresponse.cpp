@@ -68,7 +68,8 @@ GenerateTemplateResponse::GenerateTemplateResponse(
  */
 const GenerateTemplateRequest * GenerateTemplateResponse::request() const
 {
-    return static_cast<const GenerateTemplateRequest *>(SmsResponse::request());
+    Q_D(const GenerateTemplateResponse);
+    return static_cast<const GenerateTemplateRequest *>(d->request);
 }
 
 /*!

@@ -61,7 +61,8 @@ AssociateHostedConnectionResponse::AssociateHostedConnectionResponse(
  */
 const AssociateHostedConnectionRequest * AssociateHostedConnectionResponse::request() const
 {
-    return static_cast<const AssociateHostedConnectionRequest *>(DirectConnectResponse::request());
+    Q_D(const AssociateHostedConnectionResponse);
+    return static_cast<const AssociateHostedConnectionRequest *>(d->request);
 }
 
 /*!

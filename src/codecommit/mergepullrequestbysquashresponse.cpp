@@ -439,7 +439,8 @@ MergePullRequestBySquashResponse::MergePullRequestBySquashResponse(
  */
 const MergePullRequestBySquashRequest * MergePullRequestBySquashResponse::request() const
 {
-    return static_cast<const MergePullRequestBySquashRequest *>(CodeCommitResponse::request());
+    Q_D(const MergePullRequestBySquashResponse);
+    return static_cast<const MergePullRequestBySquashRequest *>(d->request);
 }
 
 /*!

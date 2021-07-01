@@ -75,7 +75,8 @@ ListVPCEConfigurationsResponse::ListVPCEConfigurationsResponse(
  */
 const ListVPCEConfigurationsRequest * ListVPCEConfigurationsResponse::request() const
 {
-    return static_cast<const ListVPCEConfigurationsRequest *>(DeviceFarmResponse::request());
+    Q_D(const ListVPCEConfigurationsResponse);
+    return static_cast<const ListVPCEConfigurationsRequest *>(d->request);
 }
 
 /*!

@@ -82,7 +82,8 @@ CreatePolicyVersionResponse::CreatePolicyVersionResponse(
  */
 const CreatePolicyVersionRequest * CreatePolicyVersionResponse::request() const
 {
-    return static_cast<const CreatePolicyVersionRequest *>(IoTResponse::request());
+    Q_D(const CreatePolicyVersionResponse);
+    return static_cast<const CreatePolicyVersionRequest *>(d->request);
 }
 
 /*!

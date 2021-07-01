@@ -58,7 +58,8 @@ DeleteImagePipelineResponse::DeleteImagePipelineResponse(
  */
 const DeleteImagePipelineRequest * DeleteImagePipelineResponse::request() const
 {
-    return static_cast<const DeleteImagePipelineRequest *>(imagebuilderResponse::request());
+    Q_D(const DeleteImagePipelineResponse);
+    return static_cast<const DeleteImagePipelineRequest *>(d->request);
 }
 
 /*!

@@ -72,7 +72,8 @@ DeleteDBParameterGroupResponse::DeleteDBParameterGroupResponse(
  */
 const DeleteDBParameterGroupRequest * DeleteDBParameterGroupResponse::request() const
 {
-    return static_cast<const DeleteDBParameterGroupRequest *>(NeptuneResponse::request());
+    Q_D(const DeleteDBParameterGroupResponse);
+    return static_cast<const DeleteDBParameterGroupRequest *>(d->request);
 }
 
 /*!

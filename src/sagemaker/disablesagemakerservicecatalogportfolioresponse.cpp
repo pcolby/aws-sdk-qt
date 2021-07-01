@@ -70,7 +70,8 @@ DisableSagemakerServicecatalogPortfolioResponse::DisableSagemakerServicecatalogP
  */
 const DisableSagemakerServicecatalogPortfolioRequest * DisableSagemakerServicecatalogPortfolioResponse::request() const
 {
-    return static_cast<const DisableSagemakerServicecatalogPortfolioRequest *>(SageMakerResponse::request());
+    Q_D(const DisableSagemakerServicecatalogPortfolioResponse);
+    return static_cast<const DisableSagemakerServicecatalogPortfolioRequest *>(d->request);
 }
 
 /*!

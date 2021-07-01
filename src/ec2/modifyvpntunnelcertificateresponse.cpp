@@ -87,7 +87,8 @@ ModifyVpnTunnelCertificateResponse::ModifyVpnTunnelCertificateResponse(
  */
 const ModifyVpnTunnelCertificateRequest * ModifyVpnTunnelCertificateResponse::request() const
 {
-    return static_cast<const ModifyVpnTunnelCertificateRequest *>(Ec2Response::request());
+    Q_D(const ModifyVpnTunnelCertificateResponse);
+    return static_cast<const ModifyVpnTunnelCertificateRequest *>(d->request);
 }
 
 /*!

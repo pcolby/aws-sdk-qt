@@ -121,7 +121,8 @@ DeleteEnvironmentMembershipResponse::DeleteEnvironmentMembershipResponse(
  */
 const DeleteEnvironmentMembershipRequest * DeleteEnvironmentMembershipResponse::request() const
 {
-    return static_cast<const DeleteEnvironmentMembershipRequest *>(Cloud9Response::request());
+    Q_D(const DeleteEnvironmentMembershipResponse);
+    return static_cast<const DeleteEnvironmentMembershipRequest *>(d->request);
 }
 
 /*!

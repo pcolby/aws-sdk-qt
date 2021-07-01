@@ -60,7 +60,8 @@ UpdateDataSetPermissionsResponse::UpdateDataSetPermissionsResponse(
  */
 const UpdateDataSetPermissionsRequest * UpdateDataSetPermissionsResponse::request() const
 {
-    return static_cast<const UpdateDataSetPermissionsRequest *>(QuickSightResponse::request());
+    Q_D(const UpdateDataSetPermissionsResponse);
+    return static_cast<const UpdateDataSetPermissionsRequest *>(d->request);
 }
 
 /*!

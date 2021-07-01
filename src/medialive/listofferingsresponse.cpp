@@ -55,7 +55,8 @@ ListOfferingsResponse::ListOfferingsResponse(
  */
 const ListOfferingsRequest * ListOfferingsResponse::request() const
 {
-    return static_cast<const ListOfferingsRequest *>(MediaLiveResponse::request());
+    Q_D(const ListOfferingsResponse);
+    return static_cast<const ListOfferingsRequest *>(d->request);
 }
 
 /*!

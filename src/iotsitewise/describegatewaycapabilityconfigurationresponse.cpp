@@ -61,7 +61,8 @@ DescribeGatewayCapabilityConfigurationResponse::DescribeGatewayCapabilityConfigu
  */
 const DescribeGatewayCapabilityConfigurationRequest * DescribeGatewayCapabilityConfigurationResponse::request() const
 {
-    return static_cast<const DescribeGatewayCapabilityConfigurationRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const DescribeGatewayCapabilityConfigurationResponse);
+    return static_cast<const DescribeGatewayCapabilityConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    DataPipelineResponsePrivate * const d_ptr; ///< Internal d-pointer.
     DataPipelineResponse(DataPipelineResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

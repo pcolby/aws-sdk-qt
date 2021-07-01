@@ -119,7 +119,8 @@ DeregisterDBProxyTargetsResponse::DeregisterDBProxyTargetsResponse(
  */
 const DeregisterDBProxyTargetsRequest * DeregisterDBProxyTargetsResponse::request() const
 {
-    return static_cast<const DeregisterDBProxyTargetsRequest *>(RdsResponse::request());
+    Q_D(const DeregisterDBProxyTargetsResponse);
+    return static_cast<const DeregisterDBProxyTargetsRequest *>(d->request);
 }
 
 /*!

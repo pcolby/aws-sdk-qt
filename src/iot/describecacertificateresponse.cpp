@@ -82,7 +82,8 @@ DescribeCACertificateResponse::DescribeCACertificateResponse(
  */
 const DescribeCACertificateRequest * DescribeCACertificateResponse::request() const
 {
-    return static_cast<const DescribeCACertificateRequest *>(IoTResponse::request());
+    Q_D(const DescribeCACertificateResponse);
+    return static_cast<const DescribeCACertificateRequest *>(d->request);
 }
 
 /*!

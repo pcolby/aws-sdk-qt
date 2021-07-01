@@ -76,7 +76,8 @@ ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
  */
 const ListSizeConstraintSetsRequest * ListSizeConstraintSetsResponse::request() const
 {
-    return static_cast<const ListSizeConstraintSetsRequest *>(WafResponse::request());
+    Q_D(const ListSizeConstraintSetsResponse);
+    return static_cast<const ListSizeConstraintSetsRequest *>(d->request);
 }
 
 /*!

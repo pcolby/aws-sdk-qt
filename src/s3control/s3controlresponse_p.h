@@ -20,12 +20,14 @@
 #ifndef QTAWS_S3CONTROLRESPONSE_P_H
 #define QTAWS_S3CONTROLRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace S3Control {
 
 class S3ControlResponse;
 
-class S3ControlResponsePrivate {
+class S3ControlResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    S3ControlResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(S3ControlResponse)

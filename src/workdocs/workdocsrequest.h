@@ -99,8 +99,7 @@ public:
 
 protected:
     /// @cond internal
-    WorkDocsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit WorkDocsRequest(WorkDocsRequestPrivate * const d);
+    WorkDocsRequest(WorkDocsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

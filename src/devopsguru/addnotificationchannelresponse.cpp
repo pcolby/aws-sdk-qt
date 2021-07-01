@@ -74,7 +74,8 @@ AddNotificationChannelResponse::AddNotificationChannelResponse(
  */
 const AddNotificationChannelRequest * AddNotificationChannelResponse::request() const
 {
-    return static_cast<const AddNotificationChannelRequest *>(DevOpsGuruResponse::request());
+    Q_D(const AddNotificationChannelResponse);
+    return static_cast<const AddNotificationChannelRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,15 @@
 #ifndef QTAWS_SAGEMAKEREDGEMANAGERREQUEST_P_H
 #define QTAWS_SAGEMAKEREDGEMANAGERREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "sagemakeredgemanagerrequest.h"
+
 namespace QtAws {
 namespace SagemakerEdgeManager {
 
 class SagemakerEdgeManagerRequest;
 
-class SagemakerEdgeManagerRequestPrivate {
+class SagemakerEdgeManagerRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SagemakerEdgeManagerRequest::Action action; ///< SagemakerEdgeManager action to be performed.
@@ -36,9 +39,6 @@ public:
     SagemakerEdgeManagerRequestPrivate(const SagemakerEdgeManagerRequestPrivate &other, SagemakerEdgeManagerRequest * const q);
 
     static QString toString(const SagemakerEdgeManagerRequest::Action &action);
-
-protected:
-    SagemakerEdgeManagerRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SagemakerEdgeManagerRequest)

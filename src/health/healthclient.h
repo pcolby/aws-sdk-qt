@@ -90,12 +90,6 @@ public slots:
     EnableHealthServiceAccessForOrganizationResponse * enableHealthServiceAccessForOrganization(const EnableHealthServiceAccessForOrganizationRequest &request);
     EnableHealthServiceAccessForOrganizationResponse * enableHealthServiceAccessForOrganization();
 
-protected:
-    /// @cond internal
-    HealthClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit HealthClient(HealthClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(HealthClient)
     Q_DISABLE_COPY(HealthClient)

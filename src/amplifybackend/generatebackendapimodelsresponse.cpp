@@ -56,7 +56,8 @@ GenerateBackendAPIModelsResponse::GenerateBackendAPIModelsResponse(
  */
 const GenerateBackendAPIModelsRequest * GenerateBackendAPIModelsResponse::request() const
 {
-    return static_cast<const GenerateBackendAPIModelsRequest *>(AmplifyBackendResponse::request());
+    Q_D(const GenerateBackendAPIModelsResponse);
+    return static_cast<const GenerateBackendAPIModelsRequest *>(d->request);
 }
 
 /*!

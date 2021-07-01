@@ -58,7 +58,8 @@ ListDistributionConfigurationsResponse::ListDistributionConfigurationsResponse(
  */
 const ListDistributionConfigurationsRequest * ListDistributionConfigurationsResponse::request() const
 {
-    return static_cast<const ListDistributionConfigurationsRequest *>(imagebuilderResponse::request());
+    Q_D(const ListDistributionConfigurationsResponse);
+    return static_cast<const ListDistributionConfigurationsRequest *>(d->request);
 }
 
 /*!

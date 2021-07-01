@@ -66,7 +66,8 @@ AdminAddUserToGroupResponse::AdminAddUserToGroupResponse(
  */
 const AdminAddUserToGroupRequest * AdminAddUserToGroupResponse::request() const
 {
-    return static_cast<const AdminAddUserToGroupRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const AdminAddUserToGroupResponse);
+    return static_cast<const AdminAddUserToGroupRequest *>(d->request);
 }
 
 /*!

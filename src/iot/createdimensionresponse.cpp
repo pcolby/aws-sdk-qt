@@ -82,7 +82,8 @@ CreateDimensionResponse::CreateDimensionResponse(
  */
 const CreateDimensionRequest * CreateDimensionResponse::request() const
 {
-    return static_cast<const CreateDimensionRequest *>(IoTResponse::request());
+    Q_D(const CreateDimensionResponse);
+    return static_cast<const CreateDimensionRequest *>(d->request);
 }
 
 /*!

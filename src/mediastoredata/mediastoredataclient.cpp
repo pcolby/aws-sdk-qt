@@ -71,16 +71,16 @@ MediaStoreDataClient::MediaStoreDataClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-09-01"),
-    QStringLiteral("data.mediastore"),
-    QStringLiteral("AWS Elemental MediaStore Data Plane"),
-    QStringLiteral("mediastore"),
-    parent), d_ptr(new MediaStoreDataClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MediaStoreDataClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MediaStoreDataClient);
+    d->apiVersion = QStringLiteral("2017-09-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("data.mediastore");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaStore Data Plane");
+    d->serviceName = QStringLiteral("mediastore");
 }
 
 /*!
@@ -99,16 +99,16 @@ MediaStoreDataClient::MediaStoreDataClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-09-01"),
-    QStringLiteral("data.mediastore"),
-    QStringLiteral("AWS Elemental MediaStore Data Plane"),
-    QStringLiteral("mediastore"),
-    parent), d_ptr(new MediaStoreDataClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MediaStoreDataClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MediaStoreDataClient);
+    d->apiVersion = QStringLiteral("2017-09-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("data.mediastore");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Elemental MediaStore Data Plane");
+    d->serviceName = QStringLiteral("mediastore");
 }
 
 /*!
@@ -190,9 +190,10 @@ PutObjectResponse * MediaStoreDataClient::putObject(const PutObjectRequest &requ
 /*!
  * Constructs a MediaStoreDataClientPrivate object with public implementation \a q.
  */
-MediaStoreDataClientPrivate::MediaStoreDataClientPrivate(MediaStoreDataClient * const q) : q_ptr(q)
+MediaStoreDataClientPrivate::MediaStoreDataClientPrivate(MediaStoreDataClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MediaStoreData

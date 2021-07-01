@@ -124,7 +124,8 @@ UpdateVTLDeviceTypeResponse::UpdateVTLDeviceTypeResponse(
  */
 const UpdateVTLDeviceTypeRequest * UpdateVTLDeviceTypeResponse::request() const
 {
-    return static_cast<const UpdateVTLDeviceTypeRequest *>(StorageGatewayResponse::request());
+    Q_D(const UpdateVTLDeviceTypeResponse);
+    return static_cast<const UpdateVTLDeviceTypeRequest *>(d->request);
 }
 
 /*!

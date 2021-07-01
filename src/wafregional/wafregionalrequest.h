@@ -139,8 +139,7 @@ public:
 
 protected:
     /// @cond internal
-    WAFRegionalRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit WAFRegionalRequest(WAFRegionalRequestPrivate * const d);
+    WAFRegionalRequest(WAFRegionalRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

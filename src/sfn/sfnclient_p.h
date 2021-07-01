@@ -20,20 +20,19 @@
 #ifndef QTAWS_SFNCLIENT_P_H
 #define QTAWS_SFNCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SFN {
 
 class SfnClient;
 
-class SfnClientPrivate {
+class SfnClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SfnClientPrivate(SfnClient * const q);
-
-protected:
-    SfnClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SfnClient)

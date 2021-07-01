@@ -75,7 +75,8 @@ CreateCostCategoryDefinitionResponse::CreateCostCategoryDefinitionResponse(
  */
 const CreateCostCategoryDefinitionRequest * CreateCostCategoryDefinitionResponse::request() const
 {
-    return static_cast<const CreateCostCategoryDefinitionRequest *>(CostExplorerResponse::request());
+    Q_D(const CreateCostCategoryDefinitionResponse);
+    return static_cast<const CreateCostCategoryDefinitionRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,14 @@
 #ifndef QTAWS_GUARDDUTYRESPONSE_P_H
 #define QTAWS_GUARDDUTYRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace GuardDuty {
 
 class GuardDutyResponse;
 
-class GuardDutyResponsePrivate {
+class GuardDutyResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    GuardDutyResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GuardDutyResponse)

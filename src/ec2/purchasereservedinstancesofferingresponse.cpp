@@ -87,7 +87,8 @@ PurchaseReservedInstancesOfferingResponse::PurchaseReservedInstancesOfferingResp
  */
 const PurchaseReservedInstancesOfferingRequest * PurchaseReservedInstancesOfferingResponse::request() const
 {
-    return static_cast<const PurchaseReservedInstancesOfferingRequest *>(Ec2Response::request());
+    Q_D(const PurchaseReservedInstancesOfferingResponse);
+    return static_cast<const PurchaseReservedInstancesOfferingRequest *>(d->request);
 }
 
 /*!

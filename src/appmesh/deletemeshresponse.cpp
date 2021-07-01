@@ -73,7 +73,8 @@ DeleteMeshResponse::DeleteMeshResponse(
  */
 const DeleteMeshRequest * DeleteMeshResponse::request() const
 {
-    return static_cast<const DeleteMeshRequest *>(AppMeshResponse::request());
+    Q_D(const DeleteMeshResponse);
+    return static_cast<const DeleteMeshRequest *>(d->request);
 }
 
 /*!

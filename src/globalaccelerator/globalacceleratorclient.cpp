@@ -316,16 +316,16 @@ GlobalAcceleratorClient::GlobalAcceleratorClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-08-08"),
-    QStringLiteral("globalaccelerator"),
-    QStringLiteral("AWS Global Accelerator"),
-    QStringLiteral("globalaccelerator"),
-    parent), d_ptr(new GlobalAcceleratorClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GlobalAcceleratorClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GlobalAcceleratorClient);
+    d->apiVersion = QStringLiteral("2018-08-08");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("globalaccelerator");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Global Accelerator");
+    d->serviceName = QStringLiteral("globalaccelerator");
 }
 
 /*!
@@ -344,16 +344,16 @@ GlobalAcceleratorClient::GlobalAcceleratorClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-08-08"),
-    QStringLiteral("globalaccelerator"),
-    QStringLiteral("AWS Global Accelerator"),
-    QStringLiteral("globalaccelerator"),
-    parent), d_ptr(new GlobalAcceleratorClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GlobalAcceleratorClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GlobalAcceleratorClient);
+    d->apiVersion = QStringLiteral("2018-08-08");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("globalaccelerator");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Global Accelerator");
+    d->serviceName = QStringLiteral("globalaccelerator");
 }
 
 /*!
@@ -1152,9 +1152,10 @@ WithdrawByoipCidrResponse * GlobalAcceleratorClient::withdrawByoipCidr(const Wit
 /*!
  * Constructs a GlobalAcceleratorClientPrivate object with public implementation \a q.
  */
-GlobalAcceleratorClientPrivate::GlobalAcceleratorClientPrivate(GlobalAcceleratorClient * const q) : q_ptr(q)
+GlobalAcceleratorClientPrivate::GlobalAcceleratorClientPrivate(GlobalAcceleratorClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace GlobalAccelerator

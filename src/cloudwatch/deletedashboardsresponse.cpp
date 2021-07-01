@@ -69,7 +69,8 @@ DeleteDashboardsResponse::DeleteDashboardsResponse(
  */
 const DeleteDashboardsRequest * DeleteDashboardsResponse::request() const
 {
-    return static_cast<const DeleteDashboardsRequest *>(CloudWatchResponse::request());
+    Q_D(const DeleteDashboardsResponse);
+    return static_cast<const DeleteDashboardsRequest *>(d->request);
 }
 
 /*!

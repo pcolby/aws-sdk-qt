@@ -58,7 +58,8 @@ DescribeStreamConsumerResponse::DescribeStreamConsumerResponse(
  */
 const DescribeStreamConsumerRequest * DescribeStreamConsumerResponse::request() const
 {
-    return static_cast<const DescribeStreamConsumerRequest *>(KinesisResponse::request());
+    Q_D(const DescribeStreamConsumerResponse);
+    return static_cast<const DescribeStreamConsumerRequest *>(d->request);
 }
 
 /*!

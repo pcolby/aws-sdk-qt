@@ -98,7 +98,8 @@ ListSipRulesResponse::ListSipRulesResponse(
  */
 const ListSipRulesRequest * ListSipRulesResponse::request() const
 {
-    return static_cast<const ListSipRulesRequest *>(ChimeResponse::request());
+    Q_D(const ListSipRulesResponse);
+    return static_cast<const ListSipRulesRequest *>(d->request);
 }
 
 /*!

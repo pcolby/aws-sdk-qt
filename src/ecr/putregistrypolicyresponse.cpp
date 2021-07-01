@@ -62,7 +62,8 @@ PutRegistryPolicyResponse::PutRegistryPolicyResponse(
  */
 const PutRegistryPolicyRequest * PutRegistryPolicyResponse::request() const
 {
-    return static_cast<const PutRegistryPolicyRequest *>(EcrResponse::request());
+    Q_D(const PutRegistryPolicyResponse);
+    return static_cast<const PutRegistryPolicyRequest *>(d->request);
 }
 
 /*!

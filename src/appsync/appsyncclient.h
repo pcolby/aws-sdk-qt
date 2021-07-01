@@ -171,12 +171,6 @@ public slots:
     UpdateResolverResponse * updateResolver(const UpdateResolverRequest &request);
     UpdateTypeResponse * updateType(const UpdateTypeRequest &request);
 
-protected:
-    /// @cond internal
-    AppSyncClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AppSyncClient(AppSyncClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(AppSyncClient)
     Q_DISABLE_COPY(AppSyncClient)

@@ -68,7 +68,8 @@ CreateComponentResponse::CreateComponentResponse(
  */
 const CreateComponentRequest * CreateComponentResponse::request() const
 {
-    return static_cast<const CreateComponentRequest *>(ApplicationInsightsResponse::request());
+    Q_D(const CreateComponentResponse);
+    return static_cast<const CreateComponentRequest *>(d->request);
 }
 
 /*!

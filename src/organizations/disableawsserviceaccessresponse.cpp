@@ -141,7 +141,8 @@ DisableAWSServiceAccessResponse::DisableAWSServiceAccessResponse(
  */
 const DisableAWSServiceAccessRequest * DisableAWSServiceAccessResponse::request() const
 {
-    return static_cast<const DisableAWSServiceAccessRequest *>(OrganizationsResponse::request());
+    Q_D(const DisableAWSServiceAccessResponse);
+    return static_cast<const DisableAWSServiceAccessRequest *>(d->request);
 }
 
 /*!

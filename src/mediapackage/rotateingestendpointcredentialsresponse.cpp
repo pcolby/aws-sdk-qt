@@ -55,7 +55,8 @@ RotateIngestEndpointCredentialsResponse::RotateIngestEndpointCredentialsResponse
  */
 const RotateIngestEndpointCredentialsRequest * RotateIngestEndpointCredentialsResponse::request() const
 {
-    return static_cast<const RotateIngestEndpointCredentialsRequest *>(MediaPackageResponse::request());
+    Q_D(const RotateIngestEndpointCredentialsResponse);
+    return static_cast<const RotateIngestEndpointCredentialsRequest *>(d->request);
 }
 
 /*!

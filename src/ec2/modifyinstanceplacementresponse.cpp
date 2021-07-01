@@ -87,7 +87,8 @@ ModifyInstancePlacementResponse::ModifyInstancePlacementResponse(
  */
 const ModifyInstancePlacementRequest * ModifyInstancePlacementResponse::request() const
 {
-    return static_cast<const ModifyInstancePlacementRequest *>(Ec2Response::request());
+    Q_D(const ModifyInstancePlacementResponse);
+    return static_cast<const ModifyInstancePlacementRequest *>(d->request);
 }
 
 /*!

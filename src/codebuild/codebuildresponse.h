@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    CodeBuildResponsePrivate * const d_ptr; ///< Internal d-pointer.
     CodeBuildResponse(CodeBuildResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

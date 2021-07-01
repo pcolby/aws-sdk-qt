@@ -98,7 +98,8 @@ GetDeployablePatchSnapshotForInstanceResponse::GetDeployablePatchSnapshotForInst
  */
 const GetDeployablePatchSnapshotForInstanceRequest * GetDeployablePatchSnapshotForInstanceResponse::request() const
 {
-    return static_cast<const GetDeployablePatchSnapshotForInstanceRequest *>(SsmResponse::request());
+    Q_D(const GetDeployablePatchSnapshotForInstanceResponse);
+    return static_cast<const GetDeployablePatchSnapshotForInstanceRequest *>(d->request);
 }
 
 /*!

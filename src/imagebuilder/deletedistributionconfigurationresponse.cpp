@@ -58,7 +58,8 @@ DeleteDistributionConfigurationResponse::DeleteDistributionConfigurationResponse
  */
 const DeleteDistributionConfigurationRequest * DeleteDistributionConfigurationResponse::request() const
 {
-    return static_cast<const DeleteDistributionConfigurationRequest *>(imagebuilderResponse::request());
+    Q_D(const DeleteDistributionConfigurationResponse);
+    return static_cast<const DeleteDistributionConfigurationRequest *>(d->request);
 }
 
 /*!

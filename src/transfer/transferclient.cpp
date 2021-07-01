@@ -116,16 +116,16 @@ TransferClient::TransferClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-11-05"),
-    QStringLiteral("transfer"),
-    QStringLiteral("AWS Transfer Family"),
-    QStringLiteral("transfer"),
-    parent), d_ptr(new TransferClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new TransferClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(TransferClient);
+    d->apiVersion = QStringLiteral("2018-11-05");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("transfer");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Transfer Family");
+    d->serviceName = QStringLiteral("transfer");
 }
 
 /*!
@@ -144,16 +144,16 @@ TransferClient::TransferClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-11-05"),
-    QStringLiteral("transfer"),
-    QStringLiteral("AWS Transfer Family"),
-    QStringLiteral("transfer"),
-    parent), d_ptr(new TransferClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new TransferClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(TransferClient);
+    d->apiVersion = QStringLiteral("2018-11-05");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("transfer");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Transfer Family");
+    d->serviceName = QStringLiteral("transfer");
 }
 
 /*!
@@ -592,9 +592,10 @@ UpdateUserResponse * TransferClient::updateUser(const UpdateUserRequest &request
 /*!
  * Constructs a TransferClientPrivate object with public implementation \a q.
  */
-TransferClientPrivate::TransferClientPrivate(TransferClient * const q) : q_ptr(q)
+TransferClientPrivate::TransferClientPrivate(TransferClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace Transfer

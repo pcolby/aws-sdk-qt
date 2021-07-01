@@ -75,7 +75,8 @@ ListTestsResponse::ListTestsResponse(
  */
 const ListTestsRequest * ListTestsResponse::request() const
 {
-    return static_cast<const ListTestsRequest *>(DeviceFarmResponse::request());
+    Q_D(const ListTestsResponse);
+    return static_cast<const ListTestsRequest *>(d->request);
 }
 
 /*!

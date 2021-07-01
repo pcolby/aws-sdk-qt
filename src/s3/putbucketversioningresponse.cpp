@@ -55,7 +55,8 @@ PutBucketVersioningResponse::PutBucketVersioningResponse(
  */
 const PutBucketVersioningRequest * PutBucketVersioningResponse::request() const
 {
-    return static_cast<const PutBucketVersioningRequest *>(S3Response::request());
+    Q_D(const PutBucketVersioningResponse);
+    return static_cast<const PutBucketVersioningRequest *>(d->request);
 }
 
 /*!

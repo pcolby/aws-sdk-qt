@@ -55,7 +55,8 @@ UpdateFlowSourceResponse::UpdateFlowSourceResponse(
  */
 const UpdateFlowSourceRequest * UpdateFlowSourceResponse::request() const
 {
-    return static_cast<const UpdateFlowSourceRequest *>(MediaConnectResponse::request());
+    Q_D(const UpdateFlowSourceResponse);
+    return static_cast<const UpdateFlowSourceRequest *>(d->request);
 }
 
 /*!

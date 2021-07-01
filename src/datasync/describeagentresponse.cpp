@@ -64,7 +64,8 @@ DescribeAgentResponse::DescribeAgentResponse(
  */
 const DescribeAgentRequest * DescribeAgentResponse::request() const
 {
-    return static_cast<const DescribeAgentRequest *>(DataSyncResponse::request());
+    Q_D(const DescribeAgentResponse);
+    return static_cast<const DescribeAgentRequest *>(d->request);
 }
 
 /*!

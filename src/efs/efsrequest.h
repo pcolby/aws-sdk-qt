@@ -85,8 +85,7 @@ public:
 
 protected:
     /// @cond internal
-    EfsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EfsRequest(EfsRequestPrivate * const d);
+    EfsRequest(EfsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

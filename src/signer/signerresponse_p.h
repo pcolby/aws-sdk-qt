@@ -20,12 +20,14 @@
 #ifndef QTAWS_SIGNERRESPONSE_P_H
 #define QTAWS_SIGNERRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace signer {
 
 class signerResponse;
 
-class signerResponsePrivate {
+class signerResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    signerResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(signerResponse)

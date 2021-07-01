@@ -2,12 +2,14 @@
 #ifndef QTAWS_{{ClassName|upper}}_P_H
 #define QTAWS_{{ClassName|upper}}_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace {{NameSpaceName}} {
 
 class {{ClassName}};
 
-class {{ClassName}}Private {
+class {{ClassName}}Private : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
     {# @todo data members go here #}
@@ -17,9 +19,6 @@ public:
     {# @todo change parse type XML vs JSON #}
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    {{ClassName}} * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC({{ClassName}})

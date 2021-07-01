@@ -45,7 +45,7 @@ namespace PersonalizeEvents {
  * Constructs a PersonalizeEventsRequest object for PersonalizeEvents \a action.
  */
 PersonalizeEventsRequest::PersonalizeEventsRequest(const Action action)
-    : d_ptr(new PersonalizeEventsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new PersonalizeEventsRequestPrivate(action, this))
 {
 
 }
@@ -54,8 +54,7 @@ PersonalizeEventsRequest::PersonalizeEventsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 PersonalizeEventsRequest::PersonalizeEventsRequest(const PersonalizeEventsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new PersonalizeEventsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new PersonalizeEventsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -78,7 +77,7 @@ PersonalizeEventsRequest& PersonalizeEventsRequest::operator=(const PersonalizeE
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from PersonalizeEventsRequestPrivate.
  */
-PersonalizeEventsRequest::PersonalizeEventsRequest(PersonalizeEventsRequestPrivate * const d) : d_ptr(d)
+PersonalizeEventsRequest::PersonalizeEventsRequest(PersonalizeEventsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -247,7 +246,7 @@ QNetworkRequest PersonalizeEventsRequest::unsignedRequest(const QUrl &endpoint) 
  * with public implementation \a q.
  */
 PersonalizeEventsRequestPrivate::PersonalizeEventsRequestPrivate(const PersonalizeEventsRequest::Action action, PersonalizeEventsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -262,8 +261,8 @@ PersonalizeEventsRequestPrivate::PersonalizeEventsRequestPrivate(const Personali
  */
 PersonalizeEventsRequestPrivate::PersonalizeEventsRequestPrivate(const PersonalizeEventsRequestPrivate &other,
                                      PersonalizeEventsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

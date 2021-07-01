@@ -98,7 +98,8 @@ SendChannelMessageResponse::SendChannelMessageResponse(
  */
 const SendChannelMessageRequest * SendChannelMessageResponse::request() const
 {
-    return static_cast<const SendChannelMessageRequest *>(ChimeResponse::request());
+    Q_D(const SendChannelMessageResponse);
+    return static_cast<const SendChannelMessageRequest *>(d->request);
 }
 
 /*!

@@ -61,7 +61,8 @@ DeleteSubscriptionResponse::DeleteSubscriptionResponse(
  */
 const DeleteSubscriptionRequest * DeleteSubscriptionResponse::request() const
 {
-    return static_cast<const DeleteSubscriptionRequest *>(ShieldResponse::request());
+    Q_D(const DeleteSubscriptionResponse);
+    return static_cast<const DeleteSubscriptionRequest *>(d->request);
 }
 
 /*!

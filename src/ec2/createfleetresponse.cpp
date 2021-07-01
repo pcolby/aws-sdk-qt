@@ -87,7 +87,8 @@ CreateFleetResponse::CreateFleetResponse(
  */
 const CreateFleetRequest * CreateFleetResponse::request() const
 {
-    return static_cast<const CreateFleetRequest *>(Ec2Response::request());
+    Q_D(const CreateFleetResponse);
+    return static_cast<const CreateFleetRequest *>(d->request);
 }
 
 /*!

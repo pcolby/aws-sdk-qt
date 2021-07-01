@@ -91,7 +91,8 @@ PurchaseProvisionedCapacityResponse::PurchaseProvisionedCapacityResponse(
  */
 const PurchaseProvisionedCapacityRequest * PurchaseProvisionedCapacityResponse::request() const
 {
-    return static_cast<const PurchaseProvisionedCapacityRequest *>(GlacierResponse::request());
+    Q_D(const PurchaseProvisionedCapacityResponse);
+    return static_cast<const PurchaseProvisionedCapacityRequest *>(d->request);
 }
 
 /*!

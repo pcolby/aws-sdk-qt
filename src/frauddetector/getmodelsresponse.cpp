@@ -58,7 +58,8 @@ GetModelsResponse::GetModelsResponse(
  */
 const GetModelsRequest * GetModelsResponse::request() const
 {
-    return static_cast<const GetModelsRequest *>(FraudDetectorResponse::request());
+    Q_D(const GetModelsResponse);
+    return static_cast<const GetModelsRequest *>(d->request);
 }
 
 /*!

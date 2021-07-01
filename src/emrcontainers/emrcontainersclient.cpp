@@ -117,16 +117,16 @@ EMRContainersClient::EMRContainersClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-10-01"),
-    QStringLiteral("emr-containers"),
-    QStringLiteral("Amazon EMR Containers"),
-    QStringLiteral("emr-containers"),
-    parent), d_ptr(new EMRContainersClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new EMRContainersClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(EMRContainersClient);
+    d->apiVersion = QStringLiteral("2020-10-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("emr-containers");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon EMR Containers");
+    d->serviceName = QStringLiteral("emr-containers");
 }
 
 /*!
@@ -145,16 +145,16 @@ EMRContainersClient::EMRContainersClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-10-01"),
-    QStringLiteral("emr-containers"),
-    QStringLiteral("Amazon EMR Containers"),
-    QStringLiteral("emr-containers"),
-    parent), d_ptr(new EMRContainersClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new EMRContainersClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(EMRContainersClient);
+    d->apiVersion = QStringLiteral("2020-10-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("emr-containers");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon EMR Containers");
+    d->serviceName = QStringLiteral("emr-containers");
 }
 
 /*!
@@ -389,9 +389,10 @@ UntagResourceResponse * EMRContainersClient::untagResource(const UntagResourceRe
 /*!
  * Constructs a EMRContainersClientPrivate object with public implementation \a q.
  */
-EMRContainersClientPrivate::EMRContainersClientPrivate(EMRContainersClient * const q) : q_ptr(q)
+EMRContainersClientPrivate::EMRContainersClientPrivate(EMRContainersClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace EMRContainers

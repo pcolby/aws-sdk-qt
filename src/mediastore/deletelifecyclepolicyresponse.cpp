@@ -57,7 +57,8 @@ DeleteLifecyclePolicyResponse::DeleteLifecyclePolicyResponse(
  */
 const DeleteLifecyclePolicyRequest * DeleteLifecyclePolicyResponse::request() const
 {
-    return static_cast<const DeleteLifecyclePolicyRequest *>(MediaStoreResponse::request());
+    Q_D(const DeleteLifecyclePolicyResponse);
+    return static_cast<const DeleteLifecyclePolicyRequest *>(d->request);
 }
 
 /*!

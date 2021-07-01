@@ -87,7 +87,8 @@ DeleteManagedPrefixListResponse::DeleteManagedPrefixListResponse(
  */
 const DeleteManagedPrefixListRequest * DeleteManagedPrefixListResponse::request() const
 {
-    return static_cast<const DeleteManagedPrefixListRequest *>(Ec2Response::request());
+    Q_D(const DeleteManagedPrefixListResponse);
+    return static_cast<const DeleteManagedPrefixListRequest *>(d->request);
 }
 
 /*!

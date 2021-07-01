@@ -132,12 +132,6 @@ public slots:
     SubscribeToShardResponse * subscribeToShard(const SubscribeToShardRequest &request);
     UpdateShardCountResponse * updateShardCount(const UpdateShardCountRequest &request);
 
-protected:
-    /// @cond internal
-    KinesisClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit KinesisClient(KinesisClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(KinesisClient)
     Q_DISABLE_COPY(KinesisClient)

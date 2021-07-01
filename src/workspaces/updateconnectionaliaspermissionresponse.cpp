@@ -58,7 +58,8 @@ UpdateConnectionAliasPermissionResponse::UpdateConnectionAliasPermissionResponse
  */
 const UpdateConnectionAliasPermissionRequest * UpdateConnectionAliasPermissionResponse::request() const
 {
-    return static_cast<const UpdateConnectionAliasPermissionRequest *>(WorkSpacesResponse::request());
+    Q_D(const UpdateConnectionAliasPermissionResponse);
+    return static_cast<const UpdateConnectionAliasPermissionRequest *>(d->request);
 }
 
 /*!

@@ -74,7 +74,8 @@ DeleteDomainEntryResponse::DeleteDomainEntryResponse(
  */
 const DeleteDomainEntryRequest * DeleteDomainEntryResponse::request() const
 {
-    return static_cast<const DeleteDomainEntryRequest *>(LightsailResponse::request());
+    Q_D(const DeleteDomainEntryResponse);
+    return static_cast<const DeleteDomainEntryRequest *>(d->request);
 }
 
 /*!

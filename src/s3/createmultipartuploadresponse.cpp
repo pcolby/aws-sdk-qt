@@ -55,7 +55,8 @@ CreateMultipartUploadResponse::CreateMultipartUploadResponse(
  */
 const CreateMultipartUploadRequest * CreateMultipartUploadResponse::request() const
 {
-    return static_cast<const CreateMultipartUploadRequest *>(S3Response::request());
+    Q_D(const CreateMultipartUploadResponse);
+    return static_cast<const CreateMultipartUploadRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_DATABASEMIGRATIONSERVICECLIENT_P_H
 #define QTAWS_DATABASEMIGRATIONSERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceClient;
 
-class DatabaseMigrationServiceClientPrivate {
+class DatabaseMigrationServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit DatabaseMigrationServiceClientPrivate(DatabaseMigrationServiceClient * const q);
-
-protected:
-    DatabaseMigrationServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DatabaseMigrationServiceClient)

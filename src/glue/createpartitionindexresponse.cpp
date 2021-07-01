@@ -58,7 +58,8 @@ CreatePartitionIndexResponse::CreatePartitionIndexResponse(
  */
 const CreatePartitionIndexRequest * CreatePartitionIndexResponse::request() const
 {
-    return static_cast<const CreatePartitionIndexRequest *>(GlueResponse::request());
+    Q_D(const CreatePartitionIndexResponse);
+    return static_cast<const CreatePartitionIndexRequest *>(d->request);
 }
 
 /*!

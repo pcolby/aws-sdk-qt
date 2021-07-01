@@ -69,7 +69,8 @@ ModifyCacheParameterGroupResponse::ModifyCacheParameterGroupResponse(
  */
 const ModifyCacheParameterGroupRequest * ModifyCacheParameterGroupResponse::request() const
 {
-    return static_cast<const ModifyCacheParameterGroupRequest *>(ElastiCacheResponse::request());
+    Q_D(const ModifyCacheParameterGroupResponse);
+    return static_cast<const ModifyCacheParameterGroupRequest *>(d->request);
 }
 
 /*!

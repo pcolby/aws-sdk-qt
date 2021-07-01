@@ -73,7 +73,8 @@ DeleteVirtualServiceResponse::DeleteVirtualServiceResponse(
  */
 const DeleteVirtualServiceRequest * DeleteVirtualServiceResponse::request() const
 {
-    return static_cast<const DeleteVirtualServiceRequest *>(AppMeshResponse::request());
+    Q_D(const DeleteVirtualServiceResponse);
+    return static_cast<const DeleteVirtualServiceRequest *>(d->request);
 }
 
 /*!

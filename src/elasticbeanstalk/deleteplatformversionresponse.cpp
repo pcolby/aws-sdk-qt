@@ -77,7 +77,8 @@ DeletePlatformVersionResponse::DeletePlatformVersionResponse(
  */
 const DeletePlatformVersionRequest * DeletePlatformVersionResponse::request() const
 {
-    return static_cast<const DeletePlatformVersionRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const DeletePlatformVersionResponse);
+    return static_cast<const DeletePlatformVersionRequest *>(d->request);
 }
 
 /*!

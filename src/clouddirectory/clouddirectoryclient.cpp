@@ -199,16 +199,16 @@ CloudDirectoryClient::CloudDirectoryClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-01-11"),
-    QStringLiteral("clouddirectory"),
-    QStringLiteral("Amazon CloudDirectory"),
-    QStringLiteral("clouddirectory"),
-    parent), d_ptr(new CloudDirectoryClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudDirectoryClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudDirectoryClient);
+    d->apiVersion = QStringLiteral("2017-01-11");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("clouddirectory");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudDirectory");
+    d->serviceName = QStringLiteral("clouddirectory");
 }
 
 /*!
@@ -227,16 +227,16 @@ CloudDirectoryClient::CloudDirectoryClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-01-11"),
-    QStringLiteral("clouddirectory"),
-    QStringLiteral("Amazon CloudDirectory"),
-    QStringLiteral("clouddirectory"),
-    parent), d_ptr(new CloudDirectoryClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudDirectoryClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudDirectoryClient);
+    d->apiVersion = QStringLiteral("2017-01-11");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("clouddirectory");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudDirectory");
+    d->serviceName = QStringLiteral("clouddirectory");
 }
 
 /*!
@@ -1199,9 +1199,10 @@ UpgradePublishedSchemaResponse * CloudDirectoryClient::upgradePublishedSchema(co
 /*!
  * Constructs a CloudDirectoryClientPrivate object with public implementation \a q.
  */
-CloudDirectoryClientPrivate::CloudDirectoryClientPrivate(CloudDirectoryClient * const q) : q_ptr(q)
+CloudDirectoryClientPrivate::CloudDirectoryClientPrivate(CloudDirectoryClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudDirectory

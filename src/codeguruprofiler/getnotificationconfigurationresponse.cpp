@@ -79,7 +79,8 @@ GetNotificationConfigurationResponse::GetNotificationConfigurationResponse(
  */
 const GetNotificationConfigurationRequest * GetNotificationConfigurationResponse::request() const
 {
-    return static_cast<const GetNotificationConfigurationRequest *>(CodeGuruProfilerResponse::request());
+    Q_D(const GetNotificationConfigurationResponse);
+    return static_cast<const GetNotificationConfigurationRequest *>(d->request);
 }
 
 /*!

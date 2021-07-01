@@ -61,7 +61,8 @@ ListBudgetsForResourceResponse::ListBudgetsForResourceResponse(
  */
 const ListBudgetsForResourceRequest * ListBudgetsForResourceResponse::request() const
 {
-    return static_cast<const ListBudgetsForResourceRequest *>(ServiceCatalogResponse::request());
+    Q_D(const ListBudgetsForResourceResponse);
+    return static_cast<const ListBudgetsForResourceRequest *>(d->request);
 }
 
 /*!

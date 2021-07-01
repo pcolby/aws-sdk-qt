@@ -74,7 +74,8 @@ ListEventsResponse::ListEventsResponse(
  */
 const ListEventsRequest * ListEventsResponse::request() const
 {
-    return static_cast<const ListEventsRequest *>(DevOpsGuruResponse::request());
+    Q_D(const ListEventsResponse);
+    return static_cast<const ListEventsRequest *>(d->request);
 }
 
 /*!

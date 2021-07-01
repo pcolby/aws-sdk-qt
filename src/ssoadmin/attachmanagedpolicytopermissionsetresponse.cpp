@@ -55,7 +55,8 @@ AttachManagedPolicyToPermissionSetResponse::AttachManagedPolicyToPermissionSetRe
  */
 const AttachManagedPolicyToPermissionSetRequest * AttachManagedPolicyToPermissionSetResponse::request() const
 {
-    return static_cast<const AttachManagedPolicyToPermissionSetRequest *>(SSOAdminResponse::request());
+    Q_D(const AttachManagedPolicyToPermissionSetResponse);
+    return static_cast<const AttachManagedPolicyToPermissionSetRequest *>(d->request);
 }
 
 /*!

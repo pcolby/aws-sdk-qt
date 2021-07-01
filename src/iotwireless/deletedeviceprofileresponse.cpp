@@ -56,7 +56,8 @@ DeleteDeviceProfileResponse::DeleteDeviceProfileResponse(
  */
 const DeleteDeviceProfileRequest * DeleteDeviceProfileResponse::request() const
 {
-    return static_cast<const DeleteDeviceProfileRequest *>(IoTWirelessResponse::request());
+    Q_D(const DeleteDeviceProfileResponse);
+    return static_cast<const DeleteDeviceProfileRequest *>(d->request);
 }
 
 /*!

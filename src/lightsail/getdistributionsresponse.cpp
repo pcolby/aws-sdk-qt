@@ -74,7 +74,8 @@ GetDistributionsResponse::GetDistributionsResponse(
  */
 const GetDistributionsRequest * GetDistributionsResponse::request() const
 {
-    return static_cast<const GetDistributionsRequest *>(LightsailResponse::request());
+    Q_D(const GetDistributionsResponse);
+    return static_cast<const GetDistributionsRequest *>(d->request);
 }
 
 /*!

@@ -77,7 +77,8 @@ ValidateTemplateResponse::ValidateTemplateResponse(
  */
 const ValidateTemplateRequest * ValidateTemplateResponse::request() const
 {
-    return static_cast<const ValidateTemplateRequest *>(CloudFormationResponse::request());
+    Q_D(const ValidateTemplateResponse);
+    return static_cast<const ValidateTemplateRequest *>(d->request);
 }
 
 /*!

@@ -20,12 +20,15 @@
 #ifndef QTAWS_BRAKETREQUEST_P_H
 #define QTAWS_BRAKETREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "braketrequest.h"
+
 namespace QtAws {
 namespace Braket {
 
 class BraketRequest;
 
-class BraketRequestPrivate {
+class BraketRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     BraketRequest::Action action; ///< Braket action to be performed.
@@ -36,9 +39,6 @@ public:
     BraketRequestPrivate(const BraketRequestPrivate &other, BraketRequest * const q);
 
     static QString toString(const BraketRequest::Action &action);
-
-protected:
-    BraketRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(BraketRequest)

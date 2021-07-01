@@ -112,7 +112,8 @@ ResolveCustomerResponse::ResolveCustomerResponse(
  */
 const ResolveCustomerRequest * ResolveCustomerResponse::request() const
 {
-    return static_cast<const ResolveCustomerRequest *>(MarketplaceMeteringResponse::request());
+    Q_D(const ResolveCustomerResponse);
+    return static_cast<const ResolveCustomerRequest *>(d->request);
 }
 
 /*!

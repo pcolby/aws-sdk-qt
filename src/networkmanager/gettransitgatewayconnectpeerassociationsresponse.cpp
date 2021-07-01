@@ -62,7 +62,8 @@ GetTransitGatewayConnectPeerAssociationsResponse::GetTransitGatewayConnectPeerAs
  */
 const GetTransitGatewayConnectPeerAssociationsRequest * GetTransitGatewayConnectPeerAssociationsResponse::request() const
 {
-    return static_cast<const GetTransitGatewayConnectPeerAssociationsRequest *>(NetworkManagerResponse::request());
+    Q_D(const GetTransitGatewayConnectPeerAssociationsResponse);
+    return static_cast<const GetTransitGatewayConnectPeerAssociationsRequest *>(d->request);
 }
 
 /*!

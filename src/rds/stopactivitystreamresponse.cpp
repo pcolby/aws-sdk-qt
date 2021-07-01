@@ -119,7 +119,8 @@ StopActivityStreamResponse::StopActivityStreamResponse(
  */
 const StopActivityStreamRequest * StopActivityStreamResponse::request() const
 {
-    return static_cast<const StopActivityStreamRequest *>(RdsResponse::request());
+    Q_D(const StopActivityStreamResponse);
+    return static_cast<const StopActivityStreamRequest *>(d->request);
 }
 
 /*!

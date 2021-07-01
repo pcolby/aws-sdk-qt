@@ -68,8 +68,7 @@ public:
 
 protected:
     /// @cond internal
-    SimpleDBRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SimpleDBRequest(SimpleDBRequestPrivate * const d);
+    SimpleDBRequest(SimpleDBRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

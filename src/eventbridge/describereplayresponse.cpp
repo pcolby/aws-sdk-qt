@@ -78,7 +78,8 @@ DescribeReplayResponse::DescribeReplayResponse(
  */
 const DescribeReplayRequest * DescribeReplayResponse::request() const
 {
-    return static_cast<const DescribeReplayRequest *>(EventBridgeResponse::request());
+    Q_D(const DescribeReplayResponse);
+    return static_cast<const DescribeReplayRequest *>(d->request);
 }
 
 /*!

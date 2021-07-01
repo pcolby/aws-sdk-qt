@@ -72,7 +72,8 @@ DescribeDBClusterSnapshotAttributesResponse::DescribeDBClusterSnapshotAttributes
  */
 const DescribeDBClusterSnapshotAttributesRequest * DescribeDBClusterSnapshotAttributesResponse::request() const
 {
-    return static_cast<const DescribeDBClusterSnapshotAttributesRequest *>(NeptuneResponse::request());
+    Q_D(const DescribeDBClusterSnapshotAttributesResponse);
+    return static_cast<const DescribeDBClusterSnapshotAttributesRequest *>(d->request);
 }
 
 /*!

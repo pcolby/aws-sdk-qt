@@ -81,7 +81,8 @@ GetAttributeValuesResponse::GetAttributeValuesResponse(
  */
 const GetAttributeValuesRequest * GetAttributeValuesResponse::request() const
 {
-    return static_cast<const GetAttributeValuesRequest *>(PricingResponse::request());
+    Q_D(const GetAttributeValuesResponse);
+    return static_cast<const GetAttributeValuesRequest *>(d->request);
 }
 
 /*!

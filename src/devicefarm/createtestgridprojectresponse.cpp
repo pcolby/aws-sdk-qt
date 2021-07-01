@@ -75,7 +75,8 @@ CreateTestGridProjectResponse::CreateTestGridProjectResponse(
  */
 const CreateTestGridProjectRequest * CreateTestGridProjectResponse::request() const
 {
-    return static_cast<const CreateTestGridProjectRequest *>(DeviceFarmResponse::request());
+    Q_D(const CreateTestGridProjectResponse);
+    return static_cast<const CreateTestGridProjectRequest *>(d->request);
 }
 
 /*!

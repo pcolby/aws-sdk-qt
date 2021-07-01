@@ -72,7 +72,8 @@ VoteOnProposalResponse::VoteOnProposalResponse(
  */
 const VoteOnProposalRequest * VoteOnProposalResponse::request() const
 {
-    return static_cast<const VoteOnProposalRequest *>(ManagedBlockchainResponse::request());
+    Q_D(const VoteOnProposalResponse);
+    return static_cast<const VoteOnProposalRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ RemoveRoleFromInstanceProfileResponse::RemoveRoleFromInstanceProfileResponse(
  */
 const RemoveRoleFromInstanceProfileRequest * RemoveRoleFromInstanceProfileResponse::request() const
 {
-    return static_cast<const RemoveRoleFromInstanceProfileRequest *>(IamResponse::request());
+    Q_D(const RemoveRoleFromInstanceProfileResponse);
+    return static_cast<const RemoveRoleFromInstanceProfileRequest *>(d->request);
 }
 
 /*!

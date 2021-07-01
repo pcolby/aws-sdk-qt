@@ -69,7 +69,8 @@ GetInsightRuleReportResponse::GetInsightRuleReportResponse(
  */
 const GetInsightRuleReportRequest * GetInsightRuleReportResponse::request() const
 {
-    return static_cast<const GetInsightRuleReportRequest *>(CloudWatchResponse::request());
+    Q_D(const GetInsightRuleReportResponse);
+    return static_cast<const GetInsightRuleReportRequest *>(d->request);
 }
 
 /*!

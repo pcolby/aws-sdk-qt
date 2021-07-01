@@ -73,7 +73,8 @@ DisassociateMembersResponse::DisassociateMembersResponse(
  */
 const DisassociateMembersRequest * DisassociateMembersResponse::request() const
 {
-    return static_cast<const DisassociateMembersRequest *>(GuardDutyResponse::request());
+    Q_D(const DisassociateMembersResponse);
+    return static_cast<const DisassociateMembersRequest *>(d->request);
 }
 
 /*!

@@ -61,7 +61,8 @@ ListConstraintsForPortfolioResponse::ListConstraintsForPortfolioResponse(
  */
 const ListConstraintsForPortfolioRequest * ListConstraintsForPortfolioResponse::request() const
 {
-    return static_cast<const ListConstraintsForPortfolioRequest *>(ServiceCatalogResponse::request());
+    Q_D(const ListConstraintsForPortfolioResponse);
+    return static_cast<const ListConstraintsForPortfolioRequest *>(d->request);
 }
 
 /*!

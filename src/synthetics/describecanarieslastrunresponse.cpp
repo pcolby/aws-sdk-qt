@@ -71,7 +71,8 @@ DescribeCanariesLastRunResponse::DescribeCanariesLastRunResponse(
  */
 const DescribeCanariesLastRunRequest * DescribeCanariesLastRunResponse::request() const
 {
-    return static_cast<const DescribeCanariesLastRunRequest *>(SyntheticsResponse::request());
+    Q_D(const DescribeCanariesLastRunResponse);
+    return static_cast<const DescribeCanariesLastRunRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ ListChannelsModeratedByAppInstanceUserResponse::ListChannelsModeratedByAppInstan
  */
 const ListChannelsModeratedByAppInstanceUserRequest * ListChannelsModeratedByAppInstanceUserResponse::request() const
 {
-    return static_cast<const ListChannelsModeratedByAppInstanceUserRequest *>(ChimeResponse::request());
+    Q_D(const ListChannelsModeratedByAppInstanceUserResponse);
+    return static_cast<const ListChannelsModeratedByAppInstanceUserRequest *>(d->request);
 }
 
 /*!

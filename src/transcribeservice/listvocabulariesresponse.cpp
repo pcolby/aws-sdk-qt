@@ -56,7 +56,8 @@ ListVocabulariesResponse::ListVocabulariesResponse(
  */
 const ListVocabulariesRequest * ListVocabulariesResponse::request() const
 {
-    return static_cast<const ListVocabulariesRequest *>(TranscribeServiceResponse::request());
+    Q_D(const ListVocabulariesResponse);
+    return static_cast<const ListVocabulariesRequest *>(d->request);
 }
 
 /*!

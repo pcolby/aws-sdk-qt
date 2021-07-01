@@ -98,7 +98,8 @@ DeleteMaintenanceWindowResponse::DeleteMaintenanceWindowResponse(
  */
 const DeleteMaintenanceWindowRequest * DeleteMaintenanceWindowResponse::request() const
 {
-    return static_cast<const DeleteMaintenanceWindowRequest *>(SsmResponse::request());
+    Q_D(const DeleteMaintenanceWindowResponse);
+    return static_cast<const DeleteMaintenanceWindowRequest *>(d->request);
 }
 
 /*!

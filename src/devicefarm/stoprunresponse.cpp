@@ -75,7 +75,8 @@ StopRunResponse::StopRunResponse(
  */
 const StopRunRequest * StopRunResponse::request() const
 {
-    return static_cast<const StopRunRequest *>(DeviceFarmResponse::request());
+    Q_D(const StopRunResponse);
+    return static_cast<const StopRunRequest *>(d->request);
 }
 
 /*!

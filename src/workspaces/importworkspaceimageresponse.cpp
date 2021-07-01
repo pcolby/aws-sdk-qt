@@ -58,7 +58,8 @@ ImportWorkspaceImageResponse::ImportWorkspaceImageResponse(
  */
 const ImportWorkspaceImageRequest * ImportWorkspaceImageResponse::request() const
 {
-    return static_cast<const ImportWorkspaceImageRequest *>(WorkSpacesResponse::request());
+    Q_D(const ImportWorkspaceImageResponse);
+    return static_cast<const ImportWorkspaceImageRequest *>(d->request);
 }
 
 /*!

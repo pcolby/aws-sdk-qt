@@ -84,7 +84,8 @@ DeleteCustomMetadataResponse::DeleteCustomMetadataResponse(
  */
 const DeleteCustomMetadataRequest * DeleteCustomMetadataResponse::request() const
 {
-    return static_cast<const DeleteCustomMetadataRequest *>(WorkDocsResponse::request());
+    Q_D(const DeleteCustomMetadataResponse);
+    return static_cast<const DeleteCustomMetadataRequest *>(d->request);
 }
 
 /*!

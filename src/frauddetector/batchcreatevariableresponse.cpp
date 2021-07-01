@@ -58,7 +58,8 @@ BatchCreateVariableResponse::BatchCreateVariableResponse(
  */
 const BatchCreateVariableRequest * BatchCreateVariableResponse::request() const
 {
-    return static_cast<const BatchCreateVariableRequest *>(FraudDetectorResponse::request());
+    Q_D(const BatchCreateVariableResponse);
+    return static_cast<const BatchCreateVariableRequest *>(d->request);
 }
 
 /*!

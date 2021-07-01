@@ -70,7 +70,8 @@ UpdateNotebookInstanceResponse::UpdateNotebookInstanceResponse(
  */
 const UpdateNotebookInstanceRequest * UpdateNotebookInstanceResponse::request() const
 {
-    return static_cast<const UpdateNotebookInstanceRequest *>(SageMakerResponse::request());
+    Q_D(const UpdateNotebookInstanceResponse);
+    return static_cast<const UpdateNotebookInstanceRequest *>(d->request);
 }
 
 /*!

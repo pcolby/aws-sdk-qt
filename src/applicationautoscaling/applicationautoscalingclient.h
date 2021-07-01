@@ -78,12 +78,6 @@ public slots:
     PutScheduledActionResponse * putScheduledAction(const PutScheduledActionRequest &request);
     RegisterScalableTargetResponse * registerScalableTarget(const RegisterScalableTargetRequest &request);
 
-protected:
-    /// @cond internal
-    ApplicationAutoScalingClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ApplicationAutoScalingClient(ApplicationAutoScalingClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ApplicationAutoScalingClient)
     Q_DISABLE_COPY(ApplicationAutoScalingClient)

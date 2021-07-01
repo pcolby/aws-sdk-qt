@@ -60,7 +60,8 @@ RemoveTagsFromCertificateResponse::RemoveTagsFromCertificateResponse(
  */
 const RemoveTagsFromCertificateRequest * RemoveTagsFromCertificateResponse::request() const
 {
-    return static_cast<const RemoveTagsFromCertificateRequest *>(AcmResponse::request());
+    Q_D(const RemoveTagsFromCertificateResponse);
+    return static_cast<const RemoveTagsFromCertificateRequest *>(d->request);
 }
 
 /*!

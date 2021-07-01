@@ -61,7 +61,8 @@ BatchPutAssetPropertyValueResponse::BatchPutAssetPropertyValueResponse(
  */
 const BatchPutAssetPropertyValueRequest * BatchPutAssetPropertyValueResponse::request() const
 {
-    return static_cast<const BatchPutAssetPropertyValueRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const BatchPutAssetPropertyValueResponse);
+    return static_cast<const BatchPutAssetPropertyValueRequest *>(d->request);
 }
 
 /*!

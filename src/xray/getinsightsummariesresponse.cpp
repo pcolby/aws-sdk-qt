@@ -56,7 +56,8 @@ GetInsightSummariesResponse::GetInsightSummariesResponse(
  */
 const GetInsightSummariesRequest * GetInsightSummariesResponse::request() const
 {
-    return static_cast<const GetInsightSummariesRequest *>(XRayResponse::request());
+    Q_D(const GetInsightSummariesResponse);
+    return static_cast<const GetInsightSummariesRequest *>(d->request);
 }
 
 /*!

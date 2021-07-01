@@ -68,7 +68,8 @@ PutLifecycleHookResponse::PutLifecycleHookResponse(
  */
 const PutLifecycleHookRequest * PutLifecycleHookResponse::request() const
 {
-    return static_cast<const PutLifecycleHookRequest *>(AutoScalingResponse::request());
+    Q_D(const PutLifecycleHookResponse);
+    return static_cast<const PutLifecycleHookRequest *>(d->request);
 }
 
 /*!

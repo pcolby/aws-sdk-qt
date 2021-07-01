@@ -69,7 +69,8 @@ ConnectDirectoryResponse::ConnectDirectoryResponse(
  */
 const ConnectDirectoryRequest * ConnectDirectoryResponse::request() const
 {
-    return static_cast<const ConnectDirectoryRequest *>(DirectoryServiceResponse::request());
+    Q_D(const ConnectDirectoryResponse);
+    return static_cast<const ConnectDirectoryRequest *>(d->request);
 }
 
 /*!

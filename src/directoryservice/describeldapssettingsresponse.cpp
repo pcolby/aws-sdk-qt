@@ -69,7 +69,8 @@ DescribeLDAPSSettingsResponse::DescribeLDAPSSettingsResponse(
  */
 const DescribeLDAPSSettingsRequest * DescribeLDAPSSettingsResponse::request() const
 {
-    return static_cast<const DescribeLDAPSSettingsRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DescribeLDAPSSettingsResponse);
+    return static_cast<const DescribeLDAPSSettingsRequest *>(d->request);
 }
 
 /*!

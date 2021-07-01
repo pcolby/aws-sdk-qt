@@ -58,7 +58,8 @@ GetDataCatalogEncryptionSettingsResponse::GetDataCatalogEncryptionSettingsRespon
  */
 const GetDataCatalogEncryptionSettingsRequest * GetDataCatalogEncryptionSettingsResponse::request() const
 {
-    return static_cast<const GetDataCatalogEncryptionSettingsRequest *>(GlueResponse::request());
+    Q_D(const GetDataCatalogEncryptionSettingsResponse);
+    return static_cast<const GetDataCatalogEncryptionSettingsRequest *>(d->request);
 }
 
 /*!

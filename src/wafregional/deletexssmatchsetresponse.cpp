@@ -78,7 +78,8 @@ DeleteXssMatchSetResponse::DeleteXssMatchSetResponse(
  */
 const DeleteXssMatchSetRequest * DeleteXssMatchSetResponse::request() const
 {
-    return static_cast<const DeleteXssMatchSetRequest *>(WAFRegionalResponse::request());
+    Q_D(const DeleteXssMatchSetResponse);
+    return static_cast<const DeleteXssMatchSetRequest *>(d->request);
 }
 
 /*!

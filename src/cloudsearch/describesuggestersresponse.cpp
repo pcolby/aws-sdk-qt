@@ -66,7 +66,8 @@ DescribeSuggestersResponse::DescribeSuggestersResponse(
  */
 const DescribeSuggestersRequest * DescribeSuggestersResponse::request() const
 {
-    return static_cast<const DescribeSuggestersRequest *>(CloudSearchResponse::request());
+    Q_D(const DescribeSuggestersResponse);
+    return static_cast<const DescribeSuggestersRequest *>(d->request);
 }
 
 /*!

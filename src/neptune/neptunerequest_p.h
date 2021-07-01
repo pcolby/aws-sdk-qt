@@ -20,12 +20,15 @@
 #ifndef QTAWS_NEPTUNEREQUEST_P_H
 #define QTAWS_NEPTUNEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "neptunerequest.h"
+
 namespace QtAws {
 namespace Neptune {
 
 class NeptuneRequest;
 
-class NeptuneRequestPrivate {
+class NeptuneRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     NeptuneRequest::Action action; ///< Neptune action to be performed.
@@ -36,9 +39,6 @@ public:
     NeptuneRequestPrivate(const NeptuneRequestPrivate &other, NeptuneRequest * const q);
 
     static QString toString(const NeptuneRequest::Action &action);
-
-protected:
-    NeptuneRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(NeptuneRequest)

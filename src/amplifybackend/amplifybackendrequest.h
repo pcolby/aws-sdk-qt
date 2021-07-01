@@ -82,8 +82,7 @@ public:
 
 protected:
     /// @cond internal
-    AmplifyBackendRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AmplifyBackendRequest(AmplifyBackendRequestPrivate * const d);
+    AmplifyBackendRequest(AmplifyBackendRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -66,7 +66,8 @@ AdminEnableUserResponse::AdminEnableUserResponse(
  */
 const AdminEnableUserRequest * AdminEnableUserResponse::request() const
 {
-    return static_cast<const AdminEnableUserRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const AdminEnableUserResponse);
+    return static_cast<const AdminEnableUserRequest *>(d->request);
 }
 
 /*!

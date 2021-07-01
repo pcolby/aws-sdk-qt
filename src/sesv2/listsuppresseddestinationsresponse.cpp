@@ -88,7 +88,8 @@ ListSuppressedDestinationsResponse::ListSuppressedDestinationsResponse(
  */
 const ListSuppressedDestinationsRequest * ListSuppressedDestinationsResponse::request() const
 {
-    return static_cast<const ListSuppressedDestinationsRequest *>(Sesv2Response::request());
+    Q_D(const ListSuppressedDestinationsResponse);
+    return static_cast<const ListSuppressedDestinationsRequest *>(d->request);
 }
 
 /*!

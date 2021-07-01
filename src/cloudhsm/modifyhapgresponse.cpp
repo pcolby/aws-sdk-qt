@@ -67,7 +67,8 @@ ModifyHapgResponse::ModifyHapgResponse(
  */
 const ModifyHapgRequest * ModifyHapgResponse::request() const
 {
-    return static_cast<const ModifyHapgRequest *>(CloudHSMResponse::request());
+    Q_D(const ModifyHapgResponse);
+    return static_cast<const ModifyHapgRequest *>(d->request);
 }
 
 /*!

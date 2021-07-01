@@ -20,20 +20,19 @@
 #ifndef QTAWS_CODEBUILDCLIENT_P_H
 #define QTAWS_CODEBUILDCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CodeBuild {
 
 class CodeBuildClient;
 
-class CodeBuildClientPrivate {
+class CodeBuildClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CodeBuildClientPrivate(CodeBuildClient * const q);
-
-protected:
-    CodeBuildClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeBuildClient)

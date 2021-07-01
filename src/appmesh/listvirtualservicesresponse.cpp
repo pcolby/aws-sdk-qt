@@ -73,7 +73,8 @@ ListVirtualServicesResponse::ListVirtualServicesResponse(
  */
 const ListVirtualServicesRequest * ListVirtualServicesResponse::request() const
 {
-    return static_cast<const ListVirtualServicesRequest *>(AppMeshResponse::request());
+    Q_D(const ListVirtualServicesResponse);
+    return static_cast<const ListVirtualServicesRequest *>(d->request);
 }
 
 /*!

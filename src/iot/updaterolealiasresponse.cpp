@@ -82,7 +82,8 @@ UpdateRoleAliasResponse::UpdateRoleAliasResponse(
  */
 const UpdateRoleAliasRequest * UpdateRoleAliasResponse::request() const
 {
-    return static_cast<const UpdateRoleAliasRequest *>(IoTResponse::request());
+    Q_D(const UpdateRoleAliasResponse);
+    return static_cast<const UpdateRoleAliasRequest *>(d->request);
 }
 
 /*!

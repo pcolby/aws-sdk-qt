@@ -87,7 +87,8 @@ DetachInternetGatewayResponse::DetachInternetGatewayResponse(
  */
 const DetachInternetGatewayRequest * DetachInternetGatewayResponse::request() const
 {
-    return static_cast<const DetachInternetGatewayRequest *>(Ec2Response::request());
+    Q_D(const DetachInternetGatewayResponse);
+    return static_cast<const DetachInternetGatewayRequest *>(d->request);
 }
 
 /*!

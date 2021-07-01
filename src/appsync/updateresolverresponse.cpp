@@ -56,7 +56,8 @@ UpdateResolverResponse::UpdateResolverResponse(
  */
 const UpdateResolverRequest * UpdateResolverResponse::request() const
 {
-    return static_cast<const UpdateResolverRequest *>(AppSyncResponse::request());
+    Q_D(const UpdateResolverResponse);
+    return static_cast<const UpdateResolverRequest *>(d->request);
 }
 
 /*!

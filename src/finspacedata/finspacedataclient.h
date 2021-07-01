@@ -57,12 +57,6 @@ public slots:
     GetProgrammaticAccessCredentialsResponse * getProgrammaticAccessCredentials(const GetProgrammaticAccessCredentialsRequest &request);
     GetWorkingLocationResponse * getWorkingLocation(const GetWorkingLocationRequest &request);
 
-protected:
-    /// @cond internal
-    FinSpaceDataClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit FinSpaceDataClient(FinSpaceDataClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(FinSpaceDataClient)
     Q_DISABLE_COPY(FinSpaceDataClient)

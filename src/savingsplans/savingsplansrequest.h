@@ -67,8 +67,7 @@ public:
 
 protected:
     /// @cond internal
-    SavingsPlansRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SavingsPlansRequest(SavingsPlansRequestPrivate * const d);
+    SavingsPlansRequest(SavingsPlansRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

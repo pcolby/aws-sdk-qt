@@ -56,7 +56,8 @@ TransferDomainResponse::TransferDomainResponse(
  */
 const TransferDomainRequest * TransferDomainResponse::request() const
 {
-    return static_cast<const TransferDomainRequest *>(Route53DomainsResponse::request());
+    Q_D(const TransferDomainResponse);
+    return static_cast<const TransferDomainRequest *>(d->request);
 }
 
 /*!

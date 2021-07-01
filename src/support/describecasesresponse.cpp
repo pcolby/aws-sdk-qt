@@ -133,7 +133,8 @@ DescribeCasesResponse::DescribeCasesResponse(
  */
 const DescribeCasesRequest * DescribeCasesResponse::request() const
 {
-    return static_cast<const DescribeCasesRequest *>(SupportResponse::request());
+    Q_D(const DescribeCasesResponse);
+    return static_cast<const DescribeCasesRequest *>(d->request);
 }
 
 /*!

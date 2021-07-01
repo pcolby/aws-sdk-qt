@@ -82,7 +82,8 @@ DescribeBillingGroupResponse::DescribeBillingGroupResponse(
  */
 const DescribeBillingGroupRequest * DescribeBillingGroupResponse::request() const
 {
-    return static_cast<const DescribeBillingGroupRequest *>(IoTResponse::request());
+    Q_D(const DescribeBillingGroupResponse);
+    return static_cast<const DescribeBillingGroupRequest *>(d->request);
 }
 
 /*!

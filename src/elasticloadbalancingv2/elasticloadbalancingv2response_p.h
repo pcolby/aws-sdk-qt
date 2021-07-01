@@ -20,12 +20,14 @@
 #ifndef QTAWS_ELASTICLOADBALANCINGV2RESPONSE_P_H
 #define QTAWS_ELASTICLOADBALANCINGV2RESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 class ElasticLoadBalancingv2Response;
 
-class ElasticLoadBalancingv2ResponsePrivate {
+class ElasticLoadBalancingv2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    ElasticLoadBalancingv2Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticLoadBalancingv2Response)

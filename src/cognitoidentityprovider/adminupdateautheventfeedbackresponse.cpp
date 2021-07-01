@@ -66,7 +66,8 @@ AdminUpdateAuthEventFeedbackResponse::AdminUpdateAuthEventFeedbackResponse(
  */
 const AdminUpdateAuthEventFeedbackRequest * AdminUpdateAuthEventFeedbackResponse::request() const
 {
-    return static_cast<const AdminUpdateAuthEventFeedbackRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const AdminUpdateAuthEventFeedbackResponse);
+    return static_cast<const AdminUpdateAuthEventFeedbackRequest *>(d->request);
 }
 
 /*!

@@ -201,12 +201,6 @@ public slots:
     UpdateArchiveResponse * updateArchive(const UpdateArchiveRequest &request);
     UpdateConnectionResponse * updateConnection(const UpdateConnectionRequest &request);
 
-protected:
-    /// @cond internal
-    EventBridgeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EventBridgeClient(EventBridgeClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(EventBridgeClient)
     Q_DISABLE_COPY(EventBridgeClient)

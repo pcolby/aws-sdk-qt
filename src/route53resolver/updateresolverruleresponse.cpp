@@ -94,7 +94,8 @@ UpdateResolverRuleResponse::UpdateResolverRuleResponse(
  */
 const UpdateResolverRuleRequest * UpdateResolverRuleResponse::request() const
 {
-    return static_cast<const UpdateResolverRuleRequest *>(Route53ResolverResponse::request());
+    Q_D(const UpdateResolverRuleResponse);
+    return static_cast<const UpdateResolverRuleRequest *>(d->request);
 }
 
 /*!

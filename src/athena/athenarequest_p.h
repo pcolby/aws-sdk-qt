@@ -20,12 +20,15 @@
 #ifndef QTAWS_ATHENAREQUEST_P_H
 #define QTAWS_ATHENAREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "athenarequest.h"
+
 namespace QtAws {
 namespace Athena {
 
 class AthenaRequest;
 
-class AthenaRequestPrivate {
+class AthenaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AthenaRequest::Action action; ///< Athena action to be performed.
@@ -36,9 +39,6 @@ public:
     AthenaRequestPrivate(const AthenaRequestPrivate &other, AthenaRequest * const q);
 
     static QString toString(const AthenaRequest::Action &action);
-
-protected:
-    AthenaRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AthenaRequest)

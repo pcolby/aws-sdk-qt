@@ -145,7 +145,8 @@ ListFirewallsResponse::ListFirewallsResponse(
  */
 const ListFirewallsRequest * ListFirewallsResponse::request() const
 {
-    return static_cast<const ListFirewallsRequest *>(NetworkFirewallResponse::request());
+    Q_D(const ListFirewallsResponse);
+    return static_cast<const ListFirewallsRequest *>(d->request);
 }
 
 /*!

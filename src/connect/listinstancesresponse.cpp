@@ -79,7 +79,8 @@ ListInstancesResponse::ListInstancesResponse(
  */
 const ListInstancesRequest * ListInstancesResponse::request() const
 {
-    return static_cast<const ListInstancesRequest *>(ConnectResponse::request());
+    Q_D(const ListInstancesResponse);
+    return static_cast<const ListInstancesRequest *>(d->request);
 }
 
 /*!

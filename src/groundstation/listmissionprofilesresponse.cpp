@@ -58,7 +58,8 @@ ListMissionProfilesResponse::ListMissionProfilesResponse(
  */
 const ListMissionProfilesRequest * ListMissionProfilesResponse::request() const
 {
-    return static_cast<const ListMissionProfilesRequest *>(GroundStationResponse::request());
+    Q_D(const ListMissionProfilesResponse);
+    return static_cast<const ListMissionProfilesRequest *>(d->request);
 }
 
 /*!

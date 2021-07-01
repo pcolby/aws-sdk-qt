@@ -56,7 +56,8 @@ UpdateApiResponse::UpdateApiResponse(
  */
 const UpdateApiRequest * UpdateApiResponse::request() const
 {
-    return static_cast<const UpdateApiRequest *>(ApiGatewayV2Response::request());
+    Q_D(const UpdateApiResponse);
+    return static_cast<const UpdateApiRequest *>(d->request);
 }
 
 /*!

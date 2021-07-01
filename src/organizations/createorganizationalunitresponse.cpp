@@ -141,7 +141,8 @@ CreateOrganizationalUnitResponse::CreateOrganizationalUnitResponse(
  */
 const CreateOrganizationalUnitRequest * CreateOrganizationalUnitResponse::request() const
 {
-    return static_cast<const CreateOrganizationalUnitRequest *>(OrganizationsResponse::request());
+    Q_D(const CreateOrganizationalUnitResponse);
+    return static_cast<const CreateOrganizationalUnitRequest *>(d->request);
 }
 
 /*!

@@ -59,7 +59,8 @@ DeleteBackupPlanResponse::DeleteBackupPlanResponse(
  */
 const DeleteBackupPlanRequest * DeleteBackupPlanResponse::request() const
 {
-    return static_cast<const DeleteBackupPlanRequest *>(BackupResponse::request());
+    Q_D(const DeleteBackupPlanResponse);
+    return static_cast<const DeleteBackupPlanRequest *>(d->request);
 }
 
 /*!

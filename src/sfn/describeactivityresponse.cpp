@@ -74,7 +74,8 @@ DescribeActivityResponse::DescribeActivityResponse(
  */
 const DescribeActivityRequest * DescribeActivityResponse::request() const
 {
-    return static_cast<const DescribeActivityRequest *>(SfnResponse::request());
+    Q_D(const DescribeActivityResponse);
+    return static_cast<const DescribeActivityRequest *>(d->request);
 }
 
 /*!

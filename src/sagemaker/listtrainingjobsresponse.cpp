@@ -70,7 +70,8 @@ ListTrainingJobsResponse::ListTrainingJobsResponse(
  */
 const ListTrainingJobsRequest * ListTrainingJobsResponse::request() const
 {
-    return static_cast<const ListTrainingJobsRequest *>(SageMakerResponse::request());
+    Q_D(const ListTrainingJobsResponse);
+    return static_cast<const ListTrainingJobsRequest *>(d->request);
 }
 
 /*!

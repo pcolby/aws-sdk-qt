@@ -20,12 +20,15 @@
 #ifndef QTAWS_AUGMENTEDAIRUNTIMEREQUEST_P_H
 #define QTAWS_AUGMENTEDAIRUNTIMEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "augmentedairuntimerequest.h"
+
 namespace QtAws {
 namespace AugmentedAIRuntime {
 
 class AugmentedAIRuntimeRequest;
 
-class AugmentedAIRuntimeRequestPrivate {
+class AugmentedAIRuntimeRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     AugmentedAIRuntimeRequest::Action action; ///< AugmentedAIRuntime action to be performed.
@@ -36,9 +39,6 @@ public:
     AugmentedAIRuntimeRequestPrivate(const AugmentedAIRuntimeRequestPrivate &other, AugmentedAIRuntimeRequest * const q);
 
     static QString toString(const AugmentedAIRuntimeRequest::Action &action);
-
-protected:
-    AugmentedAIRuntimeRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(AugmentedAIRuntimeRequest)

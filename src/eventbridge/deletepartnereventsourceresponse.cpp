@@ -78,7 +78,8 @@ DeletePartnerEventSourceResponse::DeletePartnerEventSourceResponse(
  */
 const DeletePartnerEventSourceRequest * DeletePartnerEventSourceResponse::request() const
 {
-    return static_cast<const DeletePartnerEventSourceRequest *>(EventBridgeResponse::request());
+    Q_D(const DeletePartnerEventSourceResponse);
+    return static_cast<const DeletePartnerEventSourceRequest *>(d->request);
 }
 
 /*!

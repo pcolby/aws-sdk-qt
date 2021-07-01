@@ -58,7 +58,8 @@ DeleteDevEndpointResponse::DeleteDevEndpointResponse(
  */
 const DeleteDevEndpointRequest * DeleteDevEndpointResponse::request() const
 {
-    return static_cast<const DeleteDevEndpointRequest *>(GlueResponse::request());
+    Q_D(const DeleteDevEndpointResponse);
+    return static_cast<const DeleteDevEndpointRequest *>(d->request);
 }
 
 /*!

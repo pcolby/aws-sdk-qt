@@ -37,7 +37,7 @@ namespace WAFV2 {
  * Constructs a Wafv2Response object with parent \a parent.
  */
 Wafv2Response::Wafv2Response(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new Wafv2ResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new Wafv2ResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ Wafv2Response::Wafv2Response(QObject * const parent)
  * implementation that inherits from Wafv2ResponsePrivate.
  */
 Wafv2Response::Wafv2Response(Wafv2ResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void Wafv2Response::parseFailure(QIODevice &response)
  * Constructs a Wafv2ResponsePrivate object with public implementation \a q.
  */
 Wafv2ResponsePrivate::Wafv2ResponsePrivate(
-    Wafv2Response * const q) : q_ptr(q)
+    Wafv2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

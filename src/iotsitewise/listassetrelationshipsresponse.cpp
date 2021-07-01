@@ -61,7 +61,8 @@ ListAssetRelationshipsResponse::ListAssetRelationshipsResponse(
  */
 const ListAssetRelationshipsRequest * ListAssetRelationshipsResponse::request() const
 {
-    return static_cast<const ListAssetRelationshipsRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const ListAssetRelationshipsResponse);
+    return static_cast<const ListAssetRelationshipsRequest *>(d->request);
 }
 
 /*!

@@ -177,7 +177,8 @@ ListEnvironmentTemplatesResponse::ListEnvironmentTemplatesResponse(
  */
 const ListEnvironmentTemplatesRequest * ListEnvironmentTemplatesResponse::request() const
 {
-    return static_cast<const ListEnvironmentTemplatesRequest *>(ProtonResponse::request());
+    Q_D(const ListEnvironmentTemplatesResponse);
+    return static_cast<const ListEnvironmentTemplatesRequest *>(d->request);
 }
 
 /*!

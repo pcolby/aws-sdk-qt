@@ -77,7 +77,8 @@ CreateStackResponse::CreateStackResponse(
  */
 const CreateStackRequest * CreateStackResponse::request() const
 {
-    return static_cast<const CreateStackRequest *>(CloudFormationResponse::request());
+    Q_D(const CreateStackResponse);
+    return static_cast<const CreateStackRequest *>(d->request);
 }
 
 /*!

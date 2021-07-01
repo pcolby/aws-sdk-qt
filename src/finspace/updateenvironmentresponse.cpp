@@ -56,7 +56,8 @@ UpdateEnvironmentResponse::UpdateEnvironmentResponse(
  */
 const UpdateEnvironmentRequest * UpdateEnvironmentResponse::request() const
 {
-    return static_cast<const UpdateEnvironmentRequest *>(finspaceResponse::request());
+    Q_D(const UpdateEnvironmentResponse);
+    return static_cast<const UpdateEnvironmentRequest *>(d->request);
 }
 
 /*!

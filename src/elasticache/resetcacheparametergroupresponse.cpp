@@ -69,7 +69,8 @@ ResetCacheParameterGroupResponse::ResetCacheParameterGroupResponse(
  */
 const ResetCacheParameterGroupRequest * ResetCacheParameterGroupResponse::request() const
 {
-    return static_cast<const ResetCacheParameterGroupRequest *>(ElastiCacheResponse::request());
+    Q_D(const ResetCacheParameterGroupResponse);
+    return static_cast<const ResetCacheParameterGroupRequest *>(d->request);
 }
 
 /*!

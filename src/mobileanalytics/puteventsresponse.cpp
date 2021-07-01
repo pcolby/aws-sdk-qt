@@ -56,7 +56,8 @@ PutEventsResponse::PutEventsResponse(
  */
 const PutEventsRequest * PutEventsResponse::request() const
 {
-    return static_cast<const PutEventsRequest *>(MobileAnalyticsResponse::request());
+    Q_D(const PutEventsResponse);
+    return static_cast<const PutEventsRequest *>(d->request);
 }
 
 /*!

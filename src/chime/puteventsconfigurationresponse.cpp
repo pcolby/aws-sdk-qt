@@ -98,7 +98,8 @@ PutEventsConfigurationResponse::PutEventsConfigurationResponse(
  */
 const PutEventsConfigurationRequest * PutEventsConfigurationResponse::request() const
 {
-    return static_cast<const PutEventsConfigurationRequest *>(ChimeResponse::request());
+    Q_D(const PutEventsConfigurationResponse);
+    return static_cast<const PutEventsConfigurationRequest *>(d->request);
 }
 
 /*!

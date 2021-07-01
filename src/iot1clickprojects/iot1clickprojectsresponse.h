@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    IoT1ClickProjectsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     IoT1ClickProjectsResponse(IoT1ClickProjectsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

@@ -98,7 +98,8 @@ TagMeetingResponse::TagMeetingResponse(
  */
 const TagMeetingRequest * TagMeetingResponse::request() const
 {
-    return static_cast<const TagMeetingRequest *>(ChimeResponse::request());
+    Q_D(const TagMeetingResponse);
+    return static_cast<const TagMeetingRequest *>(d->request);
 }
 
 /*!

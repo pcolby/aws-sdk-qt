@@ -91,8 +91,7 @@ public:
 
 protected:
     /// @cond internal
-    WorkLinkRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit WorkLinkRequest(WorkLinkRequestPrivate * const d);
+    WorkLinkRequest(WorkLinkRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -55,7 +55,8 @@ GetDataEndpointResponse::GetDataEndpointResponse(
  */
 const GetDataEndpointRequest * GetDataEndpointResponse::request() const
 {
-    return static_cast<const GetDataEndpointRequest *>(KinesisVideoResponse::request());
+    Q_D(const GetDataEndpointResponse);
+    return static_cast<const GetDataEndpointRequest *>(d->request);
 }
 
 /*!

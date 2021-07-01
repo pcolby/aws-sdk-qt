@@ -89,7 +89,8 @@ PutMailboxPermissionsResponse::PutMailboxPermissionsResponse(
  */
 const PutMailboxPermissionsRequest * PutMailboxPermissionsResponse::request() const
 {
-    return static_cast<const PutMailboxPermissionsRequest *>(WorkMailResponse::request());
+    Q_D(const PutMailboxPermissionsResponse);
+    return static_cast<const PutMailboxPermissionsRequest *>(d->request);
 }
 
 /*!

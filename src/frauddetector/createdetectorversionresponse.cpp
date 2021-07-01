@@ -58,7 +58,8 @@ CreateDetectorVersionResponse::CreateDetectorVersionResponse(
  */
 const CreateDetectorVersionRequest * CreateDetectorVersionResponse::request() const
 {
-    return static_cast<const CreateDetectorVersionRequest *>(FraudDetectorResponse::request());
+    Q_D(const CreateDetectorVersionResponse);
+    return static_cast<const CreateDetectorVersionRequest *>(d->request);
 }
 
 /*!

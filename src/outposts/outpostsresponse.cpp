@@ -37,7 +37,7 @@ namespace Outposts {
  * Constructs a OutpostsResponse object with parent \a parent.
  */
 OutpostsResponse::OutpostsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new OutpostsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new OutpostsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ OutpostsResponse::OutpostsResponse(QObject * const parent)
  * implementation that inherits from OutpostsResponsePrivate.
  */
 OutpostsResponse::OutpostsResponse(OutpostsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void OutpostsResponse::parseFailure(QIODevice &response)
  * Constructs a OutpostsResponsePrivate object with public implementation \a q.
  */
 OutpostsResponsePrivate::OutpostsResponsePrivate(
-    OutpostsResponse * const q) : q_ptr(q)
+    OutpostsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

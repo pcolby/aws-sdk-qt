@@ -61,8 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    S3OutpostsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit S3OutpostsRequest(S3OutpostsRequestPrivate * const d);
+    S3OutpostsRequest(S3OutpostsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

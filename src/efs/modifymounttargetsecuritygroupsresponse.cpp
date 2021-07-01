@@ -62,7 +62,8 @@ ModifyMountTargetSecurityGroupsResponse::ModifyMountTargetSecurityGroupsResponse
  */
 const ModifyMountTargetSecurityGroupsRequest * ModifyMountTargetSecurityGroupsResponse::request() const
 {
-    return static_cast<const ModifyMountTargetSecurityGroupsRequest *>(EfsResponse::request());
+    Q_D(const ModifyMountTargetSecurityGroupsResponse);
+    return static_cast<const ModifyMountTargetSecurityGroupsRequest *>(d->request);
 }
 
 /*!

@@ -70,7 +70,8 @@ UpdateModelPackageResponse::UpdateModelPackageResponse(
  */
 const UpdateModelPackageRequest * UpdateModelPackageResponse::request() const
 {
-    return static_cast<const UpdateModelPackageRequest *>(SageMakerResponse::request());
+    Q_D(const UpdateModelPackageResponse);
+    return static_cast<const UpdateModelPackageRequest *>(d->request);
 }
 
 /*!

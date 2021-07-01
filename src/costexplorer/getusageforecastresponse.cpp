@@ -75,7 +75,8 @@ GetUsageForecastResponse::GetUsageForecastResponse(
  */
 const GetUsageForecastRequest * GetUsageForecastResponse::request() const
 {
-    return static_cast<const GetUsageForecastRequest *>(CostExplorerResponse::request());
+    Q_D(const GetUsageForecastResponse);
+    return static_cast<const GetUsageForecastRequest *>(d->request);
 }
 
 /*!

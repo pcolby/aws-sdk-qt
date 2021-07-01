@@ -67,7 +67,8 @@ PutAppsListResponse::PutAppsListResponse(
  */
 const PutAppsListRequest * PutAppsListResponse::request() const
 {
-    return static_cast<const PutAppsListRequest *>(FmsResponse::request());
+    Q_D(const PutAppsListResponse);
+    return static_cast<const PutAppsListRequest *>(d->request);
 }
 
 /*!

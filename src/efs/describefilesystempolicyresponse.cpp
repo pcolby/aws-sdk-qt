@@ -62,7 +62,8 @@ DescribeFileSystemPolicyResponse::DescribeFileSystemPolicyResponse(
  */
 const DescribeFileSystemPolicyRequest * DescribeFileSystemPolicyResponse::request() const
 {
-    return static_cast<const DescribeFileSystemPolicyRequest *>(EfsResponse::request());
+    Q_D(const DescribeFileSystemPolicyResponse);
+    return static_cast<const DescribeFileSystemPolicyRequest *>(d->request);
 }
 
 /*!

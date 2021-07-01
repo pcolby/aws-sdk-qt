@@ -82,7 +82,8 @@ DeleteAuthorizerResponse::DeleteAuthorizerResponse(
  */
 const DeleteAuthorizerRequest * DeleteAuthorizerResponse::request() const
 {
-    return static_cast<const DeleteAuthorizerRequest *>(IoTResponse::request());
+    Q_D(const DeleteAuthorizerResponse);
+    return static_cast<const DeleteAuthorizerRequest *>(d->request);
 }
 
 /*!

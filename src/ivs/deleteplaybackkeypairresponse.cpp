@@ -385,7 +385,8 @@ DeletePlaybackKeyPairResponse::DeletePlaybackKeyPairResponse(
  */
 const DeletePlaybackKeyPairRequest * DeletePlaybackKeyPairResponse::request() const
 {
-    return static_cast<const DeletePlaybackKeyPairRequest *>(IvsResponse::request());
+    Q_D(const DeletePlaybackKeyPairResponse);
+    return static_cast<const DeletePlaybackKeyPairRequest *>(d->request);
 }
 
 /*!

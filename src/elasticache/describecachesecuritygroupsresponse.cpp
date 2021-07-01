@@ -69,7 +69,8 @@ DescribeCacheSecurityGroupsResponse::DescribeCacheSecurityGroupsResponse(
  */
 const DescribeCacheSecurityGroupsRequest * DescribeCacheSecurityGroupsResponse::request() const
 {
-    return static_cast<const DescribeCacheSecurityGroupsRequest *>(ElastiCacheResponse::request());
+    Q_D(const DescribeCacheSecurityGroupsResponse);
+    return static_cast<const DescribeCacheSecurityGroupsRequest *>(d->request);
 }
 
 /*!

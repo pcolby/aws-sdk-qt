@@ -79,8 +79,7 @@ public:
 
 protected:
     /// @cond internal
-    DaxRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DaxRequest(DaxRequestPrivate * const d);
+    DaxRequest(DaxRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

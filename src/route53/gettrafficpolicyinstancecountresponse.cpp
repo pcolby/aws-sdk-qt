@@ -56,7 +56,8 @@ GetTrafficPolicyInstanceCountResponse::GetTrafficPolicyInstanceCountResponse(
  */
 const GetTrafficPolicyInstanceCountRequest * GetTrafficPolicyInstanceCountResponse::request() const
 {
-    return static_cast<const GetTrafficPolicyInstanceCountRequest *>(Route53Response::request());
+    Q_D(const GetTrafficPolicyInstanceCountResponse);
+    return static_cast<const GetTrafficPolicyInstanceCountRequest *>(d->request);
 }
 
 /*!

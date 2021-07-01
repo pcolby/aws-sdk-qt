@@ -74,7 +74,8 @@ ScanResponse::ScanResponse(
  */
 const ScanRequest * ScanResponse::request() const
 {
-    return static_cast<const ScanRequest *>(DynamoDBResponse::request());
+    Q_D(const ScanResponse);
+    return static_cast<const ScanRequest *>(d->request);
 }
 
 /*!

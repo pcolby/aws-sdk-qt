@@ -72,7 +72,8 @@ DescribeRepositoryAssociationResponse::DescribeRepositoryAssociationResponse(
  */
 const DescribeRepositoryAssociationRequest * DescribeRepositoryAssociationResponse::request() const
 {
-    return static_cast<const DescribeRepositoryAssociationRequest *>(CodeGuruReviewerResponse::request());
+    Q_D(const DescribeRepositoryAssociationResponse);
+    return static_cast<const DescribeRepositoryAssociationRequest *>(d->request);
 }
 
 /*!

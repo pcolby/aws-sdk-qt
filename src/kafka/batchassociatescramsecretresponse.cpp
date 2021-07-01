@@ -56,7 +56,8 @@ BatchAssociateScramSecretResponse::BatchAssociateScramSecretResponse(
  */
 const BatchAssociateScramSecretRequest * BatchAssociateScramSecretResponse::request() const
 {
-    return static_cast<const BatchAssociateScramSecretRequest *>(KafkaResponse::request());
+    Q_D(const BatchAssociateScramSecretResponse);
+    return static_cast<const BatchAssociateScramSecretRequest *>(d->request);
 }
 
 /*!

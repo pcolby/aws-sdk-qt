@@ -64,7 +64,8 @@ CreateLocationNfsResponse::CreateLocationNfsResponse(
  */
 const CreateLocationNfsRequest * CreateLocationNfsResponse::request() const
 {
-    return static_cast<const CreateLocationNfsRequest *>(DataSyncResponse::request());
+    Q_D(const CreateLocationNfsResponse);
+    return static_cast<const CreateLocationNfsRequest *>(d->request);
 }
 
 /*!

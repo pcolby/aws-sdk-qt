@@ -56,7 +56,8 @@ RestartSimulationJobResponse::RestartSimulationJobResponse(
  */
 const RestartSimulationJobRequest * RestartSimulationJobResponse::request() const
 {
-    return static_cast<const RestartSimulationJobRequest *>(RoboMakerResponse::request());
+    Q_D(const RestartSimulationJobResponse);
+    return static_cast<const RestartSimulationJobRequest *>(d->request);
 }
 
 /*!

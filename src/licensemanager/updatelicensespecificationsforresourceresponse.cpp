@@ -59,7 +59,8 @@ UpdateLicenseSpecificationsForResourceResponse::UpdateLicenseSpecificationsForRe
  */
 const UpdateLicenseSpecificationsForResourceRequest * UpdateLicenseSpecificationsForResourceResponse::request() const
 {
-    return static_cast<const UpdateLicenseSpecificationsForResourceRequest *>(LicenseManagerResponse::request());
+    Q_D(const UpdateLicenseSpecificationsForResourceResponse);
+    return static_cast<const UpdateLicenseSpecificationsForResourceRequest *>(d->request);
 }
 
 /*!

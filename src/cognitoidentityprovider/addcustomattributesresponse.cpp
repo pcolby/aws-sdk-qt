@@ -66,7 +66,8 @@ AddCustomAttributesResponse::AddCustomAttributesResponse(
  */
 const AddCustomAttributesRequest * AddCustomAttributesResponse::request() const
 {
-    return static_cast<const AddCustomAttributesRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const AddCustomAttributesResponse);
+    return static_cast<const AddCustomAttributesRequest *>(d->request);
 }
 
 /*!

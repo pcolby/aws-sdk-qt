@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    SSMIncidentsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SSMIncidentsResponse(SSMIncidentsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

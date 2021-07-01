@@ -74,7 +74,8 @@ GetDistributionLatestCacheResetResponse::GetDistributionLatestCacheResetResponse
  */
 const GetDistributionLatestCacheResetRequest * GetDistributionLatestCacheResetResponse::request() const
 {
-    return static_cast<const GetDistributionLatestCacheResetRequest *>(LightsailResponse::request());
+    Q_D(const GetDistributionLatestCacheResetResponse);
+    return static_cast<const GetDistributionLatestCacheResetRequest *>(d->request);
 }
 
 /*!

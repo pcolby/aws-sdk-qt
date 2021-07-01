@@ -98,7 +98,8 @@ ListDocumentVersionsResponse::ListDocumentVersionsResponse(
  */
 const ListDocumentVersionsRequest * ListDocumentVersionsResponse::request() const
 {
-    return static_cast<const ListDocumentVersionsRequest *>(SsmResponse::request());
+    Q_D(const ListDocumentVersionsResponse);
+    return static_cast<const ListDocumentVersionsRequest *>(d->request);
 }
 
 /*!

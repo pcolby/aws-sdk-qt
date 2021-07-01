@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    IoTSiteWiseResponsePrivate * const d_ptr; ///< Internal d-pointer.
     IoTSiteWiseResponse(IoTSiteWiseResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

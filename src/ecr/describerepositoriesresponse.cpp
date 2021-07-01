@@ -62,7 +62,8 @@ DescribeRepositoriesResponse::DescribeRepositoriesResponse(
  */
 const DescribeRepositoriesRequest * DescribeRepositoriesResponse::request() const
 {
-    return static_cast<const DescribeRepositoriesRequest *>(EcrResponse::request());
+    Q_D(const DescribeRepositoriesResponse);
+    return static_cast<const DescribeRepositoriesRequest *>(d->request);
 }
 
 /*!

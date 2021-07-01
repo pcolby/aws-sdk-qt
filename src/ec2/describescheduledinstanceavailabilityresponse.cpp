@@ -87,7 +87,8 @@ DescribeScheduledInstanceAvailabilityResponse::DescribeScheduledInstanceAvailabi
  */
 const DescribeScheduledInstanceAvailabilityRequest * DescribeScheduledInstanceAvailabilityResponse::request() const
 {
-    return static_cast<const DescribeScheduledInstanceAvailabilityRequest *>(Ec2Response::request());
+    Q_D(const DescribeScheduledInstanceAvailabilityResponse);
+    return static_cast<const DescribeScheduledInstanceAvailabilityRequest *>(d->request);
 }
 
 /*!

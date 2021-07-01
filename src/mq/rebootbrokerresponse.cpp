@@ -57,7 +57,8 @@ RebootBrokerResponse::RebootBrokerResponse(
  */
 const RebootBrokerRequest * RebootBrokerResponse::request() const
 {
-    return static_cast<const RebootBrokerRequest *>(MqResponse::request());
+    Q_D(const RebootBrokerResponse);
+    return static_cast<const RebootBrokerRequest *>(d->request);
 }
 
 /*!

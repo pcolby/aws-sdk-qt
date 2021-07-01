@@ -56,7 +56,8 @@ ListJourneysResponse::ListJourneysResponse(
  */
 const ListJourneysRequest * ListJourneysResponse::request() const
 {
-    return static_cast<const ListJourneysRequest *>(PinpointResponse::request());
+    Q_D(const ListJourneysResponse);
+    return static_cast<const ListJourneysRequest *>(d->request);
 }
 
 /*!

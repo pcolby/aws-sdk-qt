@@ -64,7 +64,8 @@ ExportAutoScalingGroupRecommendationsResponse::ExportAutoScalingGroupRecommendat
  */
 const ExportAutoScalingGroupRecommendationsRequest * ExportAutoScalingGroupRecommendationsResponse::request() const
 {
-    return static_cast<const ExportAutoScalingGroupRecommendationsRequest *>(ComputeOptimizerResponse::request());
+    Q_D(const ExportAutoScalingGroupRecommendationsResponse);
+    return static_cast<const ExportAutoScalingGroupRecommendationsRequest *>(d->request);
 }
 
 /*!

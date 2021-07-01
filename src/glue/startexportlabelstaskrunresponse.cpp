@@ -58,7 +58,8 @@ StartExportLabelsTaskRunResponse::StartExportLabelsTaskRunResponse(
  */
 const StartExportLabelsTaskRunRequest * StartExportLabelsTaskRunResponse::request() const
 {
-    return static_cast<const StartExportLabelsTaskRunRequest *>(GlueResponse::request());
+    Q_D(const StartExportLabelsTaskRunResponse);
+    return static_cast<const StartExportLabelsTaskRunRequest *>(d->request);
 }
 
 /*!

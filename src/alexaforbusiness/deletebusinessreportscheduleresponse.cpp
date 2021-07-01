@@ -62,7 +62,8 @@ DeleteBusinessReportScheduleResponse::DeleteBusinessReportScheduleResponse(
  */
 const DeleteBusinessReportScheduleRequest * DeleteBusinessReportScheduleResponse::request() const
 {
-    return static_cast<const DeleteBusinessReportScheduleRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const DeleteBusinessReportScheduleResponse);
+    return static_cast<const DeleteBusinessReportScheduleRequest *>(d->request);
 }
 
 /*!

@@ -83,7 +83,8 @@ DescribeManagedEndpointResponse::DescribeManagedEndpointResponse(
  */
 const DescribeManagedEndpointRequest * DescribeManagedEndpointResponse::request() const
 {
-    return static_cast<const DescribeManagedEndpointRequest *>(EMRContainersResponse::request());
+    Q_D(const DescribeManagedEndpointResponse);
+    return static_cast<const DescribeManagedEndpointRequest *>(d->request);
 }
 
 /*!

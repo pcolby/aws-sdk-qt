@@ -132,12 +132,6 @@ public slots:
     UpdateTagsForDomainResponse * updateTagsForDomain(const UpdateTagsForDomainRequest &request);
     ViewBillingResponse * viewBilling(const ViewBillingRequest &request);
 
-protected:
-    /// @cond internal
-    Route53DomainsClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit Route53DomainsClient(Route53DomainsClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(Route53DomainsClient)
     Q_DISABLE_COPY(Route53DomainsClient)

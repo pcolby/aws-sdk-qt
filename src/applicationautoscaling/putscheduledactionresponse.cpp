@@ -137,7 +137,8 @@ PutScheduledActionResponse::PutScheduledActionResponse(
  */
 const PutScheduledActionRequest * PutScheduledActionResponse::request() const
 {
-    return static_cast<const PutScheduledActionRequest *>(ApplicationAutoScalingResponse::request());
+    Q_D(const PutScheduledActionResponse);
+    return static_cast<const PutScheduledActionRequest *>(d->request);
 }
 
 /*!

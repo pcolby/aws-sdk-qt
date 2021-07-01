@@ -68,7 +68,8 @@ DescribeLoadBalancerTargetGroupsResponse::DescribeLoadBalancerTargetGroupsRespon
  */
 const DescribeLoadBalancerTargetGroupsRequest * DescribeLoadBalancerTargetGroupsResponse::request() const
 {
-    return static_cast<const DescribeLoadBalancerTargetGroupsRequest *>(AutoScalingResponse::request());
+    Q_D(const DescribeLoadBalancerTargetGroupsResponse);
+    return static_cast<const DescribeLoadBalancerTargetGroupsRequest *>(d->request);
 }
 
 /*!

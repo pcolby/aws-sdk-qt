@@ -37,7 +37,7 @@ namespace ComputeOptimizer {
  * Constructs a ComputeOptimizerResponse object with parent \a parent.
  */
 ComputeOptimizerResponse::ComputeOptimizerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ComputeOptimizerResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ComputeOptimizerResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ComputeOptimizerResponse::ComputeOptimizerResponse(QObject * const parent)
  * implementation that inherits from ComputeOptimizerResponsePrivate.
  */
 ComputeOptimizerResponse::ComputeOptimizerResponse(ComputeOptimizerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ComputeOptimizerResponse::parseFailure(QIODevice &response)
  * Constructs a ComputeOptimizerResponsePrivate object with public implementation \a q.
  */
 ComputeOptimizerResponsePrivate::ComputeOptimizerResponsePrivate(
-    ComputeOptimizerResponse * const q) : q_ptr(q)
+    ComputeOptimizerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

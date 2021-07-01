@@ -89,7 +89,8 @@ UpdatePrimaryEmailAddressResponse::UpdatePrimaryEmailAddressResponse(
  */
 const UpdatePrimaryEmailAddressRequest * UpdatePrimaryEmailAddressResponse::request() const
 {
-    return static_cast<const UpdatePrimaryEmailAddressRequest *>(WorkMailResponse::request());
+    Q_D(const UpdatePrimaryEmailAddressResponse);
+    return static_cast<const UpdatePrimaryEmailAddressRequest *>(d->request);
 }
 
 /*!

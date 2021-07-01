@@ -73,7 +73,8 @@ UpdateDataCatalogResponse::UpdateDataCatalogResponse(
  */
 const UpdateDataCatalogRequest * UpdateDataCatalogResponse::request() const
 {
-    return static_cast<const UpdateDataCatalogRequest *>(AthenaResponse::request());
+    Q_D(const UpdateDataCatalogResponse);
+    return static_cast<const UpdateDataCatalogRequest *>(d->request);
 }
 
 /*!

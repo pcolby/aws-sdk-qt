@@ -55,7 +55,8 @@ ListObjectsV2Response::ListObjectsV2Response(
  */
 const ListObjectsV2Request * ListObjectsV2Response::request() const
 {
-    return static_cast<const ListObjectsV2Request *>(S3Response::request());
+    Q_D(const ListObjectsV2Response);
+    return static_cast<const ListObjectsV2Request *>(d->request);
 }
 
 /*!

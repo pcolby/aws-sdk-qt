@@ -60,7 +60,8 @@ CreateNamespaceResponse::CreateNamespaceResponse(
  */
 const CreateNamespaceRequest * CreateNamespaceResponse::request() const
 {
-    return static_cast<const CreateNamespaceRequest *>(QuickSightResponse::request());
+    Q_D(const CreateNamespaceResponse);
+    return static_cast<const CreateNamespaceRequest *>(d->request);
 }
 
 /*!

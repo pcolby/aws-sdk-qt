@@ -60,7 +60,8 @@ GetGatewayResponsesResponse::GetGatewayResponsesResponse(
  */
 const GetGatewayResponsesRequest * GetGatewayResponsesResponse::request() const
 {
-    return static_cast<const GetGatewayResponsesRequest *>(APIGatewayResponse::request());
+    Q_D(const GetGatewayResponsesResponse);
+    return static_cast<const GetGatewayResponsesRequest *>(d->request);
 }
 
 /*!

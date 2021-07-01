@@ -94,7 +94,8 @@ DeleteResolverRuleResponse::DeleteResolverRuleResponse(
  */
 const DeleteResolverRuleRequest * DeleteResolverRuleResponse::request() const
 {
-    return static_cast<const DeleteResolverRuleRequest *>(Route53ResolverResponse::request());
+    Q_D(const DeleteResolverRuleResponse);
+    return static_cast<const DeleteResolverRuleRequest *>(d->request);
 }
 
 /*!

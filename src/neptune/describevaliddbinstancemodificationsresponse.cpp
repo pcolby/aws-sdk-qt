@@ -72,7 +72,8 @@ DescribeValidDBInstanceModificationsResponse::DescribeValidDBInstanceModificatio
  */
 const DescribeValidDBInstanceModificationsRequest * DescribeValidDBInstanceModificationsResponse::request() const
 {
-    return static_cast<const DescribeValidDBInstanceModificationsRequest *>(NeptuneResponse::request());
+    Q_D(const DescribeValidDBInstanceModificationsResponse);
+    return static_cast<const DescribeValidDBInstanceModificationsRequest *>(d->request);
 }
 
 /*!

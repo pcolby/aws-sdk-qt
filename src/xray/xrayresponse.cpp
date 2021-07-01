@@ -37,7 +37,7 @@ namespace XRay {
  * Constructs a XRayResponse object with parent \a parent.
  */
 XRayResponse::XRayResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new XRayResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new XRayResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ XRayResponse::XRayResponse(QObject * const parent)
  * implementation that inherits from XRayResponsePrivate.
  */
 XRayResponse::XRayResponse(XRayResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void XRayResponse::parseFailure(QIODevice &response)
  * Constructs a XRayResponsePrivate object with public implementation \a q.
  */
 XRayResponsePrivate::XRayResponsePrivate(
-    XRayResponse * const q) : q_ptr(q)
+    XRayResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

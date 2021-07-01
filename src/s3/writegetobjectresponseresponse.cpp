@@ -55,7 +55,8 @@ WriteGetObjectResponseResponse::WriteGetObjectResponseResponse(
  */
 const WriteGetObjectResponseRequest * WriteGetObjectResponseResponse::request() const
 {
-    return static_cast<const WriteGetObjectResponseRequest *>(S3Response::request());
+    Q_D(const WriteGetObjectResponseResponse);
+    return static_cast<const WriteGetObjectResponseRequest *>(d->request);
 }
 
 /*!

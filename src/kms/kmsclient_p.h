@@ -20,20 +20,19 @@
 #ifndef QTAWS_KMSCLIENT_P_H
 #define QTAWS_KMSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace KMS {
 
 class KmsClient;
 
-class KmsClientPrivate {
+class KmsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit KmsClientPrivate(KmsClient * const q);
-
-protected:
-    KmsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(KmsClient)

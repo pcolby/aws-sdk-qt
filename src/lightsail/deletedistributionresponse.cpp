@@ -74,7 +74,8 @@ DeleteDistributionResponse::DeleteDistributionResponse(
  */
 const DeleteDistributionRequest * DeleteDistributionResponse::request() const
 {
-    return static_cast<const DeleteDistributionRequest *>(LightsailResponse::request());
+    Q_D(const DeleteDistributionResponse);
+    return static_cast<const DeleteDistributionRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ DeleteVpcEndpointConnectionNotificationsResponse::DeleteVpcEndpointConnectionNot
  */
 const DeleteVpcEndpointConnectionNotificationsRequest * DeleteVpcEndpointConnectionNotificationsResponse::request() const
 {
-    return static_cast<const DeleteVpcEndpointConnectionNotificationsRequest *>(Ec2Response::request());
+    Q_D(const DeleteVpcEndpointConnectionNotificationsResponse);
+    return static_cast<const DeleteVpcEndpointConnectionNotificationsRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ DeletePermissionSetResponse::DeletePermissionSetResponse(
  */
 const DeletePermissionSetRequest * DeletePermissionSetResponse::request() const
 {
-    return static_cast<const DeletePermissionSetRequest *>(SSOAdminResponse::request());
+    Q_D(const DeletePermissionSetResponse);
+    return static_cast<const DeletePermissionSetRequest *>(d->request);
 }
 
 /*!

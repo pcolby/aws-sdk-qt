@@ -126,7 +126,8 @@ DeletePermissionPolicyResponse::DeletePermissionPolicyResponse(
  */
 const DeletePermissionPolicyRequest * DeletePermissionPolicyResponse::request() const
 {
-    return static_cast<const DeletePermissionPolicyRequest *>(Wafv2Response::request());
+    Q_D(const DeletePermissionPolicyResponse);
+    return static_cast<const DeletePermissionPolicyRequest *>(d->request);
 }
 
 /*!

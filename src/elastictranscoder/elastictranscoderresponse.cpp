@@ -37,7 +37,7 @@ namespace ElasticTranscoder {
  * Constructs a ElasticTranscoderResponse object with parent \a parent.
  */
 ElasticTranscoderResponse::ElasticTranscoderResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ElasticTranscoderResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ElasticTranscoderResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ElasticTranscoderResponse::ElasticTranscoderResponse(QObject * const parent)
  * implementation that inherits from ElasticTranscoderResponsePrivate.
  */
 ElasticTranscoderResponse::ElasticTranscoderResponse(ElasticTranscoderResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ElasticTranscoderResponse::parseFailure(QIODevice &response)
  * Constructs a ElasticTranscoderResponsePrivate object with public implementation \a q.
  */
 ElasticTranscoderResponsePrivate::ElasticTranscoderResponsePrivate(
-    ElasticTranscoderResponse * const q) : q_ptr(q)
+    ElasticTranscoderResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

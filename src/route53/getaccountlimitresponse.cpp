@@ -56,7 +56,8 @@ GetAccountLimitResponse::GetAccountLimitResponse(
  */
 const GetAccountLimitRequest * GetAccountLimitResponse::request() const
 {
-    return static_cast<const GetAccountLimitRequest *>(Route53Response::request());
+    Q_D(const GetAccountLimitResponse);
+    return static_cast<const GetAccountLimitRequest *>(d->request);
 }
 
 /*!

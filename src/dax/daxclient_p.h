@@ -20,20 +20,19 @@
 #ifndef QTAWS_DAXCLIENT_P_H
 #define QTAWS_DAXCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace DAX {
 
 class DaxClient;
 
-class DaxClientPrivate {
+class DaxClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit DaxClientPrivate(DaxClient * const q);
-
-protected:
-    DaxClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DaxClient)

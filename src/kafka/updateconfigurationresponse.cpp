@@ -56,7 +56,8 @@ UpdateConfigurationResponse::UpdateConfigurationResponse(
  */
 const UpdateConfigurationRequest * UpdateConfigurationResponse::request() const
 {
-    return static_cast<const UpdateConfigurationRequest *>(KafkaResponse::request());
+    Q_D(const UpdateConfigurationResponse);
+    return static_cast<const UpdateConfigurationRequest *>(d->request);
 }
 
 /*!

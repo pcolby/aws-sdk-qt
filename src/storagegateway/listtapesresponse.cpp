@@ -124,7 +124,8 @@ ListTapesResponse::ListTapesResponse(
  */
 const ListTapesRequest * ListTapesResponse::request() const
 {
-    return static_cast<const ListTapesRequest *>(StorageGatewayResponse::request());
+    Q_D(const ListTapesResponse);
+    return static_cast<const ListTapesRequest *>(d->request);
 }
 
 /*!

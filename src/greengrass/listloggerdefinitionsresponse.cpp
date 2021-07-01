@@ -58,7 +58,8 @@ ListLoggerDefinitionsResponse::ListLoggerDefinitionsResponse(
  */
 const ListLoggerDefinitionsRequest * ListLoggerDefinitionsResponse::request() const
 {
-    return static_cast<const ListLoggerDefinitionsRequest *>(GreengrassResponse::request());
+    Q_D(const ListLoggerDefinitionsResponse);
+    return static_cast<const ListLoggerDefinitionsRequest *>(d->request);
 }
 
 /*!

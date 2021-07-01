@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    AmplifyResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AmplifyResponse(AmplifyResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

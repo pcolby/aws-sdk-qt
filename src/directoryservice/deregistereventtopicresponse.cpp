@@ -69,7 +69,8 @@ DeregisterEventTopicResponse::DeregisterEventTopicResponse(
  */
 const DeregisterEventTopicRequest * DeregisterEventTopicResponse::request() const
 {
-    return static_cast<const DeregisterEventTopicRequest *>(DirectoryServiceResponse::request());
+    Q_D(const DeregisterEventTopicResponse);
+    return static_cast<const DeregisterEventTopicRequest *>(d->request);
 }
 
 /*!

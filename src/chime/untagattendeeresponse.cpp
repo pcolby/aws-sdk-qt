@@ -98,7 +98,8 @@ UntagAttendeeResponse::UntagAttendeeResponse(
  */
 const UntagAttendeeRequest * UntagAttendeeResponse::request() const
 {
-    return static_cast<const UntagAttendeeRequest *>(ChimeResponse::request());
+    Q_D(const UntagAttendeeResponse);
+    return static_cast<const UntagAttendeeRequest *>(d->request);
 }
 
 /*!

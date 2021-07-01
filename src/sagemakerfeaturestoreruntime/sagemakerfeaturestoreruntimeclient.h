@@ -60,12 +60,6 @@ public slots:
     GetRecordResponse * getRecord(const GetRecordRequest &request);
     PutRecordResponse * putRecord(const PutRecordRequest &request);
 
-protected:
-    /// @cond internal
-    SageMakerFeatureStoreRuntimeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SageMakerFeatureStoreRuntimeClient(SageMakerFeatureStoreRuntimeClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SageMakerFeatureStoreRuntimeClient)
     Q_DISABLE_COPY(SageMakerFeatureStoreRuntimeClient)

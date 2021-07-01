@@ -20,12 +20,15 @@
 #ifndef QTAWS_LAMBDAREQUEST_P_H
 #define QTAWS_LAMBDAREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "lambdarequest.h"
+
 namespace QtAws {
 namespace Lambda {
 
 class LambdaRequest;
 
-class LambdaRequestPrivate {
+class LambdaRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     LambdaRequest::Action action; ///< Lambda action to be performed.
@@ -36,9 +39,6 @@ public:
     LambdaRequestPrivate(const LambdaRequestPrivate &other, LambdaRequest * const q);
 
     static QString toString(const LambdaRequest::Action &action);
-
-protected:
-    LambdaRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LambdaRequest)

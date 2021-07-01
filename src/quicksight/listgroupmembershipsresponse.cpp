@@ -60,7 +60,8 @@ ListGroupMembershipsResponse::ListGroupMembershipsResponse(
  */
 const ListGroupMembershipsRequest * ListGroupMembershipsResponse::request() const
 {
-    return static_cast<const ListGroupMembershipsRequest *>(QuickSightResponse::request());
+    Q_D(const ListGroupMembershipsResponse);
+    return static_cast<const ListGroupMembershipsRequest *>(d->request);
 }
 
 /*!

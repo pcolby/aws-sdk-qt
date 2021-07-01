@@ -55,7 +55,8 @@ GetObjectTorrentResponse::GetObjectTorrentResponse(
  */
 const GetObjectTorrentRequest * GetObjectTorrentResponse::request() const
 {
-    return static_cast<const GetObjectTorrentRequest *>(S3Response::request());
+    Q_D(const GetObjectTorrentResponse);
+    return static_cast<const GetObjectTorrentRequest *>(d->request);
 }
 
 /*!

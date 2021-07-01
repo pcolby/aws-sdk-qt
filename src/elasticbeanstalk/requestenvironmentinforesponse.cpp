@@ -77,7 +77,8 @@ RequestEnvironmentInfoResponse::RequestEnvironmentInfoResponse(
  */
 const RequestEnvironmentInfoRequest * RequestEnvironmentInfoResponse::request() const
 {
-    return static_cast<const RequestEnvironmentInfoRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const RequestEnvironmentInfoResponse);
+    return static_cast<const RequestEnvironmentInfoRequest *>(d->request);
 }
 
 /*!

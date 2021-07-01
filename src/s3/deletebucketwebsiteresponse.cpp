@@ -55,7 +55,8 @@ DeleteBucketWebsiteResponse::DeleteBucketWebsiteResponse(
  */
 const DeleteBucketWebsiteRequest * DeleteBucketWebsiteResponse::request() const
 {
-    return static_cast<const DeleteBucketWebsiteRequest *>(S3Response::request());
+    Q_D(const DeleteBucketWebsiteResponse);
+    return static_cast<const DeleteBucketWebsiteRequest *>(d->request);
 }
 
 /*!

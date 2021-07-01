@@ -93,12 +93,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    DetectiveClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DetectiveClient(DetectiveClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(DetectiveClient)
     Q_DISABLE_COPY(DetectiveClient)

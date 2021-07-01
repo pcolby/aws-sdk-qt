@@ -66,7 +66,8 @@ AdminUserGlobalSignOutResponse::AdminUserGlobalSignOutResponse(
  */
 const AdminUserGlobalSignOutRequest * AdminUserGlobalSignOutResponse::request() const
 {
-    return static_cast<const AdminUserGlobalSignOutRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const AdminUserGlobalSignOutResponse);
+    return static_cast<const AdminUserGlobalSignOutRequest *>(d->request);
 }
 
 /*!

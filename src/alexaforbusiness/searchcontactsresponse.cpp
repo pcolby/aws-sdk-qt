@@ -62,7 +62,8 @@ SearchContactsResponse::SearchContactsResponse(
  */
 const SearchContactsRequest * SearchContactsResponse::request() const
 {
-    return static_cast<const SearchContactsRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const SearchContactsResponse);
+    return static_cast<const SearchContactsRequest *>(d->request);
 }
 
 /*!

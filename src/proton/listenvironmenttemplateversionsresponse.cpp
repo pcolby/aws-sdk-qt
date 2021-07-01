@@ -177,7 +177,8 @@ ListEnvironmentTemplateVersionsResponse::ListEnvironmentTemplateVersionsResponse
  */
 const ListEnvironmentTemplateVersionsRequest * ListEnvironmentTemplateVersionsResponse::request() const
 {
-    return static_cast<const ListEnvironmentTemplateVersionsRequest *>(ProtonResponse::request());
+    Q_D(const ListEnvironmentTemplateVersionsResponse);
+    return static_cast<const ListEnvironmentTemplateVersionsRequest *>(d->request);
 }
 
 /*!

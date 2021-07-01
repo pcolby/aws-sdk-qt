@@ -62,7 +62,8 @@ CreateGatewayGroupResponse::CreateGatewayGroupResponse(
  */
 const CreateGatewayGroupRequest * CreateGatewayGroupResponse::request() const
 {
-    return static_cast<const CreateGatewayGroupRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const CreateGatewayGroupResponse);
+    return static_cast<const CreateGatewayGroupRequest *>(d->request);
 }
 
 /*!

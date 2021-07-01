@@ -100,7 +100,8 @@ DeleteFlowResponse::DeleteFlowResponse(
  */
 const DeleteFlowRequest * DeleteFlowResponse::request() const
 {
-    return static_cast<const DeleteFlowRequest *>(AppflowResponse::request());
+    Q_D(const DeleteFlowResponse);
+    return static_cast<const DeleteFlowRequest *>(d->request);
 }
 
 /*!

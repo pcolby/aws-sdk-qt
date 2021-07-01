@@ -251,16 +251,16 @@ ConfigServiceClient::ConfigServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-11-12"),
-    QStringLiteral("config"),
-    QStringLiteral("AWS Config"),
-    QStringLiteral("config"),
-    parent), d_ptr(new ConfigServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ConfigServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ConfigServiceClient);
+    d->apiVersion = QStringLiteral("2014-11-12");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("config");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Config");
+    d->serviceName = QStringLiteral("config");
 }
 
 /*!
@@ -279,16 +279,16 @@ ConfigServiceClient::ConfigServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-11-12"),
-    QStringLiteral("config"),
-    QStringLiteral("AWS Config"),
-    QStringLiteral("config"),
-    parent), d_ptr(new ConfigServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ConfigServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ConfigServiceClient);
+    d->apiVersion = QStringLiteral("2014-11-12");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("config");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Config");
+    d->serviceName = QStringLiteral("config");
 }
 
 /*!
@@ -2101,9 +2101,10 @@ UntagResourceResponse * ConfigServiceClient::untagResource(const UntagResourceRe
 /*!
  * Constructs a ConfigServiceClientPrivate object with public implementation \a q.
  */
-ConfigServiceClientPrivate::ConfigServiceClientPrivate(ConfigServiceClient * const q) : q_ptr(q)
+ConfigServiceClientPrivate::ConfigServiceClientPrivate(ConfigServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ConfigService

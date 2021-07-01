@@ -98,7 +98,8 @@ DeregisterOrganizationAdminAccountResponse::DeregisterOrganizationAdminAccountRe
  */
 const DeregisterOrganizationAdminAccountRequest * DeregisterOrganizationAdminAccountResponse::request() const
 {
-    return static_cast<const DeregisterOrganizationAdminAccountRequest *>(AuditManagerResponse::request());
+    Q_D(const DeregisterOrganizationAdminAccountResponse);
+    return static_cast<const DeregisterOrganizationAdminAccountRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ GetLinkAssociationsResponse::GetLinkAssociationsResponse(
  */
 const GetLinkAssociationsRequest * GetLinkAssociationsResponse::request() const
 {
-    return static_cast<const GetLinkAssociationsRequest *>(NetworkManagerResponse::request());
+    Q_D(const GetLinkAssociationsResponse);
+    return static_cast<const GetLinkAssociationsRequest *>(d->request);
 }
 
 /*!

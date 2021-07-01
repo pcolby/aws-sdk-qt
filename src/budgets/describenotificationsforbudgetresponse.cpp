@@ -116,7 +116,8 @@ DescribeNotificationsForBudgetResponse::DescribeNotificationsForBudgetResponse(
  */
 const DescribeNotificationsForBudgetRequest * DescribeNotificationsForBudgetResponse::request() const
 {
-    return static_cast<const DescribeNotificationsForBudgetRequest *>(BudgetsResponse::request());
+    Q_D(const DescribeNotificationsForBudgetResponse);
+    return static_cast<const DescribeNotificationsForBudgetRequest *>(d->request);
 }
 
 /*!

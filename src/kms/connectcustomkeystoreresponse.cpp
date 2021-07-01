@@ -154,7 +154,8 @@ ConnectCustomKeyStoreResponse::ConnectCustomKeyStoreResponse(
  */
 const ConnectCustomKeyStoreRequest * ConnectCustomKeyStoreResponse::request() const
 {
-    return static_cast<const ConnectCustomKeyStoreRequest *>(KmsResponse::request());
+    Q_D(const ConnectCustomKeyStoreResponse);
+    return static_cast<const ConnectCustomKeyStoreRequest *>(d->request);
 }
 
 /*!

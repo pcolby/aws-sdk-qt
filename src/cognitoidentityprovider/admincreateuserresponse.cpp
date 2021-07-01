@@ -66,7 +66,8 @@ AdminCreateUserResponse::AdminCreateUserResponse(
  */
 const AdminCreateUserRequest * AdminCreateUserResponse::request() const
 {
-    return static_cast<const AdminCreateUserRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const AdminCreateUserResponse);
+    return static_cast<const AdminCreateUserRequest *>(d->request);
 }
 
 /*!

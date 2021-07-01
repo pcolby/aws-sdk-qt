@@ -140,7 +140,8 @@ UpdateHostResponse::UpdateHostResponse(
  */
 const UpdateHostRequest * UpdateHostResponse::request() const
 {
-    return static_cast<const UpdateHostRequest *>(CodeStarconnectionsResponse::request());
+    Q_D(const UpdateHostResponse);
+    return static_cast<const UpdateHostRequest *>(d->request);
 }
 
 /*!

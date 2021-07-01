@@ -56,7 +56,8 @@ DetectProtectiveEquipmentResponse::DetectProtectiveEquipmentResponse(
  */
 const DetectProtectiveEquipmentRequest * DetectProtectiveEquipmentResponse::request() const
 {
-    return static_cast<const DetectProtectiveEquipmentRequest *>(RekognitionResponse::request());
+    Q_D(const DetectProtectiveEquipmentResponse);
+    return static_cast<const DetectProtectiveEquipmentRequest *>(d->request);
 }
 
 /*!

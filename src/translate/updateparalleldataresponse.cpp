@@ -56,7 +56,8 @@ UpdateParallelDataResponse::UpdateParallelDataResponse(
  */
 const UpdateParallelDataRequest * UpdateParallelDataResponse::request() const
 {
-    return static_cast<const UpdateParallelDataRequest *>(TranslateResponse::request());
+    Q_D(const UpdateParallelDataResponse);
+    return static_cast<const UpdateParallelDataRequest *>(d->request);
 }
 
 /*!

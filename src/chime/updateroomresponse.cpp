@@ -98,7 +98,8 @@ UpdateRoomResponse::UpdateRoomResponse(
  */
 const UpdateRoomRequest * UpdateRoomResponse::request() const
 {
-    return static_cast<const UpdateRoomRequest *>(ChimeResponse::request());
+    Q_D(const UpdateRoomResponse);
+    return static_cast<const UpdateRoomRequest *>(d->request);
 }
 
 /*!

@@ -135,8 +135,7 @@ public:
 
 protected:
     /// @cond internal
-    DeviceFarmRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DeviceFarmRequest(DeviceFarmRequestPrivate * const d);
+    DeviceFarmRequest(DeviceFarmRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -147,12 +147,6 @@ public slots:
     UpdateEnvironmentResponse * updateEnvironment(const UpdateEnvironmentRequest &request);
     ValidateConfigurationResponse * validateConfiguration(const ValidateConfigurationRequest &request);
 
-protected:
-    /// @cond internal
-    AppConfigClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AppConfigClient(AppConfigClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(AppConfigClient)
     Q_DISABLE_COPY(AppConfigClient)

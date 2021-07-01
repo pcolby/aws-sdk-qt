@@ -98,7 +98,8 @@ DisassociateAssessmentReportEvidenceFolderResponse::DisassociateAssessmentReport
  */
 const DisassociateAssessmentReportEvidenceFolderRequest * DisassociateAssessmentReportEvidenceFolderResponse::request() const
 {
-    return static_cast<const DisassociateAssessmentReportEvidenceFolderRequest *>(AuditManagerResponse::request());
+    Q_D(const DisassociateAssessmentReportEvidenceFolderResponse);
+    return static_cast<const DisassociateAssessmentReportEvidenceFolderRequest *>(d->request);
 }
 
 /*!

@@ -141,12 +141,6 @@ public slots:
     UpdateInstanceAccessControlAttributeConfigurationResponse * updateInstanceAccessControlAttributeConfiguration(const UpdateInstanceAccessControlAttributeConfigurationRequest &request);
     UpdatePermissionSetResponse * updatePermissionSet(const UpdatePermissionSetRequest &request);
 
-protected:
-    /// @cond internal
-    SSOAdminClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SSOAdminClient(SSOAdminClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SSOAdminClient)
     Q_DISABLE_COPY(SSOAdminClient)

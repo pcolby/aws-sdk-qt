@@ -83,7 +83,8 @@ CreateVirtualClusterResponse::CreateVirtualClusterResponse(
  */
 const CreateVirtualClusterRequest * CreateVirtualClusterResponse::request() const
 {
-    return static_cast<const CreateVirtualClusterRequest *>(EMRContainersResponse::request());
+    Q_D(const CreateVirtualClusterResponse);
+    return static_cast<const CreateVirtualClusterRequest *>(d->request);
 }
 
 /*!

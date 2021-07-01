@@ -37,7 +37,7 @@ namespace CodeGuruReviewer {
  * Constructs a CodeGuruReviewerResponse object with parent \a parent.
  */
 CodeGuruReviewerResponse::CodeGuruReviewerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CodeGuruReviewerResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CodeGuruReviewerResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CodeGuruReviewerResponse::CodeGuruReviewerResponse(QObject * const parent)
  * implementation that inherits from CodeGuruReviewerResponsePrivate.
  */
 CodeGuruReviewerResponse::CodeGuruReviewerResponse(CodeGuruReviewerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CodeGuruReviewerResponse::parseFailure(QIODevice &response)
  * Constructs a CodeGuruReviewerResponsePrivate object with public implementation \a q.
  */
 CodeGuruReviewerResponsePrivate::CodeGuruReviewerResponsePrivate(
-    CodeGuruReviewerResponse * const q) : q_ptr(q)
+    CodeGuruReviewerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

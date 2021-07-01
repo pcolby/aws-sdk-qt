@@ -72,7 +72,8 @@ CreateElasticsearchDomainResponse::CreateElasticsearchDomainResponse(
  */
 const CreateElasticsearchDomainRequest * CreateElasticsearchDomainResponse::request() const
 {
-    return static_cast<const CreateElasticsearchDomainRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const CreateElasticsearchDomainResponse);
+    return static_cast<const CreateElasticsearchDomainRequest *>(d->request);
 }
 
 /*!

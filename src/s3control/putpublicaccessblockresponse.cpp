@@ -56,7 +56,8 @@ PutPublicAccessBlockResponse::PutPublicAccessBlockResponse(
  */
 const PutPublicAccessBlockRequest * PutPublicAccessBlockResponse::request() const
 {
-    return static_cast<const PutPublicAccessBlockRequest *>(S3ControlResponse::request());
+    Q_D(const PutPublicAccessBlockResponse);
+    return static_cast<const PutPublicAccessBlockRequest *>(d->request);
 }
 
 /*!

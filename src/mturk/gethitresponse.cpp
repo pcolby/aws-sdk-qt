@@ -55,7 +55,8 @@ GetHITResponse::GetHITResponse(
  */
 const GetHITRequest * GetHITResponse::request() const
 {
-    return static_cast<const GetHITRequest *>(MTurkResponse::request());
+    Q_D(const GetHITResponse);
+    return static_cast<const GetHITRequest *>(d->request);
 }
 
 /*!

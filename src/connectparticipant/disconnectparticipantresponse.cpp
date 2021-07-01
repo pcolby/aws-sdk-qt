@@ -65,7 +65,8 @@ DisconnectParticipantResponse::DisconnectParticipantResponse(
  */
 const DisconnectParticipantRequest * DisconnectParticipantResponse::request() const
 {
-    return static_cast<const DisconnectParticipantRequest *>(ConnectParticipantResponse::request());
+    Q_D(const DisconnectParticipantResponse);
+    return static_cast<const DisconnectParticipantRequest *>(d->request);
 }
 
 /*!

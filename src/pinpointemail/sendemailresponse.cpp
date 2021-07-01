@@ -92,7 +92,8 @@ SendEmailResponse::SendEmailResponse(
  */
 const SendEmailRequest * SendEmailResponse::request() const
 {
-    return static_cast<const SendEmailRequest *>(PinpointEmailResponse::request());
+    Q_D(const SendEmailResponse);
+    return static_cast<const SendEmailRequest *>(d->request);
 }
 
 /*!

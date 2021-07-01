@@ -72,7 +72,8 @@ DeleteAccountSettingResponse::DeleteAccountSettingResponse(
  */
 const DeleteAccountSettingRequest * DeleteAccountSettingResponse::request() const
 {
-    return static_cast<const DeleteAccountSettingRequest *>(EcsResponse::request());
+    Q_D(const DeleteAccountSettingResponse);
+    return static_cast<const DeleteAccountSettingRequest *>(d->request);
 }
 
 /*!

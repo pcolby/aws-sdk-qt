@@ -82,7 +82,8 @@ EnableTopicRuleResponse::EnableTopicRuleResponse(
  */
 const EnableTopicRuleRequest * EnableTopicRuleResponse::request() const
 {
-    return static_cast<const EnableTopicRuleRequest *>(IoTResponse::request());
+    Q_D(const EnableTopicRuleResponse);
+    return static_cast<const EnableTopicRuleRequest *>(d->request);
 }
 
 /*!

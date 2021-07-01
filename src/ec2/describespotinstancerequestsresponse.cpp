@@ -87,7 +87,8 @@ DescribeSpotInstanceRequestsResponse::DescribeSpotInstanceRequestsResponse(
  */
 const DescribeSpotInstanceRequestsRequest * DescribeSpotInstanceRequestsResponse::request() const
 {
-    return static_cast<const DescribeSpotInstanceRequestsRequest *>(Ec2Response::request());
+    Q_D(const DescribeSpotInstanceRequestsResponse);
+    return static_cast<const DescribeSpotInstanceRequestsRequest *>(d->request);
 }
 
 /*!

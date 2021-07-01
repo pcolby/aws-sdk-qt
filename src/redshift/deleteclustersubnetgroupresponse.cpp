@@ -85,7 +85,8 @@ DeleteClusterSubnetGroupResponse::DeleteClusterSubnetGroupResponse(
  */
 const DeleteClusterSubnetGroupRequest * DeleteClusterSubnetGroupResponse::request() const
 {
-    return static_cast<const DeleteClusterSubnetGroupRequest *>(RedshiftResponse::request());
+    Q_D(const DeleteClusterSubnetGroupResponse);
+    return static_cast<const DeleteClusterSubnetGroupRequest *>(d->request);
 }
 
 /*!

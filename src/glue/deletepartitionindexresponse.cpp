@@ -58,7 +58,8 @@ DeletePartitionIndexResponse::DeletePartitionIndexResponse(
  */
 const DeletePartitionIndexRequest * DeletePartitionIndexResponse::request() const
 {
-    return static_cast<const DeletePartitionIndexRequest *>(GlueResponse::request());
+    Q_D(const DeletePartitionIndexResponse);
+    return static_cast<const DeletePartitionIndexRequest *>(d->request);
 }
 
 /*!

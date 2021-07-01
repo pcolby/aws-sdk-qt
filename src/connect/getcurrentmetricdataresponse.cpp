@@ -79,7 +79,8 @@ GetCurrentMetricDataResponse::GetCurrentMetricDataResponse(
  */
 const GetCurrentMetricDataRequest * GetCurrentMetricDataResponse::request() const
 {
-    return static_cast<const GetCurrentMetricDataRequest *>(ConnectResponse::request());
+    Q_D(const GetCurrentMetricDataResponse);
+    return static_cast<const GetCurrentMetricDataRequest *>(d->request);
 }
 
 /*!

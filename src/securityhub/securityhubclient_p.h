@@ -20,20 +20,19 @@
 #ifndef QTAWS_SECURITYHUBCLIENT_P_H
 #define QTAWS_SECURITYHUBCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SecurityHub {
 
 class SecurityHubClient;
 
-class SecurityHubClientPrivate {
+class SecurityHubClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SecurityHubClientPrivate(SecurityHubClient * const q);
-
-protected:
-    SecurityHubClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SecurityHubClient)

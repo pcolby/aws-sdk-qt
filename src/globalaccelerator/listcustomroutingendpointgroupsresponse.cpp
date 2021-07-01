@@ -218,7 +218,8 @@ ListCustomRoutingEndpointGroupsResponse::ListCustomRoutingEndpointGroupsResponse
  */
 const ListCustomRoutingEndpointGroupsRequest * ListCustomRoutingEndpointGroupsResponse::request() const
 {
-    return static_cast<const ListCustomRoutingEndpointGroupsRequest *>(GlobalAcceleratorResponse::request());
+    Q_D(const ListCustomRoutingEndpointGroupsResponse);
+    return static_cast<const ListCustomRoutingEndpointGroupsRequest *>(d->request);
 }
 
 /*!

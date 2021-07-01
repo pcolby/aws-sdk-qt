@@ -98,7 +98,8 @@ DeletePatchBaselineResponse::DeletePatchBaselineResponse(
  */
 const DeletePatchBaselineRequest * DeletePatchBaselineResponse::request() const
 {
-    return static_cast<const DeletePatchBaselineRequest *>(SsmResponse::request());
+    Q_D(const DeletePatchBaselineResponse);
+    return static_cast<const DeletePatchBaselineRequest *>(d->request);
 }
 
 /*!

@@ -141,7 +141,8 @@ AddTagsToOnPremisesInstancesResponse::AddTagsToOnPremisesInstancesResponse(
  */
 const AddTagsToOnPremisesInstancesRequest * AddTagsToOnPremisesInstancesResponse::request() const
 {
-    return static_cast<const AddTagsToOnPremisesInstancesRequest *>(CodeDeployResponse::request());
+    Q_D(const AddTagsToOnPremisesInstancesResponse);
+    return static_cast<const AddTagsToOnPremisesInstancesRequest *>(d->request);
 }
 
 /*!

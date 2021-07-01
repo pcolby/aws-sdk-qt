@@ -141,7 +141,8 @@ DeleteGitHubAccountTokenResponse::DeleteGitHubAccountTokenResponse(
  */
 const DeleteGitHubAccountTokenRequest * DeleteGitHubAccountTokenResponse::request() const
 {
-    return static_cast<const DeleteGitHubAccountTokenRequest *>(CodeDeployResponse::request());
+    Q_D(const DeleteGitHubAccountTokenResponse);
+    return static_cast<const DeleteGitHubAccountTokenRequest *>(d->request);
 }
 
 /*!

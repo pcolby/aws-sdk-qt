@@ -70,7 +70,8 @@ CreateModelBiasJobDefinitionResponse::CreateModelBiasJobDefinitionResponse(
  */
 const CreateModelBiasJobDefinitionRequest * CreateModelBiasJobDefinitionResponse::request() const
 {
-    return static_cast<const CreateModelBiasJobDefinitionRequest *>(SageMakerResponse::request());
+    Q_D(const CreateModelBiasJobDefinitionResponse);
+    return static_cast<const CreateModelBiasJobDefinitionRequest *>(d->request);
 }
 
 /*!

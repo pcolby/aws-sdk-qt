@@ -115,7 +115,8 @@ RegisterGameServerResponse::RegisterGameServerResponse(
  */
 const RegisterGameServerRequest * RegisterGameServerResponse::request() const
 {
-    return static_cast<const RegisterGameServerRequest *>(GameLiftResponse::request());
+    Q_D(const RegisterGameServerResponse);
+    return static_cast<const RegisterGameServerRequest *>(d->request);
 }
 
 /*!

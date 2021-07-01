@@ -87,7 +87,8 @@ DeleteLocalGatewayRouteResponse::DeleteLocalGatewayRouteResponse(
  */
 const DeleteLocalGatewayRouteRequest * DeleteLocalGatewayRouteResponse::request() const
 {
-    return static_cast<const DeleteLocalGatewayRouteRequest *>(Ec2Response::request());
+    Q_D(const DeleteLocalGatewayRouteResponse);
+    return static_cast<const DeleteLocalGatewayRouteRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ DescribeTemplateResponse::DescribeTemplateResponse(
  */
 const DescribeTemplateRequest * DescribeTemplateResponse::request() const
 {
-    return static_cast<const DescribeTemplateRequest *>(QuickSightResponse::request());
+    Q_D(const DescribeTemplateResponse);
+    return static_cast<const DescribeTemplateRequest *>(d->request);
 }
 
 /*!

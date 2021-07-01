@@ -73,7 +73,8 @@ ListTableMetadataResponse::ListTableMetadataResponse(
  */
 const ListTableMetadataRequest * ListTableMetadataResponse::request() const
 {
-    return static_cast<const ListTableMetadataRequest *>(AthenaResponse::request());
+    Q_D(const ListTableMetadataResponse);
+    return static_cast<const ListTableMetadataRequest *>(d->request);
 }
 
 /*!

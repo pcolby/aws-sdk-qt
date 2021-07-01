@@ -55,7 +55,8 @@ DescribeReservationResponse::DescribeReservationResponse(
  */
 const DescribeReservationRequest * DescribeReservationResponse::request() const
 {
-    return static_cast<const DescribeReservationRequest *>(MediaConnectResponse::request());
+    Q_D(const DescribeReservationResponse);
+    return static_cast<const DescribeReservationRequest *>(d->request);
 }
 
 /*!

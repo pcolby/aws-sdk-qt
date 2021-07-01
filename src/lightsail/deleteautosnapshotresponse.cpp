@@ -74,7 +74,8 @@ DeleteAutoSnapshotResponse::DeleteAutoSnapshotResponse(
  */
 const DeleteAutoSnapshotRequest * DeleteAutoSnapshotResponse::request() const
 {
-    return static_cast<const DeleteAutoSnapshotRequest *>(LightsailResponse::request());
+    Q_D(const DeleteAutoSnapshotResponse);
+    return static_cast<const DeleteAutoSnapshotRequest *>(d->request);
 }
 
 /*!

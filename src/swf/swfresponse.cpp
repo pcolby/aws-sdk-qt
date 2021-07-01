@@ -37,7 +37,7 @@ namespace SWF {
  * Constructs a SwfResponse object with parent \a parent.
  */
 SwfResponse::SwfResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SwfResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SwfResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SwfResponse::SwfResponse(QObject * const parent)
  * implementation that inherits from SwfResponsePrivate.
  */
 SwfResponse::SwfResponse(SwfResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SwfResponse::parseFailure(QIODevice &response)
  * Constructs a SwfResponsePrivate object with public implementation \a q.
  */
 SwfResponsePrivate::SwfResponsePrivate(
-    SwfResponse * const q) : q_ptr(q)
+    SwfResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -20,20 +20,19 @@
 #ifndef QTAWS_LOOKOUTEQUIPMENTCLIENT_P_H
 #define QTAWS_LOOKOUTEQUIPMENTCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace LookoutEquipment {
 
 class LookoutEquipmentClient;
 
-class LookoutEquipmentClientPrivate {
+class LookoutEquipmentClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit LookoutEquipmentClientPrivate(LookoutEquipmentClient * const q);
-
-protected:
-    LookoutEquipmentClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LookoutEquipmentClient)

@@ -66,7 +66,8 @@ DescribeReplicationTasksResponse::DescribeReplicationTasksResponse(
  */
 const DescribeReplicationTasksRequest * DescribeReplicationTasksResponse::request() const
 {
-    return static_cast<const DescribeReplicationTasksRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const DescribeReplicationTasksResponse);
+    return static_cast<const DescribeReplicationTasksRequest *>(d->request);
 }
 
 /*!

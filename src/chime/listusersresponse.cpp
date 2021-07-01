@@ -98,7 +98,8 @@ ListUsersResponse::ListUsersResponse(
  */
 const ListUsersRequest * ListUsersResponse::request() const
 {
-    return static_cast<const ListUsersRequest *>(ChimeResponse::request());
+    Q_D(const ListUsersResponse);
+    return static_cast<const ListUsersRequest *>(d->request);
 }
 
 /*!

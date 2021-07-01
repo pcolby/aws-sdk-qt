@@ -76,7 +76,8 @@ GetChangeTokenStatusResponse::GetChangeTokenStatusResponse(
  */
 const GetChangeTokenStatusRequest * GetChangeTokenStatusResponse::request() const
 {
-    return static_cast<const GetChangeTokenStatusRequest *>(WafResponse::request());
+    Q_D(const GetChangeTokenStatusResponse);
+    return static_cast<const GetChangeTokenStatusRequest *>(d->request);
 }
 
 /*!

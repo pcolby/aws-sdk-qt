@@ -64,16 +64,16 @@ TranscribeStreamingServiceClient::TranscribeStreamingServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-10-26"),
-    QStringLiteral("transcribestreaming"),
-    QStringLiteral("Amazon Transcribe Streaming Service"),
-    QStringLiteral("transcribe"),
-    parent), d_ptr(new TranscribeStreamingServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new TranscribeStreamingServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(TranscribeStreamingServiceClient);
+    d->apiVersion = QStringLiteral("2017-10-26");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("transcribestreaming");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Transcribe Streaming Service");
+    d->serviceName = QStringLiteral("transcribe");
 }
 
 /*!
@@ -92,16 +92,16 @@ TranscribeStreamingServiceClient::TranscribeStreamingServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-10-26"),
-    QStringLiteral("transcribestreaming"),
-    QStringLiteral("Amazon Transcribe Streaming Service"),
-    QStringLiteral("transcribe"),
-    parent), d_ptr(new TranscribeStreamingServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new TranscribeStreamingServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(TranscribeStreamingServiceClient);
+    d->apiVersion = QStringLiteral("2017-10-26");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("transcribestreaming");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Transcribe Streaming Service");
+    d->serviceName = QStringLiteral("transcribe");
 }
 
 /*!
@@ -156,9 +156,10 @@ StartStreamTranscriptionResponse * TranscribeStreamingServiceClient::startStream
 /*!
  * Constructs a TranscribeStreamingServiceClientPrivate object with public implementation \a q.
  */
-TranscribeStreamingServiceClientPrivate::TranscribeStreamingServiceClientPrivate(TranscribeStreamingServiceClient * const q) : q_ptr(q)
+TranscribeStreamingServiceClientPrivate::TranscribeStreamingServiceClientPrivate(TranscribeStreamingServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace TranscribeStreamingService

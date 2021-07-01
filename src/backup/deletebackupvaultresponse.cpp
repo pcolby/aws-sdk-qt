@@ -59,7 +59,8 @@ DeleteBackupVaultResponse::DeleteBackupVaultResponse(
  */
 const DeleteBackupVaultRequest * DeleteBackupVaultResponse::request() const
 {
-    return static_cast<const DeleteBackupVaultRequest *>(BackupResponse::request());
+    Q_D(const DeleteBackupVaultResponse);
+    return static_cast<const DeleteBackupVaultRequest *>(d->request);
 }
 
 /*!

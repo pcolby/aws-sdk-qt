@@ -121,7 +121,8 @@ DeleteGraphResponse::DeleteGraphResponse(
  */
 const DeleteGraphRequest * DeleteGraphResponse::request() const
 {
-    return static_cast<const DeleteGraphRequest *>(DetectiveResponse::request());
+    Q_D(const DeleteGraphResponse);
+    return static_cast<const DeleteGraphRequest *>(d->request);
 }
 
 /*!

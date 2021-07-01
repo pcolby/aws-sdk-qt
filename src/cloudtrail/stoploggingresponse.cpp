@@ -78,7 +78,8 @@ StopLoggingResponse::StopLoggingResponse(
  */
 const StopLoggingRequest * StopLoggingResponse::request() const
 {
-    return static_cast<const StopLoggingRequest *>(CloudTrailResponse::request());
+    Q_D(const StopLoggingResponse);
+    return static_cast<const StopLoggingRequest *>(d->request);
 }
 
 /*!

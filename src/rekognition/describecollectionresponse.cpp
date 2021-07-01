@@ -56,7 +56,8 @@ DescribeCollectionResponse::DescribeCollectionResponse(
  */
 const DescribeCollectionRequest * DescribeCollectionResponse::request() const
 {
-    return static_cast<const DescribeCollectionRequest *>(RekognitionResponse::request());
+    Q_D(const DescribeCollectionResponse);
+    return static_cast<const DescribeCollectionRequest *>(d->request);
 }
 
 /*!

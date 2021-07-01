@@ -87,7 +87,8 @@ CreateEgressOnlyInternetGatewayResponse::CreateEgressOnlyInternetGatewayResponse
  */
 const CreateEgressOnlyInternetGatewayRequest * CreateEgressOnlyInternetGatewayResponse::request() const
 {
-    return static_cast<const CreateEgressOnlyInternetGatewayRequest *>(Ec2Response::request());
+    Q_D(const CreateEgressOnlyInternetGatewayResponse);
+    return static_cast<const CreateEgressOnlyInternetGatewayRequest *>(d->request);
 }
 
 /*!

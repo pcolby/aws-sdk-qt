@@ -119,7 +119,8 @@ CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
  */
 const CreateEventSubscriptionRequest * CreateEventSubscriptionResponse::request() const
 {
-    return static_cast<const CreateEventSubscriptionRequest *>(RdsResponse::request());
+    Q_D(const CreateEventSubscriptionResponse);
+    return static_cast<const CreateEventSubscriptionRequest *>(d->request);
 }
 
 /*!

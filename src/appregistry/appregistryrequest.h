@@ -78,8 +78,7 @@ public:
 
 protected:
     /// @cond internal
-    AppRegistryRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AppRegistryRequest(AppRegistryRequestPrivate * const d);
+    AppRegistryRequest(AppRegistryRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

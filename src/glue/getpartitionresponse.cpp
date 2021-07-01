@@ -58,7 +58,8 @@ GetPartitionResponse::GetPartitionResponse(
  */
 const GetPartitionRequest * GetPartitionResponse::request() const
 {
-    return static_cast<const GetPartitionRequest *>(GlueResponse::request());
+    Q_D(const GetPartitionResponse);
+    return static_cast<const GetPartitionRequest *>(d->request);
 }
 
 /*!

@@ -139,8 +139,7 @@ public:
 
 protected:
     /// @cond internal
-    Sesv2RequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit Sesv2Request(Sesv2RequestPrivate * const d);
+    Sesv2Request(Sesv2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

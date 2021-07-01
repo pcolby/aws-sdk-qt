@@ -56,7 +56,8 @@ DeleteTerminologyResponse::DeleteTerminologyResponse(
  */
 const DeleteTerminologyRequest * DeleteTerminologyResponse::request() const
 {
-    return static_cast<const DeleteTerminologyRequest *>(TranslateResponse::request());
+    Q_D(const DeleteTerminologyResponse);
+    return static_cast<const DeleteTerminologyRequest *>(d->request);
 }
 
 /*!

@@ -57,7 +57,8 @@ ListConfigurationsResponse::ListConfigurationsResponse(
  */
 const ListConfigurationsRequest * ListConfigurationsResponse::request() const
 {
-    return static_cast<const ListConfigurationsRequest *>(MqResponse::request());
+    Q_D(const ListConfigurationsResponse);
+    return static_cast<const ListConfigurationsRequest *>(d->request);
 }
 
 /*!

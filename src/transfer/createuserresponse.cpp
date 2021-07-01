@@ -62,7 +62,8 @@ CreateUserResponse::CreateUserResponse(
  */
 const CreateUserRequest * CreateUserResponse::request() const
 {
-    return static_cast<const CreateUserRequest *>(TransferResponse::request());
+    Q_D(const CreateUserResponse);
+    return static_cast<const CreateUserRequest *>(d->request);
 }
 
 /*!

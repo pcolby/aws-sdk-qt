@@ -88,7 +88,8 @@ CreateDeliverabilityTestReportResponse::CreateDeliverabilityTestReportResponse(
  */
 const CreateDeliverabilityTestReportRequest * CreateDeliverabilityTestReportResponse::request() const
 {
-    return static_cast<const CreateDeliverabilityTestReportRequest *>(Sesv2Response::request());
+    Q_D(const CreateDeliverabilityTestReportResponse);
+    return static_cast<const CreateDeliverabilityTestReportRequest *>(d->request);
 }
 
 /*!

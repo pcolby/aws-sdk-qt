@@ -73,7 +73,8 @@ ArchiveFindingsResponse::ArchiveFindingsResponse(
  */
 const ArchiveFindingsRequest * ArchiveFindingsResponse::request() const
 {
-    return static_cast<const ArchiveFindingsRequest *>(GuardDutyResponse::request());
+    Q_D(const ArchiveFindingsResponse);
+    return static_cast<const ArchiveFindingsRequest *>(d->request);
 }
 
 /*!

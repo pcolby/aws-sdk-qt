@@ -60,7 +60,8 @@ UpdateResourceResponse::UpdateResourceResponse(
  */
 const UpdateResourceRequest * UpdateResourceResponse::request() const
 {
-    return static_cast<const UpdateResourceRequest *>(APIGatewayResponse::request());
+    Q_D(const UpdateResourceResponse);
+    return static_cast<const UpdateResourceRequest *>(d->request);
 }
 
 /*!

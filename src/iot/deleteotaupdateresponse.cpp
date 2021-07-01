@@ -82,7 +82,8 @@ DeleteOTAUpdateResponse::DeleteOTAUpdateResponse(
  */
 const DeleteOTAUpdateRequest * DeleteOTAUpdateResponse::request() const
 {
-    return static_cast<const DeleteOTAUpdateRequest *>(IoTResponse::request());
+    Q_D(const DeleteOTAUpdateResponse);
+    return static_cast<const DeleteOTAUpdateRequest *>(d->request);
 }
 
 /*!

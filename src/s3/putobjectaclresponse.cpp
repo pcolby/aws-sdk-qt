@@ -55,7 +55,8 @@ PutObjectAclResponse::PutObjectAclResponse(
  */
 const PutObjectAclRequest * PutObjectAclResponse::request() const
 {
-    return static_cast<const PutObjectAclRequest *>(S3Response::request());
+    Q_D(const PutObjectAclResponse);
+    return static_cast<const PutObjectAclRequest *>(d->request);
 }
 
 /*!

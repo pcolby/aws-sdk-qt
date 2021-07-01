@@ -55,7 +55,8 @@ DeleteSlotResponse::DeleteSlotResponse(
  */
 const DeleteSlotRequest * DeleteSlotResponse::request() const
 {
-    return static_cast<const DeleteSlotRequest *>(LexModelsV2Response::request());
+    Q_D(const DeleteSlotResponse);
+    return static_cast<const DeleteSlotRequest *>(d->request);
 }
 
 /*!

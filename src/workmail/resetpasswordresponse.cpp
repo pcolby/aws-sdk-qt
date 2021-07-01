@@ -89,7 +89,8 @@ ResetPasswordResponse::ResetPasswordResponse(
  */
 const ResetPasswordRequest * ResetPasswordResponse::request() const
 {
-    return static_cast<const ResetPasswordRequest *>(WorkMailResponse::request());
+    Q_D(const ResetPasswordResponse);
+    return static_cast<const ResetPasswordRequest *>(d->request);
 }
 
 /*!

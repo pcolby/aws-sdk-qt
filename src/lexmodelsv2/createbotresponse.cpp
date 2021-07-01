@@ -55,7 +55,8 @@ CreateBotResponse::CreateBotResponse(
  */
 const CreateBotRequest * CreateBotResponse::request() const
 {
-    return static_cast<const CreateBotRequest *>(LexModelsV2Response::request());
+    Q_D(const CreateBotResponse);
+    return static_cast<const CreateBotRequest *>(d->request);
 }
 
 /*!

@@ -61,7 +61,7 @@ namespace LookoutforVision {
  * Constructs a LookoutforVisionRequest object for LookoutforVision \a action.
  */
 LookoutforVisionRequest::LookoutforVisionRequest(const Action action)
-    : d_ptr(new LookoutforVisionRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new LookoutforVisionRequestPrivate(action, this))
 {
 
 }
@@ -70,8 +70,7 @@ LookoutforVisionRequest::LookoutforVisionRequest(const Action action)
  * Constructs a copy of \a other.
  */
 LookoutforVisionRequest::LookoutforVisionRequest(const LookoutforVisionRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new LookoutforVisionRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new LookoutforVisionRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -94,7 +93,7 @@ LookoutforVisionRequest& LookoutforVisionRequest::operator=(const LookoutforVisi
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LookoutforVisionRequestPrivate.
  */
-LookoutforVisionRequest::LookoutforVisionRequest(LookoutforVisionRequestPrivate * const d) : d_ptr(d)
+LookoutforVisionRequest::LookoutforVisionRequest(LookoutforVisionRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -263,7 +262,7 @@ QNetworkRequest LookoutforVisionRequest::unsignedRequest(const QUrl &endpoint) c
  * with public implementation \a q.
  */
 LookoutforVisionRequestPrivate::LookoutforVisionRequestPrivate(const LookoutforVisionRequest::Action action, LookoutforVisionRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -278,8 +277,8 @@ LookoutforVisionRequestPrivate::LookoutforVisionRequestPrivate(const LookoutforV
  */
 LookoutforVisionRequestPrivate::LookoutforVisionRequestPrivate(const LookoutforVisionRequestPrivate &other,
                                      LookoutforVisionRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

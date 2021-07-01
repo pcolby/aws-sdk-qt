@@ -75,7 +75,8 @@ GetRightsizingRecommendationResponse::GetRightsizingRecommendationResponse(
  */
 const GetRightsizingRecommendationRequest * GetRightsizingRecommendationResponse::request() const
 {
-    return static_cast<const GetRightsizingRecommendationRequest *>(CostExplorerResponse::request());
+    Q_D(const GetRightsizingRecommendationResponse);
+    return static_cast<const GetRightsizingRecommendationRequest *>(d->request);
 }
 
 /*!

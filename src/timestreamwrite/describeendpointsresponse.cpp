@@ -63,7 +63,8 @@ DescribeEndpointsResponse::DescribeEndpointsResponse(
  */
 const DescribeEndpointsRequest * DescribeEndpointsResponse::request() const
 {
-    return static_cast<const DescribeEndpointsRequest *>(TimestreamWriteResponse::request());
+    Q_D(const DescribeEndpointsResponse);
+    return static_cast<const DescribeEndpointsRequest *>(d->request);
 }
 
 /*!

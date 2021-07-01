@@ -98,7 +98,8 @@ PutVoiceConnectorOriginationResponse::PutVoiceConnectorOriginationResponse(
  */
 const PutVoiceConnectorOriginationRequest * PutVoiceConnectorOriginationResponse::request() const
 {
-    return static_cast<const PutVoiceConnectorOriginationRequest *>(ChimeResponse::request());
+    Q_D(const PutVoiceConnectorOriginationResponse);
+    return static_cast<const PutVoiceConnectorOriginationRequest *>(d->request);
 }
 
 /*!

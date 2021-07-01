@@ -74,7 +74,8 @@ RebootInstanceResponse::RebootInstanceResponse(
  */
 const RebootInstanceRequest * RebootInstanceResponse::request() const
 {
-    return static_cast<const RebootInstanceRequest *>(LightsailResponse::request());
+    Q_D(const RebootInstanceResponse);
+    return static_cast<const RebootInstanceRequest *>(d->request);
 }
 
 /*!

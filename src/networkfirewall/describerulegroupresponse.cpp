@@ -145,7 +145,8 @@ DescribeRuleGroupResponse::DescribeRuleGroupResponse(
  */
 const DescribeRuleGroupRequest * DescribeRuleGroupResponse::request() const
 {
-    return static_cast<const DescribeRuleGroupRequest *>(NetworkFirewallResponse::request());
+    Q_D(const DescribeRuleGroupResponse);
+    return static_cast<const DescribeRuleGroupRequest *>(d->request);
 }
 
 /*!

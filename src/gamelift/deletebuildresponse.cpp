@@ -115,7 +115,8 @@ DeleteBuildResponse::DeleteBuildResponse(
  */
 const DeleteBuildRequest * DeleteBuildResponse::request() const
 {
-    return static_cast<const DeleteBuildRequest *>(GameLiftResponse::request());
+    Q_D(const DeleteBuildResponse);
+    return static_cast<const DeleteBuildRequest *>(d->request);
 }
 
 /*!

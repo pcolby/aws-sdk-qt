@@ -20,20 +20,19 @@
 #ifndef QTAWS_LEXMODELBUILDINGSERVICECLIENT_P_H
 #define QTAWS_LEXMODELBUILDINGSERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace LexModelBuildingService {
 
 class LexModelBuildingServiceClient;
 
-class LexModelBuildingServiceClientPrivate {
+class LexModelBuildingServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit LexModelBuildingServiceClientPrivate(LexModelBuildingServiceClient * const q);
-
-protected:
-    LexModelBuildingServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(LexModelBuildingServiceClient)

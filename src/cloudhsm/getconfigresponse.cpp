@@ -67,7 +67,8 @@ GetConfigResponse::GetConfigResponse(
  */
 const GetConfigRequest * GetConfigResponse::request() const
 {
-    return static_cast<const GetConfigRequest *>(CloudHSMResponse::request());
+    Q_D(const GetConfigResponse);
+    return static_cast<const GetConfigRequest *>(d->request);
 }
 
 /*!

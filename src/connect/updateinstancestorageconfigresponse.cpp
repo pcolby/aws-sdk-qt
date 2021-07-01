@@ -79,7 +79,8 @@ UpdateInstanceStorageConfigResponse::UpdateInstanceStorageConfigResponse(
  */
 const UpdateInstanceStorageConfigRequest * UpdateInstanceStorageConfigResponse::request() const
 {
-    return static_cast<const UpdateInstanceStorageConfigRequest *>(ConnectResponse::request());
+    Q_D(const UpdateInstanceStorageConfigResponse);
+    return static_cast<const UpdateInstanceStorageConfigRequest *>(d->request);
 }
 
 /*!

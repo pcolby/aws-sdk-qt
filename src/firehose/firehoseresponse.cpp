@@ -37,7 +37,7 @@ namespace Firehose {
  * Constructs a FirehoseResponse object with parent \a parent.
  */
 FirehoseResponse::FirehoseResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new FirehoseResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new FirehoseResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ FirehoseResponse::FirehoseResponse(QObject * const parent)
  * implementation that inherits from FirehoseResponsePrivate.
  */
 FirehoseResponse::FirehoseResponse(FirehoseResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void FirehoseResponse::parseFailure(QIODevice &response)
  * Constructs a FirehoseResponsePrivate object with public implementation \a q.
  */
 FirehoseResponsePrivate::FirehoseResponsePrivate(
-    FirehoseResponse * const q) : q_ptr(q)
+    FirehoseResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

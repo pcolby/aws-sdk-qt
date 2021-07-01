@@ -56,7 +56,8 @@ UpdateTagsForDomainResponse::UpdateTagsForDomainResponse(
  */
 const UpdateTagsForDomainRequest * UpdateTagsForDomainResponse::request() const
 {
-    return static_cast<const UpdateTagsForDomainRequest *>(Route53DomainsResponse::request());
+    Q_D(const UpdateTagsForDomainResponse);
+    return static_cast<const UpdateTagsForDomainRequest *>(d->request);
 }
 
 /*!

@@ -61,7 +61,8 @@ DescribeConstraintResponse::DescribeConstraintResponse(
  */
 const DescribeConstraintRequest * DescribeConstraintResponse::request() const
 {
-    return static_cast<const DescribeConstraintRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DescribeConstraintResponse);
+    return static_cast<const DescribeConstraintRequest *>(d->request);
 }
 
 /*!

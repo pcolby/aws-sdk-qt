@@ -61,7 +61,8 @@ DescribeTagOptionResponse::DescribeTagOptionResponse(
  */
 const DescribeTagOptionRequest * DescribeTagOptionResponse::request() const
 {
-    return static_cast<const DescribeTagOptionRequest *>(ServiceCatalogResponse::request());
+    Q_D(const DescribeTagOptionResponse);
+    return static_cast<const DescribeTagOptionRequest *>(d->request);
 }
 
 /*!

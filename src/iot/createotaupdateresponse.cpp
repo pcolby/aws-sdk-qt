@@ -82,7 +82,8 @@ CreateOTAUpdateResponse::CreateOTAUpdateResponse(
  */
 const CreateOTAUpdateRequest * CreateOTAUpdateResponse::request() const
 {
-    return static_cast<const CreateOTAUpdateRequest *>(IoTResponse::request());
+    Q_D(const CreateOTAUpdateResponse);
+    return static_cast<const CreateOTAUpdateRequest *>(d->request);
 }
 
 /*!

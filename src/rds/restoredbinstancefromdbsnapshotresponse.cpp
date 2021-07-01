@@ -119,7 +119,8 @@ RestoreDBInstanceFromDBSnapshotResponse::RestoreDBInstanceFromDBSnapshotResponse
  */
 const RestoreDBInstanceFromDBSnapshotRequest * RestoreDBInstanceFromDBSnapshotResponse::request() const
 {
-    return static_cast<const RestoreDBInstanceFromDBSnapshotRequest *>(RdsResponse::request());
+    Q_D(const RestoreDBInstanceFromDBSnapshotResponse);
+    return static_cast<const RestoreDBInstanceFromDBSnapshotRequest *>(d->request);
 }
 
 /*!

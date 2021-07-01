@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    IoTAnalyticsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     IoTAnalyticsResponse(IoTAnalyticsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

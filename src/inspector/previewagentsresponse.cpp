@@ -60,7 +60,8 @@ PreviewAgentsResponse::PreviewAgentsResponse(
  */
 const PreviewAgentsRequest * PreviewAgentsResponse::request() const
 {
-    return static_cast<const PreviewAgentsRequest *>(InspectorResponse::request());
+    Q_D(const PreviewAgentsResponse);
+    return static_cast<const PreviewAgentsRequest *>(d->request);
 }
 
 /*!

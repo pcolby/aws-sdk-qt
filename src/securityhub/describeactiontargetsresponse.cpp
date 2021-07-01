@@ -103,7 +103,8 @@ DescribeActionTargetsResponse::DescribeActionTargetsResponse(
  */
 const DescribeActionTargetsRequest * DescribeActionTargetsResponse::request() const
 {
-    return static_cast<const DescribeActionTargetsRequest *>(SecurityHubResponse::request());
+    Q_D(const DescribeActionTargetsResponse);
+    return static_cast<const DescribeActionTargetsRequest *>(d->request);
 }
 
 /*!

@@ -63,7 +63,8 @@ UpdateTableResponse::UpdateTableResponse(
  */
 const UpdateTableRequest * UpdateTableResponse::request() const
 {
-    return static_cast<const UpdateTableRequest *>(TimestreamWriteResponse::request());
+    Q_D(const UpdateTableResponse);
+    return static_cast<const UpdateTableRequest *>(d->request);
 }
 
 /*!

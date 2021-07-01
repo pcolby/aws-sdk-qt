@@ -80,7 +80,8 @@ GetSigningPlatformResponse::GetSigningPlatformResponse(
  */
 const GetSigningPlatformRequest * GetSigningPlatformResponse::request() const
 {
-    return static_cast<const GetSigningPlatformRequest *>(signerResponse::request());
+    Q_D(const GetSigningPlatformResponse);
+    return static_cast<const GetSigningPlatformRequest *>(d->request);
 }
 
 /*!

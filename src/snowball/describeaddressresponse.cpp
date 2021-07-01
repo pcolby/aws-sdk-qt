@@ -61,7 +61,8 @@ DescribeAddressResponse::DescribeAddressResponse(
  */
 const DescribeAddressRequest * DescribeAddressResponse::request() const
 {
-    return static_cast<const DescribeAddressRequest *>(SnowballResponse::request());
+    Q_D(const DescribeAddressResponse);
+    return static_cast<const DescribeAddressRequest *>(d->request);
 }
 
 /*!

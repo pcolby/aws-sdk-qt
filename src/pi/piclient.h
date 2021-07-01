@@ -57,12 +57,6 @@ public slots:
     GetDimensionKeyDetailsResponse * getDimensionKeyDetails(const GetDimensionKeyDetailsRequest &request);
     GetResourceMetricsResponse * getResourceMetrics(const GetResourceMetricsRequest &request);
 
-protected:
-    /// @cond internal
-    PiClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit PiClient(PiClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(PiClient)
     Q_DISABLE_COPY(PiClient)

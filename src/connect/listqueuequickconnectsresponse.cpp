@@ -79,7 +79,8 @@ ListQueueQuickConnectsResponse::ListQueueQuickConnectsResponse(
  */
 const ListQueueQuickConnectsRequest * ListQueueQuickConnectsResponse::request() const
 {
-    return static_cast<const ListQueueQuickConnectsRequest *>(ConnectResponse::request());
+    Q_D(const ListQueueQuickConnectsResponse);
+    return static_cast<const ListQueueQuickConnectsRequest *>(d->request);
 }
 
 /*!

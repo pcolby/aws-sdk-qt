@@ -55,7 +55,8 @@ ListStreamingSessionsResponse::ListStreamingSessionsResponse(
  */
 const ListStreamingSessionsRequest * ListStreamingSessionsResponse::request() const
 {
-    return static_cast<const ListStreamingSessionsRequest *>(NimbleStudioResponse::request());
+    Q_D(const ListStreamingSessionsResponse);
+    return static_cast<const ListStreamingSessionsRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ UpdateJobTemplateResponse::UpdateJobTemplateResponse(
  */
 const UpdateJobTemplateRequest * UpdateJobTemplateResponse::request() const
 {
-    return static_cast<const UpdateJobTemplateRequest *>(MediaConvertResponse::request());
+    Q_D(const UpdateJobTemplateResponse);
+    return static_cast<const UpdateJobTemplateRequest *>(d->request);
 }
 
 /*!

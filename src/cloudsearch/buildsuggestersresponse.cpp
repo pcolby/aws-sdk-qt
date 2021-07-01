@@ -66,7 +66,8 @@ BuildSuggestersResponse::BuildSuggestersResponse(
  */
 const BuildSuggestersRequest * BuildSuggestersResponse::request() const
 {
-    return static_cast<const BuildSuggestersRequest *>(CloudSearchResponse::request());
+    Q_D(const BuildSuggestersResponse);
+    return static_cast<const BuildSuggestersRequest *>(d->request);
 }
 
 /*!

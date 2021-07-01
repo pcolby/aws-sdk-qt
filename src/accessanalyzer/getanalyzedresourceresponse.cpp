@@ -67,7 +67,8 @@ GetAnalyzedResourceResponse::GetAnalyzedResourceResponse(
  */
 const GetAnalyzedResourceRequest * GetAnalyzedResourceResponse::request() const
 {
-    return static_cast<const GetAnalyzedResourceRequest *>(AccessAnalyzerResponse::request());
+    Q_D(const GetAnalyzedResourceResponse);
+    return static_cast<const GetAnalyzedResourceRequest *>(d->request);
 }
 
 /*!

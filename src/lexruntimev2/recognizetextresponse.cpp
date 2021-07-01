@@ -55,7 +55,8 @@ RecognizeTextResponse::RecognizeTextResponse(
  */
 const RecognizeTextRequest * RecognizeTextResponse::request() const
 {
-    return static_cast<const RecognizeTextRequest *>(LexRuntimeV2Response::request());
+    Q_D(const RecognizeTextResponse);
+    return static_cast<const RecognizeTextRequest *>(d->request);
 }
 
 /*!

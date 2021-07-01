@@ -71,16 +71,16 @@ LexRuntimeV2Client::LexRuntimeV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-08-07"),
-    QStringLiteral("runtime-v2-lex"),
-    QStringLiteral("Amazon Lex Runtime V2"),
-    QStringLiteral("lex"),
-    parent), d_ptr(new LexRuntimeV2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LexRuntimeV2ClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LexRuntimeV2Client);
+    d->apiVersion = QStringLiteral("2020-08-07");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("runtime-v2-lex");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Lex Runtime V2");
+    d->serviceName = QStringLiteral("lex");
 }
 
 /*!
@@ -99,16 +99,16 @@ LexRuntimeV2Client::LexRuntimeV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-08-07"),
-    QStringLiteral("runtime-v2-lex"),
-    QStringLiteral("Amazon Lex Runtime V2"),
-    QStringLiteral("lex"),
-    parent), d_ptr(new LexRuntimeV2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LexRuntimeV2ClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LexRuntimeV2Client);
+    d->apiVersion = QStringLiteral("2020-08-07");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("runtime-v2-lex");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Lex Runtime V2");
+    d->serviceName = QStringLiteral("lex");
 }
 
 /*!
@@ -288,9 +288,10 @@ StartConversationResponse * LexRuntimeV2Client::startConversation(const StartCon
 /*!
  * Constructs a LexRuntimeV2ClientPrivate object with public implementation \a q.
  */
-LexRuntimeV2ClientPrivate::LexRuntimeV2ClientPrivate(LexRuntimeV2Client * const q) : q_ptr(q)
+LexRuntimeV2ClientPrivate::LexRuntimeV2ClientPrivate(LexRuntimeV2Client * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace LexRuntimeV2

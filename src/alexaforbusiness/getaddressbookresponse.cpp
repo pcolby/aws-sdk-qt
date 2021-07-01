@@ -62,7 +62,8 @@ GetAddressBookResponse::GetAddressBookResponse(
  */
 const GetAddressBookRequest * GetAddressBookResponse::request() const
 {
-    return static_cast<const GetAddressBookRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const GetAddressBookResponse);
+    return static_cast<const GetAddressBookRequest *>(d->request);
 }
 
 /*!

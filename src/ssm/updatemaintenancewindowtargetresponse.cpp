@@ -98,7 +98,8 @@ UpdateMaintenanceWindowTargetResponse::UpdateMaintenanceWindowTargetResponse(
  */
 const UpdateMaintenanceWindowTargetRequest * UpdateMaintenanceWindowTargetResponse::request() const
 {
-    return static_cast<const UpdateMaintenanceWindowTargetRequest *>(SsmResponse::request());
+    Q_D(const UpdateMaintenanceWindowTargetResponse);
+    return static_cast<const UpdateMaintenanceWindowTargetRequest *>(d->request);
 }
 
 /*!

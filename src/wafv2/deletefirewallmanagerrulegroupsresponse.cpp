@@ -126,7 +126,8 @@ DeleteFirewallManagerRuleGroupsResponse::DeleteFirewallManagerRuleGroupsResponse
  */
 const DeleteFirewallManagerRuleGroupsRequest * DeleteFirewallManagerRuleGroupsResponse::request() const
 {
-    return static_cast<const DeleteFirewallManagerRuleGroupsRequest *>(Wafv2Response::request());
+    Q_D(const DeleteFirewallManagerRuleGroupsResponse);
+    return static_cast<const DeleteFirewallManagerRuleGroupsRequest *>(d->request);
 }
 
 /*!

@@ -78,7 +78,8 @@ DeleteByteMatchSetResponse::DeleteByteMatchSetResponse(
  */
 const DeleteByteMatchSetRequest * DeleteByteMatchSetResponse::request() const
 {
-    return static_cast<const DeleteByteMatchSetRequest *>(WAFRegionalResponse::request());
+    Q_D(const DeleteByteMatchSetResponse);
+    return static_cast<const DeleteByteMatchSetRequest *>(d->request);
 }
 
 /*!

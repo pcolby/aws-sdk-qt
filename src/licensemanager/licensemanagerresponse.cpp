@@ -37,7 +37,7 @@ namespace LicenseManager {
  * Constructs a LicenseManagerResponse object with parent \a parent.
  */
 LicenseManagerResponse::LicenseManagerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new LicenseManagerResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new LicenseManagerResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ LicenseManagerResponse::LicenseManagerResponse(QObject * const parent)
  * implementation that inherits from LicenseManagerResponsePrivate.
  */
 LicenseManagerResponse::LicenseManagerResponse(LicenseManagerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void LicenseManagerResponse::parseFailure(QIODevice &response)
  * Constructs a LicenseManagerResponsePrivate object with public implementation \a q.
  */
 LicenseManagerResponsePrivate::LicenseManagerResponsePrivate(
-    LicenseManagerResponse * const q) : q_ptr(q)
+    LicenseManagerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

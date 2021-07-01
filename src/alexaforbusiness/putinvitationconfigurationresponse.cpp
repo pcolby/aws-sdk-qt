@@ -62,7 +62,8 @@ PutInvitationConfigurationResponse::PutInvitationConfigurationResponse(
  */
 const PutInvitationConfigurationRequest * PutInvitationConfigurationResponse::request() const
 {
-    return static_cast<const PutInvitationConfigurationRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const PutInvitationConfigurationResponse);
+    return static_cast<const PutInvitationConfigurationRequest *>(d->request);
 }
 
 /*!

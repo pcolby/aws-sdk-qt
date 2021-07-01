@@ -60,7 +60,8 @@ CreateClassificationJobResponse::CreateClassificationJobResponse(
  */
 const CreateClassificationJobRequest * CreateClassificationJobResponse::request() const
 {
-    return static_cast<const CreateClassificationJobRequest *>(Macie2Response::request());
+    Q_D(const CreateClassificationJobResponse);
+    return static_cast<const CreateClassificationJobRequest *>(d->request);
 }
 
 /*!

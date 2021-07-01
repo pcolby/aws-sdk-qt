@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    GlacierResponsePrivate * const d_ptr; ///< Internal d-pointer.
     GlacierResponse(GlacierResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

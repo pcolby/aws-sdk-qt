@@ -58,7 +58,8 @@ UpdateConnectorDefinitionResponse::UpdateConnectorDefinitionResponse(
  */
 const UpdateConnectorDefinitionRequest * UpdateConnectorDefinitionResponse::request() const
 {
-    return static_cast<const UpdateConnectorDefinitionRequest *>(GreengrassResponse::request());
+    Q_D(const UpdateConnectorDefinitionResponse);
+    return static_cast<const UpdateConnectorDefinitionRequest *>(d->request);
 }
 
 /*!

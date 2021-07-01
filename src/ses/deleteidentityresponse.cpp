@@ -66,7 +66,8 @@ DeleteIdentityResponse::DeleteIdentityResponse(
  */
 const DeleteIdentityRequest * DeleteIdentityResponse::request() const
 {
-    return static_cast<const DeleteIdentityRequest *>(SesResponse::request());
+    Q_D(const DeleteIdentityResponse);
+    return static_cast<const DeleteIdentityRequest *>(d->request);
 }
 
 /*!

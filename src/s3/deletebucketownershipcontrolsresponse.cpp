@@ -55,7 +55,8 @@ DeleteBucketOwnershipControlsResponse::DeleteBucketOwnershipControlsResponse(
  */
 const DeleteBucketOwnershipControlsRequest * DeleteBucketOwnershipControlsResponse::request() const
 {
-    return static_cast<const DeleteBucketOwnershipControlsRequest *>(S3Response::request());
+    Q_D(const DeleteBucketOwnershipControlsResponse);
+    return static_cast<const DeleteBucketOwnershipControlsRequest *>(d->request);
 }
 
 /*!

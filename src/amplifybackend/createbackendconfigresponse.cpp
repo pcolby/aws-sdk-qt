@@ -56,7 +56,8 @@ CreateBackendConfigResponse::CreateBackendConfigResponse(
  */
 const CreateBackendConfigRequest * CreateBackendConfigResponse::request() const
 {
-    return static_cast<const CreateBackendConfigRequest *>(AmplifyBackendResponse::request());
+    Q_D(const CreateBackendConfigResponse);
+    return static_cast<const CreateBackendConfigRequest *>(d->request);
 }
 
 /*!

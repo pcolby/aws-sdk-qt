@@ -58,7 +58,8 @@ BatchUpsertTableRowsResponse::BatchUpsertTableRowsResponse(
  */
 const BatchUpsertTableRowsRequest * BatchUpsertTableRowsResponse::request() const
 {
-    return static_cast<const BatchUpsertTableRowsRequest *>(HoneycodeResponse::request());
+    Q_D(const BatchUpsertTableRowsResponse);
+    return static_cast<const BatchUpsertTableRowsRequest *>(d->request);
 }
 
 /*!

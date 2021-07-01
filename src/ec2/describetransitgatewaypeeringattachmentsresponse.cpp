@@ -87,7 +87,8 @@ DescribeTransitGatewayPeeringAttachmentsResponse::DescribeTransitGatewayPeeringA
  */
 const DescribeTransitGatewayPeeringAttachmentsRequest * DescribeTransitGatewayPeeringAttachmentsResponse::request() const
 {
-    return static_cast<const DescribeTransitGatewayPeeringAttachmentsRequest *>(Ec2Response::request());
+    Q_D(const DescribeTransitGatewayPeeringAttachmentsResponse);
+    return static_cast<const DescribeTransitGatewayPeeringAttachmentsRequest *>(d->request);
 }
 
 /*!

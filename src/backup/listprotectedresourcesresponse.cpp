@@ -59,7 +59,8 @@ ListProtectedResourcesResponse::ListProtectedResourcesResponse(
  */
 const ListProtectedResourcesRequest * ListProtectedResourcesResponse::request() const
 {
-    return static_cast<const ListProtectedResourcesRequest *>(BackupResponse::request());
+    Q_D(const ListProtectedResourcesResponse);
+    return static_cast<const ListProtectedResourcesRequest *>(d->request);
 }
 
 /*!

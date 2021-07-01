@@ -62,7 +62,8 @@ GetRoomResponse::GetRoomResponse(
  */
 const GetRoomRequest * GetRoomResponse::request() const
 {
-    return static_cast<const GetRoomRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const GetRoomResponse);
+    return static_cast<const GetRoomRequest *>(d->request);
 }
 
 /*!

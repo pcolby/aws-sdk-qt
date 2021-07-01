@@ -105,8 +105,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeDeployRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CodeDeployRequest(CodeDeployRequestPrivate * const d);
+    CodeDeployRequest(CodeDeployRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

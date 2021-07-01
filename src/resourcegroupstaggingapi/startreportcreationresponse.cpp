@@ -55,7 +55,8 @@ StartReportCreationResponse::StartReportCreationResponse(
  */
 const StartReportCreationRequest * StartReportCreationResponse::request() const
 {
-    return static_cast<const StartReportCreationRequest *>(ResourceGroupsTaggingAPIResponse::request());
+    Q_D(const StartReportCreationResponse);
+    return static_cast<const StartReportCreationRequest *>(d->request);
 }
 
 /*!

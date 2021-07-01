@@ -61,7 +61,8 @@ DeleteDashboardResponse::DeleteDashboardResponse(
  */
 const DeleteDashboardRequest * DeleteDashboardResponse::request() const
 {
-    return static_cast<const DeleteDashboardRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const DeleteDashboardResponse);
+    return static_cast<const DeleteDashboardRequest *>(d->request);
 }
 
 /*!

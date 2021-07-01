@@ -56,7 +56,8 @@ GetMapGlyphsResponse::GetMapGlyphsResponse(
  */
 const GetMapGlyphsRequest * GetMapGlyphsResponse::request() const
 {
-    return static_cast<const GetMapGlyphsRequest *>(LocationServiceResponse::request());
+    Q_D(const GetMapGlyphsResponse);
+    return static_cast<const GetMapGlyphsRequest *>(d->request);
 }
 
 /*!

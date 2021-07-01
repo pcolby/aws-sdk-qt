@@ -72,7 +72,8 @@ DeleteDBSubnetGroupResponse::DeleteDBSubnetGroupResponse(
  */
 const DeleteDBSubnetGroupRequest * DeleteDBSubnetGroupResponse::request() const
 {
-    return static_cast<const DeleteDBSubnetGroupRequest *>(NeptuneResponse::request());
+    Q_D(const DeleteDBSubnetGroupResponse);
+    return static_cast<const DeleteDBSubnetGroupRequest *>(d->request);
 }
 
 /*!

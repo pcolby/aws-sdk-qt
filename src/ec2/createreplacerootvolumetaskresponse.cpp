@@ -87,7 +87,8 @@ CreateReplaceRootVolumeTaskResponse::CreateReplaceRootVolumeTaskResponse(
  */
 const CreateReplaceRootVolumeTaskRequest * CreateReplaceRootVolumeTaskResponse::request() const
 {
-    return static_cast<const CreateReplaceRootVolumeTaskRequest *>(Ec2Response::request());
+    Q_D(const CreateReplaceRootVolumeTaskResponse);
+    return static_cast<const CreateReplaceRootVolumeTaskRequest *>(d->request);
 }
 
 /*!

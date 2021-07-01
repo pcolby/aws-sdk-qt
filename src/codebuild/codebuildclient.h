@@ -180,12 +180,6 @@ public slots:
     UpdateReportGroupResponse * updateReportGroup(const UpdateReportGroupRequest &request);
     UpdateWebhookResponse * updateWebhook(const UpdateWebhookRequest &request);
 
-protected:
-    /// @cond internal
-    CodeBuildClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CodeBuildClient(CodeBuildClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(CodeBuildClient)
     Q_DISABLE_COPY(CodeBuildClient)

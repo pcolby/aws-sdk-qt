@@ -56,7 +56,8 @@ DescribeForecastExportJobResponse::DescribeForecastExportJobResponse(
  */
 const DescribeForecastExportJobRequest * DescribeForecastExportJobResponse::request() const
 {
-    return static_cast<const DescribeForecastExportJobRequest *>(ForecastServiceResponse::request());
+    Q_D(const DescribeForecastExportJobResponse);
+    return static_cast<const DescribeForecastExportJobRequest *>(d->request);
 }
 
 /*!

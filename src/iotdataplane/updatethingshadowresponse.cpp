@@ -74,7 +74,8 @@ UpdateThingShadowResponse::UpdateThingShadowResponse(
  */
 const UpdateThingShadowRequest * UpdateThingShadowResponse::request() const
 {
-    return static_cast<const UpdateThingShadowRequest *>(IoTDataPlaneResponse::request());
+    Q_D(const UpdateThingShadowResponse);
+    return static_cast<const UpdateThingShadowRequest *>(d->request);
 }
 
 /*!

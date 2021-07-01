@@ -72,7 +72,8 @@ SubmitAttachmentStateChangesResponse::SubmitAttachmentStateChangesResponse(
  */
 const SubmitAttachmentStateChangesRequest * SubmitAttachmentStateChangesResponse::request() const
 {
-    return static_cast<const SubmitAttachmentStateChangesRequest *>(EcsResponse::request());
+    Q_D(const SubmitAttachmentStateChangesResponse);
+    return static_cast<const SubmitAttachmentStateChangesRequest *>(d->request);
 }
 
 /*!

@@ -85,7 +85,8 @@ AddPartnerResponse::AddPartnerResponse(
  */
 const AddPartnerRequest * AddPartnerResponse::request() const
 {
-    return static_cast<const AddPartnerRequest *>(RedshiftResponse::request());
+    Q_D(const AddPartnerResponse);
+    return static_cast<const AddPartnerRequest *>(d->request);
 }
 
 /*!

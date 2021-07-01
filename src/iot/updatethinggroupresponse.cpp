@@ -82,7 +82,8 @@ UpdateThingGroupResponse::UpdateThingGroupResponse(
  */
 const UpdateThingGroupRequest * UpdateThingGroupResponse::request() const
 {
-    return static_cast<const UpdateThingGroupRequest *>(IoTResponse::request());
+    Q_D(const UpdateThingGroupResponse);
+    return static_cast<const UpdateThingGroupRequest *>(d->request);
 }
 
 /*!

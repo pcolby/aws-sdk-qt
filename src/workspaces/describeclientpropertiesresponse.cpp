@@ -58,7 +58,8 @@ DescribeClientPropertiesResponse::DescribeClientPropertiesResponse(
  */
 const DescribeClientPropertiesRequest * DescribeClientPropertiesResponse::request() const
 {
-    return static_cast<const DescribeClientPropertiesRequest *>(WorkSpacesResponse::request());
+    Q_D(const DescribeClientPropertiesResponse);
+    return static_cast<const DescribeClientPropertiesRequest *>(d->request);
 }
 
 /*!

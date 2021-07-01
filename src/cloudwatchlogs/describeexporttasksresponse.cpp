@@ -84,7 +84,8 @@ DescribeExportTasksResponse::DescribeExportTasksResponse(
  */
 const DescribeExportTasksRequest * DescribeExportTasksResponse::request() const
 {
-    return static_cast<const DescribeExportTasksRequest *>(CloudWatchLogsResponse::request());
+    Q_D(const DescribeExportTasksResponse);
+    return static_cast<const DescribeExportTasksRequest *>(d->request);
 }
 
 /*!

@@ -62,7 +62,8 @@ UpdateGatewayGroupResponse::UpdateGatewayGroupResponse(
  */
 const UpdateGatewayGroupRequest * UpdateGatewayGroupResponse::request() const
 {
-    return static_cast<const UpdateGatewayGroupRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const UpdateGatewayGroupResponse);
+    return static_cast<const UpdateGatewayGroupRequest *>(d->request);
 }
 
 /*!

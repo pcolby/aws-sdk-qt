@@ -60,7 +60,8 @@ DescribeCertificateResponse::DescribeCertificateResponse(
  */
 const DescribeCertificateRequest * DescribeCertificateResponse::request() const
 {
-    return static_cast<const DescribeCertificateRequest *>(AcmResponse::request());
+    Q_D(const DescribeCertificateResponse);
+    return static_cast<const DescribeCertificateRequest *>(d->request);
 }
 
 /*!

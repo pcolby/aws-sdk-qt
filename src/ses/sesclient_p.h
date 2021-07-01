@@ -20,20 +20,19 @@
 #ifndef QTAWS_SESCLIENT_P_H
 #define QTAWS_SESCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SES {
 
 class SesClient;
 
-class SesClientPrivate {
+class SesClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SesClientPrivate(SesClient * const q);
-
-protected:
-    SesClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SesClient)

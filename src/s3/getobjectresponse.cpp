@@ -55,7 +55,8 @@ GetObjectResponse::GetObjectResponse(
  */
 const GetObjectRequest * GetObjectResponse::request() const
 {
-    return static_cast<const GetObjectRequest *>(S3Response::request());
+    Q_D(const GetObjectResponse);
+    return static_cast<const GetObjectRequest *>(d->request);
 }
 
 /*!

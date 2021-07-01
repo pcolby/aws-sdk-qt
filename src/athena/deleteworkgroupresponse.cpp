@@ -73,7 +73,8 @@ DeleteWorkGroupResponse::DeleteWorkGroupResponse(
  */
 const DeleteWorkGroupRequest * DeleteWorkGroupResponse::request() const
 {
-    return static_cast<const DeleteWorkGroupRequest *>(AthenaResponse::request());
+    Q_D(const DeleteWorkGroupResponse);
+    return static_cast<const DeleteWorkGroupRequest *>(d->request);
 }
 
 /*!

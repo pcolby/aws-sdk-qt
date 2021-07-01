@@ -113,16 +113,16 @@ ECRPublicClient::ECRPublicClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-10-30"),
-    QStringLiteral("api.ecr-public"),
-    QStringLiteral("Amazon Elastic Container Registry Public"),
-    QStringLiteral("ecr-public"),
-    parent), d_ptr(new ECRPublicClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ECRPublicClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ECRPublicClient);
+    d->apiVersion = QStringLiteral("2020-10-30");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("api.ecr-public");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Elastic Container Registry Public");
+    d->serviceName = QStringLiteral("ecr-public");
 }
 
 /*!
@@ -141,16 +141,16 @@ ECRPublicClient::ECRPublicClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-10-30"),
-    QStringLiteral("api.ecr-public"),
-    QStringLiteral("Amazon Elastic Container Registry Public"),
-    QStringLiteral("ecr-public"),
-    parent), d_ptr(new ECRPublicClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ECRPublicClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ECRPublicClient);
+    d->apiVersion = QStringLiteral("2020-10-30");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("api.ecr-public");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Elastic Container Registry Public");
+    d->serviceName = QStringLiteral("ecr-public");
 }
 
 /*!
@@ -538,9 +538,10 @@ UploadLayerPartResponse * ECRPublicClient::uploadLayerPart(const UploadLayerPart
 /*!
  * Constructs a ECRPublicClientPrivate object with public implementation \a q.
  */
-ECRPublicClientPrivate::ECRPublicClientPrivate(ECRPublicClient * const q) : q_ptr(q)
+ECRPublicClientPrivate::ECRPublicClientPrivate(ECRPublicClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ECRPublic

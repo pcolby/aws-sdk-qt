@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    SSOAdminResponsePrivate * const d_ptr; ///< Internal d-pointer.
     SSOAdminResponse(SSOAdminResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

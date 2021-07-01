@@ -87,7 +87,8 @@ DescribeMovingAddressesResponse::DescribeMovingAddressesResponse(
  */
 const DescribeMovingAddressesRequest * DescribeMovingAddressesResponse::request() const
 {
-    return static_cast<const DescribeMovingAddressesRequest *>(Ec2Response::request());
+    Q_D(const DescribeMovingAddressesResponse);
+    return static_cast<const DescribeMovingAddressesRequest *>(d->request);
 }
 
 /*!

@@ -119,16 +119,16 @@ MediaConnectClient::MediaConnectClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-11-14"),
-    QStringLiteral("mediaconnect"),
-    QStringLiteral("AWS MediaConnect"),
-    QStringLiteral("mediaconnect"),
-    parent), d_ptr(new MediaConnectClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MediaConnectClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MediaConnectClient);
+    d->apiVersion = QStringLiteral("2018-11-14");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("mediaconnect");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS MediaConnect");
+    d->serviceName = QStringLiteral("mediaconnect");
 }
 
 /*!
@@ -147,16 +147,16 @@ MediaConnectClient::MediaConnectClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-11-14"),
-    QStringLiteral("mediaconnect"),
-    QStringLiteral("AWS MediaConnect"),
-    QStringLiteral("mediaconnect"),
-    parent), d_ptr(new MediaConnectClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MediaConnectClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MediaConnectClient);
+    d->apiVersion = QStringLiteral("2018-11-14");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("mediaconnect");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS MediaConnect");
+    d->serviceName = QStringLiteral("mediaconnect");
 }
 
 /*!
@@ -549,9 +549,10 @@ UpdateFlowSourceResponse * MediaConnectClient::updateFlowSource(const UpdateFlow
 /*!
  * Constructs a MediaConnectClientPrivate object with public implementation \a q.
  */
-MediaConnectClientPrivate::MediaConnectClientPrivate(MediaConnectClient * const q) : q_ptr(q)
+MediaConnectClientPrivate::MediaConnectClientPrivate(MediaConnectClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MediaConnect

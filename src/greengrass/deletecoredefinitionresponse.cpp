@@ -58,7 +58,8 @@ DeleteCoreDefinitionResponse::DeleteCoreDefinitionResponse(
  */
 const DeleteCoreDefinitionRequest * DeleteCoreDefinitionResponse::request() const
 {
-    return static_cast<const DeleteCoreDefinitionRequest *>(GreengrassResponse::request());
+    Q_D(const DeleteCoreDefinitionResponse);
+    return static_cast<const DeleteCoreDefinitionRequest *>(d->request);
 }
 
 /*!

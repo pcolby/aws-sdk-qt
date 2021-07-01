@@ -111,16 +111,16 @@ CloudHSMClient::CloudHSMClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-05-30"),
-    QStringLiteral("cloudhsm"),
-    QStringLiteral("Amazon CloudHSM"),
-    QStringLiteral("cloudhsm"),
-    parent), d_ptr(new CloudHSMClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudHSMClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudHSMClient);
+    d->apiVersion = QStringLiteral("2014-05-30");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudhsm");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon CloudHSM");
+    d->serviceName = QStringLiteral("cloudhsm");
 }
 
 /*!
@@ -139,16 +139,16 @@ CloudHSMClient::CloudHSMClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-05-30"),
-    QStringLiteral("cloudhsm"),
-    QStringLiteral("Amazon CloudHSM"),
-    QStringLiteral("cloudhsm"),
-    parent), d_ptr(new CloudHSMClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudHSMClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudHSMClient);
+    d->apiVersion = QStringLiteral("2014-05-30");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudhsm");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon CloudHSM");
+    d->serviceName = QStringLiteral("cloudhsm");
 }
 
 /*!
@@ -732,9 +732,10 @@ RemoveTagsFromResourceResponse * CloudHSMClient::removeTagsFromResource(const Re
 /*!
  * Constructs a CloudHSMClientPrivate object with public implementation \a q.
  */
-CloudHSMClientPrivate::CloudHSMClientPrivate(CloudHSMClient * const q) : q_ptr(q)
+CloudHSMClientPrivate::CloudHSMClientPrivate(CloudHSMClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudHSM

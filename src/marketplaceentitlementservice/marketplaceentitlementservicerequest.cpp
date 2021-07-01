@@ -43,7 +43,7 @@ namespace MarketplaceEntitlementService {
  * Constructs a MarketplaceEntitlementServiceRequest object for MarketplaceEntitlementService \a action.
  */
 MarketplaceEntitlementServiceRequest::MarketplaceEntitlementServiceRequest(const Action action)
-    : d_ptr(new MarketplaceEntitlementServiceRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceEntitlementServiceRequestPrivate(action, this))
 {
 
 }
@@ -52,8 +52,7 @@ MarketplaceEntitlementServiceRequest::MarketplaceEntitlementServiceRequest(const
  * Constructs a copy of \a other.
  */
 MarketplaceEntitlementServiceRequest::MarketplaceEntitlementServiceRequest(const MarketplaceEntitlementServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new MarketplaceEntitlementServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new MarketplaceEntitlementServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -76,7 +75,7 @@ MarketplaceEntitlementServiceRequest& MarketplaceEntitlementServiceRequest::oper
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from MarketplaceEntitlementServiceRequestPrivate.
  */
-MarketplaceEntitlementServiceRequest::MarketplaceEntitlementServiceRequest(MarketplaceEntitlementServiceRequestPrivate * const d) : d_ptr(d)
+MarketplaceEntitlementServiceRequest::MarketplaceEntitlementServiceRequest(MarketplaceEntitlementServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -245,7 +244,7 @@ QNetworkRequest MarketplaceEntitlementServiceRequest::unsignedRequest(const QUrl
  * with public implementation \a q.
  */
 MarketplaceEntitlementServiceRequestPrivate::MarketplaceEntitlementServiceRequestPrivate(const MarketplaceEntitlementServiceRequest::Action action, MarketplaceEntitlementServiceRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -260,8 +259,8 @@ MarketplaceEntitlementServiceRequestPrivate::MarketplaceEntitlementServiceReques
  */
 MarketplaceEntitlementServiceRequestPrivate::MarketplaceEntitlementServiceRequestPrivate(const MarketplaceEntitlementServiceRequestPrivate &other,
                                      MarketplaceEntitlementServiceRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

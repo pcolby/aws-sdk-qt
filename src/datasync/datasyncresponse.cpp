@@ -37,7 +37,7 @@ namespace DataSync {
  * Constructs a DataSyncResponse object with parent \a parent.
  */
 DataSyncResponse::DataSyncResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new DataSyncResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new DataSyncResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ DataSyncResponse::DataSyncResponse(QObject * const parent)
  * implementation that inherits from DataSyncResponsePrivate.
  */
 DataSyncResponse::DataSyncResponse(DataSyncResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void DataSyncResponse::parseFailure(QIODevice &response)
  * Constructs a DataSyncResponsePrivate object with public implementation \a q.
  */
 DataSyncResponsePrivate::DataSyncResponsePrivate(
-    DataSyncResponse * const q) : q_ptr(q)
+    DataSyncResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

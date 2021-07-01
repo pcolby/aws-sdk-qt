@@ -60,7 +60,8 @@ DescribeThemeAliasResponse::DescribeThemeAliasResponse(
  */
 const DescribeThemeAliasRequest * DescribeThemeAliasResponse::request() const
 {
-    return static_cast<const DescribeThemeAliasRequest *>(QuickSightResponse::request());
+    Q_D(const DescribeThemeAliasResponse);
+    return static_cast<const DescribeThemeAliasRequest *>(d->request);
 }
 
 /*!

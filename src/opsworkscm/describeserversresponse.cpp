@@ -134,7 +134,8 @@ DescribeServersResponse::DescribeServersResponse(
  */
 const DescribeServersRequest * DescribeServersResponse::request() const
 {
-    return static_cast<const DescribeServersRequest *>(OpsWorksCMResponse::request());
+    Q_D(const DescribeServersResponse);
+    return static_cast<const DescribeServersRequest *>(d->request);
 }
 
 /*!

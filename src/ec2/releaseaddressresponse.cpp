@@ -87,7 +87,8 @@ ReleaseAddressResponse::ReleaseAddressResponse(
  */
 const ReleaseAddressRequest * ReleaseAddressResponse::request() const
 {
-    return static_cast<const ReleaseAddressRequest *>(Ec2Response::request());
+    Q_D(const ReleaseAddressResponse);
+    return static_cast<const ReleaseAddressRequest *>(d->request);
 }
 
 /*!

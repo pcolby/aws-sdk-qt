@@ -58,7 +58,8 @@ GetClassifiersResponse::GetClassifiersResponse(
  */
 const GetClassifiersRequest * GetClassifiersResponse::request() const
 {
-    return static_cast<const GetClassifiersRequest *>(GlueResponse::request());
+    Q_D(const GetClassifiersResponse);
+    return static_cast<const GetClassifiersRequest *>(d->request);
 }
 
 /*!

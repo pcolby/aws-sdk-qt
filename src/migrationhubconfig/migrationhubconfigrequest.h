@@ -61,8 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    MigrationHubConfigRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit MigrationHubConfigRequest(MigrationHubConfigRequestPrivate * const d);
+    MigrationHubConfigRequest(MigrationHubConfigRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

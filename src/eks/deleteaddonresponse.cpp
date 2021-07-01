@@ -65,7 +65,8 @@ DeleteAddonResponse::DeleteAddonResponse(
  */
 const DeleteAddonRequest * DeleteAddonResponse::request() const
 {
-    return static_cast<const DeleteAddonRequest *>(EksResponse::request());
+    Q_D(const DeleteAddonResponse);
+    return static_cast<const DeleteAddonRequest *>(d->request);
 }
 
 /*!

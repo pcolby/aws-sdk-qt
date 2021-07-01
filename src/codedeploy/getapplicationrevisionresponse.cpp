@@ -141,7 +141,8 @@ GetApplicationRevisionResponse::GetApplicationRevisionResponse(
  */
 const GetApplicationRevisionRequest * GetApplicationRevisionResponse::request() const
 {
-    return static_cast<const GetApplicationRevisionRequest *>(CodeDeployResponse::request());
+    Q_D(const GetApplicationRevisionResponse);
+    return static_cast<const GetApplicationRevisionRequest *>(d->request);
 }
 
 /*!

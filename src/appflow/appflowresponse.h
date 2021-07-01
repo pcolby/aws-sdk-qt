@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    AppflowResponsePrivate * const d_ptr; ///< Internal d-pointer.
     AppflowResponse(AppflowResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

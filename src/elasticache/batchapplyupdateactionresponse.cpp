@@ -69,7 +69,8 @@ BatchApplyUpdateActionResponse::BatchApplyUpdateActionResponse(
  */
 const BatchApplyUpdateActionRequest * BatchApplyUpdateActionResponse::request() const
 {
-    return static_cast<const BatchApplyUpdateActionRequest *>(ElastiCacheResponse::request());
+    Q_D(const BatchApplyUpdateActionResponse);
+    return static_cast<const BatchApplyUpdateActionRequest *>(d->request);
 }
 
 /*!

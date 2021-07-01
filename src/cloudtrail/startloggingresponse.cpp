@@ -78,7 +78,8 @@ StartLoggingResponse::StartLoggingResponse(
  */
 const StartLoggingRequest * StartLoggingResponse::request() const
 {
-    return static_cast<const StartLoggingRequest *>(CloudTrailResponse::request());
+    Q_D(const StartLoggingResponse);
+    return static_cast<const StartLoggingRequest *>(d->request);
 }
 
 /*!

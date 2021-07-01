@@ -75,8 +75,7 @@ public:
 
 protected:
     /// @cond internal
-    ElasticTranscoderRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ElasticTranscoderRequest(ElasticTranscoderRequestPrivate * const d);
+    ElasticTranscoderRequest(ElasticTranscoderRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

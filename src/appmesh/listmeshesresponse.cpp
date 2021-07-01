@@ -73,7 +73,8 @@ ListMeshesResponse::ListMeshesResponse(
  */
 const ListMeshesRequest * ListMeshesResponse::request() const
 {
-    return static_cast<const ListMeshesRequest *>(AppMeshResponse::request());
+    Q_D(const ListMeshesResponse);
+    return static_cast<const ListMeshesRequest *>(d->request);
 }
 
 /*!

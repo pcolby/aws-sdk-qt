@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    mgnResponsePrivate * const d_ptr; ///< Internal d-pointer.
     mgnResponse(mgnResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

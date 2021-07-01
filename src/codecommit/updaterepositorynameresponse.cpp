@@ -439,7 +439,8 @@ UpdateRepositoryNameResponse::UpdateRepositoryNameResponse(
  */
 const UpdateRepositoryNameRequest * UpdateRepositoryNameResponse::request() const
 {
-    return static_cast<const UpdateRepositoryNameRequest *>(CodeCommitResponse::request());
+    Q_D(const UpdateRepositoryNameResponse);
+    return static_cast<const UpdateRepositoryNameRequest *>(d->request);
 }
 
 /*!

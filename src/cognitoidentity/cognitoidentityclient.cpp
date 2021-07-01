@@ -127,16 +127,16 @@ CognitoIdentityClient::CognitoIdentityClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-06-30"),
-    QStringLiteral("cognito-identity"),
-    QStringLiteral("Amazon Cognito Identity"),
-    QStringLiteral("cognito-identity"),
-    parent), d_ptr(new CognitoIdentityClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CognitoIdentityClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CognitoIdentityClient);
+    d->apiVersion = QStringLiteral("2014-06-30");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cognito-identity");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Cognito Identity");
+    d->serviceName = QStringLiteral("cognito-identity");
 }
 
 /*!
@@ -155,16 +155,16 @@ CognitoIdentityClient::CognitoIdentityClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2014-06-30"),
-    QStringLiteral("cognito-identity"),
-    QStringLiteral("Amazon Cognito Identity"),
-    QStringLiteral("cognito-identity"),
-    parent), d_ptr(new CognitoIdentityClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CognitoIdentityClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CognitoIdentityClient);
+    d->apiVersion = QStringLiteral("2014-06-30");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cognito-identity");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Cognito Identity");
+    d->serviceName = QStringLiteral("cognito-identity");
 }
 
 /*!
@@ -644,9 +644,10 @@ UpdateIdentityPoolResponse * CognitoIdentityClient::updateIdentityPool(const Upd
 /*!
  * Constructs a CognitoIdentityClientPrivate object with public implementation \a q.
  */
-CognitoIdentityClientPrivate::CognitoIdentityClientPrivate(CognitoIdentityClient * const q) : q_ptr(q)
+CognitoIdentityClientPrivate::CognitoIdentityClientPrivate(CognitoIdentityClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CognitoIdentity

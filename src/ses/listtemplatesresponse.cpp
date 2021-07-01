@@ -66,7 +66,8 @@ ListTemplatesResponse::ListTemplatesResponse(
  */
 const ListTemplatesRequest * ListTemplatesResponse::request() const
 {
-    return static_cast<const ListTemplatesRequest *>(SesResponse::request());
+    Q_D(const ListTemplatesResponse);
+    return static_cast<const ListTemplatesRequest *>(d->request);
 }
 
 /*!

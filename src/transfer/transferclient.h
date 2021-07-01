@@ -123,12 +123,6 @@ public slots:
     UpdateServerResponse * updateServer(const UpdateServerRequest &request);
     UpdateUserResponse * updateUser(const UpdateUserRequest &request);
 
-protected:
-    /// @cond internal
-    TransferClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit TransferClient(TransferClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(TransferClient)
     Q_DISABLE_COPY(TransferClient)

@@ -20,20 +20,19 @@
 #ifndef QTAWS_DATAPIPELINECLIENT_P_H
 #define QTAWS_DATAPIPELINECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace DataPipeline {
 
 class DataPipelineClient;
 
-class DataPipelineClientPrivate {
+class DataPipelineClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit DataPipelineClientPrivate(DataPipelineClient * const q);
-
-protected:
-    DataPipelineClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DataPipelineClient)

@@ -141,7 +141,8 @@ DescribeOrganizationResponse::DescribeOrganizationResponse(
  */
 const DescribeOrganizationRequest * DescribeOrganizationResponse::request() const
 {
-    return static_cast<const DescribeOrganizationRequest *>(OrganizationsResponse::request());
+    Q_D(const DescribeOrganizationResponse);
+    return static_cast<const DescribeOrganizationRequest *>(d->request);
 }
 
 /*!

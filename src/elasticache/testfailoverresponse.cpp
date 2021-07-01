@@ -69,7 +69,8 @@ TestFailoverResponse::TestFailoverResponse(
  */
 const TestFailoverRequest * TestFailoverResponse::request() const
 {
-    return static_cast<const TestFailoverRequest *>(ElastiCacheResponse::request());
+    Q_D(const TestFailoverResponse);
+    return static_cast<const TestFailoverRequest *>(d->request);
 }
 
 /*!

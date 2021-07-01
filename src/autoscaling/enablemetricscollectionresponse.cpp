@@ -68,7 +68,8 @@ EnableMetricsCollectionResponse::EnableMetricsCollectionResponse(
  */
 const EnableMetricsCollectionRequest * EnableMetricsCollectionResponse::request() const
 {
-    return static_cast<const EnableMetricsCollectionRequest *>(AutoScalingResponse::request());
+    Q_D(const EnableMetricsCollectionResponse);
+    return static_cast<const EnableMetricsCollectionRequest *>(d->request);
 }
 
 /*!

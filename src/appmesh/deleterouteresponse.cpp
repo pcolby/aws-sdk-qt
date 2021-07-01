@@ -73,7 +73,8 @@ DeleteRouteResponse::DeleteRouteResponse(
  */
 const DeleteRouteRequest * DeleteRouteResponse::request() const
 {
-    return static_cast<const DeleteRouteRequest *>(AppMeshResponse::request());
+    Q_D(const DeleteRouteResponse);
+    return static_cast<const DeleteRouteRequest *>(d->request);
 }
 
 /*!

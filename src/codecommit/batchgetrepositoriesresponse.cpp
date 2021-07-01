@@ -439,7 +439,8 @@ BatchGetRepositoriesResponse::BatchGetRepositoriesResponse(
  */
 const BatchGetRepositoriesRequest * BatchGetRepositoriesResponse::request() const
 {
-    return static_cast<const BatchGetRepositoriesRequest *>(CodeCommitResponse::request());
+    Q_D(const BatchGetRepositoriesResponse);
+    return static_cast<const BatchGetRepositoriesRequest *>(d->request);
 }
 
 /*!

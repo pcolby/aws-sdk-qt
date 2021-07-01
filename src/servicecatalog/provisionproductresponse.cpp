@@ -61,7 +61,8 @@ ProvisionProductResponse::ProvisionProductResponse(
  */
 const ProvisionProductRequest * ProvisionProductResponse::request() const
 {
-    return static_cast<const ProvisionProductRequest *>(ServiceCatalogResponse::request());
+    Q_D(const ProvisionProductResponse);
+    return static_cast<const ProvisionProductRequest *>(d->request);
 }
 
 /*!

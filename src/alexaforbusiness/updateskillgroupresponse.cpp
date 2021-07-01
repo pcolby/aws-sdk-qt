@@ -62,7 +62,8 @@ UpdateSkillGroupResponse::UpdateSkillGroupResponse(
  */
 const UpdateSkillGroupRequest * UpdateSkillGroupResponse::request() const
 {
-    return static_cast<const UpdateSkillGroupRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const UpdateSkillGroupResponse);
+    return static_cast<const UpdateSkillGroupRequest *>(d->request);
 }
 
 /*!

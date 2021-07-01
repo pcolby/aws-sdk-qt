@@ -58,7 +58,8 @@ DeleteTriggerResponse::DeleteTriggerResponse(
  */
 const DeleteTriggerRequest * DeleteTriggerResponse::request() const
 {
-    return static_cast<const DeleteTriggerRequest *>(GlueResponse::request());
+    Q_D(const DeleteTriggerResponse);
+    return static_cast<const DeleteTriggerRequest *>(d->request);
 }
 
 /*!

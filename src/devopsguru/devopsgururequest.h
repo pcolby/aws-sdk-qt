@@ -79,8 +79,7 @@ public:
 
 protected:
     /// @cond internal
-    DevOpsGuruRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DevOpsGuruRequest(DevOpsGuruRequestPrivate * const d);
+    DevOpsGuruRequest(DevOpsGuruRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

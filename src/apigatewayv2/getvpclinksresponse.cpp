@@ -56,7 +56,8 @@ GetVpcLinksResponse::GetVpcLinksResponse(
  */
 const GetVpcLinksRequest * GetVpcLinksResponse::request() const
 {
-    return static_cast<const GetVpcLinksRequest *>(ApiGatewayV2Response::request());
+    Q_D(const GetVpcLinksResponse);
+    return static_cast<const GetVpcLinksRequest *>(d->request);
 }
 
 /*!

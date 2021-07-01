@@ -74,7 +74,8 @@ GetContactMethodsResponse::GetContactMethodsResponse(
  */
 const GetContactMethodsRequest * GetContactMethodsResponse::request() const
 {
-    return static_cast<const GetContactMethodsRequest *>(LightsailResponse::request());
+    Q_D(const GetContactMethodsResponse);
+    return static_cast<const GetContactMethodsRequest *>(d->request);
 }
 
 /*!

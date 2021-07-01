@@ -58,7 +58,8 @@ GetEventTypesResponse::GetEventTypesResponse(
  */
 const GetEventTypesRequest * GetEventTypesResponse::request() const
 {
-    return static_cast<const GetEventTypesRequest *>(FraudDetectorResponse::request());
+    Q_D(const GetEventTypesResponse);
+    return static_cast<const GetEventTypesRequest *>(d->request);
 }
 
 /*!

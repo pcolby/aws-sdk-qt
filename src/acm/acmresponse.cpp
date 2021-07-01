@@ -37,7 +37,7 @@ namespace ACM {
  * Constructs a AcmResponse object with parent \a parent.
  */
 AcmResponse::AcmResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new AcmResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new AcmResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ AcmResponse::AcmResponse(QObject * const parent)
  * implementation that inherits from AcmResponsePrivate.
  */
 AcmResponse::AcmResponse(AcmResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void AcmResponse::parseFailure(QIODevice &response)
  * Constructs a AcmResponsePrivate object with public implementation \a q.
  */
 AcmResponsePrivate::AcmResponsePrivate(
-    AcmResponse * const q) : q_ptr(q)
+    AcmResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

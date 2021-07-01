@@ -131,7 +131,8 @@ GetSecretValueResponse::GetSecretValueResponse(
  */
 const GetSecretValueRequest * GetSecretValueResponse::request() const
 {
-    return static_cast<const GetSecretValueRequest *>(SecretsManagerResponse::request());
+    Q_D(const GetSecretValueResponse);
+    return static_cast<const GetSecretValueRequest *>(d->request);
 }
 
 /*!

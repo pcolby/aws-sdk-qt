@@ -58,7 +58,8 @@ BatchGetCrawlersResponse::BatchGetCrawlersResponse(
  */
 const BatchGetCrawlersRequest * BatchGetCrawlersResponse::request() const
 {
-    return static_cast<const BatchGetCrawlersRequest *>(GlueResponse::request());
+    Q_D(const BatchGetCrawlersResponse);
+    return static_cast<const BatchGetCrawlersRequest *>(d->request);
 }
 
 /*!

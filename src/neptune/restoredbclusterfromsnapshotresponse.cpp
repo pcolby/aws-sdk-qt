@@ -72,7 +72,8 @@ RestoreDBClusterFromSnapshotResponse::RestoreDBClusterFromSnapshotResponse(
  */
 const RestoreDBClusterFromSnapshotRequest * RestoreDBClusterFromSnapshotResponse::request() const
 {
-    return static_cast<const RestoreDBClusterFromSnapshotRequest *>(NeptuneResponse::request());
+    Q_D(const RestoreDBClusterFromSnapshotResponse);
+    return static_cast<const RestoreDBClusterFromSnapshotRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ DeactivateContactChannelResponse::DeactivateContactChannelResponse(
  */
 const DeactivateContactChannelRequest * DeactivateContactChannelResponse::request() const
 {
-    return static_cast<const DeactivateContactChannelRequest *>(SSMContactsResponse::request());
+    Q_D(const DeactivateContactChannelResponse);
+    return static_cast<const DeactivateContactChannelRequest *>(d->request);
 }
 
 /*!

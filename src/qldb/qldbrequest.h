@@ -78,8 +78,7 @@ public:
 
 protected:
     /// @cond internal
-    QldbRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit QldbRequest(QldbRequestPrivate * const d);
+    QldbRequest(QldbRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

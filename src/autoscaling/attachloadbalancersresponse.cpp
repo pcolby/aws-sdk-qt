@@ -68,7 +68,8 @@ AttachLoadBalancersResponse::AttachLoadBalancersResponse(
  */
 const AttachLoadBalancersRequest * AttachLoadBalancersResponse::request() const
 {
-    return static_cast<const AttachLoadBalancersRequest *>(AutoScalingResponse::request());
+    Q_D(const AttachLoadBalancersResponse);
+    return static_cast<const AttachLoadBalancersRequest *>(d->request);
 }
 
 /*!

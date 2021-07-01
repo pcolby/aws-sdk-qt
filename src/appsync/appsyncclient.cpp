@@ -142,16 +142,16 @@ AppSyncClient::AppSyncClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("appsync"),
-    QStringLiteral("AWS AppSync"),
-    QStringLiteral("appsync"),
-    parent), d_ptr(new AppSyncClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AppSyncClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AppSyncClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("appsync");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS AppSync");
+    d->serviceName = QStringLiteral("appsync");
 }
 
 /*!
@@ -170,16 +170,16 @@ AppSyncClient::AppSyncClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-07-25"),
-    QStringLiteral("appsync"),
-    QStringLiteral("AWS AppSync"),
-    QStringLiteral("appsync"),
-    parent), d_ptr(new AppSyncClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new AppSyncClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(AppSyncClient);
+    d->apiVersion = QStringLiteral("2017-07-25");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("appsync");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS AppSync");
+    d->serviceName = QStringLiteral("appsync");
 }
 
 /*!
@@ -746,9 +746,10 @@ UpdateTypeResponse * AppSyncClient::updateType(const UpdateTypeRequest &request)
 /*!
  * Constructs a AppSyncClientPrivate object with public implementation \a q.
  */
-AppSyncClientPrivate::AppSyncClientPrivate(AppSyncClient * const q) : q_ptr(q)
+AppSyncClientPrivate::AppSyncClientPrivate(AppSyncClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace AppSync

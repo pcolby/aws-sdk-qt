@@ -72,7 +72,8 @@ ListAccountSettingsResponse::ListAccountSettingsResponse(
  */
 const ListAccountSettingsRequest * ListAccountSettingsResponse::request() const
 {
-    return static_cast<const ListAccountSettingsRequest *>(EcsResponse::request());
+    Q_D(const ListAccountSettingsResponse);
+    return static_cast<const ListAccountSettingsRequest *>(d->request);
 }
 
 /*!

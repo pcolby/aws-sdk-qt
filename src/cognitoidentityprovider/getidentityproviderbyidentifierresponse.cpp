@@ -66,7 +66,8 @@ GetIdentityProviderByIdentifierResponse::GetIdentityProviderByIdentifierResponse
  */
 const GetIdentityProviderByIdentifierRequest * GetIdentityProviderByIdentifierResponse::request() const
 {
-    return static_cast<const GetIdentityProviderByIdentifierRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const GetIdentityProviderByIdentifierResponse);
+    return static_cast<const GetIdentityProviderByIdentifierRequest *>(d->request);
 }
 
 /*!

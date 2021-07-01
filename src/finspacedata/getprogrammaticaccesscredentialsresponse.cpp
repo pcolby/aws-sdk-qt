@@ -56,7 +56,8 @@ GetProgrammaticAccessCredentialsResponse::GetProgrammaticAccessCredentialsRespon
  */
 const GetProgrammaticAccessCredentialsRequest * GetProgrammaticAccessCredentialsResponse::request() const
 {
-    return static_cast<const GetProgrammaticAccessCredentialsRequest *>(FinSpaceDataResponse::request());
+    Q_D(const GetProgrammaticAccessCredentialsResponse);
+    return static_cast<const GetProgrammaticAccessCredentialsRequest *>(d->request);
 }
 
 /*!

@@ -55,7 +55,8 @@ DeleteJobTemplateResponse::DeleteJobTemplateResponse(
  */
 const DeleteJobTemplateRequest * DeleteJobTemplateResponse::request() const
 {
-    return static_cast<const DeleteJobTemplateRequest *>(MediaConvertResponse::request());
+    Q_D(const DeleteJobTemplateResponse);
+    return static_cast<const DeleteJobTemplateRequest *>(d->request);
 }
 
 /*!

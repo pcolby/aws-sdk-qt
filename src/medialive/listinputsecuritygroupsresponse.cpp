@@ -55,7 +55,8 @@ ListInputSecurityGroupsResponse::ListInputSecurityGroupsResponse(
  */
 const ListInputSecurityGroupsRequest * ListInputSecurityGroupsResponse::request() const
 {
-    return static_cast<const ListInputSecurityGroupsRequest *>(MediaLiveResponse::request());
+    Q_D(const ListInputSecurityGroupsResponse);
+    return static_cast<const ListInputSecurityGroupsRequest *>(d->request);
 }
 
 /*!

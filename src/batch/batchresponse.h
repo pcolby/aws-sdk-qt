@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    BatchResponsePrivate * const d_ptr; ///< Internal d-pointer.
     BatchResponse(BatchResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

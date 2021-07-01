@@ -20,20 +20,19 @@
 #ifndef QTAWS_GLOBALACCELERATORCLIENT_P_H
 #define QTAWS_GLOBALACCELERATORCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace GlobalAccelerator {
 
 class GlobalAcceleratorClient;
 
-class GlobalAcceleratorClientPrivate {
+class GlobalAcceleratorClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit GlobalAcceleratorClientPrivate(GlobalAcceleratorClient * const q);
-
-protected:
-    GlobalAcceleratorClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(GlobalAcceleratorClient)

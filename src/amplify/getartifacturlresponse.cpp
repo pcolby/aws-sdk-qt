@@ -60,7 +60,8 @@ GetArtifactUrlResponse::GetArtifactUrlResponse(
  */
 const GetArtifactUrlRequest * GetArtifactUrlResponse::request() const
 {
-    return static_cast<const GetArtifactUrlRequest *>(AmplifyResponse::request());
+    Q_D(const GetArtifactUrlResponse);
+    return static_cast<const GetArtifactUrlRequest *>(d->request);
 }
 
 /*!

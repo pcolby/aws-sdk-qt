@@ -124,7 +124,8 @@ CancelArchivalResponse::CancelArchivalResponse(
  */
 const CancelArchivalRequest * CancelArchivalResponse::request() const
 {
-    return static_cast<const CancelArchivalRequest *>(StorageGatewayResponse::request());
+    Q_D(const CancelArchivalResponse);
+    return static_cast<const CancelArchivalRequest *>(d->request);
 }
 
 /*!

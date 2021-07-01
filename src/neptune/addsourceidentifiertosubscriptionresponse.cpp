@@ -72,7 +72,8 @@ AddSourceIdentifierToSubscriptionResponse::AddSourceIdentifierToSubscriptionResp
  */
 const AddSourceIdentifierToSubscriptionRequest * AddSourceIdentifierToSubscriptionResponse::request() const
 {
-    return static_cast<const AddSourceIdentifierToSubscriptionRequest *>(NeptuneResponse::request());
+    Q_D(const AddSourceIdentifierToSubscriptionResponse);
+    return static_cast<const AddSourceIdentifierToSubscriptionRequest *>(d->request);
 }
 
 /*!

@@ -115,7 +115,8 @@ ValidateMatchmakingRuleSetResponse::ValidateMatchmakingRuleSetResponse(
  */
 const ValidateMatchmakingRuleSetRequest * ValidateMatchmakingRuleSetResponse::request() const
 {
-    return static_cast<const ValidateMatchmakingRuleSetRequest *>(GameLiftResponse::request());
+    Q_D(const ValidateMatchmakingRuleSetResponse);
+    return static_cast<const ValidateMatchmakingRuleSetRequest *>(d->request);
 }
 
 /*!

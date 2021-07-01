@@ -56,7 +56,8 @@ DescribeDatasetImportJobResponse::DescribeDatasetImportJobResponse(
  */
 const DescribeDatasetImportJobRequest * DescribeDatasetImportJobResponse::request() const
 {
-    return static_cast<const DescribeDatasetImportJobRequest *>(PersonalizeResponse::request());
+    Q_D(const DescribeDatasetImportJobResponse);
+    return static_cast<const DescribeDatasetImportJobRequest *>(d->request);
 }
 
 /*!

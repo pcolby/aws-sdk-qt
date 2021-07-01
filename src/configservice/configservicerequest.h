@@ -144,8 +144,7 @@ public:
 
 protected:
     /// @cond internal
-    ConfigServiceRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ConfigServiceRequest(ConfigServiceRequestPrivate * const d);
+    ConfigServiceRequest(ConfigServiceRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

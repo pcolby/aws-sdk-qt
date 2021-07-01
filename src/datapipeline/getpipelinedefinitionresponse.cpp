@@ -73,7 +73,8 @@ GetPipelineDefinitionResponse::GetPipelineDefinitionResponse(
  */
 const GetPipelineDefinitionRequest * GetPipelineDefinitionResponse::request() const
 {
-    return static_cast<const GetPipelineDefinitionRequest *>(DataPipelineResponse::request());
+    Q_D(const GetPipelineDefinitionResponse);
+    return static_cast<const GetPipelineDefinitionRequest *>(d->request);
 }
 
 /*!

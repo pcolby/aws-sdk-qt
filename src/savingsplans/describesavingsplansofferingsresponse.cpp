@@ -59,7 +59,8 @@ DescribeSavingsPlansOfferingsResponse::DescribeSavingsPlansOfferingsResponse(
  */
 const DescribeSavingsPlansOfferingsRequest * DescribeSavingsPlansOfferingsResponse::request() const
 {
-    return static_cast<const DescribeSavingsPlansOfferingsRequest *>(SavingsPlansResponse::request());
+    Q_D(const DescribeSavingsPlansOfferingsResponse);
+    return static_cast<const DescribeSavingsPlansOfferingsRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ DeleteTransitGatewayPrefixListReferenceResponse::DeleteTransitGatewayPrefixListR
  */
 const DeleteTransitGatewayPrefixListReferenceRequest * DeleteTransitGatewayPrefixListReferenceResponse::request() const
 {
-    return static_cast<const DeleteTransitGatewayPrefixListReferenceRequest *>(Ec2Response::request());
+    Q_D(const DeleteTransitGatewayPrefixListReferenceResponse);
+    return static_cast<const DeleteTransitGatewayPrefixListReferenceRequest *>(d->request);
 }
 
 /*!

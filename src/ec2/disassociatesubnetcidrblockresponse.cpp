@@ -87,7 +87,8 @@ DisassociateSubnetCidrBlockResponse::DisassociateSubnetCidrBlockResponse(
  */
 const DisassociateSubnetCidrBlockRequest * DisassociateSubnetCidrBlockResponse::request() const
 {
-    return static_cast<const DisassociateSubnetCidrBlockRequest *>(Ec2Response::request());
+    Q_D(const DisassociateSubnetCidrBlockResponse);
+    return static_cast<const DisassociateSubnetCidrBlockRequest *>(d->request);
 }
 
 /*!

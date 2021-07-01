@@ -78,7 +78,8 @@ ListLoggingConfigurationsResponse::ListLoggingConfigurationsResponse(
  */
 const ListLoggingConfigurationsRequest * ListLoggingConfigurationsResponse::request() const
 {
-    return static_cast<const ListLoggingConfigurationsRequest *>(WAFRegionalResponse::request());
+    Q_D(const ListLoggingConfigurationsResponse);
+    return static_cast<const ListLoggingConfigurationsRequest *>(d->request);
 }
 
 /*!

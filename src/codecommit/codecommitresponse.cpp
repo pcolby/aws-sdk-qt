@@ -37,7 +37,7 @@ namespace CodeCommit {
  * Constructs a CodeCommitResponse object with parent \a parent.
  */
 CodeCommitResponse::CodeCommitResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CodeCommitResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CodeCommitResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CodeCommitResponse::CodeCommitResponse(QObject * const parent)
  * implementation that inherits from CodeCommitResponsePrivate.
  */
 CodeCommitResponse::CodeCommitResponse(CodeCommitResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CodeCommitResponse::parseFailure(QIODevice &response)
  * Constructs a CodeCommitResponsePrivate object with public implementation \a q.
  */
 CodeCommitResponsePrivate::CodeCommitResponsePrivate(
-    CodeCommitResponse * const q) : q_ptr(q)
+    CodeCommitResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

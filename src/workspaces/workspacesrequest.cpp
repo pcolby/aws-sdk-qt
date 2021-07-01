@@ -95,7 +95,7 @@ namespace WorkSpaces {
  * Constructs a WorkSpacesRequest object for WorkSpaces \a action.
  */
 WorkSpacesRequest::WorkSpacesRequest(const Action action)
-    : d_ptr(new WorkSpacesRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new WorkSpacesRequestPrivate(action, this))
 {
 
 }
@@ -104,8 +104,7 @@ WorkSpacesRequest::WorkSpacesRequest(const Action action)
  * Constructs a copy of \a other.
  */
 WorkSpacesRequest::WorkSpacesRequest(const WorkSpacesRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new WorkSpacesRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new WorkSpacesRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -128,7 +127,7 @@ WorkSpacesRequest& WorkSpacesRequest::operator=(const WorkSpacesRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from WorkSpacesRequestPrivate.
  */
-WorkSpacesRequest::WorkSpacesRequest(WorkSpacesRequestPrivate * const d) : d_ptr(d)
+WorkSpacesRequest::WorkSpacesRequest(WorkSpacesRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -297,7 +296,7 @@ QNetworkRequest WorkSpacesRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 WorkSpacesRequestPrivate::WorkSpacesRequestPrivate(const WorkSpacesRequest::Action action, WorkSpacesRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -312,8 +311,8 @@ WorkSpacesRequestPrivate::WorkSpacesRequestPrivate(const WorkSpacesRequest::Acti
  */
 WorkSpacesRequestPrivate::WorkSpacesRequestPrivate(const WorkSpacesRequestPrivate &other,
                                      WorkSpacesRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

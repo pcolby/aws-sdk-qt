@@ -87,7 +87,8 @@ RevokeSecurityGroupEgressResponse::RevokeSecurityGroupEgressResponse(
  */
 const RevokeSecurityGroupEgressRequest * RevokeSecurityGroupEgressResponse::request() const
 {
-    return static_cast<const RevokeSecurityGroupEgressRequest *>(Ec2Response::request());
+    Q_D(const RevokeSecurityGroupEgressResponse);
+    return static_cast<const RevokeSecurityGroupEgressRequest *>(d->request);
 }
 
 /*!

@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    MediaConvertResponsePrivate * const d_ptr; ///< Internal d-pointer.
     MediaConvertResponse(MediaConvertResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

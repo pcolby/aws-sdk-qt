@@ -20,12 +20,15 @@
 #ifndef QTAWS_SUPPORTREQUEST_P_H
 #define QTAWS_SUPPORTREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "supportrequest.h"
+
 namespace QtAws {
 namespace Support {
 
 class SupportRequest;
 
-class SupportRequestPrivate {
+class SupportRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     SupportRequest::Action action; ///< Support action to be performed.
@@ -36,9 +39,6 @@ public:
     SupportRequestPrivate(const SupportRequestPrivate &other, SupportRequest * const q);
 
     static QString toString(const SupportRequest::Action &action);
-
-protected:
-    SupportRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SupportRequest)

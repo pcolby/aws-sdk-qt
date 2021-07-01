@@ -98,7 +98,8 @@ UpdateChannelReadMarkerResponse::UpdateChannelReadMarkerResponse(
  */
 const UpdateChannelReadMarkerRequest * UpdateChannelReadMarkerResponse::request() const
 {
-    return static_cast<const UpdateChannelReadMarkerRequest *>(ChimeResponse::request());
+    Q_D(const UpdateChannelReadMarkerResponse);
+    return static_cast<const UpdateChannelReadMarkerRequest *>(d->request);
 }
 
 /*!

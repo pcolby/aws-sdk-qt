@@ -75,7 +75,8 @@ DeleteRemoteAccessSessionResponse::DeleteRemoteAccessSessionResponse(
  */
 const DeleteRemoteAccessSessionRequest * DeleteRemoteAccessSessionResponse::request() const
 {
-    return static_cast<const DeleteRemoteAccessSessionRequest *>(DeviceFarmResponse::request());
+    Q_D(const DeleteRemoteAccessSessionResponse);
+    return static_cast<const DeleteRemoteAccessSessionRequest *>(d->request);
 }
 
 /*!

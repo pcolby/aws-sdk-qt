@@ -58,7 +58,8 @@ DeleteDetectorVersionResponse::DeleteDetectorVersionResponse(
  */
 const DeleteDetectorVersionRequest * DeleteDetectorVersionResponse::request() const
 {
-    return static_cast<const DeleteDetectorVersionRequest *>(FraudDetectorResponse::request());
+    Q_D(const DeleteDetectorVersionResponse);
+    return static_cast<const DeleteDetectorVersionRequest *>(d->request);
 }
 
 /*!

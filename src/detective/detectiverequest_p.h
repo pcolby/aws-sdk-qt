@@ -20,12 +20,15 @@
 #ifndef QTAWS_DETECTIVEREQUEST_P_H
 #define QTAWS_DETECTIVEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "detectiverequest.h"
+
 namespace QtAws {
 namespace Detective {
 
 class DetectiveRequest;
 
-class DetectiveRequestPrivate {
+class DetectiveRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     DetectiveRequest::Action action; ///< Detective action to be performed.
@@ -36,9 +39,6 @@ public:
     DetectiveRequestPrivate(const DetectiveRequestPrivate &other, DetectiveRequest * const q);
 
     static QString toString(const DetectiveRequest::Action &action);
-
-protected:
-    DetectiveRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DetectiveRequest)

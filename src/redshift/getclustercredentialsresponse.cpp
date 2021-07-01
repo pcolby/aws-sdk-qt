@@ -85,7 +85,8 @@ GetClusterCredentialsResponse::GetClusterCredentialsResponse(
  */
 const GetClusterCredentialsRequest * GetClusterCredentialsResponse::request() const
 {
-    return static_cast<const GetClusterCredentialsRequest *>(RedshiftResponse::request());
+    Q_D(const GetClusterCredentialsResponse);
+    return static_cast<const GetClusterCredentialsRequest *>(d->request);
 }
 
 /*!

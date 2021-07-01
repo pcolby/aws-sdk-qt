@@ -110,8 +110,7 @@ public:
 
 protected:
     /// @cond internal
-    EcsRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit EcsRequest(EcsRequestPrivate * const d);
+    EcsRequest(EcsRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -91,7 +91,8 @@ AbortVaultLockResponse::AbortVaultLockResponse(
  */
 const AbortVaultLockRequest * AbortVaultLockResponse::request() const
 {
-    return static_cast<const AbortVaultLockRequest *>(GlacierResponse::request());
+    Q_D(const AbortVaultLockResponse);
+    return static_cast<const AbortVaultLockRequest *>(d->request);
 }
 
 /*!

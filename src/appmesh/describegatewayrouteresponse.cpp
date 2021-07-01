@@ -73,7 +73,8 @@ DescribeGatewayRouteResponse::DescribeGatewayRouteResponse(
  */
 const DescribeGatewayRouteRequest * DescribeGatewayRouteResponse::request() const
 {
-    return static_cast<const DescribeGatewayRouteRequest *>(AppMeshResponse::request());
+    Q_D(const DescribeGatewayRouteResponse);
+    return static_cast<const DescribeGatewayRouteRequest *>(d->request);
 }
 
 /*!

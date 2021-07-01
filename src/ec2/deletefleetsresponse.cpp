@@ -87,7 +87,8 @@ DeleteFleetsResponse::DeleteFleetsResponse(
  */
 const DeleteFleetsRequest * DeleteFleetsResponse::request() const
 {
-    return static_cast<const DeleteFleetsRequest *>(Ec2Response::request());
+    Q_D(const DeleteFleetsResponse);
+    return static_cast<const DeleteFleetsRequest *>(d->request);
 }
 
 /*!

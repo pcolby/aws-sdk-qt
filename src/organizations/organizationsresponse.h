@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    OrganizationsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     OrganizationsResponse(OrganizationsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

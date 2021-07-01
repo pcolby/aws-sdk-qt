@@ -114,16 +114,16 @@ XRayClient::XRayClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-04-12"),
-    QStringLiteral("xray"),
-    QStringLiteral("AWS X-Ray"),
-    QStringLiteral("xray"),
-    parent), d_ptr(new XRayClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new XRayClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(XRayClient);
+    d->apiVersion = QStringLiteral("2016-04-12");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("xray");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS X-Ray");
+    d->serviceName = QStringLiteral("xray");
 }
 
 /*!
@@ -142,16 +142,16 @@ XRayClient::XRayClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2016-04-12"),
-    QStringLiteral("xray"),
-    QStringLiteral("AWS X-Ray"),
-    QStringLiteral("xray"),
-    parent), d_ptr(new XRayClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new XRayClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(XRayClient);
+    d->apiVersion = QStringLiteral("2016-04-12");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("xray");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS X-Ray");
+    d->serviceName = QStringLiteral("xray");
 }
 
 /*!
@@ -612,9 +612,10 @@ UpdateSamplingRuleResponse * XRayClient::updateSamplingRule(const UpdateSampling
 /*!
  * Constructs a XRayClientPrivate object with public implementation \a q.
  */
-XRayClientPrivate::XRayClientPrivate(XRayClient * const q) : q_ptr(q)
+XRayClientPrivate::XRayClientPrivate(XRayClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace XRay

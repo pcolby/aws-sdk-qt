@@ -58,7 +58,8 @@ DeleteTableVersionResponse::DeleteTableVersionResponse(
  */
 const DeleteTableVersionRequest * DeleteTableVersionResponse::request() const
 {
-    return static_cast<const DeleteTableVersionRequest *>(GlueResponse::request());
+    Q_D(const DeleteTableVersionResponse);
+    return static_cast<const DeleteTableVersionRequest *>(d->request);
 }
 
 /*!

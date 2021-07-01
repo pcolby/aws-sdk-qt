@@ -66,7 +66,8 @@ RevokeTokenResponse::RevokeTokenResponse(
  */
 const RevokeTokenRequest * RevokeTokenResponse::request() const
 {
-    return static_cast<const RevokeTokenRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const RevokeTokenResponse);
+    return static_cast<const RevokeTokenRequest *>(d->request);
 }
 
 /*!

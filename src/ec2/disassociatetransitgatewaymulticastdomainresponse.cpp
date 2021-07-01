@@ -87,7 +87,8 @@ DisassociateTransitGatewayMulticastDomainResponse::DisassociateTransitGatewayMul
  */
 const DisassociateTransitGatewayMulticastDomainRequest * DisassociateTransitGatewayMulticastDomainResponse::request() const
 {
-    return static_cast<const DisassociateTransitGatewayMulticastDomainRequest *>(Ec2Response::request());
+    Q_D(const DisassociateTransitGatewayMulticastDomainResponse);
+    return static_cast<const DisassociateTransitGatewayMulticastDomainRequest *>(d->request);
 }
 
 /*!

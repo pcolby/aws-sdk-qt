@@ -240,7 +240,8 @@ UpdateActionTypeResponse::UpdateActionTypeResponse(
  */
 const UpdateActionTypeRequest * UpdateActionTypeResponse::request() const
 {
-    return static_cast<const UpdateActionTypeRequest *>(CodePipelineResponse::request());
+    Q_D(const UpdateActionTypeResponse);
+    return static_cast<const UpdateActionTypeRequest *>(d->request);
 }
 
 /*!

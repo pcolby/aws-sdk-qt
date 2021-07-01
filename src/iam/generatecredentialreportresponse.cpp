@@ -62,7 +62,8 @@ GenerateCredentialReportResponse::GenerateCredentialReportResponse(
  */
 const GenerateCredentialReportRequest * GenerateCredentialReportResponse::request() const
 {
-    return static_cast<const GenerateCredentialReportRequest *>(IamResponse::request());
+    Q_D(const GenerateCredentialReportResponse);
+    return static_cast<const GenerateCredentialReportRequest *>(d->request);
 }
 
 /*!

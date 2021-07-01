@@ -119,7 +119,7 @@ namespace DeviceFarm {
  * Constructs a DeviceFarmRequest object for DeviceFarm \a action.
  */
 DeviceFarmRequest::DeviceFarmRequest(const Action action)
-    : d_ptr(new DeviceFarmRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DeviceFarmRequestPrivate(action, this))
 {
 
 }
@@ -128,8 +128,7 @@ DeviceFarmRequest::DeviceFarmRequest(const Action action)
  * Constructs a copy of \a other.
  */
 DeviceFarmRequest::DeviceFarmRequest(const DeviceFarmRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new DeviceFarmRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DeviceFarmRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -152,7 +151,7 @@ DeviceFarmRequest& DeviceFarmRequest::operator=(const DeviceFarmRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DeviceFarmRequestPrivate.
  */
-DeviceFarmRequest::DeviceFarmRequest(DeviceFarmRequestPrivate * const d) : d_ptr(d)
+DeviceFarmRequest::DeviceFarmRequest(DeviceFarmRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -321,7 +320,7 @@ QNetworkRequest DeviceFarmRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequest::Action action, DeviceFarmRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -336,8 +335,8 @@ DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequest::Acti
  */
 DeviceFarmRequestPrivate::DeviceFarmRequestPrivate(const DeviceFarmRequestPrivate &other,
                                      DeviceFarmRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

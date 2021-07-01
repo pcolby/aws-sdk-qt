@@ -293,7 +293,8 @@ ListPackageVersionAssetsResponse::ListPackageVersionAssetsResponse(
  */
 const ListPackageVersionAssetsRequest * ListPackageVersionAssetsResponse::request() const
 {
-    return static_cast<const ListPackageVersionAssetsRequest *>(CodeArtifactResponse::request());
+    Q_D(const ListPackageVersionAssetsResponse);
+    return static_cast<const ListPackageVersionAssetsRequest *>(d->request);
 }
 
 /*!

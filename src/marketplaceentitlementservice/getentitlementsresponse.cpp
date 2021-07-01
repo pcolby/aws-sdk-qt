@@ -72,7 +72,8 @@ GetEntitlementsResponse::GetEntitlementsResponse(
  */
 const GetEntitlementsRequest * GetEntitlementsResponse::request() const
 {
-    return static_cast<const GetEntitlementsRequest *>(MarketplaceEntitlementServiceResponse::request());
+    Q_D(const GetEntitlementsResponse);
+    return static_cast<const GetEntitlementsRequest *>(d->request);
 }
 
 /*!

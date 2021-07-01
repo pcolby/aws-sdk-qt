@@ -71,7 +71,8 @@ SearchProfilesResponse::SearchProfilesResponse(
  */
 const SearchProfilesRequest * SearchProfilesResponse::request() const
 {
-    return static_cast<const SearchProfilesRequest *>(CustomerProfilesResponse::request());
+    Q_D(const SearchProfilesResponse);
+    return static_cast<const SearchProfilesRequest *>(d->request);
 }
 
 /*!

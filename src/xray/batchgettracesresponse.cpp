@@ -56,7 +56,8 @@ BatchGetTracesResponse::BatchGetTracesResponse(
  */
 const BatchGetTracesRequest * BatchGetTracesResponse::request() const
 {
-    return static_cast<const BatchGetTracesRequest *>(XRayResponse::request());
+    Q_D(const BatchGetTracesResponse);
+    return static_cast<const BatchGetTracesRequest *>(d->request);
 }
 
 /*!

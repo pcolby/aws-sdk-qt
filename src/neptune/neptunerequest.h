@@ -121,8 +121,7 @@ public:
 
 protected:
     /// @cond internal
-    NeptuneRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit NeptuneRequest(NeptuneRequestPrivate * const d);
+    NeptuneRequest(NeptuneRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

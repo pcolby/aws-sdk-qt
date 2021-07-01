@@ -87,7 +87,8 @@ DescribeLocalGatewayRouteTablesResponse::DescribeLocalGatewayRouteTablesResponse
  */
 const DescribeLocalGatewayRouteTablesRequest * DescribeLocalGatewayRouteTablesResponse::request() const
 {
-    return static_cast<const DescribeLocalGatewayRouteTablesRequest *>(Ec2Response::request());
+    Q_D(const DescribeLocalGatewayRouteTablesResponse);
+    return static_cast<const DescribeLocalGatewayRouteTablesRequest *>(d->request);
 }
 
 /*!

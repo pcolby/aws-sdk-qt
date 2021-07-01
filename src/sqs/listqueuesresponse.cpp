@@ -126,7 +126,8 @@ ListQueuesResponse::ListQueuesResponse(
  */
 const ListQueuesRequest * ListQueuesResponse::request() const
 {
-    return static_cast<const ListQueuesRequest *>(SqsResponse::request());
+    Q_D(const ListQueuesResponse);
+    return static_cast<const ListQueuesRequest *>(d->request);
 }
 
 /*!

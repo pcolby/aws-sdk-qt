@@ -98,7 +98,8 @@ ListMeetingsResponse::ListMeetingsResponse(
  */
 const ListMeetingsRequest * ListMeetingsResponse::request() const
 {
-    return static_cast<const ListMeetingsRequest *>(ChimeResponse::request());
+    Q_D(const ListMeetingsResponse);
+    return static_cast<const ListMeetingsRequest *>(d->request);
 }
 
 /*!

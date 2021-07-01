@@ -79,7 +79,8 @@ DisassociateSecurityKeyResponse::DisassociateSecurityKeyResponse(
  */
 const DisassociateSecurityKeyRequest * DisassociateSecurityKeyResponse::request() const
 {
-    return static_cast<const DisassociateSecurityKeyRequest *>(ConnectResponse::request());
+    Q_D(const DisassociateSecurityKeyResponse);
+    return static_cast<const DisassociateSecurityKeyRequest *>(d->request);
 }
 
 /*!

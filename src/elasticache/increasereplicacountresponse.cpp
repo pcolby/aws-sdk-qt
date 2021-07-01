@@ -69,7 +69,8 @@ IncreaseReplicaCountResponse::IncreaseReplicaCountResponse(
  */
 const IncreaseReplicaCountRequest * IncreaseReplicaCountResponse::request() const
 {
-    return static_cast<const IncreaseReplicaCountRequest *>(ElastiCacheResponse::request());
+    Q_D(const IncreaseReplicaCountResponse);
+    return static_cast<const IncreaseReplicaCountRequest *>(d->request);
 }
 
 /*!

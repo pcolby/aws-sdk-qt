@@ -37,7 +37,7 @@ namespace CodeStar {
  * Constructs a CodeStarResponse object with parent \a parent.
  */
 CodeStarResponse::CodeStarResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CodeStarResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CodeStarResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CodeStarResponse::CodeStarResponse(QObject * const parent)
  * implementation that inherits from CodeStarResponsePrivate.
  */
 CodeStarResponse::CodeStarResponse(CodeStarResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CodeStarResponse::parseFailure(QIODevice &response)
  * Constructs a CodeStarResponsePrivate object with public implementation \a q.
  */
 CodeStarResponsePrivate::CodeStarResponsePrivate(
-    CodeStarResponse * const q) : q_ptr(q)
+    CodeStarResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

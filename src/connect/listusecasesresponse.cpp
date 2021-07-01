@@ -79,7 +79,8 @@ ListUseCasesResponse::ListUseCasesResponse(
  */
 const ListUseCasesRequest * ListUseCasesResponse::request() const
 {
-    return static_cast<const ListUseCasesRequest *>(ConnectResponse::request());
+    Q_D(const ListUseCasesResponse);
+    return static_cast<const ListUseCasesRequest *>(d->request);
 }
 
 /*!

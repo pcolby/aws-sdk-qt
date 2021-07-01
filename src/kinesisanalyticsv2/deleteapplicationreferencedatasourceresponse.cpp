@@ -58,7 +58,8 @@ DeleteApplicationReferenceDataSourceResponse::DeleteApplicationReferenceDataSour
  */
 const DeleteApplicationReferenceDataSourceRequest * DeleteApplicationReferenceDataSourceResponse::request() const
 {
-    return static_cast<const DeleteApplicationReferenceDataSourceRequest *>(KinesisAnalyticsV2Response::request());
+    Q_D(const DeleteApplicationReferenceDataSourceResponse);
+    return static_cast<const DeleteApplicationReferenceDataSourceRequest *>(d->request);
 }
 
 /*!

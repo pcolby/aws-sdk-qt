@@ -68,7 +68,8 @@ PutScalingPolicyResponse::PutScalingPolicyResponse(
  */
 const PutScalingPolicyRequest * PutScalingPolicyResponse::request() const
 {
-    return static_cast<const PutScalingPolicyRequest *>(AutoScalingResponse::request());
+    Q_D(const PutScalingPolicyResponse);
+    return static_cast<const PutScalingPolicyRequest *>(d->request);
 }
 
 /*!

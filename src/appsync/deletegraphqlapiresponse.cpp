@@ -56,7 +56,8 @@ DeleteGraphqlApiResponse::DeleteGraphqlApiResponse(
  */
 const DeleteGraphqlApiRequest * DeleteGraphqlApiResponse::request() const
 {
-    return static_cast<const DeleteGraphqlApiRequest *>(AppSyncResponse::request());
+    Q_D(const DeleteGraphqlApiResponse);
+    return static_cast<const DeleteGraphqlApiRequest *>(d->request);
 }
 
 /*!

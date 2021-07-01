@@ -66,12 +66,6 @@ public slots:
     ExecuteStatementResponse * executeStatement(const ExecuteStatementRequest &request);
     RollbackTransactionResponse * rollbackTransaction(const RollbackTransactionRequest &request);
 
-protected:
-    /// @cond internal
-    RDSDataServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit RDSDataServiceClient(RDSDataServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(RDSDataServiceClient)
     Q_DISABLE_COPY(RDSDataServiceClient)

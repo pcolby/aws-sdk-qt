@@ -56,7 +56,8 @@ BatchDeleteGeofenceResponse::BatchDeleteGeofenceResponse(
  */
 const BatchDeleteGeofenceRequest * BatchDeleteGeofenceResponse::request() const
 {
-    return static_cast<const BatchDeleteGeofenceRequest *>(LocationServiceResponse::request());
+    Q_D(const BatchDeleteGeofenceResponse);
+    return static_cast<const BatchDeleteGeofenceRequest *>(d->request);
 }
 
 /*!

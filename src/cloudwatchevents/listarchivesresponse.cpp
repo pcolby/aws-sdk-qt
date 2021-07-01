@@ -78,7 +78,8 @@ ListArchivesResponse::ListArchivesResponse(
  */
 const ListArchivesRequest * ListArchivesResponse::request() const
 {
-    return static_cast<const ListArchivesRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const ListArchivesResponse);
+    return static_cast<const ListArchivesRequest *>(d->request);
 }
 
 /*!

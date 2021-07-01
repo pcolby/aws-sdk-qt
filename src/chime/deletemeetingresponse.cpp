@@ -98,7 +98,8 @@ DeleteMeetingResponse::DeleteMeetingResponse(
  */
 const DeleteMeetingRequest * DeleteMeetingResponse::request() const
 {
-    return static_cast<const DeleteMeetingRequest *>(ChimeResponse::request());
+    Q_D(const DeleteMeetingResponse);
+    return static_cast<const DeleteMeetingRequest *>(d->request);
 }
 
 /*!

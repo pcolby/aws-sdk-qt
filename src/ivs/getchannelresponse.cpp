@@ -385,7 +385,8 @@ GetChannelResponse::GetChannelResponse(
  */
 const GetChannelRequest * GetChannelResponse::request() const
 {
-    return static_cast<const GetChannelRequest *>(IvsResponse::request());
+    Q_D(const GetChannelResponse);
+    return static_cast<const GetChannelRequest *>(d->request);
 }
 
 /*!

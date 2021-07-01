@@ -58,7 +58,8 @@ ReadPresetResponse::ReadPresetResponse(
  */
 const ReadPresetRequest * ReadPresetResponse::request() const
 {
-    return static_cast<const ReadPresetRequest *>(ElasticTranscoderResponse::request());
+    Q_D(const ReadPresetResponse);
+    return static_cast<const ReadPresetRequest *>(d->request);
 }
 
 /*!

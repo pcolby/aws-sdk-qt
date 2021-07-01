@@ -130,8 +130,7 @@ public:
 
 protected:
     /// @cond internal
-    ApiGatewayV2RequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ApiGatewayV2Request(ApiGatewayV2RequestPrivate * const d);
+    ApiGatewayV2Request(ApiGatewayV2RequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

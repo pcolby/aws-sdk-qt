@@ -72,7 +72,8 @@ UpgradeElasticsearchDomainResponse::UpgradeElasticsearchDomainResponse(
  */
 const UpgradeElasticsearchDomainRequest * UpgradeElasticsearchDomainResponse::request() const
 {
-    return static_cast<const UpgradeElasticsearchDomainRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const UpgradeElasticsearchDomainResponse);
+    return static_cast<const UpgradeElasticsearchDomainRequest *>(d->request);
 }
 
 /*!

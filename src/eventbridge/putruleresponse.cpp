@@ -78,7 +78,8 @@ PutRuleResponse::PutRuleResponse(
  */
 const PutRuleRequest * PutRuleResponse::request() const
 {
-    return static_cast<const PutRuleRequest *>(EventBridgeResponse::request());
+    Q_D(const PutRuleResponse);
+    return static_cast<const PutRuleRequest *>(d->request);
 }
 
 /*!

@@ -87,7 +87,8 @@ ModifyEbsDefaultKmsKeyIdResponse::ModifyEbsDefaultKmsKeyIdResponse(
  */
 const ModifyEbsDefaultKmsKeyIdRequest * ModifyEbsDefaultKmsKeyIdResponse::request() const
 {
-    return static_cast<const ModifyEbsDefaultKmsKeyIdRequest *>(Ec2Response::request());
+    Q_D(const ModifyEbsDefaultKmsKeyIdResponse);
+    return static_cast<const ModifyEbsDefaultKmsKeyIdRequest *>(d->request);
 }
 
 /*!

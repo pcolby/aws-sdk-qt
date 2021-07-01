@@ -56,7 +56,8 @@ CreateDataSourceResponse::CreateDataSourceResponse(
  */
 const CreateDataSourceRequest * CreateDataSourceResponse::request() const
 {
-    return static_cast<const CreateDataSourceRequest *>(kendraResponse::request());
+    Q_D(const CreateDataSourceResponse);
+    return static_cast<const CreateDataSourceRequest *>(d->request);
 }
 
 /*!

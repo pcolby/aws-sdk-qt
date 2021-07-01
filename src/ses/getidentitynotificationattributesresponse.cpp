@@ -66,7 +66,8 @@ GetIdentityNotificationAttributesResponse::GetIdentityNotificationAttributesResp
  */
 const GetIdentityNotificationAttributesRequest * GetIdentityNotificationAttributesResponse::request() const
 {
-    return static_cast<const GetIdentityNotificationAttributesRequest *>(SesResponse::request());
+    Q_D(const GetIdentityNotificationAttributesResponse);
+    return static_cast<const GetIdentityNotificationAttributesRequest *>(d->request);
 }
 
 /*!

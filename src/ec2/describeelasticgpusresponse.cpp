@@ -87,7 +87,8 @@ DescribeElasticGpusResponse::DescribeElasticGpusResponse(
  */
 const DescribeElasticGpusRequest * DescribeElasticGpusResponse::request() const
 {
-    return static_cast<const DescribeElasticGpusRequest *>(Ec2Response::request());
+    Q_D(const DescribeElasticGpusResponse);
+    return static_cast<const DescribeElasticGpusRequest *>(d->request);
 }
 
 /*!

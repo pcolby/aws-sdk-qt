@@ -98,7 +98,8 @@ CreateSipMediaApplicationCallResponse::CreateSipMediaApplicationCallResponse(
  */
 const CreateSipMediaApplicationCallRequest * CreateSipMediaApplicationCallResponse::request() const
 {
-    return static_cast<const CreateSipMediaApplicationCallRequest *>(ChimeResponse::request());
+    Q_D(const CreateSipMediaApplicationCallResponse);
+    return static_cast<const CreateSipMediaApplicationCallRequest *>(d->request);
 }
 
 /*!

@@ -57,7 +57,8 @@ PutContainerPolicyResponse::PutContainerPolicyResponse(
  */
 const PutContainerPolicyRequest * PutContainerPolicyResponse::request() const
 {
-    return static_cast<const PutContainerPolicyRequest *>(MediaStoreResponse::request());
+    Q_D(const PutContainerPolicyResponse);
+    return static_cast<const PutContainerPolicyRequest *>(d->request);
 }
 
 /*!

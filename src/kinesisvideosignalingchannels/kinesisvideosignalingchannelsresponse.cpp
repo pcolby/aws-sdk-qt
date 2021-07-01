@@ -37,7 +37,7 @@ namespace KinesisVideoSignalingChannels {
  * Constructs a KinesisVideoSignalingChannelsResponse object with parent \a parent.
  */
 KinesisVideoSignalingChannelsResponse::KinesisVideoSignalingChannelsResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new KinesisVideoSignalingChannelsResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new KinesisVideoSignalingChannelsResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ KinesisVideoSignalingChannelsResponse::KinesisVideoSignalingChannelsResponse(QOb
  * implementation that inherits from KinesisVideoSignalingChannelsResponsePrivate.
  */
 KinesisVideoSignalingChannelsResponse::KinesisVideoSignalingChannelsResponse(KinesisVideoSignalingChannelsResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void KinesisVideoSignalingChannelsResponse::parseFailure(QIODevice &response)
  * Constructs a KinesisVideoSignalingChannelsResponsePrivate object with public implementation \a q.
  */
 KinesisVideoSignalingChannelsResponsePrivate::KinesisVideoSignalingChannelsResponsePrivate(
-    KinesisVideoSignalingChannelsResponse * const q) : q_ptr(q)
+    KinesisVideoSignalingChannelsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

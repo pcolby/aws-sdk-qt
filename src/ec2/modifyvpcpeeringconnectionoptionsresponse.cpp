@@ -87,7 +87,8 @@ ModifyVpcPeeringConnectionOptionsResponse::ModifyVpcPeeringConnectionOptionsResp
  */
 const ModifyVpcPeeringConnectionOptionsRequest * ModifyVpcPeeringConnectionOptionsResponse::request() const
 {
-    return static_cast<const ModifyVpcPeeringConnectionOptionsRequest *>(Ec2Response::request());
+    Q_D(const ModifyVpcPeeringConnectionOptionsResponse);
+    return static_cast<const ModifyVpcPeeringConnectionOptionsRequest *>(d->request);
 }
 
 /*!

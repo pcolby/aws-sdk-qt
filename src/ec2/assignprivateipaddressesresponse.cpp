@@ -87,7 +87,8 @@ AssignPrivateIpAddressesResponse::AssignPrivateIpAddressesResponse(
  */
 const AssignPrivateIpAddressesRequest * AssignPrivateIpAddressesResponse::request() const
 {
-    return static_cast<const AssignPrivateIpAddressesRequest *>(Ec2Response::request());
+    Q_D(const AssignPrivateIpAddressesResponse);
+    return static_cast<const AssignPrivateIpAddressesRequest *>(d->request);
 }
 
 /*!

@@ -77,7 +77,8 @@ DescribeAccountLimitsResponse::DescribeAccountLimitsResponse(
  */
 const DescribeAccountLimitsRequest * DescribeAccountLimitsResponse::request() const
 {
-    return static_cast<const DescribeAccountLimitsRequest *>(CloudFormationResponse::request());
+    Q_D(const DescribeAccountLimitsResponse);
+    return static_cast<const DescribeAccountLimitsRequest *>(d->request);
 }
 
 /*!

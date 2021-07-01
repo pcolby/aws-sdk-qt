@@ -57,7 +57,8 @@ ModifyClusterResponse::ModifyClusterResponse(
  */
 const ModifyClusterRequest * ModifyClusterResponse::request() const
 {
-    return static_cast<const ModifyClusterRequest *>(CloudHSMV2Response::request());
+    Q_D(const ModifyClusterResponse);
+    return static_cast<const ModifyClusterRequest *>(d->request);
 }
 
 /*!

@@ -114,12 +114,6 @@ public slots:
     UpdateDataSetResponse * updateDataSet(const UpdateDataSetRequest &request);
     UpdateRevisionResponse * updateRevision(const UpdateRevisionRequest &request);
 
-protected:
-    /// @cond internal
-    DataExchangeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit DataExchangeClient(DataExchangeClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(DataExchangeClient)
     Q_DISABLE_COPY(DataExchangeClient)

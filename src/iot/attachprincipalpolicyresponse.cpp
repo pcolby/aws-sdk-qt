@@ -82,7 +82,8 @@ AttachPrincipalPolicyResponse::AttachPrincipalPolicyResponse(
  */
 const AttachPrincipalPolicyRequest * AttachPrincipalPolicyResponse::request() const
 {
-    return static_cast<const AttachPrincipalPolicyRequest *>(IoTResponse::request());
+    Q_D(const AttachPrincipalPolicyResponse);
+    return static_cast<const AttachPrincipalPolicyRequest *>(d->request);
 }
 
 /*!

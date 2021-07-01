@@ -70,7 +70,8 @@ ListModelPackageGroupsResponse::ListModelPackageGroupsResponse(
  */
 const ListModelPackageGroupsRequest * ListModelPackageGroupsResponse::request() const
 {
-    return static_cast<const ListModelPackageGroupsRequest *>(SageMakerResponse::request());
+    Q_D(const ListModelPackageGroupsResponse);
+    return static_cast<const ListModelPackageGroupsRequest *>(d->request);
 }
 
 /*!

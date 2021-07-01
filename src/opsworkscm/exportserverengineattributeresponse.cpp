@@ -134,7 +134,8 @@ ExportServerEngineAttributeResponse::ExportServerEngineAttributeResponse(
  */
 const ExportServerEngineAttributeRequest * ExportServerEngineAttributeResponse::request() const
 {
-    return static_cast<const ExportServerEngineAttributeRequest *>(OpsWorksCMResponse::request());
+    Q_D(const ExportServerEngineAttributeResponse);
+    return static_cast<const ExportServerEngineAttributeRequest *>(d->request);
 }
 
 /*!

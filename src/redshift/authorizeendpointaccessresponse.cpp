@@ -85,7 +85,8 @@ AuthorizeEndpointAccessResponse::AuthorizeEndpointAccessResponse(
  */
 const AuthorizeEndpointAccessRequest * AuthorizeEndpointAccessResponse::request() const
 {
-    return static_cast<const AuthorizeEndpointAccessRequest *>(RedshiftResponse::request());
+    Q_D(const AuthorizeEndpointAccessResponse);
+    return static_cast<const AuthorizeEndpointAccessRequest *>(d->request);
 }
 
 /*!

@@ -81,7 +81,8 @@ ListAssociatedStacksResponse::ListAssociatedStacksResponse(
  */
 const ListAssociatedStacksRequest * ListAssociatedStacksResponse::request() const
 {
-    return static_cast<const ListAssociatedStacksRequest *>(AppStreamResponse::request());
+    Q_D(const ListAssociatedStacksResponse);
+    return static_cast<const ListAssociatedStacksRequest *>(d->request);
 }
 
 /*!

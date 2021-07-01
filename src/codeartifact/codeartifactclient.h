@@ -150,12 +150,6 @@ public slots:
     UpdatePackageVersionsStatusResponse * updatePackageVersionsStatus(const UpdatePackageVersionsStatusRequest &request);
     UpdateRepositoryResponse * updateRepository(const UpdateRepositoryRequest &request);
 
-protected:
-    /// @cond internal
-    CodeArtifactClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CodeArtifactClient(CodeArtifactClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(CodeArtifactClient)
     Q_DISABLE_COPY(CodeArtifactClient)

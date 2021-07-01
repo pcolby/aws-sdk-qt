@@ -351,12 +351,6 @@ public slots:
     VerifySoftwareTokenResponse * verifySoftwareToken(const VerifySoftwareTokenRequest &request);
     VerifyUserAttributeResponse * verifyUserAttribute(const VerifyUserAttributeRequest &request);
 
-protected:
-    /// @cond internal
-    CognitoIdentityProviderClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CognitoIdentityProviderClient(CognitoIdentityProviderClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(CognitoIdentityProviderClient)
     Q_DISABLE_COPY(CognitoIdentityProviderClient)

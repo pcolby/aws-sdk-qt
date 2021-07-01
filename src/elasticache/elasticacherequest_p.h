@@ -20,12 +20,15 @@
 #ifndef QTAWS_ELASTICACHEREQUEST_P_H
 #define QTAWS_ELASTICACHEREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "elasticacherequest.h"
+
 namespace QtAws {
 namespace ElastiCache {
 
 class ElastiCacheRequest;
 
-class ElastiCacheRequestPrivate {
+class ElastiCacheRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     ElastiCacheRequest::Action action; ///< ElastiCache action to be performed.
@@ -36,9 +39,6 @@ public:
     ElastiCacheRequestPrivate(const ElastiCacheRequestPrivate &other, ElastiCacheRequest * const q);
 
     static QString toString(const ElastiCacheRequest::Action &action);
-
-protected:
-    ElastiCacheRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElastiCacheRequest)

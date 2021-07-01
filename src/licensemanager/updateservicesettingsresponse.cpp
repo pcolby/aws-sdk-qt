@@ -59,7 +59,8 @@ UpdateServiceSettingsResponse::UpdateServiceSettingsResponse(
  */
 const UpdateServiceSettingsRequest * UpdateServiceSettingsResponse::request() const
 {
-    return static_cast<const UpdateServiceSettingsRequest *>(LicenseManagerResponse::request());
+    Q_D(const UpdateServiceSettingsResponse);
+    return static_cast<const UpdateServiceSettingsRequest *>(d->request);
 }
 
 /*!

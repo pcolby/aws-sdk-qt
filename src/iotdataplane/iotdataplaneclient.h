@@ -63,12 +63,6 @@ public slots:
     PublishResponse * publish(const PublishRequest &request);
     UpdateThingShadowResponse * updateThingShadow(const UpdateThingShadowRequest &request);
 
-protected:
-    /// @cond internal
-    IoTDataPlaneClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IoTDataPlaneClient(IoTDataPlaneClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(IoTDataPlaneClient)
     Q_DISABLE_COPY(IoTDataPlaneClient)

@@ -66,7 +66,8 @@ ListTagsResponse::ListTagsResponse(
  */
 const ListTagsRequest * ListTagsResponse::request() const
 {
-    return static_cast<const ListTagsRequest *>(LambdaResponse::request());
+    Q_D(const ListTagsResponse);
+    return static_cast<const ListTagsRequest *>(d->request);
 }
 
 /*!

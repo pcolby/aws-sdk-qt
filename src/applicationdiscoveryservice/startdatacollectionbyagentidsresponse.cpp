@@ -159,7 +159,8 @@ StartDataCollectionByAgentIdsResponse::StartDataCollectionByAgentIdsResponse(
  */
 const StartDataCollectionByAgentIdsRequest * StartDataCollectionByAgentIdsResponse::request() const
 {
-    return static_cast<const StartDataCollectionByAgentIdsRequest *>(ApplicationDiscoveryServiceResponse::request());
+    Q_D(const StartDataCollectionByAgentIdsResponse);
+    return static_cast<const StartDataCollectionByAgentIdsRequest *>(d->request);
 }
 
 /*!

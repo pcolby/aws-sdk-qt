@@ -103,7 +103,8 @@ CreateActionTargetResponse::CreateActionTargetResponse(
  */
 const CreateActionTargetRequest * CreateActionTargetResponse::request() const
 {
-    return static_cast<const CreateActionTargetRequest *>(SecurityHubResponse::request());
+    Q_D(const CreateActionTargetResponse);
+    return static_cast<const CreateActionTargetRequest *>(d->request);
 }
 
 /*!

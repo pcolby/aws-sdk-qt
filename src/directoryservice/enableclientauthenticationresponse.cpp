@@ -69,7 +69,8 @@ EnableClientAuthenticationResponse::EnableClientAuthenticationResponse(
  */
 const EnableClientAuthenticationRequest * EnableClientAuthenticationResponse::request() const
 {
-    return static_cast<const EnableClientAuthenticationRequest *>(DirectoryServiceResponse::request());
+    Q_D(const EnableClientAuthenticationResponse);
+    return static_cast<const EnableClientAuthenticationRequest *>(d->request);
 }
 
 /*!

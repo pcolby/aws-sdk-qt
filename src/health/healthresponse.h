@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    HealthResponsePrivate * const d_ptr; ///< Internal d-pointer.
     HealthResponse(HealthResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

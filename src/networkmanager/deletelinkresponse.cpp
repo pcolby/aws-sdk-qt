@@ -62,7 +62,8 @@ DeleteLinkResponse::DeleteLinkResponse(
  */
 const DeleteLinkRequest * DeleteLinkResponse::request() const
 {
-    return static_cast<const DeleteLinkRequest *>(NetworkManagerResponse::request());
+    Q_D(const DeleteLinkResponse);
+    return static_cast<const DeleteLinkRequest *>(d->request);
 }
 
 /*!

@@ -20,20 +20,19 @@
 #ifndef QTAWS_DIRECTORYSERVICECLIENT_P_H
 #define QTAWS_DIRECTORYSERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace DirectoryService {
 
 class DirectoryServiceClient;
 
-class DirectoryServiceClientPrivate {
+class DirectoryServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit DirectoryServiceClientPrivate(DirectoryServiceClient * const q);
-
-protected:
-    DirectoryServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(DirectoryServiceClient)

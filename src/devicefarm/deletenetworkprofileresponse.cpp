@@ -75,7 +75,8 @@ DeleteNetworkProfileResponse::DeleteNetworkProfileResponse(
  */
 const DeleteNetworkProfileRequest * DeleteNetworkProfileResponse::request() const
 {
-    return static_cast<const DeleteNetworkProfileRequest *>(DeviceFarmResponse::request());
+    Q_D(const DeleteNetworkProfileResponse);
+    return static_cast<const DeleteNetworkProfileRequest *>(d->request);
 }
 
 /*!

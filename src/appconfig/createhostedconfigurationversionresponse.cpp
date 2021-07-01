@@ -105,7 +105,8 @@ CreateHostedConfigurationVersionResponse::CreateHostedConfigurationVersionRespon
  */
 const CreateHostedConfigurationVersionRequest * CreateHostedConfigurationVersionResponse::request() const
 {
-    return static_cast<const CreateHostedConfigurationVersionRequest *>(AppConfigResponse::request());
+    Q_D(const CreateHostedConfigurationVersionResponse);
+    return static_cast<const CreateHostedConfigurationVersionRequest *>(d->request);
 }
 
 /*!

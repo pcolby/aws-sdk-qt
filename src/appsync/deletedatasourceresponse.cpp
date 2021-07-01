@@ -56,7 +56,8 @@ DeleteDataSourceResponse::DeleteDataSourceResponse(
  */
 const DeleteDataSourceRequest * DeleteDataSourceResponse::request() const
 {
-    return static_cast<const DeleteDataSourceRequest *>(AppSyncResponse::request());
+    Q_D(const DeleteDataSourceResponse);
+    return static_cast<const DeleteDataSourceRequest *>(d->request);
 }
 
 /*!

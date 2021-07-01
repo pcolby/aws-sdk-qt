@@ -75,7 +75,8 @@ UpdateDatasetResponse::UpdateDatasetResponse(
  */
 const UpdateDatasetRequest * UpdateDatasetResponse::request() const
 {
-    return static_cast<const UpdateDatasetRequest *>(IoTAnalyticsResponse::request());
+    Q_D(const UpdateDatasetResponse);
+    return static_cast<const UpdateDatasetRequest *>(d->request);
 }
 
 /*!

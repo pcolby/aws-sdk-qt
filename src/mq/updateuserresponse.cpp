@@ -57,7 +57,8 @@ UpdateUserResponse::UpdateUserResponse(
  */
 const UpdateUserRequest * UpdateUserResponse::request() const
 {
-    return static_cast<const UpdateUserRequest *>(MqResponse::request());
+    Q_D(const UpdateUserResponse);
+    return static_cast<const UpdateUserRequest *>(d->request);
 }
 
 /*!

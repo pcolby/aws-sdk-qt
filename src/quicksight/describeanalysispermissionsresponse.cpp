@@ -60,7 +60,8 @@ DescribeAnalysisPermissionsResponse::DescribeAnalysisPermissionsResponse(
  */
 const DescribeAnalysisPermissionsRequest * DescribeAnalysisPermissionsResponse::request() const
 {
-    return static_cast<const DescribeAnalysisPermissionsRequest *>(QuickSightResponse::request());
+    Q_D(const DescribeAnalysisPermissionsResponse);
+    return static_cast<const DescribeAnalysisPermissionsRequest *>(d->request);
 }
 
 /*!

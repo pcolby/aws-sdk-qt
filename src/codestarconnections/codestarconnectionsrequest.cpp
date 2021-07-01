@@ -54,7 +54,7 @@ namespace CodeStarconnections {
  * Constructs a CodeStarconnectionsRequest object for CodeStarconnections \a action.
  */
 CodeStarconnectionsRequest::CodeStarconnectionsRequest(const Action action)
-    : d_ptr(new CodeStarconnectionsRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new CodeStarconnectionsRequestPrivate(action, this))
 {
 
 }
@@ -63,8 +63,7 @@ CodeStarconnectionsRequest::CodeStarconnectionsRequest(const Action action)
  * Constructs a copy of \a other.
  */
 CodeStarconnectionsRequest::CodeStarconnectionsRequest(const CodeStarconnectionsRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new CodeStarconnectionsRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new CodeStarconnectionsRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -87,7 +86,7 @@ CodeStarconnectionsRequest& CodeStarconnectionsRequest::operator=(const CodeStar
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from CodeStarconnectionsRequestPrivate.
  */
-CodeStarconnectionsRequest::CodeStarconnectionsRequest(CodeStarconnectionsRequestPrivate * const d) : d_ptr(d)
+CodeStarconnectionsRequest::CodeStarconnectionsRequest(CodeStarconnectionsRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -256,7 +255,7 @@ QNetworkRequest CodeStarconnectionsRequest::unsignedRequest(const QUrl &endpoint
  * with public implementation \a q.
  */
 CodeStarconnectionsRequestPrivate::CodeStarconnectionsRequestPrivate(const CodeStarconnectionsRequest::Action action, CodeStarconnectionsRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -271,8 +270,8 @@ CodeStarconnectionsRequestPrivate::CodeStarconnectionsRequestPrivate(const CodeS
  */
 CodeStarconnectionsRequestPrivate::CodeStarconnectionsRequestPrivate(const CodeStarconnectionsRequestPrivate &other,
                                      CodeStarconnectionsRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

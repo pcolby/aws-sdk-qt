@@ -56,7 +56,8 @@ DescribePredictorResponse::DescribePredictorResponse(
  */
 const DescribePredictorRequest * DescribePredictorResponse::request() const
 {
-    return static_cast<const DescribePredictorRequest *>(ForecastServiceResponse::request());
+    Q_D(const DescribePredictorResponse);
+    return static_cast<const DescribePredictorRequest *>(d->request);
 }
 
 /*!

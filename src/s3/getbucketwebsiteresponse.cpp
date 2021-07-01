@@ -55,7 +55,8 @@ GetBucketWebsiteResponse::GetBucketWebsiteResponse(
  */
 const GetBucketWebsiteRequest * GetBucketWebsiteResponse::request() const
 {
-    return static_cast<const GetBucketWebsiteRequest *>(S3Response::request());
+    Q_D(const GetBucketWebsiteResponse);
+    return static_cast<const GetBucketWebsiteRequest *>(d->request);
 }
 
 /*!

@@ -77,7 +77,8 @@ CreateEnvironmentResponse::CreateEnvironmentResponse(
  */
 const CreateEnvironmentRequest * CreateEnvironmentResponse::request() const
 {
-    return static_cast<const CreateEnvironmentRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const CreateEnvironmentResponse);
+    return static_cast<const CreateEnvironmentRequest *>(d->request);
 }
 
 /*!

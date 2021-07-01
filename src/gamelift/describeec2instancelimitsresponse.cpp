@@ -115,7 +115,8 @@ DescribeEC2InstanceLimitsResponse::DescribeEC2InstanceLimitsResponse(
  */
 const DescribeEC2InstanceLimitsRequest * DescribeEC2InstanceLimitsResponse::request() const
 {
-    return static_cast<const DescribeEC2InstanceLimitsRequest *>(GameLiftResponse::request());
+    Q_D(const DescribeEC2InstanceLimitsResponse);
+    return static_cast<const DescribeEC2InstanceLimitsRequest *>(d->request);
 }
 
 /*!

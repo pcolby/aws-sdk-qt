@@ -20,12 +20,14 @@
 #ifndef QTAWS_CODEDEPLOYRESPONSE_P_H
 #define QTAWS_CODEDEPLOYRESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace CodeDeploy {
 
 class CodeDeployResponse;
 
-class CodeDeployResponsePrivate {
+class CodeDeployResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    CodeDeployResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeDeployResponse)

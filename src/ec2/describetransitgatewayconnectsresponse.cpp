@@ -87,7 +87,8 @@ DescribeTransitGatewayConnectsResponse::DescribeTransitGatewayConnectsResponse(
  */
 const DescribeTransitGatewayConnectsRequest * DescribeTransitGatewayConnectsResponse::request() const
 {
-    return static_cast<const DescribeTransitGatewayConnectsRequest *>(Ec2Response::request());
+    Q_D(const DescribeTransitGatewayConnectsResponse);
+    return static_cast<const DescribeTransitGatewayConnectsRequest *>(d->request);
 }
 
 /*!

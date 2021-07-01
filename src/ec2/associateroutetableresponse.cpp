@@ -87,7 +87,8 @@ AssociateRouteTableResponse::AssociateRouteTableResponse(
  */
 const AssociateRouteTableRequest * AssociateRouteTableResponse::request() const
 {
-    return static_cast<const AssociateRouteTableRequest *>(Ec2Response::request());
+    Q_D(const AssociateRouteTableResponse);
+    return static_cast<const AssociateRouteTableRequest *>(d->request);
 }
 
 /*!

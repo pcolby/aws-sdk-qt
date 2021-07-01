@@ -141,16 +141,16 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-04-19"),
-    QStringLiteral("models.lex"),
-    QStringLiteral("Amazon Lex Model Building Service"),
-    QStringLiteral("lex"),
-    parent), d_ptr(new LexModelBuildingServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LexModelBuildingServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LexModelBuildingServiceClient);
+    d->apiVersion = QStringLiteral("2017-04-19");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("models.lex");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Lex Model Building Service");
+    d->serviceName = QStringLiteral("lex");
 }
 
 /*!
@@ -169,16 +169,16 @@ LexModelBuildingServiceClient::LexModelBuildingServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-04-19"),
-    QStringLiteral("models.lex"),
-    QStringLiteral("Amazon Lex Model Building Service"),
-    QStringLiteral("lex"),
-    parent), d_ptr(new LexModelBuildingServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LexModelBuildingServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LexModelBuildingServiceClient);
+    d->apiVersion = QStringLiteral("2017-04-19");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("models.lex");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Lex Model Building Service");
+    d->serviceName = QStringLiteral("lex");
 }
 
 /*!
@@ -1106,9 +1106,10 @@ UntagResourceResponse * LexModelBuildingServiceClient::untagResource(const Untag
 /*!
  * Constructs a LexModelBuildingServiceClientPrivate object with public implementation \a q.
  */
-LexModelBuildingServiceClientPrivate::LexModelBuildingServiceClientPrivate(LexModelBuildingServiceClient * const q) : q_ptr(q)
+LexModelBuildingServiceClientPrivate::LexModelBuildingServiceClientPrivate(LexModelBuildingServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace LexModelBuildingService

@@ -98,7 +98,8 @@ DeletePhoneNumberResponse::DeletePhoneNumberResponse(
  */
 const DeletePhoneNumberRequest * DeletePhoneNumberResponse::request() const
 {
-    return static_cast<const DeletePhoneNumberRequest *>(ChimeResponse::request());
+    Q_D(const DeletePhoneNumberResponse);
+    return static_cast<const DeletePhoneNumberRequest *>(d->request);
 }
 
 /*!

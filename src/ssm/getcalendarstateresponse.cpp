@@ -98,7 +98,8 @@ GetCalendarStateResponse::GetCalendarStateResponse(
  */
 const GetCalendarStateRequest * GetCalendarStateResponse::request() const
 {
-    return static_cast<const GetCalendarStateRequest *>(SsmResponse::request());
+    Q_D(const GetCalendarStateResponse);
+    return static_cast<const GetCalendarStateRequest *>(d->request);
 }
 
 /*!

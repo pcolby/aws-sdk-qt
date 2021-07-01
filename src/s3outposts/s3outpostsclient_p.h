@@ -20,20 +20,19 @@
 #ifndef QTAWS_S3OUTPOSTSCLIENT_P_H
 #define QTAWS_S3OUTPOSTSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace S3Outposts {
 
 class S3OutpostsClient;
 
-class S3OutpostsClientPrivate {
+class S3OutpostsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit S3OutpostsClientPrivate(S3OutpostsClient * const q);
-
-protected:
-    S3OutpostsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(S3OutpostsClient)

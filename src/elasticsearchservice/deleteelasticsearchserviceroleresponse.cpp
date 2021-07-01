@@ -72,7 +72,8 @@ DeleteElasticsearchServiceRoleResponse::DeleteElasticsearchServiceRoleResponse(
  */
 const DeleteElasticsearchServiceRoleRequest * DeleteElasticsearchServiceRoleResponse::request() const
 {
-    return static_cast<const DeleteElasticsearchServiceRoleRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const DeleteElasticsearchServiceRoleResponse);
+    return static_cast<const DeleteElasticsearchServiceRoleRequest *>(d->request);
 }
 
 /*!

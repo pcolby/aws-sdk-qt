@@ -60,7 +60,8 @@ DescribeDashboardResponse::DescribeDashboardResponse(
  */
 const DescribeDashboardRequest * DescribeDashboardResponse::request() const
 {
-    return static_cast<const DescribeDashboardRequest *>(QuickSightResponse::request());
+    Q_D(const DescribeDashboardResponse);
+    return static_cast<const DescribeDashboardRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ DeleteWirelessGatewayTaskDefinitionResponse::DeleteWirelessGatewayTaskDefinition
  */
 const DeleteWirelessGatewayTaskDefinitionRequest * DeleteWirelessGatewayTaskDefinitionResponse::request() const
 {
-    return static_cast<const DeleteWirelessGatewayTaskDefinitionRequest *>(IoTWirelessResponse::request());
+    Q_D(const DeleteWirelessGatewayTaskDefinitionResponse);
+    return static_cast<const DeleteWirelessGatewayTaskDefinitionRequest *>(d->request);
 }
 
 /*!

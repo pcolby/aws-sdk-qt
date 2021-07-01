@@ -58,7 +58,8 @@ DeleteDocumentClassifierResponse::DeleteDocumentClassifierResponse(
  */
 const DeleteDocumentClassifierRequest * DeleteDocumentClassifierResponse::request() const
 {
-    return static_cast<const DeleteDocumentClassifierRequest *>(ComprehendResponse::request());
+    Q_D(const DeleteDocumentClassifierResponse);
+    return static_cast<const DeleteDocumentClassifierRequest *>(d->request);
 }
 
 /*!

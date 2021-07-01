@@ -72,12 +72,6 @@ public slots:
     StartFHIRExportJobResponse * startFHIRExportJob(const StartFHIRExportJobRequest &request);
     StartFHIRImportJobResponse * startFHIRImportJob(const StartFHIRImportJobRequest &request);
 
-protected:
-    /// @cond internal
-    HealthLakeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit HealthLakeClient(HealthLakeClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(HealthLakeClient)
     Q_DISABLE_COPY(HealthLakeClient)

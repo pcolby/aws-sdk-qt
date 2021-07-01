@@ -87,7 +87,8 @@ CreateVpcEndpointServiceConfigurationResponse::CreateVpcEndpointServiceConfigura
  */
 const CreateVpcEndpointServiceConfigurationRequest * CreateVpcEndpointServiceConfigurationResponse::request() const
 {
-    return static_cast<const CreateVpcEndpointServiceConfigurationRequest *>(Ec2Response::request());
+    Q_D(const CreateVpcEndpointServiceConfigurationResponse);
+    return static_cast<const CreateVpcEndpointServiceConfigurationRequest *>(d->request);
 }
 
 /*!

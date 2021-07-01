@@ -58,7 +58,8 @@ UpdateProjectResponse::UpdateProjectResponse(
  */
 const UpdateProjectRequest * UpdateProjectResponse::request() const
 {
-    return static_cast<const UpdateProjectRequest *>(MobileResponse::request());
+    Q_D(const UpdateProjectResponse);
+    return static_cast<const UpdateProjectRequest *>(d->request);
 }
 
 /*!

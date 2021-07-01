@@ -119,7 +119,8 @@ DeleteDBSnapshotResponse::DeleteDBSnapshotResponse(
  */
 const DeleteDBSnapshotRequest * DeleteDBSnapshotResponse::request() const
 {
-    return static_cast<const DeleteDBSnapshotRequest *>(RdsResponse::request());
+    Q_D(const DeleteDBSnapshotResponse);
+    return static_cast<const DeleteDBSnapshotRequest *>(d->request);
 }
 
 /*!

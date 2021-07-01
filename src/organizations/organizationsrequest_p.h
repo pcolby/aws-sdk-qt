@@ -20,12 +20,15 @@
 #ifndef QTAWS_ORGANIZATIONSREQUEST_P_H
 #define QTAWS_ORGANIZATIONSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "organizationsrequest.h"
+
 namespace QtAws {
 namespace Organizations {
 
 class OrganizationsRequest;
 
-class OrganizationsRequestPrivate {
+class OrganizationsRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     OrganizationsRequest::Action action; ///< Organizations action to be performed.
@@ -36,9 +39,6 @@ public:
     OrganizationsRequestPrivate(const OrganizationsRequestPrivate &other, OrganizationsRequest * const q);
 
     static QString toString(const OrganizationsRequest::Action &action);
-
-protected:
-    OrganizationsRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(OrganizationsRequest)

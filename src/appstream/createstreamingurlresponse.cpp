@@ -81,7 +81,8 @@ CreateStreamingURLResponse::CreateStreamingURLResponse(
  */
 const CreateStreamingURLRequest * CreateStreamingURLResponse::request() const
 {
-    return static_cast<const CreateStreamingURLRequest *>(AppStreamResponse::request());
+    Q_D(const CreateStreamingURLResponse);
+    return static_cast<const CreateStreamingURLRequest *>(d->request);
 }
 
 /*!

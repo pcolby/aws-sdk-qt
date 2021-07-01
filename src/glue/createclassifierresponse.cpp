@@ -58,7 +58,8 @@ CreateClassifierResponse::CreateClassifierResponse(
  */
 const CreateClassifierRequest * CreateClassifierResponse::request() const
 {
-    return static_cast<const CreateClassifierRequest *>(GlueResponse::request());
+    Q_D(const CreateClassifierResponse);
+    return static_cast<const CreateClassifierRequest *>(d->request);
 }
 
 /*!

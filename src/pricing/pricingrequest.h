@@ -61,8 +61,7 @@ public:
 
 protected:
     /// @cond internal
-    PricingRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit PricingRequest(PricingRequestPrivate * const d);
+    PricingRequest(PricingRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

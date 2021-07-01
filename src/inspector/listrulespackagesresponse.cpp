@@ -60,7 +60,8 @@ ListRulesPackagesResponse::ListRulesPackagesResponse(
  */
 const ListRulesPackagesRequest * ListRulesPackagesResponse::request() const
 {
-    return static_cast<const ListRulesPackagesRequest *>(InspectorResponse::request());
+    Q_D(const ListRulesPackagesResponse);
+    return static_cast<const ListRulesPackagesRequest *>(d->request);
 }
 
 /*!

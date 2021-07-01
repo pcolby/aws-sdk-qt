@@ -105,7 +105,8 @@ DeleteHostedConfigurationVersionResponse::DeleteHostedConfigurationVersionRespon
  */
 const DeleteHostedConfigurationVersionRequest * DeleteHostedConfigurationVersionResponse::request() const
 {
-    return static_cast<const DeleteHostedConfigurationVersionRequest *>(AppConfigResponse::request());
+    Q_D(const DeleteHostedConfigurationVersionResponse);
+    return static_cast<const DeleteHostedConfigurationVersionRequest *>(d->request);
 }
 
 /*!

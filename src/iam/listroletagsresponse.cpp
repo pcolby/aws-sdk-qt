@@ -62,7 +62,8 @@ ListRoleTagsResponse::ListRoleTagsResponse(
  */
 const ListRoleTagsRequest * ListRoleTagsResponse::request() const
 {
-    return static_cast<const ListRoleTagsRequest *>(IamResponse::request());
+    Q_D(const ListRoleTagsResponse);
+    return static_cast<const ListRoleTagsRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ ListCommandsResponse::ListCommandsResponse(
  */
 const ListCommandsRequest * ListCommandsResponse::request() const
 {
-    return static_cast<const ListCommandsRequest *>(SsmResponse::request());
+    Q_D(const ListCommandsResponse);
+    return static_cast<const ListCommandsRequest *>(d->request);
 }
 
 /*!

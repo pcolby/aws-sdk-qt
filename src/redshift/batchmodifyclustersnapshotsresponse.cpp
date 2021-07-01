@@ -85,7 +85,8 @@ BatchModifyClusterSnapshotsResponse::BatchModifyClusterSnapshotsResponse(
  */
 const BatchModifyClusterSnapshotsRequest * BatchModifyClusterSnapshotsResponse::request() const
 {
-    return static_cast<const BatchModifyClusterSnapshotsRequest *>(RedshiftResponse::request());
+    Q_D(const BatchModifyClusterSnapshotsResponse);
+    return static_cast<const BatchModifyClusterSnapshotsRequest *>(d->request);
 }
 
 /*!

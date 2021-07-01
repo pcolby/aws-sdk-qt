@@ -62,7 +62,8 @@ DeleteServerCertificateResponse::DeleteServerCertificateResponse(
  */
 const DeleteServerCertificateRequest * DeleteServerCertificateResponse::request() const
 {
-    return static_cast<const DeleteServerCertificateRequest *>(IamResponse::request());
+    Q_D(const DeleteServerCertificateResponse);
+    return static_cast<const DeleteServerCertificateRequest *>(d->request);
 }
 
 /*!

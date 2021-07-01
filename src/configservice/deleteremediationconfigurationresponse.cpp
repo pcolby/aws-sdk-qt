@@ -75,7 +75,8 @@ DeleteRemediationConfigurationResponse::DeleteRemediationConfigurationResponse(
  */
 const DeleteRemediationConfigurationRequest * DeleteRemediationConfigurationResponse::request() const
 {
-    return static_cast<const DeleteRemediationConfigurationRequest *>(ConfigServiceResponse::request());
+    Q_D(const DeleteRemediationConfigurationResponse);
+    return static_cast<const DeleteRemediationConfigurationRequest *>(d->request);
 }
 
 /*!

@@ -177,7 +177,8 @@ DeleteEnvironmentTemplateVersionResponse::DeleteEnvironmentTemplateVersionRespon
  */
 const DeleteEnvironmentTemplateVersionRequest * DeleteEnvironmentTemplateVersionResponse::request() const
 {
-    return static_cast<const DeleteEnvironmentTemplateVersionRequest *>(ProtonResponse::request());
+    Q_D(const DeleteEnvironmentTemplateVersionResponse);
+    return static_cast<const DeleteEnvironmentTemplateVersionRequest *>(d->request);
 }
 
 /*!

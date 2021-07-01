@@ -56,7 +56,8 @@ DeleteSourceServerResponse::DeleteSourceServerResponse(
  */
 const DeleteSourceServerRequest * DeleteSourceServerResponse::request() const
 {
-    return static_cast<const DeleteSourceServerRequest *>(mgnResponse::request());
+    Q_D(const DeleteSourceServerResponse);
+    return static_cast<const DeleteSourceServerRequest *>(d->request);
 }
 
 /*!

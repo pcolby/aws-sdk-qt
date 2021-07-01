@@ -55,7 +55,8 @@ QueryResponse::QueryResponse(
  */
 const QueryRequest * QueryResponse::request() const
 {
-    return static_cast<const QueryRequest *>(TimestreamQueryResponse::request());
+    Q_D(const QueryResponse);
+    return static_cast<const QueryRequest *>(d->request);
 }
 
 /*!

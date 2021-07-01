@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    LicenseManagerResponsePrivate * const d_ptr; ///< Internal d-pointer.
     LicenseManagerResponse(LicenseManagerResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

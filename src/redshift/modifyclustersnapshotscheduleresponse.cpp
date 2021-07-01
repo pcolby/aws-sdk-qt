@@ -85,7 +85,8 @@ ModifyClusterSnapshotScheduleResponse::ModifyClusterSnapshotScheduleResponse(
  */
 const ModifyClusterSnapshotScheduleRequest * ModifyClusterSnapshotScheduleResponse::request() const
 {
-    return static_cast<const ModifyClusterSnapshotScheduleRequest *>(RedshiftResponse::request());
+    Q_D(const ModifyClusterSnapshotScheduleResponse);
+    return static_cast<const ModifyClusterSnapshotScheduleRequest *>(d->request);
 }
 
 /*!

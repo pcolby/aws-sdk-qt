@@ -56,7 +56,8 @@ DescribeIndexResponse::DescribeIndexResponse(
  */
 const DescribeIndexRequest * DescribeIndexResponse::request() const
 {
-    return static_cast<const DescribeIndexRequest *>(kendraResponse::request());
+    Q_D(const DescribeIndexResponse);
+    return static_cast<const DescribeIndexRequest *>(d->request);
 }
 
 /*!

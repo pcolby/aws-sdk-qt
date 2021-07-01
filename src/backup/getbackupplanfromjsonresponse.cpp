@@ -59,7 +59,8 @@ GetBackupPlanFromJSONResponse::GetBackupPlanFromJSONResponse(
  */
 const GetBackupPlanFromJSONRequest * GetBackupPlanFromJSONResponse::request() const
 {
-    return static_cast<const GetBackupPlanFromJSONRequest *>(BackupResponse::request());
+    Q_D(const GetBackupPlanFromJSONResponse);
+    return static_cast<const GetBackupPlanFromJSONRequest *>(d->request);
 }
 
 /*!

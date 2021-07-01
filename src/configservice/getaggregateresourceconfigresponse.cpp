@@ -75,7 +75,8 @@ GetAggregateResourceConfigResponse::GetAggregateResourceConfigResponse(
  */
 const GetAggregateResourceConfigRequest * GetAggregateResourceConfigResponse::request() const
 {
-    return static_cast<const GetAggregateResourceConfigRequest *>(ConfigServiceResponse::request());
+    Q_D(const GetAggregateResourceConfigResponse);
+    return static_cast<const GetAggregateResourceConfigRequest *>(d->request);
 }
 
 /*!

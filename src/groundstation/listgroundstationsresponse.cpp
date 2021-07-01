@@ -58,7 +58,8 @@ ListGroundStationsResponse::ListGroundStationsResponse(
  */
 const ListGroundStationsRequest * ListGroundStationsResponse::request() const
 {
-    return static_cast<const ListGroundStationsRequest *>(GroundStationResponse::request());
+    Q_D(const ListGroundStationsResponse);
+    return static_cast<const ListGroundStationsRequest *>(d->request);
 }
 
 /*!

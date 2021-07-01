@@ -83,7 +83,8 @@ CreateAppCookieStickinessPolicyResponse::CreateAppCookieStickinessPolicyResponse
  */
 const CreateAppCookieStickinessPolicyRequest * CreateAppCookieStickinessPolicyResponse::request() const
 {
-    return static_cast<const CreateAppCookieStickinessPolicyRequest *>(ElasticLoadBalancingResponse::request());
+    Q_D(const CreateAppCookieStickinessPolicyResponse);
+    return static_cast<const CreateAppCookieStickinessPolicyRequest *>(d->request);
 }
 
 /*!

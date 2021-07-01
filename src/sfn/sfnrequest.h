@@ -81,8 +81,7 @@ public:
 
 protected:
     /// @cond internal
-    SfnRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SfnRequest(SfnRequestPrivate * const d);
+    SfnRequest(SfnRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -147,12 +147,6 @@ public slots:
     UpdateProtectionGroupResponse * updateProtectionGroup(const UpdateProtectionGroupRequest &request);
     UpdateSubscriptionResponse * updateSubscription(const UpdateSubscriptionRequest &request);
 
-protected:
-    /// @cond internal
-    ShieldClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ShieldClient(ShieldClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(ShieldClient)
     Q_DISABLE_COPY(ShieldClient)

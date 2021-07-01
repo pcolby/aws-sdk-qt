@@ -105,8 +105,7 @@ public:
 
 protected:
     /// @cond internal
-    PersonalizeRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit PersonalizeRequest(PersonalizeRequestPrivate * const d);
+    PersonalizeRequest(PersonalizeRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

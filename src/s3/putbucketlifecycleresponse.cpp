@@ -55,7 +55,8 @@ PutBucketLifecycleResponse::PutBucketLifecycleResponse(
  */
 const PutBucketLifecycleRequest * PutBucketLifecycleResponse::request() const
 {
-    return static_cast<const PutBucketLifecycleRequest *>(S3Response::request());
+    Q_D(const PutBucketLifecycleResponse);
+    return static_cast<const PutBucketLifecycleRequest *>(d->request);
 }
 
 /*!

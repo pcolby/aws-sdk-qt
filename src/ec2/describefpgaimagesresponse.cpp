@@ -87,7 +87,8 @@ DescribeFpgaImagesResponse::DescribeFpgaImagesResponse(
  */
 const DescribeFpgaImagesRequest * DescribeFpgaImagesResponse::request() const
 {
-    return static_cast<const DescribeFpgaImagesRequest *>(Ec2Response::request());
+    Q_D(const DescribeFpgaImagesResponse);
+    return static_cast<const DescribeFpgaImagesRequest *>(d->request);
 }
 
 /*!

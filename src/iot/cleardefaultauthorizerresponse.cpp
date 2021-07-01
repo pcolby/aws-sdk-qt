@@ -82,7 +82,8 @@ ClearDefaultAuthorizerResponse::ClearDefaultAuthorizerResponse(
  */
 const ClearDefaultAuthorizerRequest * ClearDefaultAuthorizerResponse::request() const
 {
-    return static_cast<const ClearDefaultAuthorizerRequest *>(IoTResponse::request());
+    Q_D(const ClearDefaultAuthorizerResponse);
+    return static_cast<const ClearDefaultAuthorizerRequest *>(d->request);
 }
 
 /*!

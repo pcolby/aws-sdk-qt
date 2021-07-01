@@ -82,7 +82,8 @@ DescribeIndexResponse::DescribeIndexResponse(
  */
 const DescribeIndexRequest * DescribeIndexResponse::request() const
 {
-    return static_cast<const DescribeIndexRequest *>(IoTResponse::request());
+    Q_D(const DescribeIndexResponse);
+    return static_cast<const DescribeIndexRequest *>(d->request);
 }
 
 /*!

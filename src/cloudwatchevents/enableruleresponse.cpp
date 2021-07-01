@@ -78,7 +78,8 @@ EnableRuleResponse::EnableRuleResponse(
  */
 const EnableRuleRequest * EnableRuleResponse::request() const
 {
-    return static_cast<const EnableRuleRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const EnableRuleResponse);
+    return static_cast<const EnableRuleRequest *>(d->request);
 }
 
 /*!

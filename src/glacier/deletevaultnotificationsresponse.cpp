@@ -91,7 +91,8 @@ DeleteVaultNotificationsResponse::DeleteVaultNotificationsResponse(
  */
 const DeleteVaultNotificationsRequest * DeleteVaultNotificationsResponse::request() const
 {
-    return static_cast<const DeleteVaultNotificationsRequest *>(GlacierResponse::request());
+    Q_D(const DeleteVaultNotificationsResponse);
+    return static_cast<const DeleteVaultNotificationsRequest *>(d->request);
 }
 
 /*!

@@ -103,8 +103,7 @@ public:
 
 protected:
     /// @cond internal
-    NimbleStudioRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit NimbleStudioRequest(NimbleStudioRequestPrivate * const d);
+    NimbleStudioRequest(NimbleStudioRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

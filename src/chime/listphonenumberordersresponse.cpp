@@ -98,7 +98,8 @@ ListPhoneNumberOrdersResponse::ListPhoneNumberOrdersResponse(
  */
 const ListPhoneNumberOrdersRequest * ListPhoneNumberOrdersResponse::request() const
 {
-    return static_cast<const ListPhoneNumberOrdersRequest *>(ChimeResponse::request());
+    Q_D(const ListPhoneNumberOrdersResponse);
+    return static_cast<const ListPhoneNumberOrdersRequest *>(d->request);
 }
 
 /*!

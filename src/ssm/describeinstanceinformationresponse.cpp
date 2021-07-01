@@ -98,7 +98,8 @@ DescribeInstanceInformationResponse::DescribeInstanceInformationResponse(
  */
 const DescribeInstanceInformationRequest * DescribeInstanceInformationResponse::request() const
 {
-    return static_cast<const DescribeInstanceInformationRequest *>(SsmResponse::request());
+    Q_D(const DescribeInstanceInformationResponse);
+    return static_cast<const DescribeInstanceInformationRequest *>(d->request);
 }
 
 /*!

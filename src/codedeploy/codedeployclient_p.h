@@ -20,20 +20,19 @@
 #ifndef QTAWS_CODEDEPLOYCLIENT_P_H
 #define QTAWS_CODEDEPLOYCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CodeDeploy {
 
 class CodeDeployClient;
 
-class CodeDeployClientPrivate {
+class CodeDeployClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CodeDeployClientPrivate(CodeDeployClient * const q);
-
-protected:
-    CodeDeployClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CodeDeployClient)

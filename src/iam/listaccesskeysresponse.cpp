@@ -62,7 +62,8 @@ ListAccessKeysResponse::ListAccessKeysResponse(
  */
 const ListAccessKeysRequest * ListAccessKeysResponse::request() const
 {
-    return static_cast<const ListAccessKeysRequest *>(IamResponse::request());
+    Q_D(const ListAccessKeysResponse);
+    return static_cast<const ListAccessKeysRequest *>(d->request);
 }
 
 /*!

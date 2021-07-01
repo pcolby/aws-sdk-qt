@@ -61,7 +61,8 @@ DescribeProtectionGroupResponse::DescribeProtectionGroupResponse(
  */
 const DescribeProtectionGroupRequest * DescribeProtectionGroupResponse::request() const
 {
-    return static_cast<const DescribeProtectionGroupRequest *>(ShieldResponse::request());
+    Q_D(const DescribeProtectionGroupResponse);
+    return static_cast<const DescribeProtectionGroupRequest *>(d->request);
 }
 
 /*!

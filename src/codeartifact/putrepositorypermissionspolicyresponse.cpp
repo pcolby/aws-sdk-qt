@@ -293,7 +293,8 @@ PutRepositoryPermissionsPolicyResponse::PutRepositoryPermissionsPolicyResponse(
  */
 const PutRepositoryPermissionsPolicyRequest * PutRepositoryPermissionsPolicyResponse::request() const
 {
-    return static_cast<const PutRepositoryPermissionsPolicyRequest *>(CodeArtifactResponse::request());
+    Q_D(const PutRepositoryPermissionsPolicyResponse);
+    return static_cast<const PutRepositoryPermissionsPolicyRequest *>(d->request);
 }
 
 /*!

@@ -60,7 +60,8 @@ DeleteBackendEnvironmentResponse::DeleteBackendEnvironmentResponse(
  */
 const DeleteBackendEnvironmentRequest * DeleteBackendEnvironmentResponse::request() const
 {
-    return static_cast<const DeleteBackendEnvironmentRequest *>(AmplifyResponse::request());
+    Q_D(const DeleteBackendEnvironmentResponse);
+    return static_cast<const DeleteBackendEnvironmentRequest *>(d->request);
 }
 
 /*!

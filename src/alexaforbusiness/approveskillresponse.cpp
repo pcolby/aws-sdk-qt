@@ -62,7 +62,8 @@ ApproveSkillResponse::ApproveSkillResponse(
  */
 const ApproveSkillRequest * ApproveSkillResponse::request() const
 {
-    return static_cast<const ApproveSkillRequest *>(AlexaForBusinessResponse::request());
+    Q_D(const ApproveSkillResponse);
+    return static_cast<const ApproveSkillRequest *>(d->request);
 }
 
 /*!

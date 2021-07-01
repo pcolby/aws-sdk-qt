@@ -76,7 +76,8 @@ GetRateBasedRuleManagedKeysResponse::GetRateBasedRuleManagedKeysResponse(
  */
 const GetRateBasedRuleManagedKeysRequest * GetRateBasedRuleManagedKeysResponse::request() const
 {
-    return static_cast<const GetRateBasedRuleManagedKeysRequest *>(WafResponse::request());
+    Q_D(const GetRateBasedRuleManagedKeysResponse);
+    return static_cast<const GetRateBasedRuleManagedKeysRequest *>(d->request);
 }
 
 /*!

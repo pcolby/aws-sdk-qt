@@ -92,7 +92,8 @@ CreateEmailIdentityResponse::CreateEmailIdentityResponse(
  */
 const CreateEmailIdentityRequest * CreateEmailIdentityResponse::request() const
 {
-    return static_cast<const CreateEmailIdentityRequest *>(PinpointEmailResponse::request());
+    Q_D(const CreateEmailIdentityResponse);
+    return static_cast<const CreateEmailIdentityRequest *>(d->request);
 }
 
 /*!

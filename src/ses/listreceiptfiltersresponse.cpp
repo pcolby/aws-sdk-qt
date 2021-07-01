@@ -66,7 +66,8 @@ ListReceiptFiltersResponse::ListReceiptFiltersResponse(
  */
 const ListReceiptFiltersRequest * ListReceiptFiltersResponse::request() const
 {
-    return static_cast<const ListReceiptFiltersRequest *>(SesResponse::request());
+    Q_D(const ListReceiptFiltersResponse);
+    return static_cast<const ListReceiptFiltersRequest *>(d->request);
 }
 
 /*!

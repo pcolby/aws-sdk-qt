@@ -201,12 +201,6 @@ public slots:
     TagResourceResponse * tagResource(const TagResourceRequest &request);
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
 
-protected:
-    /// @cond internal
-    RekognitionClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit RekognitionClient(RekognitionClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(RekognitionClient)
     Q_DISABLE_COPY(RekognitionClient)

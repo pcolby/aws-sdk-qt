@@ -61,7 +61,8 @@ AssociateConnectionWithLagResponse::AssociateConnectionWithLagResponse(
  */
 const AssociateConnectionWithLagRequest * AssociateConnectionWithLagResponse::request() const
 {
-    return static_cast<const AssociateConnectionWithLagRequest *>(DirectConnectResponse::request());
+    Q_D(const AssociateConnectionWithLagResponse);
+    return static_cast<const AssociateConnectionWithLagRequest *>(d->request);
 }
 
 /*!

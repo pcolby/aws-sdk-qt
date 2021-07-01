@@ -20,12 +20,14 @@
 #ifndef QTAWS_ELASTICSEARCHSERVICERESPONSE_P_H
 #define QTAWS_ELASTICSEARCHSERVICERESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace ElasticsearchService {
 
 class ElasticsearchServiceResponse;
 
-class ElasticsearchServiceResponsePrivate {
+class ElasticsearchServiceResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    ElasticsearchServiceResponse * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticsearchServiceResponse)

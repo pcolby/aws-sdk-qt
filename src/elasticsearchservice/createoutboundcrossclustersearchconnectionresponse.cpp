@@ -72,7 +72,8 @@ CreateOutboundCrossClusterSearchConnectionResponse::CreateOutboundCrossClusterSe
  */
 const CreateOutboundCrossClusterSearchConnectionRequest * CreateOutboundCrossClusterSearchConnectionResponse::request() const
 {
-    return static_cast<const CreateOutboundCrossClusterSearchConnectionRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const CreateOutboundCrossClusterSearchConnectionResponse);
+    return static_cast<const CreateOutboundCrossClusterSearchConnectionRequest *>(d->request);
 }
 
 /*!

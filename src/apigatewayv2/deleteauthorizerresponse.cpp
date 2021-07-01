@@ -56,7 +56,8 @@ DeleteAuthorizerResponse::DeleteAuthorizerResponse(
  */
 const DeleteAuthorizerRequest * DeleteAuthorizerResponse::request() const
 {
-    return static_cast<const DeleteAuthorizerRequest *>(ApiGatewayV2Response::request());
+    Q_D(const DeleteAuthorizerResponse);
+    return static_cast<const DeleteAuthorizerRequest *>(d->request);
 }
 
 /*!

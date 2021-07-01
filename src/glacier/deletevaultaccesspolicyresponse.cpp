@@ -91,7 +91,8 @@ DeleteVaultAccessPolicyResponse::DeleteVaultAccessPolicyResponse(
  */
 const DeleteVaultAccessPolicyRequest * DeleteVaultAccessPolicyResponse::request() const
 {
-    return static_cast<const DeleteVaultAccessPolicyRequest *>(GlacierResponse::request());
+    Q_D(const DeleteVaultAccessPolicyResponse);
+    return static_cast<const DeleteVaultAccessPolicyRequest *>(d->request);
 }
 
 /*!

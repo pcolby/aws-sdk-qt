@@ -58,7 +58,8 @@ GetMappingResponse::GetMappingResponse(
  */
 const GetMappingRequest * GetMappingResponse::request() const
 {
-    return static_cast<const GetMappingRequest *>(GlueResponse::request());
+    Q_D(const GetMappingResponse);
+    return static_cast<const GetMappingRequest *>(d->request);
 }
 
 /*!

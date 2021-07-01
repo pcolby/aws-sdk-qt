@@ -58,7 +58,8 @@ AddApplicationCloudWatchLoggingOptionResponse::AddApplicationCloudWatchLoggingOp
  */
 const AddApplicationCloudWatchLoggingOptionRequest * AddApplicationCloudWatchLoggingOptionResponse::request() const
 {
-    return static_cast<const AddApplicationCloudWatchLoggingOptionRequest *>(KinesisAnalyticsV2Response::request());
+    Q_D(const AddApplicationCloudWatchLoggingOptionResponse);
+    return static_cast<const AddApplicationCloudWatchLoggingOptionRequest *>(d->request);
 }
 
 /*!

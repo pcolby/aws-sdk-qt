@@ -66,12 +66,6 @@ public slots:
     RecognizeUtteranceResponse * recognizeUtterance(const RecognizeUtteranceRequest &request);
     StartConversationResponse * startConversation(const StartConversationRequest &request);
 
-protected:
-    /// @cond internal
-    LexRuntimeV2ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit LexRuntimeV2Client(LexRuntimeV2ClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(LexRuntimeV2Client)
     Q_DISABLE_COPY(LexRuntimeV2Client)

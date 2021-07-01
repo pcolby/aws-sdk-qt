@@ -61,7 +61,8 @@ CreatePortalResponse::CreatePortalResponse(
  */
 const CreatePortalRequest * CreatePortalResponse::request() const
 {
-    return static_cast<const CreatePortalRequest *>(IoTSiteWiseResponse::request());
+    Q_D(const CreatePortalResponse);
+    return static_cast<const CreatePortalRequest *>(d->request);
 }
 
 /*!

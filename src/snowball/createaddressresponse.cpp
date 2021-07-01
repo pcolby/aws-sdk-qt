@@ -61,7 +61,8 @@ CreateAddressResponse::CreateAddressResponse(
  */
 const CreateAddressRequest * CreateAddressResponse::request() const
 {
-    return static_cast<const CreateAddressRequest *>(SnowballResponse::request());
+    Q_D(const CreateAddressResponse);
+    return static_cast<const CreateAddressRequest *>(d->request);
 }
 
 /*!

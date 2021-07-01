@@ -69,7 +69,8 @@ DeleteGlobalReplicationGroupResponse::DeleteGlobalReplicationGroupResponse(
  */
 const DeleteGlobalReplicationGroupRequest * DeleteGlobalReplicationGroupResponse::request() const
 {
-    return static_cast<const DeleteGlobalReplicationGroupRequest *>(ElastiCacheResponse::request());
+    Q_D(const DeleteGlobalReplicationGroupResponse);
+    return static_cast<const DeleteGlobalReplicationGroupRequest *>(d->request);
 }
 
 /*!

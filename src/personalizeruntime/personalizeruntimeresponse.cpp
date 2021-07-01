@@ -37,7 +37,7 @@ namespace PersonalizeRuntime {
  * Constructs a PersonalizeRuntimeResponse object with parent \a parent.
  */
 PersonalizeRuntimeResponse::PersonalizeRuntimeResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new PersonalizeRuntimeResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new PersonalizeRuntimeResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ PersonalizeRuntimeResponse::PersonalizeRuntimeResponse(QObject * const parent)
  * implementation that inherits from PersonalizeRuntimeResponsePrivate.
  */
 PersonalizeRuntimeResponse::PersonalizeRuntimeResponse(PersonalizeRuntimeResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void PersonalizeRuntimeResponse::parseFailure(QIODevice &response)
  * Constructs a PersonalizeRuntimeResponsePrivate object with public implementation \a q.
  */
 PersonalizeRuntimeResponsePrivate::PersonalizeRuntimeResponsePrivate(
-    PersonalizeRuntimeResponse * const q) : q_ptr(q)
+    PersonalizeRuntimeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

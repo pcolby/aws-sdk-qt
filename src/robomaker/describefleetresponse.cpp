@@ -56,7 +56,8 @@ DescribeFleetResponse::DescribeFleetResponse(
  */
 const DescribeFleetRequest * DescribeFleetResponse::request() const
 {
-    return static_cast<const DescribeFleetRequest *>(RoboMakerResponse::request());
+    Q_D(const DescribeFleetResponse);
+    return static_cast<const DescribeFleetRequest *>(d->request);
 }
 
 /*!

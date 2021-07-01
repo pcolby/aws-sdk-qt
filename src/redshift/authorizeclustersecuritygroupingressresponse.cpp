@@ -85,7 +85,8 @@ AuthorizeClusterSecurityGroupIngressResponse::AuthorizeClusterSecurityGroupIngre
  */
 const AuthorizeClusterSecurityGroupIngressRequest * AuthorizeClusterSecurityGroupIngressResponse::request() const
 {
-    return static_cast<const AuthorizeClusterSecurityGroupIngressRequest *>(RedshiftResponse::request());
+    Q_D(const AuthorizeClusterSecurityGroupIngressResponse);
+    return static_cast<const AuthorizeClusterSecurityGroupIngressRequest *>(d->request);
 }
 
 /*!

@@ -64,7 +64,8 @@ ListSourceCredentialsResponse::ListSourceCredentialsResponse(
  */
 const ListSourceCredentialsRequest * ListSourceCredentialsResponse::request() const
 {
-    return static_cast<const ListSourceCredentialsRequest *>(CodeBuildResponse::request());
+    Q_D(const ListSourceCredentialsResponse);
+    return static_cast<const ListSourceCredentialsRequest *>(d->request);
 }
 
 /*!

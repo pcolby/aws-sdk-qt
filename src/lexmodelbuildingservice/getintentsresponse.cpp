@@ -59,7 +59,8 @@ GetIntentsResponse::GetIntentsResponse(
  */
 const GetIntentsRequest * GetIntentsResponse::request() const
 {
-    return static_cast<const GetIntentsRequest *>(LexModelBuildingServiceResponse::request());
+    Q_D(const GetIntentsResponse);
+    return static_cast<const GetIntentsRequest *>(d->request);
 }
 
 /*!

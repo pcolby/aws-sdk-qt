@@ -145,7 +145,8 @@ UpdateSubnetChangeProtectionResponse::UpdateSubnetChangeProtectionResponse(
  */
 const UpdateSubnetChangeProtectionRequest * UpdateSubnetChangeProtectionResponse::request() const
 {
-    return static_cast<const UpdateSubnetChangeProtectionRequest *>(NetworkFirewallResponse::request());
+    Q_D(const UpdateSubnetChangeProtectionResponse);
+    return static_cast<const UpdateSubnetChangeProtectionRequest *>(d->request);
 }
 
 /*!

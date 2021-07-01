@@ -55,7 +55,8 @@ ListStreamingImagesResponse::ListStreamingImagesResponse(
  */
 const ListStreamingImagesRequest * ListStreamingImagesResponse::request() const
 {
-    return static_cast<const ListStreamingImagesRequest *>(NimbleStudioResponse::request());
+    Q_D(const ListStreamingImagesResponse);
+    return static_cast<const ListStreamingImagesRequest *>(d->request);
 }
 
 /*!

@@ -92,7 +92,8 @@ PutEmailIdentityDkimAttributesResponse::PutEmailIdentityDkimAttributesResponse(
  */
 const PutEmailIdentityDkimAttributesRequest * PutEmailIdentityDkimAttributesResponse::request() const
 {
-    return static_cast<const PutEmailIdentityDkimAttributesRequest *>(PinpointEmailResponse::request());
+    Q_D(const PutEmailIdentityDkimAttributesResponse);
+    return static_cast<const PutEmailIdentityDkimAttributesRequest *>(d->request);
 }
 
 /*!

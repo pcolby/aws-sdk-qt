@@ -56,7 +56,8 @@ DeleteDBClusterParameterGroupResponse::DeleteDBClusterParameterGroupResponse(
  */
 const DeleteDBClusterParameterGroupRequest * DeleteDBClusterParameterGroupResponse::request() const
 {
-    return static_cast<const DeleteDBClusterParameterGroupRequest *>(DocDBResponse::request());
+    Q_D(const DeleteDBClusterParameterGroupResponse);
+    return static_cast<const DeleteDBClusterParameterGroupRequest *>(d->request);
 }
 
 /*!

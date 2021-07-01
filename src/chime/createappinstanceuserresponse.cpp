@@ -98,7 +98,8 @@ CreateAppInstanceUserResponse::CreateAppInstanceUserResponse(
  */
 const CreateAppInstanceUserRequest * CreateAppInstanceUserResponse::request() const
 {
-    return static_cast<const CreateAppInstanceUserRequest *>(ChimeResponse::request());
+    Q_D(const CreateAppInstanceUserResponse);
+    return static_cast<const CreateAppInstanceUserRequest *>(d->request);
 }
 
 /*!

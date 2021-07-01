@@ -58,7 +58,8 @@ DeleteContainerRecipeResponse::DeleteContainerRecipeResponse(
  */
 const DeleteContainerRecipeRequest * DeleteContainerRecipeResponse::request() const
 {
-    return static_cast<const DeleteContainerRecipeRequest *>(imagebuilderResponse::request());
+    Q_D(const DeleteContainerRecipeResponse);
+    return static_cast<const DeleteContainerRecipeRequest *>(d->request);
 }
 
 /*!

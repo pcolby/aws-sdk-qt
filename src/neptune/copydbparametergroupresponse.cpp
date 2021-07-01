@@ -72,7 +72,8 @@ CopyDBParameterGroupResponse::CopyDBParameterGroupResponse(
  */
 const CopyDBParameterGroupRequest * CopyDBParameterGroupResponse::request() const
 {
-    return static_cast<const CopyDBParameterGroupRequest *>(NeptuneResponse::request());
+    Q_D(const CopyDBParameterGroupResponse);
+    return static_cast<const CopyDBParameterGroupRequest *>(d->request);
 }
 
 /*!

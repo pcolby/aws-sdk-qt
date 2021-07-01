@@ -20,12 +20,14 @@
 #ifndef QTAWS_WAFV2RESPONSE_P_H
 #define QTAWS_WAFV2RESPONSE_P_H
 
+#include "core/awsabstractresponse_p.h"
+
 namespace QtAws {
 namespace WAFV2 {
 
 class Wafv2Response;
 
-class Wafv2ResponsePrivate {
+class Wafv2ResponsePrivate : public QtAws::Core::AwsAbstractResponsePrivate {
 
 public:
 
@@ -33,9 +35,6 @@ public:
 
     //void parseErrorResponse(QXmlStreamReader &xml);
     //void parseResponseMetadata(QXmlStreamReader &xml);
-
-protected:
-    Wafv2Response * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(Wafv2Response)

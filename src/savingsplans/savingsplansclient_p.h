@@ -20,20 +20,19 @@
 #ifndef QTAWS_SAVINGSPLANSCLIENT_P_H
 #define QTAWS_SAVINGSPLANSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace SavingsPlans {
 
 class SavingsPlansClient;
 
-class SavingsPlansClientPrivate {
+class SavingsPlansClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit SavingsPlansClientPrivate(SavingsPlansClient * const q);
-
-protected:
-    SavingsPlansClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(SavingsPlansClient)

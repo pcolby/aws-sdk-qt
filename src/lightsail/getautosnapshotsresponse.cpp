@@ -74,7 +74,8 @@ GetAutoSnapshotsResponse::GetAutoSnapshotsResponse(
  */
 const GetAutoSnapshotsRequest * GetAutoSnapshotsResponse::request() const
 {
-    return static_cast<const GetAutoSnapshotsRequest *>(LightsailResponse::request());
+    Q_D(const GetAutoSnapshotsResponse);
+    return static_cast<const GetAutoSnapshotsRequest *>(d->request);
 }
 
 /*!

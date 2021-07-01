@@ -54,7 +54,7 @@ namespace Firehose {
  * Constructs a FirehoseRequest object for Firehose \a action.
  */
 FirehoseRequest::FirehoseRequest(const Action action)
-    : d_ptr(new FirehoseRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new FirehoseRequestPrivate(action, this))
 {
 
 }
@@ -63,8 +63,7 @@ FirehoseRequest::FirehoseRequest(const Action action)
  * Constructs a copy of \a other.
  */
 FirehoseRequest::FirehoseRequest(const FirehoseRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new FirehoseRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new FirehoseRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -87,7 +86,7 @@ FirehoseRequest& FirehoseRequest::operator=(const FirehoseRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from FirehoseRequestPrivate.
  */
-FirehoseRequest::FirehoseRequest(FirehoseRequestPrivate * const d) : d_ptr(d)
+FirehoseRequest::FirehoseRequest(FirehoseRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -256,7 +255,7 @@ QNetworkRequest FirehoseRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 FirehoseRequestPrivate::FirehoseRequestPrivate(const FirehoseRequest::Action action, FirehoseRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -271,8 +270,8 @@ FirehoseRequestPrivate::FirehoseRequestPrivate(const FirehoseRequest::Action act
  */
 FirehoseRequestPrivate::FirehoseRequestPrivate(const FirehoseRequestPrivate &other,
                                      FirehoseRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -61,7 +61,8 @@ GetJobUnlockCodeResponse::GetJobUnlockCodeResponse(
  */
 const GetJobUnlockCodeRequest * GetJobUnlockCodeResponse::request() const
 {
-    return static_cast<const GetJobUnlockCodeRequest *>(SnowballResponse::request());
+    Q_D(const GetJobUnlockCodeResponse);
+    return static_cast<const GetJobUnlockCodeRequest *>(d->request);
 }
 
 /*!

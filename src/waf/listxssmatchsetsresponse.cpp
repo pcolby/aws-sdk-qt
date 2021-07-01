@@ -76,7 +76,8 @@ ListXssMatchSetsResponse::ListXssMatchSetsResponse(
  */
 const ListXssMatchSetsRequest * ListXssMatchSetsResponse::request() const
 {
-    return static_cast<const ListXssMatchSetsRequest *>(WafResponse::request());
+    Q_D(const ListXssMatchSetsResponse);
+    return static_cast<const ListXssMatchSetsRequest *>(d->request);
 }
 
 /*!

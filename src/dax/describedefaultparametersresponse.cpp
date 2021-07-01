@@ -59,7 +59,8 @@ DescribeDefaultParametersResponse::DescribeDefaultParametersResponse(
  */
 const DescribeDefaultParametersRequest * DescribeDefaultParametersResponse::request() const
 {
-    return static_cast<const DescribeDefaultParametersRequest *>(DaxResponse::request());
+    Q_D(const DescribeDefaultParametersResponse);
+    return static_cast<const DescribeDefaultParametersRequest *>(d->request);
 }
 
 /*!

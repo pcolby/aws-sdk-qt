@@ -69,16 +69,16 @@ ApiGatewayManagementApiClient::ApiGatewayManagementApiClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-11-29"),
-    QStringLiteral("execute-api"),
-    QStringLiteral("AmazonApiGatewayManagementApi"),
-    QStringLiteral("execute-api"),
-    parent), d_ptr(new ApiGatewayManagementApiClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ApiGatewayManagementApiClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ApiGatewayManagementApiClient);
+    d->apiVersion = QStringLiteral("2018-11-29");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("execute-api");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AmazonApiGatewayManagementApi");
+    d->serviceName = QStringLiteral("execute-api");
 }
 
 /*!
@@ -97,16 +97,16 @@ ApiGatewayManagementApiClient::ApiGatewayManagementApiClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-11-29"),
-    QStringLiteral("execute-api"),
-    QStringLiteral("AmazonApiGatewayManagementApi"),
-    QStringLiteral("execute-api"),
-    parent), d_ptr(new ApiGatewayManagementApiClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ApiGatewayManagementApiClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ApiGatewayManagementApiClient);
+    d->apiVersion = QStringLiteral("2018-11-29");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("execute-api");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AmazonApiGatewayManagementApi");
+    d->serviceName = QStringLiteral("execute-api");
 }
 
 /*!
@@ -160,9 +160,10 @@ PostToConnectionResponse * ApiGatewayManagementApiClient::postToConnection(const
 /*!
  * Constructs a ApiGatewayManagementApiClientPrivate object with public implementation \a q.
  */
-ApiGatewayManagementApiClientPrivate::ApiGatewayManagementApiClientPrivate(ApiGatewayManagementApiClient * const q) : q_ptr(q)
+ApiGatewayManagementApiClientPrivate::ApiGatewayManagementApiClientPrivate(ApiGatewayManagementApiClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ApiGatewayManagementApi

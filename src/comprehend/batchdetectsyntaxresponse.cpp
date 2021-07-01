@@ -58,7 +58,8 @@ BatchDetectSyntaxResponse::BatchDetectSyntaxResponse(
  */
 const BatchDetectSyntaxRequest * BatchDetectSyntaxResponse::request() const
 {
-    return static_cast<const BatchDetectSyntaxRequest *>(ComprehendResponse::request());
+    Q_D(const BatchDetectSyntaxResponse);
+    return static_cast<const BatchDetectSyntaxRequest *>(d->request);
 }
 
 /*!

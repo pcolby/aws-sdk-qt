@@ -65,7 +65,8 @@ AssociateEncryptionConfigResponse::AssociateEncryptionConfigResponse(
  */
 const AssociateEncryptionConfigRequest * AssociateEncryptionConfigResponse::request() const
 {
-    return static_cast<const AssociateEncryptionConfigRequest *>(EksResponse::request());
+    Q_D(const AssociateEncryptionConfigResponse);
+    return static_cast<const AssociateEncryptionConfigRequest *>(d->request);
 }
 
 /*!

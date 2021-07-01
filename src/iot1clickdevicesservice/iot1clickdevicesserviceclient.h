@@ -87,12 +87,6 @@ public slots:
     UntagResourceResponse * untagResource(const UntagResourceRequest &request);
     UpdateDeviceStateResponse * updateDeviceState(const UpdateDeviceStateRequest &request);
 
-protected:
-    /// @cond internal
-    IoT1ClickDevicesServiceClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit IoT1ClickDevicesServiceClient(IoT1ClickDevicesServiceClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(IoT1ClickDevicesServiceClient)
     Q_DISABLE_COPY(IoT1ClickDevicesServiceClient)

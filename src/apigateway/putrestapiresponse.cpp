@@ -60,7 +60,8 @@ PutRestApiResponse::PutRestApiResponse(
  */
 const PutRestApiRequest * PutRestApiResponse::request() const
 {
-    return static_cast<const PutRestApiRequest *>(APIGatewayResponse::request());
+    Q_D(const PutRestApiResponse);
+    return static_cast<const PutRestApiRequest *>(d->request);
 }
 
 /*!

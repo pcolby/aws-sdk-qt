@@ -109,8 +109,7 @@ public:
 
 protected:
     /// @cond internal
-    BackupRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit BackupRequest(BackupRequestPrivate * const d);
+    BackupRequest(BackupRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

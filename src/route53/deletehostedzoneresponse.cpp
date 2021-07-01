@@ -56,7 +56,8 @@ DeleteHostedZoneResponse::DeleteHostedZoneResponse(
  */
 const DeleteHostedZoneRequest * DeleteHostedZoneResponse::request() const
 {
-    return static_cast<const DeleteHostedZoneRequest *>(Route53Response::request());
+    Q_D(const DeleteHostedZoneResponse);
+    return static_cast<const DeleteHostedZoneRequest *>(d->request);
 }
 
 /*!

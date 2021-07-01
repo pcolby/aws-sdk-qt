@@ -94,7 +94,8 @@ ListResolverRuleAssociationsResponse::ListResolverRuleAssociationsResponse(
  */
 const ListResolverRuleAssociationsRequest * ListResolverRuleAssociationsResponse::request() const
 {
-    return static_cast<const ListResolverRuleAssociationsRequest *>(Route53ResolverResponse::request());
+    Q_D(const ListResolverRuleAssociationsResponse);
+    return static_cast<const ListResolverRuleAssociationsRequest *>(d->request);
 }
 
 /*!

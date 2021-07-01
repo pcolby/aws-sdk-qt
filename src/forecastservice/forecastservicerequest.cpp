@@ -77,7 +77,7 @@ namespace ForecastService {
  * Constructs a ForecastServiceRequest object for ForecastService \a action.
  */
 ForecastServiceRequest::ForecastServiceRequest(const Action action)
-    : d_ptr(new ForecastServiceRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ForecastServiceRequestPrivate(action, this))
 {
 
 }
@@ -86,8 +86,7 @@ ForecastServiceRequest::ForecastServiceRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ForecastServiceRequest::ForecastServiceRequest(const ForecastServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ForecastServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ForecastServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -110,7 +109,7 @@ ForecastServiceRequest& ForecastServiceRequest::operator=(const ForecastServiceR
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ForecastServiceRequestPrivate.
  */
-ForecastServiceRequest::ForecastServiceRequest(ForecastServiceRequestPrivate * const d) : d_ptr(d)
+ForecastServiceRequest::ForecastServiceRequest(ForecastServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -279,7 +278,7 @@ QNetworkRequest ForecastServiceRequest::unsignedRequest(const QUrl &endpoint) co
  * with public implementation \a q.
  */
 ForecastServiceRequestPrivate::ForecastServiceRequestPrivate(const ForecastServiceRequest::Action action, ForecastServiceRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -294,8 +293,8 @@ ForecastServiceRequestPrivate::ForecastServiceRequestPrivate(const ForecastServi
  */
 ForecastServiceRequestPrivate::ForecastServiceRequestPrivate(const ForecastServiceRequestPrivate &other,
                                      ForecastServiceRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

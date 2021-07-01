@@ -87,7 +87,8 @@ ImportVolumeResponse::ImportVolumeResponse(
  */
 const ImportVolumeRequest * ImportVolumeResponse::request() const
 {
-    return static_cast<const ImportVolumeRequest *>(Ec2Response::request());
+    Q_D(const ImportVolumeResponse);
+    return static_cast<const ImportVolumeRequest *>(d->request);
 }
 
 /*!

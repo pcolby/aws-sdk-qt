@@ -87,7 +87,8 @@ DeleteCustomerGatewayResponse::DeleteCustomerGatewayResponse(
  */
 const DeleteCustomerGatewayRequest * DeleteCustomerGatewayResponse::request() const
 {
-    return static_cast<const DeleteCustomerGatewayRequest *>(Ec2Response::request());
+    Q_D(const DeleteCustomerGatewayResponse);
+    return static_cast<const DeleteCustomerGatewayRequest *>(d->request);
 }
 
 /*!

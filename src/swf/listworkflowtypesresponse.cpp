@@ -71,7 +71,8 @@ ListWorkflowTypesResponse::ListWorkflowTypesResponse(
  */
 const ListWorkflowTypesRequest * ListWorkflowTypesResponse::request() const
 {
-    return static_cast<const ListWorkflowTypesRequest *>(SwfResponse::request());
+    Q_D(const ListWorkflowTypesResponse);
+    return static_cast<const ListWorkflowTypesRequest *>(d->request);
 }
 
 /*!

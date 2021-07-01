@@ -77,7 +77,8 @@ ListStackSetsResponse::ListStackSetsResponse(
  */
 const ListStackSetsRequest * ListStackSetsResponse::request() const
 {
-    return static_cast<const ListStackSetsRequest *>(CloudFormationResponse::request());
+    Q_D(const ListStackSetsResponse);
+    return static_cast<const ListStackSetsRequest *>(d->request);
 }
 
 /*!

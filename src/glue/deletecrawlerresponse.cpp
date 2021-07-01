@@ -58,7 +58,8 @@ DeleteCrawlerResponse::DeleteCrawlerResponse(
  */
 const DeleteCrawlerRequest * DeleteCrawlerResponse::request() const
 {
-    return static_cast<const DeleteCrawlerRequest *>(GlueResponse::request());
+    Q_D(const DeleteCrawlerResponse);
+    return static_cast<const DeleteCrawlerRequest *>(d->request);
 }
 
 /*!

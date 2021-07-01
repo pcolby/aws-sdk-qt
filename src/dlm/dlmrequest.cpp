@@ -50,7 +50,7 @@ namespace DLM {
  * Constructs a DlmRequest object for DLM \a action.
  */
 DlmRequest::DlmRequest(const Action action)
-    : d_ptr(new DlmRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new DlmRequestPrivate(action, this))
 {
 
 }
@@ -59,8 +59,7 @@ DlmRequest::DlmRequest(const Action action)
  * Constructs a copy of \a other.
  */
 DlmRequest::DlmRequest(const DlmRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new DlmRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new DlmRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -83,7 +82,7 @@ DlmRequest& DlmRequest::operator=(const DlmRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from DlmRequestPrivate.
  */
-DlmRequest::DlmRequest(DlmRequestPrivate * const d) : d_ptr(d)
+DlmRequest::DlmRequest(DlmRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -252,7 +251,7 @@ QNetworkRequest DlmRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 DlmRequestPrivate::DlmRequestPrivate(const DlmRequest::Action action, DlmRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -267,8 +266,8 @@ DlmRequestPrivate::DlmRequestPrivate(const DlmRequest::Action action, DlmRequest
  */
 DlmRequestPrivate::DlmRequestPrivate(const DlmRequestPrivate &other,
                                      DlmRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

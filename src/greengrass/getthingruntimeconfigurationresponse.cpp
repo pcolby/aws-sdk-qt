@@ -58,7 +58,8 @@ GetThingRuntimeConfigurationResponse::GetThingRuntimeConfigurationResponse(
  */
 const GetThingRuntimeConfigurationRequest * GetThingRuntimeConfigurationResponse::request() const
 {
-    return static_cast<const GetThingRuntimeConfigurationRequest *>(GreengrassResponse::request());
+    Q_D(const GetThingRuntimeConfigurationResponse);
+    return static_cast<const GetThingRuntimeConfigurationRequest *>(d->request);
 }
 
 /*!

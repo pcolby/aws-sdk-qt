@@ -37,7 +37,7 @@ namespace Support {
  * Constructs a SupportResponse object with parent \a parent.
  */
 SupportResponse::SupportResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new SupportResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new SupportResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ SupportResponse::SupportResponse(QObject * const parent)
  * implementation that inherits from SupportResponsePrivate.
  */
 SupportResponse::SupportResponse(SupportResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void SupportResponse::parseFailure(QIODevice &response)
  * Constructs a SupportResponsePrivate object with public implementation \a q.
  */
 SupportResponsePrivate::SupportResponsePrivate(
-    SupportResponse * const q) : q_ptr(q)
+    SupportResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

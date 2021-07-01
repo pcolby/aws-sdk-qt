@@ -62,7 +62,8 @@ GetServiceLastAccessedDetailsWithEntitiesResponse::GetServiceLastAccessedDetails
  */
 const GetServiceLastAccessedDetailsWithEntitiesRequest * GetServiceLastAccessedDetailsWithEntitiesResponse::request() const
 {
-    return static_cast<const GetServiceLastAccessedDetailsWithEntitiesRequest *>(IamResponse::request());
+    Q_D(const GetServiceLastAccessedDetailsWithEntitiesResponse);
+    return static_cast<const GetServiceLastAccessedDetailsWithEntitiesRequest *>(d->request);
 }
 
 /*!

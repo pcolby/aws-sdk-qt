@@ -72,7 +72,8 @@ DescribeClustersResponse::DescribeClustersResponse(
  */
 const DescribeClustersRequest * DescribeClustersResponse::request() const
 {
-    return static_cast<const DescribeClustersRequest *>(EcsResponse::request());
+    Q_D(const DescribeClustersResponse);
+    return static_cast<const DescribeClustersRequest *>(d->request);
 }
 
 /*!

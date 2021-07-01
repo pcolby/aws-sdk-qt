@@ -115,7 +115,8 @@ CreateVpcPeeringAuthorizationResponse::CreateVpcPeeringAuthorizationResponse(
  */
 const CreateVpcPeeringAuthorizationRequest * CreateVpcPeeringAuthorizationResponse::request() const
 {
-    return static_cast<const CreateVpcPeeringAuthorizationRequest *>(GameLiftResponse::request());
+    Q_D(const CreateVpcPeeringAuthorizationResponse);
+    return static_cast<const CreateVpcPeeringAuthorizationRequest *>(d->request);
 }
 
 /*!

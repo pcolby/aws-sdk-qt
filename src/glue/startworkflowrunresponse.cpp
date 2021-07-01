@@ -58,7 +58,8 @@ StartWorkflowRunResponse::StartWorkflowRunResponse(
  */
 const StartWorkflowRunRequest * StartWorkflowRunResponse::request() const
 {
-    return static_cast<const StartWorkflowRunRequest *>(GlueResponse::request());
+    Q_D(const StartWorkflowRunResponse);
+    return static_cast<const StartWorkflowRunRequest *>(d->request);
 }
 
 /*!

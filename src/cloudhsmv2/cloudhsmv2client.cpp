@@ -91,16 +91,16 @@ CloudHSMV2Client::CloudHSMV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-04-28"),
-    QStringLiteral("cloudhsmv2"),
-    QStringLiteral("AWS CloudHSM V2"),
-    QStringLiteral("cloudhsm"),
-    parent), d_ptr(new CloudHSMV2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudHSMV2ClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudHSMV2Client);
+    d->apiVersion = QStringLiteral("2017-04-28");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("cloudhsmv2");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS CloudHSM V2");
+    d->serviceName = QStringLiteral("cloudhsm");
 }
 
 /*!
@@ -119,16 +119,16 @@ CloudHSMV2Client::CloudHSMV2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2017-04-28"),
-    QStringLiteral("cloudhsmv2"),
-    QStringLiteral("AWS CloudHSM V2"),
-    QStringLiteral("cloudhsm"),
-    parent), d_ptr(new CloudHSMV2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new CloudHSMV2ClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(CloudHSMV2Client);
+    d->apiVersion = QStringLiteral("2017-04-28");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("cloudhsmv2");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS CloudHSM V2");
+    d->serviceName = QStringLiteral("cloudhsm");
 }
 
 /*!
@@ -366,9 +366,10 @@ UntagResourceResponse * CloudHSMV2Client::untagResource(const UntagResourceReque
 /*!
  * Constructs a CloudHSMV2ClientPrivate object with public implementation \a q.
  */
-CloudHSMV2ClientPrivate::CloudHSMV2ClientPrivate(CloudHSMV2Client * const q) : q_ptr(q)
+CloudHSMV2ClientPrivate::CloudHSMV2ClientPrivate(CloudHSMV2Client * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace CloudHSMV2

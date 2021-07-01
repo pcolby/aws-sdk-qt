@@ -62,7 +62,8 @@ DeleteProgressUpdateStreamResponse::DeleteProgressUpdateStreamResponse(
  */
 const DeleteProgressUpdateStreamRequest * DeleteProgressUpdateStreamResponse::request() const
 {
-    return static_cast<const DeleteProgressUpdateStreamRequest *>(MigrationHubResponse::request());
+    Q_D(const DeleteProgressUpdateStreamResponse);
+    return static_cast<const DeleteProgressUpdateStreamRequest *>(d->request);
 }
 
 /*!

@@ -78,7 +78,8 @@ CreateArchiveResponse::CreateArchiveResponse(
  */
 const CreateArchiveRequest * CreateArchiveResponse::request() const
 {
-    return static_cast<const CreateArchiveRequest *>(CloudWatchEventsResponse::request());
+    Q_D(const CreateArchiveResponse);
+    return static_cast<const CreateArchiveRequest *>(d->request);
 }
 
 /*!

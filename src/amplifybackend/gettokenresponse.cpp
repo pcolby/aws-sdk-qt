@@ -56,7 +56,8 @@ GetTokenResponse::GetTokenResponse(
  */
 const GetTokenRequest * GetTokenResponse::request() const
 {
-    return static_cast<const GetTokenRequest *>(AmplifyBackendResponse::request());
+    Q_D(const GetTokenResponse);
+    return static_cast<const GetTokenRequest *>(d->request);
 }
 
 /*!

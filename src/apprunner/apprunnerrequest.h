@@ -80,8 +80,7 @@ public:
 
 protected:
     /// @cond internal
-    AppRunnerRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AppRunnerRequest(AppRunnerRequestPrivate * const d);
+    AppRunnerRequest(AppRunnerRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

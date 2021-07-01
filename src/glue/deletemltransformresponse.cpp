@@ -58,7 +58,8 @@ DeleteMLTransformResponse::DeleteMLTransformResponse(
  */
 const DeleteMLTransformRequest * DeleteMLTransformResponse::request() const
 {
-    return static_cast<const DeleteMLTransformRequest *>(GlueResponse::request());
+    Q_D(const DeleteMLTransformResponse);
+    return static_cast<const DeleteMLTransformRequest *>(d->request);
 }
 
 /*!

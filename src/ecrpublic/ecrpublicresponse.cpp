@@ -37,7 +37,7 @@ namespace ECRPublic {
  * Constructs a ECRPublicResponse object with parent \a parent.
  */
 ECRPublicResponse::ECRPublicResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ECRPublicResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ECRPublicResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ECRPublicResponse::ECRPublicResponse(QObject * const parent)
  * implementation that inherits from ECRPublicResponsePrivate.
  */
 ECRPublicResponse::ECRPublicResponse(ECRPublicResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ECRPublicResponse::parseFailure(QIODevice &response)
  * Constructs a ECRPublicResponsePrivate object with public implementation \a q.
  */
 ECRPublicResponsePrivate::ECRPublicResponsePrivate(
-    ECRPublicResponse * const q) : q_ptr(q)
+    ECRPublicResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -65,7 +65,8 @@ ListNodegroupsResponse::ListNodegroupsResponse(
  */
 const ListNodegroupsRequest * ListNodegroupsResponse::request() const
 {
-    return static_cast<const ListNodegroupsRequest *>(EksResponse::request());
+    Q_D(const ListNodegroupsResponse);
+    return static_cast<const ListNodegroupsRequest *>(d->request);
 }
 
 /*!

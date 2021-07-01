@@ -100,8 +100,7 @@ public:
 
 protected:
     /// @cond internal
-    PinpointEmailRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit PinpointEmailRequest(PinpointEmailRequestPrivate * const d);
+    PinpointEmailRequest(PinpointEmailRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -20,20 +20,19 @@
 #ifndef QTAWS_CLOUDWATCHLOGSCLIENT_P_H
 #define QTAWS_CLOUDWATCHLOGSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace CloudWatchLogs {
 
 class CloudWatchLogsClient;
 
-class CloudWatchLogsClientPrivate {
+class CloudWatchLogsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit CloudWatchLogsClientPrivate(CloudWatchLogsClient * const q);
-
-protected:
-    CloudWatchLogsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(CloudWatchLogsClient)

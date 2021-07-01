@@ -75,7 +75,8 @@ SubscribeToDatasetResponse::SubscribeToDatasetResponse(
  */
 const SubscribeToDatasetRequest * SubscribeToDatasetResponse::request() const
 {
-    return static_cast<const SubscribeToDatasetRequest *>(CognitoSyncResponse::request());
+    Q_D(const SubscribeToDatasetResponse);
+    return static_cast<const SubscribeToDatasetRequest *>(d->request);
 }
 
 /*!

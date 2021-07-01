@@ -254,16 +254,16 @@ Sesv2Client::Sesv2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-09-27"),
-    QStringLiteral("email"),
-    QStringLiteral("Amazon Simple Email Service"),
-    QStringLiteral("ses"),
-    parent), d_ptr(new Sesv2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new Sesv2ClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(Sesv2Client);
+    d->apiVersion = QStringLiteral("2019-09-27");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("email");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Simple Email Service");
+    d->serviceName = QStringLiteral("ses");
 }
 
 /*!
@@ -282,16 +282,16 @@ Sesv2Client::Sesv2Client(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-09-27"),
-    QStringLiteral("email"),
-    QStringLiteral("Amazon Simple Email Service"),
-    QStringLiteral("ses"),
-    parent), d_ptr(new Sesv2ClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new Sesv2ClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(Sesv2Client);
+    d->apiVersion = QStringLiteral("2019-09-27");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("email");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Simple Email Service");
+    d->serviceName = QStringLiteral("ses");
 }
 
 /*!
@@ -1691,9 +1691,10 @@ UpdateEmailTemplateResponse * Sesv2Client::updateEmailTemplate(const UpdateEmail
 /*!
  * Constructs a Sesv2ClientPrivate object with public implementation \a q.
  */
-Sesv2ClientPrivate::Sesv2ClientPrivate(Sesv2Client * const q) : q_ptr(q)
+Sesv2ClientPrivate::Sesv2ClientPrivate(Sesv2Client * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace SESV2

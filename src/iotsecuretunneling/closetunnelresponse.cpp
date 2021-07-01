@@ -63,7 +63,8 @@ CloseTunnelResponse::CloseTunnelResponse(
  */
 const CloseTunnelRequest * CloseTunnelResponse::request() const
 {
-    return static_cast<const CloseTunnelRequest *>(IoTSecureTunnelingResponse::request());
+    Q_D(const CloseTunnelResponse);
+    return static_cast<const CloseTunnelRequest *>(d->request);
 }
 
 /*!

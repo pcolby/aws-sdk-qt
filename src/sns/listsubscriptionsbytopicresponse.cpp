@@ -75,7 +75,8 @@ ListSubscriptionsByTopicResponse::ListSubscriptionsByTopicResponse(
  */
 const ListSubscriptionsByTopicRequest * ListSubscriptionsByTopicResponse::request() const
 {
-    return static_cast<const ListSubscriptionsByTopicRequest *>(SnsResponse::request());
+    Q_D(const ListSubscriptionsByTopicResponse);
+    return static_cast<const ListSubscriptionsByTopicRequest *>(d->request);
 }
 
 /*!

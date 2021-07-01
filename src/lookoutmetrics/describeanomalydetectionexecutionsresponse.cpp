@@ -58,7 +58,8 @@ DescribeAnomalyDetectionExecutionsResponse::DescribeAnomalyDetectionExecutionsRe
  */
 const DescribeAnomalyDetectionExecutionsRequest * DescribeAnomalyDetectionExecutionsResponse::request() const
 {
-    return static_cast<const DescribeAnomalyDetectionExecutionsRequest *>(LookoutMetricsResponse::request());
+    Q_D(const DescribeAnomalyDetectionExecutionsResponse);
+    return static_cast<const DescribeAnomalyDetectionExecutionsRequest *>(d->request);
 }
 
 /*!

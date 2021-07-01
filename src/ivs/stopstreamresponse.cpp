@@ -385,7 +385,8 @@ StopStreamResponse::StopStreamResponse(
  */
 const StopStreamRequest * StopStreamResponse::request() const
 {
-    return static_cast<const StopStreamRequest *>(IvsResponse::request());
+    Q_D(const StopStreamResponse);
+    return static_cast<const StopStreamRequest *>(d->request);
 }
 
 /*!

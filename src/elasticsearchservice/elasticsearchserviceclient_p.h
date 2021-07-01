@@ -20,20 +20,19 @@
 #ifndef QTAWS_ELASTICSEARCHSERVICECLIENT_P_H
 #define QTAWS_ELASTICSEARCHSERVICECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ElasticsearchService {
 
 class ElasticsearchServiceClient;
 
-class ElasticsearchServiceClientPrivate {
+class ElasticsearchServiceClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ElasticsearchServiceClientPrivate(ElasticsearchServiceClient * const q);
-
-protected:
-    ElasticsearchServiceClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElasticsearchServiceClient)

@@ -141,7 +141,8 @@ ListDelegatedAdministratorsResponse::ListDelegatedAdministratorsResponse(
  */
 const ListDelegatedAdministratorsRequest * ListDelegatedAdministratorsResponse::request() const
 {
-    return static_cast<const ListDelegatedAdministratorsRequest *>(OrganizationsResponse::request());
+    Q_D(const ListDelegatedAdministratorsResponse);
+    return static_cast<const ListDelegatedAdministratorsRequest *>(d->request);
 }
 
 /*!

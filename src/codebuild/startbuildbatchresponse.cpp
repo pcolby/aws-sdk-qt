@@ -64,7 +64,8 @@ StartBuildBatchResponse::StartBuildBatchResponse(
  */
 const StartBuildBatchRequest * StartBuildBatchResponse::request() const
 {
-    return static_cast<const StartBuildBatchRequest *>(CodeBuildResponse::request());
+    Q_D(const StartBuildBatchResponse);
+    return static_cast<const StartBuildBatchRequest *>(d->request);
 }
 
 /*!

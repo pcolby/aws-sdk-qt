@@ -98,7 +98,8 @@ DescribeMaintenanceWindowExecutionTasksResponse::DescribeMaintenanceWindowExecut
  */
 const DescribeMaintenanceWindowExecutionTasksRequest * DescribeMaintenanceWindowExecutionTasksResponse::request() const
 {
-    return static_cast<const DescribeMaintenanceWindowExecutionTasksRequest *>(SsmResponse::request());
+    Q_D(const DescribeMaintenanceWindowExecutionTasksResponse);
+    return static_cast<const DescribeMaintenanceWindowExecutionTasksRequest *>(d->request);
 }
 
 /*!

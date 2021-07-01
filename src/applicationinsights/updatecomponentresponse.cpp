@@ -68,7 +68,8 @@ UpdateComponentResponse::UpdateComponentResponse(
  */
 const UpdateComponentRequest * UpdateComponentResponse::request() const
 {
-    return static_cast<const UpdateComponentRequest *>(ApplicationInsightsResponse::request());
+    Q_D(const UpdateComponentResponse);
+    return static_cast<const UpdateComponentRequest *>(d->request);
 }
 
 /*!

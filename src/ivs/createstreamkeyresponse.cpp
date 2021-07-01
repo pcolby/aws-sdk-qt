@@ -385,7 +385,8 @@ CreateStreamKeyResponse::CreateStreamKeyResponse(
  */
 const CreateStreamKeyRequest * CreateStreamKeyResponse::request() const
 {
-    return static_cast<const CreateStreamKeyRequest *>(IvsResponse::request());
+    Q_D(const CreateStreamKeyResponse);
+    return static_cast<const CreateStreamKeyRequest *>(d->request);
 }
 
 /*!

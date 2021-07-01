@@ -72,7 +72,8 @@ ModifyDBClusterResponse::ModifyDBClusterResponse(
  */
 const ModifyDBClusterRequest * ModifyDBClusterResponse::request() const
 {
-    return static_cast<const ModifyDBClusterRequest *>(NeptuneResponse::request());
+    Q_D(const ModifyDBClusterResponse);
+    return static_cast<const ModifyDBClusterRequest *>(d->request);
 }
 
 /*!

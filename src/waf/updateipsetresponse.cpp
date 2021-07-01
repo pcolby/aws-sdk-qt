@@ -76,7 +76,8 @@ UpdateIPSetResponse::UpdateIPSetResponse(
  */
 const UpdateIPSetRequest * UpdateIPSetResponse::request() const
 {
-    return static_cast<const UpdateIPSetRequest *>(WafResponse::request());
+    Q_D(const UpdateIPSetResponse);
+    return static_cast<const UpdateIPSetRequest *>(d->request);
 }
 
 /*!

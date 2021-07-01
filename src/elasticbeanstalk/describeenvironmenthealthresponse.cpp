@@ -77,7 +77,8 @@ DescribeEnvironmentHealthResponse::DescribeEnvironmentHealthResponse(
  */
 const DescribeEnvironmentHealthRequest * DescribeEnvironmentHealthResponse::request() const
 {
-    return static_cast<const DescribeEnvironmentHealthRequest *>(ElasticBeanstalkResponse::request());
+    Q_D(const DescribeEnvironmentHealthResponse);
+    return static_cast<const DescribeEnvironmentHealthRequest *>(d->request);
 }
 
 /*!

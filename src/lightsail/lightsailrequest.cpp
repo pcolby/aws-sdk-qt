@@ -184,7 +184,7 @@ namespace Lightsail {
  * Constructs a LightsailRequest object for Lightsail \a action.
  */
 LightsailRequest::LightsailRequest(const Action action)
-    : d_ptr(new LightsailRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new LightsailRequestPrivate(action, this))
 {
 
 }
@@ -193,8 +193,7 @@ LightsailRequest::LightsailRequest(const Action action)
  * Constructs a copy of \a other.
  */
 LightsailRequest::LightsailRequest(const LightsailRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new LightsailRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new LightsailRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -217,7 +216,7 @@ LightsailRequest& LightsailRequest::operator=(const LightsailRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from LightsailRequestPrivate.
  */
-LightsailRequest::LightsailRequest(LightsailRequestPrivate * const d) : d_ptr(d)
+LightsailRequest::LightsailRequest(LightsailRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -386,7 +385,7 @@ QNetworkRequest LightsailRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 LightsailRequestPrivate::LightsailRequestPrivate(const LightsailRequest::Action action, LightsailRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -401,8 +400,8 @@ LightsailRequestPrivate::LightsailRequestPrivate(const LightsailRequest::Action 
  */
 LightsailRequestPrivate::LightsailRequestPrivate(const LightsailRequestPrivate &other,
                                      LightsailRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

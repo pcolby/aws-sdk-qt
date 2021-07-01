@@ -108,12 +108,6 @@ public slots:
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
     UpdateAttributeGroupResponse * updateAttributeGroup(const UpdateAttributeGroupRequest &request);
 
-protected:
-    /// @cond internal
-    AppRegistryClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit AppRegistryClient(AppRegistryClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(AppRegistryClient)
     Q_DISABLE_COPY(AppRegistryClient)

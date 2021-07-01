@@ -58,7 +58,8 @@ GetServiceRoleForAccountResponse::GetServiceRoleForAccountResponse(
  */
 const GetServiceRoleForAccountRequest * GetServiceRoleForAccountResponse::request() const
 {
-    return static_cast<const GetServiceRoleForAccountRequest *>(GreengrassResponse::request());
+    Q_D(const GetServiceRoleForAccountResponse);
+    return static_cast<const GetServiceRoleForAccountRequest *>(d->request);
 }
 
 /*!

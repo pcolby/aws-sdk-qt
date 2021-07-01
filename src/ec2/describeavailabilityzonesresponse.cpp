@@ -87,7 +87,8 @@ DescribeAvailabilityZonesResponse::DescribeAvailabilityZonesResponse(
  */
 const DescribeAvailabilityZonesRequest * DescribeAvailabilityZonesResponse::request() const
 {
-    return static_cast<const DescribeAvailabilityZonesRequest *>(Ec2Response::request());
+    Q_D(const DescribeAvailabilityZonesResponse);
+    return static_cast<const DescribeAvailabilityZonesRequest *>(d->request);
 }
 
 /*!

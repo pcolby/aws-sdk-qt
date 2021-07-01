@@ -74,7 +74,8 @@ IsVpcPeeredResponse::IsVpcPeeredResponse(
  */
 const IsVpcPeeredRequest * IsVpcPeeredResponse::request() const
 {
-    return static_cast<const IsVpcPeeredRequest *>(LightsailResponse::request());
+    Q_D(const IsVpcPeeredResponse);
+    return static_cast<const IsVpcPeeredRequest *>(d->request);
 }
 
 /*!

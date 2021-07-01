@@ -75,7 +75,8 @@ RenewOfferingResponse::RenewOfferingResponse(
  */
 const RenewOfferingRequest * RenewOfferingResponse::request() const
 {
-    return static_cast<const RenewOfferingRequest *>(DeviceFarmResponse::request());
+    Q_D(const RenewOfferingResponse);
+    return static_cast<const RenewOfferingRequest *>(d->request);
 }
 
 /*!

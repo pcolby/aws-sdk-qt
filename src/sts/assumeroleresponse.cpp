@@ -61,7 +61,8 @@ AssumeRoleResponse::AssumeRoleResponse(
  */
 const AssumeRoleRequest * AssumeRoleResponse::request() const
 {
-    return static_cast<const AssumeRoleRequest *>(StsResponse::request());
+    Q_D(const AssumeRoleResponse);
+    return static_cast<const AssumeRoleRequest *>(d->request);
 }
 
 /*!

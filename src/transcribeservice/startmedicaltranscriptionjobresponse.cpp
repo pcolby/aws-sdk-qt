@@ -56,7 +56,8 @@ StartMedicalTranscriptionJobResponse::StartMedicalTranscriptionJobResponse(
  */
 const StartMedicalTranscriptionJobRequest * StartMedicalTranscriptionJobResponse::request() const
 {
-    return static_cast<const StartMedicalTranscriptionJobRequest *>(TranscribeServiceResponse::request());
+    Q_D(const StartMedicalTranscriptionJobResponse);
+    return static_cast<const StartMedicalTranscriptionJobRequest *>(d->request);
 }
 
 /*!

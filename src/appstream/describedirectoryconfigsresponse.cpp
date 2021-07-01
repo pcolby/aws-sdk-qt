@@ -81,7 +81,8 @@ DescribeDirectoryConfigsResponse::DescribeDirectoryConfigsResponse(
  */
 const DescribeDirectoryConfigsRequest * DescribeDirectoryConfigsResponse::request() const
 {
-    return static_cast<const DescribeDirectoryConfigsRequest *>(AppStreamResponse::request());
+    Q_D(const DescribeDirectoryConfigsResponse);
+    return static_cast<const DescribeDirectoryConfigsRequest *>(d->request);
 }
 
 /*!

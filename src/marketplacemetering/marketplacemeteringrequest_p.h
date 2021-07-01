@@ -20,12 +20,15 @@
 #ifndef QTAWS_MARKETPLACEMETERINGREQUEST_P_H
 #define QTAWS_MARKETPLACEMETERINGREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "marketplacemeteringrequest.h"
+
 namespace QtAws {
 namespace MarketplaceMetering {
 
 class MarketplaceMeteringRequest;
 
-class MarketplaceMeteringRequestPrivate {
+class MarketplaceMeteringRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     MarketplaceMeteringRequest::Action action; ///< MarketplaceMetering action to be performed.
@@ -36,9 +39,6 @@ public:
     MarketplaceMeteringRequestPrivate(const MarketplaceMeteringRequestPrivate &other, MarketplaceMeteringRequest * const q);
 
     static QString toString(const MarketplaceMeteringRequest::Action &action);
-
-protected:
-    MarketplaceMeteringRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MarketplaceMeteringRequest)

@@ -57,7 +57,8 @@ DescribeFileSystemsResponse::DescribeFileSystemsResponse(
  */
 const DescribeFileSystemsRequest * DescribeFileSystemsResponse::request() const
 {
-    return static_cast<const DescribeFileSystemsRequest *>(FSxResponse::request());
+    Q_D(const DescribeFileSystemsResponse);
+    return static_cast<const DescribeFileSystemsRequest *>(d->request);
 }
 
 /*!

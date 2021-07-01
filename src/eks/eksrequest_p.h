@@ -20,12 +20,15 @@
 #ifndef QTAWS_EKSREQUEST_P_H
 #define QTAWS_EKSREQUEST_P_H
 
+#include "core/awsabstractrequest_p.h"
+#include "eksrequest.h"
+
 namespace QtAws {
 namespace EKS {
 
 class EksRequest;
 
-class EksRequestPrivate {
+class EksRequestPrivate : public QtAws::Core::AwsAbstractRequestPrivate {
 
 public:
     EksRequest::Action action; ///< EKS action to be performed.
@@ -36,9 +39,6 @@ public:
     EksRequestPrivate(const EksRequestPrivate &other, EksRequest * const q);
 
     static QString toString(const EksRequest::Action &action);
-
-protected:
-    EksRequest * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EksRequest)

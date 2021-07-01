@@ -64,7 +64,8 @@ CreateTaskResponse::CreateTaskResponse(
  */
 const CreateTaskRequest * CreateTaskResponse::request() const
 {
-    return static_cast<const CreateTaskRequest *>(DataSyncResponse::request());
+    Q_D(const CreateTaskResponse);
+    return static_cast<const CreateTaskRequest *>(d->request);
 }
 
 /*!

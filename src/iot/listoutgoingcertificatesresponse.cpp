@@ -82,7 +82,8 @@ ListOutgoingCertificatesResponse::ListOutgoingCertificatesResponse(
  */
 const ListOutgoingCertificatesRequest * ListOutgoingCertificatesResponse::request() const
 {
-    return static_cast<const ListOutgoingCertificatesRequest *>(IoTResponse::request());
+    Q_D(const ListOutgoingCertificatesResponse);
+    return static_cast<const ListOutgoingCertificatesRequest *>(d->request);
 }
 
 /*!

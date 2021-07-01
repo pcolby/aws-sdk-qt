@@ -59,7 +59,8 @@ ListDeliveryStreamsResponse::ListDeliveryStreamsResponse(
  */
 const ListDeliveryStreamsRequest * ListDeliveryStreamsResponse::request() const
 {
-    return static_cast<const ListDeliveryStreamsRequest *>(FirehoseResponse::request());
+    Q_D(const ListDeliveryStreamsResponse);
+    return static_cast<const ListDeliveryStreamsRequest *>(d->request);
 }
 
 /*!

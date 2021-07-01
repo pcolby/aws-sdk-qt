@@ -55,7 +55,8 @@ ListReviewableHITsResponse::ListReviewableHITsResponse(
  */
 const ListReviewableHITsRequest * ListReviewableHITsResponse::request() const
 {
-    return static_cast<const ListReviewableHITsRequest *>(MTurkResponse::request());
+    Q_D(const ListReviewableHITsResponse);
+    return static_cast<const ListReviewableHITsRequest *>(d->request);
 }
 
 /*!

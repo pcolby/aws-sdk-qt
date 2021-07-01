@@ -37,7 +37,7 @@ namespace CloudFormation {
  * Constructs a CloudFormationResponse object with parent \a parent.
  */
 CloudFormationResponse::CloudFormationResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new CloudFormationResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new CloudFormationResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ CloudFormationResponse::CloudFormationResponse(QObject * const parent)
  * implementation that inherits from CloudFormationResponsePrivate.
  */
 CloudFormationResponse::CloudFormationResponse(CloudFormationResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void CloudFormationResponse::parseFailure(QIODevice &response)
  * Constructs a CloudFormationResponsePrivate object with public implementation \a q.
  */
 CloudFormationResponsePrivate::CloudFormationResponsePrivate(
-    CloudFormationResponse * const q) : q_ptr(q)
+    CloudFormationResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -115,7 +115,8 @@ StopMatchmakingResponse::StopMatchmakingResponse(
  */
 const StopMatchmakingRequest * StopMatchmakingResponse::request() const
 {
-    return static_cast<const StopMatchmakingRequest *>(GameLiftResponse::request());
+    Q_D(const StopMatchmakingResponse);
+    return static_cast<const StopMatchmakingRequest *>(d->request);
 }
 
 /*!

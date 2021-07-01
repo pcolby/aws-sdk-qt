@@ -60,7 +60,8 @@ BatchGetCustomDataIdentifiersResponse::BatchGetCustomDataIdentifiersResponse(
  */
 const BatchGetCustomDataIdentifiersRequest * BatchGetCustomDataIdentifiersResponse::request() const
 {
-    return static_cast<const BatchGetCustomDataIdentifiersRequest *>(Macie2Response::request());
+    Q_D(const BatchGetCustomDataIdentifiersResponse);
+    return static_cast<const BatchGetCustomDataIdentifiersRequest *>(d->request);
 }
 
 /*!

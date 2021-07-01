@@ -66,7 +66,8 @@ UpdateEventSourceMappingResponse::UpdateEventSourceMappingResponse(
  */
 const UpdateEventSourceMappingRequest * UpdateEventSourceMappingResponse::request() const
 {
-    return static_cast<const UpdateEventSourceMappingRequest *>(LambdaResponse::request());
+    Q_D(const UpdateEventSourceMappingResponse);
+    return static_cast<const UpdateEventSourceMappingRequest *>(d->request);
 }
 
 /*!

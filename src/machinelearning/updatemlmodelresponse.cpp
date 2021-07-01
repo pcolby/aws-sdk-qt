@@ -55,7 +55,8 @@ UpdateMLModelResponse::UpdateMLModelResponse(
  */
 const UpdateMLModelRequest * UpdateMLModelResponse::request() const
 {
-    return static_cast<const UpdateMLModelRequest *>(MachineLearningResponse::request());
+    Q_D(const UpdateMLModelResponse);
+    return static_cast<const UpdateMLModelRequest *>(d->request);
 }
 
 /*!

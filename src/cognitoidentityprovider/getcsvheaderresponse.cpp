@@ -66,7 +66,8 @@ GetCSVHeaderResponse::GetCSVHeaderResponse(
  */
 const GetCSVHeaderRequest * GetCSVHeaderResponse::request() const
 {
-    return static_cast<const GetCSVHeaderRequest *>(CognitoIdentityProviderResponse::request());
+    Q_D(const GetCSVHeaderResponse);
+    return static_cast<const GetCSVHeaderRequest *>(d->request);
 }
 
 /*!

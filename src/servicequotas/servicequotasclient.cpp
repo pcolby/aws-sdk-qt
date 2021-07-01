@@ -100,16 +100,16 @@ ServiceQuotasClient::ServiceQuotasClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-06-24"),
-    QStringLiteral("servicequotas"),
-    QStringLiteral("Service Quotas"),
-    QStringLiteral("servicequotas"),
-    parent), d_ptr(new ServiceQuotasClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ServiceQuotasClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ServiceQuotasClient);
+    d->apiVersion = QStringLiteral("2019-06-24");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("servicequotas");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Service Quotas");
+    d->serviceName = QStringLiteral("servicequotas");
 }
 
 /*!
@@ -128,16 +128,16 @@ ServiceQuotasClient::ServiceQuotasClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2019-06-24"),
-    QStringLiteral("servicequotas"),
-    QStringLiteral("Service Quotas"),
-    QStringLiteral("servicequotas"),
-    parent), d_ptr(new ServiceQuotasClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new ServiceQuotasClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(ServiceQuotasClient);
+    d->apiVersion = QStringLiteral("2019-06-24");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("servicequotas");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Service Quotas");
+    d->serviceName = QStringLiteral("servicequotas");
 }
 
 /*!
@@ -404,9 +404,10 @@ UntagResourceResponse * ServiceQuotasClient::untagResource(const UntagResourceRe
 /*!
  * Constructs a ServiceQuotasClientPrivate object with public implementation \a q.
  */
-ServiceQuotasClientPrivate::ServiceQuotasClientPrivate(ServiceQuotasClient * const q) : q_ptr(q)
+ServiceQuotasClientPrivate::ServiceQuotasClientPrivate(ServiceQuotasClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace ServiceQuotas

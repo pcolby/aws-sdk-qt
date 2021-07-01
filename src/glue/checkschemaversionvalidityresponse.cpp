@@ -58,7 +58,8 @@ CheckSchemaVersionValidityResponse::CheckSchemaVersionValidityResponse(
  */
 const CheckSchemaVersionValidityRequest * CheckSchemaVersionValidityResponse::request() const
 {
-    return static_cast<const CheckSchemaVersionValidityRequest *>(GlueResponse::request());
+    Q_D(const CheckSchemaVersionValidityResponse);
+    return static_cast<const CheckSchemaVersionValidityRequest *>(d->request);
 }
 
 /*!

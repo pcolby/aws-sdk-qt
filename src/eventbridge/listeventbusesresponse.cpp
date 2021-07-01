@@ -78,7 +78,8 @@ ListEventBusesResponse::ListEventBusesResponse(
  */
 const ListEventBusesRequest * ListEventBusesResponse::request() const
 {
-    return static_cast<const ListEventBusesRequest *>(EventBridgeResponse::request());
+    Q_D(const ListEventBusesResponse);
+    return static_cast<const ListEventBusesRequest *>(d->request);
 }
 
 /*!

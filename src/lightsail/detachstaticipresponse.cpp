@@ -74,7 +74,8 @@ DetachStaticIpResponse::DetachStaticIpResponse(
  */
 const DetachStaticIpRequest * DetachStaticIpResponse::request() const
 {
-    return static_cast<const DetachStaticIpRequest *>(LightsailResponse::request());
+    Q_D(const DetachStaticIpResponse);
+    return static_cast<const DetachStaticIpRequest *>(d->request);
 }
 
 /*!

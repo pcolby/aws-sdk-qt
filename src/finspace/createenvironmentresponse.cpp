@@ -56,7 +56,8 @@ CreateEnvironmentResponse::CreateEnvironmentResponse(
  */
 const CreateEnvironmentRequest * CreateEnvironmentResponse::request() const
 {
-    return static_cast<const CreateEnvironmentRequest *>(finspaceResponse::request());
+    Q_D(const CreateEnvironmentResponse);
+    return static_cast<const CreateEnvironmentRequest *>(d->request);
 }
 
 /*!

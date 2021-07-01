@@ -60,7 +60,8 @@ DeleteMethodResponse::DeleteMethodResponse(
  */
 const DeleteMethodRequest * DeleteMethodResponse::request() const
 {
-    return static_cast<const DeleteMethodRequest *>(APIGatewayResponse::request());
+    Q_D(const DeleteMethodResponse);
+    return static_cast<const DeleteMethodRequest *>(d->request);
 }
 
 /*!

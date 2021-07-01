@@ -73,7 +73,8 @@ CreateVirtualRouterResponse::CreateVirtualRouterResponse(
  */
 const CreateVirtualRouterRequest * CreateVirtualRouterResponse::request() const
 {
-    return static_cast<const CreateVirtualRouterRequest *>(AppMeshResponse::request());
+    Q_D(const CreateVirtualRouterResponse);
+    return static_cast<const CreateVirtualRouterRequest *>(d->request);
 }
 
 /*!

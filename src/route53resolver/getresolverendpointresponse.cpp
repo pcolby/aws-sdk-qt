@@ -94,7 +94,8 @@ GetResolverEndpointResponse::GetResolverEndpointResponse(
  */
 const GetResolverEndpointRequest * GetResolverEndpointResponse::request() const
 {
-    return static_cast<const GetResolverEndpointRequest *>(Route53ResolverResponse::request());
+    Q_D(const GetResolverEndpointResponse);
+    return static_cast<const GetResolverEndpointRequest *>(d->request);
 }
 
 /*!

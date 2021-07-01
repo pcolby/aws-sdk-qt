@@ -20,20 +20,19 @@
 #ifndef QTAWS_MWAACLIENT_P_H
 #define QTAWS_MWAACLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace MWAA {
 
 class MwaaClient;
 
-class MwaaClientPrivate {
+class MwaaClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit MwaaClientPrivate(MwaaClient * const q);
-
-protected:
-    MwaaClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(MwaaClient)

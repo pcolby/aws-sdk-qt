@@ -87,7 +87,8 @@ DeleteVpcEndpointServiceConfigurationsResponse::DeleteVpcEndpointServiceConfigur
  */
 const DeleteVpcEndpointServiceConfigurationsRequest * DeleteVpcEndpointServiceConfigurationsResponse::request() const
 {
-    return static_cast<const DeleteVpcEndpointServiceConfigurationsRequest *>(Ec2Response::request());
+    Q_D(const DeleteVpcEndpointServiceConfigurationsResponse);
+    return static_cast<const DeleteVpcEndpointServiceConfigurationsRequest *>(d->request);
 }
 
 /*!

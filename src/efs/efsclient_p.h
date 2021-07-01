@@ -20,20 +20,19 @@
 #ifndef QTAWS_EFSCLIENT_P_H
 #define QTAWS_EFSCLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace EFS {
 
 class EfsClient;
 
-class EfsClientPrivate {
+class EfsClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit EfsClientPrivate(EfsClient * const q);
-
-protected:
-    EfsClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(EfsClient)

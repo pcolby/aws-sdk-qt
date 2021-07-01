@@ -73,7 +73,8 @@ UnarchiveFindingsResponse::UnarchiveFindingsResponse(
  */
 const UnarchiveFindingsRequest * UnarchiveFindingsResponse::request() const
 {
-    return static_cast<const UnarchiveFindingsRequest *>(GuardDutyResponse::request());
+    Q_D(const UnarchiveFindingsResponse);
+    return static_cast<const UnarchiveFindingsRequest *>(d->request);
 }
 
 /*!

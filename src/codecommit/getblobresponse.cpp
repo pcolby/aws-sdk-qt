@@ -439,7 +439,8 @@ GetBlobResponse::GetBlobResponse(
  */
 const GetBlobRequest * GetBlobResponse::request() const
 {
-    return static_cast<const GetBlobRequest *>(CodeCommitResponse::request());
+    Q_D(const GetBlobResponse);
+    return static_cast<const GetBlobRequest *>(d->request);
 }
 
 /*!

@@ -63,7 +63,8 @@ ListManagedSchemaArnsResponse::ListManagedSchemaArnsResponse(
  */
 const ListManagedSchemaArnsRequest * ListManagedSchemaArnsResponse::request() const
 {
-    return static_cast<const ListManagedSchemaArnsRequest *>(CloudDirectoryResponse::request());
+    Q_D(const ListManagedSchemaArnsResponse);
+    return static_cast<const ListManagedSchemaArnsRequest *>(d->request);
 }
 
 /*!

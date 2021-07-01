@@ -90,7 +90,8 @@ ModifyListenerResponse::ModifyListenerResponse(
  */
 const ModifyListenerRequest * ModifyListenerResponse::request() const
 {
-    return static_cast<const ModifyListenerRequest *>(ElasticLoadBalancingv2Response::request());
+    Q_D(const ModifyListenerResponse);
+    return static_cast<const ModifyListenerRequest *>(d->request);
 }
 
 /*!

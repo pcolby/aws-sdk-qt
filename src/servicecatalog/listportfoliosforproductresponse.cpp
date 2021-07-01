@@ -61,7 +61,8 @@ ListPortfoliosForProductResponse::ListPortfoliosForProductResponse(
  */
 const ListPortfoliosForProductRequest * ListPortfoliosForProductResponse::request() const
 {
-    return static_cast<const ListPortfoliosForProductRequest *>(ServiceCatalogResponse::request());
+    Q_D(const ListPortfoliosForProductResponse);
+    return static_cast<const ListPortfoliosForProductRequest *>(d->request);
 }
 
 /*!

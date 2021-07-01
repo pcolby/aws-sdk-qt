@@ -87,7 +87,8 @@ DescribeIpv6PoolsResponse::DescribeIpv6PoolsResponse(
  */
 const DescribeIpv6PoolsRequest * DescribeIpv6PoolsResponse::request() const
 {
-    return static_cast<const DescribeIpv6PoolsRequest *>(Ec2Response::request());
+    Q_D(const DescribeIpv6PoolsResponse);
+    return static_cast<const DescribeIpv6PoolsRequest *>(d->request);
 }
 
 /*!

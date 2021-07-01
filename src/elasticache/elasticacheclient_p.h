@@ -20,20 +20,19 @@
 #ifndef QTAWS_ELASTICACHECLIENT_P_H
 #define QTAWS_ELASTICACHECLIENT_P_H
 
-#include <QtGlobal>
+#include "core/awsabstractclient_p.h"
+
+class QNetworkAccessManager;
 
 namespace QtAws {
 namespace ElastiCache {
 
 class ElastiCacheClient;
 
-class ElastiCacheClientPrivate {
+class ElastiCacheClientPrivate : public QtAws::Core::AwsAbstractClientPrivate {
 
 public:
     explicit ElastiCacheClientPrivate(ElastiCacheClient * const q);
-
-protected:
-    ElastiCacheClient * const q_ptr; ///< Internal q-pointer.
 
 private:
     Q_DECLARE_PUBLIC(ElastiCacheClient)

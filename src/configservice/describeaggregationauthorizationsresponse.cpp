@@ -75,7 +75,8 @@ DescribeAggregationAuthorizationsResponse::DescribeAggregationAuthorizationsResp
  */
 const DescribeAggregationAuthorizationsRequest * DescribeAggregationAuthorizationsResponse::request() const
 {
-    return static_cast<const DescribeAggregationAuthorizationsRequest *>(ConfigServiceResponse::request());
+    Q_D(const DescribeAggregationAuthorizationsResponse);
+    return static_cast<const DescribeAggregationAuthorizationsRequest *>(d->request);
 }
 
 /*!

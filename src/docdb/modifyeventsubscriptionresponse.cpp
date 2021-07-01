@@ -56,7 +56,8 @@ ModifyEventSubscriptionResponse::ModifyEventSubscriptionResponse(
  */
 const ModifyEventSubscriptionRequest * ModifyEventSubscriptionResponse::request() const
 {
-    return static_cast<const ModifyEventSubscriptionRequest *>(DocDBResponse::request());
+    Q_D(const ModifyEventSubscriptionResponse);
+    return static_cast<const ModifyEventSubscriptionRequest *>(d->request);
 }
 
 /*!

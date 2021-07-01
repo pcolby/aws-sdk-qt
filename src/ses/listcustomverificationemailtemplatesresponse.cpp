@@ -66,7 +66,8 @@ ListCustomVerificationEmailTemplatesResponse::ListCustomVerificationEmailTemplat
  */
 const ListCustomVerificationEmailTemplatesRequest * ListCustomVerificationEmailTemplatesResponse::request() const
 {
-    return static_cast<const ListCustomVerificationEmailTemplatesRequest *>(SesResponse::request());
+    Q_D(const ListCustomVerificationEmailTemplatesResponse);
+    return static_cast<const ListCustomVerificationEmailTemplatesRequest *>(d->request);
 }
 
 /*!

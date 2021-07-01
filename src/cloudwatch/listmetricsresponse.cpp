@@ -69,7 +69,8 @@ ListMetricsResponse::ListMetricsResponse(
  */
 const ListMetricsRequest * ListMetricsResponse::request() const
 {
-    return static_cast<const ListMetricsRequest *>(CloudWatchResponse::request());
+    Q_D(const ListMetricsResponse);
+    return static_cast<const ListMetricsRequest *>(d->request);
 }
 
 /*!

@@ -69,7 +69,8 @@ ModifyUserResponse::ModifyUserResponse(
  */
 const ModifyUserRequest * ModifyUserResponse::request() const
 {
-    return static_cast<const ModifyUserRequest *>(ElastiCacheResponse::request());
+    Q_D(const ModifyUserResponse);
+    return static_cast<const ModifyUserRequest *>(d->request);
 }
 
 /*!

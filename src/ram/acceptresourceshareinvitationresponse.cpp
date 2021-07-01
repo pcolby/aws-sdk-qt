@@ -64,7 +64,8 @@ AcceptResourceShareInvitationResponse::AcceptResourceShareInvitationResponse(
  */
 const AcceptResourceShareInvitationRequest * AcceptResourceShareInvitationResponse::request() const
 {
-    return static_cast<const AcceptResourceShareInvitationRequest *>(RamResponse::request());
+    Q_D(const AcceptResourceShareInvitationResponse);
+    return static_cast<const AcceptResourceShareInvitationRequest *>(d->request);
 }
 
 /*!

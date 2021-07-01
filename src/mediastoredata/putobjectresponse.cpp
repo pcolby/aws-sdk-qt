@@ -57,7 +57,8 @@ PutObjectResponse::PutObjectResponse(
  */
 const PutObjectRequest * PutObjectResponse::request() const
 {
-    return static_cast<const PutObjectRequest *>(MediaStoreDataResponse::request());
+    Q_D(const PutObjectResponse);
+    return static_cast<const PutObjectRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ CancelWorldGenerationJobResponse::CancelWorldGenerationJobResponse(
  */
 const CancelWorldGenerationJobRequest * CancelWorldGenerationJobResponse::request() const
 {
-    return static_cast<const CancelWorldGenerationJobRequest *>(RoboMakerResponse::request());
+    Q_D(const CancelWorldGenerationJobResponse);
+    return static_cast<const CancelWorldGenerationJobRequest *>(d->request);
 }
 
 /*!

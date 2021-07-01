@@ -100,7 +100,8 @@ CreateFlowResponse::CreateFlowResponse(
  */
 const CreateFlowRequest * CreateFlowResponse::request() const
 {
-    return static_cast<const CreateFlowRequest *>(AppflowResponse::request());
+    Q_D(const CreateFlowResponse);
+    return static_cast<const CreateFlowRequest *>(d->request);
 }
 
 /*!

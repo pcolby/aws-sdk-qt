@@ -79,8 +79,7 @@ public:
 
 protected:
     /// @cond internal
-    ComprehendMedicalRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit ComprehendMedicalRequest(ComprehendMedicalRequestPrivate * const d);
+    ComprehendMedicalRequest(ComprehendMedicalRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

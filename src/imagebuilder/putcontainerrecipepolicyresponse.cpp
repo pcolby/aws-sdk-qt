@@ -58,7 +58,8 @@ PutContainerRecipePolicyResponse::PutContainerRecipePolicyResponse(
  */
 const PutContainerRecipePolicyRequest * PutContainerRecipePolicyResponse::request() const
 {
-    return static_cast<const PutContainerRecipePolicyRequest *>(imagebuilderResponse::request());
+    Q_D(const PutContainerRecipePolicyResponse);
+    return static_cast<const PutContainerRecipePolicyRequest *>(d->request);
 }
 
 /*!

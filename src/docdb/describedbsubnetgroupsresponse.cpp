@@ -56,7 +56,8 @@ DescribeDBSubnetGroupsResponse::DescribeDBSubnetGroupsResponse(
  */
 const DescribeDBSubnetGroupsRequest * DescribeDBSubnetGroupsResponse::request() const
 {
-    return static_cast<const DescribeDBSubnetGroupsRequest *>(DocDBResponse::request());
+    Q_D(const DescribeDBSubnetGroupsResponse);
+    return static_cast<const DescribeDBSubnetGroupsRequest *>(d->request);
 }
 
 /*!

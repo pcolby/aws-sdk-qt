@@ -87,7 +87,8 @@ DescribeFleetHistoryResponse::DescribeFleetHistoryResponse(
  */
 const DescribeFleetHistoryRequest * DescribeFleetHistoryResponse::request() const
 {
-    return static_cast<const DescribeFleetHistoryRequest *>(Ec2Response::request());
+    Q_D(const DescribeFleetHistoryResponse);
+    return static_cast<const DescribeFleetHistoryRequest *>(d->request);
 }
 
 /*!

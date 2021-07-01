@@ -60,7 +60,8 @@ ListArtifactsResponse::ListArtifactsResponse(
  */
 const ListArtifactsRequest * ListArtifactsResponse::request() const
 {
-    return static_cast<const ListArtifactsRequest *>(AmplifyResponse::request());
+    Q_D(const ListArtifactsResponse);
+    return static_cast<const ListArtifactsRequest *>(d->request);
 }
 
 /*!

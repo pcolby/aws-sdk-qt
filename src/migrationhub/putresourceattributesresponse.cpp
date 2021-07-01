@@ -62,7 +62,8 @@ PutResourceAttributesResponse::PutResourceAttributesResponse(
  */
 const PutResourceAttributesRequest * PutResourceAttributesResponse::request() const
 {
-    return static_cast<const PutResourceAttributesRequest *>(MigrationHubResponse::request());
+    Q_D(const PutResourceAttributesResponse);
+    return static_cast<const PutResourceAttributesRequest *>(d->request);
 }
 
 /*!

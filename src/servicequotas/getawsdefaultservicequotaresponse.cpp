@@ -58,7 +58,8 @@ GetAWSDefaultServiceQuotaResponse::GetAWSDefaultServiceQuotaResponse(
  */
 const GetAWSDefaultServiceQuotaRequest * GetAWSDefaultServiceQuotaResponse::request() const
 {
-    return static_cast<const GetAWSDefaultServiceQuotaRequest *>(ServiceQuotasResponse::request());
+    Q_D(const GetAWSDefaultServiceQuotaResponse);
+    return static_cast<const GetAWSDefaultServiceQuotaRequest *>(d->request);
 }
 
 /*!

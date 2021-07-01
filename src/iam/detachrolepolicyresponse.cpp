@@ -62,7 +62,8 @@ DetachRolePolicyResponse::DetachRolePolicyResponse(
  */
 const DetachRolePolicyRequest * DetachRolePolicyResponse::request() const
 {
-    return static_cast<const DetachRolePolicyRequest *>(IamResponse::request());
+    Q_D(const DetachRolePolicyResponse);
+    return static_cast<const DetachRolePolicyRequest *>(d->request);
 }
 
 /*!

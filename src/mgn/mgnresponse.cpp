@@ -37,7 +37,7 @@ namespace mgn {
  * Constructs a mgnResponse object with parent \a parent.
  */
 mgnResponse::mgnResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new mgnResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new mgnResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ mgnResponse::mgnResponse(QObject * const parent)
  * implementation that inherits from mgnResponsePrivate.
  */
 mgnResponse::mgnResponse(mgnResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void mgnResponse::parseFailure(QIODevice &response)
  * Constructs a mgnResponsePrivate object with public implementation \a q.
  */
 mgnResponsePrivate::mgnResponsePrivate(
-    mgnResponse * const q) : q_ptr(q)
+    mgnResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

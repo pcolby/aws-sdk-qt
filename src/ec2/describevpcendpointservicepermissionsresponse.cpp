@@ -87,7 +87,8 @@ DescribeVpcEndpointServicePermissionsResponse::DescribeVpcEndpointServicePermiss
  */
 const DescribeVpcEndpointServicePermissionsRequest * DescribeVpcEndpointServicePermissionsResponse::request() const
 {
-    return static_cast<const DescribeVpcEndpointServicePermissionsRequest *>(Ec2Response::request());
+    Q_D(const DescribeVpcEndpointServicePermissionsResponse);
+    return static_cast<const DescribeVpcEndpointServicePermissionsRequest *>(d->request);
 }
 
 /*!

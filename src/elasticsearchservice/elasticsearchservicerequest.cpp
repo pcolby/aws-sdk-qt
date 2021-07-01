@@ -82,7 +82,7 @@ namespace ElasticsearchService {
  * Constructs a ElasticsearchServiceRequest object for ElasticsearchService \a action.
  */
 ElasticsearchServiceRequest::ElasticsearchServiceRequest(const Action action)
-    : d_ptr(new ElasticsearchServiceRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticsearchServiceRequestPrivate(action, this))
 {
 
 }
@@ -91,8 +91,7 @@ ElasticsearchServiceRequest::ElasticsearchServiceRequest(const Action action)
  * Constructs a copy of \a other.
  */
 ElasticsearchServiceRequest::ElasticsearchServiceRequest(const ElasticsearchServiceRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new ElasticsearchServiceRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new ElasticsearchServiceRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -115,7 +114,7 @@ ElasticsearchServiceRequest& ElasticsearchServiceRequest::operator=(const Elasti
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from ElasticsearchServiceRequestPrivate.
  */
-ElasticsearchServiceRequest::ElasticsearchServiceRequest(ElasticsearchServiceRequestPrivate * const d) : d_ptr(d)
+ElasticsearchServiceRequest::ElasticsearchServiceRequest(ElasticsearchServiceRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -284,7 +283,7 @@ QNetworkRequest ElasticsearchServiceRequest::unsignedRequest(const QUrl &endpoin
  * with public implementation \a q.
  */
 ElasticsearchServiceRequestPrivate::ElasticsearchServiceRequestPrivate(const ElasticsearchServiceRequest::Action action, ElasticsearchServiceRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -299,8 +298,8 @@ ElasticsearchServiceRequestPrivate::ElasticsearchServiceRequestPrivate(const Ela
  */
 ElasticsearchServiceRequestPrivate::ElasticsearchServiceRequestPrivate(const ElasticsearchServiceRequestPrivate &other,
                                      ElasticsearchServiceRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -277,7 +277,7 @@ namespace SageMaker {
  * Constructs a SageMakerRequest object for SageMaker \a action.
  */
 SageMakerRequest::SageMakerRequest(const Action action)
-    : d_ptr(new SageMakerRequestPrivate(action, this))
+    : QtAws::Core::AwsAbstractRequest(new SageMakerRequestPrivate(action, this))
 {
 
 }
@@ -286,8 +286,7 @@ SageMakerRequest::SageMakerRequest(const Action action)
  * Constructs a copy of \a other.
  */
 SageMakerRequest::SageMakerRequest(const SageMakerRequest &other)
-    : QtAws::Core::AwsAbstractRequest(*this),
-      d_ptr(new SageMakerRequestPrivate(*other.d_func(), this))
+    : QtAws::Core::AwsAbstractRequest(new SageMakerRequestPrivate(*other.d_func(), this))
 {
 
 }
@@ -310,7 +309,7 @@ SageMakerRequest& SageMakerRequest::operator=(const SageMakerRequest &other)
  * This overload allows derived classes to provide their own private class
  * implementation that inherits from SageMakerRequestPrivate.
  */
-SageMakerRequest::SageMakerRequest(SageMakerRequestPrivate * const d) : d_ptr(d)
+SageMakerRequest::SageMakerRequest(SageMakerRequestPrivate * const d) : QtAws::Core::AwsAbstractRequest(d)
 {
 
 }
@@ -479,7 +478,7 @@ QNetworkRequest SageMakerRequest::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 SageMakerRequestPrivate::SageMakerRequestPrivate(const SageMakerRequest::Action action, SageMakerRequest * const q)
-    : action(action), apiVersion(QLatin1String("2012-11-05")), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
 {
 
 }
@@ -494,8 +493,8 @@ SageMakerRequestPrivate::SageMakerRequestPrivate(const SageMakerRequest::Action 
  */
 SageMakerRequestPrivate::SageMakerRequestPrivate(const SageMakerRequestPrivate &other,
                                      SageMakerRequest * const q)
-    : action(other.action),
-      apiVersion(other.apiVersion), parameters(other.parameters), q_ptr(q)
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(other.action),
+      apiVersion(other.apiVersion), parameters(other.parameters)
 {
 
 }

@@ -78,7 +78,8 @@ PutPermissionPolicyResponse::PutPermissionPolicyResponse(
  */
 const PutPermissionPolicyRequest * PutPermissionPolicyResponse::request() const
 {
-    return static_cast<const PutPermissionPolicyRequest *>(WAFRegionalResponse::request());
+    Q_D(const PutPermissionPolicyResponse);
+    return static_cast<const PutPermissionPolicyRequest *>(d->request);
 }
 
 /*!

@@ -439,7 +439,8 @@ CreatePullRequestApprovalRuleResponse::CreatePullRequestApprovalRuleResponse(
  */
 const CreatePullRequestApprovalRuleRequest * CreatePullRequestApprovalRuleResponse::request() const
 {
-    return static_cast<const CreatePullRequestApprovalRuleRequest *>(CodeCommitResponse::request());
+    Q_D(const CreatePullRequestApprovalRuleResponse);
+    return static_cast<const CreatePullRequestApprovalRuleRequest *>(d->request);
 }
 
 /*!

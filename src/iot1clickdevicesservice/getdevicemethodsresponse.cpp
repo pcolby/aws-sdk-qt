@@ -57,7 +57,8 @@ GetDeviceMethodsResponse::GetDeviceMethodsResponse(
  */
 const GetDeviceMethodsRequest * GetDeviceMethodsResponse::request() const
 {
-    return static_cast<const GetDeviceMethodsRequest *>(IoT1ClickDevicesServiceResponse::request());
+    Q_D(const GetDeviceMethodsResponse);
+    return static_cast<const GetDeviceMethodsRequest *>(d->request);
 }
 
 /*!

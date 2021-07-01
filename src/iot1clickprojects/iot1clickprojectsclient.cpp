@@ -92,16 +92,16 @@ IoT1ClickProjectsClient::IoT1ClickProjectsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-05-14"),
-    QStringLiteral("projects.iot1click"),
-    QStringLiteral("AWS IoT 1-Click Projects Service"),
-    QStringLiteral("iot1click"),
-    parent), d_ptr(new IoT1ClickProjectsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoT1ClickProjectsClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoT1ClickProjectsClient);
+    d->apiVersion = QStringLiteral("2018-05-14");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("projects.iot1click");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS IoT 1-Click Projects Service");
+    d->serviceName = QStringLiteral("iot1click");
 }
 
 /*!
@@ -120,16 +120,16 @@ IoT1ClickProjectsClient::IoT1ClickProjectsClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-05-14"),
-    QStringLiteral("projects.iot1click"),
-    QStringLiteral("AWS IoT 1-Click Projects Service"),
-    QStringLiteral("iot1click"),
-    parent), d_ptr(new IoT1ClickProjectsClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new IoT1ClickProjectsClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(IoT1ClickProjectsClient);
+    d->apiVersion = QStringLiteral("2018-05-14");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("projects.iot1click");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS IoT 1-Click Projects Service");
+    d->serviceName = QStringLiteral("iot1click");
 }
 
 /*!
@@ -364,9 +364,10 @@ UpdateProjectResponse * IoT1ClickProjectsClient::updateProject(const UpdateProje
 /*!
  * Constructs a IoT1ClickProjectsClientPrivate object with public implementation \a q.
  */
-IoT1ClickProjectsClientPrivate::IoT1ClickProjectsClientPrivate(IoT1ClickProjectsClient * const q) : q_ptr(q)
+IoT1ClickProjectsClientPrivate::IoT1ClickProjectsClientPrivate(IoT1ClickProjectsClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace IoT1ClickProjects

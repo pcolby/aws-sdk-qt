@@ -98,7 +98,8 @@ UpdateAssociationStatusResponse::UpdateAssociationStatusResponse(
  */
 const UpdateAssociationStatusRequest * UpdateAssociationStatusResponse::request() const
 {
-    return static_cast<const UpdateAssociationStatusRequest *>(SsmResponse::request());
+    Q_D(const UpdateAssociationStatusResponse);
+    return static_cast<const UpdateAssociationStatusRequest *>(d->request);
 }
 
 /*!

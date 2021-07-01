@@ -69,7 +69,8 @@ AddRegionResponse::AddRegionResponse(
  */
 const AddRegionRequest * AddRegionResponse::request() const
 {
-    return static_cast<const AddRegionRequest *>(DirectoryServiceResponse::request());
+    Q_D(const AddRegionResponse);
+    return static_cast<const AddRegionRequest *>(d->request);
 }
 
 /*!

@@ -58,7 +58,8 @@ ImportComponentResponse::ImportComponentResponse(
  */
 const ImportComponentRequest * ImportComponentResponse::request() const
 {
-    return static_cast<const ImportComponentRequest *>(imagebuilderResponse::request());
+    Q_D(const ImportComponentResponse);
+    return static_cast<const ImportComponentRequest *>(d->request);
 }
 
 /*!

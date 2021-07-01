@@ -126,7 +126,8 @@ DisassociateWebACLResponse::DisassociateWebACLResponse(
  */
 const DisassociateWebACLRequest * DisassociateWebACLResponse::request() const
 {
-    return static_cast<const DisassociateWebACLRequest *>(Wafv2Response::request());
+    Q_D(const DisassociateWebACLResponse);
+    return static_cast<const DisassociateWebACLRequest *>(d->request);
 }
 
 /*!

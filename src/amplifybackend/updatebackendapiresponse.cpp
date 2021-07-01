@@ -56,7 +56,8 @@ UpdateBackendAPIResponse::UpdateBackendAPIResponse(
  */
 const UpdateBackendAPIRequest * UpdateBackendAPIResponse::request() const
 {
-    return static_cast<const UpdateBackendAPIRequest *>(AmplifyBackendResponse::request());
+    Q_D(const UpdateBackendAPIResponse);
+    return static_cast<const UpdateBackendAPIRequest *>(d->request);
 }
 
 /*!

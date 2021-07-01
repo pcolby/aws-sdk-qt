@@ -73,7 +73,8 @@ DeleteThreatIntelSetResponse::DeleteThreatIntelSetResponse(
  */
 const DeleteThreatIntelSetRequest * DeleteThreatIntelSetResponse::request() const
 {
-    return static_cast<const DeleteThreatIntelSetRequest *>(GuardDutyResponse::request());
+    Q_D(const DeleteThreatIntelSetResponse);
+    return static_cast<const DeleteThreatIntelSetRequest *>(d->request);
 }
 
 /*!

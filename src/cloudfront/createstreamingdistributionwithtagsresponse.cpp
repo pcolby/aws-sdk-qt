@@ -60,7 +60,8 @@ CreateStreamingDistributionWithTagsResponse::CreateStreamingDistributionWithTags
  */
 const CreateStreamingDistributionWithTagsRequest * CreateStreamingDistributionWithTagsResponse::request() const
 {
-    return static_cast<const CreateStreamingDistributionWithTagsRequest *>(CloudFrontResponse::request());
+    Q_D(const CreateStreamingDistributionWithTagsResponse);
+    return static_cast<const CreateStreamingDistributionWithTagsRequest *>(d->request);
 }
 
 /*!

@@ -56,7 +56,8 @@ ListLanguageModelsResponse::ListLanguageModelsResponse(
  */
 const ListLanguageModelsRequest * ListLanguageModelsResponse::request() const
 {
-    return static_cast<const ListLanguageModelsRequest *>(TranscribeServiceResponse::request());
+    Q_D(const ListLanguageModelsResponse);
+    return static_cast<const ListLanguageModelsRequest *>(d->request);
 }
 
 /*!

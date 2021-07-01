@@ -72,7 +72,8 @@ RemoveTagsResponse::RemoveTagsResponse(
  */
 const RemoveTagsRequest * RemoveTagsResponse::request() const
 {
-    return static_cast<const RemoveTagsRequest *>(ElasticsearchServiceResponse::request());
+    Q_D(const RemoveTagsResponse);
+    return static_cast<const RemoveTagsRequest *>(d->request);
 }
 
 /*!

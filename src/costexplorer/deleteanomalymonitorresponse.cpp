@@ -75,7 +75,8 @@ DeleteAnomalyMonitorResponse::DeleteAnomalyMonitorResponse(
  */
 const DeleteAnomalyMonitorRequest * DeleteAnomalyMonitorResponse::request() const
 {
-    return static_cast<const DeleteAnomalyMonitorRequest *>(CostExplorerResponse::request());
+    Q_D(const DeleteAnomalyMonitorResponse);
+    return static_cast<const DeleteAnomalyMonitorRequest *>(d->request);
 }
 
 /*!

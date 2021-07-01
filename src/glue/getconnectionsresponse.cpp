@@ -58,7 +58,8 @@ GetConnectionsResponse::GetConnectionsResponse(
  */
 const GetConnectionsRequest * GetConnectionsResponse::request() const
 {
-    return static_cast<const GetConnectionsRequest *>(GlueResponse::request());
+    Q_D(const GetConnectionsResponse);
+    return static_cast<const GetConnectionsRequest *>(d->request);
 }
 
 /*!

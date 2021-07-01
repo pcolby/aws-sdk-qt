@@ -309,16 +309,16 @@ GameLiftClient::GameLiftClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-10-01"),
-    QStringLiteral("gamelift"),
-    QStringLiteral("Amazon GameLift"),
-    QStringLiteral("gamelift"),
-    parent), d_ptr(new GameLiftClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GameLiftClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GameLiftClient);
+    d->apiVersion = QStringLiteral("2015-10-01");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("gamelift");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon GameLift");
+    d->serviceName = QStringLiteral("gamelift");
 }
 
 /*!
@@ -337,16 +337,16 @@ GameLiftClient::GameLiftClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2015-10-01"),
-    QStringLiteral("gamelift"),
-    QStringLiteral("Amazon GameLift"),
-    QStringLiteral("gamelift"),
-    parent), d_ptr(new GameLiftClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new GameLiftClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(GameLiftClient);
+    d->apiVersion = QStringLiteral("2015-10-01");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("gamelift");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon GameLift");
+    d->serviceName = QStringLiteral("gamelift");
 }
 
 /*!
@@ -4972,9 +4972,10 @@ ValidateMatchmakingRuleSetResponse * GameLiftClient::validateMatchmakingRuleSet(
 /*!
  * Constructs a GameLiftClientPrivate object with public implementation \a q.
  */
-GameLiftClientPrivate::GameLiftClientPrivate(GameLiftClient * const q) : q_ptr(q)
+GameLiftClientPrivate::GameLiftClientPrivate(GameLiftClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace GameLift

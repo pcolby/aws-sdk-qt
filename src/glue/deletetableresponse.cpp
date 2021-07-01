@@ -58,7 +58,8 @@ DeleteTableResponse::DeleteTableResponse(
  */
 const DeleteTableRequest * DeleteTableResponse::request() const
 {
-    return static_cast<const DeleteTableRequest *>(GlueResponse::request());
+    Q_D(const DeleteTableResponse);
+    return static_cast<const DeleteTableRequest *>(d->request);
 }
 
 /*!

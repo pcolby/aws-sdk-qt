@@ -38,7 +38,6 @@ public:
 
 protected:
     /// @cond internal
-    BudgetsResponsePrivate * const d_ptr; ///< Internal d-pointer.
     BudgetsResponse(BudgetsResponsePrivate * const d, QObject * const parent);
     /// @endcond
 

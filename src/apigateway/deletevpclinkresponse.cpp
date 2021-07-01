@@ -60,7 +60,8 @@ DeleteVpcLinkResponse::DeleteVpcLinkResponse(
  */
 const DeleteVpcLinkRequest * DeleteVpcLinkResponse::request() const
 {
-    return static_cast<const DeleteVpcLinkRequest *>(APIGatewayResponse::request());
+    Q_D(const DeleteVpcLinkResponse);
+    return static_cast<const DeleteVpcLinkRequest *>(d->request);
 }
 
 /*!

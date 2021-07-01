@@ -141,12 +141,6 @@ public slots:
     UpdateApplicationResponse * updateApplication(const UpdateApplicationRequest &request);
     UpdateApplicationMaintenanceConfigurationResponse * updateApplicationMaintenanceConfiguration(const UpdateApplicationMaintenanceConfigurationRequest &request);
 
-protected:
-    /// @cond internal
-    KinesisAnalyticsV2ClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit KinesisAnalyticsV2Client(KinesisAnalyticsV2ClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(KinesisAnalyticsV2Client)
     Q_DISABLE_COPY(KinesisAnalyticsV2Client)

@@ -55,7 +55,8 @@ AbortMultipartUploadResponse::AbortMultipartUploadResponse(
  */
 const AbortMultipartUploadRequest * AbortMultipartUploadResponse::request() const
 {
-    return static_cast<const AbortMultipartUploadRequest *>(S3Response::request());
+    Q_D(const AbortMultipartUploadResponse);
+    return static_cast<const AbortMultipartUploadRequest *>(d->request);
 }
 
 /*!

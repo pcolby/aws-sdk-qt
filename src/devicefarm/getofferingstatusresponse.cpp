@@ -75,7 +75,8 @@ GetOfferingStatusResponse::GetOfferingStatusResponse(
  */
 const GetOfferingStatusRequest * GetOfferingStatusResponse::request() const
 {
-    return static_cast<const GetOfferingStatusRequest *>(DeviceFarmResponse::request());
+    Q_D(const GetOfferingStatusResponse);
+    return static_cast<const GetOfferingStatusRequest *>(d->request);
 }
 
 /*!

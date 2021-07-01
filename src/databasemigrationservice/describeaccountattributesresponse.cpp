@@ -66,7 +66,8 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
  */
 const DescribeAccountAttributesRequest * DescribeAccountAttributesResponse::request() const
 {
-    return static_cast<const DescribeAccountAttributesRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const DescribeAccountAttributesResponse);
+    return static_cast<const DescribeAccountAttributesRequest *>(d->request);
 }
 
 /*!

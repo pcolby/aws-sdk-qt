@@ -59,7 +59,8 @@ StopBackupJobResponse::StopBackupJobResponse(
  */
 const StopBackupJobRequest * StopBackupJobResponse::request() const
 {
-    return static_cast<const StopBackupJobRequest *>(BackupResponse::request());
+    Q_D(const StopBackupJobResponse);
+    return static_cast<const StopBackupJobRequest *>(d->request);
 }
 
 /*!

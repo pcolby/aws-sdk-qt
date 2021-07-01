@@ -63,7 +63,8 @@ DescribeChangeSetResponse::DescribeChangeSetResponse(
  */
 const DescribeChangeSetRequest * DescribeChangeSetResponse::request() const
 {
-    return static_cast<const DescribeChangeSetRequest *>(MarketplaceCatalogResponse::request());
+    Q_D(const DescribeChangeSetResponse);
+    return static_cast<const DescribeChangeSetRequest *>(d->request);
 }
 
 /*!

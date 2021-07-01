@@ -66,7 +66,8 @@ DescribeReplicationTaskIndividualAssessmentsResponse::DescribeReplicationTaskInd
  */
 const DescribeReplicationTaskIndividualAssessmentsRequest * DescribeReplicationTaskIndividualAssessmentsResponse::request() const
 {
-    return static_cast<const DescribeReplicationTaskIndividualAssessmentsRequest *>(DatabaseMigrationServiceResponse::request());
+    Q_D(const DescribeReplicationTaskIndividualAssessmentsResponse);
+    return static_cast<const DescribeReplicationTaskIndividualAssessmentsRequest *>(d->request);
 }
 
 /*!

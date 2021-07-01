@@ -82,7 +82,8 @@ DeleteProvisioningTemplateResponse::DeleteProvisioningTemplateResponse(
  */
 const DeleteProvisioningTemplateRequest * DeleteProvisioningTemplateResponse::request() const
 {
-    return static_cast<const DeleteProvisioningTemplateRequest *>(IoTResponse::request());
+    Q_D(const DeleteProvisioningTemplateResponse);
+    return static_cast<const DeleteProvisioningTemplateRequest *>(d->request);
 }
 
 /*!

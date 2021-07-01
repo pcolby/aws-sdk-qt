@@ -109,8 +109,7 @@ public:
 
 protected:
     /// @cond internal
-    RekognitionRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit RekognitionRequest(RekognitionRequestPrivate * const d);
+    RekognitionRequest(RekognitionRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -98,7 +98,8 @@ ListProxySessionsResponse::ListProxySessionsResponse(
  */
 const ListProxySessionsRequest * ListProxySessionsResponse::request() const
 {
-    return static_cast<const ListProxySessionsRequest *>(ChimeResponse::request());
+    Q_D(const ListProxySessionsResponse);
+    return static_cast<const ListProxySessionsRequest *>(d->request);
 }
 
 /*!

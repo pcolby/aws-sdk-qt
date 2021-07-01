@@ -154,7 +154,8 @@ UpdateCustomKeyStoreResponse::UpdateCustomKeyStoreResponse(
  */
 const UpdateCustomKeyStoreRequest * UpdateCustomKeyStoreResponse::request() const
 {
-    return static_cast<const UpdateCustomKeyStoreRequest *>(KmsResponse::request());
+    Q_D(const UpdateCustomKeyStoreResponse);
+    return static_cast<const UpdateCustomKeyStoreRequest *>(d->request);
 }
 
 /*!

@@ -98,7 +98,8 @@ GetControlResponse::GetControlResponse(
  */
 const GetControlRequest * GetControlResponse::request() const
 {
-    return static_cast<const GetControlRequest *>(AuditManagerResponse::request());
+    Q_D(const GetControlResponse);
+    return static_cast<const GetControlRequest *>(d->request);
 }
 
 /*!

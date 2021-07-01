@@ -66,7 +66,8 @@ DescribeExpressionsResponse::DescribeExpressionsResponse(
  */
 const DescribeExpressionsRequest * DescribeExpressionsResponse::request() const
 {
-    return static_cast<const DescribeExpressionsRequest *>(CloudSearchResponse::request());
+    Q_D(const DescribeExpressionsResponse);
+    return static_cast<const DescribeExpressionsRequest *>(d->request);
 }
 
 /*!

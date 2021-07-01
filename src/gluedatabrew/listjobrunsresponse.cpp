@@ -58,7 +58,8 @@ ListJobRunsResponse::ListJobRunsResponse(
  */
 const ListJobRunsRequest * ListJobRunsResponse::request() const
 {
-    return static_cast<const ListJobRunsRequest *>(GlueDataBrewResponse::request());
+    Q_D(const ListJobRunsResponse);
+    return static_cast<const ListJobRunsRequest *>(d->request);
 }
 
 /*!

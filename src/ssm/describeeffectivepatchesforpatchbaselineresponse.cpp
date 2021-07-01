@@ -98,7 +98,8 @@ DescribeEffectivePatchesForPatchBaselineResponse::DescribeEffectivePatchesForPat
  */
 const DescribeEffectivePatchesForPatchBaselineRequest * DescribeEffectivePatchesForPatchBaselineResponse::request() const
 {
-    return static_cast<const DescribeEffectivePatchesForPatchBaselineRequest *>(SsmResponse::request());
+    Q_D(const DescribeEffectivePatchesForPatchBaselineResponse);
+    return static_cast<const DescribeEffectivePatchesForPatchBaselineRequest *>(d->request);
 }
 
 /*!

@@ -141,7 +141,8 @@ StopDeploymentResponse::StopDeploymentResponse(
  */
 const StopDeploymentRequest * StopDeploymentResponse::request() const
 {
-    return static_cast<const StopDeploymentRequest *>(CodeDeployResponse::request());
+    Q_D(const StopDeploymentResponse);
+    return static_cast<const StopDeploymentRequest *>(d->request);
 }
 
 /*!

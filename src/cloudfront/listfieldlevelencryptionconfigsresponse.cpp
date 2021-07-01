@@ -60,7 +60,8 @@ ListFieldLevelEncryptionConfigsResponse::ListFieldLevelEncryptionConfigsResponse
  */
 const ListFieldLevelEncryptionConfigsRequest * ListFieldLevelEncryptionConfigsResponse::request() const
 {
-    return static_cast<const ListFieldLevelEncryptionConfigsRequest *>(CloudFrontResponse::request());
+    Q_D(const ListFieldLevelEncryptionConfigsResponse);
+    return static_cast<const ListFieldLevelEncryptionConfigsRequest *>(d->request);
 }
 
 /*!

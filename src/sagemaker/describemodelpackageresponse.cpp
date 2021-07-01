@@ -70,7 +70,8 @@ DescribeModelPackageResponse::DescribeModelPackageResponse(
  */
 const DescribeModelPackageRequest * DescribeModelPackageResponse::request() const
 {
-    return static_cast<const DescribeModelPackageRequest *>(SageMakerResponse::request());
+    Q_D(const DescribeModelPackageResponse);
+    return static_cast<const DescribeModelPackageRequest *>(d->request);
 }
 
 /*!

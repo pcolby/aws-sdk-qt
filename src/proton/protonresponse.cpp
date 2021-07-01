@@ -37,7 +37,7 @@ namespace Proton {
  * Constructs a ProtonResponse object with parent \a parent.
  */
 ProtonResponse::ProtonResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new ProtonResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new ProtonResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ ProtonResponse::ProtonResponse(QObject * const parent)
  * implementation that inherits from ProtonResponsePrivate.
  */
 ProtonResponse::ProtonResponse(ProtonResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void ProtonResponse::parseFailure(QIODevice &response)
  * Constructs a ProtonResponsePrivate object with public implementation \a q.
  */
 ProtonResponsePrivate::ProtonResponsePrivate(
-    ProtonResponse * const q) : q_ptr(q)
+    ProtonResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -75,7 +75,8 @@ DeleteTopicResponse::DeleteTopicResponse(
  */
 const DeleteTopicRequest * DeleteTopicResponse::request() const
 {
-    return static_cast<const DeleteTopicRequest *>(SnsResponse::request());
+    Q_D(const DeleteTopicResponse);
+    return static_cast<const DeleteTopicRequest *>(d->request);
 }
 
 /*!

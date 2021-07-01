@@ -74,7 +74,8 @@ GetRelationalDatabaseBundlesResponse::GetRelationalDatabaseBundlesResponse(
  */
 const GetRelationalDatabaseBundlesRequest * GetRelationalDatabaseBundlesResponse::request() const
 {
-    return static_cast<const GetRelationalDatabaseBundlesRequest *>(LightsailResponse::request());
+    Q_D(const GetRelationalDatabaseBundlesResponse);
+    return static_cast<const GetRelationalDatabaseBundlesRequest *>(d->request);
 }
 
 /*!

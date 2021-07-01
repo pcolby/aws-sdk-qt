@@ -37,7 +37,7 @@ namespace RoboMaker {
  * Constructs a RoboMakerResponse object with parent \a parent.
  */
 RoboMakerResponse::RoboMakerResponse(QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(new RoboMakerResponsePrivate(this))
+    : QtAws::Core::AwsAbstractResponse(new RoboMakerResponsePrivate(this), parent)
 {
 
 }
@@ -51,7 +51,7 @@ RoboMakerResponse::RoboMakerResponse(QObject * const parent)
  * implementation that inherits from RoboMakerResponsePrivate.
  */
 RoboMakerResponse::RoboMakerResponse(RoboMakerResponsePrivate * const d, QObject * const parent)
-    : QtAws::Core::AwsAbstractResponse(parent), d_ptr(d)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
 {
 
 }
@@ -87,7 +87,7 @@ void RoboMakerResponse::parseFailure(QIODevice &response)
  * Constructs a RoboMakerResponsePrivate object with public implementation \a q.
  */
 RoboMakerResponsePrivate::RoboMakerResponsePrivate(
-    RoboMakerResponse * const q) : q_ptr(q)
+    RoboMakerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

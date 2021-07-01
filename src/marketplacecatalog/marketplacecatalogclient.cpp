@@ -79,16 +79,16 @@ MarketplaceCatalogClient::MarketplaceCatalogClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-09-17"),
-    QStringLiteral("catalog.marketplace"),
-    QStringLiteral("AWS Marketplace Catalog Service"),
-    QStringLiteral("aws-marketplace"),
-    parent), d_ptr(new MarketplaceCatalogClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MarketplaceCatalogClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MarketplaceCatalogClient);
+    d->apiVersion = QStringLiteral("2018-09-17");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("catalog.marketplace");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("AWS Marketplace Catalog Service");
+    d->serviceName = QStringLiteral("aws-marketplace");
 }
 
 /*!
@@ -107,16 +107,16 @@ MarketplaceCatalogClient::MarketplaceCatalogClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2018-09-17"),
-    QStringLiteral("catalog.marketplace"),
-    QStringLiteral("AWS Marketplace Catalog Service"),
-    QStringLiteral("aws-marketplace"),
-    parent), d_ptr(new MarketplaceCatalogClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new MarketplaceCatalogClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(MarketplaceCatalogClient);
+    d->apiVersion = QStringLiteral("2018-09-17");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("catalog.marketplace");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("AWS Marketplace Catalog Service");
+    d->serviceName = QStringLiteral("aws-marketplace");
 }
 
 /*!
@@ -233,9 +233,10 @@ StartChangeSetResponse * MarketplaceCatalogClient::startChangeSet(const StartCha
 /*!
  * Constructs a MarketplaceCatalogClientPrivate object with public implementation \a q.
  */
-MarketplaceCatalogClientPrivate::MarketplaceCatalogClientPrivate(MarketplaceCatalogClient * const q) : q_ptr(q)
+MarketplaceCatalogClientPrivate::MarketplaceCatalogClientPrivate(MarketplaceCatalogClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace MarketplaceCatalog

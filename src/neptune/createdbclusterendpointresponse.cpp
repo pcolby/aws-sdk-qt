@@ -72,7 +72,8 @@ CreateDBClusterEndpointResponse::CreateDBClusterEndpointResponse(
  */
 const CreateDBClusterEndpointRequest * CreateDBClusterEndpointResponse::request() const
 {
-    return static_cast<const CreateDBClusterEndpointRequest *>(NeptuneResponse::request());
+    Q_D(const CreateDBClusterEndpointResponse);
+    return static_cast<const CreateDBClusterEndpointRequest *>(d->request);
 }
 
 /*!

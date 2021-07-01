@@ -87,7 +87,8 @@ AssociateDhcpOptionsResponse::AssociateDhcpOptionsResponse(
  */
 const AssociateDhcpOptionsRequest * AssociateDhcpOptionsResponse::request() const
 {
-    return static_cast<const AssociateDhcpOptionsRequest *>(Ec2Response::request());
+    Q_D(const AssociateDhcpOptionsResponse);
+    return static_cast<const AssociateDhcpOptionsRequest *>(d->request);
 }
 
 /*!

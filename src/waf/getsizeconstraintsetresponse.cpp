@@ -76,7 +76,8 @@ GetSizeConstraintSetResponse::GetSizeConstraintSetResponse(
  */
 const GetSizeConstraintSetRequest * GetSizeConstraintSetResponse::request() const
 {
-    return static_cast<const GetSizeConstraintSetRequest *>(WafResponse::request());
+    Q_D(const GetSizeConstraintSetResponse);
+    return static_cast<const GetSizeConstraintSetRequest *>(d->request);
 }
 
 /*!

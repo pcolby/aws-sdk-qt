@@ -133,7 +133,8 @@ DescribeSeverityLevelsResponse::DescribeSeverityLevelsResponse(
  */
 const DescribeSeverityLevelsRequest * DescribeSeverityLevelsResponse::request() const
 {
-    return static_cast<const DescribeSeverityLevelsRequest *>(SupportResponse::request());
+    Q_D(const DescribeSeverityLevelsResponse);
+    return static_cast<const DescribeSeverityLevelsRequest *>(d->request);
 }
 
 /*!

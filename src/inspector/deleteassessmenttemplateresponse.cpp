@@ -60,7 +60,8 @@ DeleteAssessmentTemplateResponse::DeleteAssessmentTemplateResponse(
  */
 const DeleteAssessmentTemplateRequest * DeleteAssessmentTemplateResponse::request() const
 {
-    return static_cast<const DeleteAssessmentTemplateRequest *>(InspectorResponse::request());
+    Q_D(const DeleteAssessmentTemplateResponse);
+    return static_cast<const DeleteAssessmentTemplateRequest *>(d->request);
 }
 
 /*!

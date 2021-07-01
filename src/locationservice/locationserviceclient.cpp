@@ -150,16 +150,16 @@ LocationServiceClient::LocationServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-: QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-11-19"),
-    QStringLiteral("geo"),
-    QStringLiteral("Amazon Location Service"),
-    QStringLiteral("geo"),
-    parent), d_ptr(new LocationServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LocationServiceClientPrivate(this), parent)
 {
-    setRegion(region);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LocationServiceClient);
+    d->apiVersion = QStringLiteral("2020-11-19");
+    d->credentials = credentials;
+    d->endpointPrefix = QStringLiteral("geo");
+    d->networkAccessManager = manager;
+    d->region = region;
+    d->serviceFullName = QStringLiteral("Amazon Location Service");
+    d->serviceName = QStringLiteral("geo");
 }
 
 /*!
@@ -178,16 +178,16 @@ LocationServiceClient::LocationServiceClient(
     QtAws::Core::AwsAbstractCredentials * credentials,
     QNetworkAccessManager * const manager,
     QObject * const parent)
-:  QtAws::Core::AwsAbstractClient(
-    QStringLiteral("2020-11-19"),
-    QStringLiteral("geo"),
-    QStringLiteral("Amazon Location Service"),
-    QStringLiteral("geo"),
-    parent), d_ptr(new LocationServiceClientPrivate(this))
+: QtAws::Core::AwsAbstractClient(new LocationServiceClientPrivate(this), parent)
 {
-    setEndpoint(endpoint);
-    setCredentials(credentials);
-    setNetworkAccessManager(manager);
+    Q_D(LocationServiceClient);
+    d->apiVersion = QStringLiteral("2020-11-19");
+    d->credentials = credentials;
+    d->endpoint = endpoint;
+    d->endpointPrefix = QStringLiteral("geo");
+    d->networkAccessManager = manager;
+    d->serviceFullName = QStringLiteral("Amazon Location Service");
+    d->serviceName = QStringLiteral("geo");
 }
 
 /*!
@@ -916,9 +916,10 @@ UntagResourceResponse * LocationServiceClient::untagResource(const UntagResource
 /*!
  * Constructs a LocationServiceClientPrivate object with public implementation \a q.
  */
-LocationServiceClientPrivate::LocationServiceClientPrivate(LocationServiceClient * const q) : q_ptr(q)
+LocationServiceClientPrivate::LocationServiceClientPrivate(LocationServiceClient * const q)
+    : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-    q->setSignature(new QtAws::Core::AwsSignatureV4());
+    signature = new QtAws::Core::AwsSignatureV4();
 }
 
 } // namespace LocationService

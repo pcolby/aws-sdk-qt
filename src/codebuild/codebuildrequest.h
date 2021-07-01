@@ -102,8 +102,7 @@ public:
 
 protected:
     /// @cond internal
-    CodeBuildRequestPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit CodeBuildRequest(CodeBuildRequestPrivate * const d);
+    CodeBuildRequest(CodeBuildRequestPrivate * const d);
     /// @endcond
 
     int clearParameter(const QString &name);

@@ -91,7 +91,8 @@ CreateVaultResponse::CreateVaultResponse(
  */
 const CreateVaultRequest * CreateVaultResponse::request() const
 {
-    return static_cast<const CreateVaultRequest *>(GlacierResponse::request());
+    Q_D(const CreateVaultResponse);
+    return static_cast<const CreateVaultRequest *>(d->request);
 }
 
 /*!

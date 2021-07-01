@@ -68,7 +68,8 @@ DetachLoadBalancerTargetGroupsResponse::DetachLoadBalancerTargetGroupsResponse(
  */
 const DetachLoadBalancerTargetGroupsRequest * DetachLoadBalancerTargetGroupsResponse::request() const
 {
-    return static_cast<const DetachLoadBalancerTargetGroupsRequest *>(AutoScalingResponse::request());
+    Q_D(const DetachLoadBalancerTargetGroupsResponse);
+    return static_cast<const DetachLoadBalancerTargetGroupsRequest *>(d->request);
 }
 
 /*!

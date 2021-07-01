@@ -87,7 +87,8 @@ ReleaseHostsResponse::ReleaseHostsResponse(
  */
 const ReleaseHostsRequest * ReleaseHostsResponse::request() const
 {
-    return static_cast<const ReleaseHostsRequest *>(Ec2Response::request());
+    Q_D(const ReleaseHostsResponse);
+    return static_cast<const ReleaseHostsRequest *>(d->request);
 }
 
 /*!

@@ -64,7 +64,8 @@ DisassociateResourceShareResponse::DisassociateResourceShareResponse(
  */
 const DisassociateResourceShareRequest * DisassociateResourceShareResponse::request() const
 {
-    return static_cast<const DisassociateResourceShareRequest *>(RamResponse::request());
+    Q_D(const DisassociateResourceShareResponse);
+    return static_cast<const DisassociateResourceShareRequest *>(d->request);
 }
 
 /*!

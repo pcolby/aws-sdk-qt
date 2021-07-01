@@ -51,12 +51,6 @@ public:
 public slots:
     InvokeEndpointResponse * invokeEndpoint(const InvokeEndpointRequest &request);
 
-protected:
-    /// @cond internal
-    SageMakerRuntimeClientPrivate * const d_ptr; ///< Internal d-pointer.
-    explicit SageMakerRuntimeClient(SageMakerRuntimeClientPrivate * const d);
-    /// @endcond
-
 private:
     Q_DECLARE_PRIVATE(SageMakerRuntimeClient)
     Q_DISABLE_COPY(SageMakerRuntimeClient)
