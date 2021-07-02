@@ -367,7 +367,7 @@ QHash<QString, AwsEndpointPrivate::HostInfo> AwsEndpointPrivate::hosts;       //
 QHash<QString, AwsEndpointPrivate::RegionInfo> AwsEndpointPrivate::regions;   ///< Hash of region names to RegionInfo.
 QHash<QString, AwsEndpointPrivate::ServiceInfo> AwsEndpointPrivate::services; ///< Hash of service names to ServiceInfo.
 
-QMutex AwsEndpointPrivate::mutex(QMutex::Recursive); ///< Mutex for protecting access to static members.
+QMutex AwsEndpointPrivate::mutex; ///< Mutex for protecting access to static members.
 
 /*!
  * Constructs an AwsEndpointPrivate object with public implementation \a q.
@@ -396,7 +396,6 @@ AwsEndpointPrivate::AwsEndpointPrivate(AwsEndpoint * const q)
  */
 void AwsEndpointPrivate::loadEndpointData(const QString &fileName)
 {
-    QMutexLocker locker(&mutex);
     if (!hosts.empty()) {
         return; // Already loaded.
     }
@@ -418,7 +417,6 @@ void AwsEndpointPrivate::loadEndpointData(const QString &fileName)
  */
 void AwsEndpointPrivate::loadEndpointData(QIODevice &device)
 {
-    QMutexLocker locker(&mutex);
     if (!hosts.empty()) {
         return; // Already loaded.
     }

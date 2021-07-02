@@ -268,6 +268,7 @@ QMultiMap<QString, QVariant> AwsAbstractResponse::toVariant(
             break;
         case QXmlStreamReader::StartElement: {
             const QString elementName = xml.name().toString();
+            /// @todo This will need refactoring for Qt6.
             multiMap.insert(elementName, toVariant(xml, prefix, maxDepth-1));
             break;
         }
