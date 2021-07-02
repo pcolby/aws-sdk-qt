@@ -2,8 +2,8 @@
 
 [![Build Status](https://github.com/pcolby/aws-sdk-qt/actions/workflows/build.yaml/badge.svg)](https://github.com/pcolby/aws-sdk-qt/actions/workflows/build.yaml)
 [![Static Analysis](https://github.com/pcolby/aws-sdk-qt/actions/workflows/static.yaml/badge.svg)](https://github.com/pcolby/aws-sdk-qt/actions/workflows/build.yaml)
-[![GitHub Release](https://img.shields.io/github/v/release/pcolby/aws-sdk-qt?include_prereleases)](https://github.com/pcolby/aws-sdk-qt/releases/latest)
-[![LGPLv3 License](https://img.shields.io/badge/license-LGPLv3-informational.svg)](https://www.gnu.org/licenses/lgpl-3.0.html)
+[![GitHub Release](https://img.shields.io/github/v/release/pcolby/aws-sdk-qt?include_prereleases&label=Release)](https://github.com/pcolby/aws-sdk-qt/releases/latest)
+[![LGPLv3 License](https://img.shields.io/badge/License-LGPLv3-informational.svg)](https://www.gnu.org/licenses/lgpl-3.0.html)
 
 QtAws is an *unnoficial* [AWS] SDK for [Qt].
 
