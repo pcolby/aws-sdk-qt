@@ -79,11 +79,8 @@ jobs:
     strategy:
       matrix:
         os: [ windows-latest ]
-        qt: [ '5.9.9', '5.12.11', '5.15.2' ]
+        qt: [ '5.12.11', '5.15.2' ]
         generator: [ 'MinGW Makefiles', 'NMake Makefiles' ]
-        exclude:
-        - qt: '5.9.9'
-          generator: MinGW Makefiles
         include:
         - qt: '5.12.11'
           arch: win64_mingw73
