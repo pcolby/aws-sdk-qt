@@ -28,7 +28,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        qt: [ '5.9.9', '5.12.11', '5.15.2' ]
+        qt: [ '5.9', '5.12', '5.15' ]
         env:
         - { cc: clang, cxx: clang++ }
         - { cc: gcc, cxx: g++ }
@@ -55,7 +55,7 @@ jobs:
     strategy:
       matrix:
         os: [ macOs-latest ]
-        qt: [ '5.9.9', '5.12.11', '5.15.2' ]
+        qt: [ '5.9', '5.12', '5.15' ]
         env:
         - { cc: clang, cxx: clang++ }
         - { cc: gcc-11, cxx: g++-11 }
@@ -79,10 +79,10 @@ jobs:
     strategy:
       matrix:
         os: [ windows-latest ]
-        qt: [ '5.12.11', '5.15.2' ]
+        qt: [ '5.12', '5.15' ]
         generator: [ 'MinGW Makefiles', 'NMake Makefiles' ]
         include:
-        - qt: '5.9.9'
+        - qt: '5.9'
           generator: NMake Makefiles
         - qt: '5.12.11'
           arch: win64_mingw73
