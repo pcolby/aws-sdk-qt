@@ -8,7 +8,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 project(
   QtAwsSdk
-  VERSION 0.3
+  VERSION 0.4
   DESCRIPTION "Unnoficial AWS SDK for Qt"
  #HOMEPAGE_URL "https://github.com/pcolby/aws-sdk-qt"
   LANGUAGES CXX)
