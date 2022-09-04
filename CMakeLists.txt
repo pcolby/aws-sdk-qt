@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
-message("-- CMake version is ${CMAKE_VERSION}")
+message(STATUS "CMake version is ${CMAKE_VERSION}")
 if (DEFINED CMAKE_BUILD_TYPE)
-  message("-- CMake build type is ${CMAKE_BUILD_TYPE}")
+  message(STATUS "CMake build type is ${CMAKE_BUILD_TYPE}")
 endif()
 
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -28,7 +28,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 find_package(QT REQUIRED COMPONENTS Core Network NAMES Qt6 Qt5)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Network)
-message("-- Found Qt ${Qt${QT_VERSION_MAJOR}_VERSION}")
+message(STATUS "Found Qt ${Qt${QT_VERSION_MAJOR}_VERSION}")
 
 # Include the codegen sub-project if Grantlee is found.
 # If BUILD_CODEGEN is "AUTO" we'll only look for Grantlee with Qt5, since Grantlee is
@@ -41,7 +41,7 @@ if (BUILD_CODEGEN AND ((NOT BUILD_CODEGEN STREQUAL AUTO) OR (QT_VERSION_MAJOR EQ
     find_package(Grantlee5 QUIET)
   endif()
   if (Grantlee5_FOUND)
-    message("-- Found Grantlee ${Grantlee5_VERSION}")
+    message(STATUS "Found Grantlee ${Grantlee5_VERSION}")
     add_subdirectory(codegen)
   else()
     message("Grantlee not found; codegen sub-project skipped")
