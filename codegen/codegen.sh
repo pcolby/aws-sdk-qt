@@ -4,7 +4,7 @@ set -o errexit -o noclobber -o nounset -o pipefail
 
 SELF_PATH="$(readlink -f "${BASH_SOURCE[0]}")"
 
-: "${MODELS_DIR:=${SELF_PATH%/*}/models}"
+: "${MODELS_DIR:=${SELF_PATH%/*}/aws-sdk-go-v2/codegen/sdk-codegen/aws-models}"
 : "${TEMPLATES_DIR:=${SELF_PATH%/*}/templates}"
 : "${OUTPUT_DIR:=${SELF_PATH%/*}/..}"
 
