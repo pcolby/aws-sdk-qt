@@ -5,6 +5,6 @@ endif()
 
 include_directories("${CMAKE_CURRENT_LIST_DIR}")
 add_subdirectory(core)
-{% for name in ModuleNames %}
-add_subdirectory({{name|lower}})
+{% for id,service in services.items %}
+add_subdirectory({{service.traits.awsApi_service.sdkId|cut:" "|lower}})
 {% endfor %}
