@@ -1,4 +1,6 @@
 {% include "license.txt" %}
+{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with ServiceName|add:"Client" as ClassName %}
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"
 
@@ -16,7 +18,7 @@
 #include <QNetworkRequest>
 
 /*!
- * \namespace QtAws::{{NameSpaceName}}
+ * \namespace QtAws::{{ServiceName}}
  * \brief Contains classess for accessing {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %}.
  *
  * \inmodule {{ModuleName}}
@@ -25,14 +27,14 @@
  */
 
 namespace QtAws {
-namespace {{NameSpaceName}} {
+namespace {{ServiceName}} {
 
 /*!
- * \class QtAws::{{NameSpaceName}}::{{ClassName}}
+ * \class QtAws::{{ServiceName}}::{{ClassName}}
  * \brief The {{ClassName}} class provides access to the {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %} service.
  *
  * \ingroup aws-clients
- * \inmodule QtAws{{NameSpaceName}}
+ * \inmodule QtAws{{ServiceName}}
  *
 {% for line in ClassDocumentation %}
  * {% if line %} {{ line }}{% endif %}
@@ -112,7 +114,7 @@ namespace {{NameSpaceName}} {
     return qobject_cast<{{name}}Response *>(send(request));
 }
 
-{% if not op.input.shape %}
+{% if not op.input %}
 /*!
  * Sends a {{name}} request to the {{ClassName}} service, and returns a pointer to an
  * {{name}}Response object to track the result.
@@ -131,12 +133,12 @@ namespace {{NameSpaceName}} {
 {% endif %}
 {% endfor %}
 /*!
- * \class QtAws::{{NameSpaceName}}::{{ClassName}}Private
+ * \class QtAws::{{ServiceName}}::{{ClassName}}Private
  * \brief The {{ClassName}}Private class provides private implementation for {{ClassName}}.
  * \internal
  *
  * \ingroup aws-clients
- * \inmodule QtAws{{NameSpaceName}}
+ * \inmodule QtAws{{ServiceName}}
  */
 
 /*!
@@ -152,5 +154,7 @@ namespace {{NameSpaceName}} {
 {% endif %}
 }
 
-} // namespace {{NameSpaceName}}
+} // namespace {{ServiceName}}
 } // namespace QtAws
+{% endwith %}
+{% endwith %}

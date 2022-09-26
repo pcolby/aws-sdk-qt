@@ -5,13 +5,13 @@
 #include "{{ServiceName|lower}}request_p.h"
 
 namespace QtAws {
-namespace {{NameSpaceName}} {
+namespace {{ServiceName}} {
 
 /*!
- * \class QtAws::{{NameSpaceName}}::{{ClassName}}
+ * \class QtAws::{{ServiceName}}::{{ClassName}}
  * \brief The {{ClassName}} class provides an interface for {{ServiceName}} {{OperationName}} requests.
  *
- * \inmodule QtAws{{NameSpaceName}}
+ * \inmodule QtAws{{ServiceName}}
  *
 {% for line in ClassDocumentation %}
  * {% if line %} {{ line }}{% endif %}
@@ -59,11 +59,11 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
 }
 
 /*!
- * \class QtAws::{{NameSpaceName}}::{{ClassName}}Private
+ * \class QtAws::{{ServiceName}}::{{ClassName}}Private
  * \brief The {{ClassName}}Private class provides private implementation for {{ClassName}}.
  * \internal
  *
- * \inmodule QtAws{{NameSpaceName}}
+ * \inmodule QtAws{{ServiceName}}
  */
 
 /*!
@@ -90,5 +90,5 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
 
 }
 
-} // namespace {{NameSpaceName}}
+} // namespace {{ServiceName}}
 } // namespace QtAws

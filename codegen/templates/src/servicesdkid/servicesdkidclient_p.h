@@ -1,4 +1,6 @@
 {% include "license.txt" %}
+{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with ServiceName|add:"Client" as ClassName %}
 #ifndef QTAWS_{{ClassName|upper}}_P_H
 #define QTAWS_{{ClassName|upper}}_P_H
 
@@ -7,7 +9,7 @@
 class QNetworkAccessManager;
 
 namespace QtAws {
-namespace {{NameSpaceName}} {
+namespace {{ServiceName}} {
 
 class {{ClassName}};
 
@@ -22,7 +24,9 @@ private:
 
 };
 
-} // namespace {{NameSpaceName}}
+} // namespace {{ServiceName}}
 } // namespace QtAws
 
 #endif
+{% endwith %}
+{% endwith %}

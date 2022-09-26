@@ -7,13 +7,13 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace {{NameSpaceName}} {
+namespace {{ServiceName}} {
 
 /*!
- * \class QtAws::{{NameSpaceName}}::{{ClassName}}
+ * \class QtAws::{{ServiceName}}::{{ClassName}}
  * \brief The {{ClassName}} class provides an interace for {{ServiceName}} {{OperationName}} responses.
  *
- * \inmodule QtAws{{NameSpaceName}}
+ * \inmodule QtAws{{ServiceName}}
  *
 {% for line in ClassDocumentation %}
  * {% if line %} {{ line }}{% endif %}
@@ -56,11 +56,11 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
 }
 
 /*!
- * \class QtAws::{{NameSpaceName}}::{{ClassName}}Private
+ * \class QtAws::{{ServiceName}}::{{ClassName}}Private
  * \brief The {{ClassName}}Private class provides private implementation for {{ClassName}}.
  * \internal
  *
- * \inmodule QtAws{{NameSpaceName}}
+ * \inmodule QtAws{{ServiceName}}
  */
 
 /*!
@@ -81,5 +81,5 @@ void {{ClassName}}Private::parse{{ClassName}}(QXmlStreamReader &xml)
     Q_UNUSED(xml) ///< @todo
 }
 
-} // namespace {{NameSpaceName}}
+} // namespace {{ServiceName}}
 } // namespace QtAws

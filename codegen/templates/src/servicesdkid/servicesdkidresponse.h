@@ -8,7 +8,7 @@
 //#include "@todo-error.h"
 
 namespace QtAws {
-namespace {{NameSpaceName}} {
+namespace {{ServiceName}} {
 
 class {{ClassName}}Private;
 
@@ -32,7 +32,7 @@ private:
 
 };
 
-} // namespace {{NameSpaceName}}
+} // namespace {{ServiceName}}
 } // namespace QtAws
 
 #endif

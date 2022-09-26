@@ -3,13 +3,13 @@
 #include "{{ClassName|lower}}_p.h"
 
 namespace QtAws {
-namespace {{NameSpaceName}} {
+namespace {{ServiceName}} {
 
 /*!
- * \class QtAws::{{NameSpaceName}}::{{ClassName}}
+ * \class QtAws::{{ServiceName}}::{{ClassName}}
  * \brief The {{ClassName}} class provides an interface for {{ServiceName}} requests.
  *
- * \inmodule QtAws{{NameSpaceName}}
+ * \inmodule QtAws{{ServiceName}}
  */
 
 /*!
@@ -216,11 +216,11 @@ QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
 }
 
 /*!
- * \class QtAws::{{NameSpaceName}}::{{ClassName}}Private
+ * \class QtAws::{{ServiceName}}::{{ClassName}}Private
  * \brief The {{ClassName}}Private class provides private implementation for {{ClassName}}.
  * \internal
  *
- * \inmodule QtAws{{NameSpaceName}}
+ * \inmodule QtAws{{ServiceName}}
  */
 
 /*!
@@ -272,5 +272,5 @@ QString {{ClassName}}Private::toString(const {{ClassName}}::Action &action)
     return QString();
 }
 
-} // namespace {{NameSpaceName}}
+} // namespace {{ServiceName}}
 } // namespace QtAws

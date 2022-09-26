@@ -1,4 +1,6 @@
 {% include "license.txt" %}
+{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with ServiceName|add:"Client" as ClassName %}
 #ifndef QTAWS_{{ClassName|upper}}_H
 #define QTAWS_{{ClassName|upper}}_H
 
@@ -9,7 +11,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace {{NameSpaceName}} {
+namespace {{ServiceName}} {
 
 class {{ClassName}}Private;
 {% for name,op in operations.items %}
@@ -35,7 +37,7 @@ public:
 public slots:
 {% for name,op in operations.items %}
     {{name}}Response * {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}(const {{name}}Request &request);
-{% if not op.input.shape %}
+{% if not op.input %}
     {{name}}Response * {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}();
 {% endif %}
 {% endfor %}
@@ -46,7 +48,9 @@ private:
 
 };
 
-} // namespace {{NameSpaceName}}
+} // namespace {{ServiceName}}
 } // namespace QtAws
 
 #endif
+{% endwith %}
+{% endwith %}

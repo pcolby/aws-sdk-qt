@@ -6,7 +6,7 @@
 #include "{{ClassName|lower}}.h"
 
 namespace QtAws {
-namespace {{NameSpaceName}} {
+namespace {{ServiceName}} {
 
 class {{ClassName}};
 
@@ -23,7 +23,7 @@ private:
 
 };
 
-} // namespace {{NameSpaceName}}
+} // namespace {{ServiceName}}
 } // namespace QtAws
 
 #endif
