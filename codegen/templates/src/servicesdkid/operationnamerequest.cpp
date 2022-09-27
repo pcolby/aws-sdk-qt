@@ -1,4 +1,6 @@
 {% include "license.txt" %}
+{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with ServiceName|add:"Client" as ClassName %}
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"
 #include "{{OperationName|lower}}response.h"
@@ -92,3 +94,5 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
 
 } // namespace {{ServiceName}}
 } // namespace QtAws
+{% endwith %}
+{% endwith %}
