@@ -228,7 +228,7 @@ QNetworkRequest {{ClassName}}::unsignedRequest(const QUrl &endpoint) const
  * with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(const {{ClassName}}::Action action, {{ClassName}} * const q)
-    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("2012-11-05"))
+    : QtAws::Core::AwsAbstractRequestPrivate(q), action(action), apiVersion(QLatin1String("{{version}}"))
 {
 
 }

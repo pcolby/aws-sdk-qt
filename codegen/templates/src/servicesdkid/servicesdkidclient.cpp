@@ -57,7 +57,7 @@ namespace {{ServiceName}} {
 : QtAws::Core::AwsAbstractClient(new {{ClassName}}Private(this), parent)
 {
     Q_D({{ClassName}});
-    d->apiVersion = QStringLiteral("{{metadata.apiVersion}}");
+    d->apiVersion = QStringLiteral("{{version}}");
     d->credentials = credentials;
     d->endpointPrefix = QStringLiteral("{{metadata.endpointPrefix}}");
     d->networkAccessManager = manager;
@@ -87,7 +87,7 @@ namespace {{ServiceName}} {
 : QtAws::Core::AwsAbstractClient(new {{ClassName}}Private(this), parent)
 {
     Q_D({{ClassName}});
-    d->apiVersion = QStringLiteral("{{metadata.apiVersion}}");
+    d->apiVersion = QStringLiteral("{{version}}");
     d->credentials = credentials;
     d->endpoint = endpoint;
     d->endpointPrefix = QStringLiteral("{{metadata.endpointPrefix}}");
