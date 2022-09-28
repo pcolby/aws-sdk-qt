@@ -5,20 +5,20 @@
 #define QTAWS_{{ClassName|upper}}_H
 
 #include "{{ServiceName|lower}}response.h"
-#include "{{OperationName|lower}}request.h"
+#include "{{operation.name|lower}}request.h"
 
 namespace QtAws {
 namespace {{ServiceName}} {
 
 class {{ClassName}}Private;
 
-class QTAWS{{ServiceName|upper}}_EXPORT {{ClassName}} : public {{ServiceClass}}Response {
+class QTAWS{{ServiceName|upper}}_EXPORT {{ClassName}} : public {{ServiceName}}Response {
     Q_OBJECT
 
 public:
-    {{ClassName}}(const {{OperationName}}Request &request, QNetworkReply * const reply, QObject * const parent = 0);
+    {{ClassName}}(const {{operation.name}}Request &request, QNetworkReply * const reply, QObject * const parent = 0);
 
-    virtual const {{OperationName}}Request * request() const Q_DECL_OVERRIDE;
+    virtual const {{operation.name}}Request * request() const Q_DECL_OVERRIDE;
 
 protected slots:
     virtual void parseSuccess(QIODevice &response) Q_DECL_OVERRIDE;

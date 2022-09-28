@@ -12,10 +12,10 @@ namespace {{ServiceName}} {
 
 class {{ClassName}};
 
-class {{ClassName}}Private : public {{ServiceClass}}RequestPrivate {
+class {{ClassName}}Private : public {{ServiceName}}RequestPrivate {
 
 public:
-    {{ClassName}}Private(const {{ServiceClass}}Request::Action action,
+    {{ClassName}}Private(const {{ServiceName}}Request::Action action,
                                    {{ClassName}} * const q);
     {{ClassName}}Private(const {{ClassName}}Private &other,
                                    {{ClassName}} * const q);

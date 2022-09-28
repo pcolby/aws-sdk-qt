@@ -3,7 +3,7 @@
 {% with operation.name|add:"Request" as ClassName %}
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"
-#include "{{OperationName|lower}}response.h"
+#include "{{operation.name|lower}}response.h"
 #include "{{ServiceName|lower}}request_p.h"
 
 namespace QtAws {
@@ -11,7 +11,7 @@ namespace {{ServiceName}} {
 
 /*!
  * \class QtAws::{{ServiceName}}::{{ClassName}}
- * \brief The {{ClassName}} class provides an interface for {{ServiceName}} {{OperationName}} requests.
+ * \brief The {{ClassName}} class provides an interface for {{ServiceName}} {{operation.name}} requests.
  *
  * \inmodule QtAws{{ServiceName}}
  *
@@ -19,14 +19,14 @@ namespace {{ServiceName}} {
  * {% if line %} {{ line }}{% endif %}
 {% endfor %}
  *
- * \sa {{ClientClassName}}::{{OperationName|slice:"0:1"|lower}}{{OperationName|slice:"01:-1"}}
+ * \sa {{ServiceName}}Client::{{operation.name|slice:"0:1"|lower}}{{operation.name|slice:"01:-1"}}
  */
 
 /*!
  * Constructs a copy of \a other.
  */
 {{ClassName}}::{{ClassName}}(const {{ClassName}} &other)
-    : {{ServiceClass}}Request(new {{ClassName}}Private(*other.d_func(), this))
+    : {{ServiceName}}Request(new {{ClassName}}Private(*other.d_func(), this))
 {
 
 }
@@ -35,7 +35,7 @@ namespace {{ServiceName}} {
  * Constructs a {{ClassName}} object.
  */
 {{ClassName}}::{{ClassName}}()
-    : {{ServiceClass}}Request(new {{ClassName}}Private({{ServiceClass}}Request::{{OperationName}}Action, this))
+    : {{ServiceName}}Request(new {{ClassName}}Private({{ServiceName}}Request::{{operation.name}}Action, this))
 {
 
 }
@@ -51,13 +51,13 @@ bool {{ClassName}}::isValid() const
 {# @todo Accessor methods #}
 
 /*!
- * Returns a {{OperationName}}Response object to process \a reply.
+ * Returns a {{operation.name}}Response object to process \a reply.
  *
  * \sa QtAws::Core::AwsAbstractClient::send
  */
 QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const reply) const
 {
-    return new {{OperationName}}Response(*this, reply);
+    return new {{operation.name}}Response(*this, reply);
 }
 
 /*!
@@ -69,12 +69,12 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
  */
 
 /*!
- * Constructs a {{ClassName}}Private object for {{ServiceClass}} \a action,
+ * Constructs a {{ClassName}}Private object for {{ServiceName}} \a action,
  * with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
-    const {{ServiceClass}}Request::Action action, {{ClassName}} * const q)
-    : {{ServiceClass}}RequestPrivate(action, q)
+    const {{ServiceName}}Request::Action action, {{ClassName}} * const q)
+    : {{ServiceName}}RequestPrivate(action, q)
 {
 
 }
@@ -87,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
  */
 {{ClassName}}Private::{{ClassName}}Private(
     const {{ClassName}}Private &other, {{ClassName}} * const q)
-    : {{ServiceClass}}RequestPrivate(other, q)
+    : {{ServiceName}}RequestPrivate(other, q)
 {
 
 }

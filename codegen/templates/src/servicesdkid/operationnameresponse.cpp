@@ -13,7 +13,7 @@ namespace {{ServiceName}} {
 
 /*!
  * \class QtAws::{{ServiceName}}::{{ClassName}}
- * \brief The {{ClassName}} class provides an interace for {{ServiceName}} {{OperationName}} responses.
+ * \brief The {{ClassName}} class provides an interace for {{ServiceName}} {{operation.name}} responses.
  *
  * \inmodule QtAws{{ServiceName}}
  *
@@ -21,34 +21,34 @@ namespace {{ServiceName}} {
  * {% if line %} {{ line }}{% endif %}
 {% endfor %}
  *
- * \sa {{ClientClassName}}::{{OperationName|slice:"0:1"|lower}}{{OperationName|slice:"01:-1"}}
+ * \sa {{ServiceName}}Client::{{operation.name|slice:"0:1"|lower}}{{operation.name|slice:"01:-1"}}
  */
 
 /*!
  * Constructs a {{ClassName}} object for \a reply to \a request, with parent \a parent.
  */
 {{ClassName}}::{{ClassName}}(
-        const {{OperationName}}Request &request,
+        const {{operation.name}}Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : {{ServiceClass}}Response(new {{ClassName}}Private(this), parent)
+    : {{ServiceName}}Response(new {{ClassName}}Private(this), parent)
 {
-    setRequest(new {{OperationName}}Request(request));
+    setRequest(new {{operation.name}}Request(request));
     setReply(reply);
 }
 
 /*!
  * \reimp
  */
-const {{OperationName}}Request * {{ClassName}}::request() const
+const {{operation.name}}Request * {{ClassName}}::request() const
 {
     Q_D(const {{ClassName}});
-    return static_cast<const {{OperationName}}Request *>(d->request);
+    return static_cast<const {{operation.name}}Request *>(d->request);
 }
 
 /*!
  * \reimp
- * Parses a successful {{ServiceName}} {{OperationName}} \a response.
+ * Parses a successful {{ServiceName}} {{operation.name}} \a response.
  */
 void {{ClassName}}::parseSuccess(QIODevice &response)
 {
@@ -69,13 +69,13 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
  * Constructs a {{ClassName}}Private object with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
-    {{ClassName}} * const q) : {{ServiceClass}}ResponsePrivate(q)
+    {{ClassName}} * const q) : {{ServiceName}}ResponsePrivate(q)
 {
 
 }
 
 /*!
- * Parses a {{ServiceName}} {{OperationName}} response element from \a xml.
+ * Parses a {{ServiceName}} {{operation.name}} response element from \a xml.
  */
 void {{ClassName}}Private::parse{{ClassName}}(QXmlStreamReader &xml)
 {

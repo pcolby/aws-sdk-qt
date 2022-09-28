@@ -11,7 +11,7 @@ namespace {{ServiceName}} {
 
 class {{ClassName}};
 
-class {{ClassName}}Private : public {{ServiceClass}}ResponsePrivate {
+class {{ClassName}}Private : public {{ServiceName}}ResponsePrivate {
 
 public:
     {# @todo data members go here #}
@@ -19,7 +19,7 @@ public:
     explicit {{ClassName}}Private({{ClassName}} * const q);
 
     {# @todo change parse type XML vs JSON #}
-    void parse{{OperationName}}Response(QXmlStreamReader &xml);
+    void parse{{operation.name}}Response(QXmlStreamReader &xml);
 
 private:
     Q_DECLARE_PUBLIC({{ClassName}})
