@@ -5,11 +5,7 @@
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"
 
-{% if metadata.signatureVersion == "s3" or metadata.signatureVersion == "s3v4" %}
 #include "core/awssignaturev4.h"
-{% else %}
-#include "core/awssignature{{metadata.signatureVersion|lower}}.h"
-{% endif %}
 {% for name,op in operations.items %}
 #include "{{name|lower}}request.h"
 #include "{{name|lower}}response.h"
@@ -148,11 +144,7 @@ namespace {{ServiceName}} {
 {{ClassName}}Private::{{ClassName}}Private({{ClassName}} * const q)
     : QtAws::Core::AwsAbstractClientPrivate(q)
 {
-{% if metadata.signatureVersion == "s3" or metadata.signatureVersion == "s3v4" %}
     signature = new QtAws::Core::AwsSignatureV4();
-{% else %}
-    signature = new QtAws::Core::AwsSignature{{metadata.signatureVersion|upper}}();
-{% endif %}
 }
 
 } // namespace {{ServiceName}}
