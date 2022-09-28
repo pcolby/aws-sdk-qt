@@ -2,11 +2,13 @@
 {# this template to "<project-root>/src/<module>/doc/src/<module>-index.qdoc".    #}
 {# QDoc will then render the file to "<outputdir>/.../<module-index>-index.qdoc", #}
 {# and link to it via the "<module name>" navigation link for the module.         #}
+{% with service.traits.smithyApi_title as ServiceTitle %}
 /*!
     \page {{ModuleName|lower}}-index.html
     \title Qt Aws {{ServiceName}}
 
-    \brief Classes for the {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %} service
+    \brief Classes for the {{ServiceTitle}}  service
 
     (This is the page the forms the overview for the servce.)
 */
+{% endwith %}

@@ -1,5 +1,6 @@
 {% include "license.txt" %}
 {% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with service.traits.smithyApi_title as ServiceTitle %}
 {% with ServiceName|add:"Client" as ClassName %}
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"
@@ -19,7 +20,7 @@
 
 /*!
  * \namespace QtAws::{{ServiceName}}
- * \brief Contains classess for accessing {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %}.
+ * \brief Contains classess for accessing {{ServiceTitle}}.
  *
  * \inmodule {{ModuleName}}
  *
@@ -31,7 +32,7 @@ namespace {{ServiceName}} {
 
 /*!
  * \class QtAws::{{ServiceName}}::{{ClassName}}
- * \brief The {{ClassName}} class provides access to the {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %} service.
+ * \brief The {{ClassName}} class provides access to the {{ServiceTitle}} service.
  *
  * \ingroup aws-clients
  * \inmodule QtAws{{ServiceName}}
@@ -59,13 +60,13 @@ namespace {{ServiceName}} {
     Q_D({{ClassName}});
     d->apiVersion = QStringLiteral("{{version}}");
     d->credentials = credentials;
-    d->endpointPrefix = QStringLiteral("{{metadata.endpointPrefix}}");
+    d->endpointPrefix = QStringLiteral("{{service.traits.awsApi_service.endpointPrefix}}");
     d->networkAccessManager = manager;
     d->region = region;
-    d->serviceFullName = QStringLiteral("{{metadata.serviceFullName}}");
+    d->serviceFullName = QStringLiteral("{{ServiceTitle}}");
     {# Here we do exactly as aws-sdk-cpp does; we use the signingName (ie the name of the service as expected by #}
     {# V4 signatures if set, otherwise fall back to the endpoint prefix (which is the same 90% of the time.      #}
-    d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");
+    d->serviceName = QStringLiteral("{{service.traits.awsAuth_sigv4}}");
 }
 
 /*!
@@ -90,12 +91,12 @@ namespace {{ServiceName}} {
     d->apiVersion = QStringLiteral("{{version}}");
     d->credentials = credentials;
     d->endpoint = endpoint;
-    d->endpointPrefix = QStringLiteral("{{metadata.endpointPrefix}}");
+    d->endpointPrefix = QStringLiteral("{{service.traits.awsApi_service.endpointPrefix}}");
     d->networkAccessManager = manager;
-    d->serviceFullName = QStringLiteral("{{metadata.serviceFullName}}");
+    d->serviceFullName = QStringLiteral("{{ServiceTitle}}");
     {# Here we do exactly as aws-sdk-cpp does; we using the signingName (ie the name of the service as expected by #}
     {# V4 signatures if set, otherwise fall back to the endpoint prefiex (which is the same 90% of the time.       #}
-    d->serviceName = QStringLiteral("{% if metadata.signingName %}{{ metadata.signingName }}{% else %}{{ metadata.endpointPrefix }}{% endif %}");
+    d->serviceName = QStringLiteral("{{service.traits.awsAuth_sigv4}}");
 }
 
 {% for name,op in operations.items %}
@@ -156,5 +157,6 @@ namespace {{ServiceName}} {
 
 } // namespace {{ServiceName}}
 } // namespace QtAws
+{% endwith %}
 {% endwith %}
 {% endwith %}
