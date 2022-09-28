@@ -22,7 +22,7 @@
  * \namespace QtAws::{{ServiceName}}
  * \brief Contains classess for accessing {{ServiceTitle}}.
  *
- * \inmodule {{ModuleName}}
+ * \inmodule QtAws{{ServiceName}}
  *
  * @todo Move this to a separate template file.
  */
