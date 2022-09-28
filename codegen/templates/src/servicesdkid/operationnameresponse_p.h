@@ -1,4 +1,6 @@
 {% include "license.txt" %}
+{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with operation.name|add:"Response" as ClassName %}
 #ifndef QTAWS_{{ClassName|upper}}_P_H
 #define QTAWS_{{ClassName|upper}}_P_H
 
@@ -9,7 +11,7 @@ namespace {{ServiceName}} {
 
 class {{ClassName}};
 
-class {{ClassName}}Private : public {{ServiceClassName}}ResponsePrivate {
+class {{ClassName}}Private : public {{ServiceClass}}ResponsePrivate {
 
 public:
     {# @todo data members go here #}
@@ -29,3 +31,5 @@ private:
 } // namespace QtAws
 
 #endif
+{% endwith %}
+{% endwith %}

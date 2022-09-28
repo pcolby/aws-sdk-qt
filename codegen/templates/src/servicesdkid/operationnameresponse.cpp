@@ -1,4 +1,6 @@
 {% include "license.txt" %}
+{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with operation.name|add:"Response" as ClassName %}
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"
 
@@ -29,7 +31,7 @@ namespace {{ServiceName}} {
         const {{OperationName}}Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : {{ServiceClassName}}Response(new {{ClassName}}Private(this), parent)
+    : {{ServiceClass}}Response(new {{ClassName}}Private(this), parent)
 {
     setRequest(new {{OperationName}}Request(request));
     setReply(reply);
@@ -67,7 +69,7 @@ void {{ClassName}}::parseSuccess(QIODevice &response)
  * Constructs a {{ClassName}}Private object with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
-    {{ClassName}} * const q) : {{ServiceClassName}}ResponsePrivate(q)
+    {{ClassName}} * const q) : {{ServiceClass}}ResponsePrivate(q)
 {
 
 }
@@ -83,3 +85,5 @@ void {{ClassName}}Private::parse{{ClassName}}(QXmlStreamReader &xml)
 
 } // namespace {{ServiceName}}
 } // namespace QtAws
+{% endwith %}
+{% endwith %}

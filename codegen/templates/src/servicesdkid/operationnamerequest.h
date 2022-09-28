@@ -1,4 +1,6 @@
 {% include "license.txt" %}
+{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with operation.name|add:"Request" as ClassName %}
 #ifndef QTAWS_{{ClassName|upper}}_H
 #define QTAWS_{{ClassName|upper}}_H
 
@@ -9,7 +11,7 @@ namespace {{ServiceName}} {
 
 class {{ClassName}}Private;
 
-class QTAWS{{ServiceName|upper}}_EXPORT {{ClassName}} : public {{ServiceClassName}}Request {
+class QTAWS{{ServiceName|upper}}_EXPORT {{ClassName}} : public {{ServiceName}}Request {
 
 public:
     {{ClassName}}(const {{ClassName}} &other);
@@ -31,3 +33,5 @@ private:
 } // namespace QtAws
 
 #endif
+{% endwith %}
+{% endwith %}

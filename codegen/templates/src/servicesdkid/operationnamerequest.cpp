@@ -1,6 +1,6 @@
 {% include "license.txt" %}
 {% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
-{% with ServiceName|add:"Request" as ClassName %}
+{% with operation.name|add:"Request" as ClassName %}
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"
 #include "{{OperationName|lower}}response.h"
@@ -26,7 +26,7 @@ namespace {{ServiceName}} {
  * Constructs a copy of \a other.
  */
 {{ClassName}}::{{ClassName}}(const {{ClassName}} &other)
-    : {{ServiceClassName}}Request(new {{ClassName}}Private(*other.d_func(), this))
+    : {{ServiceClass}}Request(new {{ClassName}}Private(*other.d_func(), this))
 {
 
 }
@@ -35,7 +35,7 @@ namespace {{ServiceName}} {
  * Constructs a {{ClassName}} object.
  */
 {{ClassName}}::{{ClassName}}()
-    : {{ServiceClassName}}Request(new {{ClassName}}Private({{ServiceClassName}}Request::{{OperationName}}Action, this))
+    : {{ServiceClass}}Request(new {{ClassName}}Private({{ServiceClass}}Request::{{OperationName}}Action, this))
 {
 
 }
@@ -69,12 +69,12 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
  */
 
 /*!
- * Constructs a {{ClassName}}Private object for {{ServiceClassName}} \a action,
+ * Constructs a {{ClassName}}Private object for {{ServiceClass}} \a action,
  * with public implementation \a q.
  */
 {{ClassName}}Private::{{ClassName}}Private(
-    const {{ServiceClassName}}Request::Action action, {{ClassName}} * const q)
-    : {{ServiceClassName}}RequestPrivate(action, q)
+    const {{ServiceClass}}Request::Action action, {{ClassName}} * const q)
+    : {{ServiceClass}}RequestPrivate(action, q)
 {
 
 }
@@ -87,7 +87,7 @@ QtAws::Core::AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const
  */
 {{ClassName}}Private::{{ClassName}}Private(
     const {{ClassName}}Private &other, {{ClassName}} * const q)
-    : {{ServiceClassName}}RequestPrivate(other, q)
+    : {{ServiceClass}}RequestPrivate(other, q)
 {
 
 }
