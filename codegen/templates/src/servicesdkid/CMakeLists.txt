@@ -1,5 +1,4 @@
-{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
-add_compile_definitions(QTAWS{{ServiceName|upper}}_LIBRARY)
+{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}add_compile_definitions(QTAWS{{ServiceName|upper}}_LIBRARY)
 
 add_library(QtAws{{ServiceName}}
   {{ServiceName|lower}}client.h
@@ -12,15 +11,13 @@ add_library(QtAws{{ServiceName}}
   {{name|lower}}request.h
   {{name|lower}}request_p.h
   {{name|lower}}response.h
-  {{name|lower}}response_p.h
-{% endfor %}
+  {{name|lower}}response_p.h{% endfor %}
   {{ServiceName|lower}}client.cpp
   {{ServiceName|lower}}request.cpp
   {{ServiceName|lower}}response.cpp
 {% for name,op in service.operations.items %}
   {{name|lower}}request.cpp
-  {{name|lower}}response.cpp
-{% endfor %})
+  {{name|lower}}response.cpp{% endfor %})
 
 target_link_libraries(QtAws{{ServiceName}}
   PRIVATE QtAwsCore
