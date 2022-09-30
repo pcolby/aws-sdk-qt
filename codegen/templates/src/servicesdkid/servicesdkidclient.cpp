@@ -33,7 +33,7 @@ namespace {{ServiceName}} {
  * \ingroup aws-clients
  * \inmodule QtAws{{ServiceName}}
  *
-{% for line in ClassDocumentation %}
+{% for line in documentation %}
  * {% if line %} {{ line }}{% endif %}
 {% endfor %}
  */
@@ -102,7 +102,7 @@ namespace {{ServiceName}} {
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
-{% for line in op.documentationFormatted %}
+{% for line in op.documentation %}
  *{% if line %} {{ line }}{% endif %}
 {% endfor %}
  */
@@ -118,7 +118,7 @@ namespace {{ServiceName}} {
  *
  * \note The caller is to take responsbility for the resulting pointer.
  *
-{% for line in op.documentationFormatted %}
+{% for line in op.documentation %}
  *{% if line %} {{ line }}{% endif %}
 {% endfor %}
  */
