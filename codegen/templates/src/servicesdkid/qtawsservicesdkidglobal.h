@@ -2,8 +2,6 @@
 {% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
 #ifndef QTAWS{{ServiceName|upper}}GLOBAL_H
 #define QTAWS{{ServiceName|upper}}GLOBAL_H
-#ifndef QTAWS{{service|upper}}GLOBAL_H
-#define QTAWS{{ServiceName|upper}}GLOBAL_H
 
 // Export declaration macros.
 #if defined(QTAWS_SHARED) || !defined(QTAWS_STATIC)
