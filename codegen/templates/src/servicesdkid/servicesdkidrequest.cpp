@@ -20,7 +20,7 @@ namespace {{ServiceName}} {
  * This enum describes the actions that can be performed as {{ServiceName}}
  * requests.
  *
-    {% for name in operations.keys %}
+    {% for name in service.operations.keys %}
  * \value {{name}}Action {{ServiceName}} {{name}} action.
     {% endfor %}
  */
@@ -264,7 +264,7 @@ QString {{ClassName}}Private::toString(const {{ClassName}}::Action &action)
     #define ActionToString(action) \
         case {{ClassName}}::action##Action: return QStringLiteral(#action)
     switch (action) {
-        {% for name in operations.keys %}
+        {% for name in service.operations.keys %}
         ActionToString({{name}});
         {% endfor %}
         default:

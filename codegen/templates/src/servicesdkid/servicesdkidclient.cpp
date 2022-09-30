@@ -6,7 +6,7 @@
 #include "{{ClassName|lower}}_p.h"
 
 #include "core/awssignaturev4.h"
-{% for name,op in operations.items %}
+{% for name,op in service.operations.items %}
 #include "{{name|lower}}request.h"
 #include "{{name|lower}}response.h"
 {% endfor %}
@@ -95,7 +95,7 @@ namespace {{ServiceName}} {
     d->serviceName = QStringLiteral("{{service.traits.awsAuth_sigv4.name}}");
 }
 
-{% for name,op in operations.items %}
+{% for name,op in service.operations.items %}
 /*!
  * Sends \a request to the {{ClassName}} service, and returns a pointer to an
  * {{name}}Response object to track the result.

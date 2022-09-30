@@ -8,7 +8,7 @@ add_library(QtAws{{ServiceName}}
   {{ServiceName|lower}}request_p.h
   {{ServiceName|lower}}response.h
   {{ServiceName|lower}}response_p.h
-{% for name,op in operations.items %}
+{% for name,op in service.operations.items %}
   {{name|lower}}request.h
   {{name|lower}}request_p.h
   {{name|lower}}response.h
@@ -17,7 +17,7 @@ add_library(QtAws{{ServiceName}}
   {{ServiceName|lower}}client.cpp
   {{ServiceName|lower}}request.cpp
   {{ServiceName|lower}}response.cpp
-{% for name,op in operations.items %}
+{% for name,op in service.operations.items %}
   {{name|lower}}request.cpp
   {{name|lower}}response.cpp
 {% endfor %})

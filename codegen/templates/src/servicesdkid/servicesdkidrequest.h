@@ -23,7 +23,7 @@ class QTAWS{{ServiceName|upper}}_EXPORT {{ClassName}} : public QtAws::Core::AwsA
 public:
     /// Actions supported by {{ServiceName}}.
     enum Action {
-        {% for name in operations.keys %}
+        {% for name in service.operations.keys %}
         {{name}}Action,
         {% endfor %}
     };

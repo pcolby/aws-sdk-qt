@@ -14,7 +14,7 @@ namespace QtAws {
 namespace {{ServiceName}} {
 
 class {{ClassName}}Private;
-{% for name,op in operations.items %}
+{% for name,op in service.operations.items %}
 class {{name}}Request;
 class {{name}}Response;
 {% endfor %}
@@ -35,7 +35,7 @@ public:
         QObject * const parent = 0);
 
 public slots:
-{% for name,op in operations.items %}
+{% for name,op in service.operations.items %}
     {{name}}Response * {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}(const {{name}}Request &request);
 {% if not op.input.target %}
     {{name}}Response * {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}();
