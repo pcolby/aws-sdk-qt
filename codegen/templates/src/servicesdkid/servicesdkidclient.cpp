@@ -33,7 +33,7 @@ namespace {{ServiceName}} {
  * \ingroup aws-clients
  * \inmodule QtAws{{ServiceName}}
  *
-{% for line in documentation %}
+{% for line in service.documentation %}
  * {% if line %} {{ line }}{% endif %}
 {% endfor %}
  */

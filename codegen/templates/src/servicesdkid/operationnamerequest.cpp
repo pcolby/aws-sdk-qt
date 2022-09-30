@@ -16,7 +16,7 @@ namespace {{ServiceName}} {
  * \inmodule QtAws{{ServiceName}}
  *
 {# \todo This should be some sort of operation doc, not service doc. #}
-{% for line in documentation %}
+{% for line in service.documentation %}
  * {% if line %} {{ line }}{% endif %}
 {% endfor %}
  *
