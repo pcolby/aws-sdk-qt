@@ -62,7 +62,7 @@ namespace {{ServiceName}} {
     d->serviceFullName = QStringLiteral("{{ServiceTitle}}");
     {# Here we do exactly as aws-sdk-cpp does; we use the signingName (ie the name of the service as expected by #}
     {# V4 signatures if set, otherwise fall back to the endpoint prefix (which is the same 90% of the time.      #}
-    d->serviceName = QStringLiteral("{{service.traits.awsAuth_sigv4}}");
+    d->serviceName = QStringLiteral("{{service.traits.awsAuth_sigv4.name}}");
 }
 
 /*!
@@ -92,7 +92,7 @@ namespace {{ServiceName}} {
     d->serviceFullName = QStringLiteral("{{ServiceTitle}}");
     {# Here we do exactly as aws-sdk-cpp does; we using the signingName (ie the name of the service as expected by #}
     {# V4 signatures if set, otherwise fall back to the endpoint prefiex (which is the same 90% of the time.       #}
-    d->serviceName = QStringLiteral("{{service.traits.awsAuth_sigv4}}");
+    d->serviceName = QStringLiteral("{{service.traits.awsAuth_sigv4.name}}");
 }
 
 {% for name,op in operations.items %}
