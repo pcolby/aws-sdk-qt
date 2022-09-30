@@ -4,7 +4,7 @@ set -o errexit -o noclobber -o nounset -o pipefail
 
 SELF_PATH="$(readlink -f "${BASH_SOURCE[0]}")"
 
-: "${MODELS_DIR:=${SELF_PATH%/*}/aws-sdk-go-v2/codegen/sdk-codegen/aws-models}"
+: "${MODELS_DIR:=${SELF_PATH%/*}/aws-sdk-js-v3/codegen/sdk-codegen/aws-models}"
 : "${TEMPLATES_DIR:=${SELF_PATH%/*}/templates}"
 : "${OUTPUT_DIR:=${SELF_PATH%/*}/..}"
 
@@ -24,4 +24,5 @@ require git rm smithy-qt
 # \todo remove existing generated files
 
 "$SMITHY_QT" --version
+echo "$SMITHY_QT" --models "$MODELS_DIR" --templates "$TEMPLATES_DIR" --output "$OUTPUT_DIR" "$@"
 "$SMITHY_QT" --models "$MODELS_DIR" --templates "$TEMPLATES_DIR" --output "$OUTPUT_DIR" "$@"

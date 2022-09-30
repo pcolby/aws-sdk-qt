@@ -1,6 +1,3 @@
-[submodule "codegen/aws-sdk-go-v2"]
-	path = codegen/aws-sdk-go-v2
-	url = https://github.com/aws/aws-sdk-go-v2
 [submodule "codegen/aws-sdk-js-v3"]
 	path = codegen/aws-sdk-js-v3
 	url = https://github.com/aws/aws-sdk-js-v3
