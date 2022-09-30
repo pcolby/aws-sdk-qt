@@ -37,7 +37,7 @@ public:
 public slots:
 {% for name,op in operations.items %}
     {{name}}Response * {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}(const {{name}}Request &request);
-{% if not op.input %}
+{% if not op.input.target %}
     {{name}}Response * {{name|slice:"0:1"|lower}}{{name|slice:"01:-1"}}();
 {% endif %}
 {% endfor %}

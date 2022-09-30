@@ -111,7 +111,7 @@ namespace {{ServiceName}} {
     return qobject_cast<{{name}}Response *>(send(request));
 }
 
-{% if not op.input %}
+{% if not op.input.target %}
 /*!
  * Sends a {{name}} request to the {{ClassName}} service, and returns a pointer to an
  * {{name}}Response object to track the result.
