@@ -1,5 +1,5 @@
 {% include "license.txt" %}
-{% with service.traits.awsApi_service.sdkId|cut:" " as ServiceName %}
+{% with service.canonicalId as ServiceName %}
 {% with operation.name|add:"Response" as ClassName %}
 #ifndef QTAWS_{{ClassName|upper}}_P_H
 #define QTAWS_{{ClassName|upper}}_P_H
